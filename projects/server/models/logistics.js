@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
 		static associate(models) {
 			// define association here
 			Logistics.hasOne(models.Transactions, {
-				foreignKey: "transaction_id",
+				foreignKey: "id",
 			});
 		}
 	}
