@@ -20,6 +20,8 @@ module.exports = (sequelize, DataTypes) => {
 			Products.belongsTo(models.Categories, {
 				foreignKey: "category_id",
 			});
+
+			Products.hasMany(models.Inventories, { foreignKey: "product_id" });
 		}
 	}
 	Products.init(
@@ -60,7 +62,7 @@ module.exports = (sequelize, DataTypes) => {
 				type: DataTypes.INTEGER,
 			},
 			active: {
-				defaultValue: false,
+				defaultValue: true,
 				type: DataTypes.BOOLEAN,
 			},
 		},
