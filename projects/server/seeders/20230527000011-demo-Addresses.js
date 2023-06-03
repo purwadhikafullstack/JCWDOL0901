@@ -33,6 +33,16 @@ module.exports = {
 					longtitude: 110.3945889516456,
 					default: true,
 				},
+				{
+					user_id: 4,
+					city_id: 152,
+					label: "Apartemen",
+					address:
+						"Jl. Medan Merdeka Sel. No.11, RT.11/RW.2, Gambir, Kecamatan Gambir, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10110",
+					latitude: -6.181277772102812,
+					longtitude: 106.82691787141256,
+					default: true,
+				},
 			],
 			{}
 		);

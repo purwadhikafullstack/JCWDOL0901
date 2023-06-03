@@ -7,18 +7,33 @@ module.exports = {
 			"Admins",
 			[
 				{
-					email: "super@ogwa.com",
-					password: "superogwa",
+					email: "super@groseria.com",
+					password: "supergroseria",
 					super: true,
 				},
 				{
-					email: "branch1@ogwa.com",
-					password: "branch1ogwa",
+					email: "groseriastore.jakpus@groseria.com",
+					password: "jakarta",
 					super: false,
 				},
 				{
-					email: "branch2@ogwa.com",
-					password: "branch2ogwa",
+					email: "groseriastore.smg@groseria.com",
+					password: "semarang",
+					super: false,
+				},
+				{
+					email: "groseriastore.solo@groseria.com",
+					password: "surakarta",
+					super: false,
+				},
+				{
+					email: "groseriastore.bdg@groseria.com",
+					password: "bandung",
+					super: false,
+				},
+				{
+					email: "groseriastore.sby@groseria.com",
+					password: "surabaya",
 					super: false,
 				},
 			],

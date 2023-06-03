@@ -27,6 +27,13 @@ module.exports = {
 					birth: "1999-10-30",
 					avatar: "/avatars/default.jpg",
 				},
+				{
+					user_id: 4,
+					gender: "M",
+					name: "Demo",
+					birth: "1979-12-12",
+					avatar: "/avatars/default.jpg",
+				},
 			],
 			{}
 		);

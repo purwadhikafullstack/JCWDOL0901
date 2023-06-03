@@ -33,6 +33,15 @@ module.exports = {
 					referral_code: "CHR-000003",
 					referrer: 1,
 				},
+				{
+					email: "demo@mail.com",
+					phone: "0810000004",
+					password: "demouser",
+					username: "demouser",
+					verified: true,
+					referral_code: "DEM-000004",
+					referrer: null,
+				},
 			],
 			{}
 		);
