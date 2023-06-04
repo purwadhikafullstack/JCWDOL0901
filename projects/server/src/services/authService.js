@@ -29,7 +29,6 @@ module.exports = {
 				await transaction.commit();
 				return resolve("Registration success, check your email!");
 			} catch (error) {
-				console.log(error);
 				await transaction.rollback();
 				return reject(await startRegistrationErrorHandler(error));
 			}
