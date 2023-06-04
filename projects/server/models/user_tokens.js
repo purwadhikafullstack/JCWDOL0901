@@ -1,7 +1,7 @@
 "use strict";
 const { Model, Sequelize } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-	class Account_verifications extends Model {
+	class User_tokens extends Model {
 		/**
 		 * Helper method for defining associations.
 		 * This method is not a part of Sequelize lifecycle.
@@ -9,22 +9,29 @@ module.exports = (sequelize, DataTypes) => {
 		 */
 		static associate(models) {
 			// define association here
-			Account_verifications.hasOne(models.Users, {
+			User_tokens.belongsTo(models.Users, {
 				foreignKey: "id",
 				sourceKey: "user_id",
 			});
 		}
 	}
-	Account_verifications.init(
+	User_tokens.init(
 		{
-			user_id: {
-				allowNull: false,
+			id: {
 				autoIncrement: true,
 				primaryKey: true,
 				unique: true,
 				type: DataTypes.INTEGER,
 			},
+			user_id: {
+				allowNull: false,
+				type: DataTypes.INTEGER,
+			},
 			token: {
+				allowNull: false,
+				type: DataTypes.STRING,
+			},
+			action: {
 				allowNull: false,
 				type: DataTypes.STRING,
 			},
@@ -35,9 +42,9 @@ module.exports = (sequelize, DataTypes) => {
 		},
 		{
 			sequelize,
-			modelName: "Account_verifications",
+			modelName: "User_tokens",
 			timestamps: false,
 		}
 	);
-	return Account_verifications;
+	return User_tokens;
 };
