@@ -16,7 +16,7 @@ const generateRegistrationVerificationHTML = token => {
 	const verificationUrl = `${process.env.API_URL}/api/auth/user/verify/${token}`;
 
 	return fs
-		.readFileSync("./templates/verificationEmail.html", "utf-8")
+		.readFileSync(`${__dirname}/../templates/verificationEmail.html`, "utf-8")
 		.replaceAll("{{data_verification_url}}", verificationUrl);
 };
 

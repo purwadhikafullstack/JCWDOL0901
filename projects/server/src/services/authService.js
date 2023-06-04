@@ -5,11 +5,16 @@ const { startRegistrationErrorHandler } = require("../errors/serviceError.js");
 const { createUserQuery } = require("../queries/Users.js");
 const { createProfileQuery } = require("../queries/Profiles.js");
 const { createVerificationTokenQuery } = require("../queries/User_tokens.js");
+const { createUserVouchersAsReferralReward } = require("../queries/User_vouchers.js");
 
 const { sendRegistrationVerificationEmail } = require("../utils/nodemailer.js");
 
 const userDatabaseGeneration = async (body, transaction) => {
 	const User = await createUserQuery(body, transaction);
+
+	if(User.referrer)
+		await createUserVouchersAsReferralReward(User.id, User.referrer, transaction);
+
 	await createProfileQuery(body, User.id, transaction);
 	return await createVerificationTokenQuery(User, transaction);
 };
