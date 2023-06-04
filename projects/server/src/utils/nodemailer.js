@@ -12,18 +12,20 @@ const transporter = nodemailer.createTransport({
 	},
 });
 
-const generateRegistrationVerificationHTML = token => {
+const generateRegistrationVerificationHTML = (token, name) => {
 	const verificationUrl = `${process.env.API_URL}/api/auth/user/verify/${token}`;
 
 	return fs
 		.readFileSync(`${__dirname}/../templates/verificationEmail.html`, "utf-8")
-		.replaceAll("{{data_verification_url}}", verificationUrl);
+		.replaceAll("{{data_verification_url}}", verificationUrl)
+		.replaceAll("{{data_name}}", name)
 };
 
-const sendRegistrationVerificationEmail = async (email, token) => {
+const sendRegistrationVerificationEmail = async (body, token) => {
 	return new Promise(async (resolve, reject) => {
+		const {name, email} = body;
 		try {
-			const html = await generateRegistrationVerificationHTML(token);
+			const html = await generateRegistrationVerificationHTML(token, name);
 			await transporter.sendMail({
 				from: `Web Admin <${process.env.NODEMAILER_USER}>`,
 				to: email,

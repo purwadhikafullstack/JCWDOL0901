@@ -25,7 +25,7 @@ module.exports = {
 			const transaction = await sequelize.transaction();
 			try {
 				const { token } = await userDatabaseGeneration(body, transaction);
-				await sendRegistrationVerificationEmail(body.email, token);
+				await sendRegistrationVerificationEmail(body, token);
 				await transaction.commit();
 				return resolve("Registration success, check your email!");
 			} catch (error) {
