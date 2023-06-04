@@ -12,11 +12,10 @@ module.exports = (sequelize, DataTypes) => {
 			Users.hasMany(models.Addresses, { foreignKey: "user_id" });
 
 			Users.hasMany(models.Transactions, { foreignKey: "user_id" });
-			Users.hasOne(models.Account_verifications, {
+
+			Users.hasMany(models.User_tokens, {
 				foreignKey: "user_id",
 			});
-
-			Users.hasOne(models.Password_recoveries, { foreignKey: "user_id" });
 
 			Users.hasOne(models.Profiles, { foreignKey: "user_id" });
 
