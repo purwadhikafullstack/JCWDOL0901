@@ -7,7 +7,7 @@ const createVerificationTokenQuery = async (body, transaction) => {
 	const token = await generateVerificationToken(email, id);
 
 	return await User_tokens.create(
-		{ user_id: id, token, action: "verify" },
+		{ user_id: id, token, action: "verify_account" },
 		{ transaction }
 	);
 };
