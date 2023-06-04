@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const writeLogFile = (error, source) => {
-	const previousLogs = fs.readFileSync("./errors/log.txt", "utf8");
+	const previousLogs = fs.readFileSync(`${__dirname}/log.txt`, "utf8");
 
 	const log = `
 	===
@@ -10,7 +10,7 @@ const writeLogFile = (error, source) => {
 	Error: ${JSON.stringify(error)}
 	`;
 
-	fs.writeFileSync("./errors/log.txt", previousLogs.concat(log), {
+	fs.writeFileSync(`${__dirname}/log.txt`, previousLogs.concat(log), {
 		encoding: "utf-8",
 	});
 };

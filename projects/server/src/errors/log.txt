@@ -39,3 +39,13 @@
 	Source: startRegistrationErrorHandler
 	Error: {}
 	
+	===
+	Time: Sun Jun 04 2023 22:59:56 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"nodemailerError","detail":{"error":{"errno":-4058,"syscall":"open","code":"ENOENT","path":"C:\\Users\\M S I\\Desktop\\FinPro\\JCWDOL0901\\projects\\server\\src\\utils../templates/verificationEmail.html"}}}
+	
+	===
+	Time: Sun Jun 04 2023 23:00:41 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"nodemailerError","detail":{"error":{"errno":-4058,"syscall":"open","code":"ENOENT","path":"C:\\Users\\M S I\\Desktop\\FinPro\\JCWDOL0901\\projects\\server\\src\\utils../templates/verificationEmail.html"}}}
+	
