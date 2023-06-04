@@ -57,8 +57,8 @@ module.exports = (sequelize, DataTypes) => {
 				defaultValue: null,
 				type: DataTypes.DATE,
 			},
-			use_limit: {
-				allowNull: false,
+			claim_limit: {
+				defaultValue: null,
 				type: DataTypes.INTEGER,
 			},
 			promotion_id: {

@@ -32,8 +32,8 @@ module.exports = {
 				defaultValue: null,
 				type: Sequelize.DATE,
 			},
-			use_limit: {
-				allowNull: false,
+			claim_limit: {
+				defaultValue: null,
 				type: Sequelize.INTEGER,
 			},
 			promotion_id: {
