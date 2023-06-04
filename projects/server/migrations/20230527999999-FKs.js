@@ -330,12 +330,8 @@ module.exports = {
 	async down(queryInterface, Sequelize) {
 		await queryInterface.removeConstraint("Profiles", "FK_Profiles-Users");
 		await queryInterface.removeConstraint(
-			"Account_verifications",
-			"FK_Account_verifications-Users"
-		);
-		await queryInterface.removeConstraint(
-			"Password_recoveries",
-			"FK_Password_recoveries-Users"
+			"User_tokens",
+			"FK_User_tokens-Users"
 		);
 		await queryInterface.removeConstraint("Addresses", "FK_Addresses-Users");
 		await queryInterface.removeConstraint("Cities", "FK_Cities-Provinces");
