@@ -3,6 +3,12 @@
 module.exports = {
 	async up(queryInterface, Sequelize) {
 		await queryInterface.createTable("User_vouchers", {
+			id: {
+				autoIncrement: true,
+				unique: true,
+				primaryKey: true,
+				type: Sequelize.INTEGER,
+			},
 			user_id: {
 				allowNull: false,
 				type: Sequelize.INTEGER,
@@ -11,9 +17,9 @@ module.exports = {
 				allowNull: false,
 				type: Sequelize.INTEGER,
 			},
-			quota: {
-				allowNull: false,
-				type: Sequelize.INTEGER,
+			isUsed: {
+				defaultValue: false,
+				type: Sequelize.BOOLEAN,
 			},
 		});
 	},
