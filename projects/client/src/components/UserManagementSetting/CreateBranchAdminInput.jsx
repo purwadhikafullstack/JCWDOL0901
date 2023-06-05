@@ -1,8 +1,18 @@
 import React from "react";
 import InputGroup from "../InputGroup";
 import SelectMenus from "../SelectMenus";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 const CreateBranchAdminInput = ({ setInput }) => {
+	const [cities, setCities] = useState([]);
+	useEffect(() => {
+		async function getCities() {
+			const cartData = await axios.get("http://localhost:2000/api/data/cities");
+			setCities(cartData.data || []);
+		}
+		getCities();
+	}, []);
 	return (
 		<div className="flex flex-col items-center min-w-full">
 			<InputGroup
@@ -29,13 +39,12 @@ const CreateBranchAdminInput = ({ setInput }) => {
 				setInput={setInput}
 				required={true}
 			/>
-			<InputGroup
+			<SelectMenus
 				formName="City"
-				formType="text"
 				setInput={setInput}
 				required={true}
+				data={cities}
 			/>
-			<SelectMenus />
 		</div>
 	);
 };

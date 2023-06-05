@@ -1,33 +1,37 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
+const SelectMenus = ({ formName, required, setInput, data }) => {
+	const inputHandler = (setInput, event) =>
+		setInput(previousInput => ({
+			...previousInput,
+			[event.target.name]: event.target.value,
+		}));
 
-export default function SelectMenus() {
-	const [cities, setCities] = useState([]);
-	useEffect(() => {
-		async function getCities() {
-			const cartData = await axios.get(
-				"http://localhost:2000/api/auth/admin/list?page=1"
-			);
-			setCities(cartData.data || []);
-		}
-		getCities();
-	}, []);
-	console.log(cities);
 	return (
-		<div>
-			<label htmlFor="city" className="block text-sm text-white">
-				City
+		<div className="w-full">
+			<label
+				htmlFor={`${formName}`}
+				className="block text-sm text-white mb-1 text-left"
+			>
+				{formName}
+				{required && <span className="text-red font-bold">*</span>}
 			</label>
 			<select
-				id="city"
-				name="city"
+				id={formName}
+				name={formName.toLowerCase()}
 				className="bg-gray-100 text-gray-500 placeholder-gray-200 border-2 border-white active:bg-white focus:border-green-500 focus:outline-none focus:border-2 focus:bg-white focus:text-black rounded-lg text-sm w-full p-2.5"
-				defaultValue="Canada"
+				onChange={event => inputHandler(setInput, event)}
+				defaultValue={`Select ${formName}`}
 			>
-				<option>United States</option>
-				<option>Canada</option>
-				<option>Mexico</option>
+				<option disabled hidden value="">
+					Select {formName}
+				</option>
+				{data.map(el => (
+					<option key={el.id} value={el.name}>
+						{el.name}
+					</option>
+				))}
 			</select>
 		</div>
 	);
-}
+};
+
+export default SelectMenus;
