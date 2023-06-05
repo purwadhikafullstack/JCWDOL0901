@@ -1,6 +1,7 @@
 const {
 	startUserRegistration,
 	startFindAdmins,
+	startAdminRegistration,
 } = require("../services/authService");
 
 const registerUser = async (request, response) => {
@@ -25,4 +26,14 @@ const getAdmins = async (request, response) => {
 		});
 };
 
-module.exports = { registerUser, getAdmins };
+const registerAdmin = async (request, response) => {
+	await startAdminRegistration(request.body)
+		.then(result => {
+			response.status(200).send(result);
+		})
+		.catch(error => {
+			response.status(error.code).send(error.message);
+		});
+};
+
+module.exports = { registerUser, getAdmins, registerAdmin };

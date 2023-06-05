@@ -1,4 +1,8 @@
-const { registerUser, getAdmins } = require("../controllers/authController");
+const {
+	registerUser,
+	getAdmins,
+	registerAdmin,
+} = require("../controllers/authController");
 const {
 	getReferrerId,
 	getAdminsQueryParamsSanitizer,
@@ -7,6 +11,7 @@ const {
 const router = require("express").Router();
 
 router.get("/admin/list", getAdminsQueryParamsSanitizer, getAdmins);
+router.post("/admin/register", registerAdmin);
 
 router.post("/user/register", getReferrerId, registerUser);
 

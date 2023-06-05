@@ -11,7 +11,11 @@ const { createVerificationTokenQuery } = require("../queries/User_tokens.js");
 const {
 	createUserVouchersAsReferralReward,
 } = require("../queries/User_vouchers.js");
-const { readAdminQuery } = require("../queries/Admins.js");
+const { readAdminQuery, createAdminQuery } = require("../queries/Admins.js");
+const { createBranchQuery } = require("../queries/Branches.js");
+const {
+	createInventoryQueryForNewBranch,
+} = require("../queries/Inventories.js");
 
 const { paginateData } = require("../helpers/queryHelper.js");
 
@@ -29,6 +33,13 @@ const userDatabaseGeneration = async (body, transaction) => {
 
 	await createProfileQuery(body, User.id, transaction);
 	return await createVerificationTokenQuery(User, transaction);
+};
+
+const adminDatabaseGeneration = async (body, transaction) => {
+	const Admin = await createAdminQuery(body, transaction);
+	const Branch = await createBranchQuery(body, Admin.id, transaction);
+
+	await createInventoryQueryForNewBranch(Branch, transaction);
 };
 
 module.exports = {
@@ -55,6 +66,20 @@ module.exports = {
 				return resolve(paginatedData);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
+			}
+		});
+	},
+	startAdminRegistration: async body => {
+		return new Promise(async (resolve, reject) => {
+			const transaction = await sequelize.transaction();
+			try {
+				await adminDatabaseGeneration(body, transaction);
+
+				await transaction.commit();
+				return resolve("Registration success!");
+			} catch (error) {
+				await transaction.rollback();
+				return reject(await startRegistrationErrorHandler(error));
 			}
 		});
 	},

@@ -2,10 +2,22 @@ const {
 	startFindCities,
 	startFindProvinces,
 	startFindCitiesInProvince,
+	startFindCity,
 } = require("../services/dataService");
 
 const getCities = async (request, response) => {
 	await startFindCities()
+		.then(result => {
+			response.status(200).send(result);
+		})
+		.catch(error => {
+			response.status(error.code).send(error.message);
+		});
+};
+
+const getCity = async (request, response) => {
+	const { city_id } = request.params;
+	await startFindCity(city_id)
 		.then(result => {
 			response.status(200).send(result);
 		})
@@ -36,4 +48,4 @@ const getCitiesInProvince = async (request, response) => {
 		});
 };
 
-module.exports = { getCities, getProvinces, getCitiesInProvince };
+module.exports = { getCities, getCity, getProvinces, getCitiesInProvince };

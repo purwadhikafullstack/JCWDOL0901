@@ -1,10 +1,10 @@
-const { sequelize, Admins } = require("../models/index.js");
+const { Admins, Branches } = require("../models/index.js");
 
 const readAdminQuery = async (filter, order) => {
 	return await Admins.findAll({
 		include: [
 			{
-				model: sequelize.models.Branches,
+				model: Branches,
 				where: filter?.branch,
 			},
 		],
@@ -12,4 +12,10 @@ const readAdminQuery = async (filter, order) => {
 	});
 };
 
-module.exports = { readAdminQuery };
+const createAdminQuery = async (body, transaction) => {
+	const { email, password } = body;
+
+	return await Admins.create({ email, password }, { transaction });
+};
+
+module.exports = { readAdminQuery, createAdminQuery };

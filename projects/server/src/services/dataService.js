@@ -1,19 +1,11 @@
 const { Cities, Provinces } = require("../models/index.js");
 const { startFindErrorHandler } = require("../errors/serviceError.js");
-
-const readCitiesQuery = async () => {
-	return await Cities.findAll();
-};
-
-const readProvincesQuery = async () => {
-	return await Provinces.findAll();
-};
-
-const readCitiesInProvinceQuery = async province_id => {
-	return await Cities.findAll({
-		where: { province_id },
-	});
-};
+const {
+	readCitiesQuery,
+	readCityQuery,
+	readProvincesQuery,
+	readCitiesInProvinceQuery,
+} = require("../queries/Data.js");
 
 module.exports = {
 	startFindCities: async () => {
@@ -22,6 +14,16 @@ module.exports = {
 				const cities = await readCitiesQuery();
 
 				return resolve(cities);
+			} catch (error) {
+				return reject(await startFindErrorHandler(error));
+			}
+		});
+	},
+	startFindCity: async city_id => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const city = await readCityQuery(city_id);
+				return resolve(city);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
 			}
