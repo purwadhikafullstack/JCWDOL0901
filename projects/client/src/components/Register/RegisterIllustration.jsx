@@ -1,9 +1,10 @@
 const RegisterIllustration = () => {
 	return (
-		<div className="text-white flex flex-col items-center">
+		<div className="text-white flex flex-row justify-center items-center">
+			<div className="mt-28 mr-auto ml-6 text-3xl font-semibold">Register</div>
 			<img
-				className="w-[250px]"
-				src="https://media.discordapp.net/attachments/1114824509917249536/1114977366301749268/register.png"
+				className="w-[135px] mr-auto ml-auto pr-4"
+				src="/assets/logo/white_logo.png"
 			/>
 		</div>
 	);
