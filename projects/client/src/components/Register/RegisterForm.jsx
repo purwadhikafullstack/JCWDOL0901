@@ -1,16 +1,15 @@
 import React from "react";
-import RegisterInput from "./RegisterInput";
-import Button from "../Button.jsx";
 import RegisterRedirectButton from "./RegisterRedirectButton";
-
+import RegisterFormWithValidator from "./RegisterFormWithValidator";
+import ErrorWarning from "../ErrorWarning";
 
 const RegisterForm = () => {
-	const[input, setInput] = React.useState({});
+	const [error, setError] = React.useState("");
 
 	return (
 		<div className="mt-auto items-center w-full flex flex-col pb-10 pt-4 px-6">
-			<RegisterInput setInput={setInput} />
-			<Button name="Register" />
+			<ErrorWarning error={error} />
+			<RegisterFormWithValidator setError={setError} />
 			<RegisterRedirectButton />
 		</div>
 	);

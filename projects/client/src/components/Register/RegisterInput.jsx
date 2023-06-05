@@ -5,16 +5,16 @@ import RowSpace from "../RowSpace";
 const RegisterInput = ({ setInput }) => {
 	return (
 		<div className="flex flex-col items-center min-w-full">
-			<InputGroup formName="Email" formType="email" setInput={setInput} required={true} />
+			<InputGroup name="Email" type="email" inputKey="email" setInput={setInput} required={true} />
 			<div className="flex flex-row">
-				<InputGroup formName="Username" formType="text" setInput={setInput} required={true} />
+				<InputGroup name="Username" type="text" inputKey="username" setInput={setInput} required={true} />
 				<RowSpace />
-				<InputGroup formName="Phone" formType="tel" setInput={setInput} required={true} />
+				<InputGroup name="Phone" type="tel" inputKey="phone" setInput={setInput} required={true} />
 			</div>
-			<InputGroup formName="Name" formType="text" setInput={setInput} required={true} />
-			<InputGroup formName="Password" formType="password" setInput={setInput} required={true} />
-			<InputGroup	formName="Confirm Password"	formType="password" setInput={setInput}	required={true}	/>
-			<InputGroup formName="Referral code" formType="text" setInput={setInput} required={false} />
+			<InputGroup name="Name" type="text" inputKey="name" setInput={setInput} required={true} />
+			<InputGroup name="Password" type="password" inputKey="password" setInput={setInput} required={true} />
+			<InputGroup	name="Confirm Password"	type="password" inputKey="confirm_password" setInput={setInput}	required={true}	/>
+			<InputGroup name="Referral code" type="text" inputKey="reference" setInput={setInput} required={false} />
 		</div>
 	);
 };
