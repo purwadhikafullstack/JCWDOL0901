@@ -1,5 +1,5 @@
 import React from "react";
-import RegisterMobile from "./Register/RegisterMobile.jsx";
+import RegisterMobile from "./RegisterMobile.jsx";
 const RegisterPage = () => {
 	return <RegisterMobile />;
 };
