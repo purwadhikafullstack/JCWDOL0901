@@ -9,7 +9,7 @@ const getReferrerId = async (request, response, next) => {
 		where: { referral_code: request.body.reference },
 	});
 
-	request.body.referrer = null || referrer.id;
+	request.body.referrer = null || referrer?.id;
 
 	delete request.body.reference;
 
