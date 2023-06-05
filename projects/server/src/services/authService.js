@@ -1,19 +1,31 @@
 const { sequelize } = require("../models/index.js");
 
-const { startRegistrationErrorHandler } = require("../errors/serviceError.js");
+const {
+	startRegistrationErrorHandler,
+	startFindErrorHandler,
+} = require("../errors/serviceError.js");
 
 const { createUserQuery } = require("../queries/Users.js");
 const { createProfileQuery } = require("../queries/Profiles.js");
 const { createVerificationTokenQuery } = require("../queries/User_tokens.js");
-const { createUserVouchersAsReferralReward } = require("../queries/User_vouchers.js");
+const {
+	createUserVouchersAsReferralReward,
+} = require("../queries/User_vouchers.js");
+const { readAdminQuery } = require("../queries/Admins.js");
+
+const { paginateData } = require("../helpers/queryHelper.js");
 
 const { sendRegistrationVerificationEmail } = require("../utils/nodemailer.js");
 
 const userDatabaseGeneration = async (body, transaction) => {
 	const User = await createUserQuery(body, transaction);
 
-	if(User.referrer)
-		await createUserVouchersAsReferralReward(User.id, User.referrer, transaction);
+	if (User.referrer)
+		await createUserVouchersAsReferralReward(
+			User.id,
+			User.referrer,
+			transaction
+		);
 
 	await createProfileQuery(body, User.id, transaction);
 	return await createVerificationTokenQuery(User, transaction);
@@ -31,6 +43,18 @@ module.exports = {
 			} catch (error) {
 				await transaction.rollback();
 				return reject(await startRegistrationErrorHandler(error));
+			}
+		});
+	},
+	startFindAdmins: async (filter, order, page) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const Admin = await readAdminQuery(filter, order);
+				const paginatedData = await paginateData(Admin, page);
+
+				return resolve(paginatedData);
+			} catch (error) {
+				return reject(await startFindErrorHandler(error));
 			}
 		});
 	},

@@ -1,4 +1,8 @@
 const { Users } = require("../models/index.js");
+const {
+	getAdminQueryFilter,
+	getAdminQueryOrder,
+} = require("../helpers/queryHelper");
 
 const getReferrerId = async (request, response, next) => {
 	const referrer = await Users.findOne({
@@ -12,4 +16,16 @@ const getReferrerId = async (request, response, next) => {
 	next();
 };
 
-module.exports = { getReferrerId };
+const getAdminsQueryParamsSanitizer = async (request, response, next) => {
+	const sanitizedQuery = {
+		filter: await getAdminQueryFilter(request.query),
+		order: await getAdminQueryOrder(request.query),
+		page: request.query.page,
+	};
+
+	request.query = sanitizedQuery;
+
+	next();
+};
+
+module.exports = { getReferrerId, getAdminsQueryParamsSanitizer };

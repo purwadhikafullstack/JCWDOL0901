@@ -32,4 +32,10 @@ const startRegistrationErrorHandler = async error => {
 	};
 };
 
-module.exports = { startRegistrationErrorHandler };
+const startFindErrorHandler = async error => {
+	await writeLogFile(error, "startFindErrorHandler");
+
+	return { code: 500, message: "Internal server error" };
+};
+
+module.exports = { startRegistrationErrorHandler, startFindErrorHandler };
