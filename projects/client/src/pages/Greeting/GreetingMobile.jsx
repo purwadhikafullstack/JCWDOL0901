@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import GreetingMessage from "../../components/Greeting/GreetingMessage";
-
+import CompanyLogo from "../../components/CompanyLogo";
 const GreetingMobile = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
@@ -12,7 +12,8 @@ const GreetingMobile = () => {
 
 	return (
 		location?.state?.email && (
-			<div className="mx-auto w-[480px] h-screen bg-white flex flex-col">
+			<div className="flex flex-col items-center mx-auto pb-24 w-[480px] h-screen bg-white flex flex-col">
+				<CompanyLogo color={true} size="50px" paddingY="5" />
 				<GreetingMessage navigate={navigate} email={location?.state?.email} />
 			</div>
 		)
