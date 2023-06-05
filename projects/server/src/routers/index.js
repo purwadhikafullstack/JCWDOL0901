@@ -1,3 +1,4 @@
 const authRoute = require("./authRoute.js");
+const dataRoute = require("./dataRoute.js");
 
-module.exports = { authRoute };
+module.exports = { authRoute, dataRoute };
