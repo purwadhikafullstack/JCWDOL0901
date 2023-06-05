@@ -6,7 +6,7 @@ import CircularBackgroundDecoration from "../../components/CircularBackgroundDec
 
 const RegisterMobile = () => {
 	return (
-		<div className="flex flex-col mx-auto w-[480px] h-screen overflow-hidden bg-white">
+		<div className="flex flex-col mx-auto flex-1 max-w-[480px] min-h-screen overflow-hidden bg-white">
 			<CircularBackgroundDecoration />
 			<BackButton url="/" />
 			<RegisterIllustration />
