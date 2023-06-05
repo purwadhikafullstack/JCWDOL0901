@@ -11,9 +11,11 @@ const GreetingMobile = () => {
 	}, []);
 
 	return (
-		<div className="mx-auto w-[480px] h-screen bg-white flex flex-col">
-			<GreetingMessage navigate={navigate} email={location?.state?.email} />
-		</div>
+		location?.state?.email && (
+			<div className="mx-auto w-[480px] h-screen bg-white flex flex-col">
+				<GreetingMessage navigate={navigate} email={location?.state?.email} />
+			</div>
+		)
 	);
 };
 
