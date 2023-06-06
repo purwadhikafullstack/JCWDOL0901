@@ -144,3 +144,298 @@
 	Source: startRegistrationErrorHandler
 	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":26,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":26,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
 	
+	===
+	Time: Tue Jun 06 2023 08:09:57 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":27,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":27,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:11:59 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":28,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":28,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:13:23 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":29,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":29,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:14:01 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":30,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":30,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:14:28 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":31,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":31,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:16:10 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":32,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":32,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:16:19 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":33,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":33,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:17:12 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":34,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":34,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:17:45 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":35,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":35,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:17:54 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":36,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":36,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:18:11 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":37,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":37,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:18:26 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":38,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":38,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:18:46 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":39,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":39,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:18:55 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":40,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":40,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:19:07 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":41,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":41,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:19:29 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":42,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":42,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:20:06 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":43,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":43,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:20:31 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":44,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":44,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:24:57 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":45,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":45,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:27:34 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":46,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":46,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:28:00 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":47,"city_id":"501","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":47,"city_id":"501","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:28:15 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":48,"city_id":"461","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":48,"city_id":"461","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:30:12 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":49,"city_id":"461","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":49,"city_id":"461","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:32:26 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 08:32:34 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 08:32:40 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":52,"city_id":"461","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":52,"city_id":"461","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:34:22 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":53,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":53,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:34:34 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":54,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":54,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:40:14 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":58,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":58,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:40:51 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":59,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":59,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:41:07 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":60,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":60,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:41:33 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":61,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":61,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:41:46 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":62,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":62,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:41:56 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":63,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":63,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:42:29 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":64,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":64,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:45:10 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":65,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":65,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:45:48 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":66,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":66,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:47:18 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":67,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":67,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:49:29 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":68,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":68,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:51:35 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":69,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":69,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:51:49 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":70,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":70,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:51:54 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":71,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":71,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:54:13 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":72,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":72,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:55:08 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":73,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":73,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:55:32 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":74,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":74,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:57:47 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":75,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":75,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:57:59 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"nodemailerError","detail":{"error":{}}}
+	
+	===
+	Time: Tue Jun 06 2023 08:58:36 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"nodemailerError","detail":{"error":{}}}
+	
+	===
+	Time: Tue Jun 06 2023 09:00:41 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"opencageError","detail":{"status":"OK","total_results":0}}
+	
+	===
+	Time: Tue Jun 06 2023 09:01:40 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"status":"NOT FOUND"}
+	
+	===
+	Time: Tue Jun 06 2023 09:02:10 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"opencageError","detail":{"error":{"status":{"code":400,"message":"Bad Request"}}}}
+	
+	===
+	Time: Tue Jun 06 2023 09:03:03 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"opencageError","detail":{"error":{"status":{"code":400,"message":"Bad Request"}}}}
+	
+	===
+	Time: Tue Jun 06 2023 09:03:10 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":83,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":83,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 09:04:12 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":84,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":84,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 09:34:02 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":85,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":85,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 09:47:38 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":86,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":86,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 09:49:07 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":87,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":87,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 10:08:31 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"groseriastore.bdg@groseria.com","origin":"DB","instance":{"super":false,"id":null,"email":"groseriastore.bdg@groseria.com","password":"bandung"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'groseriastore.bdg@groseria.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["groseriastore.bdg@groseria.com","bandung",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'groseriastore.bdg@groseria.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["groseriastore.bdg@groseria.com","bandung",false]},"fields":{"email":"groseriastore.bdg@groseria.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 10:08:36 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"groseriastore.bdg@groseria.com","origin":"DB","instance":{"super":false,"id":null,"email":"groseriastore.bdg@groseria.com","password":"bandung"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'groseriastore.bdg@groseria.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["groseriastore.bdg@groseria.com","bandung",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'groseriastore.bdg@groseria.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["groseriastore.bdg@groseria.com","bandung",false]},"fields":{"email":"groseriastore.bdg@groseria.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
