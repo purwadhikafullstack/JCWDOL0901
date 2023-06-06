@@ -6,9 +6,9 @@ import CircularBackgroundDecoration from "../../components/CircularBackgroundDec
 
 const MobileIllustration = () => {
 	return (
-		<div className="text-white flex flex-row justify-center items-center z-10 mb-12">
+		<div className="text-white flex flex-row justify-center items-center z-10">
 			<div className="mt-28 mr-auto ml-6 text-3xl font-semibold">Register</div>
-			<RegisterIllustration className="w-[135px] mr-auto ml-auto pr-4" />
+			<RegisterIllustration className="w-[250px] mr-auto ml-auto pr-4" />
 		</div>
 	);
 };
