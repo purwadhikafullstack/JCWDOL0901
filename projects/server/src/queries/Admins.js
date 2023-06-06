@@ -14,7 +14,7 @@ const readAdminQuery = async (filter, order) => {
 
 const createAdminQuery = async (body, transaction) => {
 	const { email, password } = body;
-
+	console.log(body);
 	return await Admins.create({ email, password }, { transaction });
 };
 

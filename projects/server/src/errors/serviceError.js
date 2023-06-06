@@ -38,4 +38,20 @@ const startFindErrorHandler = async error => {
 	return { code: 500, message: "Internal server error" };
 };
 
-module.exports = { startRegistrationErrorHandler, startFindErrorHandler };
+const forbiddenErrorHandler = async () => {
+	await writeLogFile(
+		"Forbidden access, a non super admin trying to access restricted request",
+		"forbiddenErrorHandler"
+	);
+
+	return {
+		code: 403,
+		message: "You don't have permission to accces / on this server.",
+	};
+};
+
+module.exports = {
+	startRegistrationErrorHandler,
+	startFindErrorHandler,
+	forbiddenErrorHandler,
+};

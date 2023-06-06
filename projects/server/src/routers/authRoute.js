@@ -6,12 +6,13 @@ const {
 const {
 	getReferrerId,
 	getAdminsQueryParamsSanitizer,
+	isSuperAdmin,
 } = require("../middlewares/authMiddleware");
 
 const router = require("express").Router();
 
 router.get("/admin/list", getAdminsQueryParamsSanitizer, getAdmins);
-router.post("/admin/register", registerAdmin);
+router.post("/admin/register", isSuperAdmin, registerAdmin);
 
 router.post("/user/register", getReferrerId, registerUser);
 

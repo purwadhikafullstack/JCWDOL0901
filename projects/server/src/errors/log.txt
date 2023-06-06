@@ -439,3 +439,108 @@
 	Source: startRegistrationErrorHandler
 	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"groseriastore.bdg@groseria.com","origin":"DB","instance":{"super":false,"id":null,"email":"groseriastore.bdg@groseria.com","password":"bandung"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'groseriastore.bdg@groseria.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["groseriastore.bdg@groseria.com","bandung",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'groseriastore.bdg@groseria.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["groseriastore.bdg@groseria.com","bandung",false]},"fields":{"email":"groseriastore.bdg@groseria.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
 	
+	===
+	Time: Tue Jun 06 2023 10:40:20 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:40:26 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:41:46 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:42:19 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:42:48 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:43:03 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:43:05 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:43:06 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:43:07 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:43:31 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:45:21 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:46:16 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:46:21 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:46:45 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:46:59 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"groseria.plb@groseria.com","origin":"DB","instance":{"super":false,"id":null,"email":"groseria.plb@groseria.com","password":"palembang"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'groseria.plb@groseria.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["groseria.plb@groseria.com","palembang",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'groseria.plb@groseria.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["groseria.plb@groseria.com","palembang",false]},"fields":{"email":"groseria.plb@groseria.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 10:47:01 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"groseria.plb@groseria.com","origin":"DB","instance":{"super":false,"id":null,"email":"groseria.plb@groseria.com","password":"palembang"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'groseria.plb@groseria.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["groseria.plb@groseria.com","palembang",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'groseria.plb@groseria.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["groseria.plb@groseria.com","palembang",false]},"fields":{"email":"groseria.plb@groseria.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 10:47:34 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:49:00 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:49:11 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:49:14 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:56:44 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
