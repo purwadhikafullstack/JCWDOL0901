@@ -37,7 +37,7 @@ const confirm_password = Yup.string()
 
 const name = Yup.string().required(requiredMessage);
 
-const phone = Yup.string().matches(/^[0-9]*$/, "Can not contain alphabetic");
+const phone = Yup.string().matches(/^[0-9]*$/, "Can not contain alphabetic").required(requiredMessage);
 
 const validationSchema = Yup.object({
 	email,
