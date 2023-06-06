@@ -6,41 +6,58 @@ import { useState, useEffect } from "react";
 
 const CreateBranchAdminInput = ({ setInput }) => {
 	const [cities, setCities] = useState([]);
+	const [provinces, setProvinces] = useState([]);
 	useEffect(() => {
-		async function getCities() {
-			const cartData = await axios.get("http://localhost:2000/api/data/cities");
-			setCities(cartData.data || []);
+		async function getCitiesAndProvinces() {
+			const cityData = await axios.get("http://localhost:2000/api/data/cities");
+			const provinceData = await axios.get(
+				"http://localhost:2000/api/data/provinces"
+			);
+			setCities(cityData.data || []);
+			setProvinces(provinceData.data || []);
 		}
-		getCities();
+		getCitiesAndProvinces();
 	}, []);
 	return (
 		<div className="flex flex-col items-center min-w-full">
 			<InputGroup
-				formName="Email"
-				formType="email"
+				name="Email"
+				type="email"
+				inputKey="email"
 				setInput={setInput}
 				required={true}
 			/>
 			<InputGroup
-				formName="Password"
-				formType="password"
+				name="Password"
+				type="password"
+				inputKey="password"
 				setInput={setInput}
 				required={true}
 			/>
 			<InputGroup
-				formName="Confirm Password"
-				formType="password"
+				name="Confirm Password"
+				type="password"
+				inputKey="confirm_password"
 				setInput={setInput}
 				required={true}
 			/>
 			<InputGroup
-				formName="Store Name"
-				formType="text"
+				name="Store Name"
+				type="text"
+				inputKey="name"
 				setInput={setInput}
 				required={true}
 			/>
 			<SelectMenus
-				formName="City"
+				name="Province"
+				inputKey="province"
+				setInput={setInput}
+				required={true}
+				data={provinces}
+			/>
+			<SelectMenus
+				name="City"
+				inputKey="city"
 				setInput={setInput}
 				required={true}
 				data={cities}

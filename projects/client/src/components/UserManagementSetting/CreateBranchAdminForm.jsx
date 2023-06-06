@@ -7,7 +7,7 @@ const CreateBranchAdminForm = () => {
 
 	return (
 		<div className="mt-auto items-center w-full flex flex-col pb-10 pt-4 px-6">
-			<p>{JSON.stringify(input)}</p>
+			<p className="text-xs absolute">{JSON.stringify(input)}</p>
 			<CreateBranchAdminInput setInput={setInput} />
 			<Button name="Create" />
 		</div>
