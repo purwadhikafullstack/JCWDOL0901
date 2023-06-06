@@ -6,7 +6,6 @@ const { createUserQuery, updateUserQuery } = require("../queries/Users.js");
 const { createProfileQuery } = require("../queries/Profiles.js");
 const {	createVerificationTokenQuery, readUserTokensQuery } = require("../queries/User_tokens.js");
 const {	createUserVouchersAsReferralReward } = require("../queries/User_vouchers.js");
-
 const { sendRegistrationVerificationEmail } = require("../utils/nodemailer.js");
 
 const userDatabaseGeneration = async (body, transaction) => {
@@ -16,7 +15,6 @@ const userDatabaseGeneration = async (body, transaction) => {
 		await createUserVouchersAsReferralReward(User.id, User.referrer, transaction);
 
 	await createProfileQuery(body, User.id, transaction);
-
 	return await createVerificationTokenQuery(User, transaction);
 };
 
@@ -35,7 +33,6 @@ module.exports = {
 			}
 		});
 	},
-
 	startVerification: async token => {
 		return new Promise(async (resolve, reject) => {
 			const transaction = await sequelize.transaction();

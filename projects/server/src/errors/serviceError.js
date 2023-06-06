@@ -32,6 +32,7 @@ const startRegistrationErrorHandler = async error => {
 	};
 };
 
+
 const startVerificationErrorHandler = async error =>{
 	await writeLogFile(error, "startVerificationErrorHandler");
 

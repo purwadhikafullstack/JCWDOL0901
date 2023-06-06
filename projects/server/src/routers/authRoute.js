@@ -1,4 +1,5 @@
 const { registerUser, verifyUser } = require("../controllers/authController");
+
 const { getReferrerId } = require("../middlewares/authMiddleware");
 
 const router = require("express").Router();

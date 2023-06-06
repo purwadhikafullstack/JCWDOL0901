@@ -1,5 +1,7 @@
+
 const { User_tokens, sequelize } = require("../models/index.js");
 const { Op } = require("sequelize");
+
 const { generateVerificationToken } = require("../helpers/userTokenHelper.js");
 
 const createVerificationTokenQuery = async (body, transaction) => {

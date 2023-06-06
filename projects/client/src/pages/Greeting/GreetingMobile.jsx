@@ -1,22 +1,13 @@
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
 import GreetingMessage from "../../components/Greeting/GreetingMessage";
 import CompanyLogo from "../../components/CompanyLogo";
-const GreetingMobile = () => {
-	const location = useLocation();
-	const navigate = useNavigate();
 
-	React.useEffect(() => {
-		if (!location?.state?.fromRegister) navigate("/");
-	}, []);
-
+const GreetingMobile = ({ location, navigate }) => {
 	return (
-		location?.state?.email && (
-			<div className="flex flex-col items-center mx-auto pb-24 w-[480px] h-screen bg-white flex flex-col">
-				<CompanyLogo color={true} className={"w-[80px] my-10 cursor-pointer"} />
-				<GreetingMessage navigate={navigate} email={location?.state?.email} />
-			</div>
-		)
+		<div className="flex flex-col items-center mx-auto pb-24 w-[480px] h-screen bg-white flex flex-col">
+			<CompanyLogo color={true} className={"w-[80px] my-10 cursor-pointer"} />
+			<GreetingMessage navigate={navigate} email={location?.state?.email} />
+		</div>
 	);
 };
 

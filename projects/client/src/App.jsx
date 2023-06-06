@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import RegisterPage from "./pages/Register/RegisterPage.jsx";
 import GreetingPage from "./pages/Greeting/GreetingPage";
+
 import VerifyPage from "./pages/Verify/VerifyPage";
 
 function App() {
