@@ -544,3 +544,68 @@
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
+	===
+	Time: Tue Jun 06 2023 11:04:48 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 11:04:58 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 11:05:09 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 11:05:11 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 11:05:18 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 11:06:15 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 11:06:21 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 11:13:20 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 11:13:37 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 11:14:41 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Admins.password cannot be null","type":"notNull Violation","path":"password","value":null,"origin":"CORE","instance":{"super":false,"id":null,"email":"groseriastore.plb@groseria.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 11:15:14 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Admins.password cannot be null","type":"notNull Violation","path":"password","value":null,"origin":"CORE","instance":{"super":false,"id":null,"email":"groseriastore.plb@groseria.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 11:15:57 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Admins.password cannot be null","type":"notNull Violation","path":"password","value":null,"origin":"CORE","instance":{"super":false,"id":null,"email":"groseriastore.plb@groseria.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 11:16:11 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Admins.password cannot be null","type":"notNull Violation","path":"password","value":null,"origin":"CORE","instance":{"super":false,"id":null,"email":"groseriastore.plb@groseria.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	

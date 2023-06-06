@@ -1,4 +1,5 @@
 const { Admins, Branches } = require("../models/index.js");
+const { getHashPassword } = require("../utils/bcrypt.js");
 
 const readAdminQuery = async (filter, order) => {
 	return await Admins.findAll({
@@ -14,8 +15,11 @@ const readAdminQuery = async (filter, order) => {
 
 const createAdminQuery = async (body, transaction) => {
 	const { email, password } = body;
-	console.log(body);
-	return await Admins.create({ email, password }, { transaction });
+	const hashPassword = await getHashPassword(password);
+	return await Admins.create(
+		{ email, password: hashPassword },
+		{ transaction }
+	);
 };
 
 module.exports = { readAdminQuery, createAdminQuery };
