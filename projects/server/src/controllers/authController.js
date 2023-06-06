@@ -1,4 +1,4 @@
-const { startUserRegistration } = require("../services/authService");
+const { startUserRegistration, startVerification } = require("../services/authService");
 
 const registerUser = async (request, response) => {
 	await startUserRegistration(request.body)
@@ -10,4 +10,14 @@ const registerUser = async (request, response) => {
 		});
 };
 
-module.exports = { registerUser };
+const verifyUser = async (request, response) => {
+	await startVerification(request.params.token)
+		.then(result => {
+			response.status(200).send(result);
+		})
+		.catch(error => {
+			response.status(error.code).send(error.message);
+		});
+};
+
+module.exports = { registerUser, verifyUser };
