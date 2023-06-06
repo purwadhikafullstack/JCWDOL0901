@@ -1,25 +1,20 @@
 import React from "react";
-import RegisterInput from "./RegisterInput";
+import RegisterInputField from "./RegisterInputField";
 import Button from "../Button.jsx";
 import { useNavigate } from "react-router-dom";
-import { registerButtonHandler } from "./handlers/registerHandler";
+import { useFormik } from 'formik';
+import { formikRegistrationConfiguration } from "./config/formikRegistrationConfiguration";
 
 const RegisterFormWithValidator = ({ setError }) => {
-	const [input, setInput] = React.useState({});
 	const [busy, setBusy] = React.useState(false);
 	const navigate = useNavigate();
 
+	const formik = useFormik(formikRegistrationConfiguration(setError, setBusy, navigate));
+
 	return (
-		<form>
-			<RegisterInput setInput={setInput} />
-			<Button
-				type="button"
-				name="Register"
-				disabled={busy}
-				onClickHandler={() =>
-					registerButtonHandler(input, setError, setBusy, navigate)
-				}
-			/>
+		<form onSubmit={formik.handleSubmit} noValidate>
+			<RegisterInputField formik={formik} />
+			<Button type="submit" name="Register" disabled={busy} />
 		</form>
 	);
 };

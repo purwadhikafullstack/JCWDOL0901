@@ -1,10 +1,12 @@
 import React from "react";
 import GreetingMobile from "./GreetingMobile";
+import GreetingDesktop from "./GreetingDesktop";
 
 const GreetingPage = () => {
 	return (
 		<div>
-			<GreetingMobile />
+			<GreetingDesktop />
+			{/* <GreetingMobile /> */}
 		</div>
 	);
 };
