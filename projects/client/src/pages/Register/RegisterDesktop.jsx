@@ -24,7 +24,7 @@ const RegisterDesktop = () => {
 					<CompanyLogo color={false} className="mb-2 w-1/6 cursor-pointer mx-auto shrink"/>
 					<DesktopIllustration />
 				</div>
-				<div className="flex flex-col items-center shrink-0">
+				<div className="flex flex-col items-center shrink-0 mx-12">
 					<RegisterForm />
 				</div>
 			</div>
