@@ -20,6 +20,12 @@ module.exports = (sequelize, DataTypes) => {
 	}
 	User_vouchers.init(
 		{
+			id: {
+				autoIncrement: true,
+				unique: true,
+				primaryKey: true,
+				type: DataTypes.INTEGER,
+			},
 			user_id: {
 				allowNull: false,
 				type: DataTypes.INTEGER,
@@ -28,9 +34,9 @@ module.exports = (sequelize, DataTypes) => {
 				allowNull: false,
 				type: DataTypes.INTEGER,
 			},
-			quota: {
-				allowNull: false,
-				type: DataTypes.INTEGER,
+			isUsed: {
+				defaultValue: false,
+				type: DataTypes.BOOLEAN,
 			},
 		},
 		{

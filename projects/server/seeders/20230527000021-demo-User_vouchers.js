@@ -9,17 +9,17 @@ module.exports = {
 				{
 					user_id: 1,
 					voucher_id: 1,
-					quota: 1,
+					isUsed: false,
 				},
 				{
 					user_id: 1,
 					voucher_id: 2,
-					quota: 1,
+					isUsed: false,
 				},
 				{
 					user_id: 1,
 					voucher_id: 3,
-					quota: 1,
+					isUsed: false,
 				},
 			],
 			{}
