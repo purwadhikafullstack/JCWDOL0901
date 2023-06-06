@@ -609,3 +609,8 @@
 	Source: startRegistrationErrorHandler
 	Error: {"name":"SequelizeValidationError","errors":[{"message":"Admins.password cannot be null","type":"notNull Violation","path":"password","value":null,"origin":"CORE","instance":{"super":false,"id":null,"email":"groseriastore.plb@groseria.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
 	
+	===
+	Time: Tue Jun 06 2023 17:42:40 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
