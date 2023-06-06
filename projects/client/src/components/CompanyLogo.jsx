@@ -7,7 +7,7 @@ const CompanyLogo = ({ color, className }) => {
 		? "/assets/logo/color_logo.png"
 		: "/assets/logo/white_logo.png";
 
-		
+
 	return <img src={src} className={className} onClick={()=> navigate('/')} />;
 };
 
