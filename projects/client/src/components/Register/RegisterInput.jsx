@@ -2,19 +2,19 @@ import React from "react";
 import InputGroup from "../InputGroup";
 import RowSpace from "../RowSpace";
 
-const RegisterInput = ({ setInput }) => {
+const RegisterInput = ({ formik }) => {
 	return (
 		<div className="flex flex-col items-center min-w-full">
-			<InputGroup name="Email" type="email" inputKey="email" setInput={setInput} required={true} />
+			<InputGroup name="Email" type="email" inputKey="email" formik={formik} />
 			<div className="flex flex-row">
-				<InputGroup name="Username" type="text" inputKey="username" setInput={setInput} required={true} />
+				<InputGroup name="Username"	type="text"	inputKey="username"	formik={formik}/>
 				<RowSpace />
-				<InputGroup name="Phone" type="tel" inputKey="phone" setInput={setInput} required={true} />
+				<InputGroup name="Phone" type="tel" inputKey="phone" formik={formik} />
 			</div>
-			<InputGroup name="Name" type="text" inputKey="name" setInput={setInput} required={true} />
-			<InputGroup name="Password" type="password" inputKey="password" setInput={setInput} required={true} />
-			<InputGroup	name="Confirm Password"	type="password" inputKey="confirm_password" setInput={setInput}	required={true}	/>
-			<InputGroup name="Referral code" type="text" inputKey="reference" setInput={setInput} required={false} />
+			<InputGroup name="Name" type="text" inputKey="name" formik={formik} />
+			<InputGroup	name="Password"	type="password"	inputKey="password"	formik={formik}/>
+			<InputGroup	name="Confirm Password"	type="password"	inputKey="confirm_password" formik={formik}/>
+			<InputGroup	name="Referral code" type="text" inputKey="reference" formik={formik}/>
 		</div>
 	);
 };
