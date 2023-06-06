@@ -1,5 +1,5 @@
-const { User_tokens } = require("../models/index.js");
-
+const { User_tokens, sequelize } = require("../models/index.js");
+const { Op } = require("sequelize");
 const { generateVerificationToken } = require("../helpers/userTokenHelper.js");
 
 const createVerificationTokenQuery = async (body, transaction) => {
@@ -12,4 +12,14 @@ const createVerificationTokenQuery = async (body, transaction) => {
 	);
 };
 
-module.exports = { createVerificationTokenQuery };
+const readUserTokensQuery = async (token, action) => {
+	const User_token = await User_tokens.findOne({
+		where: { [Op.and]: [{ token, action }] },
+	});
+
+	if (!User_token) throw "INVALID_TOKEN" ;
+
+	return User_token;
+};
+
+module.exports = { createVerificationTokenQuery, readUserTokensQuery };
