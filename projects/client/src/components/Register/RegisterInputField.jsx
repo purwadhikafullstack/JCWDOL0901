@@ -2,7 +2,7 @@ import React from "react";
 import InputGroup from "../InputGroup";
 import RowSpace from "../RowSpace";
 
-const RegisterInput = ({ formik }) => {
+const RegisterInputField = ({ formik }) => {
 	return (
 		<div className="flex flex-col items-center min-w-full">
 			<InputGroup name="Email" type="email" inputKey="email" formik={formik} />
@@ -19,4 +19,4 @@ const RegisterInput = ({ formik }) => {
 	);
 };
 
-export default RegisterInput;
+export default RegisterInputField;

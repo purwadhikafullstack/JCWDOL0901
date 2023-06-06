@@ -1,8 +1,8 @@
 import React from "react";
-import RegisterInput from "./RegisterInput";
+import RegisterInputField from "./RegisterInputField";
 import Button from "../Button.jsx";
 import { useNavigate } from "react-router-dom";
-import {useFormik} from 'formik';
+import { useFormik } from 'formik';
 import { formikRegistrationConfiguration } from "./config/formikRegistrationConfiguration";
 
 const RegisterFormWithValidator = ({ setError }) => {
@@ -13,7 +13,7 @@ const RegisterFormWithValidator = ({ setError }) => {
 
 	return (
 		<form onSubmit={formik.handleSubmit} noValidate>
-			<RegisterInput formik={formik} />
+			<RegisterInputField formik={formik} />
 			<Button type="submit" name="Register" disabled={busy} />
 		</form>
 	);
