@@ -48,19 +48,14 @@ const validationSchema = Yup.object({
 	city_id,
 });
 
-const onSubmitConfiguration = async (values, setError, setBusy, navigate) => {
-	await createBranchAdminHandler(values, setError, setBusy, navigate);
+const onSubmitConfiguration = async values => {
+	await createBranchAdminHandler(values);
 };
 
-export const formikCreateBranchAdminConfiguration = (
-	setError,
-	setBusy,
-	navigate
-) => {
+export const formikCreateBranchAdminConfiguration = navigate => {
 	return {
 		initialValues,
-		onSubmit: async values =>
-			onSubmitConfiguration(values, setError, setBusy, navigate),
+		onSubmit: async values => onSubmitConfiguration(values, navigate),
 		validateOnChange,
 		validateOnBlur,
 		validationSchema,

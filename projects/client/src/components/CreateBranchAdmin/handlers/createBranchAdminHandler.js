@@ -1,4 +1,5 @@
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const validateCreateBranchAdminInput = input => {
 	if (input.password !== input.confirm_password)
@@ -10,28 +11,24 @@ const validateCreateBranchAdminInput = input => {
 };
 
 const createBranchAdminErrorHandler = async error => {
+	console.log(error);
 	if (error?.code === "ERR_NETWORK") {
 		return "Server unreachable, try again later!";
 	} else if (error?.code === "CONFIRM_PASS_ERR") {
 		return "Confirm password not equal!";
 	} else if (error?.response?.status === 400) {
 		return error?.response?.data;
+	} else if (error?.response?.status === 403) {
+		return error?.response?.data;
 	}
 
 	return "Something went wrong!";
 };
 
-export const createBranchAdminHandler = async (
-	input,
-	setError,
-	setBusy,
-	navigate
-) => {
+export const createBranchAdminHandler = async input => {
 	try {
-		await setBusy(true);
 		const validatedInput = await validateCreateBranchAdminInput(input);
-		// const token = localStorage.getItem("token");
-		const token = "test";
+		const token = localStorage.getItem("token");
 		const config = {
 			headers: { Authorization: `Bearer ${token}` },
 		};
@@ -40,11 +37,19 @@ export const createBranchAdminHandler = async (
 			validatedInput,
 			config
 		);
-		navigate("/admin/dashboard", {
-			state: { fromRegister: true, email: validatedInput.email },
+
+		Swal.fire({
+			icon: "success",
+			title: "New branch admin account has been created",
+			showConfirmButton: false,
+			timer: 2000,
 		});
 	} catch (error) {
-		await setBusy(false);
-		await setError(await createBranchAdminErrorHandler(error));
+		Swal.fire({
+			icon: "error",
+			title: await createBranchAdminErrorHandler(error),
+			showConfirmButton: false,
+			timer: 2000,
+		});
 	}
 };

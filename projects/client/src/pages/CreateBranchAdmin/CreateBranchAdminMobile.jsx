@@ -19,7 +19,7 @@ const CreateBranchAdminMobile = () => {
 	return (
 		<div className="flex flex-col mx-auto flex-1 max-w-[480px] min-h-screen overflow-hidden bg-white">
 			<CircularBackgroundDecoration />
-			<BackButton url="/register" color="text-white" />
+			<BackButton url="/admin/dashboard" color="text-white" />
 			<MobileIllustration />
 			<CreateBranchAdminForm />
 		</div>
