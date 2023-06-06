@@ -50,8 +50,22 @@ const forbiddenErrorHandler = async () => {
 	};
 };
 
+const startVerificationErrorHandler = async error => {
+	await writeLogFile(error, "startVerificationErrorHandler");
+
+	if (error === "INVALID_TOKEN") {
+		return { code: 404, message: "Invalid token!" };
+	}
+
+	return {
+		code: 500,
+		message: "Internal Server Error, please contact us!",
+	};
+};
+
 module.exports = {
 	startRegistrationErrorHandler,
 	startFindErrorHandler,
 	forbiddenErrorHandler,
+	startVerificationErrorHandler,
 };

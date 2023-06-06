@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const CompanyLogo = ({ color, className }) => {
+const CompanyLogo = ({ color, className, clickable = null }) => {
 	const navigate = useNavigate();
 
 	const src = color
@@ -8,7 +8,7 @@ const CompanyLogo = ({ color, className }) => {
 		: "/assets/logo/white_logo.png";
 
 
-	return <img src={src} className={className} onClick={()=> navigate('/')} />;
+	return <img src={src} className={className} onClick={clickable ? () => navigate('/') : null} />;
 };
 
 export default CompanyLogo;
