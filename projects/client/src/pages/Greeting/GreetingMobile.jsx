@@ -13,7 +13,7 @@ const GreetingMobile = () => {
 	return (
 		location?.state?.email && (
 			<div className="flex flex-col items-center mx-auto pb-24 w-[480px] h-screen bg-white flex flex-col">
-				<CompanyLogo color={true} size="50px" paddingY="5" />
+				<CompanyLogo color={true} className={"w-[80px] my-10 cursor-pointer"} />
 				<GreetingMessage navigate={navigate} email={location?.state?.email} />
 			</div>
 		)
