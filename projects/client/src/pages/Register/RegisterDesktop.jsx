@@ -18,8 +18,8 @@ const DesktopIllustration = () => {
 const RegisterDesktop = () => {
 	return (
 		<div className="flex flex-col mx-auto my-auto min-w-[480px] min-h-screen bg-black[.05]">
-			<div className="flex flex-row min-w-fit justify-around mx-auto my-auto rounded-lg shadow-xl bg-white">
-				<div className="flex flex-col shrink content-center pt-8 bg-green-300 rounded-l-lg">
+			<div className="flex flex-row min-w-fit justify-around mx-auto my-auto rounded-xl shadow-xl bg-white">
+				<div className="flex flex-col shrink content-center pt-8 bg-green-300 rounded-l-xl">
 					<BackButton url="/" color="text-green-100" />
 					<CompanyLogo color={false} className="mb-2 w-1/6 cursor-pointer mx-auto shrink"/>
 					<DesktopIllustration />
