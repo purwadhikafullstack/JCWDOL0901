@@ -5,7 +5,7 @@ const express = require("express");
 const cors = require("cors");
 const { join } = require("path");
 
-const { authRoute } = require("./routers/index.js");
+const { authRoute, dataRoute } = require("./routers/index.js");
 
 const PORT = process.env.PORT || 8000;
 const app = express();
@@ -27,6 +27,7 @@ app.use(express.json());
 // NOTE : Add your routes here
 
 app.use("/api/auth", authRoute);
+app.use("/api/data", dataRoute);
 
 // ===========================
 

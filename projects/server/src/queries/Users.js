@@ -17,4 +17,8 @@ const createUserQuery = async (body, transaction) => {
 	return await newUserData.update({ referral_code }, { transaction });
 };
 
-module.exports = { createUserQuery };
+const updateUserQuery = async (data, query, transaction) => {
+	return await Users.update({ data }, { where: { ...query }, transaction });
+};
+
+module.exports = { createUserQuery, updateUserQuery };

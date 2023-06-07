@@ -1,13 +1,12 @@
 import React from "react";
 
-const InputLabel = ({ formName, required }) => {
+const InputLabel = ({ name }) => {
 	return (
 		<label
-			for={`${formName}`}
-			className="block ml-1 mb-1 text-sm font-normal text-black dark:text-white mr-auto"
+			htmlFor={`${name}`}
+			className="block ml-1 mb-1 text-sm font-normal text-black mr-auto select-none"
 		>
-			{formName}
-			{required && <span className="text-red font-bold">*</span>}
+			{name}
 		</label>
 	);
 };

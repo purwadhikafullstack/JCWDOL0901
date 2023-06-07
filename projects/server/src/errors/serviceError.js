@@ -32,4 +32,40 @@ const startRegistrationErrorHandler = async error => {
 	};
 };
 
-module.exports = { startRegistrationErrorHandler };
+const startFindErrorHandler = async error => {
+	await writeLogFile(error, "startFindErrorHandler");
+
+	return { code: 500, message: "Internal server error" };
+};
+
+const forbiddenErrorHandler = async () => {
+	await writeLogFile(
+		"Forbidden access, a non super admin trying to access restricted request",
+		"forbiddenErrorHandler"
+	);
+
+	return {
+		code: 403,
+		message: "You don't have permission to accces / on this server.",
+	};
+};
+
+const startVerificationErrorHandler = async error => {
+	await writeLogFile(error, "startVerificationErrorHandler");
+
+	if (error === "INVALID_TOKEN") {
+		return { code: 404, message: "Invalid token!" };
+	}
+
+	return {
+		code: 500,
+		message: "Internal Server Error, please contact us!",
+	};
+};
+
+module.exports = {
+	startRegistrationErrorHandler,
+	startFindErrorHandler,
+	forbiddenErrorHandler,
+	startVerificationErrorHandler,
+};
