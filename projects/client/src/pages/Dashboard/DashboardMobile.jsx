@@ -3,6 +3,8 @@ import BackButton from "../../components/BackButton.jsx";
 import DashboardIllustration from "../../components/Dashboard/DashboardIllustration.jsx";
 import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration.jsx";
 import LineChart from "../../components/Chart/LineChart.jsx";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 const MobileIllustration = () => {
 	return (
@@ -24,6 +26,22 @@ const MobileIllustration = () => {
 };
 
 const DashboardMobile = () => {
+	const [grossIncome, setGrossIncome] = useState({});
+	useEffect(() => {
+		async function getGrossIncome() {
+			const token = localStorage.getItem("token");
+			const config = {
+				headers: { Authorization: `Bearer ${token}` },
+			};
+			const grossIncomeData = await axios.get(
+				`${process.env.REACT_APP_API_BASE_URL}/admin/transaction/dashboard-data`,
+				config
+			);
+			setGrossIncome(grossIncomeData.data || {});
+		}
+		getGrossIncome();
+	}, []);
+
 	const labels = [
 		"January",
 		"February",
@@ -44,6 +62,7 @@ const DashboardMobile = () => {
 				<p>Total Buyer</p>
 				<p className="text-2xl">120</p>
 			</div>
+			<p>{JSON.stringify(grossIncome)}</p>
 			<div className="flex flex-col items-center">
 				<LineChart
 					className="w-[400px] mb-4"

@@ -6,7 +6,7 @@ const {
 } = require("../models/index.js");
 const { Op } = require("sequelize");
 
-const readAdminTransasctionsQuery = async (from, to, status) => {
+const readAdminTransasctionsQuery = async (from, to, status, branch) => {
 	const dateQueryHelper = {
 		created_at: {
 			[Op.gte]: from ? new Date(from) : new Date(0),
@@ -19,10 +19,17 @@ const readAdminTransasctionsQuery = async (from, to, status) => {
 		  }
 		: {};
 
+	const branchQueryHelper = branch
+		? {
+				branch_id: branch,
+		  }
+		: {};
+
 	return await Transactions.findAll({
 		where: {
 			...dateQueryHelper,
 			...statusQueryHelper,
+			...branchQueryHelper,
 		},
 		// include: {
 		// 	model: Transaction_details,

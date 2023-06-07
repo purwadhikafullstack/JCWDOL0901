@@ -4,8 +4,8 @@ const {
 } = require("../services/adminTransactionService");
 
 const getAdminTransactions = async (request, response) => {
-	const { from, to, status } = request.query;
-	await startFindAdminTransactions(from, to, status)
+	const { from, to, status, branch } = request.query;
+	await startFindAdminTransactions(from, to, status, branch)
 		.then(result => {
 			response.status(200).send(result);
 		})
@@ -15,7 +15,8 @@ const getAdminTransactions = async (request, response) => {
 };
 
 const getAdminDashboardData = async (request, response) => {
-	await startGetAdminDashboardData()
+	const { from, to, status, branch } = request.query;
+	await startGetAdminDashboardData(from, to, status, branch)
 		.then(result => {
 			response.status(200).send(result);
 		})
