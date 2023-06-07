@@ -2,9 +2,7 @@ import React from "react";
 import BackButton from "../../components/BackButton.jsx";
 import DashboardIllustration from "../../components/Dashboard/DashboardIllustration.jsx";
 import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration.jsx";
-import LineChart from "../../components/Chart/LineChart.jsx";
-import axios from "axios";
-import { useState, useEffect } from "react";
+import DashBoardGrossIncomeChart from "../../components/Dashboard/DashBoardGrossIncomeChart.jsx";
 
 const MobileIllustration = () => {
 	return (
@@ -26,33 +24,6 @@ const MobileIllustration = () => {
 };
 
 const DashboardMobile = () => {
-	const [grossIncome, setGrossIncome] = useState({});
-	useEffect(() => {
-		async function getGrossIncome() {
-			const token = localStorage.getItem("token");
-			const config = {
-				headers: { Authorization: `Bearer ${token}` },
-			};
-			const grossIncomeData = await axios.get(
-				`${process.env.REACT_APP_API_BASE_URL}/admin/transaction/dashboard-data`,
-				config
-			);
-			setGrossIncome(grossIncomeData.data || {});
-		}
-		getGrossIncome();
-	}, []);
-
-	const labels = [
-		"January",
-		"February",
-		"March",
-		"April",
-		"May",
-		"June",
-		"July",
-	];
-	const dataset = [2321, 1234, 6823, 1312, 3200, 8123, 4321];
-
 	return (
 		<div className="flex flex-col mx-auto flex-1 max-w-[480px] min-h-screen overflow-hidden bg-white">
 			<CircularBackgroundDecoration />
@@ -62,27 +33,8 @@ const DashboardMobile = () => {
 				<p>Total Buyer</p>
 				<p className="text-2xl">120</p>
 			</div>
-			<p>{JSON.stringify(grossIncome)}</p>
-			<div className="flex flex-col items-center">
-				<LineChart
-					className="w-[400px] mb-4"
-					labels={labels}
-					label="Gross Income"
-					title="Total Gross Income"
-					total="2.500.000"
-					dataset={dataset}
-				/>
-			</div>
-			<div className="flex flex-col items-center">
-				<LineChart
-					className="w-[400px] mb-4"
-					labels={labels}
-					label="Product Sold"
-					title="Total Product Sold"
-					total="3785"
-					dataset={dataset}
-				/>
-			</div>
+			<DashBoardGrossIncomeChart />
+			<DashBoardGrossIncomeChart />
 		</div>
 	);
 };

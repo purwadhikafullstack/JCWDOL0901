@@ -1,12 +1,34 @@
-const scales = {
-	x: {
-		grid: {
-			display: false,
+const scales = yTitle => {
+	return {
+		x: {
+			grid: {
+				display: false,
+			},
+			ticks: {
+				autoSkip: false,
+				maxRotation: 30,
+				minRotation: 30,
+				font: {
+					size: 9,
+				},
+			},
 		},
-	},
+		y: {
+			beginAtZero: true,
+			title: {
+				display: true,
+				text: yTitle,
+			},
+			ticks: {
+				font: {
+					size: 9,
+				},
+			},
+		},
+	};
 };
 
-const lineChartOption = (title, total) => {
+const lineChartOption = (title, total, yTitle) => {
 	return {
 		responsive: true,
 		plugins: {
@@ -16,9 +38,12 @@ const lineChartOption = (title, total) => {
 			title: {
 				display: true,
 				text: `${title}: ${total}`,
+				font: {
+					size: 16,
+				},
 			},
 		},
-		scales: scales,
+		scales: scales(yTitle),
 	};
 };
 

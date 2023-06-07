@@ -24,7 +24,15 @@ ChartJS.register(
 	Legend
 );
 
-const LineChart = ({ className, labels, label, title, total, dataset }) => {
+const LineChart = ({
+	className,
+	labels,
+	label,
+	title,
+	total,
+	dataset,
+	yTitle,
+}) => {
 	const data = {
 		labels,
 		datasets: [
@@ -40,7 +48,7 @@ const LineChart = ({ className, labels, label, title, total, dataset }) => {
 
 	return (
 		<div className={className}>
-			<Line options={lineChartOption(title, total)} data={data} />
+			<Line options={lineChartOption(title, total, yTitle)} data={data} />
 		</div>
 	);
 };

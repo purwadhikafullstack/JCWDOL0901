@@ -24,7 +24,7 @@ module.exports = {
 		return new Promise(async (resolve, reject) => {
 			try {
 				from = from ? new Date(from) : moment().subtract(7, "days");
-				to = to ? new Date(to) : new Date();
+				to = to ? new Date(to) : new Date(new Date().toLocaleDateString());
 
 				const adminTransactionsData = await readAdminTransactionsQuery(
 					from,
@@ -36,24 +36,37 @@ module.exports = {
 					(total, current) => total + current.amount,
 					0
 				);
-				const grossIncomeData = adminTransactionsData.map(cur => {
-					return cur.amount;
+				const rawData = adminTransactionsData.map(cur => {
+					return {
+						label: moment(cur.created_at).format("DD/MM/YYYY"),
+						amount: cur.amount,
+					};
 				});
 
 				const diffInDays = moment(to).diff(moment(from), "days");
 				console.log(diffInDays);
-				const dateArray = new Array(diffInDays)
+
+				const labels = new Array(diffInDays + 1)
 					.fill(0)
 					.map((cur, index, arr) =>
-						moment().subtract(arr.length - 1 - index, "days")
+						moment()
+							.subtract(arr.length - 1 - index, "days")
+							.format("DD/MM/YYYY")
 					);
-				console.log(dateArray);
-				//[0, 0, 0, 0, 0, 0, 0]
-				//"2023-05-24T00:00:00.000Z",
+
+				const grossIncomeData = labels.map(label =>
+					rawData.reduce(
+						(sum, raw) =>
+							label === raw.label ? (sum += raw.amount) : (sum += 0),
+						0
+					)
+				);
 
 				const DashboardData = {
-					total_gross_income: totalGrossIncome,
-					gross_income_data: grossIncomeData,
+					rawData,
+					totalGrossIncome,
+					grossIncomeData,
+					labels,
 				};
 				return resolve(DashboardData);
 			} catch (error) {
