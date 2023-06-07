@@ -4,7 +4,8 @@ const {
 } = require("../services/adminTransactionService");
 
 const getAdminTransactions = async (request, response) => {
-	await startFindAdminTransactions()
+	const { from, to, status } = request.query;
+	await startFindAdminTransactions(from, to, status)
 		.then(result => {
 			response.status(200).send(result);
 		})

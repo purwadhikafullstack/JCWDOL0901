@@ -32,8 +32,8 @@ const LineChart = ({ className, labels, label, title, total, dataset }) => {
 				fill: true,
 				label: label,
 				data: dataset,
-				borderColor: "rgb(53, 162, 235)",
-				backgroundColor: "rgba(53, 162, 235, 0.5)",
+				borderColor: "#2E9D5B",
+				backgroundColor: "#53B97C50",
 			},
 		],
 	};

@@ -2,10 +2,14 @@ const { startFindErrorHandler } = require("../errors/serviceError.js");
 const { readAdminTransasctionsQuery } = require("../queries/Transactions.js");
 
 module.exports = {
-	startFindAdminTransactions: async () => {
+	startFindAdminTransactions: async (from, to, status) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const adminTransactionsData = await readAdminTransasctionsQuery();
+				const adminTransactionsData = await readAdminTransasctionsQuery(
+					from,
+					to,
+					status
+				);
 				return resolve(adminTransactionsData);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
