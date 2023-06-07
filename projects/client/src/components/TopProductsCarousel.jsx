@@ -66,7 +66,7 @@ const Categories = () => {
 
 const TopProductsCarousel = () => {
 	return (
-		<div className="flex flex-col border-b py-6 border-dashed">
+		<div className="flex flex-col py-6">
 			<div className="flex flex-row">
 				<div className="mb-6 ml-6 mr-auto font-bold text-xl">Top Products</div>
 				<div className="text-green-300 flex flex-row mt-1.5 cursor-pointer mr-2">
