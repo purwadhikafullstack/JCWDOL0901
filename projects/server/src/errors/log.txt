@@ -1114,3 +1114,28 @@
 	Source: startFindErrorHandler
 	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.status' in 'where clause'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = '5';"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.status' in 'where clause'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = '5';"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = '5';","parameters":{}}
 	
+	===
+	Time: Wed Jun 07 2023 19:52:44 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 19:53:02 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 19:53:09 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 19:55:14 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 19:55:16 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	

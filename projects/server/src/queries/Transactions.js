@@ -6,11 +6,11 @@ const {
 } = require("../models/index.js");
 const { Op } = require("sequelize");
 
-const readAdminTransasctionsQuery = async (from, to, status, branch) => {
+const readAdminTransactionsQuery = async (from, to, status, branch) => {
 	const dateQueryHelper = {
 		created_at: {
-			[Op.gte]: from ? new Date(from) : new Date(0),
-			[Op.lte]: to ? new Date(to) : new Date(),
+			[Op.gte]: from,
+			[Op.lte]: to,
 		},
 	};
 	const statusQueryHelper = status
@@ -38,4 +38,4 @@ const readAdminTransasctionsQuery = async (from, to, status, branch) => {
 	});
 };
 
-module.exports = { readAdminTransasctionsQuery };
+module.exports = { readAdminTransactionsQuery };
