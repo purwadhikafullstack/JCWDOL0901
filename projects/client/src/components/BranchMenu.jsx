@@ -5,7 +5,7 @@ const BranchMenu = () => {
 	return (
 		<div className="flex-col">
 			<div className="text-green-100 flex flex-row items-center">
-				<span class="material-symbols-rounded font-thin text-lg">
+				<span className="material-symbols-rounded font-thin text-lg">
 					storefront
 				</span>
 				<div className="mx-1.5 font-light antialiased">Deliver from</div>

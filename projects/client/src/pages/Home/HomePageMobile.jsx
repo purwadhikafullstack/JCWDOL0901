@@ -3,6 +3,7 @@ import MobileHeader from "../../components/MobileHeader";
 import PromoCarousel from "../../components/PromoCarousel";
 import CategoryCarousel from "../../components/CategoryCarousel";
 import TopProductsCarousel from "../../components/TopProductsCarousel";
+import MobileNavBar from "../../components/MobileNavBar";
 
 const HomePageMobile = () => {
 	return (
@@ -11,6 +12,7 @@ const HomePageMobile = () => {
 			<PromoCarousel />
 			<CategoryCarousel />
 			<TopProductsCarousel />
+			<MobileNavBar />
 		</div>
 	);
 };

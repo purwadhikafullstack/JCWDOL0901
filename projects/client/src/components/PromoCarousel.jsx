@@ -9,6 +9,8 @@ const PromoCarousel = () => {
 				showStatus={false}
 				centerMode={true}
 				swipeable={true}
+				autoPlay={true}
+				interval={4000}
 				emulateTouch={true}
 				showArrows={false}
 				infiniteLoop={true}

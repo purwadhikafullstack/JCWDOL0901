@@ -6,7 +6,7 @@ const AddressDropDown = () => {
 			<div className="font-medium underline underline-offset-4 decoration-dotted">
 				Home (main)
 			</div>
-			<span class="ml-1 material-symbols-rounded font-bold text-3xl cursor-pointer">
+			<span className="ml-1 material-symbols-rounded font-bold text-3xl cursor-pointer">
 				expand_more
 			</span>
 		</div>

@@ -71,7 +71,7 @@ const TopProductsCarousel = () => {
 				<div className="mb-6 ml-6 mr-auto font-bold text-xl">Top Products</div>
 				<div className="text-green-300 flex flex-row mt-1.5 cursor-pointer mr-2">
 					<div>See more </div>
-					<span class="material-symbols-rounded">chevron_right</span>
+					<span className="material-symbols-rounded">chevron_right</span>
 				</div>
 			</div>
 			<Categories />
