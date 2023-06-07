@@ -5,7 +5,11 @@ const express = require("express");
 const cors = require("cors");
 const { join } = require("path");
 
-const { authRoute, dataRoute } = require("./routers/index.js");
+const {
+	authRoute,
+	dataRoute,
+	adminTransactionRoute,
+} = require("./routers/index.js");
 
 const PORT = process.env.PORT || 8000;
 const app = express();
@@ -28,6 +32,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRoute);
 app.use("/api/data", dataRoute);
+app.use("/api/admin/transaction", adminTransactionRoute);
 
 // ===========================
 

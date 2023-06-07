@@ -1049,3 +1049,8 @@
 	Source: startRegistrationErrorHandler
 	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asddf@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asddf@asd","password":"$2b$10$Bm0rMZ8bVEGj6FxrGHM1/.FHxY.J/LVm3tXEmwrRM5PqxlQfLrHZK"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asddf@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asddf@asd","$2b$10$Bm0rMZ8bVEGj6FxrGHM1/.FHxY.J/LVm3tXEmwrRM5PqxlQfLrHZK",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asddf@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asddf@asd","$2b$10$Bm0rMZ8bVEGj6FxrGHM1/.FHxY.J/LVm3tXEmwrRM5PqxlQfLrHZK",false]},"fields":{"email":"asddf@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
 	
+	===
+	Time: Wed Jun 07 2023 11:35:31 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
