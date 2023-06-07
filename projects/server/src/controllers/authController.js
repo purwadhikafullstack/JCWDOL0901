@@ -1,7 +1,34 @@
-const { startUserRegistration, startVerification } = require("../services/authService");
+const {
+	startUserRegistration,
+	startFindAdmins,
+	startAdminRegistration,
+	startVerification,
+} = require("../services/authService");
 
 const registerUser = async (request, response) => {
 	await startUserRegistration(request.body)
+		.then(result => {
+			response.status(200).send(result);
+		})
+		.catch(error => {
+			response.status(error.code).send(error.message);
+		});
+};
+
+const getAdmins = async (request, response) => {
+	const { filter, order, page } = request.query;
+
+	await startFindAdmins(filter, order, page)
+		.then(result => {
+			response.status(200).send(result);
+		})
+		.catch(error => {
+			response.status(error.code).send(error.message);
+		});
+};
+
+const registerAdmin = async (request, response) => {
+	await startAdminRegistration(request.body)
 		.then(result => {
 			response.status(200).send(result);
 		})
@@ -20,5 +47,4 @@ const verifyUser = async (request, response) => {
 		});
 };
 
-module.exports = { registerUser, verifyUser };
-
+module.exports = { registerUser, getAdmins, registerAdmin, verifyUser };

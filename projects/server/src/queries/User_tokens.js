@@ -1,4 +1,3 @@
-
 const { User_tokens, sequelize } = require("../models/index.js");
 const { Op } = require("sequelize");
 
@@ -19,7 +18,7 @@ const readUserTokensQuery = async (token, action) => {
 		where: { [Op.and]: [{ token, action }] },
 	});
 
-	if (!User_token) throw "INVALID_TOKEN" ;
+	if (!User_token) throw "INVALID_TOKEN";
 
 	return User_token;
 };
