@@ -1,5 +1,4 @@
 import React from "react";
-
 import GreetingMessage from "../../components/Greeting/GreetingMessage";
 import CompanyLogo from "../../components/CompanyLogo";
 
