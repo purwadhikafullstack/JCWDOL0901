@@ -30,25 +30,7 @@ const PromoCarousel = () => {
 				<div className="rounded-xl mx-3">
 					<img
 						className="rounded-xl"
-						src="/assets/promotions/inventory_promotions_1.png"
-					/>
-				</div>
-				<div className="rounded-xl mx-3">
-					<img
-						className="rounded-xl"
-						src="/assets/promotions/global_promotions_1.png"
-					/>
-				</div>
-				<div className="rounded-xl mx-3">
-					<img
-						className="rounded-xl"
-						src="/assets/promotions/inventory_promotions_1.png"
-					/>
-				</div>
-				<div className="rounded-xl mx-3">
-					<img
-						className="rounded-xl"
-						src="/assets/promotions/global_promotions_1.png"
+						src="/assets/promotions/global_promotions_2.png"
 					/>
 				</div>
 			</Carousel>
