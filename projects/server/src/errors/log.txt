@@ -1199,3 +1199,143 @@
 	Source: startFindErrorHandler
 	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_MIX_OF_GROUP_FUNC_AND_FIELDS","errno":1140,"sqlState":"42000","sqlMessage":"In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'ogwa.Transactions.id'; this is incompatible with sql_mode=only_full_group_by","sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:42:34') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';"},"original":{"code":"ER_MIX_OF_GROUP_FUNC_AND_FIELDS","errno":1140,"sqlState":"42000","sqlMessage":"In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'ogwa.Transactions.id'; this is incompatible with sql_mode=only_full_group_by","sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:42:34') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';"},"sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:42:34') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';","parameters":{}}
 	
+	===
+	Time: Thu Jun 08 2023 14:26:11 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 14:26:11 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 14:33:24 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 14:33:24 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 14:33:25 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 14:33:26 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 14:33:32 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 14:33:32 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 14:33:32 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 14:33:32 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:13:05 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:15:56 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:16:16 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:16:36 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:17:22 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:17:59 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:18:00 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:19:04 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:20:08 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:33:17 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:33:17 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:33:17 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:33:19 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:33:19 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:33:19 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:33:23 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:33:23 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:33:23 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	

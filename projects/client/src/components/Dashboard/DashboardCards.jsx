@@ -3,10 +3,10 @@ import { rupiah } from "../../helper/rupiah";
 import { useState, useEffect } from "react";
 import getAllTimeData from "./helper/getAllTimeDataHelper.js";
 
-const DashboardCards = ({ branchId }) => {
+const DashboardCards = ({}) => {
 	const [allTimeData, setAllTimeData] = useState({});
 	useEffect(() => {
-		getAllTimeData(setAllTimeData, branchId);
+		getAllTimeData(setAllTimeData);
 	}, []);
 	return (
 		<>

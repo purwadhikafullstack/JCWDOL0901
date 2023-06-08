@@ -1,5 +1,4 @@
 import LineChart from "../Chart/LineChart.jsx";
-import { rupiah } from "../../helper/rupiah.js";
 
 const DashboardProductSoldChart = ({ data }) => {
 	return (

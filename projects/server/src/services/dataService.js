@@ -5,6 +5,7 @@ const {
 	readCityQuery,
 	readProvincesQuery,
 	readCitiesInProvinceQuery,
+	readBranchQuery,
 } = require("../queries/Data.js");
 
 module.exports = {
@@ -46,6 +47,17 @@ module.exports = {
 				const cities = await readCitiesInProvinceQuery(province_id);
 
 				return resolve(cities);
+			} catch (error) {
+				return reject(await startFindErrorHandler(error));
+			}
+		});
+	},
+	startFindBranch: async branch_id => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				if (branch_id === 0) return resolve({});
+				const branch = await readBranchQuery(branch_id);
+				return resolve(branch);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
 			}

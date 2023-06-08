@@ -1,5 +1,4 @@
 import React from "react";
-import BackButton from "../../components/BackButton.jsx";
 import DashboardIllustration from "../../components/Dashboard/DashboardIllustration.jsx";
 import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration.jsx";
 import DashboardBranchInfo from "../../components/Dashboard/DashboardBranchInfo.jsx";
@@ -18,13 +17,11 @@ const MobileIllustration = () => {
 };
 
 const DashboardMobile = () => {
-	const branchId = 1;
 	return (
 		<div className="flex flex-col mx-auto flex-1 max-w-[480px] min-h-screen overflow-hidden bg-white">
 			<CircularBackgroundDecoration />
-			<BackButton url="/admin/dashboard" color="text-white" />
 			<MobileIllustration />
-			<DashboardCharts branchId={branchId} />
+			<DashboardCharts />
 		</div>
 	);
 };
