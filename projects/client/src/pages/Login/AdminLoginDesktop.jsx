@@ -1,8 +1,8 @@
 import React from 'react'
 import BackButton from "../../components/BackButton";
-import RegisterForm from "../../components/Register/RegisterForm";
 import CompanyLogo from "../../components/CompanyLogo";
-import RegisterIllustration from "../../components/Register/RegisterIllustration";
+import AdminLoginIllustration from '../../components/Login/AdminLoginIllustration';
+import AdminLoginForm from '../../components/Login/AdminLoginForm';
 
 const DesktopIllustration = () => {
 	return (
@@ -10,7 +10,7 @@ const DesktopIllustration = () => {
 			<div className="mb-4 text-green-100 text-3xl font-light">
 				Admin login page.
 			</div>
-			<RegisterIllustration className="w-[400px] pb-12" />
+			<AdminLoginIllustration className="w-[400px] pb-12" />
 		</div>
 	);
 };
@@ -25,7 +25,7 @@ function AdminLoginDesktop() {
             <DesktopIllustration />
         </div>
         <div className="flex flex-col items-center shrink-0 mx-12">
-            <RegisterForm />
+            <AdminLoginForm />
         </div>
     </div>
 </div>

@@ -1049,3 +1049,103 @@
 	Source: startRegistrationErrorHandler
 	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asddf@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asddf@asd","password":"$2b$10$Bm0rMZ8bVEGj6FxrGHM1/.FHxY.J/LVm3tXEmwrRM5PqxlQfLrHZK"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asddf@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asddf@asd","$2b$10$Bm0rMZ8bVEGj6FxrGHM1/.FHxY.J/LVm3tXEmwrRM5PqxlQfLrHZK",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asddf@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asddf@asd","$2b$10$Bm0rMZ8bVEGj6FxrGHM1/.FHxY.J/LVm3tXEmwrRM5PqxlQfLrHZK",false]},"fields":{"email":"asddf@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
 	
+	===
+	Time: Thu Jun 08 2023 13:44:19 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 13:44:21 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 13:44:35 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 13:44:50 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 16:22:39 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 16:23:06 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 16:23:08 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 16:23:09 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 16:23:48 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 16:23:49 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 16:23:50 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 16:23:50 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 16:23:51 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 16:24:22 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 16:24:23 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 16:24:23 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 16:24:24 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 16:24:24 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 16:24:24 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 16:33:51 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	

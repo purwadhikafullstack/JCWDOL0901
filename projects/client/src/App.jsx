@@ -6,14 +6,15 @@ import CreateBranchAdminPage from "./pages/CreateBranchAdmin/CreateBranchAdminPa
 import GreetingPage from "./pages/Greeting/GreetingPage";
 import VerifyPage from "./pages/Verify/VerifyPage";
 import AdminLoginPage from "./pages/Login/AdminLoginPage";
-import AdminDashboardPage from "./pages/Dashboard/AdminDashboardPage";
+import AdminTestPage from "./pages/Login/AdminTestPage";
+
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="admin/login" element={<AdminLoginPage />} />
-        <Route path="admin/dashboard" element={<AdminDashboardPage />} />
+        <Route path="admin/dashboard" element={<AdminTestPage />} />
         <Route
           path="admin/create-branch-admin"
           element={<CreateBranchAdminPage />}
