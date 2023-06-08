@@ -21,3 +21,4 @@ const verifyUser = async (request, response) => {
 };
 
 module.exports = { registerUser, verifyUser };
+
