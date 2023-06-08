@@ -7,7 +7,7 @@ const getTotalGrossIncome = data => data.reduce((total, current) => total + curr
 const getRawData = data =>
 	data.map(cur => {
 		return {
-			label: moment(cur.created_at).format("DD/MM/YYYY"),
+			label: moment(cur.updated_at).format("DD/MM/YYYY"),
 			amount: cur.amount,
 		};
 	});
