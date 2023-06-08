@@ -1,9 +1,8 @@
 import React from "react";
 import DashboardIllustration from "../../components/Dashboard/DashboardIllustration.jsx";
-import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration.jsx";
 import DashboardBranchInfo from "../../components/Dashboard/DashboardBranchInfo.jsx";
 import DashboardCharts from "../../components/Dashboard/DashboardCharts.jsx";
-import SideBar from "../../components/SideBar.jsx";
+import SideBar from "../../components/SideBarDesktop.jsx";
 
 const DesktopIllustration = () => {
 	return (

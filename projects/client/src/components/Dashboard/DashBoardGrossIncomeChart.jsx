@@ -2,7 +2,6 @@ import LineChart from "../../components/Chart/LineChart.jsx";
 import { rupiah } from "../../helper/rupiah.js";
 
 const DashboardGrossIncomeChart = ({ data, chartClass }) => {
-	console.log(chartClass);
 	return (
 		<div className="flex flex-col items-center">
 			<LineChart

@@ -5,8 +5,8 @@ import DashboardDesktop from "./DashboardDesktop.jsx";
 const CreateBranchAdminPage = () => {
 	return (
 		<div>
-			{/* <DashboardMobile /> */}
-			<DashboardDesktop />
+			<DashboardMobile />
+			{/* <DashboardDesktop /> */}
 		</div>
 	);
 };

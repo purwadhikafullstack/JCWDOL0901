@@ -72,7 +72,7 @@ module.exports = {
 			try {
 				from = from ? moment(from) : moment(0);
 				to = to ? moment(to) : moment(new Date().toISOString().split("T")[0]);
-				console.log(from, to);
+
 				const adminTransactionsData = await readAdminTransactionsQuery(from, to, status, branch);
 				return resolve(adminTransactionsData);
 			} catch (error) {
@@ -87,7 +87,7 @@ module.exports = {
 					? moment(from)
 					: moment(new Date().toISOString().split("T")[0]).subtract(6, "days");
 				to = to ? moment(to) : moment(new Date().toISOString().split("T")[0]);
-				console.log(from, to);
+
 				const DashboardData = getDashboardData(from, to, status, branch);
 				return resolve(DashboardData);
 			} catch (error) {

@@ -2,23 +2,27 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import {
-	CalendarIcon,
+	DocumentTextIcon,
 	ChartBarIcon,
-	FolderIcon,
 	HomeIcon,
-	InboxIcon,
 	MenuIcon,
-	UsersIcon,
 	XIcon,
 	LogoutIcon,
+	GiftIcon,
+	ViewGridIcon,
+	ServerIcon,
+	TicketIcon,
+	CurrencyDollarIcon,
 } from "@heroicons/react/outline";
 
 const navigation = [
 	{ name: "Dashboard", href: "#", icon: HomeIcon, current: true },
-	{ name: "Team", href: "#", icon: UsersIcon, current: false },
-	{ name: "Projects", href: "#", icon: FolderIcon, current: false },
-	{ name: "Calendar", href: "#", icon: CalendarIcon, current: false },
-	{ name: "Documents", href: "#", icon: InboxIcon, current: false },
+	{ name: "Products", href: "#", icon: GiftIcon, current: false },
+	{ name: "Categories", href: "#", icon: ViewGridIcon, current: false },
+	{ name: "Stocks", href: "#", icon: ServerIcon, current: false },
+	{ name: "Product Promos", href: "#", icon: CurrencyDollarIcon, current: false },
+	{ name: "Orders", href: "#", icon: DocumentTextIcon, current: false },
+	{ name: "Vouchers", href: "#", icon: TicketIcon, current: false },
 	{ name: "Reports", href: "#", icon: ChartBarIcon, current: false },
 ];
 
@@ -39,7 +43,7 @@ export default function SideBar({ children }) {
         <body class="h-full">
         ```
       */}
-			<div>
+			<div className="pb-10">
 				<Transition.Root show={sidebarOpen} as={Fragment}>
 					<Dialog as="div" className="fixed inset-0 flex z-40 md:hidden" onClose={setSidebarOpen}>
 						<Transition.Child

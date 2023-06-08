@@ -3,10 +3,11 @@ import DashboardIllustration from "../../components/Dashboard/DashboardIllustrat
 import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration.jsx";
 import DashboardBranchInfo from "../../components/Dashboard/DashboardBranchInfo.jsx";
 import DashboardCharts from "../../components/Dashboard/DashboardCharts.jsx";
+import SideBar from "../../components/SideBarMobile.jsx";
 
 const MobileIllustration = () => {
 	return (
-		<div className="text-white flex flex-row justify-center items-center z-10 mb-12">
+		<div className="text-black flex flex-row justify-center items-center z-10 mb-12">
 			<div className="flex flex-col">
 				<div className="mt-2 mb-2 mr-auto ml-6 text-3xl text-left font-semibold">Dashboard</div>
 				<DashboardBranchInfo />
@@ -19,9 +20,10 @@ const MobileIllustration = () => {
 const DashboardMobile = () => {
 	return (
 		<div className="flex flex-col mx-auto flex-1 max-w-[480px] min-h-screen overflow-hidden bg-white">
-			<CircularBackgroundDecoration />
-			<MobileIllustration />
-			<DashboardCharts chartClass="w-[400px]" />
+			<SideBar>
+				<MobileIllustration />
+				<DashboardCharts chartClass="w-[400px] mt-10 mb-2 px-4 max-w-full" />
+			</SideBar>
 		</div>
 	);
 };
