@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const getGrossIncome = async setGrossIncome => {
+const getDashboardData = async setGrossIncome => {
 	const token = localStorage.getItem("token");
 	const config = {
 		headers: { Authorization: `Bearer ${token}` },
@@ -12,4 +12,4 @@ const getGrossIncome = async setGrossIncome => {
 	setGrossIncome(grossIncomeData.data || {});
 };
 
-export default getGrossIncome;
+export default getDashboardData;

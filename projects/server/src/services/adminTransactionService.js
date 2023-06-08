@@ -4,6 +4,8 @@ const moment = require("moment");
 
 const getTotalGrossIncome = data => data.reduce((total, current) => total + current, 0);
 
+const getTotalProductSold = data => data.reduce((total, current) => total + current, 0);
+
 const getRawData = data =>
 	data.map(cur => {
 		return {
@@ -39,12 +41,20 @@ const getDashboardData = async (from, to, status, branch) => {
 	const grossIncomeData = getGrossIncomeData(labels, rawData);
 	const totalGrossIncome = getTotalGrossIncome(grossIncomeData);
 	const productSoldData = getProductSoldData(labels, rawData);
+	const totalProductSold = getTotalProductSold(productSoldData);
 	return {
 		rawData,
 		totalGrossIncome,
 		grossIncomeData,
 		labels,
 		productSoldData,
+		totalProductSold,
+	};
+};
+const getAllTimeData = async (from, to, status, branch) => {
+	const adminTransactionsData = await readAdminTransactionsQuery(from, to, status, branch);
+	return {
+		adminTransactionsData,
 	};
 };
 
@@ -52,8 +62,9 @@ module.exports = {
 	startFindAdminTransactions: async (from, to, status, branch) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				from = from ? new Date(from) : new Date(0);
-				to = to ? new Date(to) : new Date(new Date().toLocaleDateString());
+				from = from ? moment(from) : moment(0);
+				to = to ? moment(to) : moment(new Date().toISOString().split("T")[0]);
+				console.log(from, to);
 				const adminTransactionsData = await readAdminTransactionsQuery(from, to, status, branch);
 				return resolve(adminTransactionsData);
 			} catch (error) {
@@ -71,6 +82,18 @@ module.exports = {
 				console.log(from, to);
 				const DashboardData = getDashboardData(from, to, status, branch);
 				return resolve(DashboardData);
+			} catch (error) {
+				return reject(await startFindErrorHandler(error));
+			}
+		});
+	},
+	startGetAdminAllTimeData: async (status, branch) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const from = moment(0);
+				const to = moment(new Date().toISOString().split("T")[0]);
+				const AllTimeData = getAllTimeData(from, to, status, branch);
+				return resolve(AllTimeData);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
 			}

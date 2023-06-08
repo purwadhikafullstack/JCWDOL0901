@@ -3,7 +3,7 @@ const titleConfig = (title, total) => {
 		display: true,
 		text: `${title}: ${total}`,
 		font: {
-			size: 16,
+			size: 12,
 		},
 	};
 };

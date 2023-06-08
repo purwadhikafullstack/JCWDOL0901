@@ -1,6 +1,7 @@
 const {
 	startGetAdminDashboardData,
 	startFindAdminTransactions,
+	startGetAdminAllTimeData,
 } = require("../services/adminTransactionService");
 
 const getAdminTransactions = async (request, response) => {
@@ -25,4 +26,15 @@ const getAdminDashboardData = async (request, response) => {
 		});
 };
 
-module.exports = { getAdminTransactions, getAdminDashboardData };
+const getAdminAllTimeData = async (request, response) => {
+	const { status, branch } = request.query;
+	await startGetAdminAllTimeData(status, branch)
+		.then(result => {
+			response.status(200).send(result);
+		})
+		.catch(error => {
+			response.status(error.code).send(error.message);
+		});
+};
+
+module.exports = { getAdminTransactions, getAdminDashboardData, getAdminAllTimeData };
