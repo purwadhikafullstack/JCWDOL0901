@@ -1,11 +1,12 @@
 import LineChart from "../../components/Chart/LineChart.jsx";
 import { rupiah } from "../../helper/rupiah.js";
 
-const DashboardGrossIncomeChart = ({ data }) => {
+const DashboardGrossIncomeChart = ({ data, chartClass }) => {
+	console.log(chartClass);
 	return (
 		<div className="flex flex-col items-center">
 			<LineChart
-				className="w-[400px] mb-2"
+				className={`${chartClass}`}
 				labels={data.labels}
 				label="Gross Income"
 				title="Total Gross Income"

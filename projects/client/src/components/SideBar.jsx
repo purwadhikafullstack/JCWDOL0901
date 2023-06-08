@@ -10,6 +10,7 @@ import {
 	MenuIcon,
 	UsersIcon,
 	XIcon,
+	LogoutIcon,
 } from "@heroicons/react/outline";
 
 const navigation = [
@@ -25,7 +26,7 @@ function classNames(...classes) {
 	return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function SideBar({ children }) {
 	const [sidebarOpen, setSidebarOpen] = useState(false);
 
 	return (
@@ -61,7 +62,7 @@ export default function Example() {
 							leaveFrom="translate-x-0"
 							leaveTo="-translate-x-full"
 						>
-							<div className="relative flex-1 flex flex-col max-w-xs w-full bg-white">
+							<div className="relative flex-1 flex flex-col max-w-xs w-full bg-green-200">
 								<Transition.Child
 									as={Fragment}
 									enter="ease-in-out duration-300"
@@ -74,21 +75,18 @@ export default function Example() {
 									<div className="absolute top-0 right-0 -mr-12 pt-2">
 										<button
 											type="button"
-											className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+											className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-400"
 											onClick={() => setSidebarOpen(false)}
 										>
 											<span className="sr-only">Close sidebar</span>
-											<XIcon className="h-6 w-6 text-white" aria-hidden="true" />
+											<XIcon className="h-6 w-6 text-green-500" aria-hidden="true" />
 										</button>
 									</div>
 								</Transition.Child>
 								<div className="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
-									<div className="flex-shrink-0 flex items-center px-4">
-										<img
-											className="h-8 w-auto"
-											src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
-											alt="Workflow"
-										/>
+									<div className="flex-shrink-0 flex items-center px-4 justify-center">
+										<img className="h-8 w-auto" src="/assets/logo/white_logo.png" alt="Workflow" />
+										<p className="mx-6 text-green-100 font-bold text-xl">GROSERIA</p>
 									</div>
 									<nav className="mt-5 px-2 space-y-1">
 										{navigation.map(item => (
@@ -97,7 +95,7 @@ export default function Example() {
 												href={item.href}
 												className={classNames(
 													item.current
-														? "bg-gray-100 text-gray-900"
+														? "bg-green-100/70 text-gray-900"
 														: "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
 													"group flex items-center px-2 py-2 text-base font-medium rounded-md"
 												)}
@@ -116,25 +114,18 @@ export default function Example() {
 										))}
 									</nav>
 								</div>
-								<div className="flex-shrink-0 flex border-t border-gray-200 p-4">
-									<a href="#" className="flex-shrink-0 group block">
-										<div className="flex items-center">
-											<div>
-												<img
-													className="inline-block h-10 w-10 rounded-full"
-													src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-													alt=""
-												/>
-											</div>
-											<div className="ml-3">
-												<p className="text-base font-medium text-gray-700 group-hover:text-gray-900">
-													Tom Cook
-												</p>
-												<p className="text-sm font-medium text-gray-500 group-hover:text-gray-700">
-													View profile
-												</p>
-											</div>
-										</div>
+								<div className="flex-shrink-0 flex border-t border-green-400 p-4">
+									<a
+										href="#"
+										className="group block flex items-center px-2 py-2 text-base font-medium"
+									>
+										<LogoutIcon
+											className="text-gray-400 group-hover:text-gray-500 mr-4 flex-shrink-0 h-6 w-6"
+											aria-hidden="true"
+										/>
+										<p className="text-base font-medium text-gray-700 group-hover:text-gray-900">
+											Sign Out
+										</p>
 									</a>
 								</div>
 							</div>
@@ -148,23 +139,20 @@ export default function Example() {
 				{/* Static sidebar for desktop */}
 				<div className="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
 					{/* Sidebar component, swap this element with another sidebar if you like */}
-					<div className="flex-1 flex flex-col min-h-0 border-r border-gray-200 bg-white">
+					<div className="flex-1 flex flex-col min-h-0 border-r border-green-400 bg-green-200">
 						<div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
-							<div className="flex items-center flex-shrink-0 px-4">
-								<img
-									className="h-8 w-auto"
-									src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
-									alt="Workflow"
-								/>
+							<div className="flex items-center flex-shrink-0 px-4 justify-center">
+								<img className="h-8 w-auto" src="/assets/logo/white_logo.png" alt="Workflow" />
+								<p className="mx-6 text-green-100 font-bold text-xl">GROSERIA</p>
 							</div>
-							<nav className="mt-5 flex-1 px-2 bg-white space-y-1">
+							<nav className="mt-5 flex-1 px-2 bg-green-200 space-y-1">
 								{navigation.map(item => (
 									<a
 										key={item.name}
 										href={item.href}
 										className={classNames(
 											item.current
-												? "bg-gray-100 text-gray-900"
+												? "bg-green-100/70 text-gray-900"
 												: "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
 											"group flex items-center px-2 py-2 text-sm font-medium rounded-md"
 										)}
@@ -181,34 +169,24 @@ export default function Example() {
 								))}
 							</nav>
 						</div>
-						<div className="flex-shrink-0 flex border-t border-gray-200 p-4">
-							<a href="#" className="flex-shrink-0 w-full group block">
-								<div className="flex items-center">
-									<div>
-										<img
-											className="inline-block h-9 w-9 rounded-full"
-											src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-											alt=""
-										/>
-									</div>
-									<div className="ml-3">
-										<p className="text-sm font-medium text-gray-700 group-hover:text-gray-900">
-											Tom Cook
-										</p>
-										<p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">
-											View profile
-										</p>
-									</div>
-								</div>
+						<div className="flex-shrink-0 flex border-t border-green-400 p-4">
+							<a href="#" className="group block flex items-center px-2 py-2 text-base font-medium">
+								<LogoutIcon
+									className="text-gray-400 group-hover:text-gray-500 mr-4 flex-shrink-0 h-6 w-6"
+									aria-hidden="true"
+								/>
+								<p className="text-base font-medium text-gray-700 group-hover:text-gray-900">
+									Sign Out
+								</p>
 							</a>
 						</div>
 					</div>
 				</div>
 				<div className="md:pl-64 flex flex-col flex-1">
-					<div className="sticky top-0 z-10 md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">
+					<div className="fixed top-0 z-10 md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">
 						<button
 							type="button"
-							className="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+							className="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
 							onClick={() => setSidebarOpen(true)}
 						>
 							<span className="sr-only">Open sidebar</span>
@@ -219,6 +197,7 @@ export default function Example() {
 						<div className="">
 							<div className="max-w-7xl mx-auto sm:px-6 md:px-8">
 								{/* Replace with your content */}
+								{children}
 								{/* /End replace */}
 							</div>
 						</div>

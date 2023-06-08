@@ -3,6 +3,7 @@ import DashboardIllustration from "../../components/Dashboard/DashboardIllustrat
 import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration.jsx";
 import DashboardBranchInfo from "../../components/Dashboard/DashboardBranchInfo.jsx";
 import DashboardCharts from "../../components/Dashboard/DashboardCharts.jsx";
+import SideBar from "../../components/SideBar.jsx";
 
 const DesktopIllustration = () => {
 	return (
@@ -19,9 +20,10 @@ const DesktopIllustration = () => {
 const DashboardDesktop = () => {
 	return (
 		<div className="flex flex-col mx-auto flex-1 min-w-[480px] min-h-screen overflow-hidden bg-green-100">
-			{/* <CircularBackgroundDecoration /> */}
-			<DesktopIllustration />
-			<DashboardCharts chartClass="flex flex-row justify-center" />
+			<SideBar>
+				<DesktopIllustration />
+				<DashboardCharts containerClass="" chartClass="w-[800px] mt-10 mb-20 mx-10 max-w-full" />
+			</SideBar>
 		</div>
 	);
 };

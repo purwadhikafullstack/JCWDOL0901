@@ -27,7 +27,7 @@ ChartJS.register(
 
 const LineChart = ({ className, labels, label, title, total, dataset, yTitle }) => {
 	return (
-		<div className={className}>
+		<div className={`${className}`}>
 			<Line
 				options={lineChartOption(title, total, yTitle)}
 				data={dataConfig(labels, label, dataset)}

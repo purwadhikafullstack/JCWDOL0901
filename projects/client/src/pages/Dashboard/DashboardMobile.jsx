@@ -21,7 +21,7 @@ const DashboardMobile = () => {
 		<div className="flex flex-col mx-auto flex-1 max-w-[480px] min-h-screen overflow-hidden bg-white">
 			<CircularBackgroundDecoration />
 			<MobileIllustration />
-			<DashboardCharts />
+			<DashboardCharts chartClass="w-[400px]" />
 		</div>
 	);
 };
