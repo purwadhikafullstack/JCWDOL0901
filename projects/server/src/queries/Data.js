@@ -1,4 +1,4 @@
-const { Cities, Provinces } = require("../models/index.js");
+const { Cities, Provinces, Branches } = require("../models/index.js");
 
 const readCitiesQuery = async () => {
 	return await Cities.findAll();
@@ -27,9 +27,22 @@ const readCitiesInProvinceQuery = async province_id => {
 	});
 };
 
+const readBranchQuery = async branch_id => {
+	return await Branches.findOne({
+		where: {
+			id: branch_id,
+		},
+		include: {
+			model: Cities,
+			include: { model: Provinces },
+		},
+	});
+};
+
 module.exports = {
 	readCitiesQuery,
 	readCityQuery,
 	readProvincesQuery,
 	readCitiesInProvinceQuery,
+	readBranchQuery,
 };
