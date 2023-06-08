@@ -16,14 +16,13 @@ const registerUserErrorHandler = async error => {
 		return "Confirm password not equal!";
 	} else if (error?.response?.status === 400) {
 		return error?.response?.data;
-	};
+	}
 
 	return "Something went wrong!";
 };
 
-export const registerButtonHandler = async (input, setError, setBusy, navigate) => {
+export const registerButtonHandler = async (input, setError, navigate) => {
 	try {
-		await setBusy(true);
 		const validatedInput = await validateRegistrationInput(input);
 		await axios.post(
 			`${process.env.REACT_APP_API_BASE_URL}/auth/user/register`,
@@ -33,7 +32,6 @@ export const registerButtonHandler = async (input, setError, setBusy, navigate) 
 			state: { fromRegister: true, email: validatedInput.email },
 		});
 	} catch (error) {
-		await setBusy(false);
 		await setError(await registerUserErrorHandler(error));
 	}
 };

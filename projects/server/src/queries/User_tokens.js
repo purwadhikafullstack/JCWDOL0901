@@ -19,7 +19,7 @@ const readUserTokensQuery = async (token, action) => {
 		where: { [Op.and]: [{ token, action }] },
 	});
 
-	if (!User_token) throw "INVALID_TOKEN" ;
+	if (!User_token) throw "INVALID_TOKEN";
 
 	return User_token;
 };
