@@ -15,6 +15,12 @@ const writeLogFile = (error, source) => {
 	});
 };
 
+const startFindErrorHandler = async error => {
+	await writeLogFile(error, "startFindErrorHandler");
+
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
+
 const startRegistrationErrorHandler = async error => {
 	await writeLogFile(error, "startRegistrationErrorHandler");
 
@@ -32,4 +38,4 @@ const startRegistrationErrorHandler = async error => {
 	};
 };
 
-module.exports = { startRegistrationErrorHandler };
+module.exports = { startRegistrationErrorHandler, startFindErrorHandler };
