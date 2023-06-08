@@ -6,8 +6,8 @@ const SliderSlides = ({ categories }) => {
 		<Splide options={{ perPage: 4.5, padding: 5, pagination: false, arrows: false }}>
 			{categories.map((category, index) => {
 				return (
-					<SplideSlide>
-						<div className="flex flex-col items-center" key={index}>
+					<SplideSlide key={index}>
+						<div className="flex flex-col items-center">
 							<img
 								className="w-[75px] cursor-pointer"
 								src={category.image}
