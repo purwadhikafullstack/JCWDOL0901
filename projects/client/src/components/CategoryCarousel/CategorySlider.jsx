@@ -1,5 +1,4 @@
 import React from "react";
-import { Splide } from "@splidejs/react-splide";
 import SliderSlides from "./SliderSlides";
 import axios from "axios";
 
@@ -21,13 +20,7 @@ const CategoriesSlider = () => {
 		fetchCategories(setCategories);
 	}, []);
 
-	return (
-		categories && (
-			<Splide options={{ perPage: 4.5, padding: 5, pagination: false, arrows: false }}>
-				<SliderSlides categories={categories} />
-			</Splide>
-		)
-	);
+	return categories && <SliderSlides categories={categories} />;
 };
 
 export default CategoriesSlider;
