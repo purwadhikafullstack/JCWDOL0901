@@ -3,6 +3,7 @@ const {
 	startFindProvinces,
 	startFindCitiesInProvince,
 	startFindCity,
+	startFindBranch,
 } = require("../services/dataService");
 
 const getCities = async (request, response) => {
@@ -48,4 +49,15 @@ const getCitiesInProvince = async (request, response) => {
 		});
 };
 
-module.exports = { getCities, getCity, getProvinces, getCitiesInProvince };
+const getBranch = async (request, response) => {
+	const { branch } = request.query;
+	await startFindBranch(branch)
+		.then(result => {
+			response.status(200).send(result);
+		})
+		.catch(error => {
+			response.status(error.code).send(error.message);
+		});
+};
+
+module.exports = { getCities, getCity, getProvinces, getCitiesInProvince, getBranch };
