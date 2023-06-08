@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import RegisterPage from "./pages/Register/RegisterPage.jsx";
 import CreateBranchAdminPage from "./pages/CreateBranchAdmin/CreateBranchAdminPage";
 import GreetingPage from "./pages/Greeting/GreetingPage";
+
 import VerifyPage from "./pages/Verify/VerifyPage";
 import AdminLoginPage from "./pages/Login/AdminLoginPage";
 import DashboardPage from "./pages/Dashboard/DashboardPage";

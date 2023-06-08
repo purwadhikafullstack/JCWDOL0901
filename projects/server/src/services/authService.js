@@ -24,6 +24,7 @@ const userDatabaseGeneration = async (body, transaction) => {
 
   if (User.referrer) await createUserVouchersAsReferralReward(User.id, User.referrer, transaction);
 
+
   await createProfileQuery(body, User.id, transaction);
 
   return await createVerificationTokenQuery(User, transaction);
@@ -37,6 +38,7 @@ const adminDatabaseGeneration = async (body, transaction) => {
 };
 
 module.exports = {
+
   startUserRegistration: async (body) => {
     return new Promise(async (resolve, reject) => {
       const transaction = await sequelize.transaction();
