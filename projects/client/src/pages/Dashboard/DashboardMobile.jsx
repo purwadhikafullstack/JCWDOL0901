@@ -18,12 +18,13 @@ const MobileIllustration = () => {
 };
 
 const DashboardMobile = () => {
+	const branchId = 1;
 	return (
 		<div className="flex flex-col mx-auto flex-1 max-w-[480px] min-h-screen overflow-hidden bg-white">
 			<CircularBackgroundDecoration />
 			<BackButton url="/admin/dashboard" color="text-white" />
 			<MobileIllustration />
-			<DashboardCharts />
+			<DashboardCharts branchId={branchId} />
 		</div>
 	);
 };

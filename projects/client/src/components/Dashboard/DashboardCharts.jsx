@@ -4,14 +4,14 @@ import DashboardProductSoldChart from "./DashboardProductSoldChart";
 import getDashboardData from "./helper/getDashboardDataHelper.js";
 import { useState, useEffect } from "react";
 
-const DashboardCharts = ({ data }) => {
+const DashboardCharts = ({ branchId }) => {
 	const [dashboardData, setDashboardData] = useState({});
 	useEffect(() => {
-		getDashboardData(setDashboardData);
+		getDashboardData(setDashboardData, branchId);
 	}, []);
 	return (
 		<>
-			<DashboardCards />
+			<DashboardCards branchId={branchId} />
 			<h1 className="mt-4 text-green-400 font-bold text-xl">Last 7 Days</h1>
 			<DashboardGrossIncomeChart data={dashboardData} />
 			<DashboardProductSoldChart data={dashboardData} />

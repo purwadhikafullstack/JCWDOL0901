@@ -1,15 +1,17 @@
 import axios from "axios";
 
-const getDashboardData = async setGrossIncome => {
+const getDashboardData = async (setDashboardData, branchId) => {
 	const token = localStorage.getItem("token");
 	const config = {
 		headers: { Authorization: `Bearer ${token}` },
 	};
-	const grossIncomeData = await axios.get(
-		`${process.env.REACT_APP_API_BASE_URL}/admin/transaction/dashboard-data?status=5`,
+	const dashboardData = await axios.get(
+		`${process.env.REACT_APP_API_BASE_URL}/admin/transaction/dashboard-data?status=5&${
+			branchId ? "branch=" + branchId : ""
+		}`,
 		config
 	);
-	setGrossIncome(grossIncomeData.data || {});
+	setDashboardData(dashboardData.data || {});
 };
 
 export default getDashboardData;

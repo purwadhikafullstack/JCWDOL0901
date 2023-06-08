@@ -53,8 +53,16 @@ const getDashboardData = async (from, to, status, branch) => {
 };
 const getAllTimeData = async (from, to, status, branch) => {
 	const adminTransactionsData = await readAdminTransactionsQuery(from, to, status, branch);
+	const allTimeGrossIncome = adminTransactionsData.reduce((sum, cur) => sum + cur.amount, 0);
+	const allTimeProductSold = adminTransactionsData.reduce(
+		(sum, cur) => sum + cur.Transaction_details.reduce((sum, cur) => sum + cur.quantity, 0),
+		0
+	);
+	const totalBuyer = new Set(adminTransactionsData.map(cur => cur.user_id)).size;
 	return {
-		adminTransactionsData,
+		allTimeGrossIncome,
+		allTimeProductSold,
+		totalBuyer,
 	};
 };
 
