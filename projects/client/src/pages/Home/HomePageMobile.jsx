@@ -9,7 +9,7 @@ import MobileFooter from "../../components/MobileFooter";
 const HomePageMobile = () => {
 	return (
 		<div className="max-w-[480px] min-h-screen mx-auto bg-white overflow-hidden flex flex-col overflow-y-hidden">
-			<MobileHeader mobile={true} />
+			<MobileHeader />
 			<PromoCarousel />
 			<CategoryCarousel />
 			<ProductsRecommendationCarousel />
