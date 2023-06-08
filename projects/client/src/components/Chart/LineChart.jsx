@@ -12,6 +12,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import lineChartOption from "./config/lineChartOption";
+import dataConfig from "./config/dataConfig";
 
 ChartJS.register(
 	CategoryScale,
@@ -24,31 +25,13 @@ ChartJS.register(
 	Legend
 );
 
-const LineChart = ({
-	className,
-	labels,
-	label,
-	title,
-	total,
-	dataset,
-	yTitle,
-}) => {
-	const data = {
-		labels,
-		datasets: [
-			{
-				fill: true,
-				label: label,
-				data: dataset,
-				borderColor: "#2E9D5B",
-				backgroundColor: "#53B97C50",
-			},
-		],
-	};
-
+const LineChart = ({ className, labels, label, title, total, dataset, yTitle }) => {
 	return (
 		<div className={className}>
-			<Line options={lineChartOption(title, total, yTitle)} data={data} />
+			<Line
+				options={lineChartOption(title, total, yTitle)}
+				data={dataConfig(labels, label, dataset)}
+			/>
 		</div>
 	);
 };

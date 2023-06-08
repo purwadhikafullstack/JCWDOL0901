@@ -2,10 +2,11 @@ import React from "react";
 import BackButton from "../../components/BackButton.jsx";
 import DashboardIllustration from "../../components/Dashboard/DashboardIllustration.jsx";
 import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration.jsx";
-import DashBoardGrossIncomeChart from "../../components/Dashboard/DashBoardGrossIncomeChart.jsx";
 import DashboardBranchInfo from "../../components/Dashboard/DashboardBranchInfo.jsx";
-import DashboardCard from "../../components/Dashboard/DashboardCard.jsx";
-import { rupiah } from "../../helper/rupiah.js";
+import DashboardCards from "../../components/Dashboard/DashboardCards.jsx";
+import getGrossIncome from "./helper/getGrossIncomeHelper.js";
+import { useState, useEffect } from "react";
+import DashboardCharts from "../../components/Dashboard/DashboardCharts.jsx";
 
 const MobileIllustration = () => {
 	return (
@@ -22,23 +23,17 @@ const MobileIllustration = () => {
 };
 
 const DashboardMobile = () => {
+	const [grossIncome, setGrossIncome] = useState({});
+	useEffect(() => {
+		getGrossIncome(setGrossIncome);
+	}, []);
 	return (
 		<div className="flex flex-col mx-auto flex-1 max-w-[480px] min-h-screen overflow-hidden bg-white">
 			<CircularBackgroundDecoration />
 			<BackButton url="/admin/dashboard" color="text-white" />
 			<MobileIllustration />
-			<h1 className="mb-2">All time</h1>
-			<div className="mx-12 flex flex-row gap-2">
-				<DashboardCard title="Buyer" value="120" valueSize="text-xl" />
-				<DashboardCard
-					title="Gross Income"
-					value={rupiah(5400000)}
-					valueSize="text-md"
-				/>
-				<DashboardCard title="Product Sold" value="2541" valueSize="text-xl" />
-			</div>
-			<DashBoardGrossIncomeChart />
-			<DashBoardGrossIncomeChart />
+			<DashboardCards />
+			<DashboardCharts data={grossIncome} />
 		</div>
 	);
 };

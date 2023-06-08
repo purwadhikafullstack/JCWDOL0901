@@ -1,28 +1,39 @@
-const scales = yTitle => {
+const titleConfig = (title, total) => {
 	return {
-		x: {
-			grid: {
-				display: false,
-			},
-			ticks: {
-				autoSkip: false,
-				maxRotation: 30,
-				minRotation: 30,
-				font: {
-					size: 9,
-				},
+		display: true,
+		text: `${title}: ${total}`,
+		font: {
+			size: 16,
+		},
+	};
+};
+
+const xScaleConfig = () => {
+	return {
+		grid: {
+			display: false,
+		},
+		ticks: {
+			autoSkip: false,
+			maxRotation: 30,
+			minRotation: 30,
+			font: {
+				size: 9,
 			},
 		},
-		y: {
-			beginAtZero: true,
-			title: {
-				display: true,
-				text: yTitle,
-			},
-			ticks: {
-				font: {
-					size: 9,
-				},
+	};
+};
+
+const yScaleConfig = yTitle => {
+	return {
+		beginAtZero: true,
+		title: {
+			display: true,
+			text: yTitle,
+		},
+		ticks: {
+			font: {
+				size: 9,
 			},
 		},
 	};
@@ -35,15 +46,12 @@ const lineChartOption = (title, total, yTitle) => {
 			legend: {
 				display: false,
 			},
-			title: {
-				display: true,
-				text: `${title}: ${total}`,
-				font: {
-					size: 16,
-				},
-			},
+			title: titleConfig(title, total),
 		},
-		scales: scales(yTitle),
+		scales: {
+			x: xScaleConfig(),
+			y: yScaleConfig(yTitle),
+		},
 	};
 };
 
