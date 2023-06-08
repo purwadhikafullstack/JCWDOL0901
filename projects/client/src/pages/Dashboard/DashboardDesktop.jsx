@@ -6,10 +6,10 @@ import SideBar from "../../components/SideBarDesktop.jsx";
 
 const DesktopIllustration = () => {
 	return (
-		<div className="text-black flex flex-row justify-center items-center z-10 mb-12">
+		<div className="text-black flex flex-row gap-10 justify-center items-center z-10 mb-12">
 			<div className="flex flex-col">
-				<div className="mt-2 mb-2 ml-6 text-3xl text-left font-semibold">Dashboard</div>
-				<DashboardBranchInfo />
+				<div className="mt-2 mb-2 text-3xl text-left font-semibold">Dashboard</div>
+				<DashboardBranchInfo className="text-left" />
 			</div>
 			<DashboardIllustration className="w-[250px] pr-4" />
 		</div>

@@ -13,10 +13,13 @@ import {
 	ServerIcon,
 	TicketIcon,
 	CurrencyDollarIcon,
+	UsersIcon,
 } from "@heroicons/react/outline";
+import { useNavigate } from "react-router-dom";
 
 const navigation = [
 	{ name: "Dashboard", href: "#", icon: HomeIcon, current: true },
+	{ name: "Admin Settings", href: "/admin/create-branch-admin", icon: UsersIcon, current: false },
 	{ name: "Products", href: "#", icon: GiftIcon, current: false },
 	{ name: "Categories", href: "#", icon: ViewGridIcon, current: false },
 	{ name: "Stocks", href: "#", icon: ServerIcon, current: false },
@@ -32,6 +35,7 @@ function classNames(...classes) {
 
 export default function SideBar({ children }) {
 	const [sidebarOpen, setSidebarOpen] = useState(false);
+	const navigate = useNavigate();
 
 	return (
 		<>
@@ -76,14 +80,14 @@ export default function SideBar({ children }) {
 									leaveFrom="opacity-100"
 									leaveTo="opacity-0"
 								>
-									<div className="absolute top-0 right-0 -mr-12 pt-2">
+									<div className="absolute top-0 right-0 mr-3 pt-2">
 										<button
 											type="button"
-											className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-400"
+											className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-100"
 											onClick={() => setSidebarOpen(false)}
 										>
 											<span className="sr-only">Close sidebar</span>
-											<XIcon className="h-6 w-6 text-green-500" aria-hidden="true" />
+											<XIcon className="h-6 w-6 text-green-100" aria-hidden="true" />
 										</button>
 									</div>
 								</Transition.Child>

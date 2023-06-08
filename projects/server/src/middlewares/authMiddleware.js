@@ -45,7 +45,7 @@ const getBranchId = async (request, response, next) => {
 		if (!request.headers.authorization) throw error;
 		// let token = request.headers.authorization.split(" ")[1];
 		// const adminData = jwt.verify(token, process.env.JWT_ADMIN_SECRET_KEY);
-		const adminData = { super: 1, id: 3 };
+		const adminData = { super: 0, id: 3 };
 		if (adminData.super) request.query.branch = 0;
 		else if (adminData.id) {
 			const branchData = await Branches.findOne({

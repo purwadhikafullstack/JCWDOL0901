@@ -12,7 +12,7 @@ const DashboardCharts = ({ containerClass, chartClass }) => {
 	return (
 		<>
 			<DashboardCards />
-			<h1 className="mt-4 text-green-400 font-bold text-xl">Last 7 Days</h1>
+			<h1 className="mt-8 text-green-400 font-bold text-xl mb-6">Last 7 Days</h1>
 			<div className={containerClass}>
 				<DashboardGrossIncomeChart data={dashboardData} chartClass={chartClass} />
 				<DashboardProductSoldChart data={dashboardData} chartClass={chartClass} />

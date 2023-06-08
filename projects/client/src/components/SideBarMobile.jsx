@@ -13,10 +13,13 @@ import {
 	ServerIcon,
 	TicketIcon,
 	CurrencyDollarIcon,
+	UsersIcon,
 } from "@heroicons/react/outline";
+import { useNavigate } from "react-router-dom";
 
 const navigation = [
 	{ name: "Dashboard", href: "#", icon: HomeIcon, current: true },
+	{ name: "Admin Settings", href: "/admin/create-branch-admin", icon: UsersIcon, current: false },
 	{ name: "Products", href: "#", icon: GiftIcon, current: false },
 	{ name: "Categories", href: "#", icon: ViewGridIcon, current: false },
 	{ name: "Stocks", href: "#", icon: ServerIcon, current: false },
@@ -32,9 +35,10 @@ function classNames(...classes) {
 
 export default function SideBar({ children }) {
 	const [sidebarOpen, setSidebarOpen] = useState(false);
+	const navigate = useNavigate();
 
 	return (
-		<>
+		<div className="relative top-0">
 			{/*
         This example requires updating your template:
 
@@ -45,7 +49,7 @@ export default function SideBar({ children }) {
       */}
 			<div className="pb-10">
 				<Transition.Root show={sidebarOpen} as={Fragment}>
-					<Dialog as="div" className="fixed inset-0 flex z-40" onClose={setSidebarOpen}>
+					<Dialog as="div" className="absolute inset-0 flex z-40" onClose={setSidebarOpen}>
 						<Transition.Child
 							as={Fragment}
 							enter="transition-opacity ease-linear duration-300"
@@ -55,7 +59,7 @@ export default function SideBar({ children }) {
 							leaveFrom="opacity-100"
 							leaveTo="opacity-0"
 						>
-							<Dialog.Overlay className="fixed inset-0 bg-gray-600 bg-opacity-75" />
+							<Dialog.Overlay className="absolute inset-0 bg-gray-600 bg-opacity-75" />
 						</Transition.Child>
 						<Transition.Child
 							as={Fragment}
@@ -76,14 +80,14 @@ export default function SideBar({ children }) {
 									leaveFrom="opacity-100"
 									leaveTo="opacity-0"
 								>
-									<div className="absolute top-0 right-0 -mr-12 pt-2">
+									<div className="absolute top-0 right-0 mr-3 pt-2">
 										<button
 											type="button"
-											className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-400"
+											className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-100"
 											onClick={() => setSidebarOpen(false)}
 										>
 											<span className="sr-only">Close sidebar</span>
-											<XIcon className="h-6 w-6 text-green-500" aria-hidden="true" />
+											<XIcon className="h-6 w-6 text-green-100" aria-hidden="true" />
 										</button>
 									</div>
 								</Transition.Child>
@@ -96,6 +100,7 @@ export default function SideBar({ children }) {
 										{navigation.map(item => (
 											<a
 												key={item.name}
+												onClick={() => navigate(item.href)}
 												href={item.href}
 												className={classNames(
 													item.current
@@ -143,7 +148,7 @@ export default function SideBar({ children }) {
 				{/* Static sidebar for desktop */}
 
 				<div className="flex flex-col flex-1">
-					<div className="fixed top-0 z-10 pl-1 pt-1 pl-3 pt-3">
+					<div className="absolute top-0 z-10 pl-1 pt-1 pl-3 pt-3">
 						<button
 							type="button"
 							className="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
@@ -164,6 +169,6 @@ export default function SideBar({ children }) {
 					</main>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 }
