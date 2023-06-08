@@ -6,17 +6,13 @@ import { useFormik } from "formik";
 import { formikRegistrationConfiguration } from "./config/formikRegistrationConfiguration";
 
 const RegisterFormWithValidator = ({ setError }) => {
-  const [busy, setBusy] = React.useState(false);
   const navigate = useNavigate();
-
-  const formik = useFormik(
-    formikRegistrationConfiguration(setError, setBusy, navigate)
-  );
+  const formik = useFormik(formikRegistrationConfiguration(setError, navigate));
 
   return (
     <form onSubmit={formik.handleSubmit} noValidate>
       <RegisterInputField formik={formik} />
-      <Button type="submit" name="Register" disabled={busy} />
+      <Button type="submit" name="Register" disabled={formik.isSubmitting || formik.isValidating} />
     </form>
   );
 };

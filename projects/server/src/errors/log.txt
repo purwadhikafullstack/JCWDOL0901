@@ -1050,102 +1050,372 @@
 	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asddf@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asddf@asd","password":"$2b$10$Bm0rMZ8bVEGj6FxrGHM1/.FHxY.J/LVm3tXEmwrRM5PqxlQfLrHZK"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asddf@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asddf@asd","$2b$10$Bm0rMZ8bVEGj6FxrGHM1/.FHxY.J/LVm3tXEmwrRM5PqxlQfLrHZK",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asddf@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asddf@asd","$2b$10$Bm0rMZ8bVEGj6FxrGHM1/.FHxY.J/LVm3tXEmwrRM5PqxlQfLrHZK",false]},"fields":{"email":"asddf@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 13:44:19 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Wed Jun 07 2023 11:35:31 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 16:40:38 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE `Transactions`.`created_at` >= 'Invalid date';"},"original":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE `Transactions`.`created_at` >= 'Invalid date';"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE `Transactions`.`created_at` >= 'Invalid date';","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 16:40:40 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE `Transactions`.`created_at` >= 'Invalid date';"},"original":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE `Transactions`.`created_at` >= 'Invalid date';"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE `Transactions`.`created_at` >= 'Invalid date';","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 16:43:57 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');"},"original":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 16:44:06 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');"},"original":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 16:44:34 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');"},"original":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 16:44:42 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');"},"original":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 16:48:42 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= 'Invalid date');"},"original":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= 'Invalid date');"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= 'Invalid date');","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 16:48:48 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= 'Invalid date');"},"original":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= 'Invalid date');"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= 'Invalid date');","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 17:06:13 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.status' in 'where clause'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = 5;"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.status' in 'where clause'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = 5;"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = 5;","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 17:07:27 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.status' in 'where clause'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = 5;"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.status' in 'where clause'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = 5;"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = 5;","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 17:07:56 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.status' in 'where clause'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = '5';"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.status' in 'where clause'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = '5';"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = '5';","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 17:07:56 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.status' in 'where clause'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = '5';"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.status' in 'where clause'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = '5';"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = '5';","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 19:52:44 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 19:53:02 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 19:53:09 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 19:55:14 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 19:55:16 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 21:03:37 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 21:03:38 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 21:06:42 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 21:06:44 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 21:06:50 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 21:12:16 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 10:02:30 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 10:02:31 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 10:40:16 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_MIX_OF_GROUP_FUNC_AND_FIELDS","errno":1140,"sqlState":"42000","sqlMessage":"In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'ogwa.Transactions.id'; this is incompatible with sql_mode=only_full_group_by","sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:40:16') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';"},"original":{"code":"ER_MIX_OF_GROUP_FUNC_AND_FIELDS","errno":1140,"sqlState":"42000","sqlMessage":"In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'ogwa.Transactions.id'; this is incompatible with sql_mode=only_full_group_by","sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:40:16') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';"},"sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:40:16') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';","parameters":{}}
+	
+	===
+	Time: Thu Jun 08 2023 10:40:17 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_MIX_OF_GROUP_FUNC_AND_FIELDS","errno":1140,"sqlState":"42000","sqlMessage":"In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'ogwa.Transactions.id'; this is incompatible with sql_mode=only_full_group_by","sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:40:17') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';"},"original":{"code":"ER_MIX_OF_GROUP_FUNC_AND_FIELDS","errno":1140,"sqlState":"42000","sqlMessage":"In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'ogwa.Transactions.id'; this is incompatible with sql_mode=only_full_group_by","sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:40:17') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';"},"sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:40:17') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';","parameters":{}}
+	
+	===
+	Time: Thu Jun 08 2023 10:40:48 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 10:42:34 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_MIX_OF_GROUP_FUNC_AND_FIELDS","errno":1140,"sqlState":"42000","sqlMessage":"In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'ogwa.Transactions.id'; this is incompatible with sql_mode=only_full_group_by","sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:42:34') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';"},"original":{"code":"ER_MIX_OF_GROUP_FUNC_AND_FIELDS","errno":1140,"sqlState":"42000","sqlMessage":"In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'ogwa.Transactions.id'; this is incompatible with sql_mode=only_full_group_by","sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:42:34') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';"},"sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:42:34') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';","parameters":{}}
+	
+	===
+	Time: Thu Jun 08 2023 14:26:11 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 13:44:21 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Thu Jun 08 2023 14:26:11 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 13:44:35 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Thu Jun 08 2023 14:33:24 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 13:44:50 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Thu Jun 08 2023 14:33:24 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 16:22:39 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Thu Jun 08 2023 14:33:25 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 16:23:06 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Thu Jun 08 2023 14:33:26 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 16:23:08 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Thu Jun 08 2023 14:33:32 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 16:23:09 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Thu Jun 08 2023 14:33:32 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 16:23:48 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Thu Jun 08 2023 14:33:32 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 16:23:49 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Thu Jun 08 2023 14:33:32 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 16:23:50 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Thu Jun 08 2023 15:13:05 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 16:23:50 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Thu Jun 08 2023 15:15:56 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:16:16 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:16:36 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:17:22 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:17:59 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:18:00 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:19:04 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:20:08 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:33:17 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 16:23:51 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Thu Jun 08 2023 15:33:17 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 16:24:22 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Thu Jun 08 2023 15:33:17 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 16:24:23 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Thu Jun 08 2023 15:33:19 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 16:24:23 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Thu Jun 08 2023 15:33:19 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 16:24:24 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Thu Jun 08 2023 15:33:19 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 16:24:24 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Thu Jun 08 2023 15:33:23 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 16:24:24 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Thu Jun 08 2023 15:33:23 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
 	===
+<<<<<<< HEAD
 	Time: Thu Jun 08 2023 16:33:51 GMT+0700 (Western Indonesia Time)
+=======
+	Time: Thu Jun 08 2023 15:33:23 GMT+0700 (Western Indonesia Time)
+>>>>>>> 3358f8537c71370f4fe5a043cbaaaddc0614bb14
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	

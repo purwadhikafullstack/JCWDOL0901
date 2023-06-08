@@ -1,10 +1,10 @@
-const { Cities, Provinces } = require("../models/index.js");
 const { startFindErrorHandler } = require("../errors/serviceError.js");
 const {
 	readCitiesQuery,
 	readCityQuery,
 	readProvincesQuery,
 	readCitiesInProvinceQuery,
+	readBranchQuery,
 } = require("../queries/Data.js");
 
 module.exports = {
@@ -46,6 +46,27 @@ module.exports = {
 				const cities = await readCitiesInProvinceQuery(province_id);
 
 				return resolve(cities);
+			} catch (error) {
+				return reject(await startFindErrorHandler(error));
+			}
+		});
+	},
+	startFindBranch: async branch_id => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				if (branch_id === 0)
+					return resolve({
+						name: "Groseria Pusat",
+						City: {
+							name: "Jakarta Pusat",
+							type: "Kota",
+							Province: {
+								name: "DKI Jakarta",
+							},
+						},
+					});
+				const branch = await readBranchQuery(branch_id);
+				return resolve(branch);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
 			}
