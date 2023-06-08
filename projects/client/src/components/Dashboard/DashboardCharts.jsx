@@ -1,5 +1,5 @@
 import DashboardCards from "./DashboardCards";
-import DashboardGrossIncomeChart from "./DashboardGrossIncomeChart";
+import DashboardGrossIncomeChart from "./DashBoardGrossIncomeChart";
 import DashboardProductSoldChart from "./DashboardProductSoldChart";
 import getDashboardData from "./helper/getDashboardDataHelper.js";
 import { useState, useEffect } from "react";
