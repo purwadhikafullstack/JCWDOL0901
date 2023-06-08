@@ -1,7 +1,7 @@
 import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-const Categories = () => {
+const Products = () => {
 	return (
 		<Splide
 			options={{
@@ -64,7 +64,7 @@ const Categories = () => {
 	);
 };
 
-const TopProductsCarousel = () => {
+const ProductsRecommendationCarousel = () => {
 	return (
 		<div className="flex flex-col py-6">
 			<div className="flex flex-row">
@@ -74,9 +74,9 @@ const TopProductsCarousel = () => {
 					<span className="material-symbols-rounded">chevron_right</span>
 				</div>
 			</div>
-			<Categories />
+			<Products />
 		</div>
 	);
 };
 
-export default TopProductsCarousel;
+export default ProductsRecommendationCarousel;

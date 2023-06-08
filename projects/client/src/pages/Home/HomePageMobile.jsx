@@ -2,7 +2,7 @@ import React from "react";
 import MobileHeader from "../../components/MobileHeader";
 import PromoCarousel from "../../components/PromoCarousel";
 import CategoryCarousel from "../../components/CategoryCarousel";
-import TopProductsCarousel from "../../components/TopProductsCarousel";
+import ProductsRecommendationCarousel from "../../components/ProductsRecommendationCarousel";
 import MobileNavBar from "../../components/MobileNavBar";
 import MobileFooter from "../../components/MobileFooter";
 
@@ -12,7 +12,7 @@ const HomePageMobile = () => {
 			<MobileHeader mobile={true} />
 			<PromoCarousel />
 			<CategoryCarousel />
-			<TopProductsCarousel />
+			<ProductsRecommendationCarousel />
 			<MobileNavBar />
 			<MobileFooter />
 		</div>
