@@ -26,7 +26,7 @@ const BranchName = () => {
 
 	return (
 		<div className="flex flex-row items-center justify-items-start">
-			<Name name={app.nearest_branch.name} />
+			<Name name={app.branch.name} />
 			<span className="ml-1 material-symbols-rounded font-bold text-xl cursor-pointer">
 				expand_more
 			</span>

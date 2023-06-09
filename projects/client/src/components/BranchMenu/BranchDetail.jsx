@@ -24,7 +24,7 @@ const BranchDetail = () => {
 	const app = useSelector(state => state.app);
 
 	React.useEffect(() => {
-		if (!app.location.longitude) {
+		if (!app.branch.name) {
 			promptUserPermissionForLocation()
 				.then(result => {
 					const { latitude, longitude } = result.coords;
