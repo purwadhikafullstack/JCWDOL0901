@@ -8,7 +8,9 @@ const MobileIllustration = () => {
 	return (
 		<div className="text-black flex flex-row justify-center items-center z-20 mb-12">
 			<div className="flex flex-col">
-				<div className="mt-2 mb-2 mr-auto text-3xl text-center font-semibold w-full">Dashboard</div>
+				<div className="mt-2 mb-2 mr-auto text-3xl text-center font-semibold w-full text-green-300">
+					Dashboard
+				</div>
 				<DashboardBranchInfo className="flex flex-col items-center" />
 				<DashboardIllustration className="w-[200px] mr-auto ml-auto pr-4 mt-4" />
 			</div>
