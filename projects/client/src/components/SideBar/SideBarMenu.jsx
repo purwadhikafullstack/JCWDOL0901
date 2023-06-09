@@ -10,8 +10,8 @@ export default function SideBarMenu({ navigation }) {
 		<div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
 			<SideBarHeader />
 			<nav className="mt-5 flex-1 px-2 bg-green-200 space-y-1">
-				{navigation.map(item => (
-					<SideBarNavButton item={item} location={location} navigate={navigate} />
+				{navigation().map(item => (
+					<SideBarNavButton key={item.name} item={item} location={location} navigate={navigate} />
 				))}
 			</nav>
 		</div>
