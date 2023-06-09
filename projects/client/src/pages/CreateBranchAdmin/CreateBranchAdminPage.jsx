@@ -5,8 +5,8 @@ import CreateBranchAdminDesktop from "./CreateBranchAdminDesktop.jsx";
 const CreateBranchAdminPage = () => {
 	return (
 		<div>
-			<CreateBranchAdminDesktop />
-			{/* <CreateBranchAdminMobile /> */}
+			{/* <CreateBranchAdminDesktop /> */}
+			<CreateBranchAdminMobile />
 		</div>
 	);
 };

@@ -2,7 +2,7 @@ import React from "react";
 import DashboardIllustration from "../../components/Dashboard/DashboardIllustration.jsx";
 import DashboardBranchInfo from "../../components/Dashboard/DashboardBranchInfo.jsx";
 import DashboardCharts from "../../components/Dashboard/DashboardCharts.jsx";
-import SideBar from "../../components/SideBarDesktop.jsx";
+import SideBarDesktop from "../../components/SideBarDesktop.jsx";
 
 const DesktopIllustration = () => {
 	return (
@@ -16,13 +16,13 @@ const DesktopIllustration = () => {
 	);
 };
 
-const DashboardDesktop = () => {
+const DashboardDesktop = ({}) => {
 	return (
 		<div className="flex flex-col mx-auto flex-1 min-w-[480px] min-h-screen overflow-hidden bg-green-100">
-			<SideBar>
+			<SideBarDesktop>
 				<DesktopIllustration />
 				<DashboardCharts containerClass="" chartClass="w-[800px] mt-10 mb-20 mx-10 max-w-full" />
-			</SideBar>
+			</SideBarDesktop>
 		</div>
 	);
 };

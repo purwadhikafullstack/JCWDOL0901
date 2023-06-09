@@ -2,7 +2,7 @@ import React from "react";
 import DashboardIllustration from "../../components/Dashboard/DashboardIllustration.jsx";
 import DashboardBranchInfo from "../../components/Dashboard/DashboardBranchInfo.jsx";
 import DashboardCharts from "../../components/Dashboard/DashboardCharts.jsx";
-import SideBar from "../../components/SideBarMobile.jsx";
+import SideBarMobile from "../../components/SideBarMobile.jsx";
 
 const MobileIllustration = () => {
 	return (
@@ -12,20 +12,19 @@ const MobileIllustration = () => {
 					Dashboard
 				</div>
 				<DashboardBranchInfo className="flex flex-col items-center" />
-				<DashboardIllustration className="w-[200px] mr-auto ml-auto pr-4 mt-4" />
+				<DashboardIllustration className="w-[200px] mr-auto ml-auto pr-4 mt-4 hover:scale-110 duration-700 transition" />
 			</div>
 		</div>
 	);
 };
 
-const DashboardMobile = () => {
+const DashboardMobile = ({}) => {
 	return (
-		<div className="flex flex-col mx-auto flex-1 max-w-[480px] min-h-screen overflow-hidden bg-green-100">
-			<div id="headlessui-portal-root" className="relative h-screen overflow-y-scroll">
-				<SideBar />
+		<div className="flex flex-col mx-auto flex-1 max-w-[480px] min-h-screen overflow-hidden bg-green-100 z-10">
+			<SideBarMobile>
 				<MobileIllustration />
 				<DashboardCharts chartClass="w-[400px] mb-10 px-4 max-w-full" />
-			</div>
+			</SideBarMobile>
 		</div>
 	);
 };
