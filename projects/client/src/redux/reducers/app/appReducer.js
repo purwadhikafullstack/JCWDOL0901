@@ -1,27 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const setAppNearestBranch = (state, action) => {
-	return { ...state, branch: { name: action.payload.name, id: action.payload.id } };
-};
-
-const setAppLocation = (state, action) => {
-	const { granted, pending, latitude, longitude } = action.payload || null;
-
-	return {
-		...state,
-		location: {
-			granted,
-			pending,
-			latitude,
-			longitude,
-		},
-	};
-};
-
-const switchBranch = (state, action) => {
-	return { ...state, branch: { ...action.payload } };
-};
-
 export const app = createSlice({
 	name: "app",
 	initialState: {
@@ -30,9 +8,5 @@ export const app = createSlice({
 		mobileView: false,
 		location: { granted: false, pending: true, latitude: null, longitude: null },
 	},
-	reducers: {
-		setAppNearestBranch,
-		setAppLocation,
-		switchBranch,
-	},
+	reducers: {},
 });
