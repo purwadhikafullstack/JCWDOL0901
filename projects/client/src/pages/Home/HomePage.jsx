@@ -5,8 +5,8 @@ import HomePageDesktop from "./HomePageDesktop.jsx";
 const HomePage = () => {
 	return (
 		<div>
-			{/* <HomePageMobile /> */}
-			<HomePageDesktop />
+			<HomePageMobile />
+			{/* <HomePageDesktop /> */}
 		</div>
 	);
 };
