@@ -1,14 +1,25 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+
 import "./index.css";
-import App from "./App";
 import "material-icons/iconfont/material-icons.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "@splidejs/react-splide/css";
+
+import App from "./App";
+
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { store } from "./redux/store.js";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
 		<BrowserRouter>
-			<App />
+			<Provider store={store}>
+				<App />
+			</Provider>
 		</BrowserRouter>
 );
 

@@ -1,5 +1,9 @@
 import DashboardCards from "./DashboardCards";
+<<<<<<< HEAD
 import DashBoardGrossIncomeChart from "./DashBoardGrossIncomeChart";
+=======
+import DashboardGrossIncomeChart from "./DashBoardGrossIncomeChart";
+>>>>>>> OGWA-2
 import DashboardProductSoldChart from "./DashboardProductSoldChart";
 import getDashboardData from "./helper/getDashboardDataHelper.js";
 import { useState, useEffect } from "react";

@@ -128,7 +128,7 @@ module.exports = {
 						"Air mineral pegunungan yang berasal dari sumber mata air pegunungan terpilih yang terfilter dan kaya mineral alami",
 					weight: 15000,
 					unit: "15 liter",
-					category_id: 3,
+					category_id: 25,
 				},
 				{
 					image: "/public/images/product/14.png",
@@ -138,7 +138,7 @@ module.exports = {
 						"Blok bahan yang dapat dibakar yang digunakan sebagai bahan bakar untuk memulai dan mempertahankan nyala api",
 					weight: 2500,
 					unit: "2,5 kilogram",
-					category_id: 3,
+					category_id: 25,
 				},
 				{
 					image: "/public/images/product/15.png",
@@ -148,7 +148,7 @@ module.exports = {
 						"Hi-Cook tabung gas yang sangat praktis untuk digunakan dan dapat dibawa kemanapun karena ukurannya yang terbilang kecil",
 					weight: 230,
 					unit: "230 gram",
-					category_id: 3,
+					category_id: 25,
 				},
 				{
 					image: "/public/images/product/16.png",
@@ -158,7 +158,7 @@ module.exports = {
 						"Mi goreng yang lezat dan nikmat, terbuat dari bahan berkualitas dan rempah rempah terbaik",
 					weight: 85,
 					unit: "85 gram",
-					category_id: 4,
+					category_id: 3,
 				},
 				{
 					image: "/public/images/product/17.png",
@@ -168,7 +168,7 @@ module.exports = {
 						"Beras Merah Organik Puregreen mempunyai khasiat yang sangat baik untuk dikonsumsi seluruh keluarga, terutama anak-anak dan manula",
 					weight: 1000,
 					unit: "1 kilogram",
-					category_id: 4,
+					category_id: 3,
 				},
 				{
 					image: "/public/images/product/18.png",
@@ -178,7 +178,7 @@ module.exports = {
 						"Minyak goreng non kolestrol, terbuat dari buah sawit segar pilihan",
 					weight: 2000,
 					unit: "2000 mililiter",
-					category_id: 4,
+					category_id: 13,
 				},
 				{
 					image: "/public/images/product/19.png",
@@ -188,7 +188,7 @@ module.exports = {
 						"la Fonte Spaghettini adalah pasta berbentuk panjang (long pasta) yang paling sering digunakan untuk memasak pasta.",
 					weight: 450,
 					unit: "450 gram",
-					category_id: 4,
+					category_id: 13,
 				},
 				{
 					image: "/public/images/product/20.png",
@@ -198,7 +198,7 @@ module.exports = {
 						"Gulaku ini dihasilkan dari tebu segar berkualitas dan diproses dengan standar mutu yang tinggi",
 					weight: 1000,
 					unit: "1 kilogram",
-					category_id: 4,
+					category_id: 13,
 				},
 				{
 					image: "/public/images/product/21.png",
@@ -208,7 +208,7 @@ module.exports = {
 						"Merupakan garam halus beryodium yang digunakan sebagai penyedap makanan yang diproses dengan menggunakan teknologi pengolahan garam untuk segala masakan",
 					weight: 500,
 					unit: "500 gram",
-					category_id: 4,
+					category_id: 13,
 				},
 				{
 					image: "/public/images/product/22.png",
@@ -218,7 +218,7 @@ module.exports = {
 						"Susu UHT rasa cokelat berkualitas kaya akan protein, karbohidrat, vitamin, kalsium, fosfor, dan magnesium.",
 					weight: 1000,
 					unit: "1000 ml",
-					category_id: 5,
+					category_id: 4,
 				},
 				{
 					image: "/public/images/product/23.png",
@@ -228,7 +228,7 @@ module.exports = {
 						"Susu segar dengan kandungan lemak sebesar 1.1% dengan asupan kalsium  yang sama seperti susu segar",
 					weight: 1000,
 					unit: "1000 ml",
-					category_id: 5,
+					category_id: 4,
 				},
 				{
 					image: "/public/images/product/24.png",
@@ -238,7 +238,7 @@ module.exports = {
 						"keju olahan siap saji digunakan sebagai bahan baku atau pelengkap resep kue, snacks, dan kuliner lainnya",
 					weight: 160,
 					unit: "160 gram",
-					category_id: 5,
+					category_id: 4,
 				},
 				{
 					image: "/public/images/product/25.png",
@@ -248,7 +248,7 @@ module.exports = {
 						"Anchor Salted Butter 100gram dibuat dari susu New Zealand berkualtas tinggi dengan teknologi pembuatan butter yang mutakhir, sehingga menghasilkan rasa yang gurih dan sangat lezat",
 					weight: 100,
 					unit: "100 gram",
-					category_id: 5,
+					category_id: 4,
 				},
 				{
 					image: "/public/images/product/26.png",
@@ -258,7 +258,7 @@ module.exports = {
 						"Minuman susu fermentasi yang mengandung lebih dari 6,5 miliar bakteri L.casei Shirota strain yang bermanfaat untuk membantu pencernaan selalu baik",
 					weight: 375,
 					unit: "375 gram",
-					category_id: 5,
+					category_id: 4,
 				},
 				{
 					image: "/public/images/product/27.png",
@@ -268,7 +268,7 @@ module.exports = {
 						"Susu Bendera Kental Manis Lemak Nabati Frisian Flag mengandung zat gizi makro (protein, karbohidrat dan lemak) serta mengandung 8 Vitamin (Vitamin A, D3, E, B1, B2, B3, B6 dan B12) dan mineral",
 					weight: 370,
 					unit: "370 gram",
-					category_id: 5,
+					category_id: 4,
 				},
 				{
 					image: "/public/images/product/28.png",
@@ -277,7 +277,7 @@ module.exports = {
 					description: "Paket masak untuk membuat sop kimlo",
 					weight: 400,
 					unit: "400 gram",
-					category_id: 6,
+					category_id: 5,
 				},
 				{
 					image: "/public/images/product/29.png",
@@ -286,7 +286,7 @@ module.exports = {
 					description: "Paket masak untuk membuat sayur lodeh",
 					weight: 400,
 					unit: "400 gram",
-					category_id: 6,
+					category_id: 5,
 				},
 				{
 					image: "/public/images/product/30.png",
@@ -295,7 +295,7 @@ module.exports = {
 					description: "Paket masak untuk membuat capcay",
 					weight: 400,
 					unit: "400 gram",
-					category_id: 6,
+					category_id: 5,
 				},
 				{
 					image: "/public/images/product/31.png",
@@ -304,7 +304,7 @@ module.exports = {
 					description: "Paket Masak untuk membuat Sapo Tahu",
 					weight: 400,
 					unit: "400 gram",
-					category_id: 6,
+					category_id: 5,
 				},
 				{
 					image: "/public/images/product/32.png",
@@ -313,7 +313,7 @@ module.exports = {
 					description: "Paket Masak untuk membuat sayur asem",
 					weight: 400,
 					unit: "400 gram",
-					category_id: 6,
+					category_id: 5,
 				},
 				{
 					image: "/public/images/product/33.png",
@@ -322,7 +322,7 @@ module.exports = {
 					description: "Paket Masak untuk membuat semur telur ala Bango",
 					weight: 400,
 					unit: "400 gram",
-					category_id: 6,
+					category_id: 5,
 				},
 				{
 					image: "/public/images/product/34.png",
@@ -332,7 +332,7 @@ module.exports = {
 						"Sosi Kanzler Frankfurter Cocktail terbuat dari daging ayam premium pilihan dan ukuran 'bit size'",
 					weight: 500,
 					unit: "500 gram",
-					category_id: 7,
+					category_id: 6,
 				},
 				{
 					image: "/public/images/product/35.png",
@@ -342,7 +342,7 @@ module.exports = {
 						"Terbuat dari daging ayam cincang berbentuk hati. Bagian dalam berisi keju dan smoked chicken breast yang dibalut dengan tepung roti",
 					weight: 500,
 					unit: "500 gram",
-					category_id: 7,
+					category_id: 6,
 				},
 				{
 					image: "/public/images/product/36.png",
@@ -352,7 +352,7 @@ module.exports = {
 						"Topokki by Mujigae memiliki perpaduan rasa yang tepat antara rice cake dan saus gochujang menghasilkan cita rasa yang unik khas Korea",
 					weight: 170,
 					unit: "170 gram",
-					category_id: 7,
+					category_id: 6,
 				},
 				{
 					image: "/public/images/product/37.png",
@@ -362,7 +362,7 @@ module.exports = {
 						"Ayam goreng ala Korea dengan saus original manis - gurih",
 					weight: 200,
 					unit: "200 gram",
-					category_id: 7,
+					category_id: 6,
 				},
 				{
 					image: "/public/images/product/38.png",
@@ -372,7 +372,7 @@ module.exports = {
 						"Bakso SB Premium telah menjadi bakso paling favotir di hati para pelanggan kami sejak tahun 1989",
 					weight: 325,
 					unit: "325 gram",
-					category_id: 7,
+					category_id: 6,
 				},
 				{
 					image: "/public/images/product/39.png",
@@ -382,7 +382,7 @@ module.exports = {
 						"Frozen food makanan instan yang terbuat dari ikan olahan pilihan dan diproses secara higienis",
 					weight: 250,
 					unit: "250 gram",
-					category_id: 7,
+					category_id: 6,
 				},
 				{
 					image: "/public/images/product/40.png",
@@ -392,7 +392,7 @@ module.exports = {
 						"Frozen food premium cut yang terdiri dari potongan paha dan dada",
 					weight: 450,
 					unit: "450 gram",
-					category_id: 8,
+					category_id: 7,
 				},
 				{
 					image: "/public/images/product/41.png",
@@ -401,7 +401,7 @@ module.exports = {
 					description: "Frozen food kualitas ayam terbaik",
 					weight: 500,
 					unit: "500 gram",
-					category_id: 8,
+					category_id: 7,
 				},
 				{
 					image: "/public/images/product/42.png",
@@ -410,7 +410,7 @@ module.exports = {
 					description: "Tahu telur dengan udang merek Sakura",
 					weight: 140,
 					unit: "140 gram",
-					category_id: 8,
+					category_id: 7,
 				},
 				{
 					image: "/public/images/product/43.png",
@@ -419,7 +419,7 @@ module.exports = {
 					description: "Tahu kotak sutera halus",
 					weight: 300,
 					unit: "300 gram",
-					category_id: 8,
+					category_id: 7,
 				},
 				{
 					image: "/public/images/product/44.png",
@@ -428,7 +428,7 @@ module.exports = {
 					description: "Tahu telur",
 					weight: 160,
 					unit: "160 gram",
-					category_id: 8,
+					category_id: 7,
 				},
 				{
 					image: "/public/images/product/45.png",
@@ -437,7 +437,7 @@ module.exports = {
 					description: "Tahu Jumbo",
 					weight: 500,
 					unit: "500 gram",
-					category_id: 8,
+					category_id: 7,
 				},
 				{
 					image: "/public/images/product/46.png",
@@ -446,7 +446,7 @@ module.exports = {
 					description: "Frozen food daging sapi tenderloin dalam kemasan pouch",
 					weight: 200,
 					unit: "200 gram",
-					category_id: 9,
+					category_id: 8,
 				},
 				{
 					image: "/public/images/product/47.png",
@@ -455,7 +455,7 @@ module.exports = {
 					description: "Frozen food daging sapi striploin dalam kemasan pouch",
 					weight: 200,
 					unit: "200 gram",
-					category_id: 9,
+					category_id: 8,
 				},
 				{
 					image: "/public/images/product/48.png",
@@ -464,7 +464,7 @@ module.exports = {
 					description: "Frozen food daging sapi slice",
 					weight: 200,
 					unit: "250 gram",
-					category_id: 9,
+					category_id: 8,
 				},
 				{
 					image: "/public/images/product/49.png",
@@ -473,7 +473,7 @@ module.exports = {
 					description: "Frozen food daging sapi sirloin",
 					weight: 235,
 					unit: "235 gram",
-					category_id: 9,
+					category_id: 8,
 				},
 				{
 					image: "/public/images/product/50.png",
@@ -483,7 +483,7 @@ module.exports = {
 						"Sushi Gari merek Sahachai adalah sushi gari yang kualitasnya lebih bagus dibandingkan dengan sushi gari biasa",
 					weight: 150,
 					unit: "150 gram",
-					category_id: 9,
+					category_id: 8,
 				},
 				{
 					image: "/public/images/product/51.png",
@@ -492,7 +492,7 @@ module.exports = {
 					description: "Frozen food salmon fillet 200gr - 225gr",
 					weight: 200,
 					unit: "200 gram",
-					category_id: 9,
+					category_id: 8,
 				},
 				{
 					image: "/public/images/product/52.png",
@@ -502,7 +502,7 @@ module.exports = {
 						"Wong Coco Nata de Coco Cubes dibuat dengan air kelapa yang dibentuk kotak, gula asli tanpa pemanis buatan",
 					weight: 800,
 					unit: "800 gram",
-					category_id: 10,
+					category_id: 9,
 				},
 				{
 					image: "/public/images/product/53.png",
@@ -512,7 +512,7 @@ module.exports = {
 						"Permen dengan 4 aneka rasa buah yang terdiri dari blackcurrant, strawberry, orange dan lemon untuk memberikan rasa manis dan asam yang menyegarkan",
 					weight: 90,
 					unit: "90 gram",
-					category_id: 10,
+					category_id: 9,
 				},
 				{
 					image: "/public/images/product/54.png",
@@ -522,7 +522,7 @@ module.exports = {
 						"Maxicorn rasa barbeque merupakan keripik tortilla dengan tekstur crunchy yang terbuat dari jagung pilihan serta bumbu barbeque yang nikmat",
 					weight: 140,
 					unit: "140 gram",
-					category_id: 10,
+					category_id: 9,
 				},
 				{
 					image: "/public/images/product/55.png",
@@ -532,7 +532,7 @@ module.exports = {
 						"Cokelat batang dengan perpaduan yang pas antara cokelat, susu dan kacang almond di dalamnya",
 					weight: 62,
 					unit: "62 gram",
-					category_id: 10,
+					category_id: 9,
 				},
 				{
 					image: "/public/images/product/56.png",
@@ -542,7 +542,7 @@ module.exports = {
 						"Merupakan energi bar yang terbuat dari multigrain (Australian oat, quinoa, whole wheat) yang ditambah dengan kelezatan cokelat dari dark chocolate yang baik untuk kesehatan jantung",
 					weight: 110,
 					unit: "110 gram",
-					category_id: 10,
+					category_id: 9,
 				},
 				{
 					image: "/public/images/product/57.png",
@@ -552,7 +552,7 @@ module.exports = {
 						"Jolly Time Pop Corn Blast O Butter adalah pop corn bercita rasa mentega yang dapat anda siapkan di rumah tanpa repot hanya dalam waktu 2 menit saja dengan menggunakan microwave",
 					weight: 100,
 					unit: "100 gram",
-					category_id: 10,
+					category_id: 9,
 				},
 				{
 					image: "/public/images/product/58.png",
@@ -562,7 +562,7 @@ module.exports = {
 						"Perpaduan dari chocochips dengan lapisan cokelat lezat di bawah kukisnya",
 					weight: 71,
 					unit: "71 gram",
-					category_id: 11,
+					category_id: 10,
 				},
 				{
 					image: "/public/images/product/59.png",
@@ -572,7 +572,7 @@ module.exports = {
 						"Wafer renyah tiga lapis yang dilengkapi krim napolitaner ditengahnya",
 					weight: 45,
 					unit: "45 gram",
-					category_id: 11,
+					category_id: 10,
 				},
 				{
 					image: "/public/images/product/60.png",
@@ -582,7 +582,7 @@ module.exports = {
 						"Merupakan biskuit yang renyah dengan balutan cokelat yang tebal",
 					weight: 110,
 					unit: "110 gram",
-					category_id: 11,
+					category_id: 10,
 				},
 				{
 					image: "/public/images/product/61.png",
@@ -592,7 +592,7 @@ module.exports = {
 						"Merupakan biskuit Oreo dengan kelezatan krim rasa keji dan kukis merah Oreo",
 					weight: 119,
 					unit: "119 gram",
-					category_id: 11,
+					category_id: 10,
 				},
 				{
 					image: "/public/images/product/62.png",
@@ -602,7 +602,7 @@ module.exports = {
 						"Delfi Orion Choco Pie merupakan cup cake persembahan Delfi Orion yang memiliki tekstur yang lembut dan nikmat",
 					weight: 180,
 					unit: "180 gram",
-					category_id: 11,
+					category_id: 10,
 				},
 				{
 					image: "/public/images/product/63.png",
@@ -612,7 +612,7 @@ module.exports = {
 						"Biskuit kalengan yang memiliki aneka rasa untuk disajikan bersama keluarga dengan rasa yang enak dan nikmatq",
 					weight: 1600,
 					unit: "1600 gram",
-					category_id: 11,
+					category_id: 10,
 				},
 				{
 					image: "/public/images/product/64.png",
@@ -621,7 +621,7 @@ module.exports = {
 					description: "Es krim unik rasa jagung dengan soft cone berbentuk ",
 					weight: 52,
 					unit: "52 gram",
-					category_id: 12,
+					category_id: 11,
 				},
 				{
 					image: "/public/images/product/65.png",
@@ -631,7 +631,7 @@ module.exports = {
 						"Es Krim yang terbuat dari perpaduan krim dari susu dan cookies dari biskuit sandwich Oreo",
 					weight: 410,
 					unit: "410 mililiter",
-					category_id: 12,
+					category_id: 11,
 				},
 				{
 					image: "/public/images/product/66.png",
@@ -641,7 +641,7 @@ module.exports = {
 						"Es Krim dengan rasa teh hijau khas jepang yang dilengkapi dengan lempengan cokelat renyah di tengahnya dan dibalut oleh waffle monaka yang lembut",
 					weight: 180,
 					unit: "180 mililiter",
-					category_id: 12,
+					category_id: 11,
 				},
 				{
 					image: "/public/images/product/67.png",
@@ -651,7 +651,7 @@ module.exports = {
 						"Super premium ice cream yang berasal dari New York dengan tekstur yang lembut serta rasa yang lezat",
 					weight: 100,
 					unit: "100 mililiter",
-					category_id: 12,
+					category_id: 11,
 				},
 				{
 					image: "/public/images/product/68.png",
@@ -661,7 +661,7 @@ module.exports = {
 						"Es Krim rasa vanilla dan cokelat dengan potongan biskuit Oreo dalam format mini isi 12 es krim",
 					weight: 336,
 					unit: "336 mililiter",
-					category_id: 12,
+					category_id: 11,
 				},
 				{
 					image: "/public/images/product/69.png",
@@ -671,7 +671,7 @@ module.exports = {
 						"Kolaborasi es krim Choc Rocks Cone dan Indomie dengan rasa yang creamy, manis dan gurih",
 					weight: 110,
 					unit: "110 mililiter",
-					category_id: 12,
+					category_id: 11,
 				},
 				{
 					image: "/public/images/product/70.png",
@@ -680,7 +680,7 @@ module.exports = {
 					description: "Air mineral yang dibuat dari sumber mata air pilihan",
 					weight: 1500,
 					unit: "1500 mililiter",
-					category_id: 13,
+					category_id: 12,
 				},
 				{
 					image: "/public/images/product/71.png",
@@ -690,7 +690,7 @@ module.exports = {
 						"Minuman yang dibuat dengan 3 ekstrak herbal serta perisa lemon",
 					weight: 320,
 					unit: "320 mililiter",
-					category_id: 13,
+					category_id: 12,
 				},
 				{
 					image: "/public/images/product/72.png",
@@ -700,7 +700,7 @@ module.exports = {
 						"Minuman teh beraroma melati dibuat dengan pucuk daun teh pilihan dengan ekstrak melati yang menyegarkan",
 					weight: 1360,
 					unit: "1360 mililiter",
-					category_id: 13,
+					category_id: 12,
 				},
 				{
 					image: "/public/images/product/73.png",
@@ -710,7 +710,7 @@ module.exports = {
 						"Minuman ringan bersoda dengan aroma rasa lemon-jeruk terkemuka di dunia",
 					weight: 390,
 					unit: "390 mililiter",
-					category_id: 13,
+					category_id: 12,
 				},
 				{
 					image: "/public/images/product/74.png",
@@ -719,7 +719,7 @@ module.exports = {
 					description: "Sirup squash no. 1 di Indonesia",
 					weight: 460,
 					unit: "460 mililiter",
-					category_id: 13,
+					category_id: 12,
 				},
 				{
 					image: "/public/images/product/75.png",
@@ -728,7 +728,7 @@ module.exports = {
 					description: "Minuman yang memiliki rasa menyegarkan dari jus kelapa",
 					weight: 320,
 					unit: "320 mililiter",
-					category_id: 13,
+					category_id: 12,
 				},
 				{
 					image: "/public/images/product/76.png",
@@ -738,7 +738,7 @@ module.exports = {
 						"Bogasari Segitiga Biru tepung terigu berkualitas untuk membuat aneka variasi makanan",
 					weight: 1000,
 					unit: "1 kilogram",
-					category_id: 14,
+					category_id: 13,
 				},
 				{
 					image: "/public/images/product/77.png",
@@ -748,7 +748,7 @@ module.exports = {
 						"Pewarna makanan Koepoe Koepoe digunakan sebagai bahan tambahan pangan untuk memberikan warna pada makanan dan minuman",
 					weight: 30,
 					unit: "30 mililiter",
-					category_id: 14,
+					category_id: 13,
 				},
 				{
 					image: "/public/images/product/78.png",
@@ -757,7 +757,7 @@ module.exports = {
 					description: "Buah leci dalam larutan gula",
 					weight: 565,
 					unit: "565 gram",
-					category_id: 14,
+					category_id: 13,
 				},
 				{
 					image: "/public/images/product/79.png",
@@ -767,7 +767,7 @@ module.exports = {
 						"Bubuk agar-agar yang diformulasi dari rumput laut pilihan untuk menghasilkan agar-agar kaya serat yang baik bagi kesehatan pencernaan",
 					weight: 7,
 					unit: "7 gram",
-					category_id: 14,
+					category_id: 13,
 				},
 				{
 					image: "/public/images/product/80.png",
@@ -777,7 +777,7 @@ module.exports = {
 						"Vla bubuk instan tanpa dimasak, cukup diseduh dengan air panas dispenser sebagai pelengkap puding",
 					weight: 60,
 					unit: "60 gram",
-					category_id: 14,
+					category_id: 13,
 				},
 				{
 					image: "/public/images/product/81.png",
@@ -787,7 +787,7 @@ module.exports = {
 						"Anchor Whipping Cream mempunya tekstur dan konsistensi yang kuat dibandingkan krim biasa",
 					weight: 250,
 					unit: "250 mililiter",
-					category_id: 14,
+					category_id: 13,
 				},
 				{
 					image: "/public/images/product/82.png",
@@ -797,7 +797,7 @@ module.exports = {
 						"Santan berkualitas baik yang dihasilkan dari kelapa yang tidak terlalu tua karena rasa gurih kelapanya benar-benar terasa",
 					weight: 200,
 					unit: "200 mililiter",
-					category_id: 15,
+					category_id: 14,
 				},
 				{
 					image: "/public/images/product/83.png",
@@ -807,7 +807,7 @@ module.exports = {
 						"Saus tomat no.1 di dunia, dikenal dengan kekentalan tomat asli yang memiliki cita rasa khas",
 					weight: 325,
 					unit: "325 gram",
-					category_id: 15,
+					category_id: 14,
 				},
 				{
 					image: "/public/images/product/84.png",
@@ -816,7 +816,7 @@ module.exports = {
 					description: "Bumbu instan untuk membuat sayur sop yang nikmat",
 					weight: 20,
 					unit: "20 gram",
-					category_id: 15,
+					category_id: 14,
 				},
 				{
 					image: "/public/images/product/85.png",
@@ -825,7 +825,7 @@ module.exports = {
 					description: "Memiliki tingkat kepedasan yang ekstrim di mulut",
 					weight: 40,
 					unit: "40 gram",
-					category_id: 15,
+					category_id: 14,
 				},
 				{
 					image: "/public/images/product/86.png",
@@ -835,7 +835,7 @@ module.exports = {
 						"Kornet Sapi Pronas terbuat dari daging sapi yang berkualitas tinggi",
 					weight: 198,
 					unit: "198 gram",
-					category_id: 15,
+					category_id: 14,
 				},
 				{
 					image: "/public/images/product/87.png",
@@ -845,7 +845,7 @@ module.exports = {
 						"Tepung bumbu untuk menghasilkan ayam goreng renyah, lezat dan pas berbumbu",
 					weight: 200,
 					unit: "200 gram",
-					category_id: 15,
+					category_id: 14,
 				},
 				{
 					image: "/public/images/product/88.png",
@@ -855,7 +855,7 @@ module.exports = {
 						"Sabun mandi yang mengandung bahan alami aloe vera yang sangat bermanfaat untuk rambut dan kulit bayi",
 					weight: 450,
 					unit: "450 mililiter",
-					category_id: 16,
+					category_id: 15,
 				},
 				{
 					image: "/public/images/product/89.png",
@@ -865,7 +865,7 @@ module.exports = {
 						"Pembersih botol dan perlengkapan bayi yang efektif menghilangkan noda makanan dan minuman serta bau menyengat",
 					weight: 425,
 					unit: "425 mililiter",
-					category_id: 16,
+					category_id: 15,
 				},
 				{
 					image: "/public/images/product/90.png",
@@ -875,7 +875,7 @@ module.exports = {
 						"Bubur ayam bayam dengan rasa gurih dan tekstur yang tepat serta terbuat dari bahan pilihan untuk membantu memenuhi kebutuhan nutrisi dan mengoptimalkan tumbuh kembang bayi",
 					weight: 120,
 					unit: "120 gram",
-					category_id: 16,
+					category_id: 15,
 				},
 				{
 					image: "/public/images/product/91.png",
@@ -885,7 +885,7 @@ module.exports = {
 						"Makanan pendamping ASI untuk bayi berupa bubur bayi dengan tekstur buliran nasi yang cukup halus dengan rasa daging dan brokoli",
 					weight: 100,
 					unit: "100 gram",
-					category_id: 16,
+					category_id: 15,
 				},
 				{
 					image: "/public/images/product/92.png",
@@ -894,7 +894,7 @@ module.exports = {
 					description: "Bubur bayi pendamping ASI untuk usia 6 bulan keatas",
 					weight: 120,
 					unit: "120 gram",
-					category_id: 16,
+					category_id: 15,
 				},
 				{
 					image: "/public/images/product/93.png",
@@ -903,7 +903,7 @@ module.exports = {
 					description: "Susu untuk anak usia 3-6 Thn",
 					weight: 800,
 					unit: "800 gram",
-					category_id: 16,
+					category_id: 15,
 				},
 				{
 					image: "/public/images/product/94.png",
@@ -913,7 +913,7 @@ module.exports = {
 						"Gel pembersih evolusioner yang berubah tekstur menjadi minyak dan buih lembut untuk mengangkat kotoran serta makeup dalam hitungan detik agar kulit wajah bersih dan lembap",
 					weight: 100,
 					unit: "100 mililiter",
-					category_id: 17,
+					category_id: 16,
 				},
 				{
 					image: "/public/images/product/95.png",
@@ -923,7 +923,7 @@ module.exports = {
 						"Toner yang melembapkan dan menghidrasi kulit serta membantu meratakan warna kulit wajah",
 					weight: 150,
 					unit: "150 mililiter",
-					category_id: 17,
+					category_id: 16,
 				},
 				{
 					image: "/public/images/product/96.png",
@@ -933,7 +933,7 @@ module.exports = {
 						"Dapat mencerahkan, melindungi, melembabkan dan melembutkan kulit",
 					weight: 200,
 					unit: "200 mililiter",
-					category_id: 17,
+					category_id: 16,
 				},
 				{
 					image: "/public/images/product/97.png",
@@ -943,7 +943,7 @@ module.exports = {
 						"Salah satu varian Biore UV Series dengan Formula Micro Defense yang memberikan perlindungan UVA UVB secara maksimal",
 					weight: 50,
 					unit: "50 gram",
-					category_id: 17,
+					category_id: 16,
 				},
 				{
 					image: "/public/images/product/98.png",
@@ -953,7 +953,7 @@ module.exports = {
 						"Bermanfaat untuk menenangkan kulit yang kemerahan / iritasi, mengontrol produksi minyak berlebih, melembabkan kulit serta membantu merawat kulit yang berjerawat",
 					weight: 50,
 					unit: "50 gram",
-					category_id: 17,
+					category_id: 16,
 				},
 				{
 					image: "/public/images/product/99.png",
@@ -963,7 +963,7 @@ module.exports = {
 						"Lip tint dengan gloss finish yang nyaman digunakan sehari-hari karena tekstur gel nya yang ringan dan tidak terasa berminyak",
 					weight: 3,
 					unit: "3 gram",
-					category_id: 17,
+					category_id: 16,
 				},
 				{
 					image: "/public/images/product/100.png",
@@ -973,7 +973,7 @@ module.exports = {
 						"Sabun mandi cair yang dapat membersihkan kulit secara lembut dan menjaga kulit tetap sehat",
 					weight: 500,
 					unit: "500 mililiter",
-					category_id: 18,
+					category_id: 17,
 				},
 				{
 					image: "/public/images/product/101.png",
@@ -983,7 +983,7 @@ module.exports = {
 						"Sabun mandi cair yang dapat membersihkan kulit secara lembut dan menjaga kulit tetap sehat",
 					weight: 500,
 					unit: "500 mililiter",
-					category_id: 18,
+					category_id: 17,
 				},
 				{
 					image: "/public/images/product/102.png",
@@ -992,7 +992,7 @@ module.exports = {
 					description: "Sabun cair untuk perlindungan kulit terhadap kuman",
 					weight: 925,
 					unit: "925 gram",
-					category_id: 18,
+					category_id: 17,
 				},
 				{
 					image: "/public/images/product/103.png",
@@ -1002,7 +1002,7 @@ module.exports = {
 						"Shampoo yang membantu menguatkan, menjaga rambut tetap sehat dan berkilau serta perlindungan anti ketombe yang tahan lama",
 					weight: 135,
 					unit: "135 mililiter",
-					category_id: 18,
+					category_id: 17,
 				},
 				{
 					image: "/public/images/product/104.png",
@@ -1012,7 +1012,7 @@ module.exports = {
 						"Memiliki kandungan Flouride yang dapat melawan penumpukan bakteri di sekitar gigi dan gusi",
 					weight: 150,
 					unit: "150 gram",
-					category_id: 18,
+					category_id: 17,
 				},
 				{
 					image: "/public/images/product/105.png",
@@ -1022,7 +1022,7 @@ module.exports = {
 						"Sabun muka yang mengandung mineral-clay dan micro-beads dapat membantu membersihkan minyak berlebih secara alami",
 					weight: 100,
 					unit: "100 mililiter",
-					category_id: 18,
+					category_id: 17,
 				},
 				{
 					image: "/public/images/product/106.png",
@@ -1032,7 +1032,7 @@ module.exports = {
 						"Dettol Handwash Original memiliki manfaat untuk menjaga dan melindungi diri dari berbagai jenis penyakit maupun kuman yang sering menempel di tangan",
 					weight: 245,
 					unit: "245 mililiter",
-					category_id: 18,
+					category_id: 17,
 				},
 				{
 					image: "/public/images/product/107.png",
@@ -1042,7 +1042,7 @@ module.exports = {
 						"Memberikan perlindungan ganda untuk membantu mencegah bau tak sedap, gatal, dan masalah di area kewanitaan",
 					weight: 110,
 					unit: "110 mililiter",
-					category_id: 19,
+					category_id: 18,
 				},
 				{
 					image: "/public/images/product/108.png",
@@ -1052,7 +1052,7 @@ module.exports = {
 						"Deodoran dengan fitur antiprespirant yang dapat mencegah keringat dan bau badan hingga 48 jam",
 					weight: 45,
 					unit: "45 mililiter",
-					category_id: 19,
+					category_id: 18,
 				},
 				{
 					image: "/public/images/product/109.png",
@@ -1062,7 +1062,7 @@ module.exports = {
 						"Hair Tonic untuk rambut rontok yang diperkaya akan kandungan utama esktrak ginseng dan memiliki banyak manfaat lainnya",
 					weight: 90,
 					unit: "90 mililiter",
-					category_id: 19,
+					category_id: 18,
 				},
 				{
 					image: "/public/images/product/110.png",
@@ -1072,7 +1072,7 @@ module.exports = {
 						"Anti nyamuk praktis yang dikemas dalam botol spray cantik dan praktis yang cocok untuk dibawa kemanapun anda pergi",
 					weight: 100,
 					unit: "100 mililiter",
-					category_id: 19,
+					category_id: 18,
 				},
 				{
 					image: "/public/images/product/111.png",
@@ -1082,7 +1082,7 @@ module.exports = {
 						"Losion untuk perlindungan dari nyamuk dengan wangi apel dan jeruk serta kandungan ekstrak aloe vera",
 					weight: 50,
 					unit: "50 mililiter",
-					category_id: 19,
+					category_id: 18,
 				},
 				{
 					image: "/public/images/product/112.png",
@@ -1092,7 +1092,7 @@ module.exports = {
 						"Parfum yang menghadirkan aroma Oud dan Amber yang lekat dengan warisan tradisi budaya",
 					weight: 35,
 					unit: "35 mililiter",
-					category_id: 19,
+					category_id: 18,
 				},
 				{
 					image: "/public/images/product/113.png",
@@ -1102,7 +1102,7 @@ module.exports = {
 						"Suplemen fitofarmaka yang mengandung esktrak daun Meniran dengan rasa anggur",
 					weight: 60,
 					unit: "60 mililiter",
-					category_id: 20,
+					category_id: 19,
 				},
 				{
 					image: "/public/images/product/114.png",
@@ -1112,7 +1112,7 @@ module.exports = {
 						"Tablet hisap multivitamin rasa jeruk berbentuk alfabet A, B dan C yang disukai oleh anak",
 					weight: 100,
 					unit: "100 gram",
-					category_id: 20,
+					category_id: 19,
 				},
 				{
 					image: "/public/images/product/115.png",
@@ -1122,7 +1122,7 @@ module.exports = {
 						"Suplemen makanan dengan kandungan Omega 3, EPA dan DHA yang berasal dari minyak ikan yang digunakan untuk membantu memelihara kesehatan jantung",
 					weight: 100,
 					unit: "100 gram",
-					category_id: 20,
+					category_id: 19,
 				},
 				{
 					image: "/public/images/product/116.png",
@@ -1131,7 +1131,7 @@ module.exports = {
 					description: "Antioksidan yang berfunsgi meredam efek radikal bebas",
 					weight: 80,
 					unit: "80 gram",
-					category_id: 20,
+					category_id: 19,
 				},
 				{
 					image: "/public/images/product/117.png",
@@ -1141,7 +1141,7 @@ module.exports = {
 						"Madu hutan murni super premium dari nektar bunga manuka liar asli New Zealand",
 					weight: 500,
 					unit: "500 gram",
-					category_id: 20,
+					category_id: 19,
 				},
 				{
 					image: "/public/images/product/118.png",
@@ -1151,7 +1151,7 @@ module.exports = {
 						"Madu pilihan yang mengandung royal jelly dan bee pollen",
 					weight: 500,
 					unit: "500 gram",
-					category_id: 20,
+					category_id: 19,
 				},
 				{
 					image: "/public/images/product/119.png",
@@ -1161,7 +1161,7 @@ module.exports = {
 						"Minyak angin modern dengan kandungan aromatherapy menyegarkan serta kehangatan Eucalyptus",
 					weight: 5,
 					unit: "5 mililiter",
-					category_id: 21,
+					category_id: 20,
 				},
 				{
 					image: "/public/images/product/120.png",
@@ -1171,7 +1171,7 @@ module.exports = {
 						"Bermanfaat untuk meredakan sakit tenggorokan akibat infeksi dengan kandungan bahan tambahan berupa 100 mg asam askorbat (vitamin C)",
 					weight: 21,
 					unit: "21 gram",
-					category_id: 21,
+					category_id: 20,
 				},
 				{
 					image: "/public/images/product/121.png",
@@ -1181,7 +1181,7 @@ module.exports = {
 						"Obat tetes mata untuk mengatasi gejala kekeringan pada mata dengan memberikan efek pelumas seperti air mata",
 					weight: 8,
 					unit: "8 mililiter",
-					category_id: 21,
+					category_id: 20,
 				},
 				{
 					image: "/public/images/product/122.png",
@@ -1191,7 +1191,7 @@ module.exports = {
 						"Obat yang digunakan untuk menurunkan demam pada segala usia (diatas 6 tahun)",
 					weight: 70,
 					unit: "70 mililiter",
-					category_id: 21,
+					category_id: 20,
 				},
 				{
 					image: "/public/images/product/123.png",
@@ -1201,7 +1201,7 @@ module.exports = {
 						"Obat yang digunakan untuk mengatasi penyakit-penyakit yang disebabkan oleh kelebihan produksi asam lambung seperti sakit maag dan tukak lambung",
 					weight: 50,
 					unit: "50 mililiter",
-					category_id: 21,
+					category_id: 20,
 				},
 				{
 					image: "/public/images/product/124.png",
@@ -1211,7 +1211,7 @@ module.exports = {
 						"Krim untuk membantu meredakan nyeri pada otot, sendi, keseleo dan encok",
 					weight: 30,
 					unit: "30 gram",
-					category_id: 21,
+					category_id: 20,
 				},
 				{
 					image: "/public/images/product/125.png",
@@ -1221,7 +1221,7 @@ module.exports = {
 						"Berguna untuk membunuh kuan secara tepat tanpa air serta meninggalkan efek kesegaran pada tangan",
 					weight: 100,
 					unit: "100 mililiter",
-					category_id: 22,
+					category_id: 21,
 				},
 				{
 					image: "/public/images/product/126.png",
@@ -1231,7 +1231,7 @@ module.exports = {
 						"Antiseptik cair yang digunakan sebagai perlindungan dari penyakit yang disebabkan oleh kuman",
 					weight: 300,
 					unit: "300 mililiter",
-					category_id: 22,
+					category_id: 21,
 				},
 				{
 					image: "/public/images/product/127.png",
@@ -1240,7 +1240,7 @@ module.exports = {
 					description: "Salep untuk perawatan luka dan kulit yang rusak",
 					weight: 20,
 					unit: "20 gram",
-					category_id: 22,
+					category_id: 21,
 				},
 				{
 					image: "/public/images/product/128.png",
@@ -1250,7 +1250,7 @@ module.exports = {
 						"Termometer digital praktis, mudah dipakai, dan digunakan dengan 1 tombol, ujung probe lentur, waterproof, hasil jelas dan akurat",
 					weight: 30,
 					unit: "30 gram",
-					category_id: 22,
+					category_id: 21,
 				},
 				{
 					image: "/public/images/product/129.png",
@@ -1260,7 +1260,7 @@ module.exports = {
 						"Pembersih antiseptik yang mudah digunakan dalam bentuk semprotan untuk segala jenis luka yang belum terinfeksi maupun yang sudah terinfeksi",
 					weight: 40,
 					unit: "40 mililiter",
-					category_id: 22,
+					category_id: 21,
 				},
 				{
 					image: "/public/images/product/130.png",
@@ -1270,7 +1270,7 @@ module.exports = {
 						"Spray multipurpose efektif membunuh kuman berbahaya yang aman untuk kulit dan berbagai permukaan",
 					weight: 100,
 					unit: "100 mililiter",
-					category_id: 22,
+					category_id: 21,
 				},
 				{
 					image: "/public/images/product/131.png",
@@ -1280,7 +1280,7 @@ module.exports = {
 						"Deterjen yang mampu menghilangkan noda membandel hingga ke serat kain dengan mudah",
 					weight: 770,
 					unit: "770 gram",
-					category_id: 23,
+					category_id: 22,
 				},
 				{
 					image: "/public/images/product/132.png",
@@ -1290,7 +1290,7 @@ module.exports = {
 						"Tisu wajah yang mampu membersihkan area wajah, mulut dan kulit tubuh dari keringat, kotoran yang menempel di peralatan dapur, serta membasuh dan mengeringkan bagian area intim",
 					weight: 900,
 					unit: "900 gram",
-					category_id: 23,
+					category_id: 22,
 				},
 				{
 					image: "/public/images/product/133.png",
@@ -1300,7 +1300,7 @@ module.exports = {
 						"Cairan pembersih yang dapat membersihkan kaca mobil agar bebas dari kotoran",
 					weight: 500,
 					unit: "500 mililiter",
-					category_id: 23,
+					category_id: 22,
 				},
 				{
 					image: "/public/images/product/134.png",
@@ -1310,7 +1310,7 @@ module.exports = {
 						"Produk pembersih kamar mandi dan kloset dengan wangi yang menyegarkan dengan kemasan botol",
 					weight: 500,
 					unit: "500 mililiter",
-					category_id: 23,
+					category_id: 22,
 				},
 				{
 					image: "/public/images/product/135.png",
@@ -1320,7 +1320,7 @@ module.exports = {
 						"Lap kanebo yang dapat menyerap air, melawan debu dan kotoran dari hampir semua permukaan",
 					weight: 100,
 					unit: "100 gram",
-					category_id: 23,
+					category_id: 22,
 				},
 				{
 					image: "/public/images/product/136.png",
@@ -1330,7 +1330,7 @@ module.exports = {
 						"Mengandung karbon aktif yang berfungsi menyerap dan menetralkan ion-ion penyebab bau tidak sedap di sekitar ruangan",
 					weight: 100,
 					unit: "100 gram",
-					category_id: 23,
+					category_id: 22,
 				},
 				{
 					image: "/public/images/product/137.png",
@@ -1340,7 +1340,7 @@ module.exports = {
 						"Makanan untuk anjing dewasa berupa potongan daging segar yang dimasak secara khusus",
 					weight: 100,
 					unit: "100 gram",
-					category_id: 24,
+					category_id: 23,
 				},
 				{
 					image: "/public/images/product/138.png",
@@ -1350,7 +1350,7 @@ module.exports = {
 						"Makanan kering untuk anjing yang memberikan manfaat dalam menjaga kesehatan tubuh anjing",
 					weight: 500,
 					unit: "500 gram",
-					category_id: 24,
+					category_id: 23,
 				},
 				{
 					image: "/public/images/product/139.png",
@@ -1360,7 +1360,7 @@ module.exports = {
 						"Makanan basah untuk anak kucing dalam kemasan pouch yang praktis",
 					weight: 80,
 					unit: "80 gram",
-					category_id: 24,
+					category_id: 23,
 				},
 				{
 					image: "/public/images/product/140.png",
@@ -1370,7 +1370,7 @@ module.exports = {
 						"Makanan basah dalam kemasan kaleng untuk kucing dewasa dengan rasa tuna",
 					weight: 400,
 					unit: "400 gram",
-					category_id: 24,
+					category_id: 23,
 				},
 				{
 					image: "/public/images/product/141.png",
@@ -1380,7 +1380,7 @@ module.exports = {
 						"Makanan kering untuk kucing dengan kandungan gizi yang lengkap dan seimbang",
 					weight: 1200,
 					unit: "1200 gram",
-					category_id: 24,
+					category_id: 23,
 				},
 				{
 					image: "/public/images/product/142.png",
@@ -1390,7 +1390,7 @@ module.exports = {
 						"Makanan basah untuk kucing yang terbuat dari ikan tuna yang dimasak secara lembut",
 					weight: 80,
 					unit: "80 gram",
-					category_id: 24,
+					category_id: 23,
 				},
 				{
 					image: "/public/images/product/143.png",
@@ -1399,7 +1399,7 @@ module.exports = {
 					description: "Baterai ABC Alkaline AAA isi 6 pcs 1.5v",
 					weight: 12,
 					unit: "12 gram",
-					category_id: 25,
+					category_id: 24,
 				},
 				{
 					image: "/public/images/product/144.png",
@@ -1408,7 +1408,7 @@ module.exports = {
 					description: "Baterai ABC Alkaline AA isi 6 pcs",
 					weight: 18,
 					unit: "18 gram",
-					category_id: 25,
+					category_id: 24,
 				},
 				{
 					image: "/public/images/product/145.png",
@@ -1417,7 +1417,7 @@ module.exports = {
 					description: "Lampu LED 12 watt merek Philips",
 					weight: 75,
 					unit: "1 pcs",
-					category_id: 25,
+					category_id: 24,
 				},
 				{
 					image: "/public/images/product/146.png",
@@ -1426,7 +1426,7 @@ module.exports = {
 					description: "Lampu LED 8 watt merek Philips",
 					weight: 75,
 					unit: "1 pcs",
-					category_id: 25,
+					category_id: 24,
 				},
 				{
 					image: "/public/images/product/147.png",
@@ -1435,7 +1435,7 @@ module.exports = {
 					description: "Lilin putih untuk kondisi mati lampu isi 10 batang",
 					weight: 370,
 					unit: "370 gram",
-					category_id: 25,
+					category_id: 24,
 				},
 				{
 					image: "/public/images/product/148.png",
@@ -1444,7 +1444,7 @@ module.exports = {
 					description: "Stop kontak dengan 4 lubang",
 					weight: 475,
 					unit: "475 gram",
-					category_id: 25,
+					category_id: 24,
 				},
 
 				// =========================================================
