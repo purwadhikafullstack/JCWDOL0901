@@ -8,7 +8,7 @@ import {
 	ServerIcon,
 	TicketIcon,
 	CurrencyDollarIcon,
-	UsersIcon,
+	UserAddIcon,
 } from "@heroicons/react/outline";
 import SideBarMenu from "./SideBarMenu";
 import SideBarFooter from "./SideBarFooter";
@@ -18,7 +18,7 @@ const navigation = [
 	{
 		name: "Create Branch Admin",
 		href: "/admin/create-branch-admin",
-		icon: UsersIcon,
+		icon: UserAddIcon,
 		current: false,
 	},
 	{ name: "Products", href: "#", icon: GiftIcon },
