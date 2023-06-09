@@ -4,6 +4,19 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useSelector } from "react-redux";
 import { getProductsRecommendation } from "./handlers/ProductsRecommendationCarouselHandler";
 
+const Slide = ({ products }) => {
+	return products.map((item, index) => {
+		return (
+			<SplideSlide>
+				<div className="flex flex-col items-center">
+					<img className="w-[150px]" src={item?.image} alt={item?.name} />
+					<span className="text-black text-sm mt-1.5">{item?.name}</span>
+				</div>
+			</SplideSlide>
+		);
+	});
+};
+
 const ProductsRecommendationCarousel = () => {
 	const app = useSelector(state => state.app);
 	const [products, setProducts] = React.useState([]);
@@ -15,7 +28,7 @@ const ProductsRecommendationCarousel = () => {
 	}, [app]);
 
 	return (
-		products && (
+		products.length && (
 			<Splide
 				options={{
 					perPage: 2.5,
@@ -23,16 +36,7 @@ const ProductsRecommendationCarousel = () => {
 					arrows: false,
 				}}
 			>
-				<SplideSlide>
-					<div className="flex flex-col items-center">
-						<img
-							className="w-[150px]"
-							src="https://media.discordapp.net/attachments/1114824509917249536/1115892052773843065/image.png"
-							alt="Image 1"
-						/>
-						<span className="text-black text-sm mt-1.5">Vegetables</span>
-					</div>
-				</SplideSlide>
+				<Slide products={products} />
 			</Splide>
 		)
 	);
