@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { switchBranch } from "../../redux/reducers/app/appAction";
+import { switchBranch } from "../../redux/reducers/user/userAction";
 
 const ConfirmChangeButton = ({ branch, toggleBranchModal }) => {
 	const dispatch = useDispatch();

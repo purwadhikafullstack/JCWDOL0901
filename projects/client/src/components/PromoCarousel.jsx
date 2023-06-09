@@ -1,41 +1,44 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Carousel } from "react-responsive-carousel";
 
-const PromoCarousel = () => {
+const CarouselWrapper = ({ children, app }) => {
 	return (
-		<div className="z-10 rounded-xl my-8">
-			<Carousel
-				showThumbs={false}
-				showStatus={false}
-				centerMode={true}
-				swipeable={true}
-				autoPlay={true}
-				interval={4000}
-				emulateTouch={true}
-				showArrows={false}
-				infiniteLoop={true}
-				swipeScrollTolerance={10}
-				preventMovementUntilSwipeScrollTolerance={true}
-			>
+		<Carousel
+			showThumbs={false}
+			showStatus={false}
+			centerMode={app.mobileView ? true : false}
+			width={app.mobileView ? null : 700}
+			swipeable={true}
+			autoPlay={true}
+			interval={4000}
+			emulateTouch={true}
+			showArrows={app.mobileView ? false : true}
+			infiniteLoop={true}
+			swipeScrollTolerance={10}
+			preventMovementUntilSwipeScrollTolerance={true}
+		>
+			{children}
+		</Carousel>
+	);
+};
+const PromoCarousel = () => {
+	const app = useSelector(state => state.app);
+	return (
+		<div
+			className={app.mobileView ? "z-10 rounded-xl my-8 mx-auto" : "z-10 rounded-xl my-16 mx-auto"}
+		>
+			<CarouselWrapper app={app}>
 				<div className="rounded-xl mx-3">
-					<img
-						className="rounded-xl"
-						src="/assets/promotions/inventory_promotions_1.png"
-					/>
+					<img className="rounded-xl" src="/assets/promotions/inventory_promotions_1.png" />
 				</div>
 				<div className="rounded-xl mx-3">
-					<img
-						className="rounded-xl"
-						src="/assets/promotions/global_promotions_1.png"
-					/>
+					<img className="rounded-xl" src="/assets/promotions/global_promotions_1.png" />
 				</div>
 				<div className="rounded-xl mx-3">
-					<img
-						className="rounded-xl"
-						src="/assets/promotions/global_promotions_2.png"
-					/>
+					<img className="rounded-xl" src="/assets/promotions/global_promotions_2.png" />
 				</div>
-			</Carousel>
+			</CarouselWrapper>
 		</div>
 	);
 };

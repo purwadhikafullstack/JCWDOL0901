@@ -18,20 +18,21 @@ const Slide = ({ products }) => {
 };
 
 const ProductsRecommendationCarousel = () => {
+	const user = useSelector(state => state.user);
 	const app = useSelector(state => state.app);
 	const [products, setProducts] = React.useState([]);
 
 	React.useEffect(() => {
-		getProductsRecommendation(app.branch.id)
+		getProductsRecommendation(user.branch.id)
 			.then(result => setProducts(result.data))
 			.catch(error => setProducts([{ name: "Server Error!", image: "" }]));
-	}, [app]);
+	}, [user]);
 
 	return (
 		products && (
 			<Splide
 				options={{
-					perPage: 2.5,
+					perPage: app.mobileView ? 2.5 : 5,
 					pagination: false,
 					arrows: false,
 				}}

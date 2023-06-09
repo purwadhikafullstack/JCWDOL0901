@@ -1,25 +1,25 @@
 import React from "react";
-import MobileHeader from "../../components/MobileHeader";
 import PromoCarousel from "../../components/PromoCarousel";
 import CategoryCarousel from "../../components/CategoryCarousel";
 import ProductsRecommendation from "../../components/ProductsRecommendation";
-import MobileNavBar from "../../components/MobileNavBar";
 import Footer from "../../components/Footer";
 import SelectBranchModal from "../../components/SelectBranchModal";
+import DesktopHeader from "../../components/DesktopHeader";
 
-const HomePageMobile = () => {
+const HomePageDesktop = () => {
 	const [showModal, setShowModal] = React.useState(false);
 	return (
-		<div className="max-w-[480px] min-h-screen mx-auto bg-white overflow-hidden flex flex-col overflow-y-hidden">
+		<div className="min-w-[480px] min-h-screen mx-auto bg-white overflow-hidden flex flex-col overflow-y-hidden">
 			{showModal && <SelectBranchModal toggleBranchModal={setShowModal} />}
-			<MobileHeader toggleBranchModal={setShowModal} />
+			<DesktopHeader toggleBranchModal={setShowModal} />
 			<PromoCarousel />
-			<CategoryCarousel />
-			<ProductsRecommendation />
-			<MobileNavBar />
+			<div className="shrink-1 px-32">
+				<CategoryCarousel />
+				<ProductsRecommendation />
+			</div>
 			<Footer />
 		</div>
 	);
 };
 
-export default HomePageMobile;
+export default HomePageDesktop;

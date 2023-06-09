@@ -1,7 +1,7 @@
 import React from "react";
 import { getNearestBranch } from "./handlers/branchMenuHandler";
 import { useDispatch, useSelector } from "react-redux";
-import { setAppNearestBranch } from "../../redux/reducers/app/appAction";
+import { setUserNearestBranch } from "../../redux/reducers/user/userAction";
 
 const Name = ({ name }) => {
 	return (
@@ -11,22 +11,22 @@ const Name = ({ name }) => {
 	);
 };
 const BranchName = ({ toggleBranchModal }) => {
-	const app = useSelector(state => state.app);
+	const user = useSelector(state => state.user);
 	const dispatch = useDispatch();
 
 	React.useEffect(() => {
-		getNearestBranch(app.location.latitude, app.location.longitude)
+		getNearestBranch(user.location.latitude, user.location.longitude)
 			.then(result => {
-				dispatch(setAppNearestBranch({ name: result.data.name, id: result.data.id }));
+				dispatch(setUserNearestBranch({ name: result.data.name, id: result.data.id }));
 			})
 			.catch(error => {
-				dispatch(setAppNearestBranch({ name: "Server Error!", id: null }));
+				dispatch(setUserNearestBranch({ name: "Server Error!", id: null }));
 			});
 	}, []);
 
 	return (
 		<div className="flex flex-row items-center justify-items-start">
-			<Name name={app.branch.name} />
+			<Name name={user.branch.name} />
 			<span
 				className="ml-1 material-symbols-rounded font-bold text-xl cursor-pointer"
 				onClick={() => toggleBranchModal(true)}

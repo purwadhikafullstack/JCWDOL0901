@@ -2,7 +2,7 @@ import React from "react";
 import BranchName from "./BranchName";
 
 import { useDispatch, useSelector } from "react-redux";
-import { setAppLocation } from "../../redux/reducers/app/appAction";
+import { setUserLocation } from "../../redux/reducers/user/userAction";
 
 import { promptUserPermissionForLocation } from "../../utils/geolocation";
 
@@ -21,24 +21,24 @@ const LocationDeniedMessage = () => {
 
 const BranchDetail = ({ toggleBranchModal }) => {
 	const dispatch = useDispatch();
-	const app = useSelector(state => state.app);
+	const user = useSelector(state => state.user);
 
 	React.useEffect(() => {
-		if (!app.branch.name) {
+		if (!user.branch.name) {
 			promptUserPermissionForLocation()
 				.then(result => {
 					const { latitude, longitude } = result.coords;
-					dispatch(setAppLocation({ latitude, longitude, granted: true, pending: false }));
+					dispatch(setUserLocation({ latitude, longitude, granted: true, pending: false }));
 				})
-				.catch(error => dispatch(setAppLocation({ granted: false, pending: false })));
+				.catch(error => dispatch(setUserLocation({ granted: false, pending: false })));
 		}
 	}, []);
 
 	return (
 		<div className="text-green-100 flex flex-row items-center justify-items-start pt-1">
-			{app.location.pending && <LocationPendingMessage />}
-			{!app.location.granted && !app.location.pending && <LocationDeniedMessage />}
-			{app.location.granted && <BranchName toggleBranchModal={toggleBranchModal} />}
+			{user.location.pending && <LocationPendingMessage />}
+			{!user.location.granted && !user.location.pending && <LocationDeniedMessage />}
+			{user.location.granted && <BranchName toggleBranchModal={toggleBranchModal} />}
 		</div>
 	);
 };

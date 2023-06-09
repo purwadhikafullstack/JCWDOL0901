@@ -1,9 +1,13 @@
 import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { useSelector } from "react-redux";
 
 const SliderSlides = ({ categories }) => {
+	const app = useSelector(state => state.app);
 	return (
-		<Splide options={{ perPage: 4.5, padding: 5, pagination: false, arrows: false }}>
+		<Splide
+			options={{ perPage: app.mobileView ? 4.5 : 10, padding: 5, pagination: false, arrows: false }}
+		>
 			{categories.map((category, index) => {
 				return (
 					<SplideSlide key={index}>

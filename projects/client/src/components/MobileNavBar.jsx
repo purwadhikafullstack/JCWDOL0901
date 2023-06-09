@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 
 const MobileNavButton = ({ active, name, to }) => {
-    const navigate = useNavigate();
+	const navigate = useNavigate();
 
 	const className = active
 		? "material-icons-outlined w-full text-green-500"
@@ -15,16 +15,13 @@ const MobileNavButton = ({ active, name, to }) => {
 };
 
 const MobileNavBar = () => {
-    const location = useLocation().pathname;
+	const location = useLocation().pathname;
 
 	return (
-		<div
-			tabIndex="-1"
-			className="fixed bottom-0 mt-auto z-50 w-[480px] rounded-full"
-		>
+		<div tabIndex="-1" className="fixed bottom-0 mt-auto z-50 w-[480px] rounded-full">
 			<div className="w-full mb-2 drop-shadow-2xl">
 				<div className="mx-4 flex flex-row justify-around rounded-full bg-white">
-					<MobileNavButton active={location === "/"} name="home" to="/"/>
+					<MobileNavButton active={location === "/"} name="home" to="/" />
 					<MobileNavButton active={location === "/cart"} name="shopping_cart" to="/cart" />
 					<MobileNavButton active={location === "/history"} name="history" to="/history" />
 					<MobileNavButton active={location === "/account"} name="account_circle" to="/account" />
