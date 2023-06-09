@@ -1,4 +1,4 @@
-const { startFindNearestBranch } = require("../services/branchService");
+const { startFindNearestBranch, startFindBranches } = require("../services/branchService");
 
 const postNearestBranch = async (request, response) => {
 	await startFindNearestBranch(request.geolocation)
@@ -10,4 +10,13 @@ const postNearestBranch = async (request, response) => {
 		});
 };
 
-module.exports = { postNearestBranch };
+const getBranches = async (request, response) => {
+	await startFindBranches()
+		.then(result => {
+			response.status(200).send(result);
+		})
+		.catch(error => {
+			response.status(error.code).send(error.message);
+		});
+};
+module.exports = { postNearestBranch, getBranches };

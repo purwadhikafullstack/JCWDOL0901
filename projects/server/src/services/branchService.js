@@ -15,4 +15,15 @@ module.exports = {
 			}
 		});
 	},
+	startFindBranches: async () => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const Branches = readBranchQuery();
+
+				return resolve(Branches);
+			} catch (error) {
+				return reject(await startFindErrorHandler(error));
+			}
+		});
+	},
 };
