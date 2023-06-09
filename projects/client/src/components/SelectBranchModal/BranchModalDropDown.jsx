@@ -54,7 +54,7 @@ const BranchLists = ({ setSelectedBranch }) => {
 const DropDownOptions = ({ setSelectedBranch }) => {
 	return (
 		<Listbox.Options className="w-full mx-auto max-h-24  overflow-y-scroll mb-11">
-			<BranchLists selectedBranch={setSelectedBranch} />
+			<BranchLists setSelectedBranch={setSelectedBranch} />
 		</Listbox.Options>
 	);
 };
