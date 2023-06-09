@@ -28,7 +28,7 @@ const ProductsRecommendationCarousel = () => {
 	}, [app]);
 
 	return (
-		products.length && (
+		products && (
 			<Splide
 				options={{
 					perPage: 2.5,
