@@ -3,7 +3,7 @@ import BackButton from "../../components/BackButton";
 import CreateBranchAdminForm from "../../components/CreateBranchAdmin/CreateBranchAdminForm";
 import CompanyLogo from "../../components/CompanyLogo";
 import CreateBranchAdminIllustration from "../../components/CreateBranchAdmin/CreateBranchAdminIllustration.jsx";
-import SideBarDesktop from "../../components/SideBarDesktop.jsx";
+import SideBarDesktop from "../../components/SideBar/SideBarDesktop.jsx";
 
 const DesktopIllustration = () => {
 	return (

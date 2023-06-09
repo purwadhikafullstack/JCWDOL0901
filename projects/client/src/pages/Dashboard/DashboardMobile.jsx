@@ -2,7 +2,7 @@ import React from "react";
 import DashboardIllustration from "../../components/Dashboard/DashboardIllustration.jsx";
 import DashboardBranchInfo from "../../components/Dashboard/DashboardBranchInfo.jsx";
 import DashboardCharts from "../../components/Dashboard/DashboardCharts.jsx";
-import SideBarMobile from "../../components/SideBarMobile.jsx";
+import SideBarMobile from "../../components/SideBar/SideBarMobile.jsx";
 
 const MobileIllustration = () => {
 	return (

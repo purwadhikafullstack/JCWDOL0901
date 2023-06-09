@@ -6,7 +6,7 @@ const CreateBranchAdminPage = () => {
 	return (
 		<div>
 			<DashboardMobile />
-			{/* <DashboardDesktop /> */}
+			<DashboardDesktop />
 		</div>
 	);
 };
