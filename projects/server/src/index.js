@@ -12,6 +12,7 @@ const {
 	categoryRoute,
 	branchRoute,
 	productRoute,
+	adminPromoRoute,
 } = require("./routers/index.js");
 
 const PORT = process.env.PORT || 8000;
@@ -35,6 +36,7 @@ app.use("/api/branch", branchRoute);
 app.use("/api/category", categoryRoute);
 app.use("/api/data", dataRoute);
 app.use("/api/admin/transaction", adminTransactionRoute);
+app.use("/api/admin/promo", adminPromoRoute);
 app.use("/api/product", productRoute);
 
 // ===========================
