@@ -2,7 +2,7 @@ import React from "react";
 import MobileHeader from "../../components/MobileHeader";
 import PromoCarousel from "../../components/PromoCarousel";
 import CategoryCarousel from "../../components/CategoryCarousel";
-import ProductsRecommendationCarousel from "../../components/ProductsRecommendationCarousel";
+import ProductsRecommendation from "../../components/ProductsRecommendation";
 import MobileNavBar from "../../components/MobileNavBar";
 import MobileFooter from "../../components/MobileFooter";
 import SelectBranchModal from "../../components/SelectBranchModal";
@@ -15,7 +15,7 @@ const HomePageMobile = () => {
 			<MobileHeader toggleBranchModal={setShowModal} />
 			<PromoCarousel />
 			<CategoryCarousel />
-			<ProductsRecommendationCarousel />
+			<ProductsRecommendation />
 			<MobileNavBar />
 			<MobileFooter />
 		</div>
