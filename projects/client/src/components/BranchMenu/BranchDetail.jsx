@@ -19,7 +19,7 @@ const LocationDeniedMessage = () => {
 	return <div className="font-semibold text-red mt-1.5">Location Access Denied</div>;
 };
 
-const BranchDetail = () => {
+const BranchDetail = ({ toggleBranchModal }) => {
 	const dispatch = useDispatch();
 	const app = useSelector(state => state.app);
 
@@ -38,7 +38,7 @@ const BranchDetail = () => {
 		<div className="text-green-100 flex flex-row items-center justify-items-start pt-1">
 			{app.location.pending && <LocationPendingMessage />}
 			{!app.location.granted && !app.location.pending && <LocationDeniedMessage />}
-			{app.location.granted && <BranchName />}
+			{app.location.granted && <BranchName toggleBranchModal={toggleBranchModal} />}
 		</div>
 	);
 };

@@ -1,25 +1,18 @@
 import React from "react";
 import { Listbox } from "@headlessui/react";
 import { getAllBranches } from "./handler/BranchModalHandler";
-const Branch = [
-	"Groseria Solo",
-	"Groseria Jakpus",
-	"Groseria Palembang",
-	"Groseria Jakpus",
-	"Groseria Jakpus",
-];
 
-const ToggleDropDown = ({ open, selectedBranch }) => {
+const ToggleDropDown = ({ open, branch }) => {
 	return (
 		<Listbox.Button
 			className={`flex flex-row items-center justify-center border-2 border-green-200 px-4 py-2 rounded-lg ${
 				open ? "mb-1" : "mb-36"
 			}`}
 		>
-			<div className="flex flex-col items-center ml-auto">
+			<div className="flex flex-col items-center ml-auto w-full px-2">
 				<span className="text-xs whitespace-nowrap mx-auto mb-1">Switch To:</span>
-				<span className="font-bold overflow-x-hidden whitespace-nowrap mx-auto">
-					{selectedBranch || "..."}
+				<span className="font-semibold max-w-full overflow-x-hidden whitespace-nowrap mx-auto">
+					{branch.name || "..."}
 				</span>
 			</div>
 			<span className="material-symbols-rounded ml-auto">expand_more</span>
@@ -27,32 +20,36 @@ const ToggleDropDown = ({ open, selectedBranch }) => {
 	);
 };
 
-const BranchLists = ({ branches, setSelectedBranch }) => {
-	return branches.map((each, index) => {
+const Option = ({ branch, selected }) => {
+	return (
+		<div
+			className={
+				selected
+					? "font-bold text-green-300 flex flex-row justify-center text-[90%]"
+					: "flex flex-row justify-center text-[90%]"
+			}
+		>
+			{branch.name}
+		</div>
+	);
+};
+
+const BranchLists = ({ branches, setBranch }) => {
+	return branches.map((branch, index) => {
 		return (
 			<Listbox.Option
-				className="border ml-2 py-2 px-4 mb-0.5 rounded-lg shadow whitespace-nowrap overflow-hidden"
+				className="border ml-2 py-2 px-4 mb-0.5 rounded-lg shadow whitespace-nowrap max-w-full"
 				key={index}
-				value={each.id}
-				onClick={() => setSelectedBranch(each.name)}
+				value={branch.id}
+				onClick={() => setBranch(branch)}
 			>
-				{({ selected }) => (
-					<div
-						className={
-							selected
-								? "font-bold text-green-300 flex flex-row justify-center"
-								: "flex flex-row justify-center"
-						}
-					>
-						{each.name}
-					</div>
-				)}
+				{({ selected }) => <Option branch={branch} selected={selected} />}
 			</Listbox.Option>
 		);
 	});
 };
 
-const DropDownOptions = ({ setSelectedBranch }) => {
+const DropDownOptions = ({ setBranch }) => {
 	const [branches, setBranches] = React.useState([]);
 
 	React.useEffect(() => {
@@ -63,20 +60,19 @@ const DropDownOptions = ({ setSelectedBranch }) => {
 
 	return (
 		<Listbox.Options className="w-full mx-auto max-h-24  overflow-y-scroll mb-11">
-			<BranchLists branches={branches} setSelectedBranch={setSelectedBranch} />
+			<BranchLists branches={branches} setBranch={setBranch} />
 		</Listbox.Options>
 	);
 };
 
-const BranchModalDropDown = () => {
-	const [selectedBranch, setSelectedBranch] = React.useState("");
+const BranchModalDropDown = ({ branch, setBranch }) => {
 	return (
 		<Listbox>
 			{({ open }) => {
 				return (
 					<>
-						<ToggleDropDown open={open} selectedBranch={selectedBranch} />
-						<DropDownOptions setSelectedBranch={setSelectedBranch} />
+						<ToggleDropDown open={open} branch={branch} />
+						<DropDownOptions setBranch={setBranch} />
 					</>
 				);
 			}}

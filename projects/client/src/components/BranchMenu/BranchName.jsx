@@ -10,7 +10,7 @@ const Name = ({ name }) => {
 		</div>
 	);
 };
-const BranchName = () => {
+const BranchName = ({ toggleBranchModal }) => {
 	const app = useSelector(state => state.app);
 	const dispatch = useDispatch();
 
@@ -27,7 +27,10 @@ const BranchName = () => {
 	return (
 		<div className="flex flex-row items-center justify-items-start">
 			<Name name={app.branch.name} />
-			<span className="ml-1 material-symbols-rounded font-bold text-xl cursor-pointer">
+			<span
+				className="ml-1 material-symbols-rounded font-bold text-xl cursor-pointer"
+				onClick={() => toggleBranchModal(true)}
+			>
 				expand_more
 			</span>
 		</div>

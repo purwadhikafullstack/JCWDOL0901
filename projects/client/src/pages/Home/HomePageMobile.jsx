@@ -8,10 +8,11 @@ import MobileFooter from "../../components/MobileFooter";
 import SelectBranchModal from "../../components/SelectBranchModal";
 
 const HomePageMobile = () => {
+	const [showModal, setShowModal] = React.useState(false);
 	return (
 		<div className="max-w-[480px] min-h-screen mx-auto bg-white overflow-hidden flex flex-col overflow-y-hidden">
-			<SelectBranchModal />
-			<MobileHeader />
+			{showModal && <SelectBranchModal toggleBranchModal={setShowModal} />}
+			<MobileHeader toggleBranchModal={setShowModal} />
 			<PromoCarousel />
 			<CategoryCarousel />
 			<ProductsRecommendationCarousel />

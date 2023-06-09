@@ -18,6 +18,10 @@ const setAppLocation = (state, action) => {
 	};
 };
 
+const switchBranch = (state, action) => {
+	return { ...state, branch: { ...action.payload } };
+};
+
 export const app = createSlice({
 	name: "app",
 	initialState: {
@@ -29,5 +33,6 @@ export const app = createSlice({
 	reducers: {
 		setAppNearestBranch,
 		setAppLocation,
+		switchBranch,
 	},
 });

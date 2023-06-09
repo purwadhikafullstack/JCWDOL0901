@@ -5,7 +5,7 @@ import AddressMenu from "./AddressMenu";
 import SearchBar from "../components/SearchBar";
 import BranchMenu from "./BranchMenu";
 
-const MobileHeader = () => {
+const MobileHeader = ({ toggleBranchModal }) => {
 	return (
 		<div className="flex flex-col">
 			<CircularBackgroundDecoration />
@@ -13,7 +13,7 @@ const MobileHeader = () => {
 			<div className="flex flex-col justify-between items-between z-10 mx-6">
 				<SearchBar />
 				<div className="flex flex-row justify-between items-start mt-2">
-					<BranchMenu />
+					<BranchMenu toggleBranchModal={toggleBranchModal} />
 					<AddressMenu />
 				</div>
 			</div>
