@@ -13,17 +13,17 @@ const transporter = nodemailer.createTransport({
 });
 
 const generateRegistrationVerificationHTML = (token, name) => {
-	const verificationUrl = `${process.env.API_URL}/api/auth/user/verify/${token}`;
+	const verificationUrl = `${process.env.FRONTEND_URL}/register/verify/${token}`;
 
 	return fs
 		.readFileSync(`${__dirname}/../templates/verificationEmail.html`, "utf-8")
 		.replaceAll("{{data_verification_url}}", verificationUrl)
-		.replaceAll("{{data_name}}", name)
+		.replaceAll("{{data_name}}", name);
 };
 
 const sendRegistrationVerificationEmail = async (body, token) => {
 	return new Promise(async (resolve, reject) => {
-		const {name, email} = body;
+		const { name, email } = body;
 		try {
 			const html = await generateRegistrationVerificationHTML(token, name);
 			await transporter.sendMail({
