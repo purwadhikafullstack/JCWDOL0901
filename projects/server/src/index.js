@@ -5,7 +5,14 @@ const express = require("express");
 const cors = require("cors");
 const { join } = require("path");
 
-const { authRoute, dataRoute, adminTransactionRoute, categoryRoute, branchRoute } = require("./routers/index.js");
+const {
+	authRoute,
+	dataRoute,
+	adminTransactionRoute,
+	categoryRoute,
+	branchRoute,
+	productRoute,
+} = require("./routers/index.js");
 
 const PORT = process.env.PORT || 8000;
 const app = express();
@@ -28,6 +35,7 @@ app.use("/api/branch", branchRoute);
 app.use("/api/category", categoryRoute);
 app.use("/api/data", dataRoute);
 app.use("/api/admin/transaction", adminTransactionRoute);
+app.use("/api/product", productRoute);
 
 // ===========================
 

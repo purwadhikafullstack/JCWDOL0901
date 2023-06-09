@@ -1419,3 +1419,38 @@
 	Source: forbiddenErrorHandler
 	Error: "Forbidden access, a non super admin trying to access restricted request"
 	
+	===
+	Time: Fri Jun 09 2023 14:22:46 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Fri Jun 09 2023 14:23:20 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Fri Jun 09 2023 14:23:39 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Fri Jun 09 2023 14:23:50 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Fri Jun 09 2023 14:23:54 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Fri Jun 09 2023 14:24:00 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Fri Jun 09 2023 14:24:09 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
