@@ -1,21 +1,19 @@
 import { useState, useEffect } from "react";
 import getBranchInfo from "./helper/getBranchInfoHelper";
 
-const DashboardBranchInfo = () => {
+const DashboardBranchInfo = ({ className }) => {
 	const [branchInfo, setBranchInfo] = useState({});
 	useEffect(() => {
 		getBranchInfo(setBranchInfo);
 	}, []);
 	return (
-		<>
-			<div className="mr-auto ml-6 text-md text-left font-bold mb-1">{branchInfo.name}</div>
-			<div className="mr-auto ml-6 text-xs text-left">
-				{`${branchInfo.City?.type} ${branchInfo.City?.name}`}
-			</div>
-			<div className="mr-auto ml-6 text-xs text-left">
-				{`Provinsi ${branchInfo.City?.Province.name}`}
-			</div>
-		</>
+		<div className={className}>
+			<div className={`mr-auto text-md font-bold mb-1 w-full`}>{branchInfo.name}</div>
+			<div
+				className={`mr-auto text-xs w-full`}
+			>{`${branchInfo.City?.type} ${branchInfo.City?.name}`}</div>
+			<div className={`mr-auto text-xs w-full`}>{`Provinsi ${branchInfo.City?.Province.name}`}</div>
+		</div>
 	);
 };
 

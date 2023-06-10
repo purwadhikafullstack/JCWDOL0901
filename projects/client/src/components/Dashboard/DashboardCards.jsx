@@ -10,7 +10,7 @@ const DashboardCards = ({}) => {
 	}, []);
 	return (
 		<>
-			<h1 className="mb-2 text-green-400 font-bold text-xl">All time</h1>
+			<h1 className="mb-6 text-green-400 font-bold text-xl">All time</h1>
 			<div className="mx-12 flex flex-row gap-2 justify-center">
 				<DashboardCard title="Buyer" value={allTimeData.totalBuyer} valueSize="text-xl font-bold" />
 				<DashboardCard

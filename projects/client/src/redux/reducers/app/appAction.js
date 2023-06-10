@@ -1,3 +1,3 @@
 import { app } from "./appReducer.js";
 
-export const {} = app.actions;
+export const { setMobileView } = app.actions;
