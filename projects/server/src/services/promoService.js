@@ -5,6 +5,15 @@ const {
 } = require("../queries/Inventory_promotions");
 
 module.exports = {
+	startFindInventoryPromotion: async branch_id => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				return resolve(1);
+			} catch (error) {
+				return reject(await 1);
+			}
+		});
+	},
 	startInventoryPromotionRegistration: async data => {
 		return new Promise(async (resolve, reject) => {
 			try {
