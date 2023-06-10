@@ -6,14 +6,16 @@ import { useFormik } from "formik";
 import { formikAdminLoginConfiguration } from "./config/formikAdminLoginConfiguration";
 
 function AdminLoginFormWithValidator({ setError }) {
-	const [busy, setBusy] = React.useState(false);
 	const navigate = useNavigate();
-
-	const formik = useFormik(formikAdminLoginConfiguration(setError, setBusy, navigate));
+	const formik = useFormik(formikAdminLoginConfiguration(setError, navigate));
 	return (
 		<form className="min-w-[70%]" onSubmit={formik.handleSubmit} noValidate>
 			<AdminLoginInputField formik={formik} />
-			<Button type="submit" name="Admin Login" disabled={formik.isSubmitting} />
+			<Button
+				type="submit"
+				name="Admin Login"
+				disabled={formik.isSubmitting || formik.isValidating}
+			/>
 		</form>
 	);
 }
