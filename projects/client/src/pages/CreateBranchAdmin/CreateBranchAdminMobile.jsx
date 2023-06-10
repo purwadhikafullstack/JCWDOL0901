@@ -6,7 +6,7 @@ import CircularBackgroundDecoration from "../../components/CircularBackgroundDec
 
 const MobileIllustration = () => {
 	return (
-		<div className="text-white flex flex-row justify-center items-center z-10 mb-12">
+		<div className="text-green-100 flex flex-row justify-center items-center z-50 mb-12">
 			<div className="mt-10 mr-auto ml-6 text-3xl text-left font-semibold">
 				Create <br /> Branch Admin
 			</div>

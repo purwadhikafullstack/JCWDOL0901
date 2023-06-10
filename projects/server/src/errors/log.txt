@@ -1,0 +1,1344 @@
+<<<<<<< HEAD
+=======
+
+	===
+	Time: Mon Jun 05 2023 22:23:55 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":7,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":7,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 22:24:35 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":8,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":8,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 22:25:17 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":9,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":9,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 22:27:18 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":10,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":10,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 22:27:42 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":11,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":11,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 22:28:27 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":7,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":7,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 22:29:56 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":8,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":8,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 22:31:08 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":9,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":9,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 22:39:35 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":10,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":10,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 23:21:39 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Mon Jun 05 2023 23:21:41 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Mon Jun 05 2023 23:21:46 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Mon Jun 05 2023 23:22:04 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Mon Jun 05 2023 23:23:41 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":11,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":11,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 23:24:49 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":12,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":12,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 23:25:07 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":13,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":13,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 23:27:09 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":14,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":14,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 23:31:27 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":15,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":15,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 23:33:31 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":16,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":16,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 23:34:15 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":17,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":17,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 23:36:13 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":18,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":18,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 23:36:53 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":19,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":19,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 23:38:31 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":20,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":20,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 23:38:54 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":21,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":21,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 23:39:03 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":22,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":22,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 23:39:50 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":23,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":23,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 23:45:45 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":24,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":24,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 23:46:01 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":25,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":25,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 05 2023 23:48:10 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":26,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":26,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:09:57 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":27,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":27,"city_id":"4","name":"OGWA Store Jakarta"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:11:59 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":28,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":28,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:13:23 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":29,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":29,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:14:01 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":30,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":30,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:14:28 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":31,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":31,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:16:10 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":32,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":32,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:16:19 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":33,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":33,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:17:12 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":34,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":34,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:17:45 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":35,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":35,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:17:54 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":36,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":36,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:18:11 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":37,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":37,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:18:26 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":38,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":38,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:18:46 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":39,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":39,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:18:55 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":40,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":40,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:19:07 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":41,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":41,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:19:29 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":42,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":42,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:20:06 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":43,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":43,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:20:31 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":44,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":44,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:24:57 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":45,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":45,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:27:34 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":46,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":46,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:28:00 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":47,"city_id":"501","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":47,"city_id":"501","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:28:15 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":48,"city_id":"461","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":48,"city_id":"461","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:30:12 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":49,"city_id":"461","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":49,"city_id":"461","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:32:26 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 08:32:34 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 08:32:40 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":52,"city_id":"461","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":52,"city_id":"461","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:34:22 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":53,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":53,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:34:34 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":54,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":54,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:40:14 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":58,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":58,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:40:51 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":59,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":59,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:41:07 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":60,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":60,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:41:33 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":61,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":61,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:41:46 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":62,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":62,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:41:56 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":63,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":63,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:42:29 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":64,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":64,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:45:10 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":65,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":65,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:45:48 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":66,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":66,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:47:18 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":67,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":67,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:49:29 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":68,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":68,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:51:35 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":69,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":69,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:51:49 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":70,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":70,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:51:54 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":71,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":71,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:54:13 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":72,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":72,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:55:08 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":73,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":73,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:55:32 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":74,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":74,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:57:47 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":75,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":75,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 08:57:59 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"nodemailerError","detail":{"error":{}}}
+	
+	===
+	Time: Tue Jun 06 2023 08:58:36 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"nodemailerError","detail":{"error":{}}}
+	
+	===
+	Time: Tue Jun 06 2023 09:00:41 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"opencageError","detail":{"status":"OK","total_results":0}}
+	
+	===
+	Time: Tue Jun 06 2023 09:01:40 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"status":"NOT FOUND"}
+	
+	===
+	Time: Tue Jun 06 2023 09:02:10 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"opencageError","detail":{"error":{"status":{"code":400,"message":"Bad Request"}}}}
+	
+	===
+	Time: Tue Jun 06 2023 09:03:03 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"opencageError","detail":{"error":{"status":{"code":400,"message":"Bad Request"}}}}
+	
+	===
+	Time: Tue Jun 06 2023 09:03:10 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":83,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":83,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 09:04:12 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":84,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":84,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 09:34:02 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":85,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":85,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 09:47:38 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":86,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":86,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 09:49:07 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Branches.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":87,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Branches.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"admin_id":87,"city_id":"23","name":"OGWA Store Bandung"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 10:08:31 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"groseriastore.bdg@groseria.com","origin":"DB","instance":{"super":false,"id":null,"email":"groseriastore.bdg@groseria.com","password":"bandung"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'groseriastore.bdg@groseria.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["groseriastore.bdg@groseria.com","bandung",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'groseriastore.bdg@groseria.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["groseriastore.bdg@groseria.com","bandung",false]},"fields":{"email":"groseriastore.bdg@groseria.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 10:08:36 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"groseriastore.bdg@groseria.com","origin":"DB","instance":{"super":false,"id":null,"email":"groseriastore.bdg@groseria.com","password":"bandung"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'groseriastore.bdg@groseria.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["groseriastore.bdg@groseria.com","bandung",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'groseriastore.bdg@groseria.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["groseriastore.bdg@groseria.com","bandung",false]},"fields":{"email":"groseriastore.bdg@groseria.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 10:40:20 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:40:26 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:41:46 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:42:19 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:42:48 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:43:03 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:43:05 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:43:06 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:43:07 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:43:31 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:45:21 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:46:16 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:46:21 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:46:45 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:46:59 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"groseria.plb@groseria.com","origin":"DB","instance":{"super":false,"id":null,"email":"groseria.plb@groseria.com","password":"palembang"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'groseria.plb@groseria.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["groseria.plb@groseria.com","palembang",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'groseria.plb@groseria.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["groseria.plb@groseria.com","palembang",false]},"fields":{"email":"groseria.plb@groseria.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 10:47:01 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"groseria.plb@groseria.com","origin":"DB","instance":{"super":false,"id":null,"email":"groseria.plb@groseria.com","password":"palembang"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'groseria.plb@groseria.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["groseria.plb@groseria.com","palembang",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'groseria.plb@groseria.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["groseria.plb@groseria.com","palembang",false]},"fields":{"email":"groseria.plb@groseria.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 10:47:34 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:49:00 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:49:11 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:49:14 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 10:56:44 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 11:04:48 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 11:04:58 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 11:05:09 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 11:05:11 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 11:05:18 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 11:06:15 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 11:06:21 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 11:13:20 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 11:13:37 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 06 2023 11:14:41 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Admins.password cannot be null","type":"notNull Violation","path":"password","value":null,"origin":"CORE","instance":{"super":false,"id":null,"email":"groseriastore.plb@groseria.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 11:15:14 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Admins.password cannot be null","type":"notNull Violation","path":"password","value":null,"origin":"CORE","instance":{"super":false,"id":null,"email":"groseriastore.plb@groseria.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 11:15:57 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Admins.password cannot be null","type":"notNull Violation","path":"password","value":null,"origin":"CORE","instance":{"super":false,"id":null,"email":"groseriastore.plb@groseria.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 11:16:11 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Admins.password cannot be null","type":"notNull Violation","path":"password","value":null,"origin":"CORE","instance":{"super":false,"id":null,"email":"groseriastore.plb@groseria.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 06 2023 17:42:40 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:42:20 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"mdanangpriambodo@gmail.com","origin":"DB","instance":{"super":false,"id":null,"email":"mdanangpriambodo@gmail.com","password":"$2b$10$jzfQH.11RpscXyz8Qt2nFOwdyV6riNuwGjiGnXEcQeotnP.GD/.Ea"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriambodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriambodo@gmail.com","$2b$10$jzfQH.11RpscXyz8Qt2nFOwdyV6riNuwGjiGnXEcQeotnP.GD/.Ea",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriambodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriambodo@gmail.com","$2b$10$jzfQH.11RpscXyz8Qt2nFOwdyV6riNuwGjiGnXEcQeotnP.GD/.Ea",false]},"fields":{"email":"mdanangpriambodo@gmail.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:42:30 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"mdanangpriaasdmbodo@gmail.com","origin":"DB","instance":{"super":false,"id":null,"email":"mdanangpriaasdmbodo@gmail.com","password":"$2b$10$MEOUzqwIiKKOB7zs.f.BZO1t6yYuhUoaJcuQmvG1pz409x8IyBWdK"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriaasdmbodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriaasdmbodo@gmail.com","$2b$10$MEOUzqwIiKKOB7zs.f.BZO1t6yYuhUoaJcuQmvG1pz409x8IyBWdK",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriaasdmbodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriaasdmbodo@gmail.com","$2b$10$MEOUzqwIiKKOB7zs.f.BZO1t6yYuhUoaJcuQmvG1pz409x8IyBWdK",false]},"fields":{"email":"mdanangpriaasdmbodo@gmail.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:43:01 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"mdanangpriaasdmbodo@gmail.com","origin":"DB","instance":{"super":false,"id":null,"email":"mdanangpriaasdmbodo@gmail.com","password":"$2b$10$ZimfUl32Ve4cHl7Wt9joseB.mZwpX3UC2m3a.4XdnCWol/jyauPUm"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriaasdmbodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriaasdmbodo@gmail.com","$2b$10$ZimfUl32Ve4cHl7Wt9joseB.mZwpX3UC2m3a.4XdnCWol/jyauPUm",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriaasdmbodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriaasdmbodo@gmail.com","$2b$10$ZimfUl32Ve4cHl7Wt9joseB.mZwpX3UC2m3a.4XdnCWol/jyauPUm",false]},"fields":{"email":"mdanangpriaasdmbodo@gmail.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:43:06 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"mdanangpriaasdmbodo@gmail.com","origin":"DB","instance":{"super":false,"id":null,"email":"mdanangpriaasdmbodo@gmail.com","password":"$2b$10$.2zob0qNMe5hdU/dsqACo.xgn9G7fdHo55S1B6FzZin2M8e1Cfu6u"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriaasdmbodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriaasdmbodo@gmail.com","$2b$10$.2zob0qNMe5hdU/dsqACo.xgn9G7fdHo55S1B6FzZin2M8e1Cfu6u",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriaasdmbodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriaasdmbodo@gmail.com","$2b$10$.2zob0qNMe5hdU/dsqACo.xgn9G7fdHo55S1B6FzZin2M8e1Cfu6u",false]},"fields":{"email":"mdanangpriaasdmbodo@gmail.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:43:56 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"mdanangpriaasdmbodo@gmail.com","origin":"DB","instance":{"super":false,"id":null,"email":"mdanangpriaasdmbodo@gmail.com","password":"$2b$10$ffetvIrW85V3mnw22s9NM.5kn3mwdSyH/4ZeMj.qMYfZwh7315d8u"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriaasdmbodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriaasdmbodo@gmail.com","$2b$10$ffetvIrW85V3mnw22s9NM.5kn3mwdSyH/4ZeMj.qMYfZwh7315d8u",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriaasdmbodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriaasdmbodo@gmail.com","$2b$10$ffetvIrW85V3mnw22s9NM.5kn3mwdSyH/4ZeMj.qMYfZwh7315d8u",false]},"fields":{"email":"mdanangpriaasdmbodo@gmail.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:44:00 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"mdanangpriaasdmbodo@gmail.com","origin":"DB","instance":{"super":false,"id":null,"email":"mdanangpriaasdmbodo@gmail.com","password":"$2b$10$V6rL2ezuy.EIJ1M.29SVWO7VyMg/U9OM3dmunJg3qI9gTCx8tCYwy"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriaasdmbodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriaasdmbodo@gmail.com","$2b$10$V6rL2ezuy.EIJ1M.29SVWO7VyMg/U9OM3dmunJg3qI9gTCx8tCYwy",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriaasdmbodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriaasdmbodo@gmail.com","$2b$10$V6rL2ezuy.EIJ1M.29SVWO7VyMg/U9OM3dmunJg3qI9gTCx8tCYwy",false]},"fields":{"email":"mdanangpriaasdmbodo@gmail.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:45:11 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"aawdawd@dawdw","origin":"DB","instance":{"super":false,"id":null,"email":"aawdawd@dawdw","password":"$2b$10$QsP4WqHyAdqLfnZW/aVIg.f6SsC9uEnr3k7WyRMk8xa5H0NdcMhBq"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'aawdawd@dawdw' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["aawdawd@dawdw","$2b$10$QsP4WqHyAdqLfnZW/aVIg.f6SsC9uEnr3k7WyRMk8xa5H0NdcMhBq",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'aawdawd@dawdw' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["aawdawd@dawdw","$2b$10$QsP4WqHyAdqLfnZW/aVIg.f6SsC9uEnr3k7WyRMk8xa5H0NdcMhBq",false]},"fields":{"email":"aawdawd@dawdw"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:48:05 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"mdanasdasdangpriambodo@gmail.com","origin":"DB","instance":{"super":false,"id":null,"email":"mdanasdasdangpriambodo@gmail.com","password":"$2b$10$bmOlKUy1MlhwH4RnrJJezuSC/W1pls64md1El7CeVBFZ4BVnE4//y"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanasdasdangpriambodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanasdasdangpriambodo@gmail.com","$2b$10$bmOlKUy1MlhwH4RnrJJezuSC/W1pls64md1El7CeVBFZ4BVnE4//y",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanasdasdangpriambodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanasdasdangpriambodo@gmail.com","$2b$10$bmOlKUy1MlhwH4RnrJJezuSC/W1pls64md1El7CeVBFZ4BVnE4//y",false]},"fields":{"email":"mdanasdasdangpriambodo@gmail.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:51:10 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:52:14 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:52:16 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:52:22 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:52:23 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:52:26 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:54:18 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:54:19 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:54:20 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:54:21 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:54:31 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:54:35 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:54:36 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:55:14 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:55:16 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:55:18 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:55:24 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:55:27 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:55:28 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Tue Jun 06 2023 20:55:42 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asd@asd","password":"$2b$10$DOsLwkJrhqXN.9Ys57wP.u.a0wo9GNX0xS1S.VXLTXSt3moGbUQf."},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$DOsLwkJrhqXN.9Ys57wP.u.a0wo9GNX0xS1S.VXLTXSt3moGbUQf.",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$DOsLwkJrhqXN.9Ys57wP.u.a0wo9GNX0xS1S.VXLTXSt3moGbUQf.",false]},"fields":{"email":"asd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:56:09 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asd@asd","password":"$2b$10$.fhdm3NPnQ1pyeczLfDVSuXXO5UN.MMbkAWy8e6NR1ho9XU1bY4gO"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$.fhdm3NPnQ1pyeczLfDVSuXXO5UN.MMbkAWy8e6NR1ho9XU1bY4gO",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$.fhdm3NPnQ1pyeczLfDVSuXXO5UN.MMbkAWy8e6NR1ho9XU1bY4gO",false]},"fields":{"email":"asd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:56:16 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asd@asd","password":"$2b$10$mOL7DDZCkyzZJZbEMmmf.OuCIIdnKx.lwjne56fJRIrgkKAEOTTz."},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$mOL7DDZCkyzZJZbEMmmf.OuCIIdnKx.lwjne56fJRIrgkKAEOTTz.",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$mOL7DDZCkyzZJZbEMmmf.OuCIIdnKx.lwjne56fJRIrgkKAEOTTz.",false]},"fields":{"email":"asd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:56:18 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asd@asd","password":"$2b$10$0dtkNdkJqX6alhwPN0y4uudfq5/JEmjXj1ebD9kFnp33HL6YxXKQm"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$0dtkNdkJqX6alhwPN0y4uudfq5/JEmjXj1ebD9kFnp33HL6YxXKQm",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$0dtkNdkJqX6alhwPN0y4uudfq5/JEmjXj1ebD9kFnp33HL6YxXKQm",false]},"fields":{"email":"asd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:57:36 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asd@asd","password":"$2b$10$.lI0q1lssM0.g51m55BMO.dnHA7vvyfzaD02uiPHeGytfPnmgDi2m"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$.lI0q1lssM0.g51m55BMO.dnHA7vvyfzaD02uiPHeGytfPnmgDi2m",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$.lI0q1lssM0.g51m55BMO.dnHA7vvyfzaD02uiPHeGytfPnmgDi2m",false]},"fields":{"email":"asd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:58:11 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asd@asd","password":"$2b$10$fyqig3GmmCME7jLW6g4WzOUVKz0lIYIGlCC/27rQhsPFS0a5/uqlu"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$fyqig3GmmCME7jLW6g4WzOUVKz0lIYIGlCC/27rQhsPFS0a5/uqlu",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$fyqig3GmmCME7jLW6g4WzOUVKz0lIYIGlCC/27rQhsPFS0a5/uqlu",false]},"fields":{"email":"asd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:58:33 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asd@asd","password":"$2b$10$Kx6KmoqQu.XLZ156CXePR.Uw4IrbIA5vvY.mXHXqT02goO3sDMtFy"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$Kx6KmoqQu.XLZ156CXePR.Uw4IrbIA5vvY.mXHXqT02goO3sDMtFy",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$Kx6KmoqQu.XLZ156CXePR.Uw4IrbIA5vvY.mXHXqT02goO3sDMtFy",false]},"fields":{"email":"asd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:58:35 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asd@asd","password":"$2b$10$Rgn27ajW8Z7sy8adXCjG3.ukHsqivTVRLBfYQk1vVIiodFQIoq12u"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$Rgn27ajW8Z7sy8adXCjG3.ukHsqivTVRLBfYQk1vVIiodFQIoq12u",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$Rgn27ajW8Z7sy8adXCjG3.ukHsqivTVRLBfYQk1vVIiodFQIoq12u",false]},"fields":{"email":"asd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:58:51 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asd@asd","password":"$2b$10$f6OZSEXlogHE5O1y93dD4.wVbeq7orH0zJ4iOT5iKyRrLyk7NynvC"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$f6OZSEXlogHE5O1y93dD4.wVbeq7orH0zJ4iOT5iKyRrLyk7NynvC",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$f6OZSEXlogHE5O1y93dD4.wVbeq7orH0zJ4iOT5iKyRrLyk7NynvC",false]},"fields":{"email":"asd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:58:52 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asd@asd","password":"$2b$10$Ilp60.vO/CjJKxLgp2p9TOfyENi7A65Cg7QoCjrOIl0yrsm6Lhtn2"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$Ilp60.vO/CjJKxLgp2p9TOfyENi7A65Cg7QoCjrOIl0yrsm6Lhtn2",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$Ilp60.vO/CjJKxLgp2p9TOfyENi7A65Cg7QoCjrOIl0yrsm6Lhtn2",false]},"fields":{"email":"asd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:58:53 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asd@asd","password":"$2b$10$VthAkkN77gy.O1xyAyY6BubZm1gcxvlMfXrCd79EO2Z3kFyruOALq"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$VthAkkN77gy.O1xyAyY6BubZm1gcxvlMfXrCd79EO2Z3kFyruOALq",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$VthAkkN77gy.O1xyAyY6BubZm1gcxvlMfXrCd79EO2Z3kFyruOALq",false]},"fields":{"email":"asd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:58:54 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asd@asd","password":"$2b$10$1938b9Igr4uu7.fK3ME.b.9cY6gSnVFNF/9GO1WWkqyNepQ4MCRWS"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$1938b9Igr4uu7.fK3ME.b.9cY6gSnVFNF/9GO1WWkqyNepQ4MCRWS",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$1938b9Igr4uu7.fK3ME.b.9cY6gSnVFNF/9GO1WWkqyNepQ4MCRWS",false]},"fields":{"email":"asd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:58:54 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asd@asd","password":"$2b$10$BdPsSaAmXbF1GtI3pXLixuOD011DB..AZIRER63X.YT8AKaA9p37m"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$BdPsSaAmXbF1GtI3pXLixuOD011DB..AZIRER63X.YT8AKaA9p37m",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$BdPsSaAmXbF1GtI3pXLixuOD011DB..AZIRER63X.YT8AKaA9p37m",false]},"fields":{"email":"asd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:58:54 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asd@asd","password":"$2b$10$UKTfp6u4jnrzyWF5AgUaoeW70r.OF46q6NDJtA1tpHT04Us3tu.Oe"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$UKTfp6u4jnrzyWF5AgUaoeW70r.OF46q6NDJtA1tpHT04Us3tu.Oe",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$UKTfp6u4jnrzyWF5AgUaoeW70r.OF46q6NDJtA1tpHT04Us3tu.Oe",false]},"fields":{"email":"asd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 20:58:59 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asd@asd","password":"$2b$10$4gYtU5aRXng0mH2KXB10eOfgly1TNDvQQz89tQUoq.FG8OBN/N3Wi"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$4gYtU5aRXng0mH2KXB10eOfgly1TNDvQQz89tQUoq.FG8OBN/N3Wi",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$4gYtU5aRXng0mH2KXB10eOfgly1TNDvQQz89tQUoq.FG8OBN/N3Wi",false]},"fields":{"email":"asd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:15:00 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"store@mail","origin":"DB","instance":{"super":false,"id":null,"email":"store@mail","password":"$2b$10$HTjjY97vF/OdaXl.t1c/bOHrahxab1uZP4AInNDdNYeNceP0q8CC2"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'store@mail' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["store@mail","$2b$10$HTjjY97vF/OdaXl.t1c/bOHrahxab1uZP4AInNDdNYeNceP0q8CC2",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'store@mail' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["store@mail","$2b$10$HTjjY97vF/OdaXl.t1c/bOHrahxab1uZP4AInNDdNYeNceP0q8CC2",false]},"fields":{"email":"store@mail"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:23:48 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asd@asd","password":"$2b$10$WmWoVG6KnhNDmaCY7mThJuyjmRHZEd5GmRaMKBXsH.Crl5UmnyDDS"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$WmWoVG6KnhNDmaCY7mThJuyjmRHZEd5GmRaMKBXsH.Crl5UmnyDDS",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$WmWoVG6KnhNDmaCY7mThJuyjmRHZEd5GmRaMKBXsH.Crl5UmnyDDS",false]},"fields":{"email":"asd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:23:50 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asd@asd","password":"$2b$10$iB9XkTAVv9QBtM7I8ocrlOSwPEO0UuSSO4djSbuwwrvpus1i11njC"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$iB9XkTAVv9QBtM7I8ocrlOSwPEO0UuSSO4djSbuwwrvpus1i11njC",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$iB9XkTAVv9QBtM7I8ocrlOSwPEO0UuSSO4djSbuwwrvpus1i11njC",false]},"fields":{"email":"asd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:23:51 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asd@asd","password":"$2b$10$LCLWQKZLaOa08d6D88a.ruKaH0rk7ZLgBaXh/89ZfH186jRzbtKiq"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$LCLWQKZLaOa08d6D88a.ruKaH0rk7ZLgBaXh/89ZfH186jRzbtKiq",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$LCLWQKZLaOa08d6D88a.ruKaH0rk7ZLgBaXh/89ZfH186jRzbtKiq",false]},"fields":{"email":"asd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:23:58 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdasd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asdasd@asd","password":"$2b$10$1shLVXAyTuC4KDZvhYjR0.FOqpxmWrqQczUeJds/mMu6qpziCqssy"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasd@asd","$2b$10$1shLVXAyTuC4KDZvhYjR0.FOqpxmWrqQczUeJds/mMu6qpziCqssy",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasd@asd","$2b$10$1shLVXAyTuC4KDZvhYjR0.FOqpxmWrqQczUeJds/mMu6qpziCqssy",false]},"fields":{"email":"asdasd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:24:00 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdasd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asdasd@asd","password":"$2b$10$tdVFiKJi3I6PJWfKN7BWhO/QobEoQ3Ltd2BBr/L3AN4plBgDsc4gG"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasd@asd","$2b$10$tdVFiKJi3I6PJWfKN7BWhO/QobEoQ3Ltd2BBr/L3AN4plBgDsc4gG",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasd@asd","$2b$10$tdVFiKJi3I6PJWfKN7BWhO/QobEoQ3Ltd2BBr/L3AN4plBgDsc4gG",false]},"fields":{"email":"asdasd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:24:01 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdasd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asdasd@asd","password":"$2b$10$yQiLc3vhryxk.MK4wE16P.czobZVemVCVcTa9IOtJ8T/stdGIdz.q"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasd@asd","$2b$10$yQiLc3vhryxk.MK4wE16P.czobZVemVCVcTa9IOtJ8T/stdGIdz.q",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasd@asd","$2b$10$yQiLc3vhryxk.MK4wE16P.czobZVemVCVcTa9IOtJ8T/stdGIdz.q",false]},"fields":{"email":"asdasd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:24:08 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdaasdsd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asdaasdsd@asd","password":"$2b$10$tftIRObMoWrOpluo9lKVMeodxPN9jfsY5bYeEwsFXCZbNl0mQatuO"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasdsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasdsd@asd","$2b$10$tftIRObMoWrOpluo9lKVMeodxPN9jfsY5bYeEwsFXCZbNl0mQatuO",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasdsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasdsd@asd","$2b$10$tftIRObMoWrOpluo9lKVMeodxPN9jfsY5bYeEwsFXCZbNl0mQatuO",false]},"fields":{"email":"asdaasdsd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:24:15 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdaasasddsd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asdaasasddsd@asd","password":"$2b$10$xYx88NDj5i2bNLV7KfcYjeJ2lNDCOfTZMtAJxRfWUbyWTxbaWjSym"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasddsd@asd","$2b$10$xYx88NDj5i2bNLV7KfcYjeJ2lNDCOfTZMtAJxRfWUbyWTxbaWjSym",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasddsd@asd","$2b$10$xYx88NDj5i2bNLV7KfcYjeJ2lNDCOfTZMtAJxRfWUbyWTxbaWjSym",false]},"fields":{"email":"asdaasasddsd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:24:17 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdaasasddsd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asdaasasddsd@asd","password":"$2b$10$i2.HdTSb2jd2bLSe9FEANuSwyp4FMN0SMJguycRwq5U86tLO7rK2C"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasddsd@asd","$2b$10$i2.HdTSb2jd2bLSe9FEANuSwyp4FMN0SMJguycRwq5U86tLO7rK2C",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasddsd@asd","$2b$10$i2.HdTSb2jd2bLSe9FEANuSwyp4FMN0SMJguycRwq5U86tLO7rK2C",false]},"fields":{"email":"asdaasasddsd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:24:23 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdaasasdasddsd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asdaasasdasddsd@asd","password":"$2b$10$cu9oNI.GJrXOR.iN9maMCOtci.snqJ/DRxQqfZSyiDNPGcPmG8bau"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasdasddsd@asd","$2b$10$cu9oNI.GJrXOR.iN9maMCOtci.snqJ/DRxQqfZSyiDNPGcPmG8bau",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasdasddsd@asd","$2b$10$cu9oNI.GJrXOR.iN9maMCOtci.snqJ/DRxQqfZSyiDNPGcPmG8bau",false]},"fields":{"email":"asdaasasdasddsd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:25:10 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdaasasdasddsd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asdaasasdasddsd@asd","password":"$2b$10$t5GqaM6TyqEdxSogmxs5iuby3XriQFRlUxDD0GLYqXW0yFjJhicRi"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasdasddsd@asd","$2b$10$t5GqaM6TyqEdxSogmxs5iuby3XriQFRlUxDD0GLYqXW0yFjJhicRi",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasdasddsd@asd","$2b$10$t5GqaM6TyqEdxSogmxs5iuby3XriQFRlUxDD0GLYqXW0yFjJhicRi",false]},"fields":{"email":"asdaasasdasddsd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:25:12 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdaasasdasddsd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asdaasasdasddsd@asd","password":"$2b$10$6HrucTRhSIIiWeJnZKcsp.NwL0TnxloSkwslTLVwAq67GIHeKtVvW"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasdasddsd@asd","$2b$10$6HrucTRhSIIiWeJnZKcsp.NwL0TnxloSkwslTLVwAq67GIHeKtVvW",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasdasddsd@asd","$2b$10$6HrucTRhSIIiWeJnZKcsp.NwL0TnxloSkwslTLVwAq67GIHeKtVvW",false]},"fields":{"email":"asdaasasdasddsd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:25:13 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdaasasdasddsd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asdaasasdasddsd@asd","password":"$2b$10$aH87Llo5a.fN41QClCfWuuB84dXJTQZyAQ/001F9mYXF1rsVDN53y"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasdasddsd@asd","$2b$10$aH87Llo5a.fN41QClCfWuuB84dXJTQZyAQ/001F9mYXF1rsVDN53y",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasdasddsd@asd","$2b$10$aH87Llo5a.fN41QClCfWuuB84dXJTQZyAQ/001F9mYXF1rsVDN53y",false]},"fields":{"email":"asdaasasdasddsd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:25:15 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdaasasdasddsd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asdaasasdasddsd@asd","password":"$2b$10$bkFBs3bbZuu41666VujX0OfE.B/q70DwU8wxc0sbML4QsthgNIMTW"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasdasddsd@asd","$2b$10$bkFBs3bbZuu41666VujX0OfE.B/q70DwU8wxc0sbML4QsthgNIMTW",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasdasddsd@asd","$2b$10$bkFBs3bbZuu41666VujX0OfE.B/q70DwU8wxc0sbML4QsthgNIMTW",false]},"fields":{"email":"asdaasasdasddsd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:25:16 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdaasasdasddsd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asdaasasdasddsd@asd","password":"$2b$10$spGh7i2hV2RJtPBRBYfHZ.SfPwBWySK3/6InsIQbcEZPtprjatFR6"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasdasddsd@asd","$2b$10$spGh7i2hV2RJtPBRBYfHZ.SfPwBWySK3/6InsIQbcEZPtprjatFR6",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasdasddsd@asd","$2b$10$spGh7i2hV2RJtPBRBYfHZ.SfPwBWySK3/6InsIQbcEZPtprjatFR6",false]},"fields":{"email":"asdaasasdasddsd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:25:17 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdaasasdasddsd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asdaasasdasddsd@asd","password":"$2b$10$zQxYh8siAS3VCrsPD5CKJOIY5YfJkz.YqvBWU3HZ8e2vYL2ma/05C"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasdasddsd@asd","$2b$10$zQxYh8siAS3VCrsPD5CKJOIY5YfJkz.YqvBWU3HZ8e2vYL2ma/05C",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasdasddsd@asd","$2b$10$zQxYh8siAS3VCrsPD5CKJOIY5YfJkz.YqvBWU3HZ8e2vYL2ma/05C",false]},"fields":{"email":"asdaasasdasddsd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:25:19 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdaasasdasddsd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asdaasasdasddsd@asd","password":"$2b$10$y8dnHYan.o2LXmz6q6f6f.q7XjLFCzlUB9FxirMMfTEvQCYhfqQUm"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasdasddsd@asd","$2b$10$y8dnHYan.o2LXmz6q6f6f.q7XjLFCzlUB9FxirMMfTEvQCYhfqQUm",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdaasasdasddsd@asd","$2b$10$y8dnHYan.o2LXmz6q6f6f.q7XjLFCzlUB9FxirMMfTEvQCYhfqQUm",false]},"fields":{"email":"asdaasasdasddsd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:25:27 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asasdaasasdasddsd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asasdaasasdasddsd@asd","password":"$2b$10$JNUJVPWJNxpWutnVC7kjFe3vpjUfWH65mMn4VqFnwVXcdeIbAHbnu"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asasdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asasdaasasdasddsd@asd","$2b$10$JNUJVPWJNxpWutnVC7kjFe3vpjUfWH65mMn4VqFnwVXcdeIbAHbnu",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asasdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asasdaasasdasddsd@asd","$2b$10$JNUJVPWJNxpWutnVC7kjFe3vpjUfWH65mMn4VqFnwVXcdeIbAHbnu",false]},"fields":{"email":"asasdaasasdasddsd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:26:27 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asasdaasasdasddsd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asasdaasasdasddsd@asd","password":"$2b$10$NvK2bMtgUhsGy30IWsTpruMln1XMdz.zgWAMOgQG8WbBuXmmIqJVq"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asasdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asasdaasasdasddsd@asd","$2b$10$NvK2bMtgUhsGy30IWsTpruMln1XMdz.zgWAMOgQG8WbBuXmmIqJVq",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asasdaasasdasddsd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asasdaasasdasddsd@asd","$2b$10$NvK2bMtgUhsGy30IWsTpruMln1XMdz.zgWAMOgQG8WbBuXmmIqJVq",false]},"fields":{"email":"asasdaasasdasddsd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:26:34 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asasdaasasdasddsd@asdasd","origin":"DB","instance":{"super":false,"id":null,"email":"asasdaasasdasddsd@asdasd","password":"$2b$10$UpAE4XAFZAdJDVYpmi8jVuftBkht7iWDGDuXPm3YbwqBr0mu5exRW"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asasdaasasdasddsd@asdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asasdaasasdasddsd@asdasd","$2b$10$UpAE4XAFZAdJDVYpmi8jVuftBkht7iWDGDuXPm3YbwqBr0mu5exRW",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asasdaasasdasddsd@asdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asasdaasasdasddsd@asdasd","$2b$10$UpAE4XAFZAdJDVYpmi8jVuftBkht7iWDGDuXPm3YbwqBr0mu5exRW",false]},"fields":{"email":"asasdaasasdasddsd@asdasd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:26:34 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asasdaasasdasddsd@asdasd","origin":"DB","instance":{"super":false,"id":null,"email":"asasdaasasdasddsd@asdasd","password":"$2b$10$x.JJHzATEdmPRtBKYwY2Nu.Rvmvi2O72WyxniY5TDhsqhfT/5AbnS"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asasdaasasdasddsd@asdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asasdaasasdasddsd@asdasd","$2b$10$x.JJHzATEdmPRtBKYwY2Nu.Rvmvi2O72WyxniY5TDhsqhfT/5AbnS",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asasdaasasdasddsd@asdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asasdaasasdasddsd@asdasd","$2b$10$x.JJHzATEdmPRtBKYwY2Nu.Rvmvi2O72WyxniY5TDhsqhfT/5AbnS",false]},"fields":{"email":"asasdaasasdasddsd@asdasd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:26:35 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asasdaasasdasddsd@asdasd","origin":"DB","instance":{"super":false,"id":null,"email":"asasdaasasdasddsd@asdasd","password":"$2b$10$XlTBI6Mmx1WBqliAz7hC0O17AABC.JZhg.uXfkoZMqneh.vnAh3aC"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asasdaasasdasddsd@asdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asasdaasasdasddsd@asdasd","$2b$10$XlTBI6Mmx1WBqliAz7hC0O17AABC.JZhg.uXfkoZMqneh.vnAh3aC",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asasdaasasdasddsd@asdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asasdaasasdasddsd@asdasd","$2b$10$XlTBI6Mmx1WBqliAz7hC0O17AABC.JZhg.uXfkoZMqneh.vnAh3aC",false]},"fields":{"email":"asasdaasasdasddsd@asdasd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:26:36 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asasdaasasdasddsd@asdasd","origin":"DB","instance":{"super":false,"id":null,"email":"asasdaasasdasddsd@asdasd","password":"$2b$10$5Sgw6NLxqjv4M6yxxx9IsunYB3gTIPmycXsE4tpwUjgU7ZhRlriQ2"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asasdaasasdasddsd@asdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asasdaasasdasddsd@asdasd","$2b$10$5Sgw6NLxqjv4M6yxxx9IsunYB3gTIPmycXsE4tpwUjgU7ZhRlriQ2",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asasdaasasdasddsd@asdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asasdaasasdasddsd@asdasd","$2b$10$5Sgw6NLxqjv4M6yxxx9IsunYB3gTIPmycXsE4tpwUjgU7ZhRlriQ2",false]},"fields":{"email":"asasdaasasdasddsd@asdasd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:26:39 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asasdaasasdasddsd@asdasd","origin":"DB","instance":{"super":false,"id":null,"email":"asasdaasasdasddsd@asdasd","password":"$2b$10$ZDqZTYW59v4ROLym3zH2W.iM963E.2Civ.rTMzRqr2.gbacetTQ3e"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asasdaasasdasddsd@asdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asasdaasasdasddsd@asdasd","$2b$10$ZDqZTYW59v4ROLym3zH2W.iM963E.2Civ.rTMzRqr2.gbacetTQ3e",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asasdaasasdasddsd@asdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asasdaasasdasddsd@asdasd","$2b$10$ZDqZTYW59v4ROLym3zH2W.iM963E.2Civ.rTMzRqr2.gbacetTQ3e",false]},"fields":{"email":"asasdaasasdasddsd@asdasd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:33:36 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdasdasdasd@asdasd","origin":"DB","instance":{"super":false,"id":null,"email":"asdasdasdasd@asdasd","password":"$2b$10$8JKk2dCVyHlgK4gpUJDZ1e6jC1FC7FXvQLOtyf6yn2DzYqmdwyJ3i"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasd","$2b$10$8JKk2dCVyHlgK4gpUJDZ1e6jC1FC7FXvQLOtyf6yn2DzYqmdwyJ3i",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasd","$2b$10$8JKk2dCVyHlgK4gpUJDZ1e6jC1FC7FXvQLOtyf6yn2DzYqmdwyJ3i",false]},"fields":{"email":"asdasdasdasd@asdasd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:33:55 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdasdasdasd@asdasdasdasd","origin":"DB","instance":{"super":false,"id":null,"email":"asdasdasdasd@asdasdasdasd","password":"$2b$10$u3kDrD8Tf5l00GpWdZ53pOXRv9KmtqCCnKtnu11P8ozW6SpKoGzIe"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$u3kDrD8Tf5l00GpWdZ53pOXRv9KmtqCCnKtnu11P8ozW6SpKoGzIe",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$u3kDrD8Tf5l00GpWdZ53pOXRv9KmtqCCnKtnu11P8ozW6SpKoGzIe",false]},"fields":{"email":"asdasdasdasd@asdasdasdasd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:35:03 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdasdasdasd@asdasdasdasd","origin":"DB","instance":{"super":false,"id":null,"email":"asdasdasdasd@asdasdasdasd","password":"$2b$10$SJb7AX1v6VIMWnmR4aIDAOUw60QE5XztB3ve/OFGUgRina5OXHTw."},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$SJb7AX1v6VIMWnmR4aIDAOUw60QE5XztB3ve/OFGUgRina5OXHTw.",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$SJb7AX1v6VIMWnmR4aIDAOUw60QE5XztB3ve/OFGUgRina5OXHTw.",false]},"fields":{"email":"asdasdasdasd@asdasdasdasd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:35:25 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdasdasdasd@asdasdasdasd","origin":"DB","instance":{"super":false,"id":null,"email":"asdasdasdasd@asdasdasdasd","password":"$2b$10$4d1.jNKwncv0apAB5z7rq.mlOB3jPG61GYRdI1NKAaUgSUqk2fagq"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$4d1.jNKwncv0apAB5z7rq.mlOB3jPG61GYRdI1NKAaUgSUqk2fagq",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$4d1.jNKwncv0apAB5z7rq.mlOB3jPG61GYRdI1NKAaUgSUqk2fagq",false]},"fields":{"email":"asdasdasdasd@asdasdasdasd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:35:32 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdasdasdasd@asdasdasdasd","origin":"DB","instance":{"super":false,"id":null,"email":"asdasdasdasd@asdasdasdasd","password":"$2b$10$ZbpJEoKZkSIRxyjVrbRWDu1I2QFro1TeI2yNyDEzphRI4eyYQ4Y8W"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$ZbpJEoKZkSIRxyjVrbRWDu1I2QFro1TeI2yNyDEzphRI4eyYQ4Y8W",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$ZbpJEoKZkSIRxyjVrbRWDu1I2QFro1TeI2yNyDEzphRI4eyYQ4Y8W",false]},"fields":{"email":"asdasdasdasd@asdasdasdasd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:36:05 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdasdasdasd@asdasdasdasd","origin":"DB","instance":{"super":false,"id":null,"email":"asdasdasdasd@asdasdasdasd","password":"$2b$10$WydChDFuqXXa/nufBfsk5uBfK.PQVVRXBq4d7fBQCp2D4hrEbv/2u"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$WydChDFuqXXa/nufBfsk5uBfK.PQVVRXBq4d7fBQCp2D4hrEbv/2u",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$WydChDFuqXXa/nufBfsk5uBfK.PQVVRXBq4d7fBQCp2D4hrEbv/2u",false]},"fields":{"email":"asdasdasdasd@asdasdasdasd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:36:07 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdasdasdasd@asdasdasdasd","origin":"DB","instance":{"super":false,"id":null,"email":"asdasdasdasd@asdasdasdasd","password":"$2b$10$7vQXX.XvQ3zS5weBdNEpiO1m2KeUhoIYDl3vr9y9mIwIJ79EHlQdK"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$7vQXX.XvQ3zS5weBdNEpiO1m2KeUhoIYDl3vr9y9mIwIJ79EHlQdK",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$7vQXX.XvQ3zS5weBdNEpiO1m2KeUhoIYDl3vr9y9mIwIJ79EHlQdK",false]},"fields":{"email":"asdasdasdasd@asdasdasdasd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:36:08 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdasdasdasd@asdasdasdasd","origin":"DB","instance":{"super":false,"id":null,"email":"asdasdasdasd@asdasdasdasd","password":"$2b$10$.aqlPLNYf1DmVl4NAbJsquELs.qAefMQbFwWI8j0ZtahSb8U0Kn9G"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$.aqlPLNYf1DmVl4NAbJsquELs.qAefMQbFwWI8j0ZtahSb8U0Kn9G",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$.aqlPLNYf1DmVl4NAbJsquELs.qAefMQbFwWI8j0ZtahSb8U0Kn9G",false]},"fields":{"email":"asdasdasdasd@asdasdasdasd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:36:09 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdasdasdasd@asdasdasdasd","origin":"DB","instance":{"super":false,"id":null,"email":"asdasdasdasd@asdasdasdasd","password":"$2b$10$X69mXqpFjcPAOlGB5gdVPeriEYeQOCtbiDJ6ZqgEzpKZV0ppvQdM2"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$X69mXqpFjcPAOlGB5gdVPeriEYeQOCtbiDJ6ZqgEzpKZV0ppvQdM2",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$X69mXqpFjcPAOlGB5gdVPeriEYeQOCtbiDJ6ZqgEzpKZV0ppvQdM2",false]},"fields":{"email":"asdasdasdasd@asdasdasdasd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:36:17 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdasdasdasd@asdasdasdasd","origin":"DB","instance":{"super":false,"id":null,"email":"asdasdasdasd@asdasdasdasd","password":"$2b$10$M6Iw5Z0gmIAGqLBpJpNDfOSGTCZr8sitoCTcyuBt4n6GFtd0vVtze"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$M6Iw5Z0gmIAGqLBpJpNDfOSGTCZr8sitoCTcyuBt4n6GFtd0vVtze",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$M6Iw5Z0gmIAGqLBpJpNDfOSGTCZr8sitoCTcyuBt4n6GFtd0vVtze",false]},"fields":{"email":"asdasdasdasd@asdasdasdasd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:36:18 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdasdasdasd@asdasdasdasd","origin":"DB","instance":{"super":false,"id":null,"email":"asdasdasdasd@asdasdasdasd","password":"$2b$10$Ns8.o.c5Wh8Fl35A.a3oiuDNT14/rTPhyX0j3L9CeTjY.jLZSOiAC"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$Ns8.o.c5Wh8Fl35A.a3oiuDNT14/rTPhyX0j3L9CeTjY.jLZSOiAC",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asdasdasdasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asdasdasdasd","$2b$10$Ns8.o.c5Wh8Fl35A.a3oiuDNT14/rTPhyX0j3L9CeTjY.jLZSOiAC",false]},"fields":{"email":"asdasdasdasd@asdasdasdasd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:36:30 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdasdasdasd@asddwq","origin":"DB","instance":{"super":false,"id":null,"email":"asdasdasdasd@asddwq","password":"$2b$10$fOY.Yc/PPGpa.0eb2J3i2OvL49.6cALeTUYi7rMtss.ObXPE6JbOK"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asddwq' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asddwq","$2b$10$fOY.Yc/PPGpa.0eb2J3i2OvL49.6cALeTUYi7rMtss.ObXPE6JbOK",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asddwq' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asddwq","$2b$10$fOY.Yc/PPGpa.0eb2J3i2OvL49.6cALeTUYi7rMtss.ObXPE6JbOK",false]},"fields":{"email":"asdasdasdasd@asddwq"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:37:04 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asdasdasdasd@asddwq","origin":"DB","instance":{"super":false,"id":null,"email":"asdasdasdasd@asddwq","password":"$2b$10$NXYrpqowFbCEu/2Z7vg5k.vouTxZDVA17DQ5VsyXPe3jUNyW7uxti"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asddwq' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asddwq","$2b$10$NXYrpqowFbCEu/2Z7vg5k.vouTxZDVA17DQ5VsyXPe3jUNyW7uxti",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asdasdasdasd@asddwq' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asdasdasdasd@asddwq","$2b$10$NXYrpqowFbCEu/2Z7vg5k.vouTxZDVA17DQ5VsyXPe3jUNyW7uxti",false]},"fields":{"email":"asdasdasdasd@asddwq"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:39:25 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"mdanangpriambodo@gmail.com","origin":"DB","instance":{"super":false,"id":null,"email":"mdanangpriambodo@gmail.com","password":"$2b$10$PUv0cOT5J9jPV.r7adEpX.CmmzQg8rNS4JFGq0b/cUJHzxRCXsUi2"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriambodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriambodo@gmail.com","$2b$10$PUv0cOT5J9jPV.r7adEpX.CmmzQg8rNS4JFGq0b/cUJHzxRCXsUi2",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriambodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriambodo@gmail.com","$2b$10$PUv0cOT5J9jPV.r7adEpX.CmmzQg8rNS4JFGq0b/cUJHzxRCXsUi2",false]},"fields":{"email":"mdanangpriambodo@gmail.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:39:28 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"mdanangpriambodo@gmail.com","origin":"DB","instance":{"super":false,"id":null,"email":"mdanangpriambodo@gmail.com","password":"$2b$10$f6FOTwrHcj30P8VwaQNOL.nYOj4HMTUsLMgm1eF.LnkoCQ/q6qLMi"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriambodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriambodo@gmail.com","$2b$10$f6FOTwrHcj30P8VwaQNOL.nYOj4HMTUsLMgm1eF.LnkoCQ/q6qLMi",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriambodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriambodo@gmail.com","$2b$10$f6FOTwrHcj30P8VwaQNOL.nYOj4HMTUsLMgm1eF.LnkoCQ/q6qLMi",false]},"fields":{"email":"mdanangpriambodo@gmail.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:39:31 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"mdanangpriambodo@gmail.com","origin":"DB","instance":{"super":false,"id":null,"email":"mdanangpriambodo@gmail.com","password":"$2b$10$bGfbxPrU2Fg7T2fmNfPipOAlLjtQpreQvo4LprUGaFJpnVKu5peee"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriambodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriambodo@gmail.com","$2b$10$bGfbxPrU2Fg7T2fmNfPipOAlLjtQpreQvo4LprUGaFJpnVKu5peee",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriambodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriambodo@gmail.com","$2b$10$bGfbxPrU2Fg7T2fmNfPipOAlLjtQpreQvo4LprUGaFJpnVKu5peee",false]},"fields":{"email":"mdanangpriambodo@gmail.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:39:32 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"mdanangpriambodo@gmail.com","origin":"DB","instance":{"super":false,"id":null,"email":"mdanangpriambodo@gmail.com","password":"$2b$10$j7l1JZTjPY4FtEz3BVYv4OXbdy8M7B89nk/p2LRy8D1B3Z6qpLRPC"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriambodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriambodo@gmail.com","$2b$10$j7l1JZTjPY4FtEz3BVYv4OXbdy8M7B89nk/p2LRy8D1B3Z6qpLRPC",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriambodo@gmail.com' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriambodo@gmail.com","$2b$10$j7l1JZTjPY4FtEz3BVYv4OXbdy8M7B89nk/p2LRy8D1B3Z6qpLRPC",false]},"fields":{"email":"mdanangpriambodo@gmail.com"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 21:39:40 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"mdanangpriambodo@gmail.comasd","origin":"DB","instance":{"super":false,"id":null,"email":"mdanangpriambodo@gmail.comasd","password":"$2b$10$PrG3xTcLMW8DRWDjUdXEYuHHYzWu2NXqSsWUYkEoHmKze4LN4x5EW"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriambodo@gmail.comasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriambodo@gmail.comasd","$2b$10$PrG3xTcLMW8DRWDjUdXEYuHHYzWu2NXqSsWUYkEoHmKze4LN4x5EW",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'mdanangpriambodo@gmail.comasd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["mdanangpriambodo@gmail.comasd","$2b$10$PrG3xTcLMW8DRWDjUdXEYuHHYzWu2NXqSsWUYkEoHmKze4LN4x5EW",false]},"fields":{"email":"mdanangpriambodo@gmail.comasd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Tue Jun 06 2023 22:46:09 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asd@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asd@asd","password":"$2b$10$QwhWAb4XQkdqn3yqP2fD2edLYKXQtO7BmDJTWIvcJpgLfX.U9Vas6"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$QwhWAb4XQkdqn3yqP2fD2edLYKXQtO7BmDJTWIvcJpgLfX.U9Vas6",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asd@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asd@asd","$2b$10$QwhWAb4XQkdqn3yqP2fD2edLYKXQtO7BmDJTWIvcJpgLfX.U9Vas6",false]},"fields":{"email":"asd@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Wed Jun 07 2023 09:09:32 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"email must be unique","type":"unique violation","path":"email","value":"asddf@asd","origin":"DB","instance":{"super":false,"id":null,"email":"asddf@asd","password":"$2b$10$Bm0rMZ8bVEGj6FxrGHM1/.FHxY.J/LVm3tXEmwrRM5PqxlQfLrHZK"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asddf@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asddf@asd","$2b$10$Bm0rMZ8bVEGj6FxrGHM1/.FHxY.J/LVm3tXEmwrRM5PqxlQfLrHZK",false]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'asddf@asd' for key 'admins.email'","sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);","parameters":["asddf@asd","$2b$10$Bm0rMZ8bVEGj6FxrGHM1/.FHxY.J/LVm3tXEmwrRM5PqxlQfLrHZK",false]},"fields":{"email":"asddf@asd"},"sql":"INSERT INTO `Admins` (`id`,`email`,`password`,`super`) VALUES (DEFAULT,?,?,?);"}
+	
+	===
+	Time: Wed Jun 07 2023 11:35:31 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 16:40:38 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE `Transactions`.`created_at` >= 'Invalid date';"},"original":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE `Transactions`.`created_at` >= 'Invalid date';"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE `Transactions`.`created_at` >= 'Invalid date';","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 16:40:40 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE `Transactions`.`created_at` >= 'Invalid date';"},"original":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE `Transactions`.`created_at` >= 'Invalid date';"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE `Transactions`.`created_at` >= 'Invalid date';","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 16:43:57 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');"},"original":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 16:44:06 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');"},"original":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 16:44:34 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');"},"original":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 16:44:42 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');"},"original":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= 'Invalid date' AND `Transactions`.`created_at` <= 'Invalid date');","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 16:48:42 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= 'Invalid date');"},"original":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= 'Invalid date');"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= 'Invalid date');","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 16:48:48 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= 'Invalid date');"},"original":{"code":"ER_WRONG_VALUE","errno":1525,"sqlState":"HY000","sqlMessage":"Incorrect DATETIME value: 'Invalid date'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= 'Invalid date');"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= 'Invalid date');","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 17:06:13 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.status' in 'where clause'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = 5;"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.status' in 'where clause'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = 5;"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = 5;","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 17:07:27 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.status' in 'where clause'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = 5;"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.status' in 'where clause'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = 5;"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = 5;","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 17:07:56 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.status' in 'where clause'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = '5';"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.status' in 'where clause'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = '5';"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = '5';","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 17:07:56 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.status' in 'where clause'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = '5';"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.status' in 'where clause'","sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = '5';"},"sql":"SELECT `id`, `user_id`, `branch_id`, `voucher_id`, `amount`, `voucher_discount`, `status_id`, `address`, `created_at`, `updated_at` FROM `Transactions` AS `Transactions` WHERE (`Transactions`.`created_at` >= '2023-05-30 00:00:00' AND `Transactions`.`created_at` <= '2023-05-30 00:00:00') AND `Transactions`.`status` = '5';","parameters":{}}
+	
+	===
+	Time: Wed Jun 07 2023 19:52:44 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 19:53:02 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 19:53:09 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 19:55:14 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 19:55:16 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 21:03:37 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 21:03:38 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 21:06:42 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 21:06:44 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 21:06:50 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 07 2023 21:12:16 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 10:02:30 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 10:02:31 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 10:40:16 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_MIX_OF_GROUP_FUNC_AND_FIELDS","errno":1140,"sqlState":"42000","sqlMessage":"In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'ogwa.Transactions.id'; this is incompatible with sql_mode=only_full_group_by","sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:40:16') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';"},"original":{"code":"ER_MIX_OF_GROUP_FUNC_AND_FIELDS","errno":1140,"sqlState":"42000","sqlMessage":"In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'ogwa.Transactions.id'; this is incompatible with sql_mode=only_full_group_by","sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:40:16') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';"},"sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:40:16') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';","parameters":{}}
+	
+	===
+	Time: Thu Jun 08 2023 10:40:17 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_MIX_OF_GROUP_FUNC_AND_FIELDS","errno":1140,"sqlState":"42000","sqlMessage":"In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'ogwa.Transactions.id'; this is incompatible with sql_mode=only_full_group_by","sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:40:17') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';"},"original":{"code":"ER_MIX_OF_GROUP_FUNC_AND_FIELDS","errno":1140,"sqlState":"42000","sqlMessage":"In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'ogwa.Transactions.id'; this is incompatible with sql_mode=only_full_group_by","sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:40:17') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';"},"sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:40:17') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';","parameters":{}}
+	
+	===
+	Time: Thu Jun 08 2023 10:40:48 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 10:42:34 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_MIX_OF_GROUP_FUNC_AND_FIELDS","errno":1140,"sqlState":"42000","sqlMessage":"In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'ogwa.Transactions.id'; this is incompatible with sql_mode=only_full_group_by","sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:42:34') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';"},"original":{"code":"ER_MIX_OF_GROUP_FUNC_AND_FIELDS","errno":1140,"sqlState":"42000","sqlMessage":"In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'ogwa.Transactions.id'; this is incompatible with sql_mode=only_full_group_by","sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:42:34') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';"},"sql":"SELECT `Transactions`.`id`, `Transactions`.`user_id`, `Transactions`.`branch_id`, `Transactions`.`voucher_id`, `Transactions`.`amount`, `Transactions`.`voucher_discount`, `Transactions`.`status_id`, `Transactions`.`address`, `Transactions`.`created_at`, `Transactions`.`updated_at`, SUM(`Transaction_details`.`quantity`) AS `totalProductSold`, `Transaction_details`.`id` AS `Transaction_details.id`, `Transaction_details`.`transaction_id` AS `Transaction_details.transaction_id`, `Transaction_details`.`inventory_id` AS `Transaction_details.inventory_id`, `Transaction_details`.`inventory_promotion_id` AS `Transaction_details.inventory_promotion_id`, `Transaction_details`.`name` AS `Transaction_details.name`, `Transaction_details`.`quantity` AS `Transaction_details.quantity`, `Transaction_details`.`price` AS `Transaction_details.price`, `Transaction_details`.`branch_discount` AS `Transaction_details.branch_discount` FROM `Transactions` AS `Transactions` LEFT OUTER JOIN `Transaction_details` AS `Transaction_details` ON `Transactions`.`id` = `Transaction_details`.`transaction_id` WHERE (`Transactions`.`updated_at` >= '2023-04-30 17:00:00' AND `Transactions`.`updated_at` <= '2023-06-08 03:42:34') AND `Transactions`.`status_id` = '5' AND `Transactions`.`branch_id` = '1';","parameters":{}}
+	
+	===
+	Time: Thu Jun 08 2023 14:26:11 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 14:26:11 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 14:33:24 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 14:33:24 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 14:33:25 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 14:33:26 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 14:33:32 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 14:33:32 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 14:33:32 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 14:33:32 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:13:05 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:15:56 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:16:16 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:16:36 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:17:22 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:17:59 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:18:00 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:19:04 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:20:08 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 08 2023 15:33:17 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:33:17 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:33:17 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:33:19 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:33:19 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:33:19 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:33:23 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:33:23 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+	===
+	Time: Thu Jun 08 2023 15:33:23 GMT+0700 (Western Indonesia Time)
+	Source: forbiddenErrorHandler
+	Error: "Forbidden access, a non super admin trying to access restricted request"
+	
+>>>>>>> development

@@ -15,16 +15,15 @@ function App() {
 		<div className="App">
 			<Routes>
 				<Route path="/" element={<HomePage />} />
+				<Route path="/admin/login" element={<AdminLoginPage />} />
+				<Route path="/admin/dashboard" element={<DashboardPage />} />
+				<Route path="/admin/create-branch-admin" element={<CreateBranchAdminPage />} />
 				<Route path="/register" element={<RegisterPage />} />
-        <Route path="/admin/login" element={<AdminLoginPage />} />
-        <Route path="/admin/dashboard" element={<DashboardPage />} />
-        <Route path="/admin/create-branch-admin" element={<CreateBranchAdminPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/register/greeting" element={<GreetingPage />} />
-        <Route path="/verify/:token" element={<VerifyPage />} />
-      </Routes>
-    </div>
-  );
+				<Route path="/register/greeting" element={<GreetingPage />} />
+				<Route path="/verify/:token" element={<VerifyPage />} />
+			</Routes>
+		</div>
+	);
 }
 
 export default App;
