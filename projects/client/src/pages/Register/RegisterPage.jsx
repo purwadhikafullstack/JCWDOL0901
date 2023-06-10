@@ -5,8 +5,8 @@ import RegisterDesktop from "./RegisterDesktop.jsx";
 const RegisterPage = () => {
 	return (
 		<div>
-			<RegisterDesktop />
-			{/* <RegisterMobile /> */}
+			{/* <RegisterDesktop /> */}
+			<RegisterMobile />
 		</div>
 	);
 };
