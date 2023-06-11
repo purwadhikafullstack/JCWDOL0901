@@ -7,7 +7,7 @@ const SliderSlides = ({ categories }) => {
 	return (
 		<Splide
 			options={{
-				perPage: app.mobileView ? 4.5 : 10,
+				perPage: app.mobileView ? 4 : 10,
 				padding: 5,
 				pagination: false,
 				arrows: false,
