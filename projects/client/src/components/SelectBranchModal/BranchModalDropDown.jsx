@@ -11,7 +11,7 @@ const ToggleDropDown = ({ open, branch }) => {
 		>
 			<div className="flex flex-col items-center ml-auto w-full px-2">
 				<span className="text-xs whitespace-nowrap mx-auto mb-1">Switch To:</span>
-				<span className="font-semibold max-w-full overflow-x-hidden whitespace-nowrap mx-auto">
+				<span className="font-semibold text-sm max-w-full overflow-x-hidden whitespace-nowrap mx-auto">
 					{branch.name || "..."}
 				</span>
 			</div>
