@@ -5,7 +5,10 @@ const {
 } = require("../services/promoService.js");
 
 const getInventoryPromotion = async (request, response) => {
-	await startFindInventoryPromotion()
+	const { filter, order, page } = request.query;
+	const { branchData } = request;
+
+	await startFindInventoryPromotion(branchData.id, filter, order, page)
 		.then(result => response.status(200).send(result))
 		.catch(error => response.status(error.code).send(error.message));
 };

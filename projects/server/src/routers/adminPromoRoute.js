@@ -3,16 +3,25 @@ const {
 	postInventoryPromotion,
 	patchInventoryPromotion,
 } = require("../controllers/promoController.js");
+
+const { isAdmin, getBranchId } = require("../middlewares/authMiddleware.js");
+
 const {
-	sanitizePostInventoryPromotion,
-	sanitizePatchInventoryPromotion,
-} = require("../middlewares/bodySanitizer.js");
+	getInventoryPromotionQuerySanitizer,
+	postInventoryPromotionBodySanitizer,
+	patchInventoryPromotionBodySanitizer,
+} = require("../middlewares/sanitizer.js");
 
 const router = require("express").Router();
 
-// @TODO: jwtoken middleware checker
-router.get("/list", getInventoryPromotion);
-router.post("/create", sanitizePostInventoryPromotion, postInventoryPromotion);
-router.patch("/update", sanitizePatchInventoryPromotion, patchInventoryPromotion);
+router.get(
+	"/list",
+	isAdmin,
+	getBranchId,
+	getInventoryPromotionQuerySanitizer,
+	getInventoryPromotion
+);
+router.post("/create", isAdmin, postInventoryPromotionBodySanitizer, postInventoryPromotion);
+router.patch("/update", isAdmin, patchInventoryPromotionBodySanitizer, patchInventoryPromotion);
 
 module.exports = router;

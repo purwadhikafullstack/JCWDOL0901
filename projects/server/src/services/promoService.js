@@ -1,16 +1,23 @@
-const { startRegistrationErrorHandler } = require("../errors/serviceError");
+const { startRegistrationErrorHandler, startFindErrorHandler } = require("../errors/serviceError");
+const { paginateData } = require("../helpers/queryHelper");
 const {
 	createInventoryPromotionQuery,
+	readInventoryPromotionQuery,
 	updateInventoryPromotionQuery,
+	deleteInventoryPromotionQuery,
 } = require("../queries/Inventory_promotions");
 
 module.exports = {
-	startFindInventoryPromotion: async branch_id => {
+	startFindInventoryPromotion: async (branch_id, filter, order, page) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				return resolve(1);
+				const Inventory_promotion = await readInventoryPromotionQuery(branch_id, filter, order);
+				const paginatedData = await paginateData(Inventory_promotion, page);
+
+				return resolve(paginatedData);
 			} catch (error) {
-				return reject(await 1);
+				console.log(error);
+				return reject(await startFindErrorHandler(error));
 			}
 		});
 	},
@@ -31,7 +38,19 @@ module.exports = {
 
 				return resolve("Inventory Promotion Updated!");
 			} catch (error) {
-				return reject(await startUpdateErrorHandler(error));
+				return reject({ code: 500, send: "Internal Server Error" });
+			}
+		});
+	},
+	startInventoryPromotionDelete: async id => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				// TODO:
+				await deleteInventoryPromotionQuery(id);
+
+				return resolve("Inventory Promotion Deleted!");
+			} catch (error) {
+				return reject({ code: 500, message: "Internal Server Error" });
 			}
 		});
 	},
