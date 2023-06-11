@@ -1,3 +1,4 @@
+const { log } = require("console");
 const fs = require("fs");
 
 const writeLogFile = (error, source) => {
@@ -38,7 +39,6 @@ const startRegistrationErrorHandler = async error => {
 	};
 };
 
-
 const forbiddenErrorHandler = async () => {
 	await writeLogFile(
 		"Forbidden access, a non super admin trying to access restricted request",
@@ -64,9 +64,16 @@ const startVerificationErrorHandler = async error => {
 	};
 };
 
+const startCreateHandler = async error => {
+	await writeLogFile(error, "startCreateHandler");
+
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
+
 module.exports = {
 	startRegistrationErrorHandler,
 	startFindErrorHandler,
 	forbiddenErrorHandler,
 	startVerificationErrorHandler,
+	startCreateHandler,
 };

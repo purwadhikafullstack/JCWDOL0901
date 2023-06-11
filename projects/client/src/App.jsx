@@ -5,10 +5,10 @@ import RegisterPage from "./pages/Register/RegisterPage.jsx";
 import CreateBranchAdminPage from "./pages/CreateBranchAdmin/CreateBranchAdminPage";
 import GreetingPage from "./pages/Greeting/GreetingPage";
 import HomePage from "./pages/Home/HomePage";
-
 import VerifyPage from "./pages/Verify/VerifyPage";
 import AdminLoginPage from "./pages/Login/AdminLoginPage";
 import DashboardPage from "./pages/Dashboard/DashboardPage";
+import CategoryPage from "./pages/Category/CategoryPage";
 
 function App() {
 	return (
@@ -21,6 +21,7 @@ function App() {
 				<Route path="/register" element={<RegisterPage />} />
 				<Route path="/register/greeting" element={<GreetingPage />} />
 				<Route path="/verify/:token" element={<VerifyPage />} />
+				<Route path="/admin/category" element={<CategoryPage />} />
 			</Routes>
 		</div>
 	);

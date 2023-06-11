@@ -1,4 +1,4 @@
-const { startFindCategories } = require("../services/categoryService");
+const { startFindCategories, startCreateCategory } = require("../services/categoryService");
 
 const getCategories = async (request, response) => {
 	await startFindCategories()
@@ -6,4 +6,10 @@ const getCategories = async (request, response) => {
 		.catch(error => response.status(error.code).send(error.message));
 };
 
-module.exports = { getCategories };
+const createCategory = async (request, response) => {
+	await startCreateCategory(request.body)
+		.then(result => response.status(200).send(result))
+		.catch(error => response.status(error.code).send(error.message));
+};
+
+module.exports = { getCategories, createCategory };

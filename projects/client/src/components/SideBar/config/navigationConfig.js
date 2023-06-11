@@ -20,7 +20,7 @@ const navigation = () => {
 			super: true,
 		},
 		{ name: "Products", href: "#", icon: GiftIcon },
-		{ name: "Categories", href: "#", icon: ViewGridIcon },
+		{ name: "Categories", href: "/admin/category", icon: ViewGridIcon },
 		{ name: "Stocks", href: "#", icon: ServerIcon },
 		{ name: "Product Promos", href: "#", icon: CurrencyDollarIcon },
 		{ name: "Orders", href: "#", icon: DocumentTextIcon },
