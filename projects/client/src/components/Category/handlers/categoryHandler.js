@@ -10,15 +10,17 @@ const validateCategoryInput = values => {
 };
 
 const categoryErrorHandler = async error => {
-	console.log(error);
+	console.log(error.response.data);
 	if (error?.code === "ERR_NETWORK") {
 		return "Server unreachable, try again later!";
 	} else if (error?.response?.status === 400) {
 		return error?.response?.data;
 	} else if (error?.response?.status === 403) {
 		return error?.response?.data;
-	} else if (error?.code === "ERR_BAD_RESPONSE") {
-		return "File type not allowed";
+	} else if (error?.response?.data?.code === "LIMIT_FILE_SIZE") {
+		return error?.response?.data?.message;
+	} else if (error?.response?.data === "File type not allowed") {
+		return error?.response?.data;
 	}
 
 	return "Something went wrong!";

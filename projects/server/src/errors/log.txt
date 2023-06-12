@@ -1794,3 +1794,38 @@
 	Source: startCreateHandler
 	Error: {"name":"SequelizeValidationError","errors":[{"message":"image cannot be an array or an object","type":"string violation","path":"image","value":{"fieldname":"image","originalname":"Screen Shot 2023-05-04 at 12.13.00.png","encoding":"7bit","mimetype":"image/png","destination":"uploads/category/","filename":"5fa5536f081db9359e9e675db37513a1","path":"uploads/category/5fa5536f081db9359e9e675db37513a1","size":223522},"origin":"CORE","instance":{"id":null,"name":"asd","image":{"fieldname":"image","originalname":"Screen Shot 2023-05-04 at 12.13.00.png","encoding":"7bit","mimetype":"image/png","destination":"uploads/category/","filename":"5fa5536f081db9359e9e675db37513a1","path":"uploads/category/5fa5536f081db9359e9e675db37513a1","size":223522}},"validatorKey":"not_a_string","validatorName":null,"validatorArgs":[]}]}
 	
+	===
+	Time: Mon Jun 12 2023 22:16:10 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {}
+	
+	===
+	Time: Mon Jun 12 2023 22:16:28 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {}
+	
+	===
+	Time: Mon Jun 12 2023 22:17:15 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {}
+	
+	===
+	Time: Mon Jun 12 2023 22:18:17 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {}
+	
+	===
+	Time: Mon Jun 12 2023 22:18:20 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {}
+	
+	===
+	Time: Mon Jun 12 2023 22:19:16 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {}
+	
+	===
+	Time: Mon Jun 12 2023 22:19:28 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {}
+	

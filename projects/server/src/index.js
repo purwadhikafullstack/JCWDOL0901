@@ -54,7 +54,7 @@ app.use((req, res, next) => {
 app.use((err, req, res, next) => {
 	if (req.path.includes("/api/")) {
 		console.error("Error : ", err);
-		res.status(500).send("Error !");
+		res.status(500).send(err);
 	} else {
 		next();
 	}

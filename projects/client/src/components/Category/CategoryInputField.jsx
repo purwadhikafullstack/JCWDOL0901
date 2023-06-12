@@ -7,7 +7,7 @@ const CategoryInputField = ({ formik, setFile }) => {
 		<div className="flex flex-col items-center w-96">
 			<InputGroup name="Category Name" type="text" inputKey="name" formik={formik} />
 			<FileUploadInputGroup
-				name="Upload Image (.png, .jpg, .jpeg, .gif only)"
+				name="Upload Image"
 				type="file"
 				inputKey="image"
 				formik={formik}

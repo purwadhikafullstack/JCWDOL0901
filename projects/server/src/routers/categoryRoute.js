@@ -4,10 +4,10 @@ const {
 	createCategory,
 	updateCategory,
 } = require("../controllers/categoryController");
-const { upload } = require("../middlewares/multer");
+const { uploadFile } = require("../middlewares/multer");
 
 router.get("/list", getCategories);
-router.post("/create", upload.single("image"), createCategory);
-router.patch("/update", upload.single("image"), updateCategory);
+router.post("/create", uploadFile, createCategory);
+router.patch("/update", uploadFile, updateCategory);
 
 module.exports = router;
