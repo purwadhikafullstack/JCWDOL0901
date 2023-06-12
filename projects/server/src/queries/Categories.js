@@ -6,7 +6,6 @@ const readCategoryQuery = async () => {
 const createCategoryQuery = async (body, file) => {
 	const { name } = body;
 	const image = file.path;
-	console.log(name, image);
 	return await Categories.create({ name, image });
 };
 

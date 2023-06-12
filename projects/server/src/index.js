@@ -52,7 +52,7 @@ app.use((req, res, next) => {
 // error
 app.use((err, req, res, next) => {
 	if (req.path.includes("/api/")) {
-		console.error("Error : ", err.stack);
+		console.error("Error : ", err);
 		res.status(500).send("Error !");
 	} else {
 		next();

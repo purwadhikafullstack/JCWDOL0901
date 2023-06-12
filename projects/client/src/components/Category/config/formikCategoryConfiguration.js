@@ -23,7 +23,6 @@ const validationSchema = Yup.object({
 });
 
 const onSubmitConfiguration = async values => {
-	// console.log(values);
 	await categoryHandler(values);
 };
 

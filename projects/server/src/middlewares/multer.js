@@ -16,14 +16,15 @@ const storage = multer.diskStorage({
 	},
 });
 
-// const fileFilter = (req, file, cb) => {
-//     if (file.mimetype.split('/')[1] === 'pdf') {
-//         cb(null, true);
-//     } else {
-//         cb('File type not allowed', false);
-//     }
-// };
+const fileFilter = (req, file, cb) => {
+	const fileType = file.mimetype.split("/")[1];
+	if (fileType === "png" || fileType === "jpg" || fileType === "jpeg" || fileType === "gif") {
+		cb(null, true);
+	} else {
+		cb("File type not allowed", false);
+	}
+};
 
-const upload = multer({ storage });
+const upload = multer({ storage, fileFilter });
 
 module.exports = { upload };

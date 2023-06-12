@@ -10,12 +10,15 @@ const validateCategoryInput = values => {
 };
 
 const categoryErrorHandler = async error => {
+	console.log(error);
 	if (error?.code === "ERR_NETWORK") {
 		return "Server unreachable, try again later!";
 	} else if (error?.response?.status === 400) {
 		return error?.response?.data;
 	} else if (error?.response?.status === 403) {
 		return error?.response?.data;
+	} else if (error?.code === "ERR_BAD_RESPONSE") {
+		return "File type not allowed";
 	}
 
 	return "Something went wrong!";
