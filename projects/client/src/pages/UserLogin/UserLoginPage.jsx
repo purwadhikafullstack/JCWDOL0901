@@ -5,8 +5,8 @@ import UserLoginMobile from "./UserLoginMobile";
 function UserLoginPage() {
   return (
     <div>
-      <UserLoginDesktop />
-      {/* <UserLoginMobile /> */}
+      {/* <UserLoginDesktop /> */}
+      <UserLoginMobile />
     </div>
   );
 }

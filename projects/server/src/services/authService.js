@@ -1,4 +1,5 @@
 const { sequelize } = require("../models/index.js");
+const { Op } = require("sequelize");
 
 const {
   startRegistrationErrorHandler,
@@ -24,7 +25,6 @@ const userDatabaseGeneration = async (body, transaction) => {
 
   if (User.referrer) await createUserVouchersAsReferralReward(User.id, User.referrer, transaction);
 
-
   await createProfileQuery(body, User.id, transaction);
 
   return await createVerificationTokenQuery(User, transaction);
@@ -38,7 +38,6 @@ const adminDatabaseGeneration = async (body, transaction) => {
 };
 
 module.exports = {
-
   startUserRegistration: async (body) => {
     return new Promise(async (resolve, reject) => {
       const transaction = await sequelize.transaction();
@@ -78,7 +77,28 @@ module.exports = {
         const token = await generateJWToken(data, "super" in data);
         return resolve({ message: "Login success!", token });
       } catch (error) {
-        console.log(error);
+        return reject({ code: 500, message: "Internal Server Error" });
+      }
+    });
+  },
+  startUserLoginAuthentication: async (body, Name) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        console.log("body service: ", body);
+        const data = await sequelize.models[Name].findOne({
+          where: {
+            [Op.or]: [{ username: body.user }, { email: body.user }],
+          },
+        });
+
+        if (data?.password !== body.password || !data)
+          return reject({ code: 400, message: "Wrong email or password!" });
+
+        const token = await generateJWToken(data, "super" in data);
+
+        return resolve({ message: "Login success!", token });
+      } catch (error) {
+        console.log("error service: ", error);
         return reject({ code: 500, message: "Internal Server Error" });
       }
     });

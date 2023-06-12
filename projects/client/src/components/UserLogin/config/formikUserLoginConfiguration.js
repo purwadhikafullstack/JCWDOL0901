@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import { userLoginButtonHandler } from "../handlers/userLoginHandler";
 
 const initialValues = {
-  email: "",
+  user: "",
   password: "",
 };
 
@@ -13,25 +13,22 @@ const validateOnBlur = true;
 
 const requiredMessage = "Field can't be empty";
 
-const email = Yup.string().email("Invalid Email Format").required(requiredMessage);
+const user = Yup.string().required(requiredMessage);
 
 const password = Yup.string()
   .min(8, "Password must be at least 8 character long")
   .required(requiredMessage);
 
-const validationSchema = Yup.object({
-  email,
-  password,
-});
+const validationSchema = Yup.object({ user, password });
 
-const onSubmitConfiguration = async (values, setError, setBusy, navigate) => {
-  await userLoginButtonHandler(values, setError, setBusy, navigate);
+const onSubmitConfiguration = async (values, setError, navigate) => {
+  await userLoginButtonHandler(values, setError, navigate);
 };
 
-export const formikUserLoginConfiguration = (setError, setBusy, navigate) => {
+export const formikUserLoginConfiguration = (setError, navigate) => {
   return {
     initialValues,
-    onSubmit: async (values) => onSubmitConfiguration(values, setError, setBusy, navigate),
+    onSubmit: async (values) => onSubmitConfiguration(values, setError, navigate),
     validateOnChange,
     validateOnBlur,
     validationSchema,

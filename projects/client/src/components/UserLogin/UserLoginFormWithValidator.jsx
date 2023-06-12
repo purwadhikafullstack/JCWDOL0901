@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import UserLoginInputField from "./UserLoginInputField";
 import Button from "../Button";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { formikUserLoginConfiguration } from "./config/formikUserLoginConfiguration";
 
-function UserLoginFormWithValidator() {
+function UserLoginFormWithValidator({setError}) {
   const navigate = useNavigate();
 
   const formik = useFormik(formikUserLoginConfiguration(setError, navigate));

@@ -26,7 +26,6 @@ export const adminLoginButtonHandler = async (input, setError, setBusy, navigate
       state: { fromAdminLogin: true, email: validatedInput.email },
     });
   } catch (error) {
-    console.log(error);
     await setBusy(false);
     await setError(await loginAdminErrorHandler(error));
   }

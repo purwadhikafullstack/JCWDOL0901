@@ -1,11 +1,14 @@
 import React from "react";
 import UserLoginIllustration from "../../components/UserLogin/UserLoginIllustration";
+import BackButton from "../../components/BackButton";
+import CompanyLogo from "../../components/CompanyLogo";
+import UserLoginForm from "../../components/UserLogin/UserLoginForm";
 
 const DesktopIllustration = () => {
   return (
     <div className="my-auto mx-12 mt-2 shrink">
       <div className="mb-4 text-green-100 text-3xl font-light">User login page.</div>
-      <UserLoginIllustration className="w-[400px] pb-12" />
+      <UserLoginIllustration className="w-[100px] pb-12" />
     </div>
   );
 };

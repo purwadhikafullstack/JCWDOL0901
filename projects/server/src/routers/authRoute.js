@@ -4,6 +4,7 @@ const {
   registerAdmin,
   verifyUser,
   loginAdmin,
+  loginUser,
 } = require("../controllers/authController");
 const {
   getReferrerId,
@@ -17,6 +18,7 @@ router.get("/admin/list", getAdminsQueryParamsSanitizer, getAdmins);
 router.post("/admin/register", isSuperAdmin, registerAdmin);
 router.post("/admin/login", loginAdmin);
 
+router.post("/user/login", loginUser);
 router.post("/user/register", getReferrerId, registerUser);
 router.get("/user/verify/:token", verifyUser);
 
