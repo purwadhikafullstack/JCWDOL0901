@@ -8,7 +8,7 @@ import HomePage from "./pages/Home/HomePage";
 import VerifyPage from "./pages/Verify/VerifyPage";
 import AdminLoginPage from "./pages/Login/AdminLoginPage";
 import DashboardPage from "./pages/Dashboard/DashboardPage";
-import CategoryPage from "./pages/Category/CategoryPage";
+import CreateCategoryPage from "./pages/Category/CreateCategoryPage";
 
 function App() {
 	return (
@@ -21,7 +21,7 @@ function App() {
 				<Route path="/register" element={<RegisterPage />} />
 				<Route path="/register/greeting" element={<GreetingPage />} />
 				<Route path="/verify/:token" element={<VerifyPage />} />
-				<Route path="/admin/category" element={<CategoryPage />} />
+				<Route path="/admin/category" element={<CreateCategoryPage />} />
 			</Routes>
 		</div>
 	);

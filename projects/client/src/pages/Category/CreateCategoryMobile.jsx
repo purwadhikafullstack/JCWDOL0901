@@ -1,7 +1,7 @@
 import React from "react";
 import BackButton from "../../components/BackButton.jsx";
-import CreateBranchAdminIllustration from "../../components/CreateBranchAdmin/CreateBranchAdminIllustration.jsx";
-import CreateBranchAdminForm from "../../components/CreateBranchAdmin/CreateBranchAdminForm.jsx";
+import CategoryIllustration from "../../components/Category/CategoryIllustration.jsx";
+import CreateCategoryForm from "../../components/Category/CreateCategoryForm.jsx";
 import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration.jsx";
 
 const MobileIllustration = () => {
@@ -10,20 +10,20 @@ const MobileIllustration = () => {
 			<div className="mt-10 mr-auto ml-6 text-3xl text-left font-semibold">
 				Create <br /> Category
 			</div>
-			<CreateBranchAdminIllustration className="w-[135px] mr-auto ml-auto pr-4" />
+			<CategoryIllustration className="w-[200px] mr-auto ml-auto pr-4" />
 		</div>
 	);
 };
 
-const CreateBranchAdminMobile = () => {
+const CreateCategoryMobile = () => {
 	return (
 		<div className="flex flex-col mx-auto flex-1 max-w-[480px] min-h-screen overflow-hidden bg-white">
 			<CircularBackgroundDecoration />
 			<BackButton url="/admin/dashboard" color="text-white" />
 			<MobileIllustration />
-			<CreateBranchAdminForm />
+			<CreateCategoryForm />
 		</div>
 	);
 };
 
-export default CreateBranchAdminMobile;
+export default CreateCategoryMobile;

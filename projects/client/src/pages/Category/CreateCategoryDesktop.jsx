@@ -1,22 +1,20 @@
 import React from "react";
-import BackButton from "../../components/BackButton";
-import CreateBranchAdminForm from "../../components/CreateBranchAdmin/CreateBranchAdminForm";
-import CompanyLogo from "../../components/CompanyLogo";
-import CreateBranchAdminIllustration from "../../components/CreateBranchAdmin/CreateBranchAdminIllustration.jsx";
+import BackButton from "../../components/BackButton.jsx";
+import CategoryIllustration from "../../components/Category/CategoryIllustration.jsx";
+import CategoryForm from "../../components/Category/CreateCategoryForm.jsx";
 import SideBarDesktop from "../../components/SideBar/SideBarDesktop.jsx";
+import CompanyLogo from "../../components/CompanyLogo.jsx";
 
 const DesktopIllustration = () => {
 	return (
 		<div className="my-auto mx-12 flex flex-row lg:flex-col items-center">
-			<div className="mb-10 text-green-100 text-xl lg:text-3xl font-medium">
-				Create Branch Admin
-			</div>
-			<CreateBranchAdminIllustration className="w-[50px] lg:w-[200px] pb-12 mx-auto" />
+			<div className="mb-10 text-green-100 text-xl lg:text-3xl font-medium">Create Category</div>
+			<CategoryIllustration className="w-[50px] lg:w-[200px] pb-12 mx-auto" />
 		</div>
 	);
 };
 
-const RegisterDesktop = () => {
+const CreateCategoryDesktop = () => {
 	return (
 		<SideBarDesktop>
 			<div className="flex flex-col mx-auto my-auto flex-1 min-w-[480px] h-screen overflow-hidden bg-green-100">
@@ -27,7 +25,7 @@ const RegisterDesktop = () => {
 					</div>
 					<div className="flex flex-col items-center shrink-0">
 						<CompanyLogo color="true" className="mt-8 w-[75px] cursor-pointer" />
-						<CreateBranchAdminForm />
+						<CategoryForm />
 					</div>
 				</div>
 			</div>
@@ -35,4 +33,4 @@ const RegisterDesktop = () => {
 	);
 };
 
-export default RegisterDesktop;
+export default CreateCategoryDesktop;
