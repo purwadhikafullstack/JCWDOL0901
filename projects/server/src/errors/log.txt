@@ -1429,3 +1429,368 @@
 	Source: startRegistrationErrorHandler
 	Error: {}
 	
+	===
+	Time: Mon Jun 12 2023 14:20:07 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"image cannot be an array or an object","type":"string violation","path":"image","value":{},"origin":"CORE","instance":{"id":null,"name":"asd","image":{}},"validatorKey":"not_a_string","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:20:49 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"image cannot be an array or an object","type":"string violation","path":"image","value":{},"origin":"CORE","instance":{"id":null,"name":"asd","image":{}},"validatorKey":"not_a_string","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:21:24 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"image cannot be an array or an object","type":"string violation","path":"image","value":{},"origin":"CORE","instance":{"id":null,"name":"asd","image":{}},"validatorKey":"not_a_string","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:21:30 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"image cannot be an array or an object","type":"string violation","path":"image","value":{},"origin":"CORE","instance":{"id":null,"name":"asd","image":{}},"validatorKey":"not_a_string","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:23:01 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:24:20 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:30:40 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:33:47 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:33:49 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:34:56 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"Buah"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:34:57 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"Buah"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:36:21 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.name cannot be null","type":"notNull Violation","path":"name","value":null,"origin":"CORE","instance":{"id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:36:27 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.name cannot be null","type":"notNull Violation","path":"name","value":null,"origin":"CORE","instance":{"id":null,"image":"test"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:36:45 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.name cannot be null","type":"notNull Violation","path":"name","value":null,"origin":"CORE","instance":{"id":null,"image":"test"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:37:41 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.name cannot be null","type":"notNull Violation","path":"name","value":null,"origin":"CORE","instance":{"id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:38:02 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:39:06 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.name cannot be null","type":"notNull Violation","path":"name","value":null,"origin":"CORE","instance":{"id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:39:07 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.name cannot be null","type":"notNull Violation","path":"name","value":null,"origin":"CORE","instance":{"id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:39:39 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:40:37 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:40:57 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:41:50 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:42:15 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:42:19 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.name cannot be null","type":"notNull Violation","path":"name","value":null,"origin":"CORE","instance":{"id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:44:49 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.name cannot be null","type":"notNull Violation","path":"name","value":null,"origin":"CORE","instance":{"id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:44:50 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.name cannot be null","type":"notNull Violation","path":"name","value":null,"origin":"CORE","instance":{"id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:44:51 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.name cannot be null","type":"notNull Violation","path":"name","value":null,"origin":"CORE","instance":{"id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:45:01 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:45:03 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:45:05 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:45:19 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:48:20 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:48:29 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.name cannot be null","type":"notNull Violation","path":"name","value":null,"origin":"CORE","instance":{"id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:49:02 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"tess"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:49:03 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"tess"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:51:43 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:51:51 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:54:16 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:56:25 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:56:27 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:56:43 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:58:21 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 14:59:45 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"tess"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:01:04 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:01:06 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:07:29 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:07:33 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:07:42 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:07:55 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:08:02 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:08:27 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:09:32 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:09:35 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:09:50 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:10:19 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:10:31 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:11:01 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:11:03 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:11:15 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:11:39 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:11:49 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:13:26 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:13:33 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:13:37 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:13:45 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Categories.image cannot be null","type":"notNull Violation","path":"image","value":null,"origin":"CORE","instance":{"id":null,"name":"asd"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:14:55 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {}
+	
+	===
+	Time: Mon Jun 12 2023 15:15:23 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {}
+	
+	===
+	Time: Mon Jun 12 2023 15:15:33 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {}
+	
+	===
+	Time: Mon Jun 12 2023 15:15:57 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {}
+	
+	===
+	Time: Mon Jun 12 2023 15:16:03 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {}
+	
+	===
+	Time: Mon Jun 12 2023 15:16:11 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"image cannot be an array or an object","type":"string violation","path":"image","value":{"fieldname":"image","originalname":"Screen Shot 2023-05-04 at 12.13.00.png","encoding":"7bit","mimetype":"image/png","destination":"uploads/","filename":"567ade6e836aeb7cb02076fa3ef145c1","path":"uploads/567ade6e836aeb7cb02076fa3ef145c1","size":223522},"origin":"CORE","instance":{"id":null,"name":"asd","image":{"fieldname":"image","originalname":"Screen Shot 2023-05-04 at 12.13.00.png","encoding":"7bit","mimetype":"image/png","destination":"uploads/","filename":"567ade6e836aeb7cb02076fa3ef145c1","path":"uploads/567ade6e836aeb7cb02076fa3ef145c1","size":223522}},"validatorKey":"not_a_string","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:16:19 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"image cannot be an array or an object","type":"string violation","path":"image","value":{"fieldname":"image","originalname":"Screen Shot 2023-05-04 at 12.13.00.png","encoding":"7bit","mimetype":"image/png","destination":"uploads/","filename":"651ee280e22263578b410b5f00648750","path":"uploads/651ee280e22263578b410b5f00648750","size":223522},"origin":"CORE","instance":{"id":null,"name":"asd","image":{"fieldname":"image","originalname":"Screen Shot 2023-05-04 at 12.13.00.png","encoding":"7bit","mimetype":"image/png","destination":"uploads/","filename":"651ee280e22263578b410b5f00648750","path":"uploads/651ee280e22263578b410b5f00648750","size":223522}},"validatorKey":"not_a_string","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Mon Jun 12 2023 15:19:19 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"image cannot be an array or an object","type":"string violation","path":"image","value":{"fieldname":"image","originalname":"Screen Shot 2023-05-04 at 12.13.00.png","encoding":"7bit","mimetype":"image/png","destination":"uploads/category/","filename":"5fa5536f081db9359e9e675db37513a1","path":"uploads/category/5fa5536f081db9359e9e675db37513a1","size":223522},"origin":"CORE","instance":{"id":null,"name":"asd","image":{"fieldname":"image","originalname":"Screen Shot 2023-05-04 at 12.13.00.png","encoding":"7bit","mimetype":"image/png","destination":"uploads/category/","filename":"5fa5536f081db9359e9e675db37513a1","path":"uploads/category/5fa5536f081db9359e9e675db37513a1","size":223522}},"validatorKey":"not_a_string","validatorName":null,"validatorArgs":[]}]}
+	

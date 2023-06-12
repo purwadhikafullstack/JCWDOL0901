@@ -12,7 +12,7 @@ const CreateBranchAdminFormWithValidator = () => {
 
 	return (
 		<div className="my-auto items-center min-w-fit shrink-0 flex flex-col pb-10 px-6">
-			<form onSubmit={formik.handleSubmit} noValidate>
+			<form onSubmit={formik.handleSubmit} encType="multipart/form-data">
 				<CategoryInputField formik={formik} />
 				<Button type="submit" name="Create" disabled={formik.isSubmitting} />
 			</form>

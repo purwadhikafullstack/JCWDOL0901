@@ -1,9 +1,12 @@
 import axios from "axios";
 import Swal from "sweetalert2";
 
-const validateCategoryInput = input => {
-	const { name, image } = input;
-	return { name, image };
+const validateCategoryInput = values => {
+	const formData = new FormData();
+	for (let value in values) {
+		formData.append(value, values[value]);
+	}
+	return formData;
 };
 
 const categoryErrorHandler = async error => {

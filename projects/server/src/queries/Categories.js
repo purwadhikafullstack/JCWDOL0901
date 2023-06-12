@@ -3,8 +3,10 @@ const { Categories } = require("../models/index.js");
 const readCategoryQuery = async () => {
 	return await Categories.findAll({});
 };
-const createCategoryQuery = async body => {
-	const { name, image } = body;
+const createCategoryQuery = async (body, file) => {
+	const { name } = body;
+	const image = file.path;
+	console.log(name, image);
 	return await Categories.create({ name, image });
 };
 

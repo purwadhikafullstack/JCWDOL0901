@@ -12,10 +12,10 @@ module.exports = {
 			}
 		});
 	},
-	startCreateCategory: async body => {
+	startCreateCategory: async (body, file) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const Category = await createCategoryQuery(body);
+				const Category = await createCategoryQuery(body, file);
 				return resolve(Category);
 			} catch (error) {
 				return reject(await startCreateHandler(error));

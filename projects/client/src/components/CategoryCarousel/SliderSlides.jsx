@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 
 const SliderSlides = ({ categories }) => {
 	const app = useSelector(state => state.app);
+	const url = process.env.REACT_APP_IMAGE_BASE_URL;
 	return (
 		<Splide
 			options={{
@@ -19,7 +20,7 @@ const SliderSlides = ({ categories }) => {
 						<div className="flex flex-col items-center mx-2">
 							<img
 								className="w-[75px] cursor-pointer"
-								src={category.image}
+								src={url + category.image}
 								alt={category.name}
 								loading="lazy"
 							/>
