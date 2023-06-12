@@ -26,7 +26,6 @@ const isSuperAdmin = async (request, response, next) => {
 const isAdmin = async (request, response, next) => {
 	try {
 		if (!request.headers.authorization) throw "Missing token!";
-
 		const token = await verifyJWToken(
 			request.headers.authorization,
 			process.env.JWT_ADMIN_SECRET_KEY

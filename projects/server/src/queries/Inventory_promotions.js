@@ -4,8 +4,8 @@ const createInventoryPromotionQuery = async data => {
 	return await Inventory_promotions.create({ ...data });
 };
 
-const readInventoryPromotionQuery = async (branch_id, filter, order) => {
-	return await Inventory_promotions.findAll({
+const readInventoryPromotionQuery = async (branch_id, filter, order, page) => {
+	return await Inventory_promotions.findAndCountAll({
 		where: filter?.Inventory_promotions,
 		include: [
 			{
@@ -14,8 +14,10 @@ const readInventoryPromotionQuery = async (branch_id, filter, order) => {
 				attributes: ["stock"],
 				include: { model: Products, attributes: { exclude: "id" } },
 			},
-			{ model: Promotions, attributes: ["name"] },
+			{ model: Promotions },
 		],
+		offset: (page - 1) * 3,
+		limit: 3,
 		order: [...order?.Inventory_promotions],
 	});
 };

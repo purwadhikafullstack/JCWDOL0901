@@ -1,5 +1,5 @@
 const { startRegistrationErrorHandler, startFindErrorHandler } = require("../errors/serviceError");
-const { paginateData } = require("../helpers/queryHelper");
+
 const {
 	createInventoryPromotionQuery,
 	readInventoryPromotionQuery,
@@ -11,12 +11,15 @@ module.exports = {
 	startFindInventoryPromotion: async (branch_id, filter, order, page) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const Inventory_promotion = await readInventoryPromotionQuery(branch_id, filter, order);
-				const paginatedData = await paginateData(Inventory_promotion, page);
+				const Inventory_promotion = await readInventoryPromotionQuery(
+					branch_id,
+					filter,
+					order,
+					page
+				);
 
-				return resolve(paginatedData);
+				return resolve(Inventory_promotion);
 			} catch (error) {
-				console.log(error);
 				return reject(await startFindErrorHandler(error));
 			}
 		});
