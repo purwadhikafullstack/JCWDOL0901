@@ -9,4 +9,10 @@ const createCategoryQuery = async (body, file) => {
 	return await Categories.create({ name, image });
 };
 
-module.exports = { readCategoryQuery, createCategoryQuery };
+const updateCategoryQuery = async (body, file) => {
+	const { name } = body;
+	const image = file.path;
+	return await Categories.update({ name, image });
+};
+
+module.exports = { readCategoryQuery, createCategoryQuery, updateCategoryQuery };

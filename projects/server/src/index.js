@@ -36,6 +36,7 @@ app.use("/api/category", categoryRoute);
 app.use("/api/data", dataRoute);
 app.use("/api/admin/transaction", adminTransactionRoute);
 app.use("/api/product", productRoute);
+
 app.use("/uploads", express.static("uploads/"));
 
 // ===========================
