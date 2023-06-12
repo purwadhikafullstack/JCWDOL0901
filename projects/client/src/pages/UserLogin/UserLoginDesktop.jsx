@@ -1,19 +1,16 @@
 import React from "react";
-import BackButton from "../../components/BackButton";
-import CompanyLogo from "../../components/CompanyLogo";
 import UserLoginIllustration from "../../components/UserLogin/UserLoginIllustration";
-import UserLoginForm from "../../components/UserLogin/UserLoginForm";
 
 const DesktopIllustration = () => {
   return (
     <div className="my-auto mx-12 mt-2 shrink">
-      <div className="mb-4 text-green-100 text-3xl font-light">Admin login page.</div>
+      <div className="mb-4 text-green-100 text-3xl font-light">User login page.</div>
       <UserLoginIllustration className="w-[400px] pb-12" />
     </div>
   );
 };
 
-function AdminLoginDesktop() {
+function UserLoginDesktop() {
   return (
     <div className="flex flex-col mx-auto my-auto min-w-[480px] min-h-screen bg-black[.05]">
       <div className="flex flex-row min-w-fit justify-around mx-auto my-auto rounded-xl shadow-xl bg-white">
@@ -30,4 +27,4 @@ function AdminLoginDesktop() {
   );
 }
 
-export default AdminLoginDesktop;
+export default UserLoginDesktop;
