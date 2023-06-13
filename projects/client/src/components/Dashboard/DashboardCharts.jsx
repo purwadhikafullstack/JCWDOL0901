@@ -1,5 +1,5 @@
 import DashboardCards from "./DashboardCards";
-import DashBoardGrossIncomeChart from "./DashBoardGrossIncomeChart";
+import DashboardGrossIncomeChart from "./DashboardGrossIncomeChart";
 import DashboardProductSoldChart from "./DashboardProductSoldChart";
 import getDashboardData from "./helper/getDashboardDataHelper.js";
 import { useState, useEffect } from "react";
@@ -14,7 +14,7 @@ const DashboardCharts = ({ containerClass, chartClass }) => {
 			<DashboardCards />
 			<h1 className="mt-8 text-green-400 font-bold text-xl mb-6">Last 7 Days</h1>
 			<div className={containerClass}>
-				<DashBoardGrossIncomeChart data={dashboardData} chartClass={chartClass} />
+				<DashboardGrossIncomeChart data={dashboardData} chartClass={chartClass} />
 				<DashboardProductSoldChart data={dashboardData} chartClass={chartClass} />
 			</div>
 		</>
