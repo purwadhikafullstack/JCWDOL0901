@@ -1,11 +1,40 @@
 import React from "react";
-import ManagePromotionMobile from "./ManagePromotionMobile";
-import ManagePromotionDesktop from "./ManagePromotionDesktop";
-import { useSelector } from "react-redux";
+import BackButton from "../../components/BackButton";
+import PageTitle from "../../components/PageTitle";
+import PromoTableGroup from "../../components/ProductPromo/PromoTableGroup";
+import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration.jsx";
+import CompanyLogo from "../../components/CompanyLogo.jsx";
+import SideBar from "../../components/SideBar/SideBar";
 
+const ResponsiveLogo = () => {
+	return (
+		<>
+			<div className="block sm:hidden z-40">
+				<CompanyLogo color={false} className="w-[100px] mx-auto mb-2 z-40" />
+			</div>
+			<div className="hidden sm:block">
+				<CompanyLogo color={true} className="w-[100px] mx-auto mb-2 z-40" />
+			</div>
+		</>
+	);
+};
 const ProductPromotion = () => {
-	const app = useSelector(state => state.app);
-	return <div>{app.mobileView ? <ManagePromotionMobile /> : <ManagePromotionDesktop />}</div>;
+	return (
+		<div className="flex flex-col mx-auto flex-1 min-w-[480px] min-h-screen overflow-y-scroll overflow-hidden bg-white z-10 sm:w-full">
+			<SideBar>
+				<div className="flex flex-col h-screen z-10">
+					<CircularBackgroundDecoration />
+					<BackButton url="/admin/dashboard" color="text-green-100" />
+					<ResponsiveLogo />
+					<PageTitle
+						title="Manage Inventory Promotion"
+						color={"text-green-100 sm:text-green-400 z-10"}
+					/>
+					<PromoTableGroup />
+				</div>
+			</SideBar>
+		</div>
+	);
 };
 
 export default ProductPromotion;
