@@ -34,7 +34,7 @@ const DataLists = ({ lists, setter }) => {
 	return lists.map((item, index) => {
 		return (
 			<Listbox.Option
-				className="border ml-2 py-2 px-4 mb-0.5 rounded-lg shadow whitespace-nowrap min-w-inherit max-w-full bg-white"
+				className="border-b py-2 px-4 shadow whitespace-nowrap min-w-inherit max-w-full bg-white"
 				key={index}
 				value={item.id}
 				onClick={() => setter(item)}
@@ -57,7 +57,7 @@ const DropDownOptions = ({ setter, getter }) => {
 	return (
 		lists && (
 			<div className="relative">
-				<Listbox.Options className="absolute mt-1 h-20 inset-0 w-full overflow-auto rounded-md py-1 text-base">
+				<Listbox.Options className="border absolute h-fit inset-0 w-full overflow-auto rounded-lg text-base">
 					<DataLists lists={lists} setter={setter} />
 				</Listbox.Options>
 			</div>
