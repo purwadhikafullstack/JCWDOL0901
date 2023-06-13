@@ -3,24 +3,24 @@ import CategoryInputField from "./CategoryInputField";
 import Button from "../Button.jsx";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
-import { formikCategoryConfiguration } from "./config/formikCategoryConfiguration";
+import { formikUpdateCategoryConfiguration } from "./config/formikUpdateCategoryConfiguration";
 import { useState } from "react";
 import CategoryImagePreview from "./CategoryImagePreview";
 
-const CreateCategoryForm = () => {
+const UpdateCategoryForm = ({ item }) => {
 	const navigate = useNavigate();
-	const [file, setFile] = useState();
-	const formik = useFormik(formikCategoryConfiguration(navigate));
+	const [file, setFile] = useState(process.env.REACT_APP_IMAGE_BASE_URL + item.image);
+	const formik = useFormik(formikUpdateCategoryConfiguration(navigate, item));
 
 	return (
 		<div className="my-auto items-center min-w-fit shrink-0 flex flex-col pb-10 px-8">
 			<form onSubmit={formik.handleSubmit} encType="multipart/form-data">
 				<CategoryImagePreview file={file} />
 				<CategoryInputField formik={formik} setFile={setFile} />
-				<Button type="submit" name="Create" disabled={formik.isSubmitting} />
+				<Button type="submit" name="Update" disabled={formik.isSubmitting} />
 			</form>
 		</div>
 	);
 };
 
-export default CreateCategoryForm;
+export default UpdateCategoryForm;

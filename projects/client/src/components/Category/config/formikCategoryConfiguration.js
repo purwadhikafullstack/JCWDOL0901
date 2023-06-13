@@ -1,6 +1,6 @@
 import * as Yup from "yup";
 
-import { categoryHandler } from "../handlers/categoryHandler";
+import { createCategoryHandler } from "../handlers/categoryHandler";
 
 const initialValues = {
 	name: "",
@@ -23,7 +23,7 @@ const validationSchema = Yup.object({
 });
 
 const onSubmitConfiguration = async values => {
-	await categoryHandler(values);
+	await createCategoryHandler(values);
 };
 
 export const formikCategoryConfiguration = navigate => {

@@ -1,21 +1,23 @@
 import React from "react";
 import BackButton from "../../components/BackButton.jsx";
 import CategoryIllustration from "../../components/Category/CategoryIllustration.jsx";
-import CreateCategoryForm from "../../components/Category/CreateCategoryForm.jsx";
+import UpdateCategoryForm from "../../components/Category/UpdateCategoryForm.jsx";
 import CompanyLogo from "../../components/CompanyLogo.jsx";
+import { useLocation } from "react-router-dom";
 
 const Illustration = () => {
 	return (
 		<div className="my-auto mx-12 flex flex-row sm:flex-col items-center">
 			<div className="mb-10 text-green-100 text-2xl sm:text-3xl font-medium text-left sm:text-center pr-4">
-				Create Category
+				Update Category
 			</div>
 			<CategoryIllustration className="w-[160px] sm:w-[350px] pb-12 mx-auto" />
 		</div>
 	);
 };
 
-const CreateCategoryPage = () => {
+const UpdateCategoryPage = () => {
+	const item = useLocation().state;
 	return (
 		<div className="bg-green-100 flex items-center justify-center h-screen">
 			<div className="flex flex-col sm:flex-row bg-white rounded-lg h-screen sm:h-auto justify-between">
@@ -27,11 +29,11 @@ const CreateCategoryPage = () => {
 					<div className="flex justify-center py-4">
 						<CompanyLogo color="true" className="mt-8 w-[75px] cursor-pointer hidden sm:block" />
 					</div>
-					<CreateCategoryForm />
+					<UpdateCategoryForm item={item} />
 				</div>
 			</div>
 		</div>
 	);
 };
 
-export default CreateCategoryPage;
+export default UpdateCategoryPage;

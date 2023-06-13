@@ -7,7 +7,7 @@ const setSuper = (state, action) => {
 export const admin = createSlice({
 	name: "admin",
 	initialState: {
-		super: true,
+		super: false,
 	},
 	reducers: {
 		setSuper,

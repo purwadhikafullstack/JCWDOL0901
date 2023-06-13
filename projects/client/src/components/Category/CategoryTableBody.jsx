@@ -7,17 +7,15 @@ const CategoryTableBody = ({ page, setMaxPage }) => {
 
 	React.useEffect(() => {
 		const query = generateUrlQuery(page);
-		console.log(query);
 		getCategories(localStorage.getItem("token"), query)
 			.then(result => {
-				console.log(result);
 				setDatas(result.data.rows);
 				setMaxPage(Math.ceil(result.data.count / 5));
 			})
 			.catch(error => alert("Server Unavailable"));
 	}, [page, setMaxPage]);
 
-	return datas && <TableBodyContent datas={datas} />;
+	return datas && <TableBodyContent datas={datas} page={page} />;
 };
 
 export default CategoryTableBody;

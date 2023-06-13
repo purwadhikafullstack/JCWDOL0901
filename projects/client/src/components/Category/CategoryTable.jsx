@@ -2,7 +2,7 @@ import React from "react";
 import CategoryTableBody from "./CategoryTableBody";
 
 const CategoryTableHead = () => {
-	const thClassName = "py-6 bg-green-500 text-green-100 px-10 whitespace-nowrap";
+	const thClassName = "py-6 bg-green-500 text-green-100 px-6 whitespace-nowrap";
 	return (
 		<thead className="uppercase">
 			<tr className="text-center">
@@ -17,7 +17,7 @@ const CategoryTableHead = () => {
 
 const CategoryTable = ({ page, setMaxPage }) => {
 	return (
-		<div className="flex overflow-x-auto rounded-lg border border-green-300 border-2">
+		<div className="flex overflow-x-auto rounded-lg border-green-300 border-2">
 			<table className="w-full">
 				<CategoryTableHead />
 				<CategoryTableBody page={page} setMaxPage={setMaxPage} />

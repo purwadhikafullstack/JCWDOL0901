@@ -5,7 +5,8 @@ const {
 } = require("../services/categoryService");
 
 const getCategories = async (request, response) => {
-	await startFindCategories()
+	const { filter, order, page } = request.query;
+	await startFindCategories(filter, order, page)
 		.then(result => response.status(200).send(result))
 		.catch(error => response.status(error.code).send(error.message));
 };
@@ -17,7 +18,7 @@ const createCategory = async (request, response) => {
 };
 
 const updateCategory = async (request, response) => {
-	await startUpdateCategory(request.body, request.file)
+	await startUpdateCategory(request.body, request.file, request.params)
 		.then(result => response.status(200).send(result))
 		.catch(error => response.status(error.code).send(error.message));
 };

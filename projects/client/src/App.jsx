@@ -13,6 +13,7 @@ import CreateCategoryPage from "./pages/CreateCategory/CreateCategoryPage";
 import UserLoginPage from "./pages/UserLogin/UserLoginPage";
 import ManageCategory from "./pages/ManageCategory/ManageCategory";
 import ManageStock from "./pages/ManageStock/ManageStock";
+import UpdateCategoryPage from "./pages/UpdateCategory/UpdateCategoryPage";
 
 function App() {
 	return (
@@ -33,6 +34,7 @@ function App() {
 				<Route path="/verify/:token" element={<VerifyPage />} />
 				<Route path="/admin/category" element={<ManageCategory />} />
 				<Route path="/admin/category/create" element={<CreateCategoryPage />} />
+				<Route path="/admin/category/update" element={<UpdateCategoryPage />} />
 			</Routes>
 		</div>
 	);

@@ -26,7 +26,7 @@ const categoryErrorHandler = async error => {
 	return "Something went wrong!";
 };
 
-export const categoryHandler = async input => {
+export const createCategoryHandler = async input => {
 	try {
 		const validatedInput = await validateCategoryInput(input);
 		const token = localStorage.getItem("token");
@@ -55,6 +55,35 @@ export const categoryHandler = async input => {
 	}
 };
 
+export const updateCategoryHandler = async (input, item) => {
+	try {
+		const validatedInput = await validateCategoryInput(input);
+		const token = localStorage.getItem("token");
+		const config = {
+			headers: { Authorization: `Bearer ${token}` },
+		};
+		await axios.patch(
+			`${process.env.REACT_APP_API_BASE_URL}/category/${item.id}/update`,
+			validatedInput,
+			config
+		);
+
+		Swal.fire({
+			icon: "success",
+			title: "Category has been updated",
+			showConfirmButton: false,
+			timer: 2000,
+		});
+	} catch (error) {
+		Swal.fire({
+			icon: "error",
+			title: await categoryErrorHandler(error),
+			showConfirmButton: false,
+			timer: 2000,
+		});
+	}
+};
+
 export const generateUrlQuery = (page, filter, sort, order) => {
 	let url = "";
 
@@ -70,4 +99,8 @@ export const getCategories = (token, query) => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/category/list${query}`, {
 		headers: { Authorization: `Bearer ${token}` },
 	});
+};
+
+export const editCategory = (item, navigate) => {
+	navigate("/admin/category/update", { state: item });
 };

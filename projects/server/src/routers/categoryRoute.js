@@ -4,10 +4,11 @@ const {
 	createCategory,
 	updateCategory,
 } = require("../controllers/categoryController");
+const { isAdmin, isSuperAdmin } = require("../middlewares/authMiddleware");
 const { uploadFile } = require("../middlewares/multer");
 
 router.get("/list", getCategories);
-router.post("/create", uploadFile, createCategory);
-router.patch("/update", uploadFile, updateCategory);
+router.post("/create", isAdmin, isSuperAdmin, uploadFile, createCategory);
+router.patch("/:categoryId/update", isAdmin, isSuperAdmin, uploadFile, updateCategory);
 
 module.exports = router;

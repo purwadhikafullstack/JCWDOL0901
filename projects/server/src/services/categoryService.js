@@ -6,10 +6,10 @@ const {
 } = require("../queries/Categories");
 
 module.exports = {
-	startFindCategories: async () => {
+	startFindCategories: async (filter, order, page) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const Category = await readCategoryQuery();
+				const Category = await readCategoryQuery(filter, order, page);
 				return resolve(Category);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
@@ -26,10 +26,10 @@ module.exports = {
 			}
 		});
 	},
-	startUpdateCategory: async (body, file) => {
+	startUpdateCategory: async (body, file, params) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const Category = await updateCategoryQuery(body, file);
+				const Category = await updateCategoryQuery(body, file, params);
 				return resolve(Category);
 			} catch (error) {
 				return reject(await startCreateHandler(error));
