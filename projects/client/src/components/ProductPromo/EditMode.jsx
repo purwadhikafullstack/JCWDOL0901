@@ -12,7 +12,7 @@ const PromotionEdit = ({ selected, onChange }) => {
 
 	return (
 		types && (
-			<select name="promotion_id" onChange={onChange}>
+			<select name="promotion_id" className="bg-gray-100 rounded p-1" onChange={onChange}>
 				{types.map((type, index) => {
 					return (
 						<option value={type.id} key={index}>
@@ -63,7 +63,7 @@ const EditMode = ({ item, index, setEditMode }) => {
 		<tbody key={index}>
 			<tr>
 				<td className={tdClassName}>
-					<img src={item.Inventory.Product.image} className="w-[100px]" />
+					<img src={item.Inventory.Product.image} className="w-[80px] ml-4" />
 				</td>
 				<td className={tdClassName}>{item.Inventory.Product.name}</td>
 				<td className={tdClassName}>
@@ -71,7 +71,7 @@ const EditMode = ({ item, index, setEditMode }) => {
 				</td>
 				<td className={tdClassName}>
 					<input
-						className="text-center"
+						className="text-center bg-gray-100 rounded p-1"
 						name="value"
 						type="number"
 						defaultValue={item.value}

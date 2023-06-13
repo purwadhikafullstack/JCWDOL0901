@@ -6,7 +6,9 @@ const ToggleDropDown = ({ open, data }) => {
 		<Listbox.Button className={`bg-white w-full border-2 border-green-200 py-2 rounded-lg mb-2`}>
 			<div className="flex flex-row items-center justify-end max-w-full">
 				<div className="max-w-[70%] mx-auto font-semibold text-sm overflow-x-hidden ">
-					<div className="max-w-full whitespace-nowrap box-border">{data?.name || "..."}</div>
+					<div className="max-w-full whitespace-nowrap text-xs box-border">
+						{data?.name || "..."}
+					</div>
 				</div>
 				<span className="material-symbols-rounded">expand_more</span>
 			</div>

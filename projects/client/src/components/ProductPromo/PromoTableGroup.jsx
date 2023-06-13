@@ -23,8 +23,8 @@ const PromoTableGroup = () => {
 	const [maxPage, setMaxPage] = React.useState(1);
 
 	return (
-		<div className="flex flex-col mt-20 px-8 h-full">
-			<div className="flex flex-row w-full justify-between mb-4">
+		<div className="flex flex-col mt-24 px-4 h-full">
+			<div className="flex flex-row w-full justify-between mb-4 p-4 bg-white rounded-xl border border-green-200">
 				<div className="flex flex-col h-full w-[40%]">
 					<SearchFilter filter={filter} setFilter={setFilter} />
 					<CreateButton />
