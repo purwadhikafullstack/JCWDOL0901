@@ -3,7 +3,7 @@ const {
 	getAdminDashboardData,
 	getAdminAllTimeData,
 } = require("../controllers/adminTransactionController");
-const { isAdmin, getBranchId } = require("../middlewares/authMiddleware");
+const { getBranchId, isAdmin } = require("../middlewares/authMiddleware");
 
 const router = require("express").Router();
 

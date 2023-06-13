@@ -10,12 +10,14 @@ import VerifyPage from "./pages/Verify/VerifyPage";
 import AdminLoginPage from "./pages/Login/AdminLoginPage";
 import DashboardPage from "./pages/Dashboard/DashboardPage";
 import CreateCategoryPage from "./pages/CreateCategory/CreateCategoryPage";
+import UserLoginPage from "./pages/UserLogin/UserLoginPage";
 
 function App() {
 	return (
 		<div className="App">
 			<Routes>
 				<Route path="/" element={<HomePage />} />
+				<Route path="/user/login" element={<UserLoginPage />} />
 				<Route path="/admin/login" element={<AdminLoginPage />} />
 				<Route path="/admin/dashboard" element={<DashboardPage />} />
 				<Route path="/admin/create-branch-admin" element={<CreateBranchAdminPage />} />
