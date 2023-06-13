@@ -23,11 +23,11 @@ const getAdminQueryOrder = async query => {
 };
 
 const getInventoryPromotionQueryFilter = async query => {
-	const filter = { Inventory_promotions: [] };
+	const filter = { Inventory_promotions: {} };
 
 	const inventoryPromotionsFilter = ["promotion_id"];
 	await inventoryPromotionsFilter.forEach(key => {
-		if (query[key]) filter.Inventory_promotions.push({ [key]: query[key] });
+		if (query[key]) filter.Inventory_promotions[key] = query[key];
 	});
 
 	return filter;

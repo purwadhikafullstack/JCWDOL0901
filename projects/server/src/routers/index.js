@@ -5,6 +5,7 @@ const dataRoute = require("./dataRoute.js");
 const adminTransactionRoute = require("./adminTransactionRoute.js");
 const adminPromoRoute = require("./adminPromoRoute.js");
 const productRoute = require("./productRoute.js");
+const adminInventoryRoute = require("./adminInventoryRoute.js");
 
 module.exports = {
 	authRoute,
@@ -14,4 +15,5 @@ module.exports = {
 	branchRoute,
 	categoryRoute,
 	productRoute,
+	adminInventoryRoute,
 };
