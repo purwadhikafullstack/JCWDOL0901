@@ -26,9 +26,9 @@ const VerificationMessage = ({ isValid }) => {
 
 const VerifyPageLayout = ({ isValid }) => {
 	return (
-		<div className="flex flex-col bg-white mx-auto w-[480px] h-screen sm:w-full">
+		<div className="flex flex-col bg-white mx-auto h-screen w-full">
 			<div className="my-auto mx-auto flex flex-col items-center pb-8">
-				<CompanyLogo color={true} className="w-[175px] mb-8" />
+				<CompanyLogo color={true} className="w-[150px] mb-16" />
 				<VerificationMessage isValid={isValid} />
 			</div>
 		</div>
