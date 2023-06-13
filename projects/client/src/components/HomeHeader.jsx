@@ -8,7 +8,7 @@ import DesktopNavBar from "./DesktopNavBar";
 
 const HomeHeader = ({ toggleBranchModal }) => {
 	return (
-		<div className="flex flex-col sm:bg-green-200 sm:pb-4 sm:px-16">
+		<div className="flex flex-col sm:bg-green-200 sm:pb-4">
 			<CircularBackgroundDecoration />
 			<CompanyLogo color={false} className="z-10 w-[40px] mx-auto my-3" clickable={false} />
 			<div className="flex flex-col justify-between items-between z-10 mx-6">
