@@ -81,6 +81,26 @@ module.exports = {
 			}
 		});
 	},
+	startUserLoginAuthentication: async (body, Name) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const data = await sequelize.models[Name].findOne({
+					where: {
+						[Op.or]: [{ username: body.user }, { email: body.user }],
+					},
+				});
+
+				if (data?.password !== body.password || !data)
+					return reject({ code: 400, message: "Wrong email or password!" });
+
+				const token = await generateJWToken(data, "super" in data);
+
+				return resolve({ message: "Login success!", token });
+			} catch (error) {
+				return reject({ code: 500, message: "Internal Server Error" });
+			}
+		});
+	},
 	startAdminRegistration: async body => {
 		return new Promise(async (resolve, reject) => {
 			const transaction = await sequelize.transaction();

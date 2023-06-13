@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Button from "../../components/Button";
 import SuccessBox from "../../components/SuccessBox";
 import AlertBox from "../../components/AlertBox";
+import BackButton from "../../components/BackButton";
 
 const VerificationMessage = ({ isValid }) => {
 	const navigate = useNavigate();
@@ -15,20 +16,24 @@ const VerificationMessage = ({ isValid }) => {
 			<Button name={"Login"} onClickHandler={() => navigate("/login")} />
 		</SuccessBox>
 	) : (
-		<AlertBox>
-			<span class="material-icons">error</span>
-			<p className="font-bold text-xl mb-2">Error!</p>
-
-			<p className="mx-8 font-medium">Invalid token or is expired!</p>
-		</AlertBox>
+		<>
+			<span className="text-red flex flex-row items-center py-2">
+				<span className="material-symbols-rounded h-fit mr-2">error</span>
+				<span className="font-bold text-xl my-2">Failed!</span>
+			</span>
+			<AlertBox>
+				<p className="mx-8 font-medium">Invalid token or is expired!</p>
+			</AlertBox>
+		</>
 	);
 };
 
 const VerifyPageLayout = ({ isValid }) => {
 	return (
-		<div className="flex flex-col bg-white mx-auto w-[480px] h-screen sm:w-full">
-			<div className="my-auto mx-auto flex flex-col items-center pb-8">
-				<CompanyLogo color={true} className="w-[175px] mb-8" />
+		<div className="flex flex-col mx-auto h-screen ">
+			<div className="my-auto mx-auto flex flex-col items-center rounded-xl shadow-xl p-10 bg-white w-fit ">
+				<BackButton url="/" color="text-green-500" />
+				<CompanyLogo color={true} className="w-[150px] ml-3 mb-4" />
 				<VerificationMessage isValid={isValid} />
 			</div>
 		</div>

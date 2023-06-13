@@ -12,6 +12,7 @@ import DashboardPage from "./pages/Dashboard/DashboardPage";
 import CreateCategoryPage from "./pages/CreateCategory/CreateCategoryPage";
 import UserLoginPage from "./pages/UserLogin/UserLoginPage";
 import ShowCategoryPage from "./pages/ShowCategory/ShowCategoryPage";
+import ManageStock from "./pages/ManageStock/ManageStock";
 
 function App() {
 	return (
@@ -20,6 +21,9 @@ function App() {
 				<Route path="/" element={<HomePage />} />
 				<Route path="/user/login" element={<UserLoginPage />} />
 				<Route path="/admin/login" element={<AdminLoginPage />} />
+				<Route path="/admin/promo" element={<ProductPromotion />} />
+				<Route path="/admin/promo/create" element={<CreatePromotion />} />
+				<Route path="/admin/stock/" element={<ManageStock />} />
 				<Route path="/admin/dashboard" element={<DashboardPage />} />
 				<Route path="/admin/create-branch-admin" element={<CreateBranchAdminPage />} />
 				<Route path="/admin/promo" element={<ProductPromotion />} />
