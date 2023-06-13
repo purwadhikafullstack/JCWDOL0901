@@ -10,6 +10,7 @@ import VerifyPage from "./pages/Verify/VerifyPage";
 import AdminLoginPage from "./pages/Login/AdminLoginPage";
 import DashboardPage from "./pages/Dashboard/DashboardPage";
 import UserLoginPage from "./pages/UserLogin/UserLoginPage";
+import ManageStock from "./pages/ManageStock/ManageStock";
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 				<Route path="/admin/login" element={<AdminLoginPage />} />
 				<Route path="/admin/promo" element={<ProductPromotion />} />
 				<Route path="/admin/promo/create" element={<CreatePromotion />} />
+				<Route path="/admin/stock/" element={<ManageStock />} />
 				<Route path="/admin/dashboard" element={<DashboardPage />} />
 				<Route path="/admin/create-branch-admin" element={<CreateBranchAdminPage />} />
 				<Route path="/register" element={<RegisterPage />} />
