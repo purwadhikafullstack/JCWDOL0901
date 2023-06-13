@@ -26,6 +26,18 @@ const Illustration = () => {
 	);
 };
 
+const ResponsiveLogo = () => {
+	return (
+		<>
+			<div className="block sm:hidden z-40">
+				<CompanyLogo color={false} className="w-[100px] mx-auto mb-2 z-40" />
+			</div>
+			<div className="hidden sm:block">
+				<CompanyLogo color={true} className="w-[100px] mx-auto mb-2 z-40" />
+			</div>
+		</>
+	);
+};
 const CreatePromotion = () => {
 	return (
 		<div className="flex flex-col mx-auto flex-1 min-w-[480px] overflow-hidden px-8 w-full bg-white sm:bg-gray-100 sm:flex-row sm:justify-center sm:py-20 sm:max-w-full min-h-screen sm:drop-shadow-2xl ">
