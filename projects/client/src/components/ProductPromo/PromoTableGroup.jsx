@@ -24,7 +24,7 @@ const PromoTableGroup = () => {
 
 	return (
 		<div className="flex flex-col justify-start mt-12 px-4 h-full">
-			<div className="flex flex-row w-full justify-between mb-4 p-4 bg-white rounded-xl z-50 border border-green-200">
+			<div className="flex flex-row w-full justify-between mt-2 mb-4 p-4 rounded-xl z-50">
 				<div className="flex flex-col h-full w-[40%]">
 					<SearchFilter filter={filter} setFilter={setFilter} />
 					<CreateButton />
