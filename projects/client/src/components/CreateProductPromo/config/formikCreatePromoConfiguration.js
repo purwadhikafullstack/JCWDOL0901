@@ -1,4 +1,5 @@
 import * as Yup from "yup";
+import Swal from "sweetalert2";
 import { createInventoryPromotion } from "../handlers/createProductPromoHandler.js";
 
 const initialValues = {
@@ -27,11 +28,24 @@ const validationSchema = Yup.object({
 });
 
 const onSubmitConfiguration = async (values, setError, navigate) => {
-	await createInventoryPromotion(values)
-		.then(result => {
-			navigate(-1);
-		})
-		.catch(error => setError(error));
+	await Swal.fire({
+		title: "Create Promotion?",
+		html: `Starts <b>${values.start_at}</b> Until <b>${values.expired_at}</b>`,
+		icon: "question",
+		showCancelButton: true,
+		confirmButtonColor: "#0EB177",
+		cancelButtonColor: "#d33",
+		confirmButtonText: "Confirm",
+	}).then(async result => {
+		if (result.isConfirmed) {
+			await createInventoryPromotion(values)
+				.then(result => {
+					Swal.fire("Success!", "Promotion Created!", "success");
+					navigate(-1);
+				})
+				.catch(error => setError(error));
+		}
+	});
 };
 
 export const formikConfiguration = (setError, navigate) => {
