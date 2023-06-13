@@ -3,8 +3,6 @@ import DashboardIllustration from "../../components/Dashboard/DashboardIllustrat
 import DashboardBranchInfo from "../../components/Dashboard/DashboardBranchInfo.jsx";
 import DashboardCharts from "../../components/Dashboard/DashboardCharts.jsx";
 import SideBar from "../../components/SideBar/SideBar.jsx";
-import SideBarMobile from "../../components/SideBar/SideBarMobile.jsx";
-import SideBarDesktop from "../../components/SideBar/SideBarDesktop.jsx";
 
 const Illustration = () => {
 	return (
