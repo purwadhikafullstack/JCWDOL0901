@@ -24,7 +24,7 @@ const ProductPromotion = () => {
 			<SideBar>
 				<div className="flex flex-col h-screen z-10">
 					<CircularBackgroundDecoration />
-					<BackButton url="/admin/dashboard" color="text-green-100" />
+					<BackButton url="/admin/dashboard" color="block text-green-100 z-50 sm:hidden" />
 					<ResponsiveLogo />
 					<PageTitle
 						title="Manage Inventory Promotion"
