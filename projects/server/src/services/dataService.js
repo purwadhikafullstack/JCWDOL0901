@@ -6,6 +6,7 @@ const {
 	readCitiesInProvinceQuery,
 	readBranchQuery,
 } = require("../queries/Data.js");
+const { readPromotionQuery } = require("../queries/Promotions.js");
 
 module.exports = {
 	startFindCities: async () => {
@@ -69,6 +70,17 @@ module.exports = {
 				return resolve(branch);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
+			}
+		});
+	},
+	startFindPromotions: async () => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const Promotions = await readPromotionQuery();
+
+				return resolve(Promotions);
+			} catch (error) {
+				return reject(startFindErrorHandler(error));
 			}
 		});
 	},

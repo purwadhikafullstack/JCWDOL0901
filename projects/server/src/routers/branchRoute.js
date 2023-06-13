@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const { postNearestBranch, getBranches } = require("../controllers/branchController");
-const { sanitizePostNearestBranch } = require("../middlewares/bodySanitizer");
+const { postNearestBranchBodySanitizer } = require("../middlewares/sanitizer.js");
 
-router.post("/nearest", sanitizePostNearestBranch, postNearestBranch);
+router.post("/nearest", postNearestBranchBodySanitizer, postNearestBranch);
 router.get("/list", getBranches);
 
 module.exports = router;

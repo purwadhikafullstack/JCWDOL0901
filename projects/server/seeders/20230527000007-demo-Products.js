@@ -7,7 +7,7 @@ module.exports = {
 			"Products",
 			[
 				{
-					image: "/public/images/product/1.png",
+					image: "/product/1.png",
 					name: "Jambu Kristal",
 					price: 14900,
 					description: "jambu Kristal 500gr - 600gr",
@@ -16,7 +16,7 @@ module.exports = {
 					category_id: 1,
 				},
 				{
-					image: "/public/images/product/2.png",
+					image: "/product/2.png",
 					name: "Jeruk Nipis",
 					price: 7300,
 					description:
@@ -26,7 +26,7 @@ module.exports = {
 					category_id: 1,
 				},
 				{
-					image: "/public/images/product/3.png",
+					image: "/product/3.png",
 					name: "Alpukat Mentega",
 					price: 41000,
 					description: "Alpukat Mentega 900gr - 1kg",
@@ -35,7 +35,7 @@ module.exports = {
 					category_id: 1,
 				},
 				{
-					image: "/public/images/product/4.png",
+					image: "/product/4.png",
 					name: "Buah Naga Merah",
 					price: 28300,
 					description:
@@ -45,7 +45,7 @@ module.exports = {
 					category_id: 1,
 				},
 				{
-					image: "/public/images/product/5.png",
+					image: "/product/5.png",
 					name: "Paprika Merah",
 					price: 20900,
 					description: "paprika Merah 135gr - 175gr",
@@ -54,7 +54,7 @@ module.exports = {
 					category_id: 1,
 				},
 				{
-					image: "/public/images/product/6.png",
+					image: "/product/6.png",
 					name: "Labu Siam Acar",
 					price: 4900,
 					description: "Labu Siam Acar isi 4 - 5 pcs",
@@ -63,7 +63,7 @@ module.exports = {
 					category_id: 1,
 				},
 				{
-					image: "/public/images/product/7.png",
+					image: "/product/7.png",
 					name: "My Roti Roti Tawar Funwari",
 					price: 14200,
 					description:
@@ -73,7 +73,7 @@ module.exports = {
 					category_id: 2,
 				},
 				{
-					image: "/public/images/product/8.png",
+					image: "/product/8.png",
 					name: "Sariwangi Teh Melati isi 25",
 					price: 9400,
 					description:
@@ -83,7 +83,7 @@ module.exports = {
 					category_id: 2,
 				},
 				{
-					image: "/public/images/product/9.png",
+					image: "/product/9.png",
 					name: "Nestle Koko Krunch",
 					price: 43400,
 					description: "Sereal sarapan gandum dengan rasa coklat",
@@ -92,7 +92,7 @@ module.exports = {
 					category_id: 2,
 				},
 				{
-					image: "/public/images/product/10.png",
+					image: "/product/10.png",
 					name: "Meses Ceres Classic",
 					price: 23800,
 					description:
@@ -102,7 +102,7 @@ module.exports = {
 					category_id: 2,
 				},
 				{
-					image: "/public/images/product/11.png",
+					image: "/product/11.png",
 					name: "Kapal Api Kopi Special",
 					price: 14900,
 					description:
@@ -112,7 +112,7 @@ module.exports = {
 					category_id: 2,
 				},
 				{
-					image: "/public/images/product/12.png",
+					image: "/product/12.png",
 					name: "Tropicana Slim Sweetener Honey 50 Sachet 2.5gr",
 					price: 53600,
 					description: "Pemanis rendah kalori dengan madu (hanya 5 kkal)",
@@ -121,7 +121,7 @@ module.exports = {
 					category_id: 2,
 				},
 				{
-					image: "/public/images/product/13.png",
+					image: "/product/13.png",
 					name: "Le Minerale - Galon 15 L",
 					price: 22000,
 					description:
@@ -131,8 +131,8 @@ module.exports = {
 					category_id: 25,
 				},
 				{
-					image: "/public/images/product/14.png",
-					name: "Arang Briket BBBQ 2,5kg",
+					image: "/product/14.png",
+					name: "Arang Briket BBQ 2,5kg",
 					price: 45400,
 					description:
 						"Blok bahan yang dapat dibakar yang digunakan sebagai bahan bakar untuk memulai dan mempertahankan nyala api",
@@ -141,7 +141,7 @@ module.exports = {
 					category_id: 25,
 				},
 				{
-					image: "/public/images/product/15.png",
+					image: "/product/15.png",
 					name: "tabung Gas Mini Hi-Cook Gas Kompor Portable Hicook Original 230gr",
 					price: 26600,
 					description:
@@ -151,7 +151,7 @@ module.exports = {
 					category_id: 25,
 				},
 				{
-					image: "/public/images/product/16.png",
+					image: "/product/16.png",
 					name: "Indomie Goreng Spesial 1 Pcs 85gr",
 					price: 3200,
 					description:
@@ -161,7 +161,7 @@ module.exports = {
 					category_id: 3,
 				},
 				{
-					image: "/public/images/product/17.png",
+					image: "/product/17.png",
 					name: "Puregreen Beras Merah 1kg/Red Rice Organik",
 					price: 44100,
 					description:
@@ -171,17 +171,16 @@ module.exports = {
 					category_id: 3,
 				},
 				{
-					image: "/public/images/product/18.png",
+					image: "/product/18.png",
 					name: "Filma Minyak Goren 2L Pouch/Cooking Oil",
 					price: 40500,
-					description:
-						"Minyak goreng non kolestrol, terbuat dari buah sawit segar pilihan",
+					description: "Minyak goreng non kolestrol, terbuat dari buah sawit segar pilihan",
 					weight: 2000,
 					unit: "2000 mililiter",
 					category_id: 13,
 				},
 				{
-					image: "/public/images/product/19.png",
+					image: "/product/19.png",
 					name: "La Fonte Spaghettini 450gr",
 					price: 18000,
 					description:
@@ -191,7 +190,7 @@ module.exports = {
 					category_id: 13,
 				},
 				{
-					image: "/public/images/product/20.png",
+					image: "/product/20.png",
 					name: "Gulaku Premium 1kg/Gula Pasir",
 					price: 15200,
 					description:
@@ -201,7 +200,7 @@ module.exports = {
 					category_id: 13,
 				},
 				{
-					image: "/public/images/product/21.png",
+					image: "/product/21.png",
 					name: "Garam Dolphin 500gr",
 					price: 8700,
 					description:
@@ -211,7 +210,7 @@ module.exports = {
 					category_id: 13,
 				},
 				{
-					image: "/public/images/product/22.png",
+					image: "/product/22.png",
 					name: "Ultra Milk UHT Chocolate 1000ml/Susu UHT",
 					price: 20400,
 					description:
@@ -221,7 +220,7 @@ module.exports = {
 					category_id: 4,
 				},
 				{
-					image: "/public/images/product/23.png",
+					image: "/product/23.png",
 					name: "Greenfields Fresh Milk Low Fat 1L",
 					price: 34100,
 					description:
@@ -231,7 +230,7 @@ module.exports = {
 					category_id: 4,
 				},
 				{
-					image: "/public/images/product/24.png",
+					image: "/product/24.png",
 					name: "Kraft Cheddar Cheese 160gr/Keju",
 					price: 27400,
 					description:
@@ -241,7 +240,7 @@ module.exports = {
 					category_id: 4,
 				},
 				{
-					image: "/public/images/product/25.png",
+					image: "/product/25.png",
 					name: "Anchor Salted Butter 100gr/Mentega",
 					price: 35000,
 					description:
@@ -251,7 +250,7 @@ module.exports = {
 					category_id: 4,
 				},
 				{
-					image: "/public/images/product/26.png",
+					image: "/product/26.png",
 					name: "Yakult Minuman Prebiotik - isi 5",
 					price: 10400,
 					description:
@@ -261,7 +260,7 @@ module.exports = {
 					category_id: 4,
 				},
 				{
-					image: "/public/images/product/27.png",
+					image: "/product/27.png",
 					name: "Frisian Flag Susu Kental Manis Kaleng 370gr/SKM",
 					price: 13100,
 					description:
@@ -271,7 +270,7 @@ module.exports = {
 					category_id: 4,
 				},
 				{
-					image: "/public/images/product/28.png",
+					image: "/product/28.png",
 					name: "Paket Masak Sop Kimlo",
 					price: 23400,
 					description: "Paket masak untuk membuat sop kimlo",
@@ -280,7 +279,7 @@ module.exports = {
 					category_id: 5,
 				},
 				{
-					image: "/public/images/product/29.png",
+					image: "/product/29.png",
 					name: "Paket Masak Sayur Lodeh",
 					price: 28800,
 					description: "Paket masak untuk membuat sayur lodeh",
@@ -289,7 +288,7 @@ module.exports = {
 					category_id: 5,
 				},
 				{
-					image: "/public/images/product/30.png",
+					image: "/product/30.png",
 					name: "Paket Masak Capcay",
 					price: 26800,
 					description: "Paket masak untuk membuat capcay",
@@ -298,7 +297,7 @@ module.exports = {
 					category_id: 5,
 				},
 				{
-					image: "/public/images/product/31.png",
+					image: "/product/31.png",
 					name: "Paket Masak Sapo Tahu",
 					price: 33800,
 					description: "Paket Masak untuk membuat Sapo Tahu",
@@ -307,7 +306,7 @@ module.exports = {
 					category_id: 5,
 				},
 				{
-					image: "/public/images/product/32.png",
+					image: "/product/32.png",
 					name: "Paket Masak Sayur Asem",
 					price: 23700,
 					description: "Paket Masak untuk membuat sayur asem",
@@ -316,7 +315,7 @@ module.exports = {
 					category_id: 5,
 				},
 				{
-					image: "/public/images/product/33.png",
+					image: "/product/33.png",
 					name: "Paket Masak Semur Telur Ala Bango",
 					price: 48400,
 					description: "Paket Masak untuk membuat semur telur ala Bango",
@@ -325,7 +324,7 @@ module.exports = {
 					category_id: 5,
 				},
 				{
-					image: "/public/images/product/34.png",
+					image: "/product/34.png",
 					name: "Kanzler Frankfurter Cocktail 500gr/Sosis",
 					price: 59900,
 					description:
@@ -335,7 +334,7 @@ module.exports = {
 					category_id: 6,
 				},
 				{
-					image: "/public/images/product/35.png",
+					image: "/product/35.png",
 					name: "Fiesta Cheesy Lover 500gr",
 					price: 72900,
 					description:
@@ -345,7 +344,7 @@ module.exports = {
 					category_id: 6,
 				},
 				{
-					image: "/public/images/product/36.png",
+					image: "/product/36.png",
 					name: "Mujigae Topokki 170gr",
 					price: 25100,
 					description:
@@ -355,17 +354,16 @@ module.exports = {
 					category_id: 6,
 				},
 				{
-					image: "/public/images/product/37.png",
+					image: "/product/37.png",
 					name: "Belfoods Royal Itaewon Chicken 200gr",
 					price: 43000,
-					description:
-						"Ayam goreng ala Korea dengan saus original manis - gurih",
+					description: "Ayam goreng ala Korea dengan saus original manis - gurih",
 					weight: 200,
 					unit: "200 gram",
 					category_id: 6,
 				},
 				{
-					image: "/public/images/product/38.png",
+					image: "/product/38.png",
 					name: "Sumber Selera Bakso SB Premium 25pcs",
 					price: 47400,
 					description:
@@ -375,7 +373,7 @@ module.exports = {
 					category_id: 6,
 				},
 				{
-					image: "/public/images/product/39.png",
+					image: "/product/39.png",
 					name: "Cedea Fish Roll 250gr isi 10pcs",
 					price: 19500,
 					description:
@@ -385,17 +383,16 @@ module.exports = {
 					category_id: 6,
 				},
 				{
-					image: "/public/images/product/40.png",
+					image: "/product/40.png",
 					name: "Paha & Dada Ayam 450gr So Good",
 					price: 28900,
-					description:
-						"Frozen food premium cut yang terdiri dari potongan paha dan dada",
+					description: "Frozen food premium cut yang terdiri dari potongan paha dan dada",
 					weight: 450,
 					unit: "450 gram",
 					category_id: 7,
 				},
 				{
-					image: "/public/images/product/41.png",
+					image: "/product/41.png",
 					name: "Paha Ayam Boneless BSL 500gr Sreeya",
 					price: 31900,
 					description: "Frozen food kualitas ayam terbaik",
@@ -404,7 +401,7 @@ module.exports = {
 					category_id: 7,
 				},
 				{
-					image: "/public/images/product/42.png",
+					image: "/product/42.png",
 					name: "Tofu Telur With Shrimp 140gr Sakura",
 					price: 10400,
 					description: "Tahu telur dengan udang merek Sakura",
@@ -413,7 +410,7 @@ module.exports = {
 					category_id: 7,
 				},
 				{
-					image: "/public/images/product/43.png",
+					image: "/product/43.png",
 					name: "Tahu Kotak Sutera Soft (Biru) 300gr Sakura",
 					price: 16900,
 					description: "Tahu kotak sutera halus",
@@ -422,7 +419,7 @@ module.exports = {
 					category_id: 7,
 				},
 				{
-					image: "/public/images/product/44.png",
+					image: "/product/44.png",
 					name: "Tofu Telur 160gr Sakura",
 					price: 10500,
 					description: "Tahu telur",
@@ -431,7 +428,7 @@ module.exports = {
 					category_id: 7,
 				},
 				{
-					image: "/public/images/product/45.png",
+					image: "/product/45.png",
 					name: "Tempe Jumbo 500gr Daun",
 					price: 14900,
 					description: "Tahu Jumbo",
@@ -440,7 +437,7 @@ module.exports = {
 					category_id: 7,
 				},
 				{
-					image: "/public/images/product/46.png",
+					image: "/product/46.png",
 					name: "Tenderloin Meltique Ryou Pouch 200gr",
 					price: 64500,
 					description: "Frozen food daging sapi tenderloin dalam kemasan pouch",
@@ -449,7 +446,7 @@ module.exports = {
 					category_id: 8,
 				},
 				{
-					image: "/public/images/product/47.png",
+					image: "/product/47.png",
 					name: "Striploin Meltique Ryou Pouch 200gr",
 					price: 64500,
 					description: "Frozen food daging sapi striploin dalam kemasan pouch",
@@ -458,7 +455,7 @@ module.exports = {
 					category_id: 8,
 				},
 				{
-					image: "/public/images/product/48.png",
+					image: "/product/48.png",
 					name: "Daging Shortplate Slice 250gr",
 					price: 45900,
 					description: "Frozen food daging sapi slice",
@@ -467,7 +464,7 @@ module.exports = {
 					category_id: 8,
 				},
 				{
-					image: "/public/images/product/49.png",
+					image: "/product/49.png",
 					name: "Black Angus Sirloin Steak AUS Meat Boys 235gr",
 					price: 197900,
 					description: "Frozen food daging sapi sirloin",
@@ -476,7 +473,7 @@ module.exports = {
 					category_id: 8,
 				},
 				{
-					image: "/public/images/product/50.png",
+					image: "/product/50.png",
 					name: "Sushi Gari Pink SH 150gr",
 					price: 39900,
 					description:
@@ -486,7 +483,7 @@ module.exports = {
 					category_id: 8,
 				},
 				{
-					image: "/public/images/product/51.png",
+					image: "/product/51.png",
 					name: "Salmon Fillet 200gr",
 					price: 86700,
 					description: "Frozen food salmon fillet 200gr - 225gr",
@@ -495,7 +492,7 @@ module.exports = {
 					category_id: 8,
 				},
 				{
-					image: "/public/images/product/52.png",
+					image: "/product/52.png",
 					name: "Wong Coco Sari Kelapa Cubes Cocopandan 800gr",
 					price: 16900,
 					description:
@@ -505,7 +502,7 @@ module.exports = {
 					category_id: 9,
 				},
 				{
-					image: "/public/images/product/53.png",
+					image: "/product/53.png",
 					name: "Fox's Crystal Clear Fruits 90gr isi 20 Pcs/Permen",
 					price: 8900,
 					description:
@@ -515,7 +512,7 @@ module.exports = {
 					category_id: 9,
 				},
 				{
-					image: "/public/images/product/54.png",
+					image: "/product/54.png",
 					name: "Maxicorn Tortilla Chips Barbeque 140gr",
 					price: 10400,
 					description:
@@ -525,7 +522,7 @@ module.exports = {
 					category_id: 9,
 				},
 				{
-					image: "/public/images/product/55.png",
+					image: "/product/55.png",
 					name: "Silverqueen Classic Almond 62gr/Cokelat",
 					price: 17100,
 					description:
@@ -535,7 +532,7 @@ module.exports = {
 					category_id: 9,
 				},
 				{
-					image: "/public/images/product/56.png",
+					image: "/product/56.png",
 					name: "Fitbar Chocolate Multigrain 5 Pcs 22 gr",
 					price: 25400,
 					description:
@@ -545,7 +542,7 @@ module.exports = {
 					category_id: 9,
 				},
 				{
-					image: "/public/images/product/57.png",
+					image: "/product/57.png",
 					name: "JollyTime Popcorn Blast O Butter 100gr",
 					price: 28300,
 					description:
@@ -555,37 +552,34 @@ module.exports = {
 					category_id: 9,
 				},
 				{
-					image: "/public/images/product/58.png",
+					image: "/product/58.png",
 					name: "Good Time Choco Dip 71gr",
 					price: 10000,
-					description:
-						"Perpaduan dari chocochips dengan lapisan cokelat lezat di bawah kukisnya",
+					description: "Perpaduan dari chocochips dengan lapisan cokelat lezat di bawah kukisnya",
 					weight: 71,
 					unit: "71 gram",
 					category_id: 10,
 				},
 				{
-					image: "/public/images/product/59.png",
+					image: "/product/59.png",
 					name: "Loacker Napolitaner 45gr/Wafer",
 					price: 16200,
-					description:
-						"Wafer renyah tiga lapis yang dilengkapi krim napolitaner ditengahnya",
+					description: "Wafer renyah tiga lapis yang dilengkapi krim napolitaner ditengahnya",
 					weight: 45,
 					unit: "45 gram",
 					category_id: 10,
 				},
 				{
-					image: "/public/images/product/60.png",
+					image: "/product/60.png",
 					name: "Gary Malkist Saluut Cokelat Crackers 110gr",
 					price: 8400,
-					description:
-						"Merupakan biskuit yang renyah dengan balutan cokelat yang tebal",
+					description: "Merupakan biskuit yang renyah dengan balutan cokelat yang tebal",
 					weight: 110,
 					unit: "110 gram",
 					category_id: 10,
 				},
 				{
-					image: "/public/images/product/61.png",
+					image: "/product/61.png",
 					name: "Oreo Red Velvet 119.6gr",
 					price: 12500,
 					description:
@@ -595,7 +589,7 @@ module.exports = {
 					category_id: 10,
 				},
 				{
-					image: "/public/images/product/62.png",
+					image: "/product/62.png",
 					name: "Delfi Orion Choco Pie 6P 180gr",
 					price: 19300,
 					description:
@@ -605,7 +599,7 @@ module.exports = {
 					category_id: 10,
 				},
 				{
-					image: "/public/images/product/63.png",
+					image: "/product/63.png",
 					name: "Khong Guan Assorted Can 1600gr",
 					price: 116100,
 					description:
@@ -615,7 +609,7 @@ module.exports = {
 					category_id: 10,
 				},
 				{
-					image: "/public/images/product/64.png",
+					image: "/product/64.png",
 					name: "Aice Sweet Corn 52gr/Es krim",
 					price: 4500,
 					description: "Es krim unik rasa jagung dengan soft cone berbentuk ",
@@ -624,7 +618,7 @@ module.exports = {
 					category_id: 11,
 				},
 				{
-					image: "/public/images/product/65.png",
+					image: "/product/65.png",
 					name: "Walls Selection Cookies & Cream Oreo Ice Cream 410ml - Es Krim Walls",
 					price: 38800,
 					description:
@@ -634,7 +628,7 @@ module.exports = {
 					category_id: 11,
 				},
 				{
-					image: "/public/images/product/66.png",
+					image: "/product/66.png",
 					name: "Glico Wings Haku Matcha Monaka Ice Cream 180ml/Es Krim",
 					price: 14500,
 					description:
@@ -644,7 +638,7 @@ module.exports = {
 					category_id: 11,
 				},
 				{
-					image: "/public/images/product/67.png",
+					image: "/product/67.png",
 					name: "Haagen-Dazs Mini Cup Belgian Chocolate Ice Cream 100ml/Es Krim",
 					price: 55000,
 					description:
@@ -654,7 +648,7 @@ module.exports = {
 					category_id: 11,
 				},
 				{
-					image: "/public/images/product/68.png",
+					image: "/product/68.png",
 					name: "Cornetto Mini Oreo Ice Cream 12 x 28 ml - Es Krim Walls",
 					price: 38400,
 					description:
@@ -664,7 +658,7 @@ module.exports = {
 					category_id: 11,
 				},
 				{
-					image: "/public/images/product/69.png",
+					image: "/product/69.png",
 					name: "Indofood Choc Rock Cone Rasa Indomie Goreng 110ml",
 					price: 11000,
 					description:
@@ -674,7 +668,7 @@ module.exports = {
 					category_id: 11,
 				},
 				{
-					image: "/public/images/product/70.png",
+					image: "/product/70.png",
 					name: "Aqua Mineral Water 1500ml/Air Mineral",
 					price: 6800,
 					description: "Air mineral yang dibuat dari sumber mata air pilihan",
@@ -683,17 +677,16 @@ module.exports = {
 					category_id: 12,
 				},
 				{
-					image: "/public/images/product/71.png",
+					image: "/product/71.png",
 					name: "Adem Sari Ching Ku Sparkling Herbal Lemon 320ml",
 					price: 8300,
-					description:
-						"Minuman yang dibuat dengan 3 ekstrak herbal serta perisa lemon",
+					description: "Minuman yang dibuat dengan 3 ekstrak herbal serta perisa lemon",
 					weight: 320,
 					unit: "320 mililiter",
 					category_id: 12,
 				},
 				{
-					image: "/public/images/product/72.png",
+					image: "/product/72.png",
 					name: "Teh Pucuk Harum Wangi Melati Botol 1360ml/Tea",
 					price: 12700,
 					description:
@@ -703,17 +696,16 @@ module.exports = {
 					category_id: 12,
 				},
 				{
-					image: "/public/images/product/73.png",
+					image: "/product/73.png",
 					name: "Sprite Botol 390ml/Soda",
 					price: 6700,
-					description:
-						"Minuman ringan bersoda dengan aroma rasa lemon-jeruk terkemuka di dunia",
+					description: "Minuman ringan bersoda dengan aroma rasa lemon-jeruk terkemuka di dunia",
 					weight: 390,
 					unit: "390 mililiter",
 					category_id: 12,
 				},
 				{
-					image: "/public/images/product/74.png",
+					image: "/product/74.png",
 					name: "ABC Sirup Squash Delight Jeruk Florida 460ml/Syrup",
 					price: 16500,
 					description: "Sirup squash no. 1 di Indonesia",
@@ -722,7 +714,7 @@ module.exports = {
 					category_id: 12,
 				},
 				{
-					image: "/public/images/product/75.png",
+					image: "/product/75.png",
 					name: "Mogu Mogu Coconut Juice 320ml/Jus",
 					price: 10000,
 					description: "Minuman yang memiliki rasa menyegarkan dari jus kelapa",
@@ -731,7 +723,7 @@ module.exports = {
 					category_id: 12,
 				},
 				{
-					image: "/public/images/product/76.png",
+					image: "/product/76.png",
 					name: "Bogasari Segitiga Biru Tepung Terigu Protein Sedang Premium 1kg",
 					price: 15300,
 					description:
@@ -741,7 +733,7 @@ module.exports = {
 					category_id: 13,
 				},
 				{
-					image: "/public/images/product/77.png",
+					image: "/product/77.png",
 					name: "Koepoe Koepoe Merah Rose Pewarna Makanan 30ml",
 					price: 6800,
 					description:
@@ -751,7 +743,7 @@ module.exports = {
 					category_id: 13,
 				},
 				{
-					image: "/public/images/product/78.png",
+					image: "/product/78.png",
 					name: "Mili Lychee In Syrup 565gr",
 					price: 38000,
 					description: "Buah leci dalam larutan gula",
@@ -760,7 +752,7 @@ module.exports = {
 					category_id: 13,
 				},
 				{
-					image: "/public/images/product/79.png",
+					image: "/product/79.png",
 					name: "Swallow Agar-Agar Putih Sachet Plain 7gr",
 					price: 6100,
 					description:
@@ -770,7 +762,7 @@ module.exports = {
 					category_id: 13,
 				},
 				{
-					image: "/public/images/product/80.png",
+					image: "/product/80.png",
 					name: "Nutrijell My Vla Vanilla 60gr",
 					price: 6300,
 					description:
@@ -780,7 +772,7 @@ module.exports = {
 					category_id: 13,
 				},
 				{
-					image: "/public/images/product/81.png",
+					image: "/product/81.png",
 					name: "Anchor Whipping Cream 250ml",
 					price: 44400,
 					description:
@@ -790,7 +782,7 @@ module.exports = {
 					category_id: 13,
 				},
 				{
-					image: "/public/images/product/82.png",
+					image: "/product/82.png",
 					name: "Sasa Santan Cair 200ml",
 					price: 9900,
 					description:
@@ -800,7 +792,7 @@ module.exports = {
 					category_id: 14,
 				},
 				{
-					image: "/public/images/product/83.png",
+					image: "/product/83.png",
 					name: "Heinz Tomato Ketchup 325gr/Saus Tomat",
 					price: 21000,
 					description:
@@ -810,7 +802,7 @@ module.exports = {
 					category_id: 14,
 				},
 				{
-					image: "/public/images/product/84.png",
+					image: "/product/84.png",
 					name: "Indofood Bumbu Racik Sayur Sop 20gr",
 					price: 2500,
 					description: "Bumbu instan untuk membuat sayur sop yang nikmat",
@@ -819,7 +811,7 @@ module.exports = {
 					category_id: 14,
 				},
 				{
-					image: "/public/images/product/85.png",
+					image: "/product/85.png",
 					name: "Boncabe Sambal Tabur Level 30 40gr",
 					price: 15200,
 					description: "Memiliki tingkat kepedasan yang ekstrim di mulut",
@@ -828,27 +820,25 @@ module.exports = {
 					category_id: 14,
 				},
 				{
-					image: "/public/images/product/86.png",
+					image: "/product/86.png",
 					name: "Pronas Corned Beef Kaleng 198gr",
 					price: 26900,
-					description:
-						"Kornet Sapi Pronas terbuat dari daging sapi yang berkualitas tinggi",
+					description: "Kornet Sapi Pronas terbuat dari daging sapi yang berkualitas tinggi",
 					weight: 198,
 					unit: "198 gram",
 					category_id: 14,
 				},
 				{
-					image: "/public/images/product/87.png",
+					image: "/product/87.png",
 					name: "Kobe Tepung Ayam Kentucky Super Crispy 200gr",
 					price: 6900,
-					description:
-						"Tepung bumbu untuk menghasilkan ayam goreng renyah, lezat dan pas berbumbu",
+					description: "Tepung bumbu untuk menghasilkan ayam goreng renyah, lezat dan pas berbumbu",
 					weight: 200,
 					unit: "200 gram",
 					category_id: 14,
 				},
 				{
-					image: "/public/images/product/88.png",
+					image: "/product/88.png",
 					name: "Zwitsal Aloe Vera Baby Bath Hair and Body 450ml",
 					price: 40800,
 					description:
@@ -858,7 +848,7 @@ module.exports = {
 					category_id: 15,
 				},
 				{
-					image: "/public/images/product/89.png",
+					image: "/product/89.png",
 					name: "Zwitsal Baby Bottle Cleaner 425ml",
 					price: 24900,
 					description:
@@ -868,7 +858,7 @@ module.exports = {
 					category_id: 15,
 				},
 				{
-					image: "/public/images/product/90.png",
+					image: "/product/90.png",
 					name: "Cerelac Homestyle Bubur Tim Ayam Bayam 120gr",
 					price: 18000,
 					description:
@@ -878,7 +868,7 @@ module.exports = {
 					category_id: 15,
 				},
 				{
-					image: "/public/images/product/91.png",
+					image: "/product/91.png",
 					name: "Promina Bubur Tim Daging Brokoli 8+ Bln 100gr",
 					price: 18000,
 					description:
@@ -888,7 +878,7 @@ module.exports = {
 					category_id: 15,
 				},
 				{
-					image: "/public/images/product/92.png",
+					image: "/product/92.png",
 					name: "Milna Bubur Bayi Organik 6 Bln Beras Merah 120gr",
 					price: 38000,
 					description: "Bubur bayi pendamping ASI untuk usia 6 bulan keatas",
@@ -897,7 +887,7 @@ module.exports = {
 					category_id: 15,
 				},
 				{
-					image: "/public/images/product/93.png",
+					image: "/product/93.png",
 					name: "Nutrilon Royal 4 Honey 800gr/Susu Anak 3-6 thn",
 					price: 192000,
 					description: "Susu untuk anak usia 3-6 Thn",
@@ -906,7 +896,7 @@ module.exports = {
 					category_id: 15,
 				},
 				{
-					image: "/public/images/product/94.png",
+					image: "/product/94.png",
 					name: "Dew It In The Shower - Miracle Gel-to-Oil Cleanser",
 					price: 239000,
 					description:
@@ -916,7 +906,7 @@ module.exports = {
 					category_id: 16,
 				},
 				{
-					image: "/public/images/product/95.png",
+					image: "/product/95.png",
 					name: "Gentle Hour Hydrating Toner DEW IT AGAIN 150ml",
 					price: 185000,
 					description:
@@ -926,17 +916,16 @@ module.exports = {
 					category_id: 16,
 				},
 				{
-					image: "/public/images/product/96.png",
+					image: "/product/96.png",
 					name: "NIVEA Body Lotion Extra White Instant Glow",
 					price: 30900,
-					description:
-						"Dapat mencerahkan, melindungi, melembabkan dan melembutkan kulit",
+					description: "Dapat mencerahkan, melindungi, melembabkan dan melembutkan kulit",
 					weight: 200,
 					unit: "200 mililiter",
 					category_id: 16,
 				},
 				{
-					image: "/public/images/product/97.png",
+					image: "/product/97.png",
 					name: "BIORE UV AQUA Rich Watery Essence SPF50 50gr/Sunscreen",
 					price: 128600,
 					description:
@@ -946,7 +935,7 @@ module.exports = {
 					category_id: 16,
 				},
 				{
-					image: "/public/images/product/98.png",
+					image: "/product/98.png",
 					name: "Whitelab Mugwort Pore Clarifying Mask 50gr",
 					price: 76000,
 					description:
@@ -956,7 +945,7 @@ module.exports = {
 					category_id: 16,
 				},
 				{
-					image: "/public/images/product/99.png",
+					image: "/product/99.png",
 					name: "Emina Glossy Stain Lip Tint Autumn Bell 3gr",
 					price: 47700,
 					description:
@@ -966,7 +955,7 @@ module.exports = {
 					category_id: 16,
 				},
 				{
-					image: "/public/images/product/100.png",
+					image: "/product/100.png",
 					name: "Lifebuoy Antibakteri Total 10 Activ Silver+ Formula 500ml/Sabun Mandi",
 					price: 70000,
 					description:
@@ -976,7 +965,7 @@ module.exports = {
 					category_id: 17,
 				},
 				{
-					image: "/public/images/product/101.png",
+					image: "/product/101.png",
 					name: "Lifebuoy Antibakteri Total 10 Activ Silver+ Formula 500ml/Sabun Mandi",
 					price: 70000,
 					description:
@@ -986,7 +975,7 @@ module.exports = {
 					category_id: 17,
 				},
 				{
-					image: "/public/images/product/102.png",
+					image: "/product/102.png",
 					name: "Dettol Bodywash Tropical Splash 925gr",
 					price: 113000,
 					description: "Sabun cair untuk perlindungan kulit terhadap kuman",
@@ -995,7 +984,7 @@ module.exports = {
 					category_id: 17,
 				},
 				{
-					image: "/public/images/product/103.png",
+					image: "/product/103.png",
 					name: "Head & Shoulders Supreme Anti Hairfall Shampoo 135ml",
 					price: 35300,
 					description:
@@ -1005,7 +994,7 @@ module.exports = {
 					category_id: 17,
 				},
 				{
-					image: "/public/images/product/104.png",
+					image: "/product/104.png",
 					name: "Colgate Total Charcoal Toothpaste 150gr/Pasta Gigi",
 					price: 44500,
 					description:
@@ -1015,7 +1004,7 @@ module.exports = {
 					category_id: 17,
 				},
 				{
-					image: "/public/images/product/105.png",
+					image: "/product/105.png",
 					name: "Garnier Men Turbo Light Oil Control Cooling Foam Face Wash 100ml/Sabun Muka",
 					price: 40300,
 					description:
@@ -1025,7 +1014,7 @@ module.exports = {
 					category_id: 17,
 				},
 				{
-					image: "/public/images/product/106.png",
+					image: "/product/106.png",
 					name: "Dettol Handwash Original Pump 245ml/Sabun Cuci Tangan",
 					price: 40900,
 					description:
@@ -1035,7 +1024,7 @@ module.exports = {
 					category_id: 17,
 				},
 				{
-					image: "/public/images/product/107.png",
+					image: "/product/107.png",
 					name: "Betadine Feminine Wash Sirih Radiance Blossom 100ml/Sabun Kewanitaan",
 					price: 25900,
 					description:
@@ -1045,7 +1034,7 @@ module.exports = {
 					category_id: 18,
 				},
 				{
-					image: "/public/images/product/108.png",
+					image: "/product/108.png",
 					name: "Rexona Men Roll On Ice Cool 45ml - New Pack",
 					price: 20900,
 					description:
@@ -1055,7 +1044,7 @@ module.exports = {
 					category_id: 18,
 				},
 				{
-					image: "/public/images/product/109.png",
+					image: "/product/109.png",
 					name: "Natur Hair Tonic Ginseng 90ml",
 					price: 42800,
 					description:
@@ -1065,7 +1054,7 @@ module.exports = {
 					category_id: 18,
 				},
 				{
-					image: "/public/images/product/110.png",
+					image: "/product/110.png",
 					name: "Autan Refresh Spritz Liquid Bottle 100ml",
 					price: 15000,
 					description:
@@ -1075,7 +1064,7 @@ module.exports = {
 					category_id: 18,
 				},
 				{
-					image: "/public/images/product/111.png",
+					image: "/product/111.png",
 					name: "Autan Care & Protect Tube 50ml",
 					price: 12300,
 					description:
@@ -1085,7 +1074,7 @@ module.exports = {
 					category_id: 18,
 				},
 				{
-					image: "/public/images/product/112.png",
+					image: "/product/112.png",
 					name: "Kahf Revered Oud Eau de Toilette 35ml",
 					price: 76800,
 					description:
@@ -1095,7 +1084,7 @@ module.exports = {
 					category_id: 18,
 				},
 				{
-					image: "/public/images/product/113.png",
+					image: "/product/113.png",
 					name: "Stimuno Syrup Grape 60ml",
 					price: 31200,
 					description:
@@ -1105,7 +1094,7 @@ module.exports = {
 					category_id: 19,
 				},
 				{
-					image: "/public/images/product/114.png",
+					image: "/product/114.png",
 					name: "Sakatonik ABC Orange - 30 Tablet",
 					price: 17000,
 					description:
@@ -1115,7 +1104,7 @@ module.exports = {
 					category_id: 19,
 				},
 				{
-					image: "/public/images/product/115.png",
+					image: "/product/115.png",
 					name: "Omeheart Softgels 600 Mg Isi 60 Kapsul",
 					price: 80000,
 					description:
@@ -1125,7 +1114,7 @@ module.exports = {
 					category_id: 19,
 				},
 				{
-					image: "/public/images/product/116.png",
+					image: "/product/116.png",
 					name: "Ever E250 - isi 30 Pcs Vitamin E",
 					price: 70200,
 					description: "Antioksidan yang berfunsgi meredam efek radikal bebas",
@@ -1134,7 +1123,7 @@ module.exports = {
 					category_id: 19,
 				},
 				{
-					image: "/public/images/product/117.png",
+					image: "/product/117.png",
 					name: "Comvita Manuka Honey Blend 500gr/Madu Manuka",
 					price: 302900,
 					description:
@@ -1144,17 +1133,16 @@ module.exports = {
 					category_id: 19,
 				},
 				{
-					image: "/public/images/product/118.png",
+					image: "/product/118.png",
 					name: "Madu TJ Super - 500gr",
 					price: 62000,
-					description:
-						"Madu pilihan yang mengandung royal jelly dan bee pollen",
+					description: "Madu pilihan yang mengandung royal jelly dan bee pollen",
 					weight: 500,
 					unit: "500 gram",
 					category_id: 19,
 				},
 				{
-					image: "/public/images/product/119.png",
+					image: "/product/119.png",
 					name: "Freshcare Mix Eucalyptus 5ml",
 					price: 14500,
 					description:
@@ -1164,7 +1152,7 @@ module.exports = {
 					category_id: 20,
 				},
 				{
-					image: "/public/images/product/120.png",
+					image: "/product/120.png",
 					name: "Strepsils Vitamin C 1 Sachet isi 8 tablet/permen",
 					price: 21600,
 					description:
@@ -1174,7 +1162,7 @@ module.exports = {
 					category_id: 20,
 				},
 				{
-					image: "/public/images/product/121.png",
+					image: "/product/121.png",
 					name: "Insto Dry Eyes Obat Tetes Mata Kering",
 					price: 17100,
 					description:
@@ -1184,7 +1172,7 @@ module.exports = {
 					category_id: 20,
 				},
 				{
-					image: "/public/images/product/122.png",
+					image: "/product/122.png",
 					name: "Tempra Paracetamol +6 Thn - 60ml",
 					price: 60000,
 					description:
@@ -1194,7 +1182,7 @@ module.exports = {
 					category_id: 20,
 				},
 				{
-					image: "/public/images/product/123.png",
+					image: "/product/123.png",
 					name: "Mylanta Liquid - 50ml",
 					price: 18600,
 					description:
@@ -1204,17 +1192,16 @@ module.exports = {
 					category_id: 20,
 				},
 				{
-					image: "/public/images/product/124.png",
+					image: "/product/124.png",
 					name: "Counterpain Cream 30gr",
 					price: 52900,
-					description:
-						"Krim untuk membantu meredakan nyeri pada otot, sendi, keseleo dan encok",
+					description: "Krim untuk membantu meredakan nyeri pada otot, sendi, keseleo dan encok",
 					weight: 30,
 					unit: "30 gram",
 					category_id: 20,
 				},
 				{
-					image: "/public/images/product/125.png",
+					image: "/product/125.png",
 					name: "SOS Hand Sanitizer Spray",
 					price: 18200,
 					description:
@@ -1224,7 +1211,7 @@ module.exports = {
 					category_id: 21,
 				},
 				{
-					image: "/public/images/product/126.png",
+					image: "/product/126.png",
 					name: "Dettol Antiseptic Liquid - 245ml",
 					price: 67900,
 					description:
@@ -1234,7 +1221,7 @@ module.exports = {
 					category_id: 21,
 				},
 				{
-					image: "/public/images/product/127.png",
+					image: "/product/127.png",
 					name: "Hansaplast Salep Luka 20gr",
 					price: 49900,
 					description: "Salep untuk perawatan luka dan kulit yang rusak",
@@ -1243,7 +1230,7 @@ module.exports = {
 					category_id: 21,
 				},
 				{
-					image: "/public/images/product/128.png",
+					image: "/product/128.png",
 					name: "Thermometer Digital Thermo One Alpha 3 OneMed",
 					price: 26000,
 					description:
@@ -1253,7 +1240,7 @@ module.exports = {
 					category_id: 21,
 				},
 				{
-					image: "/public/images/product/129.png",
+					image: "/product/129.png",
 					name: "Hansaplast Spray Antiseptik Pembersih Luka - 40ml",
 					price: 30300,
 					description:
@@ -1263,7 +1250,7 @@ module.exports = {
 					category_id: 21,
 				},
 				{
-					image: "/public/images/product/130.png",
+					image: "/product/130.png",
 					name: "Lifebuoy Sanitizer Spray - 100ml/Tangan & Serbaguna",
 					price: 26100,
 					description:
@@ -1273,7 +1260,7 @@ module.exports = {
 					category_id: 21,
 				},
 				{
-					image: "/public/images/product/131.png",
+					image: "/product/131.png",
 					name: "SoKlin Powder Detergent Soft Sakura Bag 770gr",
 					price: 26500,
 					description:
@@ -1283,7 +1270,7 @@ module.exports = {
 					category_id: 22,
 				},
 				{
-					image: "/public/images/product/132.png",
+					image: "/product/132.png",
 					name: "Nice Tisu Wajah 900gr 2ply/Facial Tissue",
 					price: 44400,
 					description:
@@ -1293,7 +1280,7 @@ module.exports = {
 					category_id: 22,
 				},
 				{
-					image: "/public/images/product/133.png",
+					image: "/product/133.png",
 					name: "Kit Wiper Fluid 500ml cairan wiper",
 					price: 15300,
 					description:
@@ -1303,7 +1290,7 @@ module.exports = {
 					category_id: 22,
 				},
 				{
-					image: "/public/images/product/134.png",
+					image: "/product/134.png",
 					name: "Mr Muscle Pembersih Kamar Mandi 5in1 Spray 500ml",
 					price: 21100,
 					description:
@@ -1313,7 +1300,7 @@ module.exports = {
 					category_id: 22,
 				},
 				{
-					image: "/public/images/product/135.png",
+					image: "/product/135.png",
 					name: "Lap Plas Chamois Aion/Lap Kanebo",
 					price: 62900,
 					description:
@@ -1323,7 +1310,7 @@ module.exports = {
 					category_id: 22,
 				},
 				{
-					image: "/public/images/product/136.png",
+					image: "/product/136.png",
 					name: "Bagus Anti Bau Toilet 100gr",
 					price: 16400,
 					description:
@@ -1333,7 +1320,7 @@ module.exports = {
 					category_id: 22,
 				},
 				{
-					image: "/public/images/product/137.png",
+					image: "/product/137.png",
 					name: "Cesar Chicken & Veg wet dog food - 100gr/Makanan Anjing Basah",
 					price: 20800,
 					description:
@@ -1343,7 +1330,7 @@ module.exports = {
 					category_id: 23,
 				},
 				{
-					image: "/public/images/product/138.png",
+					image: "/product/138.png",
 					name: "Pedigree Dry Dog Food Beef & Vegetable - 500gr/Makanan Anjing Kering",
 					price: 31500,
 					description:
@@ -1353,27 +1340,25 @@ module.exports = {
 					category_id: 23,
 				},
 				{
-					image: "/public/images/product/139.png",
+					image: "/product/139.png",
 					name: "Me-O Pouch Kitten Food Tuna in Jelly 80gr",
 					price: 7600,
-					description:
-						"Makanan basah untuk anak kucing dalam kemasan pouch yang praktis",
+					description: "Makanan basah untuk anak kucing dalam kemasan pouch yang praktis",
 					weight: 80,
 					unit: "80 gram",
 					category_id: 23,
 				},
 				{
-					image: "/public/images/product/140.png",
+					image: "/product/140.png",
 					name: "Me-O Canned Food Tuna in Jelly 400gr",
 					price: 23900,
-					description:
-						"Makanan basah dalam kemasan kaleng untuk kucing dewasa dengan rasa tuna",
+					description: "Makanan basah dalam kemasan kaleng untuk kucing dewasa dengan rasa tuna",
 					weight: 400,
 					unit: "400 gram",
 					category_id: 23,
 				},
 				{
-					image: "/public/images/product/141.png",
+					image: "/product/141.png",
 					name: "Whiskas Tuna Dry Cat Food - 1.2kg/Makanan Kucing Kering",
 					price: 80500,
 					description:
@@ -1383,7 +1368,7 @@ module.exports = {
 					category_id: 23,
 				},
 				{
-					image: "/public/images/product/142.png",
+					image: "/product/142.png",
 					name: "Whiskas Adult Wet Cat Food Tuna - 80gr Pouch/Makanan Kucing Basah",
 					price: 7700,
 					description:
@@ -1393,7 +1378,7 @@ module.exports = {
 					category_id: 23,
 				},
 				{
-					image: "/public/images/product/143.png",
+					image: "/product/143.png",
 					name: "Alkaline Battery AAA - isi 4+2 Pcs",
 					price: 32600,
 					description: "Baterai ABC Alkaline AAA isi 6 pcs 1.5v",
@@ -1402,7 +1387,7 @@ module.exports = {
 					category_id: 24,
 				},
 				{
-					image: "/public/images/product/144.png",
+					image: "/product/144.png",
 					name: "Alkaline Battery AA - isi 4+2 Pcs",
 					price: 32600,
 					description: "Baterai ABC Alkaline AA isi 6 pcs",
@@ -1411,7 +1396,7 @@ module.exports = {
 					category_id: 24,
 				},
 				{
-					image: "/public/images/product/145.png",
+					image: "/product/145.png",
 					name: "Philips Lampu LED My Care 12w Putih - 1Pcs",
 					price: 75800,
 					description: "Lampu LED 12 watt merek Philips",
@@ -1420,7 +1405,7 @@ module.exports = {
 					category_id: 24,
 				},
 				{
-					image: "/public/images/product/146.png",
+					image: "/product/146.png",
 					name: "Philips Lampu LED My Care 8w Putih - 1Pcs",
 					price: 56300,
 					description: "Lampu LED 8 watt merek Philips",
@@ -1429,7 +1414,7 @@ module.exports = {
 					category_id: 24,
 				},
 				{
-					image: "/public/images/product/147.png",
+					image: "/product/147.png",
 					name: "Panther Lilin Mati Lampu Putih Jumbo - 1 box isi 10 Pcs",
 					price: 24900,
 					description: "Lilin putih untuk kondisi mati lampu isi 10 batang",
@@ -1438,7 +1423,7 @@ module.exports = {
 					category_id: 24,
 				},
 				{
-					image: "/public/images/product/148.png",
+					image: "/product/148.png",
 					name: "Kenmaster Stop Kontak F4 Overheat SNI",
 					price: 88000,
 					description: "Stop kontak dengan 4 lubang",

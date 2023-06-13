@@ -1,21 +1,28 @@
 const {
+<<<<<<< HEAD
+	registerUser,
+	getAdmins,
+	registerAdmin,
+	verifyUser,
+	loginAdmin,
+=======
   registerUser,
   getAdmins,
   registerAdmin,
   verifyUser,
   loginAdmin,
   loginUser,
+>>>>>>> development
 } = require("../controllers/authController");
-const {
-  getReferrerId,
-  getAdminsQueryParamsSanitizer,
-  isSuperAdmin,
-} = require("../middlewares/authMiddleware");
+
+const { getReferrerId, isSuperAdmin, isAdmin } = require("../middlewares/authMiddleware");
+
+const { getAdminsQuerySanitizer } = require("../middlewares/sanitizer.js");
 
 const router = require("express").Router();
 
-router.get("/admin/list", getAdminsQueryParamsSanitizer, getAdmins);
-router.post("/admin/register", isSuperAdmin, registerAdmin);
+router.get("/admin/list", isAdmin, getAdminsQuerySanitizer, getAdmins);
+router.post("/admin/register", isAdmin, isSuperAdmin, registerAdmin);
 router.post("/admin/login", loginAdmin);
 
 router.post("/user/login", loginUser);
