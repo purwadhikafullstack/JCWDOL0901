@@ -6,7 +6,7 @@ const CreateProductPromoForm = () => {
 	const [error, setError] = React.useState("");
 
 	return (
-		<div className="mt-auto mx-auto rounded-xl items-center min-w-fit shrink-0 flex flex-col pb-10 px-6 bg-white max-w-fit">
+		<div className="mt-auto mx-auto rounded-xl items-center min-w-fit shrink-0 flex flex-col pb-10 px-6 bg-white max-w-fit sm:shadow-xl sm:px-8">
 			<ErrorWarning error={error} />
 			<CreateProductPromoFormWithValidator setError={setError} />
 		</div>

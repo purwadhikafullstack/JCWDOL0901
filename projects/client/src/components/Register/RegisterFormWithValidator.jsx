@@ -6,15 +6,15 @@ import { useFormik } from "formik";
 import { formikRegistrationConfiguration } from "./config/formikRegistrationConfiguration";
 
 const RegisterFormWithValidator = ({ setError }) => {
-  const navigate = useNavigate();
-  const formik = useFormik(formikRegistrationConfiguration(setError, navigate));
+	const navigate = useNavigate();
+	const formik = useFormik(formikRegistrationConfiguration(setError, navigate));
 
-  return (
-    <form onSubmit={formik.handleSubmit} noValidate>
-      <RegisterInputField formik={formik} />
-      <Button type="submit" name="Register" disabled={formik.isSubmitting || formik.isValidating} />
-    </form>
-  );
+	return (
+		<form onSubmit={formik.handleSubmit} noValidate>
+			<RegisterInputField formik={formik} />
+			<Button type="submit" name="Register" disabled={formik.isSubmitting || formik.isValidating} />
+		</form>
+	);
 };
 
 export default RegisterFormWithValidator;
