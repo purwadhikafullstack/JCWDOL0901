@@ -13,7 +13,7 @@ const CreateBranchAdminFormWithValidator = () => {
 	const formik = useFormik(formikCategoryConfiguration(navigate));
 
 	return (
-		<div className="my-auto items-center min-w-fit shrink-0 flex flex-col pb-10 px-6">
+		<div className="my-auto items-center min-w-fit shrink-0 flex flex-col pb-10 px-8">
 			<form onSubmit={formik.handleSubmit} encType="multipart/form-data">
 				<CategoryImagePreview file={file} />
 				<CategoryInputField formik={formik} setFile={setFile} />

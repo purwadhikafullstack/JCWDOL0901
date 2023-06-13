@@ -4,7 +4,7 @@ import FileUploadInputGroup from "../FileUploadInputGroup";
 
 const CategoryInputField = ({ formik, setFile }) => {
 	return (
-		<div className="flex flex-col items-center w-96">
+		<div className="flex flex-col items-center w-full">
 			<InputGroup name="Category Name" type="text" inputKey="name" formik={formik} />
 			<FileUploadInputGroup
 				name="Upload Image"
