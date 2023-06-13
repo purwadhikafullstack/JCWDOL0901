@@ -3,7 +3,7 @@ import { Listbox } from "@headlessui/react";
 
 const ToggleDropDown = ({ open, data }) => {
 	return (
-		<Listbox.Button className={`bg-white w-full border-2 border-green-200 py-2 rounded-lg mb-2`}>
+		<Listbox.Button className={`bg-white w-full border border-green-200 py-2 rounded-lg mb-2`}>
 			<div className="flex flex-row items-center justify-end max-w-full">
 				<div className="max-w-[70%] mx-auto font-semibold text-sm overflow-x-hidden ">
 					<div className="max-w-full whitespace-nowrap text-xs box-border">
@@ -34,7 +34,7 @@ const DataLists = ({ lists, setter }) => {
 	return lists.map((item, index) => {
 		return (
 			<Listbox.Option
-				className="border ml-2 py-2 px-4 mb-0.5 rounded-lg shadow whitespace-nowrap max-w-full bg-white"
+				className="border ml-2 py-2 px-4 mb-0.5 rounded-lg shadow whitespace-nowrap min-w-inherit max-w-full bg-white"
 				key={index}
 				value={item.id}
 				onClick={() => setter(item)}
@@ -55,9 +55,13 @@ const DropDownOptions = ({ setter, getter }) => {
 	}, []);
 
 	return (
-		<Listbox.Options className="absolute max-w-inherit max-h-20 overflow-y-scroll">
-			{lists && <DataLists lists={lists} setter={setter} />}
-		</Listbox.Options>
+		lists && (
+			<div className="relative">
+				<Listbox.Options className="absolute mt-1 h-20 inset-0 w-full overflow-auto rounded-md py-1 text-base">
+					<DataLists lists={lists} setter={setter} />
+				</Listbox.Options>
+			</div>
+		)
 	);
 };
 
