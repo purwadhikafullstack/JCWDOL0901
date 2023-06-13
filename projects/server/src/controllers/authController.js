@@ -50,13 +50,11 @@ const loginAdmin = async (request, response) => {
 };
 
 const loginUser = async (request, response) => {
-	console.log("request controller: ", request);
 	await startUserLoginAuthentication(request.body, "Users")
 		.then(result => {
 			response.status(200).send(result);
 		})
 		.catch(error => {
-			console.log("error controller: ", error);
 			response.status(error.code).send(error.message);
 		});
 };
