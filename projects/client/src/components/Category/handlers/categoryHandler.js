@@ -54,3 +54,20 @@ export const categoryHandler = async input => {
 		});
 	}
 };
+
+export const generateUrlQuery = (page, filter, sort, order) => {
+	let url = "";
+
+	url += `?page=${page}`;
+	// url += filter ? `&promotion_id=${filter.id}` : "";
+	// url += `&order=${sort.id}`;
+	// url += `&asc=${order.id}`;
+
+	return url;
+};
+
+export const getInventoryPromotions = (token, query) => {
+	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/admin/promo/list${query}`, {
+		headers: { Authorization: `Bearer ${token}` },
+	});
+};

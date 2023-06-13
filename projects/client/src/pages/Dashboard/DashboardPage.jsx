@@ -20,7 +20,7 @@ const Illustration = () => {
 	);
 };
 
-const CreateBranchAdminPage = () => {
+const DashboardPage = () => {
 	return (
 		<div>
 			<div className="flex flex-col mx-auto flex-1 min-h-screen overflow-hidden bg-green-100 z-10">
@@ -33,4 +33,4 @@ const CreateBranchAdminPage = () => {
 	);
 };
 
-export default CreateBranchAdminPage;
+export default DashboardPage;
