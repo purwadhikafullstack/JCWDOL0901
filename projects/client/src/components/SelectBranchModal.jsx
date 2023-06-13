@@ -8,12 +8,10 @@ import { useSelector } from "react-redux";
 
 const SelectBranchModal = ({ toggleBranchModal }) => {
 	const [branch, setBranch] = React.useState("");
-	const app = useSelector(state => state.app);
-	const width = app.mobileView ? "w-[480px]" : "w-full";
 
 	return (
-		<div className={"bg-black/30 fixed top-0 h-screen z-50 px-12 " + width}>
-			<div className="relative flex flex-col bg-white rounded-lg shadow w-full mx-auto mt-12 pb-6 px-16">
+		<div className={"bg-black/30 fixed top-0 h-screen z-50 px-12 w-full"}>
+			<div className="relative flex flex-col bg-white rounded-lg shadow w-full mx-auto mt-12 pb-6 px-16 sm:w-[600px]">
 				<BranchModalHeader />
 				<CurrentBranch />
 				<BranchModalDropDown branch={branch} setBranch={setBranch} />
