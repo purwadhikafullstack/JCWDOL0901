@@ -15,6 +15,9 @@ module.exports = {
 				{
 					name: "Diskon Persen",
 				},
+				{
+					name: "Buy One Get One",
+				},
 			],
 			{}
 		);

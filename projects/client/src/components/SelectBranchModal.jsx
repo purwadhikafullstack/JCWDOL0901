@@ -13,7 +13,7 @@ const SelectBranchModal = ({ toggleBranchModal }) => {
 
 	return (
 		<div className={"bg-black/30 fixed top-0 h-screen z-50 px-12 " + width}>
-			<div className="relative flex flex-col bg-white rounded-lg shadow w-fit mx-auto mt-12 pb-6 px-16">
+			<div className="relative flex flex-col bg-white rounded-lg shadow w-full mx-auto mt-12 pb-6 px-16">
 				<BranchModalHeader />
 				<CurrentBranch />
 				<BranchModalDropDown branch={branch} setBranch={setBranch} />

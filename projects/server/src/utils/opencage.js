@@ -20,7 +20,7 @@ const determineSuccessMessage = data => {
 const getCoordinates = async (type, city, province) => {
 	return new Promise(async (resolve, reject) => {
 		await opencage
-			.geocode({ q: `${type} ${city}, ${province}` })
+			.geocode({ q: `${type} ${city}, ${province}`, key: process.env.OPENCAGE_API_KEY })
 			.then(data => resolve(determineSuccessMessage(data)))
 			.catch(error => reject({ name: "opencageError", detail: { error } }));
 	});

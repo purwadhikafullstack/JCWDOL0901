@@ -32,7 +32,7 @@ const ProductsRecommendationCarousel = () => {
 		products && (
 			<Splide
 				options={{
-					perPage: app.mobileView ? 2.5 : 5,
+					perPage: app.mobileView ? 3 : 5,
 					pagination: false,
 					arrows: false,
 				}}
