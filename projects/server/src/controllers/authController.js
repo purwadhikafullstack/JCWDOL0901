@@ -4,6 +4,7 @@ const {
   startAdminRegistration,
   startVerification,
   startLoginAuthentication,
+  startUserLoginAuthentication,
 } = require("../services/authService");
 
 const registerUser = async (request, response) => {
@@ -48,6 +49,18 @@ const loginAdmin = async (request, response) => {
     });
 };
 
+const loginUser = async (request, response) => {
+  console.log("request controller: ",request);
+  await startUserLoginAuthentication(request.body, "Users")
+    .then((result) => {
+      response.status(200).send(result);
+    })
+    .catch((error) => {
+      console.log("error controller: ",error);
+      response.status(error.code).send(error.message);
+    });
+};
+
 const verifyUser = async (request, response) => {
   await startVerification(request.params.token)
     .then((result) => {
@@ -58,6 +71,4 @@ const verifyUser = async (request, response) => {
     });
 };
 
-
-module.exports = { registerUser, getAdmins, registerAdmin, verifyUser, loginAdmin };
-
+module.exports = { registerUser, getAdmins, registerAdmin, verifyUser, loginAdmin, loginUser };
