@@ -8,7 +8,7 @@ import HomePage from "./pages/Home/HomePage";
 import VerifyPage from "./pages/Verify/VerifyPage";
 import AdminLoginPage from "./pages/Login/AdminLoginPage";
 import DashboardPage from "./pages/Dashboard/DashboardPage";
-import CreateCategoryPage from "./pages/Category/CreateCategoryPage";
+import CreateCategoryPage from "./pages/CreateCategory/CreateCategoryPage";
 
 function App() {
 	return (
