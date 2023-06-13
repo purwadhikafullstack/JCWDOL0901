@@ -5,7 +5,7 @@ const BackButton = ({ url, color }) => {
 	return (
 		<div className="flex flex-row items-center pl-5 py-5 w-full z-20">
 			<span className="material-icons cursor-pointer" onClick={() => navigate(url)}>
-				<span className="material-symbols-outlined text-green-100">chevron_left</span>
+				<span className={`material-symbols-outlined ${color}`}>chevron_left</span>
 			</span>
 		</div>
 	);

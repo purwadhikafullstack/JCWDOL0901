@@ -24,7 +24,7 @@ const RegisterPage = () => {
 		<div className="flex flex-col mx-auto flex-1 min-w-[480px] w-full bg-white sm:bg-gray-100 sm:flex-row sm:justify-center sm:py-20 sm:max-w-full min-h-screen sm:drop-shadow-2xl overflow-hidden">
 			<CircularBackgroundDecoration />
 			<div className="z-10 relative sm:flex sm:flex-col sm:bg-green-400 sm:h-inherit sm:rounded-xl sm:p-6">
-				<BackButton url="/" />
+				<BackButton url="/" color="text-green-100" />
 				<Illustration />
 			</div>
 			<RegisterForm />
