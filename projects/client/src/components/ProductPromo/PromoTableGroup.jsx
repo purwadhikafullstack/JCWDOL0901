@@ -27,13 +27,13 @@ const PromoTableGroup = () => {
 			<div className="flex flex-row w-full justify-between mb-4 p-4 rounded-xl z-50 sm:mb-10">
 				<div className="flex flex-col h-full w-[40%]">
 					<SearchFilter filter={filter} setFilter={setFilter} />
-					<CreateButton />
 				</div>
 				<SearchSort sort={sort} setSort={setSort} order={order} setOrder={setOrder} />
 				<ResetButton onClick={() => resetSetting(setFilter, setSort, setOrder)} />
 			</div>
+			<CreateButton />
 			<PromoTable sort={sort} filter={filter} order={order} page={page} setMaxPage={setMaxPage} />
-			<div className="mx-auto my-auto pt-4">
+			<div className="mx-auto mt-auto pt-4">
 				<Pagination page={page} setPage={setPage} maxPage={maxPage} />
 			</div>
 		</div>

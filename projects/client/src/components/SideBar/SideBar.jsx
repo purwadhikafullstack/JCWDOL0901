@@ -12,7 +12,7 @@ export default function SideBar({ children }) {
 	return (
 		<>
 			<SideBarDesktop />
-			<div className="relative top-0 pb-10">
+			<div className="relative top-0">
 				<div
 					className={`z-50 flex w-64 flex-col fixed inset-y-0 overflow-hidden transition duration-500 ${
 						sidebarOpen ? "" : " -translate-x-72"

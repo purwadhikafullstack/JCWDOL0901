@@ -4,7 +4,7 @@ const CreateButton = () => {
 	const navigate = useNavigate();
 	return (
 		<button
-			className="rounded-lg font-bold h-fit text-green-500 underline px-2 mt-auto mb-1"
+			className="rounded-lg font-bold h-fit bg-green-500 text-green-100 px-4 py-2 mb-4 mt-auto ml-auto mb-1"
 			onClick={() => navigate("create")}
 		>
 			Create Promotion

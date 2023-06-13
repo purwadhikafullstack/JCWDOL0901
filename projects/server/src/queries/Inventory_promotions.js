@@ -17,8 +17,8 @@ const readInventoryPromotionQuery = async (branch_id, filter, order, page) => {
 			},
 			{ model: Promotions },
 		],
-		offset: (page - 1) * 3,
-		limit: 3,
+		offset: (page - 1) * 8,
+		limit: 8,
 		order: [...order?.Inventory_promotions],
 	});
 };
