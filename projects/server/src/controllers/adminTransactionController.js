@@ -16,7 +16,8 @@ const getAdminTransactions = async (request, response) => {
 };
 
 const getAdminDashboardData = async (request, response) => {
-	const { from, to, status, branch } = request.query;
+	const { from, to, status } = request.query;
+	const branch = request.branchData;
 	await startGetAdminDashboardData(from, to, status, branch)
 		.then(result => {
 			response.status(200).send(result);
@@ -27,7 +28,8 @@ const getAdminDashboardData = async (request, response) => {
 };
 
 const getAdminAllTimeData = async (request, response) => {
-	const { status, branch } = request.query;
+	const { status } = request.query;
+	const branch = request.branchData;
 	await startGetAdminAllTimeData(status, branch)
 		.then(result => {
 			response.status(200).send(result);
