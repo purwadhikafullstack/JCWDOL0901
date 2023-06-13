@@ -1,16 +1,18 @@
 import React from "react";
 import TableBodyContent from "./TableBodyContent.jsx";
-import { getInventoryPromotions, generateUrlQuery } from "./handlers/categoryHandler.js";
+import { getCategories, generateUrlQuery } from "./handlers/categoryHandler.js";
 
 const CategoryTableBody = ({ page, setMaxPage }) => {
 	const [datas, setDatas] = React.useState([]);
 
 	React.useEffect(() => {
 		const query = generateUrlQuery(page);
-		getInventoryPromotions(localStorage.getItem("token"), query)
+		console.log(query);
+		getCategories(localStorage.getItem("token"), query)
 			.then(result => {
+				console.log(result);
 				setDatas(result.data.rows);
-				setMaxPage(Math.ceil(result.data.count / 3));
+				setMaxPage(Math.ceil(result.data.count / 5));
 			})
 			.catch(error => alert("Server Unavailable"));
 	}, [page, setMaxPage]);

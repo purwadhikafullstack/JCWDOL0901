@@ -1,7 +1,7 @@
 const { Categories } = require("../models/index.js");
 
 const readCategoryQuery = async () => {
-	return await Categories.findAll({});
+	return await Categories.findAndCountAll({});
 };
 const createCategoryQuery = async (body, file) => {
 	const { name } = body;

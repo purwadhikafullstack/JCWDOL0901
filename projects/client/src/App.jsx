@@ -11,7 +11,7 @@ import AdminLoginPage from "./pages/Login/AdminLoginPage";
 import DashboardPage from "./pages/Dashboard/DashboardPage";
 import CreateCategoryPage from "./pages/CreateCategory/CreateCategoryPage";
 import UserLoginPage from "./pages/UserLogin/UserLoginPage";
-import ShowCategoryPage from "./pages/ShowCategory/ShowCategoryPage";
+import ManageCategory from "./pages/ManageCategory/ManageCategory";
 import ManageStock from "./pages/ManageStock/ManageStock";
 
 function App() {
@@ -31,7 +31,8 @@ function App() {
 				<Route path="/register" element={<RegisterPage />} />
 				<Route path="/register/greeting" element={<GreetingPage />} />
 				<Route path="/verify/:token" element={<VerifyPage />} />
-				<Route path="/admin/category" element={<ShowCategoryPage />} />
+				<Route path="/admin/category" element={<ManageCategory />} />
+				<Route path="/admin/category/create" element={<CreateCategoryPage />} />
 			</Routes>
 		</div>
 	);

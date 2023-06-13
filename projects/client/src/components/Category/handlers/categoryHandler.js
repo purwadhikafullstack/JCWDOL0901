@@ -66,8 +66,8 @@ export const generateUrlQuery = (page, filter, sort, order) => {
 	return url;
 };
 
-export const getInventoryPromotions = (token, query) => {
-	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/admin/promo/list${query}`, {
+export const getCategories = (token, query) => {
+	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/category/list${query}`, {
 		headers: { Authorization: `Bearer ${token}` },
 	});
 };
