@@ -1,14 +1,14 @@
 import React from "react";
 import BackButton from "../../components/BackButton";
 import CompanyLogo from "../../components/CompanyLogo";
-import UserLoginIllustration from "../../components/UserLogin/UserLoginIllustration";
-import UserLoginForm from "../../components/UserLogin/UserLoginForm";
+import AdminLoginForm from "../../components/Login/AdminLoginForm";
+import AdminLoginIllustration from "../../components/Login/AdminLoginIllustration";
 
 const DesktopIllustration = () => {
   return (
     <div className="my-auto mx-12 mt-2 shrink">
       <div className="mb-4 text-green-100 text-3xl font-light">Admin login page.</div>
-      <UserLoginIllustration className="w-[400px] pb-12" />
+      <AdminLoginIllustration className="w-[400px] pb-12" />
     </div>
   );
 };
@@ -23,7 +23,7 @@ function AdminLoginDesktop() {
           <DesktopIllustration />
         </div>
         <div className="flex flex-col items-center shrink-0 mx-12">
-          <UserLoginForm />
+          <AdminLoginForm />
         </div>
       </div>
     </div>

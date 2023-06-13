@@ -4,7 +4,7 @@ import CircularBackgroundDecoration from "../../components/CircularBackgroundDec
 import BackButton from "../../components/BackButton";
 import UserLoginForm from "../../components/UserLogin/UserLoginForm";
 
-const MobileIllustration = () => {
+const Illustration = () => {
   return (
     <div className="text-white flex flex-row justify-center items-center z-10">
       <div className="mt-28 mr-auto ml-6 text-3xl font-semibold">User Login</div>
@@ -18,7 +18,7 @@ function UserLoginMobile() {
     <div className="flex flex-col mx-auto flex-1 max-w-[480px] min-h-screen overflow-hidden bg-white">
       <CircularBackgroundDecoration />
       <BackButton url="/" color="text-white" />
-      <MobileIllustration />
+      <Illustration />
       <UserLoginForm />
     </div>
   );
