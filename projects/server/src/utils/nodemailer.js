@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const generateRegistrationVerificationHTML = (token, name) => {
-	const verificationUrl = `${process.env.FRONTEND_URL}/register/verify/${token}`;
+	const verificationUrl = `${process.env.FRONTEND_URL}/verify/${token}`;
 
 	return fs
 		.readFileSync(`${__dirname}/../templates/verificationEmail.html`, "utf-8")

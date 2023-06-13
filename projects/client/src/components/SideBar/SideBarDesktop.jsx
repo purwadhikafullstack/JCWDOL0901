@@ -5,7 +5,7 @@ import navigation from "./config/navigationConfig";
 export default function SideBarDesktop({ children }) {
 	return (
 		<>
-			<div className="flex w-64 flex-col fixed inset-y-0">
+			<div className="hidden z-10 sm:flex w-64 flex-col fixed inset-y-0">
 				<div className="flex-1 flex flex-col min-h-0 border-r border-green-400 bg-green-200">
 					<SideBarMenu navigation={navigation} />
 					<SideBarFooter />

@@ -2,12 +2,11 @@ import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useSelector } from "react-redux";
 
-const SliderSlides = ({ categories }) => {
-	const app = useSelector(state => state.app);
+const MobileSlides = ({ categories }) => {
 	return (
 		<Splide
 			options={{
-				perPage: app.mobileView ? 4.5 : 10,
+				perPage: 4,
 				padding: 5,
 				pagination: false,
 				arrows: false,
@@ -29,6 +28,48 @@ const SliderSlides = ({ categories }) => {
 				);
 			})}
 		</Splide>
+	);
+};
+
+const DesktopSlides = ({ categories }) => {
+	return (
+		<Splide
+			options={{
+				perPage: 8,
+				padding: 5,
+				pagination: false,
+				arrows: false,
+			}}
+		>
+			{categories.map((category, index) => {
+				return (
+					<SplideSlide key={index}>
+						<div className="flex flex-col items-center mx-2">
+							<img
+								className="w-[75px] cursor-pointer"
+								src={category.image}
+								alt={category.name}
+								loading="lazy"
+							/>
+							<span className="text-black text-sm mt-1.5">{category.name}</span>
+						</div>
+					</SplideSlide>
+				);
+			})}
+		</Splide>
+	);
+};
+
+const SliderSlides = ({ categories }) => {
+	return (
+		<>
+			<div className="block sm:hidden">
+				<MobileSlides categories={categories} />
+			</div>
+			<div className="hidden sm:block sm:flex sm:shrink-0">
+				<DesktopSlides categories={categories} />
+			</div>
+		</>
 	);
 };
 
