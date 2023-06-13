@@ -55,7 +55,6 @@ const loginUser = async (request, response) => {
 			response.status(200).send(result);
 		})
 		.catch(error => {
-		
 			response.status(error.code).send(error.message);
 		});
 };

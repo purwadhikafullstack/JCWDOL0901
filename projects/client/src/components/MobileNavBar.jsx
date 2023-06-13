@@ -18,7 +18,10 @@ const MobileNavBar = () => {
 	const location = useLocation().pathname;
 
 	return (
-		<div tabIndex="-1" className="fixed bottom-0 mt-auto z-50 w-[480px] rounded-full">
+		<div
+			tabIndex="-1"
+			className="fixed bottom-0 mx-auto z-50 w-[480px] inset-x-0 rounded-full sm:hidden"
+		>
 			<div className="w-full mb-2 drop-shadow-2xl">
 				<div className="mx-4 flex flex-row justify-around rounded-full bg-white">
 					<MobileNavButton active={location === "/"} name="home" to="/" />

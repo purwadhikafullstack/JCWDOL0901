@@ -1,10 +1,10 @@
 const {
-  registerUser,
-  getAdmins,
-  registerAdmin,
-  verifyUser,
-  loginAdmin,
-  loginUser,
+	registerUser,
+	getAdmins,
+	registerAdmin,
+	verifyUser,
+	loginAdmin,
+	loginUser,
 } = require("../controllers/authController");
 
 const { getReferrerId, isSuperAdmin, isAdmin } = require("../middlewares/authMiddleware");
