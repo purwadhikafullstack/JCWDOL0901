@@ -42,7 +42,7 @@ const isAdmin = async (request, response, next) => {
 const getBranchId = async (request, response, next) => {
 	try {
 		if (request.adminData.super) {
-			request.branchData = 0;
+			request.branchData = { id: 0 };
 		} else if (request.adminData.id) {
 			const branchData = await Branches.findOne({ where: { admin_id: request.adminData.id } });
 			request.branchData = branchData;

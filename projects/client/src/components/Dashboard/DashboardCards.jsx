@@ -10,18 +10,22 @@ const DashboardCards = ({}) => {
 	}, []);
 	return (
 		<>
-			<h1 className="mb-6 text-green-400 font-bold text-xl">All time</h1>
-			<div className="mx-12 flex flex-row gap-2 justify-center">
-				<DashboardCard title="Buyer" value={allTimeData.totalBuyer} valueSize="text-xl font-bold" />
+			<h1 className="mb-6 text-green-400 font-bold text-xl sm:text-2xl">All time</h1>
+			<div className="mx-12 flex flex-row gap-2 sm:gap-4 justify-center">
+				<DashboardCard
+					title="Buyer"
+					value={allTimeData.totalBuyer}
+					valueSize="text-xl sm:text-3xl px-2 font-bold"
+				/>
 				<DashboardCard
 					title="Gross Income"
 					value={rupiah(allTimeData.allTimeGrossIncome || 0)}
-					valueSize="text-sm font-bold"
+					valueSize="text-sm sm:text-2xl px-2 font-bold"
 				/>
 				<DashboardCard
 					title="Product Sold"
 					value={allTimeData.allTimeProductSold}
-					valueSize="text-xl font-bold"
+					valueSize="text-xl sm:text-3xl px-2 font-bold"
 				/>
 			</div>
 		</>
