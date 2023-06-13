@@ -1,7 +1,17 @@
 import axios from "axios";
 
 export const getPromotionsType = () => {
-	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/data/promotions`);
+	return new Promise(async (resolve, reject) => {
+		try {
+			const inventoryPromotions = await axios.get(
+				`${process.env.REACT_APP_API_BASE_URL}/data/promotions`
+			);
+
+			resolve({ data: await inventoryPromotions.data.splice(1) });
+		} catch (error) {
+			reject(error);
+		}
+	});
 };
 
 export const getInventoryPromotions = (token, query) => {

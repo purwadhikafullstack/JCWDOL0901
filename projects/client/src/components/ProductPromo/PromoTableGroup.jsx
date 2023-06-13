@@ -25,12 +25,12 @@ const PromoTableGroup = () => {
 	return (
 		<div className="flex flex-col mt-20 px-8 h-full">
 			<div className="flex flex-row w-full justify-between mb-4">
-				<SearchFilter filter={filter} setFilter={setFilter} />
-				<SearchSort sort={sort} setSort={setSort} order={order} setOrder={setOrder} />
-				<div className="flex flex-col">
-					<ResetButton onClick={() => resetSetting(setFilter, setSort, setOrder)} />
+				<div className="flex flex-col h-full w-[40%]">
+					<SearchFilter filter={filter} setFilter={setFilter} />
 					<CreateButton />
 				</div>
+				<SearchSort sort={sort} setSort={setSort} order={order} setOrder={setOrder} />
+				<ResetButton onClick={() => resetSetting(setFilter, setSort, setOrder)} />
 			</div>
 			<PromoTable sort={sort} filter={filter} order={order} page={page} setMaxPage={setMaxPage} />
 			<div className="mx-auto mt-auto mb-8">

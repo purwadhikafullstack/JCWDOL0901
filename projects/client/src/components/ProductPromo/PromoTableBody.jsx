@@ -13,6 +13,7 @@ const PromoTableBody = ({ filter, sort, order, page, setMaxPage }) => {
 				setMaxPage(Math.ceil(result.data.count / 3));
 			})
 			.catch(error => {
+				console.log(error);
 				alert("Server Unavailable");
 			});
 	}, [filter, sort, order, page]);
