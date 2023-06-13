@@ -51,7 +51,7 @@ const getCitiesInProvince = async (request, response) => {
 };
 
 const getBranch = async (request, response) => {
-	const branch = request.branchData;
+	const branch = request.branchData.id;
 	await startFindBranch(branch)
 		.then(result => {
 			response.status(200).send(result);

@@ -2,8 +2,6 @@ import React from "react";
 import CreateBranchAdminIllustration from "../../components/CreateBranchAdmin/CreateBranchAdminIllustration.jsx";
 import BackButton from "../../components/BackButton.jsx";
 import CreateBranchAdminForm from "../../components/CreateBranchAdmin/CreateBranchAdminForm";
-import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration.jsx";
-import SideBar from "../../components/SideBar/SideBar.jsx";
 import CompanyLogo from "../../components/CompanyLogo";
 
 const Illustration = () => {
@@ -20,12 +18,12 @@ const Illustration = () => {
 const CreateBranchAdminPage = () => {
 	return (
 		<div className="bg-green-100 flex items-center justify-center h-screen">
-			<div className="flex flex-col sm:flex-row bg-white rounded-lg h-screen sm:h-auto">
-				<div className="sm:bg-green-200 z-10 sm:rounded-l-lg bg-green-200">
+			<div className="flex flex-col sm:flex-row bg-white rounded-lg h-screen sm:h-auto justify-between">
+				<div className="sm:bg-green-200 z-10 rounded-t-lg sm:rounded-tr-none rounded-tr-lg sm:rounded-l-lg bg-green-200">
 					<BackButton url="/admin/dashboard" color="text-green-100" />
 					<Illustration />
 				</div>
-				<div className="bg-white rounded-r-lg">
+				<div className="bg-white rounded-r-lg pb-4">
 					<div className="flex justify-center py-4">
 						<CompanyLogo color="true" className="mt-8 w-[75px] cursor-pointer hidden sm:block" />
 					</div>
