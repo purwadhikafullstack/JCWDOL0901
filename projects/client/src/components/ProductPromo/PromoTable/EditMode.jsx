@@ -1,8 +1,8 @@
 import React from "react";
-import { getPromotionsType } from "./handlers/productPromoHandler";
+import { getPromotionsType } from "../handlers/productPromoHandler";
 import { useFormik } from "formik";
-import { formikEditModeConfiguration } from "./config/formikEditModeHandler";
-import ErrorWarning from "../ErrorWarning.jsx";
+import { formikEditModeConfiguration } from "../config/formikEditModeHandler";
+import ErrorWarning from "../../ErrorWarning.jsx";
 
 const FormikError = ({ formik, inputKey }) => {
 	return (

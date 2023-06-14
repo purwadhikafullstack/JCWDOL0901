@@ -1,6 +1,6 @@
 import React from "react";
-import ViewMode from "../ViewMode.jsx";
-import EditMode from "../EditMode.jsx";
+import ViewMode from "./ViewMode.jsx";
+import EditMode from "./EditMode.jsx";
 
 const TableBodyContent = ({ datas }) => {
 	const [editMode, setEditMode] = React.useState();
