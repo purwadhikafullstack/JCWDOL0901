@@ -10,7 +10,7 @@ const validateCategoryInput = values => {
 };
 
 const categoryErrorHandler = async error => {
-	console.log(error.response.data);
+	console.log(error);
 	if (error?.code === "ERR_NETWORK") {
 		return "Server unreachable, try again later!";
 	} else if (error?.response?.status === 400) {
@@ -21,12 +21,14 @@ const categoryErrorHandler = async error => {
 		return error?.response?.data?.message;
 	} else if (error?.response?.data === "File type not allowed") {
 		return error?.response?.data;
+	} else if (error?.response?.data === "ER_ROW_IS_REFERENCED_2") {
+		return "Cannot delete, there are still products under this category";
 	}
 
 	return "Something went wrong!";
 };
 
-export const createCategoryHandler = async input => {
+export const createCategoryHandler = async (input, navigate) => {
 	try {
 		const validatedInput = await validateCategoryInput(input);
 		const token = localStorage.getItem("token");
@@ -45,6 +47,7 @@ export const createCategoryHandler = async input => {
 			showConfirmButton: false,
 			timer: 2000,
 		});
+		navigate(-1);
 	} catch (error) {
 		Swal.fire({
 			icon: "error",
@@ -55,7 +58,7 @@ export const createCategoryHandler = async input => {
 	}
 };
 
-export const updateCategoryHandler = async (input, item) => {
+export const updateCategoryHandler = async (input, item, navigate) => {
 	try {
 		const validatedInput = await validateCategoryInput(input);
 		const token = localStorage.getItem("token");
@@ -74,7 +77,33 @@ export const updateCategoryHandler = async (input, item) => {
 			showConfirmButton: false,
 			timer: 2000,
 		});
+		navigate(-1);
 	} catch (error) {
+		Swal.fire({
+			icon: "error",
+			title: await categoryErrorHandler(error),
+			showConfirmButton: false,
+			timer: 2000,
+		});
+	}
+};
+
+export const deleteCategoryHandler = async (id, navigate) => {
+	try {
+		const token = localStorage.getItem("token");
+		const config = {
+			headers: { Authorization: `Bearer ${token}` },
+		};
+		await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/category/${id}/delete`, config);
+
+		Swal.fire({
+			icon: "success",
+			title: "Category has been deleted",
+			showConfirmButton: false,
+			timer: 2000,
+		});
+	} catch (error) {
+		console.log(error);
 		Swal.fire({
 			icon: "error",
 			title: await categoryErrorHandler(error),
@@ -106,7 +135,7 @@ export const editCategory = (item, navigate) => {
 	navigate("/admin/category/update", { state: item });
 };
 
-export const deleteCategory = (item, setOpen, setCategoryId, setCategoryName) => {
+export const showDeleteAlert = (item, setOpen, setCategoryId, setCategoryName) => {
 	setOpen(true);
 	setCategoryId(item.id);
 	setCategoryName(item.name);

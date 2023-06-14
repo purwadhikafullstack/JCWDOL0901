@@ -1,5 +1,5 @@
 import React from "react";
-import { editCategory, deleteCategory } from "./handlers/categoryHandler";
+import { editCategory, showDeleteAlert, deleteCategoryHandler } from "./handlers/categoryHandler";
 import { useNavigate } from "react-router-dom";
 import { TrashIcon } from "@heroicons/react/outline";
 import DeleteAlert from "../DeleteAlert";
@@ -21,6 +21,7 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 					open={open}
 					setOpen={setOpen}
 					categoryId={categoryId}
+					handler={deleteCategoryHandler}
 				/>
 			) : null}
 			{datas.map((item, index) => {
@@ -47,7 +48,7 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 									<div>{alert}</div>
 									<button
 										className="bg-red text-white px-2 py-2 rounded-lg flex justify-center"
-										onClick={() => deleteCategory(item, setOpen, setCategoryId, setCategoryName)}
+										onClick={() => showDeleteAlert(item, setOpen, setCategoryId, setCategoryName)}
 									>
 										<TrashIcon
 											className={`text-green-100 flex-shrink-0 h-5 w-5 mx-auto`}

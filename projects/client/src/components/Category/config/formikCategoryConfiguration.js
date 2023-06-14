@@ -22,8 +22,8 @@ const validationSchema = Yup.object({
 	image,
 });
 
-const onSubmitConfiguration = async values => {
-	await createCategoryHandler(values);
+const onSubmitConfiguration = async (values, navigate) => {
+	await createCategoryHandler(values, navigate);
 };
 
 export const formikCategoryConfiguration = navigate => {

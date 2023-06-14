@@ -1,7 +1,6 @@
 const { Categories } = require("../models/index.js");
 
 const readCategoryQuery = async (filter, order, page, itemPerPage) => {
-	console.log(page, itemPerPage);
 	return await Categories.findAndCountAll({
 		// where: { ...filter },
 		offset: (page - 1) * itemPerPage,
@@ -21,4 +20,14 @@ const updateCategoryQuery = async (body, file, params) => {
 	return await Categories.update({ name, image }, { where: { id } });
 };
 
-module.exports = { readCategoryQuery, createCategoryQuery, updateCategoryQuery };
+const deleteCategoryQuery = async params => {
+	const id = Number(params.categoryId);
+	return await Categories.destroy({ where: { id } });
+};
+
+module.exports = {
+	readCategoryQuery,
+	createCategoryQuery,
+	updateCategoryQuery,
+	deleteCategoryQuery,
+};

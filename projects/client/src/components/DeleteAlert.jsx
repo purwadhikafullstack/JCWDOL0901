@@ -1,11 +1,20 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment, useRef, useState } from "react";
+import { Fragment, useRef } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { ExclamationIcon } from "@heroicons/react/outline";
+import { useNavigate } from "react-router-dom";
 
-export default function DeleteAlert({ title, desc, buttonName, open, setOpen, categoryId }) {
+export default function DeleteAlert({
+	title,
+	desc,
+	buttonName,
+	open,
+	setOpen,
+	categoryId,
+	handler,
+}) {
 	const cancelButtonRef = useRef(null);
-
+	const navigate = useNavigate();
 	return (
 		<Transition.Root show={open} as={Fragment}>
 			<Dialog
@@ -58,7 +67,11 @@ export default function DeleteAlert({ title, desc, buttonName, open, setOpen, ca
 								<button
 									type="button"
 									className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red text-base font-medium text-white hover:bg-red/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red sm:ml-3 sm:w-auto sm:text-sm"
-									onClick={() => setOpen(false)}
+									onClick={() => {
+										handler(categoryId, navigate);
+										setOpen(false);
+										navigate("/admin/category");
+									}}
 								>
 									{buttonName}
 								</button>

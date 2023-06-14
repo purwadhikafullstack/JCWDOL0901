@@ -70,10 +70,20 @@ const startCreateHandler = async error => {
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
+const startDeleteteHandler = async error => {
+	await writeLogFile(error, "startDeleteteHandler");
+	console.log(error.name);
+	if (error.name === "SequelizeForeignKeyConstraintError") {
+		return { code: 500, message: "ER_ROW_IS_REFERENCED_2" };
+	}
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
+
 module.exports = {
 	startRegistrationErrorHandler,
 	startFindErrorHandler,
 	forbiddenErrorHandler,
 	startVerificationErrorHandler,
 	startCreateHandler,
+	startDeleteteHandler,
 };

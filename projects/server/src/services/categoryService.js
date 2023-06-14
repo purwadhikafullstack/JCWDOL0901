@@ -1,8 +1,13 @@
-const { startFindErrorHandler, startCreateHandler } = require("../errors/serviceError");
+const {
+	startFindErrorHandler,
+	startCreateHandler,
+	startDeleteteHandler,
+} = require("../errors/serviceError");
 const {
 	readCategoryQuery,
 	createCategoryQuery,
 	updateCategoryQuery,
+	deleteCategoryQuery,
 } = require("../queries/Categories");
 
 module.exports = {
@@ -33,6 +38,19 @@ module.exports = {
 				return resolve(Category);
 			} catch (error) {
 				return reject(await startCreateHandler(error));
+			}
+		});
+	},
+	startDeleteCategory: async params => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				await deleteCategoryQuery(params);
+				return resolve({
+					status: 200,
+					message: "Category deleted successfully",
+				});
+			} catch (error) {
+				return reject(await startDeleteteHandler(error));
 			}
 		});
 	},

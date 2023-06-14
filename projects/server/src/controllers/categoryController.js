@@ -2,6 +2,7 @@ const {
 	startFindCategories,
 	startCreateCategory,
 	startUpdateCategory,
+	startDeleteCategory,
 } = require("../services/categoryService");
 
 const getCategories = async (request, response) => {
@@ -23,4 +24,10 @@ const updateCategory = async (request, response) => {
 		.catch(error => response.status(error.code).send(error.message));
 };
 
-module.exports = { getCategories, createCategory, updateCategory };
+const deleteCategory = async (request, response) => {
+	await startDeleteCategory(request.params)
+		.then(result => response.status(200).send(result))
+		.catch(error => response.status(error.code).send(error.message));
+};
+
+module.exports = { getCategories, createCategory, updateCategory, deleteCategory };

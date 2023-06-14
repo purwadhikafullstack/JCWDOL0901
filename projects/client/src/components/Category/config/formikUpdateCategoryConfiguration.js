@@ -20,14 +20,14 @@ const validationSchema = Yup.object({
 	name,
 });
 
-const onSubmitConfiguration = async (values, item) => {
-	await updateCategoryHandler(values, item);
+const onSubmitConfiguration = async (values, item, navigate) => {
+	await updateCategoryHandler(values, item, navigate);
 };
 
 export const formikUpdateCategoryConfiguration = (navigate, item) => {
 	return {
 		initialValues: initialValues(item),
-		onSubmit: async values => onSubmitConfiguration(values, item),
+		onSubmit: async values => onSubmitConfiguration(values, item, navigate),
 		validateOnChange,
 		validateOnBlur,
 		validationSchema,
