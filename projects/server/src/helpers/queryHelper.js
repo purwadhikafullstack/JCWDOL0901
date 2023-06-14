@@ -45,6 +45,7 @@ const getInventoryPromotionQueryOrder = async query => {
 	return order;
 };
 
+// TODO: Delete
 const paginateData = (data, page) => {
 	const itemPerPage = 8;
 	const startIndex = (page - 1) * itemPerPage;
@@ -53,10 +54,43 @@ const paginateData = (data, page) => {
 	return data.slice(startIndex, endIndex);
 };
 
+const getInventoriesQueryFilter = async query => {
+	const filter = { Products: {} };
+
+	const productsFilter = ["category_id"];
+
+	await productsFilter.forEach(key => {
+		if (query[key]) filter.Products[key] = query[key];
+	});
+
+	return filter;
+};
+
+const getInventoriesQueryOrder = async query => {
+	const order = { Inventories: [], Products: [] };
+
+	const inventoriesOrder = ["stock"];
+	const productsOrder = ["name"];
+
+	const ascending = query.asc == 1 ? "ASC" : "DESC";
+
+	inventoriesOrder.forEach(key => {
+		if (query.order === key) order.Inventories.push([key, ascending]);
+	});
+
+	productsOrder.forEach(key => {
+		if (query.order === key) order.Products.push([key, ascending]);
+	});
+
+	return order;
+};
+
 module.exports = {
 	paginateData,
 	getAdminQueryFilter,
 	getAdminQueryOrder,
 	getInventoryPromotionQueryFilter,
 	getInventoryPromotionQueryOrder,
+	getInventoriesQueryFilter,
+	getInventoriesQueryOrder,
 };

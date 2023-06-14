@@ -3,6 +3,8 @@ const {
 	getAdminQueryOrder,
 	getInventoryPromotionQueryFilter,
 	getInventoryPromotionQueryOrder,
+	getInventoriesQueryFilter,
+	getInventoriesQueryOrder,
 } = require("../helpers/queryHelper");
 
 const getAdminsQuerySanitizer = async (request, response, next) => {
@@ -37,6 +39,20 @@ const getInventoryPromotionQuerySanitizer = async (request, response, next) => {
 
 	next();
 };
+
+const getInventoriesQuerySanitizer = async (request, response, next) => {
+	const sanitizedQuery = {
+		name: request.query.name || "",
+		filter: await getInventoriesQueryFilter(request.query),
+		order: await getInventoriesQueryOrder(request.query),
+		page: request.query.page,
+	};
+
+	request.query = sanitizedQuery;
+
+	next();
+};
+
 const postInventoryPromotionBodySanitizer = async (request, response, next) => {
 	const { promotion_id, value, start_at, expired_at, inventory_id } = request.body;
 	delete request.body;
@@ -57,6 +73,7 @@ const patchInventoryPromotionBodySanitizer = async (request, response, next) => 
 };
 
 module.exports = {
+	getInventoriesQuerySanitizer,
 	getAdminsQuerySanitizer,
 	postNearestBranchBodySanitizer,
 	getInventoryPromotionQuerySanitizer,
