@@ -8,6 +8,7 @@ import CreateProductPromoForm from "../../components/CreateProductPromo/CreatePr
 const Img = ({ className }) => {
 	return <img src="/assets/images/create_promotion_illustration.png" className={className} />;
 };
+
 const Illustration = () => {
 	return (
 		<>
@@ -37,6 +38,7 @@ const ResponsiveLogo = () => {
 		</>
 	);
 };
+
 
 const CreatePromotion = () => {
 	return (
