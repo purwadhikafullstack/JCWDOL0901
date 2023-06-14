@@ -1,97 +1,90 @@
+import { useFormik } from "formik";
 import React from "react";
-// import { patchInventoryPromotions, getPromotionsType } from "./handlers/productPromoHandler";
+import { formikEditModeConfiguration } from "../config/formikEditModeConfiguration";
+import ErrorWarning from "../../ErrorWarning";
 
-// const PromotionEdit = ({ selected, onChange }) => {
-// 	const [types, setTypes] = React.useState([]);
+const FormikError = ({ formik, inputKey }) => {
+	return (
+		formik?.errors?.[inputKey] &&
+		formik?.touched?.[inputKey] && (
+			<div className="text-red absolute text-xs font-light select-none text-left">
+				{formik?.errors?.[inputKey]}
+			</div>
+		)
+	);
+};
 
-// 	React.useEffect(() => {
-// 		getPromotionsType()
-// 			.then(result => setTypes(result.data))
-// 			.catch(error => alert(error));
-// 	}, []);
+const EditModeButton = ({ setEditMode, formik }) => {
+	return (
+		<td className="py-4 bg-white text-xs text-white text-center">
+			<button
+				className="bg-green-500 px-3 py-1.5 rounded"
+				type="submit"
+				onClick={formik.handleSubmit}
+			>
+				Save
+			</button>
+			<button className="bg-red px-3 py-1.5 rounded ml-2" onClick={() => setEditMode(-1)}>
+				Cancel
+			</button>
+		</td>
+	);
+};
 
-// 	return (
-// 		types && (
-// 			<select name="promotion_id" className="bg-gray-100 rounded p-1" onChange={onChange}>
-// 				{types.map((type, index) => {
-// 					return (
-// 						<option value={type.id} key={index}>
-// 							{type.name}
-// 						</option>
-// 					);
-// 				})}
-// 			</select>
-// 		)
-// 	);
-// };
-
-// const EditModeButton = ({ setEditMode, editValue }) => {
-// 	const handleSave = () => {
-// 		patchInventoryPromotions(localStorage.getItem("token"), editValue)
-// 			.then(result => setEditMode(-1))
-// 			.catch(error => alert("please try again"))
-// 			.finally(() => window.location.reload(false));
-// 	};
-// 	return (
-// 		<td className="py-4 bg-white text-xs text-white text-center">
-// 			<button className="bg-green-500 px-3 py-1.5 rounded" onClick={handleSave}>
-// 				Save
-// 			</button>
-// 			<button className="bg-red px-3 py-1.5 rounded ml-2" onClick={() => setEditMode(-1)}>
-// 				Cancel
-// 			</button>
-// 		</td>
-// 	);
-// };
+const EditForm = ({ formik }) => {
+	return (
+		<div className="flex flex-col items-center h-full">
+			<span className="mb-1">New Stock:</span>
+			<div className="mb-6">
+				<input
+					className="text-center bg-gray-100 rounded p-1"
+					name="stock"
+					type="number"
+					onChange={formik?.handleChange}
+					onBlur={formik?.handleBlur}
+					defaultValue={formik?.initialValues?.stock}
+					value={formik?.value?.stock}
+				/>
+				<FormikError formik={formik} inputKey="stock" />
+			</div>
+			<span className="mb-1">Description:</span>
+			<div>
+				<input
+					className="text-center bg-gray-100 rounded p-1"
+					name="description"
+					type="text"
+					placeholder="Restock, Loss, etc..."
+					onChange={formik?.handleChange}
+					onBlur={formik?.handleBlur}
+					value={formik?.value?.description}
+				/>
+				<FormikError formik={formik} inputKey="description" />
+			</div>
+		</div>
+	);
+};
 
 const EditMode = ({ item, index, setEditMode }) => {
-	const [editValue, setEditValue] = React.useState({
-		id: item.id,
-		inventory_id: item.inventory_id,
-		promotion_id: item.promotion_id,
-		value: item.value,
-		start_at: item.start_at,
-		expired_at: item.expired_at,
-	});
+	const [error, setError] = React.useState("");
+	const formik = useFormik(formikEditModeConfiguration(setError, item, setEditMode));
 
 	const tdClassName = "py-4 bg-white text-xs text-center";
 
-	const handleChange = event => true;
-	// setEditValue({ ...editValue, [event.target.name]: event.target.value });
-
-	return;
-	// <tbody key={index}>
-	// 	<tr>
-	// 		<td className={tdClassName}>
-	// 			<img src={item.Inventory.Product.image} className="w-[80px] ml-4" />
-	// 		</td>
-	// 		<td className={tdClassName}>{item.Inventory.Product.name}</td>
-	// 		<td className={tdClassName}>
-	// 			<PromotionEdit selected={item.promotion_id} name="promotion_id" onChange={handleChange} />
-	// 		</td>
-	// 		<td className={tdClassName}>
-	// 			<input
-	// 				className="text-center bg-gray-100 rounded p-1"
-	// 				name="value"
-	// 				type="number"
-	// 				defaultValue={item.value}
-	// 				onChange={handleChange}
-	// 			/>
-	// 		</td>
-	// 		<td className={tdClassName}>
-	// 			<input type="date" name="start_at" defaultValue={item.start_at} onChange={handleChange} />
-	// 		</td>
-	// 		<td className={tdClassName}>
-	// 			<input
-	// 				type="date"
-	// 				name="expired_at"
-	// 				defaultValue={item.expired_at}
-	// 				onChange={handleChange}
-	// 			/>
-	// 		</td>
-	// 		<EditModeButton setEditMode={setEditMode} editValue={editValue} />
-	// 	</tr>
-	// </tbody>
+	return (
+		<tbody key={index}>
+			<tr>
+				<td className={tdClassName}>
+					<img src={item.Product.image} className="w-[80px] ml-4" />
+				</td>
+				<td className={tdClassName}>{item.Product.name}</td>
+				<td className={tdClassName}>
+					<ErrorWarning error={error} />
+					<EditForm formik={formik} />
+				</td>
+				<EditModeButton setEditMode={setEditMode} formik={formik} />
+			</tr>
+		</tbody>
+	);
 };
 
 export default EditMode;

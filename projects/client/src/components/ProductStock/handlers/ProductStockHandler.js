@@ -63,3 +63,14 @@ export const generateUrlQuery = (name = "", page, filterBy, filter, sort, order)
 
 	return url;
 };
+
+export const editStockButtonHandler = async (values, setError) => {
+	await axios
+		.patch(`${process.env.REACT_APP_API_BASE_URL}/admin/inventory/${values.id}/update`, values)
+		.then(result => {
+			window.location.reload(false);
+		})
+		.catch(error => {
+			setError(error.message);
+		});
+};
