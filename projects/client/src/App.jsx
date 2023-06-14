@@ -10,6 +10,7 @@ import VerifyPage from "./pages/Verify/VerifyPage";
 import AdminLoginPage from "./pages/Login/AdminLoginPage";
 import DashboardPage from "./pages/Dashboard/DashboardPage";
 import UserLoginPage from "./pages/UserLogin/UserLoginPage";
+import UserAccountSettingPage from "./pages/UserAccountSetting/UserAccountSettingPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/user/login" element={<UserLoginPage />} />
+        <Route path="/user/profile-update" element={<UserAccountSettingPage />} />
         <Route path="/admin/login" element={<AdminLoginPage />} />
         <Route path="/admin/promo" element={<ProductPromotion />} />
         <Route path="/admin/promo/create" element={<CreatePromotion />} />
