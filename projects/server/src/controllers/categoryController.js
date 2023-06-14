@@ -7,6 +7,7 @@ const {
 
 const getCategories = async (request, response) => {
 	const { filter, order, page, itemPerPage } = request.query;
+	console.log({ filter, order, page, itemPerPage });
 	await startFindCategories(filter, order, page, Number(itemPerPage))
 		.then(result => response.status(200).send(result))
 		.catch(error => response.status(error.code).send(error.message));

@@ -15,12 +15,17 @@ const CategoryTableHead = () => {
 	);
 };
 
-const CategoryTable = ({ page, setMaxPage, itemPerPage }) => {
+const CategoryTable = ({ page, setMaxPage, itemPerPage, filter }) => {
 	return (
 		<div className="flex overflow-x-auto rounded-lg border-green-300 border-2">
 			<table className="w-full">
 				<CategoryTableHead />
-				<CategoryTableBody page={page} setMaxPage={setMaxPage} itemPerPage={itemPerPage} />
+				<CategoryTableBody
+					page={page}
+					setMaxPage={setMaxPage}
+					itemPerPage={itemPerPage}
+					filter={filter}
+				/>
 			</table>
 		</div>
 	);

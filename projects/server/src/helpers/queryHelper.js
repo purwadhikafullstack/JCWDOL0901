@@ -1,3 +1,4 @@
+const { Op } = require("sequelize");
 const { sequelize } = require("../models/index.js");
 
 const getAdminQueryFilter = async query => {
@@ -33,6 +34,11 @@ const getInventoryPromotionQueryFilter = async query => {
 	return filter;
 };
 
+const getCategoryQueryFilter = async query => {
+	const filter = query.name ? { name: { [Op.like]: "%" + query.name + "%" } } : {};
+	return filter;
+};
+
 const getInventoryPromotionQueryOrder = async query => {
 	const order = { Inventory_promotions: [] };
 	const inventoryPromotionsOrder = ["start_at", "expired_at"];
@@ -59,4 +65,5 @@ module.exports = {
 	getAdminQueryOrder,
 	getInventoryPromotionQueryFilter,
 	getInventoryPromotionQueryOrder,
+	getCategoryQueryFilter,
 };

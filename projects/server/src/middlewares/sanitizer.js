@@ -3,6 +3,7 @@ const {
 	getAdminQueryOrder,
 	getInventoryPromotionQueryFilter,
 	getInventoryPromotionQueryOrder,
+	getCategoryQueryFilter,
 } = require("../helpers/queryHelper");
 
 const getAdminsQuerySanitizer = async (request, response, next) => {
@@ -56,10 +57,24 @@ const patchInventoryPromotionBodySanitizer = async (request, response, next) => 
 	next();
 };
 
+const getCategorySanitizer = async (request, response, next) => {
+	const sanitizedQuery = {
+		filter: await getCategoryQueryFilter(request.query),
+		// order: await getInventoryPromotionQueryOrder(request.query),
+		page: request.query.page,
+		itemPerPage: request.query.itemPerPage,
+	};
+
+	request.query = sanitizedQuery;
+
+	next();
+};
+
 module.exports = {
 	getAdminsQuerySanitizer,
 	postNearestBranchBodySanitizer,
 	getInventoryPromotionQuerySanitizer,
 	postInventoryPromotionBodySanitizer,
 	patchInventoryPromotionBodySanitizer,
+	getCategorySanitizer,
 };

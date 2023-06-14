@@ -2,7 +2,7 @@ const { Categories } = require("../models/index.js");
 
 const readCategoryQuery = async (filter, order, page, itemPerPage) => {
 	return await Categories.findAndCountAll({
-		// where: { ...filter },
+		where: { ...filter },
 		offset: (page - 1) * itemPerPage,
 		limit: itemPerPage,
 	});

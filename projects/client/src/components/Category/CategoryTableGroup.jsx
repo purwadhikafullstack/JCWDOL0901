@@ -2,6 +2,7 @@ import Pagination from "../Pagination";
 import { useState } from "react";
 import CategoryTable from "./CategoryTable";
 import { useNavigate } from "react-router-dom";
+import CategoryFilterSort from "./CategoryFilterSort";
 
 const CreateButton = () => {
 	const navigate = useNavigate();
@@ -18,11 +19,19 @@ const CreateButton = () => {
 const CategoryTableGroup = () => {
 	const [page, setPage] = useState(1);
 	const [maxPage, setMaxPage] = useState(1);
+	const [filter, setFilter] = useState("");
+	const [order, setOrder] = useState("");
 	const itemPerPage = 5;
 	return (
 		<div className="max-w-3xl flex flex-col gap-4 py-4 px-10 w-screen">
+			<CategoryFilterSort filter={filter} setFilter={setFilter} order={order} setOrder={setOrder} />
 			<CreateButton />
-			<CategoryTable page={page} setMaxPage={setMaxPage} itemPerPage={itemPerPage} />
+			<CategoryTable
+				page={page}
+				setMaxPage={setMaxPage}
+				itemPerPage={itemPerPage}
+				filter={filter}
+			/>
 			<div className="flex justify-center">
 				<Pagination page={page} setPage={setPage} maxPage={maxPage} />
 			</div>

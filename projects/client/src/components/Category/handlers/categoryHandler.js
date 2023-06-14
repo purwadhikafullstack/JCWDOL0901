@@ -118,7 +118,7 @@ export const generateUrlQuery = (page, itemPerPage, filter, sort, order) => {
 
 	url += `?page=${page}`;
 	url += `&itemPerPage=${itemPerPage}`;
-	// url += filter ? `&promotion_id=${filter.id}` : "";
+	url += filter ? `&name=${filter}` : "";
 	// url += `&order=${sort.id}`;
 	// url += `&asc=${order.id}`;
 
