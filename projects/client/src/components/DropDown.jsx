@@ -3,7 +3,7 @@ import { Listbox } from "@headlessui/react";
 
 const ToggleDropDown = ({ open, data }) => {
 	return (
-		<Listbox.Button className={`bg-white w-full border border-green-200 py-2 rounded-lg mb-2`}>
+		<Listbox.Button className={`bg-white w-full border border-green-200 py-2 rounded-lg`}>
 			<div className="flex flex-row items-center justify-end max-w-full">
 				<div className="max-w-[70%] mx-auto font-semibold text-sm overflow-x-hidden ">
 					<div className="max-w-full whitespace-nowrap text-xs box-border">
@@ -57,7 +57,7 @@ const DropDownOptions = ({ setter, getter }) => {
 	return (
 		lists && (
 			<div className="relative">
-				<Listbox.Options className="border absolute h-fit inset-0 w-full overflow-auto rounded-lg text-base">
+				<Listbox.Options className="border absolute h-fit inset-0 max-h-44 min-w-full w-fit overflow-auto rounded-lg text-base">
 					<DataLists lists={lists} setter={setter} />
 				</Listbox.Options>
 			</div>
