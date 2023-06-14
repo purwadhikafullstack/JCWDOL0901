@@ -4,30 +4,52 @@ import { Carousel } from "react-responsive-carousel";
 
 const CarouselWrapper = ({ children, app }) => {
 	return (
-		<Carousel
-			showThumbs={false}
-			showStatus={false}
-			centerMode={app.mobileView ? true : false}
-			width={app.mobileView ? null : 700}
-			swipeable={true}
-			autoPlay={true}
-			interval={4000}
-			emulateTouch={true}
-			showArrows={app.mobileView ? false : true}
-			infiniteLoop={true}
-			swipeScrollTolerance={10}
-			preventMovementUntilSwipeScrollTolerance={true}
-		>
-			{children}
-		</Carousel>
+		<>
+			<div className="block sm:hidden">
+				<Carousel
+					showThumbs={false}
+					showStatus={false}
+					centerMode={true}
+					width={null}
+					swipeable={true}
+					autoPlay={true}
+					interval={4000}
+					emulateTouch={true}
+					showArrows={false}
+					infiniteLoop={true}
+					swipeScrollTolerance={10}
+					preventMovementUntilSwipeScrollTolerance={false}
+					stopOnHover={false}
+				>
+					{children}
+				</Carousel>
+			</div>
+			<div className="hidden sm:block">
+				<Carousel
+					showThumbs={false}
+					showStatus={false}
+					centerMode={false}
+					width={700}
+					swipeable={true}
+					autoPlay={true}
+					interval={4000}
+					emulateTouch={true}
+					showArrows={true}
+					infiniteLoop={true}
+					swipeScrollTolerance={10}
+					preventMovementUntilSwipeScrollTolerance={false}
+					stopOnHover={false}
+				>
+					{children}
+				</Carousel>
+			</div>
+		</>
 	);
 };
 const PromoCarousel = () => {
 	const app = useSelector(state => state.app);
 	return (
-		<div
-			className={app.mobileView ? "z-10 rounded-xl my-8 mx-auto" : "z-10 rounded-xl my-16 mx-auto"}
-		>
+		<div className="z-10 rounded-xl my-8 mx-auto sm:my-16">
 			<CarouselWrapper app={app}>
 				<div className="rounded-xl mx-3">
 					<img className="rounded-xl" src="/assets/promotions/inventory_promotions_1.png" />
