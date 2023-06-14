@@ -4,9 +4,11 @@ import { useNavigate } from "react-router-dom";
 import { TrashIcon } from "@heroicons/react/outline";
 import DeleteAlert from "../DeleteAlert";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const TableBodyContent = ({ datas, page, itemPerPage }) => {
 	const navigate = useNavigate();
+	const admin = useSelector(state => state.admin);
 	const [open, setOpen] = useState(false);
 	const [categoryId, setCategoryId] = useState(0);
 	const [categoryName, setCategoryName] = useState(0);
@@ -42,15 +44,17 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 							<td className={tdClassName}>
 								<div className="flex justify-center gap-2">
 									<button
-										className="bg-green-400 text-white px-4 py-2 rounded-lg"
+										className="bg-green-400 text-white px-4 py-2 rounded-lg disabled:bg-gray-300"
 										onClick={() => editCategory(item, navigate)}
+										disabled={!admin.superAdmin}
 									>
 										Edit
 									</button>
 									<div>{alert}</div>
 									<button
-										className="bg-red text-white px-2 py-2 rounded-lg flex justify-center"
+										className="bg-red text-white px-2 py-2 rounded-lg flex justify-center disabled:bg-gray-300"
 										onClick={() => showDeleteAlert(item, setOpen, setCategoryId, setCategoryName)}
+										disabled={!admin.superAdmin}
 									>
 										<TrashIcon
 											className={`text-green-100 flex-shrink-0 h-5 w-5 mx-auto`}

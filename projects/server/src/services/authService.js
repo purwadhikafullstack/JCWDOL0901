@@ -79,7 +79,8 @@ module.exports = {
 					return reject({ code: 400, message: "Wrong email or password!" });
 
 				const token = await generateJWToken(data, "super" in data);
-				return resolve({ message: "Login success!", token });
+				const superAdmin = data.super;
+				return resolve({ message: "Login success!", token, superAdmin });
 			} catch (error) {
 				return reject({ code: 500, message: "Internal Server Error" });
 			}

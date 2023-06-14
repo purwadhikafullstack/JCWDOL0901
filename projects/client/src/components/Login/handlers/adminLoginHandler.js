@@ -1,4 +1,5 @@
 import axios from "axios";
+import { setAdminLogin } from "../../../redux/reducers/admin/adminAction";
 
 const loginAdminErrorHandler = async error => {
 	if (error?.code === "ERR_NETWORK") {
@@ -18,6 +19,7 @@ export const adminLoginButtonHandler = async (input, setError, navigate, dispatc
 		.then(async result => {
 			localStorage.setItem("token", result.data.token);
 			await navigate("/admin/dashboard");
+			dispatch(setAdminLogin({ hasLogged: true, superAdmin: result.data.superAdmin }));
 		})
 		.catch(async error => {
 			await setError(await loginAdminErrorHandler(error));

@@ -3,16 +3,22 @@ import { useState } from "react";
 import CategoryTable from "./CategoryTable";
 import { useNavigate } from "react-router-dom";
 import CategoryFilterSort from "./CategoryFilterSort";
+import { useSelector } from "react-redux";
 
 const CreateButton = () => {
 	const navigate = useNavigate();
+	const admin = useSelector(state => state.admin);
 	return (
-		<button
-			className="rounded-lg font-bold h-fit bg-green-500 text-green-100 px-4 py-2 mb-4 mt-auto ml-auto mb-1"
-			onClick={() => navigate("create")}
-		>
-			Create New Category
-		</button>
+		<>
+			{admin.superAdmin ? (
+				<button
+					className="rounded-lg font-bold h-fit bg-green-500 text-green-100 px-4 py-2 mb-4 mt-auto ml-auto mb-1"
+					onClick={() => navigate("create")}
+				>
+					Create New Category
+				</button>
+			) : null}
+		</>
 	);
 };
 

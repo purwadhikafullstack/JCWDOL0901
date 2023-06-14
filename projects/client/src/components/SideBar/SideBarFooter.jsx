@@ -1,14 +1,14 @@
 import { LogoutIcon } from "@heroicons/react/outline";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { setSuper } from "../../redux/reducers/admin/adminAction";
+import { setAdminLogin } from "../../redux/reducers/admin/adminAction";
 
 export default function SideBarFooter() {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 	const logoutHandler = () => {
 		localStorage.removeItem("token");
-		dispatch(setSuper(false));
+		dispatch(setAdminLogin({ hasLogged: false, superAdmin: false }));
 		navigate("/admin/login");
 	};
 	return (
