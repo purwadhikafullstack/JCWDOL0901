@@ -5,7 +5,15 @@ const NameConfiguration = ({ setName }) => {
 
 	return (
 		<div className="flex flex-col w-[25%]">
-			<div className="flex flex-row items-center justify-around w-full text-green-100 mt-auto">
+			<div className="flex flex-col items-center justify-around w-full text-green-100 mt-auto lg:flex-row">
+				<div
+					className="flex w-fit text-black mb-1 rounded-lg p-1 px-2 cursor-pointer block lg:hidden"
+					onClick={() => setName(input)}
+				>
+					<span class="material-symbols-rounded w-full overflow-hidden whitespace-nowrap">
+						keyboard_return
+					</span>
+				</div>
 				<input
 					type="text"
 					className="border border-green-400 px-3 py-2 w-[70%] rounded-lg mb-auto text-black outline-0"

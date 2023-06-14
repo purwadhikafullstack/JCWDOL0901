@@ -15,11 +15,11 @@ const FilterConfiguration = ({ filterBy, setFilterBy, filter, setFilter }) => {
 		<div className="flex flex-col w-[25%]">
 			<Icon />
 			<div className="flex flex-col justify-around w-full lg:flex-row">
-				<div className="flex justify-center w-[45%]">
+				<div className="flex justify-center w-full lg:w-[45%]">
 					<DropDown data={filterBy} setter={setFilterBy} getter={getFilterBy} />
 				</div>
 				{filterBy?.id === "category_id" && (
-					<div className="flex justify-center w-[45%]">
+					<div className="flex mt-2 justify-center w-full lg:w-[45%] lg:mt-0">
 						<DropDown data={filter} setter={setFilter} getter={getCategories} />
 					</div>
 				)}
