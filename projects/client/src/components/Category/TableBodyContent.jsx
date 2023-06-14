@@ -30,11 +30,13 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 						<tr>
 							<td className={tdClassName}>{(page - 1) * itemPerPage + (index + 1)}</td>
 							<td className={tdClassName}>
-								<img
-									src={process.env.REACT_APP_IMAGE_BASE_URL + item.image}
-									className="w-[80px] max-h-20"
-									alt={item.name}
-								/>
+								<div className="flex justify-center">
+									<img
+										src={process.env.REACT_APP_IMAGE_BASE_URL + item.image}
+										className="w-[80px] max-h-20"
+										alt={item.name}
+									/>
+								</div>
 							</td>
 							<td className={tdClassName}>{item.name}</td>
 							<td className={tdClassName}>

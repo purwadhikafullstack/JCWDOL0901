@@ -2,7 +2,6 @@ import Pagination from "../Pagination";
 import { useState } from "react";
 import CategoryTable from "./CategoryTable";
 import { useNavigate } from "react-router-dom";
-import DeleteAlert from "../DeleteAlert";
 
 const CreateButton = () => {
 	const navigate = useNavigate();
