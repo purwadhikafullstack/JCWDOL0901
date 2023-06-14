@@ -1,6 +1,6 @@
 import React from "react";
-import DropDown from "../DropDown";
-import { getPromotionsOrder, getPromotionsSortBy } from "./handlers/productPromoHandler";
+import DropDown from "../../DropDown";
+import { getPromotionsOrder, getPromotionsSortBy } from "../handlers/productPromoHandler";
 
 const SearchSort = ({ sort, setSort, order, setOrder }) => {
 	return (

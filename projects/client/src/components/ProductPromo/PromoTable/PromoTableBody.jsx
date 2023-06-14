@@ -1,6 +1,6 @@
 import React from "react";
 import TableBodyContent from "./TableBodyContent.jsx";
-import { getInventoryPromotions, generateUrlQuery } from "./handlers/productPromoHandler";
+import { getInventoryPromotions, generateUrlQuery } from "../handlers/productPromoHandler";
 
 const PromoTableBody = ({ filter, sort, order, page, setMaxPage }) => {
 	const [datas, setDatas] = React.useState([]);

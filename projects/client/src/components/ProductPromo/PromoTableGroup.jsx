@@ -1,19 +1,11 @@
 import React from "react";
-import PromoTable from "./PromoTable.jsx";
+import PromoTable from "./PromoTable/PromoTable.jsx";
 import Pagination from "../Pagination.jsx";
-import SearchSort from "./SearchSort.jsx";
-import SearchFilter from "./SearchFilter.jsx";
+
 import CreateButton from "./CreateButton.jsx";
-import ResetButton from "./ResetButton.jsx";
 
-const sortDefault = { id: "start_at", name: "Start Date" };
-const orderDefault = { id: "0", name: "Descending" };
-
-const resetSetting = (setFilter, setSort, setOrder) => {
-	setFilter("");
-	setSort(sortDefault);
-	setOrder(orderDefault);
-};
+import SearchConfiguration from "./SearchConfiguration.jsx";
+import { orderDefault, sortDefault } from "./handlers/productPromoHandler.js";
 
 const PromoTableGroup = () => {
 	const [filter, setFilter] = React.useState("");
@@ -24,13 +16,16 @@ const PromoTableGroup = () => {
 
 	return (
 		<div className="flex flex-col justify-start mt-16 px-4 h-full">
-			<div className="flex flex-row w-full justify-between mb-4 p-4 rounded-xl z-50 sm:mb-10">
-				<div className="flex flex-col h-full w-[40%]">
-					<SearchFilter filter={filter} setFilter={setFilter} />
-				</div>
-				<SearchSort sort={sort} setSort={setSort} order={order} setOrder={setOrder} />
-				<ResetButton onClick={() => resetSetting(setFilter, setSort, setOrder)} />
-			</div>
+			<SearchConfiguration
+				filter={filter}
+				setFilter={setFilter}
+				order={order}
+				setOrder={setOrder}
+				sort={sort}
+				setSort={setSort}
+				setPage={setPage}
+			/>
+
 			<CreateButton />
 			<PromoTable sort={sort} filter={filter} order={order} page={page} setMaxPage={setMaxPage} />
 			<div className="mx-auto mt-16">

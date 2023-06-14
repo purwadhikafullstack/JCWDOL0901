@@ -58,3 +58,13 @@ export const generateUrlQuery = (page, filter, sort, order) => {
 
 	return url;
 };
+
+export const sortDefault = { id: "start_at", name: "Start Date" };
+export const orderDefault = { id: "0", name: "Descending" };
+
+export const resetSetting = (setFilter, setSort, setOrder, setPage) => {
+	setFilter("");
+	setSort(sortDefault);
+	setOrder(orderDefault);
+	setPage(1);
+};
