@@ -19,7 +19,7 @@ const EditModeButton = ({ setEditMode, formik }) => {
 		<td className="py-4 bg-white text-xs text-white text-center">
 			<button
 				className="bg-green-500 px-3 py-1.5 rounded"
-				type="submit"
+				type="button"
 				onClick={formik.handleSubmit}
 			>
 				Save

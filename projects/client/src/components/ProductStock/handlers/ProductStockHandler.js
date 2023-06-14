@@ -66,7 +66,13 @@ export const generateUrlQuery = (name = "", page, filterBy, filter, sort, order)
 
 export const editStockButtonHandler = async (values, setError) => {
 	await axios
-		.patch(`${process.env.REACT_APP_API_BASE_URL}/admin/inventory/${values.id}/update`, values)
+		.patch(
+			`${process.env.REACT_APP_API_BASE_URL}/admin/inventory/${values.inventory_id}/update`,
+			values,
+			{
+				headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+			}
+		)
 		.then(result => {
 			window.location.reload(false);
 		})
