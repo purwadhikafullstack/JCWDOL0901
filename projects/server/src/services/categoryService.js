@@ -6,10 +6,10 @@ const {
 } = require("../queries/Categories");
 
 module.exports = {
-	startFindCategories: async (filter, order, page) => {
+	startFindCategories: async (filter, order, page, itemPerPage) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const Category = await readCategoryQuery(filter, order, page);
+				const Category = await readCategoryQuery(filter, order, page, itemPerPage);
 				return resolve(Category);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));

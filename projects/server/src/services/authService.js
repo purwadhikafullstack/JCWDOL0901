@@ -19,6 +19,7 @@ const { paginateData } = require("../helpers/queryHelper.js");
 
 const { sendRegistrationVerificationEmail } = require("../utils/nodemailer.js");
 const { generateJWToken } = require("../utils/jsonwebtoken.js");
+const { verifyHashPassword } = require("../utils/bcrypt.js");
 
 const userDatabaseGeneration = async (body, transaction) => {
 	const User = await createUserQuery(body, transaction);
@@ -71,7 +72,10 @@ module.exports = {
 					where: { email: body.email },
 				});
 
-				if (data?.password !== body.password || !data)
+				// if (!(await verifyHashPassword(body.password, data?.password)) || !data)
+				// 	return reject({ code: 400, message: "Wrong email or password!" });
+
+				if (body.password !== data?.password || !data)
 					return reject({ code: 400, message: "Wrong email or password!" });
 
 				const token = await generateJWToken(data, "super" in data);

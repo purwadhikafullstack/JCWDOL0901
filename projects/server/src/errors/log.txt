@@ -689,3 +689,63 @@
 	Source: startCreateHandler
 	Error: {"name":"SequelizeValidationError","errors":[{"message":"image cannot be an array or an object","type":"string violation","path":"image","value":{"id":1,"name":"Sayur & Buah","image":"uploads/category/category_168667948845255777756.png"},"origin":"CORE","instance":{"id":null,"name":"Sayur & Buah","image":{"id":1,"name":"Sayur & Buah","image":"uploads/category/category_168667948845255777756.png"}},"validatorKey":"not_a_string","validatorName":null,"validatorArgs":[]}]}
 	
+	===
+	Time: Wed Jun 14 2023 14:36:57 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 3;"},"original":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 3;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 3;","parameters":{}}
+	
+	===
+	Time: Wed Jun 14 2023 14:36:57 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 3;"},"original":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 3;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 3;","parameters":{}}
+	
+	===
+	Time: Wed Jun 14 2023 14:39:54 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 10000000000000;"},"original":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 10000000000000;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 10000000000000;","parameters":{}}
+	
+	===
+	Time: Wed Jun 14 2023 14:40:10 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 10000000000000;"},"original":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 10000000000000;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 10000000000000;","parameters":{}}
+	
+	===
+	Time: Wed Jun 14 2023 14:40:15 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 10000000000000;"},"original":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 10000000000000;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 10000000000000;","parameters":{}}
+	
+	===
+	Time: Wed Jun 14 2023 14:40:27 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 10000000000000;"},"original":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 10000000000000;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 10000000000000;","parameters":{}}
+	
+	===
+	Time: Wed Jun 14 2023 14:40:39 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 10000000000000;"},"original":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 10000000000000;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, 10000000000000;","parameters":{}}
+	
+	===
+	Time: Wed Jun 14 2023 14:42:12 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_PARSE_ERROR","errno":1064,"sqlState":"42000","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''5'' at line 1","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT 0, '5';"},"original":{"code":"ER_PARSE_ERROR","errno":1064,"sqlState":"42000","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''5'' at line 1","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT 0, '5';"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT 0, '5';","parameters":{}}
+	
+	===
+	Time: Wed Jun 14 2023 14:43:03 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_PARSE_ERROR","errno":1064,"sqlState":"42000","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''5'' at line 1","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT 0, '5';"},"original":{"code":"ER_PARSE_ERROR","errno":1064,"sqlState":"42000","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''5'' at line 1","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT 0, '5';"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT 0, '5';","parameters":{}}
+	
+	===
+	Time: Wed Jun 14 2023 14:43:40 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_PARSE_ERROR","errno":1064,"sqlState":"42000","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''5'' at line 1","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT 0, '5';"},"original":{"code":"ER_PARSE_ERROR","errno":1064,"sqlState":"42000","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''5'' at line 1","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT 0, '5';"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT 0, '5';","parameters":{}}
+	
+	===
+	Time: Wed Jun 14 2023 14:44:11 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_PARSE_ERROR","errno":1064,"sqlState":"42000","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''5'' at line 1","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT 0, '5';"},"original":{"code":"ER_PARSE_ERROR","errno":1064,"sqlState":"42000","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''5'' at line 1","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT 0, '5';"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT 0, '5';","parameters":{}}
+	
+	===
+	Time: Wed Jun 14 2023 14:44:12 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_PARSE_ERROR","errno":1064,"sqlState":"42000","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''5'' at line 1","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT 0, '5';"},"original":{"code":"ER_PARSE_ERROR","errno":1064,"sqlState":"42000","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''5'' at line 1","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT 0, '5';"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT 0, '5';","parameters":{}}
+	

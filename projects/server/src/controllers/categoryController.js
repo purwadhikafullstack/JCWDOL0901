@@ -5,8 +5,8 @@ const {
 } = require("../services/categoryService");
 
 const getCategories = async (request, response) => {
-	const { filter, order, page } = request.query;
-	await startFindCategories(filter, order, page)
+	const { filter, order, page, itemPerPage } = request.query;
+	await startFindCategories(filter, order, page, Number(itemPerPage))
 		.then(result => response.status(200).send(result))
 		.catch(error => response.status(error.code).send(error.message));
 };

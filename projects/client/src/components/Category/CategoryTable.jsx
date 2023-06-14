@@ -2,10 +2,10 @@ import React from "react";
 import CategoryTableBody from "./CategoryTableBody";
 
 const CategoryTableHead = () => {
-	const thClassName = "py-6 bg-green-500 text-green-100 px-6 whitespace-nowrap";
+	const thClassName = "py-4 bg-green-500 text-green-100 px-6 whitespace-nowrap";
 	return (
 		<thead className="uppercase">
-			<tr className="text-center">
+			<tr className="text-center text-xs">
 				<th className={thClassName}>No</th>
 				<th className={thClassName}>Image</th>
 				<th className={thClassName}>Name</th>
@@ -15,12 +15,12 @@ const CategoryTableHead = () => {
 	);
 };
 
-const CategoryTable = ({ page, setMaxPage }) => {
+const CategoryTable = ({ page, setMaxPage, itemPerPage }) => {
 	return (
 		<div className="flex overflow-x-auto rounded-lg border-green-300 border-2">
 			<table className="w-full">
 				<CategoryTableHead />
-				<CategoryTableBody page={page} setMaxPage={setMaxPage} />
+				<CategoryTableBody page={page} setMaxPage={setMaxPage} itemPerPage={itemPerPage} />
 			</table>
 		</div>
 	);

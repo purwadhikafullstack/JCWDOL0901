@@ -84,10 +84,11 @@ export const updateCategoryHandler = async (input, item) => {
 	}
 };
 
-export const generateUrlQuery = (page, filter, sort, order) => {
+export const generateUrlQuery = (page, itemPerPage, filter, sort, order) => {
 	let url = "";
 
 	url += `?page=${page}`;
+	url += `&itemPerPage=${itemPerPage}`;
 	// url += filter ? `&promotion_id=${filter.id}` : "";
 	// url += `&order=${sort.id}`;
 	// url += `&asc=${order.id}`;
@@ -103,4 +104,10 @@ export const getCategories = (token, query) => {
 
 export const editCategory = (item, navigate) => {
 	navigate("/admin/category/update", { state: item });
+};
+
+export const deleteCategory = (item, setOpen, setCategoryId, setCategoryName) => {
+	setOpen(true);
+	setCategoryId(item.id);
+	setCategoryName(item.name);
 };
