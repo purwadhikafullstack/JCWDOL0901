@@ -33,7 +33,7 @@ const PromoTableGroup = () => {
 			</div>
 			<CreateButton />
 			<PromoTable sort={sort} filter={filter} order={order} page={page} setMaxPage={setMaxPage} />
-			<div className="mx-auto mt-auto mt-16">
+			<div className="mx-auto mt-16">
 				<Pagination page={page} setPage={setPage} maxPage={maxPage} />
 			</div>
 		</div>
