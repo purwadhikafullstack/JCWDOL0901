@@ -48,7 +48,7 @@ module.exports = {
 	startInventoryPromotionDelete: async id => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				// TODO:
+				// TODO: Implement to frontend
 				await deleteInventoryPromotionQuery(id);
 
 				return resolve("Inventory Promotion Deleted!");
