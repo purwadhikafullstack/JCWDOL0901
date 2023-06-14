@@ -7,7 +7,7 @@ const PromoTableBody = ({ filter, sort, order, page, setMaxPage }) => {
 
 	React.useEffect(() => {
 		const query = generateUrlQuery(page, filter, sort, order);
-		getInventoryPromotions(localStorage.getItem("token"), query)
+		getInventoryPromotions(query)
 			.then(result => {
 				setDatas(result.data.rows);
 				setMaxPage(Math.ceil(result.data.count / 3));
