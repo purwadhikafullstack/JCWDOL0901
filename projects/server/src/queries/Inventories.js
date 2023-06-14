@@ -25,4 +25,12 @@ const createInventoryQueryForNewBranch = async (Branch, transaction) => {
 	return Branch.addProducts(Product, { transaction });
 };
 
-module.exports = { readInventoriesQuery, createInventoryQueryForNewBranch };
+const updateInventoriesQuery = async (inventory_id, stock, transaction) => {
+	const Inventory = await Inventories.findOne({ where: { id: inventory_id } });
+	const previousStock = Inventory.stock;
+
+	await Inventory.update({ stock }, { where: { id: inventory_id }, transaction });
+	return { Inventory, previousStock };
+};
+
+module.exports = { readInventoriesQuery, createInventoryQueryForNewBranch, updateInventoriesQuery };
