@@ -17,7 +17,6 @@ const isSuperAdmin = async (navigate, dispatch) => {
 		if (!adminData) {
 			navigate(`/admin/login`);
 		}
-		console.log(adminData);
 		dispatch(setAdminLogin({ hasLogged: true, superAdmin: adminData.data.super }));
 		return;
 	} catch (error) {

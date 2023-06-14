@@ -5,6 +5,7 @@ const readCategoryQuery = async (filter, order, page, itemPerPage) => {
 		where: { ...filter },
 		offset: (page - 1) * itemPerPage,
 		limit: itemPerPage,
+		order: [...order],
 	});
 };
 const createCategoryQuery = async (body, file) => {

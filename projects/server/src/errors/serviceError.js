@@ -72,7 +72,6 @@ const startCreateHandler = async error => {
 
 const startDeleteteHandler = async error => {
 	await writeLogFile(error, "startDeleteteHandler");
-	console.log(error.name);
 	if (error.name === "SequelizeForeignKeyConstraintError") {
 		return { code: 500, message: "ER_ROW_IS_REFERENCED_2" };
 	}

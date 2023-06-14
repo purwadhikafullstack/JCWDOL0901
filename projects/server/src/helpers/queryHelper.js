@@ -39,6 +39,12 @@ const getCategoryQueryFilter = async query => {
 	return filter;
 };
 
+const getCategoryQueryOrder = async query => {
+	const ascending = query.asc == 1 ? "ASC" : "DESC";
+	const order = query.order && query.asc ? [[query.order, ascending]] : [];
+	return order;
+};
+
 const getInventoryPromotionQueryOrder = async query => {
 	const order = { Inventory_promotions: [] };
 	const inventoryPromotionsOrder = ["start_at", "expired_at"];
@@ -66,4 +72,5 @@ module.exports = {
 	getInventoryPromotionQueryFilter,
 	getInventoryPromotionQueryOrder,
 	getCategoryQueryFilter,
+	getCategoryQueryOrder,
 };

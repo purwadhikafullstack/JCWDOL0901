@@ -47,6 +47,8 @@ const CategoryTableGroup = () => {
 					onClick={() => {
 						setFilter("");
 						setInput("");
+						setSort("");
+						setOrder("");
 					}}
 				/>
 				<CreateButton />
@@ -56,6 +58,8 @@ const CategoryTableGroup = () => {
 				setMaxPage={setMaxPage}
 				itemPerPage={itemPerPage}
 				filter={filter}
+				sort={sort}
+				order={order}
 			/>
 			<div className="flex justify-center">
 				<Pagination page={page} setPage={setPage} maxPage={maxPage} />

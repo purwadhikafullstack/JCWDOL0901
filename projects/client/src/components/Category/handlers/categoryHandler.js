@@ -10,7 +10,6 @@ const validateCategoryInput = values => {
 };
 
 const categoryErrorHandler = async error => {
-	console.log(error);
 	if (error?.code === "ERR_NETWORK") {
 		return "Server unreachable, try again later!";
 	} else if (error?.response?.status === 400) {
@@ -103,7 +102,6 @@ export const deleteCategoryHandler = async (id, navigate) => {
 			timer: 2000,
 		});
 	} catch (error) {
-		console.log(error);
 		Swal.fire({
 			icon: "error",
 			title: await categoryErrorHandler(error),
@@ -119,8 +117,8 @@ export const generateUrlQuery = (page, itemPerPage, filter, sort, order) => {
 	url += `?page=${page}`;
 	url += `&itemPerPage=${itemPerPage}`;
 	url += filter ? `&name=${filter}` : "";
-	// url += `&order=${sort.id}`;
-	// url += `&asc=${order.id}`;
+	url += sort ? `&order=${sort.id}` : "";
+	url += order ? `&asc=${order.id}` : "";
 
 	return url;
 };

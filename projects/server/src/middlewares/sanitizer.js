@@ -4,6 +4,7 @@ const {
 	getInventoryPromotionQueryFilter,
 	getInventoryPromotionQueryOrder,
 	getCategoryQueryFilter,
+	getCategoryQueryOrder,
 } = require("../helpers/queryHelper");
 
 const getAdminsQuerySanitizer = async (request, response, next) => {
@@ -60,7 +61,7 @@ const patchInventoryPromotionBodySanitizer = async (request, response, next) => 
 const getCategorySanitizer = async (request, response, next) => {
 	const sanitizedQuery = {
 		filter: await getCategoryQueryFilter(request.query),
-		// order: await getInventoryPromotionQueryOrder(request.query),
+		order: await getCategoryQueryOrder(request.query),
 		page: request.query.page,
 		itemPerPage: request.query.itemPerPage,
 	};

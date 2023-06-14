@@ -949,3 +949,53 @@
 	Source: startFindErrorHandler
 	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;"},"original":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;","parameters":{}}
 	
+	===
+	Time: Wed Jun 14 2023 23:57:03 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 14 2023 23:57:11 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 14 2023 23:57:18 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 14 2023 23:57:21 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 14 2023 23:58:01 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 14 2023 23:58:09 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 15 2023 00:00:09 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 15 2023 00:02:13 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Categories.ASC' in 'order clause'","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` WHERE `Categories`.`name` LIKE '%sa%' ORDER BY `Categories`.`name`, `Categories`.`ASC` LIMIT 0, 5;"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Categories.ASC' in 'order clause'","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` WHERE `Categories`.`name` LIKE '%sa%' ORDER BY `Categories`.`name`, `Categories`.`ASC` LIMIT 0, 5;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` WHERE `Categories`.`name` LIKE '%sa%' ORDER BY `Categories`.`name`, `Categories`.`ASC` LIMIT 0, 5;","parameters":{}}
+	
+	===
+	Time: Thu Jun 15 2023 00:03:41 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_PARSE_ERROR","errno":1064,"sqlState":"42000","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 0, 5' at line 1","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` ORDER BY  LIMIT 0, 5;"},"original":{"code":"ER_PARSE_ERROR","errno":1064,"sqlState":"42000","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 0, 5' at line 1","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` ORDER BY  LIMIT 0, 5;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` ORDER BY  LIMIT 0, 5;","parameters":{}}
+	
+	===
+	Time: Thu Jun 15 2023 00:03:41 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_PARSE_ERROR","errno":1064,"sqlState":"42000","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 0, 5' at line 1","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` ORDER BY  LIMIT 0, 5;"},"original":{"code":"ER_PARSE_ERROR","errno":1064,"sqlState":"42000","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 0, 5' at line 1","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` ORDER BY  LIMIT 0, 5;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` ORDER BY  LIMIT 0, 5;","parameters":{}}
+	
