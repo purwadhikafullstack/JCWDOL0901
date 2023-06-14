@@ -140,3 +140,22 @@ export const showDeleteAlert = (item, setOpen, setCategoryId, setCategoryName) =
 	setCategoryId(item.id);
 	setCategoryName(item.name);
 };
+
+export const getCategorySortBy = () => {
+	return new Promise((resolve, reject) => {
+		resolve({
+			data: [{ id: "name", name: "Name" }],
+		});
+	});
+};
+
+export const getCategoryOrder = () => {
+	return new Promise((resolve, reject) => {
+		resolve({
+			data: [
+				{ id: "1", name: "Ascending" },
+				{ id: "0", name: "Descending" },
+			],
+		});
+	});
+};

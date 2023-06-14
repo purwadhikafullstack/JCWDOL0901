@@ -4,6 +4,7 @@ import CategoryTable from "./CategoryTable";
 import { useNavigate } from "react-router-dom";
 import CategoryFilterSort from "./CategoryFilterSort";
 import { useSelector } from "react-redux";
+import ResetButton from "./ResetButton";
 
 const CreateButton = () => {
 	const navigate = useNavigate();
@@ -12,7 +13,7 @@ const CreateButton = () => {
 		<>
 			{admin.superAdmin ? (
 				<button
-					className="rounded-lg font-bold h-fit bg-green-500 text-green-100 px-4 py-2 mb-4 mt-auto ml-auto mb-1"
+					className="rounded-lg font-bold h-fit bg-green-500 text-green-100 px-4 py-2 ml-auto"
 					onClick={() => navigate("create")}
 				>
 					Create New Category
@@ -26,12 +27,30 @@ const CategoryTableGroup = () => {
 	const [page, setPage] = useState(1);
 	const [maxPage, setMaxPage] = useState(1);
 	const [filter, setFilter] = useState("");
+	const [sort, setSort] = useState("");
 	const [order, setOrder] = useState("");
+	const [input, setInput] = useState("");
 	const itemPerPage = 5;
 	return (
 		<div className="max-w-3xl flex flex-col gap-4 py-4 px-10 w-screen">
-			<CategoryFilterSort filter={filter} setFilter={setFilter} order={order} setOrder={setOrder} />
-			<CreateButton />
+			<CategoryFilterSort
+				setFilter={setFilter}
+				order={order}
+				setOrder={setOrder}
+				sort={sort}
+				setSort={setSort}
+				input={input}
+				setInput={setInput}
+			/>
+			<div className="flex">
+				<ResetButton
+					onClick={() => {
+						setFilter("");
+						setInput("");
+					}}
+				/>
+				<CreateButton />
+			</div>
 			<CategoryTable
 				page={page}
 				setMaxPage={setMaxPage}
