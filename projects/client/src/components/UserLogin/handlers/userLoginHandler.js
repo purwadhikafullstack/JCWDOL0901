@@ -26,3 +26,12 @@ export const userLoginButtonHandler = async (input, setError, navigate) => {
     await setError(await userLoginErrorHandler(error));
   }
 };
+
+export const handleOptionsGetter = async () => {
+  try {
+    const response = await axios.get("https://example.com/options");
+    return response.data;
+  } catch (error) {
+    throw new Error("Failed to fetch options");
+  }
+};
