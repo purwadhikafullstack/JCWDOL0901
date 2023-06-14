@@ -1,7 +1,21 @@
 import React from "react";
-import { patchInventoryPromotions, getPromotionsType } from "./handlers/productPromoHandler";
+import { getPromotionsType } from "./handlers/productPromoHandler";
+import { useFormik } from "formik";
+import { formikEditModeConfiguration } from "./config/formikEditModeHandler";
+import ErrorWarning from "../ErrorWarning.jsx";
 
-const PromotionEdit = ({ selected, onChange }) => {
+const FormikError = ({ formik, inputKey }) => {
+	return (
+		formik?.errors?.[inputKey] &&
+		formik?.touched?.[inputKey] && (
+			<div className="text-red absolute text-xs font-light select-none text-left">
+				{formik?.errors?.[inputKey]}
+			</div>
+		)
+	);
+};
+
+const PromotionEdit = ({ formik }) => {
 	const [types, setTypes] = React.useState([]);
 
 	React.useEffect(() => {
@@ -12,7 +26,13 @@ const PromotionEdit = ({ selected, onChange }) => {
 
 	return (
 		types && (
-			<select name="promotion_id" className="bg-gray-100 rounded p-1" onChange={onChange}>
+			<select
+				name="promotion_id"
+				className="bg-gray-100 rounded p-1"
+				onChange={formik?.handleChange}
+				onBlur={formik?.handleBlur}
+				value={formik?.values?.promotion_id}
+			>
 				{types.map((type, index) => {
 					return (
 						<option value={type.id} key={index}>
@@ -25,39 +45,27 @@ const PromotionEdit = ({ selected, onChange }) => {
 	);
 };
 
-const EditModeButton = ({ setEditMode, editValue }) => {
-	const handleSave = () => {
-		patchInventoryPromotions(localStorage.getItem("token"), editValue)
-			.then(result => setEditMode(-1))
-			.catch(error => alert("please try again"))
-			.finally(() => window.location.reload(false));
-	};
+const EditModeButton = ({ setEditMode, formik }) => {
 	return (
-		<td className="py-4 bg-white text-xs text-white text-center">
-			<button className="bg-green-500 px-3 py-1.5 rounded" onClick={handleSave}>
+		<>
+			<button
+				type="button"
+				className="bg-green-500 px-3 py-1.5 rounded"
+				onClick={formik.handleSubmit}
+			>
 				Save
 			</button>
 			<button className="bg-red px-3 py-1.5 rounded ml-2" onClick={() => setEditMode(-1)}>
 				Cancel
 			</button>
-		</td>
+		</>
 	);
 };
 
 const EditMode = ({ item, index, setEditMode }) => {
-	const [editValue, setEditValue] = React.useState({
-		id: item.id,
-		inventory_id: item.inventory_id,
-		promotion_id: item.promotion_id,
-		value: item.value,
-		start_at: item.start_at,
-		expired_at: item.expired_at,
-	});
-
+	const [error, setError] = React.useState("");
+	const formik = useFormik(formikEditModeConfiguration(setError, item));
 	const tdClassName = "py-4 bg-white text-xs text-center";
-
-	const handleChange = event =>
-		setEditValue({ ...editValue, [event.target.name]: event.target.value });
 
 	return (
 		<tbody key={index}>
@@ -67,29 +75,43 @@ const EditMode = ({ item, index, setEditMode }) => {
 				</td>
 				<td className={tdClassName}>{item.Inventory.Product.name}</td>
 				<td className={tdClassName}>
-					<PromotionEdit selected={item.promotion_id} name="promotion_id" onChange={handleChange} />
+					<PromotionEdit formik={formik} />
 				</td>
 				<td className={tdClassName}>
 					<input
 						className="text-center bg-gray-100 rounded p-1"
 						name="value"
 						type="number"
-						defaultValue={item.value}
-						onChange={handleChange}
+						onChange={formik?.handleChange}
+						onBlur={formik?.handleBlur}
+						value={formik?.values?.value}
 					/>
+					<FormikError formik={formik} inputKey="value" />
 				</td>
 				<td className={tdClassName}>
-					<input type="date" name="start_at" defaultValue={item.start_at} onChange={handleChange} />
+					<input
+						type="date"
+						name="start_at"
+						onChange={formik?.handleChange}
+						onBlur={formik?.handleBlur}
+						value={formik?.values?.start_at}
+					/>
+					<FormikError formik={formik} inputKey="start_at" />
 				</td>
 				<td className={tdClassName}>
 					<input
 						type="date"
 						name="expired_at"
-						defaultValue={item.expired_at}
-						onChange={handleChange}
+						onChange={formik?.handleChange}
+						onBlur={formik?.handleBlur}
+						value={formik?.values?.expired_at}
 					/>
+					<FormikError formik={formik} inputKey="expired_at" />
 				</td>
-				<EditModeButton setEditMode={setEditMode} editValue={editValue} />
+				<td className="py-4 bg-white text-xs text-white text-center">
+					<ErrorWarning error={error} />
+					<EditModeButton setEditMode={setEditMode} formik={formik} />
+				</td>
 			</tr>
 		</tbody>
 	);
