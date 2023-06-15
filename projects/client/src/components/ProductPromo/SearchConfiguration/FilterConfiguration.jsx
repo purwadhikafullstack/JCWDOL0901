@@ -1,6 +1,6 @@
 import React from "react";
-import DropDown from "../DropDown.jsx";
-import { getPromotionsType } from "./handlers/productPromoHandler.js";
+import DropDown from "../../DropDown.jsx";
+import { getPromotionsType } from "../handlers/productPromoHandler.js";
 
 const SearchFilter = ({ filter, setFilter }) => {
 	return (

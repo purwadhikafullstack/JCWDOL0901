@@ -21,7 +21,7 @@ const navigation = () => {
 		},
 		{ name: "Products", href: "#", icon: GiftIcon },
 		{ name: "Categories", href: "#", icon: ViewGridIcon },
-		{ name: "Stocks", href: "#", icon: ServerIcon },
+		{ name: "Stocks", href: "/admin/stock", icon: ServerIcon },
 		{ name: "Product Promos", href: "/admin/promo", icon: CurrencyDollarIcon },
 		{ name: "Orders", href: "#", icon: DocumentTextIcon },
 		{ name: "Vouchers", href: "#", icon: TicketIcon },

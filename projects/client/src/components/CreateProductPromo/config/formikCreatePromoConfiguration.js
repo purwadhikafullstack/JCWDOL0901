@@ -3,8 +3,8 @@ import Swal from "sweetalert2";
 import { createInventoryPromotion } from "../handlers/createProductPromoHandler.js";
 
 const initialValues = {
-	inventory_id: 0,
-	promotion_id: 0,
+	inventory_id: undefined,
+	promotion_id: undefined,
 	value: 0,
 	start_at: new Date().toISOString().split("T")[0],
 	expired_at: new Date().toISOString().split("T")[0],
@@ -17,13 +17,43 @@ const requiredMessage = "Field can't be empty";
 
 const inventory_id = Yup.number().typeError("Must be a number").required(requiredMessage);
 const promotion_id = Yup.number().typeError("Must be a number").required(requiredMessage);
-const value = Yup.number().typeError("Must be a number").required(requiredMessage);
-const expired_at = Yup.date("Must be a date").required(requiredMessage);
+
+const value = Yup.number()
+	.typeError("Must be a number")
+	.required(requiredMessage)
+	.test("Must be greater than or equal to 1", "Must be a positve number", input => {
+		return input >= 1;
+	})
+	.test("Percentage", "Must be lesser than 101%", (input, formik) => {
+		if (formik.parent.promotion_id === 3) {
+			return input <= 100;
+		}
+		return true;
+	})
+	.test("Buy one get one", "Must be 1", (input, formik) => {
+		if (formik.parent.promotion_id === 4) {
+			return input === 1;
+		}
+		return true;
+	});
+
+const start_at = Yup.date("Must be a date")
+	.required(requiredMessage)
+	.test("Start Date Overlaps Ends Date", "Can't start after end date", (input, formik) => {
+		return new Date(input) <= new Date(formik.parent.expired_at);
+	});
+
+const expired_at = Yup.date("Must be a date")
+	.required(requiredMessage)
+	.test("Ends Date Overlaps Start Date", "Can't end before start date", (input, formik) => {
+		return new Date(input) >= new Date(formik.parent.start_at);
+	});
 
 const validationSchema = Yup.object({
 	inventory_id,
 	promotion_id,
 	value,
+	start_at,
 	expired_at,
 });
 
@@ -43,7 +73,7 @@ const onSubmitConfiguration = async (values, setError, navigate) => {
 					Swal.fire("Success!", "Promotion Created!", "success");
 					navigate(-1);
 				})
-				.catch(error => setError(error));
+				.catch(error => setError(error.message));
 		}
 	});
 };

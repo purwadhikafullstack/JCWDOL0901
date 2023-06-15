@@ -12,14 +12,18 @@ const Options = ({ getter }) => {
 	}, []);
 
 	return (
-		options &&
-		options.map((option, index) => {
-			return (
-				<option value={option.id} key={index}>
-					{option.name}
-				</option>
-			);
-		})
+		options && (
+			<>
+				<option value={undefined}>...</option>
+				{options.map((option, index) => {
+					return (
+						<option value={option.id} key={index}>
+							{option.name}
+						</option>
+					);
+				})}
+			</>
+		)
 	);
 };
 
