@@ -5,18 +5,14 @@ import { formikUserAccountSettingConfiguration } from "./config/formikUserAccoun
 import UserAccountSettingInputField from "./UserAccountSettingInputField";
 import Button from "../Button";
 
-function UserAccountSettingFormWithValidator() {
+function UserAccountSettingFormWithValidator({ setError }) {
   const navigate = useNavigate();
 
   const formik = useFormik(formikUserAccountSettingConfiguration(setError, navigate));
   return (
     <form onSubmit={formik.handleSubmit} noValidate>
       <UserAccountSettingInputField formik={formik} />
-      <Button
-        type="submit"
-        name="User Personal Data Update"
-        disabled={formik.isSubmitting || formik.isValidating}
-      />
+      <Button type="submit" name="Save" disabled={formik.isSubmitting || formik.isValidating} />
     </form>
   );
 }

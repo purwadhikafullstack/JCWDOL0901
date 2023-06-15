@@ -13,7 +13,7 @@ const userAccountSettingErrorHandler = async (error) => {
   };
 
 
-export const userAccountSettingHandler = async (data) => {
+export const userAccountSettingHandler = async (data, setError) => {
   try {
     const response = await axios.patch(
       `${process.env.REACT_APP_API_BASE_URL}/profile/update`,
@@ -21,6 +21,6 @@ export const userAccountSettingHandler = async (data) => {
     );
     return response.data;
   } catch (error) {
-    await setError(await userLoginErrorHandler(error));
+    await setError(await userAccountSettingErrorHandler(error));
   }
 };

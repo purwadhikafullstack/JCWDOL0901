@@ -14,24 +14,14 @@ const userLoginErrorHandler = async (error) => {
 
 export const userLoginButtonHandler = async (input, setError, navigate) => {
   try {
-    
     const { user, password } = input;
-    const response = await axios.post(
-      `${process.env.REACT_APP_API_BASE_URL}/auth/user/login`,
-      { user, password }
-    );
+    const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/auth/user/login`, {
+      user,
+      password,
+    });
     localStorage.setItem("token", response.data.token);
     navigate("/");
   } catch (error) {
     await setError(await userLoginErrorHandler(error));
-  }
-};
-
-export const handleOptionsGetter = async () => {
-  try {
-    const response = await axios.get("https://example.com/options");
-    return response.data;
-  } catch (error) {
-    throw new Error("Failed to fetch options");
   }
 };

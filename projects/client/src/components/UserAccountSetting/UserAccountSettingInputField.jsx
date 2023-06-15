@@ -1,13 +1,17 @@
 import React from "react";
 import InputGroup from "../InputGroup";
-import SelectGroup from "../SelectGroup";
-import { handleOptionsGetter } from "../UserLogin/handlers/userLoginHandler";
+import SelectGroupGender from "./SelectGroupGender";
 
-function UserAccountSettingInputField({formik}) {
+const getter = [
+  { id: "M", name: "Male" },
+  { id: "F", name: "Female" },
+];
+
+function UserAccountSettingInputField({ formik }) {
   return (
     <div className="flex flex-col items-center min-w-full">
       <InputGroup name="Name" type="text" inputKey="name" formik={formik} />
-      <SelectGroup name="Gender" inputKey="gender" formik={formik} getter={handleOptionsGetter} />
+      <SelectGroupGender name="Gender" inputKey="gender" formik={formik} getter={getter} />
       <InputGroup name="Email" type="email" inputKey="email" formik={formik} />
       <InputGroup name="Birthdate" type="date" inputKey="birthdate" formik={formik} />
     </div>

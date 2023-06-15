@@ -1,6 +1,5 @@
 import * as Yup from "yup";
-
-import { userAccountSettingHandler } from "./handlers/UserAccountSettingHandler";
+import { userAccountSettingHandler } from "../handlers/UserAccountSettingHandler";
 
 const initialValues = {
   name: "",
@@ -13,14 +12,12 @@ const validateOnChange = true;
 
 const validateOnBlur = true;
 
-const requiredMessage = "Field can't be empty";
+const name = Yup.string();
+const gender = Yup.string();
 
-// const name = Yup.string().required(requiredMessage);
-// const gender = Yup.string().required(requiredMessage);
+const email = Yup.string().email("Invalid Email Format");
 
-const email = Yup.string().email("Invalid Email Format").required(requiredMessage);
-
-// const birthdate = Yup.string().required(requiredMessage);
+const birthdate = Yup.string();
 
 const validationSchema = Yup.object({
   name,
@@ -29,18 +26,16 @@ const validationSchema = Yup.object({
   birthdate,
 });
 
-
 const onSubmitConfiguration = async (values, setError, navigate) => {
-	await userAccountSettingHandler(values, setError, navigate);
+  await userAccountSettingHandler(values, setError, navigate);
 };
 
 export const formikUserAccountSettingConfiguration = (setError, navigate) => {
-    return {
-      initialValues,
-      onSubmit: async (values) => onSubmitConfiguration(values, setError, navigate),
-      validateOnChange,
-      validateOnBlur,
-      validationSchema,
-    };
+  return {
+    initialValues,
+    onSubmit: async (values) => onSubmitConfiguration(values, setError, navigate),
+    validateOnChange,
+    validateOnBlur,
+    validationSchema,
   };
-  
+};
