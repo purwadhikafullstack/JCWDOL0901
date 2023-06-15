@@ -15,6 +15,7 @@ import ManageCategory from "./pages/ManageCategory/ManageCategory";
 import ManageStock from "./pages/ManageStock/ManageStock";
 import UpdateCategoryPage from "./pages/UpdateCategory/UpdateCategoryPage";
 import AdminAuthGuard from "./pages/AdminAuthGuard";
+import ChangePasswordPage from "./pages/ChangePassword/ChangePasswordPage";
 
 function App() {
 	return (
@@ -27,8 +28,9 @@ function App() {
 				<Route path="/register/greeting" element={<GreetingPage />} />
 				<Route path="/verify/:token" element={<VerifyPage />} />
 				<Route path="/admin/login" element={<AdminLoginPage />} />
+				<Route path="/account/change-password" element={<ChangePasswordPage />} />
 
-				{/* //Auth Page */}
+				{/* //Admin Auth Page */}
 				<Route path="/admin/promo" element={<AdminAuthGuard component={<ProductPromotion />} />} />
 				<Route
 					path="/admin/promo/create"

@@ -6,9 +6,16 @@ const {
 	loginAdmin,
 	loginUser,
 	isSuper,
+	updatePassword,
 } = require("../controllers/authController");
 
-const { getReferrerId, isSuperAdmin, isAdmin } = require("../middlewares/authMiddleware");
+const {
+	getReferrerId,
+	isSuperAdmin,
+	isAdmin,
+	isUser,
+	isVerifiedUser,
+} = require("../middlewares/authMiddleware");
 
 const { getAdminsQuerySanitizer } = require("../middlewares/sanitizer.js");
 
@@ -22,5 +29,6 @@ router.get("/admin/super", isSuper);
 router.post("/user/login", loginUser);
 router.post("/user/register", getReferrerId, registerUser);
 router.get("/user/verify/:token", verifyUser);
+router.patch("/user/password/update", isUser, isVerifiedUser, updatePassword);
 
 module.exports = router;
