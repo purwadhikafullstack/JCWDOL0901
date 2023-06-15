@@ -6,7 +6,7 @@ const fetchCategories = async setCategories => {
 	await axios
 		.get(`${process.env.REACT_APP_API_BASE_URL}/category/list`)
 		.then(result => {
-			setCategories(result.data);
+			setCategories(result.data.rows);
 		})
 		.catch(error => {
 			setCategories({ id: 404, name: "Server Error", image: "" });

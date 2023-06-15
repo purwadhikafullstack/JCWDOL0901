@@ -6,8 +6,14 @@ const SearchSort = ({ sort, setSort, order, setOrder }) => {
 	return (
 		<div className="flex flex-col w-[30%]">
 			<span class="material-symbols-rounded mb-2">sort</span>
-			<DropDown data={sort} setter={setSort} getter={getPromotionsSortBy} />
-			<DropDown data={order} setter={setOrder} getter={getPromotionsOrder} />
+			<div className="flex flex-col items-center lg:justify-around lg:items-center lg:flex-row">
+				<div className="w-full mb-2 lg:w-[45%] lg:mb-0">
+					<DropDown data={sort} setter={setSort} getter={getPromotionsSortBy} />
+				</div>
+				<div className="w-full lg:w-[45%]">
+					<DropDown data={order} setter={setOrder} getter={getPromotionsOrder} />
+				</div>
+			</div>
 		</div>
 	);
 };

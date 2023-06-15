@@ -71,7 +71,7 @@ const EditMode = ({ item, index, setEditMode }) => {
 		<tbody key={index}>
 			<tr>
 				<td className={tdClassName}>
-					<img src={item.Inventory.Product.image} className="w-[80px] ml-4" />
+					<img src={item.Inventory.Product.image} className="w-[80px] mx-auto" />
 				</td>
 				<td className={tdClassName}>{item.Inventory.Product.name}</td>
 				<td className={tdClassName}>

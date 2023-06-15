@@ -4,7 +4,7 @@ import { getCategories, getFilterBy } from "../handlers/ProductStockHandler";
 
 const Icon = () => {
 	return (
-		<div className="self-center ml-4 mb-1">
+		<div className="self-center mb-1">
 			<span class="material-symbols-rounded">filter_list</span>
 		</div>
 	);

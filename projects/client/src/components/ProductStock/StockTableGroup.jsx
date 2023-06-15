@@ -38,7 +38,7 @@ const StockTableGroup = () => {
 				page={page}
 				setMaxPage={setMaxPage}
 			/>
-			<div className="mx-auto mt-auto mb-12">
+			<div className="mx-auto mt-16">
 				<Pagination page={page} setPage={setPage} maxPage={maxPage} />
 			</div>
 		</div>

@@ -32,6 +32,7 @@ const postNearestBranchBodySanitizer = async (request, response, next) => {
 
 const getInventoryPromotionQuerySanitizer = async (request, response, next) => {
 	const sanitizedQuery = {
+		name: request.query.name || "",
 		filter: await getInventoryPromotionQueryFilter(request.query),
 		order: await getInventoryPromotionQueryOrder(request.query),
 		page: request.query.page,
