@@ -7,6 +7,7 @@ const PromoTableBody = ({ name, filter, sort, order, page, setMaxPage }) => {
 
 	React.useEffect(() => {
 		const query = generateUrlQuery(name, page, filter, sort, order);
+
 		getInventoryPromotions(query)
 			.then(result => {
 				setDatas(result.data.rows);

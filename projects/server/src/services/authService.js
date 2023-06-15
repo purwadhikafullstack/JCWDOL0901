@@ -5,9 +5,15 @@ const {
 	startRegistrationErrorHandler,
 	startFindErrorHandler,
 	startVerificationErrorHandler,
+	startUpdatePasswordErrorHandler,
 } = require("../errors/serviceError.js");
 
-const { createUserQuery, updateUserQuery } = require("../queries/Users.js");
+const {
+	createUserQuery,
+	updateUserQuery,
+	getOldPasswordQuery,
+	updatePasswordQuery,
+} = require("../queries/Users.js");
 const { createProfileQuery } = require("../queries/Profiles.js");
 const { createVerificationTokenQuery, readUserTokensQuery } = require("../queries/User_tokens.js");
 const { createUserVouchersAsReferralReward } = require("../queries/User_vouchers.js");
@@ -36,6 +42,18 @@ const adminDatabaseGeneration = async (body, transaction) => {
 	const Branch = await createBranchQuery(body, Admin.id, transaction);
 
 	await createInventoryQueryForNewBranch(Branch, transaction);
+};
+
+const checkAndUpdatePassword = async (id, body, transaction) => {
+	const User = await getOldPasswordQuery(id, transaction);
+
+	// const isOldPasswordVerified = verifyHashPassword(body.old_password, User.password);
+	const isOldPasswordVerified = body.old_password === User.password;
+
+	if (!isOldPasswordVerified) throw "PASS_NOT_VERIFIED";
+	if (User.password === body.password) throw "PASS_CANNOT_SAME";
+
+	await updatePasswordQuery(id, body.password, transaction);
 };
 
 module.exports = {
@@ -152,6 +170,19 @@ module.exports = {
 			} catch (error) {
 				await transaction.rollback();
 				return reject(await startVerificationErrorHandler(error));
+			}
+		});
+	},
+	startUpdatePassword: async (id, body) => {
+		return new Promise(async (resolve, reject) => {
+			const transaction = await sequelize.transaction();
+			try {
+				await checkAndUpdatePassword(id, body, transaction);
+				await transaction.commit();
+				return resolve("Update password success!");
+			} catch (error) {
+				await transaction.rollback();
+				return reject(await startUpdatePasswordErrorHandler(error));
 			}
 		});
 	},

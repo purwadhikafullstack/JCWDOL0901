@@ -9,17 +9,21 @@ const createUserQuery = async (body, transaction) => {
 		{ transaction }
 	);
 
-	const referral_code = await generateReferralCode(
-		newUserData.username,
-		newUserData.id
-	);
+	const referral_code = await generateReferralCode(newUserData.username, newUserData.id);
 
 	return await newUserData.update({ referral_code }, { transaction });
 };
-
 
 const updateUserQuery = async (data, query, transaction) => {
 	return await Users.update({ data }, { where: { ...query }, transaction });
 };
 
-module.exports = { createUserQuery, updateUserQuery };
+const getOldPasswordQuery = async (id, transaction) => {
+	return await Users.findOne({ where: { id }, transaction });
+};
+
+const updatePasswordQuery = async (id, password, transaction) => {
+	return await Users.update({ password }, { where: { id }, transaction });
+};
+
+module.exports = { createUserQuery, updateUserQuery, getOldPasswordQuery, updatePasswordQuery };
