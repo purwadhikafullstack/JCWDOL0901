@@ -20,6 +20,7 @@ export const adminLoginButtonHandler = async (input, setError, navigate, dispatc
 		.then(async result => {
 			localStorage.setItem("token", result.data.token);
 			storeAdminToken(result.data.token);
+
 			await navigate("/admin/dashboard");
 			dispatch(setAdminLogin({ hasLogged: true, superAdmin: result.data.superAdmin }));
 		})
