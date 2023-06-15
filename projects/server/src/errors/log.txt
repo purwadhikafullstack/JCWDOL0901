@@ -294,3 +294,33 @@
 	Source: startVerificationErrorHandler
 	Error: "INVALID_TOKEN"
 	
+	===
+	Time: Thu Jun 15 2023 10:39:09 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;"},"original":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;","parameters":{}}
+	
+	===
+	Time: Thu Jun 15 2023 10:42:16 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;"},"original":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;","parameters":{}}
+	
+	===
+	Time: Thu Jun 15 2023 10:43:00 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;"},"original":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;","parameters":{}}
+	
+	===
+	Time: Thu Jun 15 2023 10:44:28 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;"},"original":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;","parameters":{}}
+	
+	===
+	Time: Thu Jun 15 2023 10:44:46 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;"},"original":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;","parameters":{}}
+	
+	===
+	Time: Thu Jun 15 2023 10:44:54 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;"},"original":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` LIMIT NaN, NaN;","parameters":{}}
+	

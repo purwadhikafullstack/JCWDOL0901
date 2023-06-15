@@ -49,7 +49,15 @@ export const getFilterBy = () => {
 };
 
 export const getCategories = () => {
-	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/category/list`);
+	return new Promise(async (resolve, reject) => {
+		try {
+			const Categories = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/category/list`);
+
+			resolve({ data: Categories.data.rows });
+		} catch (error) {
+			reject(error);
+		}
+	});
 };
 
 export const generateUrlQuery = (name = "", page, filterBy, filter, sort, order) => {
