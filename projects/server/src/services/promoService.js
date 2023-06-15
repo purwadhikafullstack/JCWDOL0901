@@ -8,11 +8,12 @@ const {
 } = require("../queries/Inventory_promotions");
 
 module.exports = {
-	startFindInventoryPromotion: async (branch_id, filter, order, page) => {
+	startFindInventoryPromotion: async (branch_id, name, filter, order, page) => {
 		return new Promise(async (resolve, reject) => {
 			try {
 				const Inventory_promotion = await readInventoryPromotionQuery(
 					branch_id,
+					name,
 					filter,
 					order,
 					page

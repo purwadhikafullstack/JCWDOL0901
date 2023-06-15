@@ -2,12 +2,13 @@ import React from "react";
 import PromoTableBody from "./PromoTableBody";
 import PromoTableHead from "./PromoTableHead";
 
-const PromoTable = ({ filter, sort, order, page, setMaxPage }) => {
+const PromoTable = ({ name, filter, sort, order, page, setMaxPage }) => {
 	return (
-		<div className="flex overflow-x-auto rounded-lg border border-green-300 border-2 mx-4">
+		<div className="flex overflow-x-auto rounded-lg border border-green-300 border-2 mx-6">
 			<table className="w-full">
 				<PromoTableHead />
 				<PromoTableBody
+					name={name}
 					filter={filter}
 					sort={sort}
 					order={order}

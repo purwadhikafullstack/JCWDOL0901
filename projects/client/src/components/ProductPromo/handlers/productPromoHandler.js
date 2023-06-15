@@ -48,10 +48,11 @@ export const getPromotionsOrder = () => {
 	});
 };
 
-export const generateUrlQuery = (page, filter, sort, order) => {
+export const generateUrlQuery = (name, page, filter, sort, order) => {
 	let url = "";
 
 	url += `?page=${page}`;
+	url += `&name=${name}`;
 	url += filter ? `&promotion_id=${filter.id}` : "";
 	url += `&order=${sort.id}`;
 	url += `&asc=${order.id}`;

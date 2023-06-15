@@ -19,7 +19,6 @@ const Slide = ({ products }) => {
 
 const ProductsRecommendationCarousel = () => {
 	const user = useSelector(state => state.user);
-	const app = useSelector(state => state.app);
 	const [products, setProducts] = React.useState([]);
 
 	React.useEffect(() => {
@@ -32,7 +31,7 @@ const ProductsRecommendationCarousel = () => {
 		products && (
 			<Splide
 				options={{
-					perPage: app.mobileView ? 3 : 5,
+					perPage: 3,
 					pagination: false,
 					arrows: false,
 				}}

@@ -5,15 +5,22 @@ const createInventoryPromotionQuery = async data => {
 	return await Inventory_promotions.create({ ...data });
 };
 
-const readInventoryPromotionQuery = async (branch_id, filter, order, page) => {
+const readInventoryPromotionQuery = async (branch_id, name, filter, order, page) => {
 	return await Inventory_promotions.findAndCountAll({
-		where: { ...filter.Inventory_promotions, expired_at: { [Op.gte]: new Date() } },
+		where: {
+			...filter.Inventory_promotions,
+			expired_at: { [Op.gte]: new Date() },
+		},
 		include: [
 			{
 				model: Inventories,
 				where: { branch_id },
 				attributes: ["stock"],
-				include: { model: Products, attributes: { exclude: "id" } },
+				include: {
+					model: Products,
+					attributes: { exclude: "id" },
+					where: { name: { [Op.like]: `%${name}%` } },
+				},
 			},
 			{ model: Promotions },
 		],

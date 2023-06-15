@@ -4,7 +4,7 @@ import { getOrder, getSortBy } from "../handlers/ProductStockHandler";
 
 const Icon = () => {
 	return (
-		<div className="self-center ml-4 mb-1">
+		<div className="self-center mb-1">
 			<span class="material-symbols-rounded">sort</span>
 		</div>
 	);
@@ -12,7 +12,7 @@ const Icon = () => {
 
 const SortConfiguration = ({ sort, setSort, order, setOrder }) => {
 	return (
-		<div className="flex flex-col w-[25%]">
+		<div className="flex flex-col w-[30%]">
 			<Icon />
 			<div className="flex flex-col items w-full lg:flex-row lg:justify-around">
 				<div className="flex justify-center w-full lg:w-[45%]">

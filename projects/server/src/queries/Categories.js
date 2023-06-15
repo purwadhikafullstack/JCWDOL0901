@@ -1,10 +1,13 @@
 const { Categories } = require("../models/index.js");
 
 const readCategoryQuery = async (filter, order, page, itemPerPage) => {
+	const offset = page ? (page - 1) * itemPerPage : null;
+	const limit = itemPerPage ? itemPerPage : null;
+
 	return await Categories.findAndCountAll({
 		where: { ...filter },
-		offset: (page - 1) * itemPerPage,
-		limit: itemPerPage,
+		offset,
+		limit,
 		order: [...order],
 	});
 };
