@@ -1,11 +1,24 @@
-const {
-	Products,
-	Branches,
-	Inventory_promotions,
-	Inventories,
-} = require("../models/index.js");
+const { Products, Branches, Inventory_promotions, Inventories, Categories, Cities } = require("../models/index.js");
 
-const readProductsQuery = async params => {
+const readProductQuery = async (inventory_id) => {
+	return await Products.findOne({
+		include: [
+			{ model: Categories, attributes: { exclude: "id" } },
+			{
+				model: Inventories,
+				where: { id: inventory_id },
+				include: {
+					model: Branches,
+					include: { model: Cities, attributes: ["type", "name"] },
+					attributes: ["name"],
+				},
+				attributes: ["stock"],
+			},
+		],
+	});
+};
+
+const readProductsQuery = async (params) => {
 	return await Products.findAll({
 		where: { ...params?.Products },
 		include: [
@@ -22,4 +35,4 @@ const readProductsQuery = async params => {
 	});
 };
 
-module.exports = { readProductsQuery };
+module.exports = { readProductQuery, readProductsQuery };
