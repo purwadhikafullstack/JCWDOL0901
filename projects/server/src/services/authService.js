@@ -1,5 +1,6 @@
-const { sequelize } = require("../models/index.js");
+const { sequelize, Users, Profiles } = require("../models/index.js");
 const { Op } = require("sequelize");
+
 
 const {
   startRegistrationErrorHandler,
@@ -72,8 +73,34 @@ module.exports = {
           user.update({ email: body.email }),
         ]);
 
-        return resolve({ message: "Update successful" });
+        return resolve({ message: "Update profile successful" });
       } catch (error) {
+        return reject({ code: 500, message: "Internal Server Error" });
+      }
+    });
+  },
+
+  startGetUserProfile: async (id) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const user = await Users.findOne({
+          where: { id },
+          include: {model: Profiles},
+        });
+
+        const profile = user.Profile;
+
+        const data = {
+          name: profile.name,
+          gender: profile.gender,
+          email: user.email,
+          birth: profile.birth,
+          referral_code: user.referral_code,
+        };
+
+        return resolve(data);
+      } catch (error) {
+		console.log("service get profile: ", error);
         return reject({ code: 500, message: "Internal Server Error" });
       }
     });

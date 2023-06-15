@@ -6,6 +6,7 @@ const {
   startLoginAuthentication,
   startUserLoginAuthentication,
   startUserProfileUpdate,
+  startGetUserProfile,
 } = require("../services/authService");
 
 const registerUser = async (request, response) => {
@@ -70,6 +71,16 @@ const updateProfile = async (request, response) => {
     });
 };
 
+const getProfile = async (request, response) => {
+  await startGetUserProfile(request.userData.id)
+    .then((result) => {
+      response.status(200).send(result);
+    })
+    .catch((error) => {
+      response.status(error.code).send(error.message);
+    });
+};
+
 const verifyUser = async (request, response) => {
   await startVerification(request.params.token)
     .then((result) => {
@@ -88,4 +99,5 @@ module.exports = {
   loginAdmin,
   loginUser,
   updateProfile,
+  getProfile,
 };

@@ -44,7 +44,7 @@ const isUser = async (request, response, next) => {
     if (!request.headers.authorization) throw "Missing token!";
     const token = await verifyJWToken(
       request.headers.authorization,
-      process.env.JWT_ADMIN_SECRET_KEY
+      process.env.JWT_USER_SECRET_KEY
     );
 
     request.userData = token;

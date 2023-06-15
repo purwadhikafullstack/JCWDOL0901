@@ -1,11 +1,9 @@
+
 import * as Yup from "yup";
 import { userAccountSettingHandler } from "../handlers/UserAccountSettingHandler";
 
-const initialValues = {
-  name: "",
-  gender: "",
-  email: "",
-  birthdate: "",
+const initialValues = (user) => {
+  return { name: user.name, gender: user.gender, email: user.email, birth: user.birth };
 };
 
 const validateOnChange = true;
@@ -17,22 +15,23 @@ const gender = Yup.string();
 
 const email = Yup.string().email("Invalid Email Format");
 
-const birthdate = Yup.string();
+const birth = Yup.string();
 
 const validationSchema = Yup.object({
   name,
   gender,
   email,
-  birthdate,
+  birth,
 });
 
 const onSubmitConfiguration = async (values, setError, navigate) => {
   await userAccountSettingHandler(values, setError, navigate);
 };
 
-export const formikUserAccountSettingConfiguration = (setError, navigate) => {
+export const formikUserAccountSettingConfiguration = (setError, navigate, user) => {
+  
   return {
-    initialValues,
+    initialValues: initialValues(user),
     onSubmit: async (values) => onSubmitConfiguration(values, setError, navigate),
     validateOnChange,
     validateOnBlur,

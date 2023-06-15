@@ -1,10 +1,12 @@
 const {
-	registerUser,
-	getAdmins,
-	registerAdmin,
-	verifyUser,
-	loginAdmin,
-	loginUser,
+  registerUser,
+  getAdmins,
+  registerAdmin,
+  verifyUser,
+  loginAdmin,
+  loginUser,
+  updateProfile,
+  getProfile,
 } = require("../controllers/authController");
 
 const { getReferrerId, isSuperAdmin, isAdmin, isUser } = require("../middlewares/authMiddleware");
@@ -21,6 +23,7 @@ router.post("/user/login", loginUser);
 router.post("/user/register", getReferrerId, registerUser);
 router.get("/user/verify/:token", verifyUser);
 
-router.patch("/profile/update", isUser,  )
+router.patch("/profile/update", updateProfile);
+router.get("/profile", isUser, getProfile);
 
 module.exports = router;
