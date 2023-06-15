@@ -1,11 +1,12 @@
 const ViewMode = ({ item, index, setEditMode }) => {
-	const tdClassName = "py-4 bg-white text-xs text-center";
+	const tdClassName =
+		index % 2 ? "py-4 bg-green-100 text-xs text-center" : "py-4 bg-white text-xs text-center";
 
 	return (
 		<tbody key={index}>
 			<tr>
 				<td className={tdClassName}>
-					<img src={item.Product.image} className="w-[80px] ml-4" />
+					<img src={item.Product.image} className="max-w-[80px] mx-auto" />
 				</td>
 				<td className={tdClassName}>{item.name}</td>
 				<td className={tdClassName}>{item.stock}</td>
