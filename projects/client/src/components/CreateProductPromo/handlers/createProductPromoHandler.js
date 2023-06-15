@@ -18,7 +18,7 @@ export const getBranchInventories = () => {
 };
 
 export const createInventoryPromotion = input => {
-	return axios.post(`${process.env.REACT_APP_API_BASE_URL}/admin/promo/create`, input, {
-		headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-	});
+	const headers = { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } };
+
+	return axios.post(`${process.env.REACT_APP_API_BASE_URL}/admin/promo/create`, input, headers);
 };
