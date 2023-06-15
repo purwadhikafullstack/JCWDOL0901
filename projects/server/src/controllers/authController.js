@@ -5,6 +5,7 @@ const {
 	startVerification,
 	startLoginAuthentication,
 	startUserLoginAuthentication,
+	startUpdatePassword,
 } = require("../services/authService");
 const { verifyJWToken } = require("../utils/jsonwebtoken");
 
@@ -83,6 +84,16 @@ const isSuper = async (request, response) => {
 	}
 };
 
+const updatePassword = async (request, response) => {
+	await startUpdatePassword(request.userData.id, request.body)
+		.then(result => {
+			response.status(200).send(result);
+		})
+		.catch(error => {
+			response.status(error.code).send(error.message);
+		});
+};
+
 module.exports = {
 	registerUser,
 	getAdmins,
@@ -91,4 +102,5 @@ module.exports = {
 	loginAdmin,
 	loginUser,
 	isSuper,
+	updatePassword,
 };

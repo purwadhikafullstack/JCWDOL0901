@@ -39,6 +39,23 @@ const startRegistrationErrorHandler = async error => {
 	};
 };
 
+const startUpdatePasswordErrorHandler = async error => {
+	await writeLogFile(error, "startUpdatePasswordErrorHandler");
+
+	if (error === "PASS_NOT_VERIFIED") {
+		return { code: 400, message: `Your old password is wrong!` };
+	}
+
+	if (error === "PASS_CANNOT_SAME") {
+		return { code: 400, message: `Your new password is the same with your old password!` };
+	}
+
+	return {
+		code: 500,
+		message: "Internal Server Error, please contact us!",
+	};
+};
+
 const forbiddenErrorHandler = async () => {
 	await writeLogFile(
 		"Forbidden access, a non super admin trying to access restricted request",
@@ -91,4 +108,5 @@ module.exports = {
 	startCreateHandler,
 	startDeleteteHandler,
 	startUpdateErrorHandler,
+	startUpdatePasswordErrorHandler,
 };

@@ -1,4 +1,5 @@
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const validateChangePasswordInput = input => {
 	if (input.password !== input.confirm_password) throw { code: "CONFIRM_PASS_ERR" };
@@ -30,7 +31,15 @@ export const changePasswordButtonHandler = async (input, setError, navigate) => 
 				headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
 			}
 		);
-		navigate(-1);
+		Swal.fire({
+			icon: "success",
+			title: "Your password has been updated",
+			showConfirmButton: false,
+			timer: 2000,
+		});
+		setTimeout(() => {
+			navigate(-1);
+		}, 2000);
 	} catch (error) {
 		await setError(await ChangePasswordErrorHandler(error));
 	}
