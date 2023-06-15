@@ -1,5 +1,5 @@
-import React from "react";
-import { Listbox } from "@headlessui/react";
+import React, { Fragment } from "react";
+import { Listbox, Transition } from "@headlessui/react";
 
 const ToggleDropDown = ({ open, data }) => {
 	return (
@@ -57,9 +57,19 @@ const DropDownOptions = ({ setter, getter }) => {
 	return (
 		lists && (
 			<div className="relative">
-				<Listbox.Options className="border absolute h-fit inset-0 max-h-44 min-w-full w-fit overflow-auto rounded-lg text-xs cursor-pointer">
-					<DataLists lists={lists} setter={setter} />
-				</Listbox.Options>
+				<Transition
+					as={Fragment}
+					enter="transition-opacity ease-in-out duration-300"
+					enterFrom="opacity-0"
+					enterTo="opacity-100"
+					leave="transition ease-in duration-200"
+					leaveFrom="opacity-100"
+					leaveTo="opacity-0"
+				>
+					<Listbox.Options className="border absolute h-fit inset-0 max-h-44 min-w-full w-fit overflow-auto rounded-lg text-xs cursor-pointer">
+						<DataLists lists={lists} setter={setter} />
+					</Listbox.Options>
+				</Transition>
 			</div>
 		)
 	);

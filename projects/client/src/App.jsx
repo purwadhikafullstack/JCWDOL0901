@@ -32,10 +32,7 @@ function App() {
 
 				{/* //Admin Auth Page */}
 				<Route path="/admin/promo" element={<AdminAuthGuard component={<ProductPromotion />} />} />
-				<Route
-					path="/admin/promo/create"
-					element={<AdminAuthGuard component={<CreatePromotion />} />}
-				/>
+				<Route path="/admin/promo/create" element={<AdminAuthGuard component={<CreatePromotion />} />} />
 				<Route path="/admin/stock" element={<AdminAuthGuard component={<ManageStock />} />} />
 				<Route path="/admin/dashboard" element={<AdminAuthGuard component={<DashboardPage />} />} />
 				<Route
@@ -43,14 +40,8 @@ function App() {
 					element={<AdminAuthGuard component={<CreateBranchAdminPage />} />}
 				/>
 				<Route path="/admin/category" element={<AdminAuthGuard component={<ManageCategory />} />} />
-				<Route
-					path="/admin/category/create"
-					element={<AdminAuthGuard component={<CreateCategoryPage />} />}
-				/>
-				<Route
-					path="/admin/category/update"
-					element={<AdminAuthGuard component={<UpdateCategoryPage />} />}
-				/>
+				<Route path="/admin/category/create" element={<AdminAuthGuard component={<CreateCategoryPage />} />} />
+				<Route path="/admin/category/update" element={<AdminAuthGuard component={<UpdateCategoryPage />} />} />
 			</Routes>
 		</div>
 	);

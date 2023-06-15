@@ -2,8 +2,6 @@ import React from "react";
 import PromoTable from "./PromoTable/PromoTable.jsx";
 import Pagination from "../Pagination.jsx";
 
-import CreateButton from "./CreateButton.jsx";
-
 import SearchConfiguration from "./SearchConfiguration.jsx";
 import { orderDefault, sortDefault } from "./handlers/productPromoHandler.js";
 
@@ -16,7 +14,7 @@ const PromoTableGroup = () => {
 	const [maxPage, setMaxPage] = React.useState(1);
 
 	return (
-		<div className="flex flex-col justify-start mt-16 px-4 h-full">
+		<div className="flex flex-col justify-start mt-11 px-4 h-full">
 			<SearchConfiguration
 				setName={setName}
 				filter={filter}
@@ -27,8 +25,6 @@ const PromoTableGroup = () => {
 				setSort={setSort}
 				setPage={setPage}
 			/>
-
-			<CreateButton />
 			<PromoTable
 				name={name}
 				sort={sort}

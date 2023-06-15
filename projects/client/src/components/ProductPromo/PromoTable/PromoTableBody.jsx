@@ -8,13 +8,12 @@ const PromoTableBody = ({ name, filter, sort, order, page, setMaxPage }) => {
 	React.useEffect(() => {
 		const query = generateUrlQuery(name, page, filter, sort, order);
 
-
 		getInventoryPromotions(query)
-			.then(result => {
+			.then((result) => {
 				setDatas(result.data.rows);
-				setMaxPage(Math.ceil(result.data.count / 5));
+				setMaxPage(Math.ceil(result.data.count / 3));
 			})
-			.catch(error => alert("Server Unavailable"));
+			.catch((error) => alert("Server Unavailable"));
 	}, [filter, sort, order, page, name]);
 
 	return datas && <TableBodyContent datas={datas} />;
