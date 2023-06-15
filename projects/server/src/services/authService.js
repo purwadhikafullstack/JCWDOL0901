@@ -19,6 +19,7 @@ const { paginateData } = require("../helpers/queryHelper.js");
 
 const { sendRegistrationVerificationEmail } = require("../utils/nodemailer.js");
 const { generateJWToken } = require("../utils/jsonwebtoken.js");
+const { verifyHashPassword } = require("../utils/bcrypt.js");
 
 const userDatabaseGeneration = async (body, transaction) => {
 	const User = await createUserQuery(body, transaction);
@@ -71,10 +72,34 @@ module.exports = {
 					where: { email: body.email },
 				});
 
+				// if (!(await verifyHashPassword(body.password, data?.password)) || !data)
+				// 	return reject({ code: 400, message: "Wrong email or password!" });
+
+				if (body.password !== data?.password || !data)
+					return reject({ code: 400, message: "Wrong email or password!" });
+
+				const token = await generateJWToken(data, "super" in data);
+				const superAdmin = data.super;
+				return resolve({ message: "Login success!", token, superAdmin });
+			} catch (error) {
+				return reject({ code: 500, message: "Internal Server Error" });
+			}
+		});
+	},
+	startUserLoginAuthentication: async (body, Name) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const data = await sequelize.models[Name].findOne({
+					where: {
+						[Op.or]: [{ username: body.user }, { email: body.user }],
+					},
+				});
+
 				if (data?.password !== body.password || !data)
 					return reject({ code: 400, message: "Wrong email or password!" });
 
 				const token = await generateJWToken(data, "super" in data);
+
 				return resolve({ message: "Login success!", token });
 			} catch (error) {
 				return reject({ code: 500, message: "Internal Server Error" });

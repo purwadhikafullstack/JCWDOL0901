@@ -41,6 +41,8 @@ app.use("/api/admin/inventory", adminInventoryRoute);
 app.use("/api/admin/promo", adminPromoRoute);
 app.use("/api/product", productRoute);
 
+app.use("/uploads", express.static("uploads/"));
+
 // ===========================
 
 // not found
@@ -55,8 +57,8 @@ app.use((req, res, next) => {
 // error
 app.use((err, req, res, next) => {
 	if (req.path.includes("/api/")) {
-		console.error("Error : ", err.stack);
-		res.status(500).send("Error !");
+		console.error("Error : ", err);
+		res.status(500).send(err);
 	} else {
 		next();
 	}

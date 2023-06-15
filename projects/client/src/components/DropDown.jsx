@@ -57,7 +57,7 @@ const DropDownOptions = ({ setter, getter }) => {
 	return (
 		lists && (
 			<div className="relative">
-				<Listbox.Options className="border absolute h-fit inset-0 max-h-44 min-w-full w-fit overflow-auto rounded-lg text-base">
+				<Listbox.Options className="border absolute h-fit inset-0 max-h-44 min-w-full w-fit overflow-auto rounded-lg text-xs cursor-pointer">
 					<DataLists lists={lists} setter={setter} />
 				</Listbox.Options>
 			</div>

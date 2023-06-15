@@ -58,6 +58,11 @@ const validationSchema = Yup.object({
 });
 
 const onSubmitConfiguration = async (values, setError, navigate) => {
+	await createInventoryPromotion(values)
+		.then(result => {
+			navigate(-1);
+		})
+		.catch(error => setError(error));
 	await Swal.fire({
 		title: "Create Promotion?",
 		html: `Starts <b>${values.start_at}</b> Until <b>${values.expired_at}</b>`,

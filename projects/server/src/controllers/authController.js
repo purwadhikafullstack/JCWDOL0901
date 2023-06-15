@@ -6,6 +6,7 @@ const {
 	startLoginAuthentication,
 	startUserLoginAuthentication,
 } = require("../services/authService");
+const { verifyJWToken } = require("../utils/jsonwebtoken");
 
 const registerUser = async (request, response) => {
 	await startUserRegistration(request.body)
@@ -69,4 +70,25 @@ const verifyUser = async (request, response) => {
 		});
 };
 
-module.exports = { registerUser, getAdmins, registerAdmin, verifyUser, loginAdmin, loginUser };
+const isSuper = async (request, response) => {
+	try {
+		if (!request.headers.authorization) throw "Missing token!";
+		const token = await verifyJWToken(
+			request.headers.authorization,
+			process.env.JWT_ADMIN_SECRET_KEY
+		);
+		response.status(200).send(token);
+	} catch (error) {
+		response.status(403).send({ message: error });
+	}
+};
+
+module.exports = {
+	registerUser,
+	getAdmins,
+	registerAdmin,
+	verifyUser,
+	loginAdmin,
+	loginUser,
+	isSuper,
+};

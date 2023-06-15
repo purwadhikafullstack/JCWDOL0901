@@ -30,7 +30,6 @@ const isAdmin = async (request, response, next) => {
 			request.headers.authorization,
 			process.env.JWT_ADMIN_SECRET_KEY
 		);
-
 		request.adminData = token;
 
 		next();

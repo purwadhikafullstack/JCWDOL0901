@@ -10,7 +10,7 @@ const PromoTableBody = ({ filter, sort, order, page, setMaxPage }) => {
 		getInventoryPromotions(query)
 			.then(result => {
 				setDatas(result.data.rows);
-				setMaxPage(Math.ceil(result.data.count / 3));
+				setMaxPage(Math.ceil(result.data.count / 5));
 			})
 			.catch(error => alert("Server Unavailable"));
 	}, [filter, sort, order, page]);

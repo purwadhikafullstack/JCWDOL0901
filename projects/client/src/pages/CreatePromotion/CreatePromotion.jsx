@@ -39,7 +39,6 @@ const ResponsiveLogo = () => {
 	);
 };
 
-
 const CreatePromotion = () => {
 	return (
 		<div className="flex flex-col mx-auto flex-1 min-w-[480px] overflow-hidden px-8 w-full bg-white sm:bg-gray-100 sm:flex-row sm:justify-center sm:py-20 sm:max-w-full min-h-screen sm:drop-shadow-2xl ">

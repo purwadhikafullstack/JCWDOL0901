@@ -1,3 +1,4 @@
+const { log } = require("console");
 const fs = require("fs");
 
 const writeLogFile = (error, source) => {
@@ -38,7 +39,6 @@ const startRegistrationErrorHandler = async error => {
 	};
 };
 
-
 const forbiddenErrorHandler = async () => {
 	await writeLogFile(
 		"Forbidden access, a non super admin trying to access restricted request",
@@ -64,16 +64,31 @@ const startVerificationErrorHandler = async error => {
 	};
 };
 
+const startCreateHandler = async error => {
+	await writeLogFile(error, "startCreateHandler");
+
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
+
+const startDeleteteHandler = async error => {
+	await writeLogFile(error, "startDeleteteHandler");
+	if (error.name === "SequelizeForeignKeyConstraintError") {
+		return { code: 500, message: "ER_ROW_IS_REFERENCED_2" };
+	}
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
 const startUpdateErrorHandler = async error => {
 	await writeLogFile(error, "startUpdateErrorHandler");
 
-	return { code: 500, message: "Internal Server Error, please contact us!" }
-}
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
 
 module.exports = {
 	startRegistrationErrorHandler,
 	startFindErrorHandler,
 	forbiddenErrorHandler,
 	startVerificationErrorHandler,
-	startUpdateErrorHandler
+	startCreateHandler,
+	startDeleteteHandler,
+	startUpdateErrorHandler,
 };

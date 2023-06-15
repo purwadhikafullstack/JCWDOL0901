@@ -19,14 +19,14 @@ const validationSchema = Yup.object({
 	email,
 });
 
-const onSubmitConfiguration = async (values, setError, navigate) => {
-	await adminLoginButtonHandler(values, setError, navigate);
+const onSubmitConfiguration = async (values, setError, navigate, dispatch) => {
+	await adminLoginButtonHandler(values, setError, navigate, dispatch);
 };
 
-export const formikAdminLoginConfiguration = (setError, navigate) => {
+export const formikAdminLoginConfiguration = (setError, navigate, dispatch) => {
 	return {
 		initialValues,
-		onSubmit: async values => onSubmitConfiguration(values, setError, navigate),
+		onSubmit: async values => onSubmitConfiguration(values, setError, navigate, dispatch),
 		validateOnChange,
 		validateOnBlur,
 		validationSchema,
