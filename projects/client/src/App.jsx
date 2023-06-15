@@ -20,14 +20,15 @@ function App() {
 	return (
 		<div className="App">
 			<Routes>
-				//Unauth Page
+				{/* //Unauth Page */}
 				<Route path="/" element={<HomePage />} />
-				<Route path="/user/login" element={<UserLoginPage />} />
-				<Route path="/admin/login" element={<AdminLoginPage />} />
+				<Route path="/login" element={<UserLoginPage />} />
 				<Route path="/register" element={<RegisterPage />} />
 				<Route path="/register/greeting" element={<GreetingPage />} />
 				<Route path="/verify/:token" element={<VerifyPage />} />
-				//Auth Page
+				<Route path="/admin/login" element={<AdminLoginPage />} />
+
+				{/* //Auth Page */}
 				<Route path="/admin/promo" element={<AdminAuthGuard component={<ProductPromotion />} />} />
 				<Route
 					path="/admin/promo/create"

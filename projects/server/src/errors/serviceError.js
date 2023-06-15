@@ -77,6 +77,11 @@ const startDeleteteHandler = async error => {
 	}
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
+const startUpdateErrorHandler = async error => {
+	await writeLogFile(error, "startUpdateErrorHandler");
+
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
 
 module.exports = {
 	startRegistrationErrorHandler,
@@ -85,4 +90,5 @@ module.exports = {
 	startVerificationErrorHandler,
 	startCreateHandler,
 	startDeleteteHandler,
+	startUpdateErrorHandler,
 };

@@ -1,7 +1,13 @@
-const { startFindInventories } = require("../services/adminInventoryService.js");
+const {
+	startFindInventories,
+	startEditInventories,
+} = require("../services/adminInventoryService.js");
 
 const getInventories = async (request, response) => {
-	await startFindInventories(request.branchData.id)
+	const { name, filter, order, page } = request.query;
+	const { branchData } = request;
+
+	await startFindInventories(branchData.id, name, filter, order, page)
 		.then(result => {
 			response.status(200).send(result);
 		})
@@ -10,4 +16,16 @@ const getInventories = async (request, response) => {
 		});
 };
 
-module.exports = { getInventories };
+const patchInventories = async (request, response) => {
+	const { stock, description } = request.body;
+	
+	await startEditInventories(request.params.inventory_id, stock, description)
+		.then(result => {
+			response.status(200).send(result);
+		})
+		.catch(error => {
+			response.status(error.code).send(error.message);
+		});
+};
+
+module.exports = { getInventories, patchInventories };

@@ -1,13 +1,13 @@
 import React from "react";
 import TableBodyContent from "./TableBodyContent.jsx";
-import { getInventoryPromotions, generateUrlQuery } from "./handlers/productPromoHandler";
+import { getInventoryPromotions, generateUrlQuery } from "../handlers/productPromoHandler";
 
 const PromoTableBody = ({ filter, sort, order, page, setMaxPage }) => {
 	const [datas, setDatas] = React.useState([]);
 
 	React.useEffect(() => {
 		const query = generateUrlQuery(page, filter, sort, order);
-		getInventoryPromotions(localStorage.getItem("token"), query)
+		getInventoryPromotions(query)
 			.then(result => {
 				setDatas(result.data.rows);
 				setMaxPage(Math.ceil(result.data.count / 5));

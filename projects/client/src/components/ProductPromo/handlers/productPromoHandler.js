@@ -14,15 +14,15 @@ export const getPromotionsType = () => {
 	});
 };
 
-export const getInventoryPromotions = (token, query) => {
+export const getInventoryPromotions = query => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/admin/promo/list${query}`, {
-		headers: { Authorization: `Bearer ${token}` },
+		headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
 	});
 };
 
-export const patchInventoryPromotions = (token, data) => {
+export const patchInventoryPromotions = data => {
 	return axios.patch(`${process.env.REACT_APP_API_BASE_URL}/admin/promo/update`, data, {
-		headers: { Authorization: `Bearer ${token}` },
+		headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
 	});
 };
 
@@ -57,4 +57,14 @@ export const generateUrlQuery = (page, filter, sort, order) => {
 	url += `&asc=${order.id}`;
 
 	return url;
+};
+
+export const sortDefault = { id: "start_at", name: "Start Date" };
+export const orderDefault = { id: "0", name: "Descending" };
+
+export const resetSetting = (setFilter, setSort, setOrder, setPage) => {
+	setFilter("");
+	setSort(sortDefault);
+	setOrder(orderDefault);
+	setPage(1);
 };
