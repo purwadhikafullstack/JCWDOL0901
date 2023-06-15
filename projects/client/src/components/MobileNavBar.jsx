@@ -27,7 +27,11 @@ const MobileNavBar = () => {
 					<MobileNavButton active={location === "/"} name="home" to="/" />
 					<MobileNavButton active={location === "/cart"} name="shopping_cart" to="/cart" />
 					<MobileNavButton active={location === "/history"} name="history" to="/history" />
-					<MobileNavButton active={location === "/account"} name="account_circle" to="/account" />
+					<MobileNavButton
+						active={location === "/account"}
+						name="account_circle"
+						to="/account/change-password"
+					/>
 				</div>
 			</div>
 		</div>
