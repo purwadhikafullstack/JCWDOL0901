@@ -1,12 +1,10 @@
-const {
-	Products,
-	Branches,
-	Inventory_promotions,
-	Inventories,
-} = require("../models/index.js");
+const { Products, Branches, Inventory_promotions, Inventories } = require("../models/index.js");
 
-const readProductsQuery = async params => {
-	return await Products.findAll({
+const readProductsQuery = async (params) => {
+	const offset = params?.page ? (params?.page - 1) * params?.itemPerPage : null;
+	const limit = params?.itemPerPage ? params?.itemPerPage : null;
+
+	return await Products.findAndCountAll({
 		where: { ...params?.Products },
 		include: [
 			{
@@ -19,6 +17,9 @@ const readProductsQuery = async params => {
 				attributes: ["id", "stock"],
 			},
 		],
+		offset,
+		limit,
+		order: [...params?.order],
 	});
 };
 
