@@ -5,7 +5,7 @@ const OverlengthDescription = ({ description }) => {
 	const shortDescription = description.substring(0, 100);
 
 	return viewMore ? (
-		<div className="flex flex-col mb-2">
+		<div className="flex flex-col mb-2 w-full">
 			<span className="">{description}</span>
 			<div
 				className="flex flex-row items-center mt-2 text-green-400 cursor-pointer"
@@ -16,7 +16,7 @@ const OverlengthDescription = ({ description }) => {
 			</div>
 		</div>
 	) : (
-		<div className="flex flex-col mb-2">
+		<div className="flex flex-col mb-2 w-full">
 			<span>{shortDescription}...</span>
 			<div
 				className="flex flex-row items-center mt-2 text-green-400 cursor-pointer"
