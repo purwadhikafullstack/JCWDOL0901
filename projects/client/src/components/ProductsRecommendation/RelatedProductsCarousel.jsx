@@ -1,8 +1,6 @@
 import React from "react";
-
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { useSelector } from "react-redux";
-import { getProductsRecommendation } from "./handlers/ProductsRecommendationCarouselHandler";
+import { getRelatedProducts } from "./handlers/ProductsRecommendationCarouselHandler.js";
 
 const Slide = ({ products }) => {
 	return products.map((item, index) => {
@@ -10,28 +8,28 @@ const Slide = ({ products }) => {
 			<SplideSlide>
 				<div className="flex flex-col items-center">
 					<img className="w-[150px]" src={item?.image} alt={item?.name} />
-					<span className="text-black text-sm mt-1.5">{item?.name}</span>
+					<span className="text-black text-xs mt-1.5 ">{item?.name}</span>
 				</div>
 			</SplideSlide>
 		);
 	});
 };
 
-const ProductsRecommendationCarousel = () => {
-	const user = useSelector((state) => state.user);
+const RelatedProductsCarousel = ({ branch_id, category_id, inventory_id }) => {
 	const [products, setProducts] = React.useState([]);
 
 	React.useEffect(() => {
-		getProductsRecommendation(user.branch.id)
+		getRelatedProducts(branch_id, category_id, inventory_id)
 			.then((result) => setProducts(result.data))
 			.catch((error) => setProducts([{ name: "Server Error!", image: "" }]));
-	}, [user]);
+	}, []);
 
 	return (
 		products && (
 			<Splide
 				options={{
 					perPage: 3,
+					padding: 5,
 					pagination: false,
 					arrows: false,
 				}}
@@ -42,4 +40,4 @@ const ProductsRecommendationCarousel = () => {
 	);
 };
 
-export default ProductsRecommendationCarousel;
+export default RelatedProductsCarousel;

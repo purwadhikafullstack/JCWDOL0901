@@ -1,5 +1,4 @@
 import React from "react";
-import BackButton from "../../components/BackButton";
 import PageTitle from "../../components/PageTitle";
 import PromoTableGroup from "../../components/ProductPromo/PromoTableGroup";
 import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration.jsx";
