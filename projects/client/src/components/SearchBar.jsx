@@ -7,7 +7,7 @@ const SearchBar = () => {
 				<span className="material-symbols-rounded text-gray-200">search</span>
 			</div>
 			<input
-				className="pl-12 bg-gray-100 text-gray-500 placeholder-gray-200 sm:focus:bg-white focus:bg-gray-200/40 w-full mx-auto my-4 py-2.5 px-3 rounded-xl z-10 outline-0"
+				className="pl-12 bg-gray-100 text-gray-500 placeholder-gray-200 sm:focus:bg-white w-full mx-auto my-4 py-2.5 px-3 rounded-xl z-10 outline-0"
 				placeholder="Search for product name..."
 				type="text"
 			/>
