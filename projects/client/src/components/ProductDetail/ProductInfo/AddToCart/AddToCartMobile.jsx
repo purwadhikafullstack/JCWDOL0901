@@ -27,11 +27,14 @@ const AddToCartMobile = ({ stock, amount, setAmount }) => {
 						+
 					</button>
 				</div>
-				<div>
-					<button type="button" className="bg-green-200 text-white font-semibold px-12 py-4 rounded-xl">
-						Add To Cart
-					</button>
-				</div>
+
+				<button
+					type="button"
+					disabled={amount === 0}
+					className="bg-green-200 text-white font-semibold px-12 py-4 rounded-xl disabled:opacity-50"
+				>
+					Add To Cart
+				</button>
 			</div>
 		</div>
 	);

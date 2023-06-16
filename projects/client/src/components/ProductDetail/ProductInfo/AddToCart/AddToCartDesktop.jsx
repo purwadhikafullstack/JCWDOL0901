@@ -30,7 +30,11 @@ const AddToCartDesktop = ({ stock, amount, setAmount, product }) => {
 				<span className="text-lg font-bold">Rp{(amount * product.price).toLocaleString("id")}</span>
 			</div>
 
-			<button type="button" className="bg-green-200 text-white font-semibold w-full py-1.5 rounded-lg">
+			<button
+				type="button"
+				disabled={amount === 0}
+				className="bg-green-200 text-white font-semibold w-full py-1.5 rounded-lg disabled:opacity-50"
+			>
 				Add To Cart
 			</button>
 		</div>
