@@ -9,21 +9,24 @@ import ProductImage from "../../components/ProductDetail/ProductImage";
 
 const ProductDetailLayout = ({ product, inventory_id }) => {
 	const [price, setPrice] = React.useState({ original: 0, final: 0, promo: false });
-
 	React.useEffect(() => {
 		determinePrice(product, setPrice);
 	}, []);
 
 	return (
 		<div className="flex lg:h-screen lg:justify-center">
-			<div className="flex flex-col  mx-auto w-full pb-32 min-h-screen bg-white lg:pb-32 lg:shrink-0 lg:max-w-7xl lg:min-w-7xl lg:min-h-fit lg:h-fit lg:flex-col lg:my-auto lg:mx-20 lg:rounded-lg lg:shadow-xl">
+			<div className="flex flex-col mx-auto w-full pb-32 min-h-screen bg-white lg:pb-0 lg:shrink-0 lg:max-w-7xl lg:justify-between lg:min-w-7xl lg:min-h-fit lg:flex-col lg:my-auto lg:mx-20 lg:rounded-lg lg:shadow-xl">
 				<div className="flex flex-col lg:flex-row">
 					<BackButton color="text-green-400 h-fit mb-auto" url={-1} />
 					<ProductImage product={product} />
 					<ProductInfo product={product} price={price} />
 					<AddToCart product={product} price={price} />
 				</div>
-				<SimilarProduct inventory_id={inventory_id} />
+				<SimilarProduct
+					branch_id={product.Inventories[0].Branch.id}
+					category_id={product.category_id}
+					inventory_id={inventory_id}
+				/>
 			</div>
 		</div>
 	);
@@ -41,7 +44,6 @@ const ProductDetail = () => {
 				setProduct(result.data);
 			})
 			.catch((error) => {
-				console.log(error);
 				alert(error.data.message);
 			});
 	}, []);

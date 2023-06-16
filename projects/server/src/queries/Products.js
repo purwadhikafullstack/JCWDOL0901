@@ -37,13 +37,13 @@ const readProductQuery = async (inventory_id) => {
 	});
 };
 
-const readProductsQuery = async (params) => {
+const readProductsQuery = async (filter) => {
 	return await Products.findAll({
-		where: { ...params?.Products },
+		where: { ...filter?.Products },
 		include: [
 			{
 				model: Inventories,
-				where: { ...params?.Inventories },
+				where: { ...filter?.Inventories },
 				include: [
 					{ model: Branches, attributes: ["name"] },
 					{ model: Inventory_promotions, as: "promo" },

@@ -21,19 +21,30 @@ const randomizeProducts = async (Products) => {
 	return result;
 };
 
-const generateRandomProducts = async (branch_id) => {
-	const Products = await readProductsQuery({ Inventories: { branch_id } });
+const generateRandomProducts = async (filter) => {
+	const Products = await readProductsQuery(filter);
 
 	return await randomizeProducts(Products);
 };
 
 module.exports = {
-	startFindProductsRecommendation: async (branch_id) => {
+	startFindProductsRecommendation: async (filter) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const randomProducts = await generateRandomProducts(branch_id);
+				const randomProducts = await generateRandomProducts(filter);
 
 				return resolve(randomProducts);
+			} catch (error) {
+				return reject(await startFindErrorHandler(error));
+			}
+		});
+	},
+	startFindRelatedProducts: async (filter) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const relatedProducts = await readProductsQuery(filter);
+
+				return resolve(relatedProducts);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
 			}
