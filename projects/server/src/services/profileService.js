@@ -1,26 +1,15 @@
-const { Users, Profiles } = require("../models/index.js");
+const { startGetUserProfileErrorHandler } = require("../errors/serviceError");
+const { updateUserProfileQuery, getUserProfileQuery } = require("../queries/Profiles");
 
 module.exports = {
   startUserProfileUpdate: async (body, id) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const user = await Users.findOne({
-          where: { id },
-          include: { model: Profiles },
-        });
+        const result = await updateUserProfileQuery(body, id);
 
-        const profile = user.Profile;
-
-        await Promise.all([
-          profile.update({ name: body.name, gender: body.gender, birth: body.birth }),
-          user.update({ email: body.email }),
-        ]);
-
-        // const data = {profile, user};
-        // console.log("data: ", data);
-        return resolve({ message: "Update profile successful", user });
+        return resolve(result);
       } catch (error) {
-        return reject({ code: 500, message: "Internal Server Error" });
+        return reject(await startGetUserProfileErrorHandler(error));
       }
     });
   },
@@ -28,24 +17,11 @@ module.exports = {
   startGetUserProfile: async (id) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const user = await Users.findOne({
-          where: { id },
-          include: { model: Profiles },
-        });
+        const result = await getUserProfileQuery(id);
 
-        const profile = user.Profile;
-
-        const data = {
-          name: profile.name,
-          gender: profile.gender,
-          email: user.email,
-          birth: profile.birth,
-          referral_code: user.referral_code,
-        };
-
-        return resolve(data);
+        return resolve(result);
       } catch (error) {
-        return reject({ code: 500, message: "Internal Server Error" });
+        return reject(await startGetUserProfileErrorHandler(error));
       }
     });
   },

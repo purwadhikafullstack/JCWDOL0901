@@ -19,24 +19,24 @@ export const userAccountSettingHandler = async (data, setError) => {
 
     const response = await axios.patch(
       `${process.env.REACT_APP_API_BASE_URL}/profile/update`,
-      data,{
+      data,
+      {
         headers: { Authorization: `Bearer ${token}` },
       }
     );
     Swal.fire({
-			icon: "success",
-			title: "Updates Saved",
-			showConfirmButton: false,
-			timer: 2000,
-		});
+      icon: "success",
+      title: "Updates Saved",
+      showConfirmButton: false,
+      timer: 2000,
+    });
     return response.data;
   } catch (error) {
     Swal.fire({
-			icon: "error",
-			title: await setError(await userAccountSettingErrorHandler(error)),
-			showConfirmButton: false,
-			timer: 2000,
-		});
-    
+      icon: "error",
+      title: await setError(await userAccountSettingErrorHandler(error)),
+      showConfirmButton: false,
+      timer: 2000,
+    });
   }
 };

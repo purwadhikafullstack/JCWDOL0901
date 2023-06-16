@@ -1,25 +1,32 @@
 const { sequelize } = require("../models/index.js");
-const { Op } = require("sequelize");
-
 
 const {
   startRegistrationErrorHandler,
   startFindErrorHandler,
   startVerificationErrorHandler,
+  startAdminAuthenticationErrorHandler,
+  startUserAuthenticationErrorHandler,
 } = require("../errors/serviceError.js");
 
-const { createUserQuery, updateUserQuery } = require("../queries/Users.js");
+const {
+  createUserQuery,
+  updateUserQuery,
+  userAuthenticationQuery,
+} = require("../queries/Users.js");
 const { createProfileQuery } = require("../queries/Profiles.js");
 const { createVerificationTokenQuery, readUserTokensQuery } = require("../queries/User_tokens.js");
 const { createUserVouchersAsReferralReward } = require("../queries/User_vouchers.js");
-const { readAdminQuery, createAdminQuery } = require("../queries/Admins.js");
+const {
+  readAdminQuery,
+  createAdminQuery,
+  adminAuthenticationQuery,
+} = require("../queries/Admins.js");
 const { createBranchQuery } = require("../queries/Branches.js");
 const { createInventoryQueryForNewBranch } = require("../queries/Inventories.js");
 
 const { paginateData } = require("../helpers/queryHelper.js");
 
 const { sendRegistrationVerificationEmail } = require("../utils/nodemailer.js");
-const { generateJWToken } = require("../utils/jsonwebtoken.js");
 
 const userDatabaseGeneration = async (body, transaction) => {
   const User = await createUserQuery(body, transaction);
@@ -66,40 +73,25 @@ module.exports = {
       }
     });
   },
-  startLoginAuthentication: async (body, Name) => {
+  startAdminLoginAuthentication: async (body, Name) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const data = await sequelize.models[Name].findOne({
-          where: { email: body.email },
-        });
+        const result = await adminAuthenticationQuery(body, Name);
 
-        if (data?.password !== body.password || !data)
-          return reject({ code: 400, message: "Wrong email or password!" });
-
-        const token = await generateJWToken(data, "super" in data);
-        return resolve({ message: "Login success!", token });
+        return resolve(result);
       } catch (error) {
-        return reject({ code: 500, message: "Internal Server Error" });
+        return reject(await startAdminAuthenticationErrorHandler(error));
       }
     });
   },
   startUserLoginAuthentication: async (body, Name) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const data = await sequelize.models[Name].findOne({
-          where: {
-            [Op.or]: [{ username: body.user }, { email: body.user }],
-          },
-        });
+        const result = await userAuthenticationQuery(body, Name);
 
-        if (data?.password !== body.password || !data)
-          return reject({ code: 400, message: "Wrong email or password!" });
-
-        const token = await generateJWToken(data, "super" in data);
-
-        return resolve({ message: "Login success!", token });
+        return resolve(result);
       } catch (error) {
-        return reject({ code: 500, message: "Internal Server Error" });
+        return reject(await startUserAuthenticationErrorHandler(error));
       }
     });
   },

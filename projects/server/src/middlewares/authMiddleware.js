@@ -40,7 +40,6 @@ const isAdmin = async (request, response, next) => {
 };
 
 const isUser = async (request, response, next) => {
-  console.log("isUser token: ", request.headers.authorization);
   try {
     if (!request.headers.authorization) throw "Missing token!";
     const token = await verifyJWToken(
