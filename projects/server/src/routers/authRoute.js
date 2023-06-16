@@ -5,11 +5,9 @@ const {
   verifyUser,
   loginAdmin,
   loginUser,
-  updateProfile,
-  getProfile,
 } = require("../controllers/authController");
 
-const { getReferrerId, isSuperAdmin, isAdmin, isUser } = require("../middlewares/authMiddleware");
+const { getReferrerId, isSuperAdmin, isAdmin } = require("../middlewares/authMiddleware");
 
 const { getAdminsQuerySanitizer } = require("../middlewares/sanitizer.js");
 
@@ -22,8 +20,5 @@ router.post("/admin/login", loginAdmin);
 router.post("/user/login", loginUser);
 router.post("/user/register", getReferrerId, registerUser);
 router.get("/user/verify/:token", verifyUser);
-
-router.patch("/profile/update", updateProfile);
-router.get("/profile", isUser, getProfile);
 
 module.exports = router;

@@ -1,4 +1,4 @@
-const { sequelize, Users, Profiles } = require("../models/index.js");
+const { sequelize } = require("../models/index.js");
 const { Op } = require("sequelize");
 
 
@@ -50,58 +50,6 @@ module.exports = {
       } catch (error) {
         await transaction.rollback();
         return reject(await startRegistrationErrorHandler(error));
-      }
-    });
-  },
-
-  startUserProfileUpdate: async (body, Name) => {
-    return new Promise(async (resolve, reject) => {
-      try {
-        const profile = await sequelize.models[Name].findOne({
-          where: { name: body.name },
-          include: [sequelize.models.Users],
-        });
-
-        if (!profile) {
-          return reject({ code: 404, message: "Profile not found" });
-        }
-
-        const user = profile.Users;
-
-        await Promise.all([
-          profile.update({ name: body.name, gender: body.gender, birth: body.birth }),
-          user.update({ email: body.email }),
-        ]);
-
-        return resolve({ message: "Update profile successful" });
-      } catch (error) {
-        return reject({ code: 500, message: "Internal Server Error" });
-      }
-    });
-  },
-
-  startGetUserProfile: async (id) => {
-    return new Promise(async (resolve, reject) => {
-      try {
-        const user = await Users.findOne({
-          where: { id },
-          include: {model: Profiles},
-        });
-
-        const profile = user.Profile;
-
-        const data = {
-          name: profile.name,
-          gender: profile.gender,
-          email: user.email,
-          birth: profile.birth,
-          referral_code: user.referral_code,
-        };
-
-        return resolve(data);
-      } catch (error) {
-		console.log("service get profile: ", error);
-        return reject({ code: 500, message: "Internal Server Error" });
       }
     });
   },
