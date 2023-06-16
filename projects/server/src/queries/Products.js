@@ -1,4 +1,13 @@
-const { Products, Branches, Inventory_promotions, Inventories, Categories, Cities } = require("../models/index.js");
+const {
+	Products,
+	Branches,
+	Inventory_promotions,
+	Inventories,
+	Categories,
+	Cities,
+	Promotions,
+} = require("../models/index.js");
+const { Op } = require("sequelize");
 
 const readProductQuery = async (inventory_id) => {
 	return await Products.findOne({
@@ -13,7 +22,14 @@ const readProductQuery = async (inventory_id) => {
 						include: { model: Cities, attributes: ["type", "name"] },
 						attributes: ["id", "name"],
 					},
-					{ model: Inventory_promotions, as: "promo" },
+					{
+						model: Inventory_promotions,
+						as: "promo",
+						where: { expired_at: { [Op.gte]: new Date() } },
+						required: false,
+						attributes: ["value"],
+						include: { model: Promotions },
+					},
 				],
 				attributes: ["stock"],
 			},
