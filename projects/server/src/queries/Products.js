@@ -7,11 +7,14 @@ const readProductQuery = async (inventory_id) => {
 			{
 				model: Inventories,
 				where: { id: inventory_id },
-				include: {
-					model: Branches,
-					include: { model: Cities, attributes: ["type", "name"] },
-					attributes: ["name"],
-				},
+				include: [
+					{
+						model: Branches,
+						include: { model: Cities, attributes: ["type", "name"] },
+						attributes: ["id", "name"],
+					},
+					{ model: Inventory_promotions, as: "promo" },
+				],
 				attributes: ["stock"],
 			},
 		],

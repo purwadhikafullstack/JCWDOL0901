@@ -1,15 +1,21 @@
 const { startFindErrorHandler } = require("../errors/serviceError");
-const { readProductQuery } = require("../queries/Products");
+const { readProductQuery, readProductsQuery } = require("../queries/Products");
 
-const generateRandomIndex = async (top) => {
-	return await Math.ceil(Math.random() * top);
+const generateRandomIndex = (top, indexHit) => {
+	let randomIndex = Math.ceil(Math.random() * top);
+
+	return randomIndex;
 };
 
 const randomizeProducts = async (Products) => {
 	const result = [];
+	const indexHit = [];
+	const top = Products.length - 1;
 
 	for (let i = 0; i < 5; i++) {
-		await result.push(Products[await generateRandomIndex(Products.length - 1)]);
+		const index = await generateRandomIndex(top, indexHit);
+		await indexHit.push(index);
+		await result.push(Products[index]);
 	}
 
 	return result;
@@ -18,7 +24,7 @@ const randomizeProducts = async (Products) => {
 const generateRandomProducts = async (branch_id) => {
 	const Products = await readProductsQuery({ Inventories: { branch_id } });
 
-	return randomizeProducts(Products);
+	return await randomizeProducts(Products);
 };
 
 module.exports = {
