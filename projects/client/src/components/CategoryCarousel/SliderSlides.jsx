@@ -1,7 +1,9 @@
 import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { useNavigate } from "react-router-dom";
 
 const MobileSlides = ({ categories }) => {
+	const navigate = useNavigate();
 	return (
 		<Splide
 			options={{
@@ -20,6 +22,7 @@ const MobileSlides = ({ categories }) => {
 								src={process.env.REACT_APP_IMAGE_BASE_URL + category.image}
 								alt={category.name}
 								loading="lazy"
+								onClick={() => navigate("/products")}
 							/>
 							<span className="text-black text-sm mt-1.5">{category.name}</span>
 						</div>
@@ -31,6 +34,7 @@ const MobileSlides = ({ categories }) => {
 };
 
 const DesktopSlides = ({ categories }) => {
+	const navigate = useNavigate();
 	return (
 		<Splide
 			options={{
@@ -49,6 +53,7 @@ const DesktopSlides = ({ categories }) => {
 								src={process.env.REACT_APP_IMAGE_BASE_URL + category.image}
 								alt={category.name}
 								loading="lazy"
+								onClick={() => navigate("/products")}
 							/>
 							<span className="text-black text-sm mt-1.5">{category.name}</span>
 						</div>
