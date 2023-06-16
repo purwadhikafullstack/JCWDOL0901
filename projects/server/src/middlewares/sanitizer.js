@@ -98,7 +98,6 @@ const getProductSanitizer = async (request, response, next) => {
 		itemPerPage: request.query.itemPerPage,
 	};
 	request.query = sanitizedQuery;
-	console.log(sanitizedQuery);
 	next();
 };
 

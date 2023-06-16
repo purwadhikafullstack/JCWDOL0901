@@ -16,9 +16,8 @@ const randomizeProducts = async (Products) => {
 };
 
 const generateRandomProducts = async (branch_id) => {
-	const Products = await readProductsQuery({ Inventories: { branch_id } });
-	console.log(Products);
-	return randomizeProducts(Products);
+	const ProductList = await readProductsQuery({ Inventories: { branch_id } });
+	return randomizeProducts(ProductList.rows);
 };
 
 module.exports = {
@@ -29,6 +28,7 @@ module.exports = {
 
 				return resolve(randomProducts);
 			} catch (error) {
+				console.log(error);
 				return reject(await startFindErrorHandler(error));
 			}
 		});

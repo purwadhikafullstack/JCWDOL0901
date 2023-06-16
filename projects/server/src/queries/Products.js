@@ -3,7 +3,8 @@ const { Products, Branches, Inventory_promotions, Inventories } = require("../mo
 const readProductsQuery = async (params) => {
 	const offset = params?.page ? (params?.page - 1) * params?.itemPerPage : null;
 	const limit = params?.itemPerPage ? params?.itemPerPage : null;
-
+	const order = params?.order ? [...params?.order] : [];
+	console.log(params);
 	return await Products.findAndCountAll({
 		where: { ...params?.Products },
 		include: [
@@ -19,7 +20,7 @@ const readProductsQuery = async (params) => {
 		],
 		offset,
 		limit,
-		order: [...params?.order],
+		order,
 	});
 };
 
