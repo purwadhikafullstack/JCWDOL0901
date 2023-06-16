@@ -1,4 +1,4 @@
-const { Products, Branches, Inventory_promotions, Inventories } = require("../models/index.js");
+const { Products, Branches, Inventory_promotions, Inventories, Promotions } = require("../models/index.js");
 
 const readProductsQuery = async (params) => {
 	const offset = params?.page ? (params?.page - 1) * params?.itemPerPage : null;
@@ -13,7 +13,11 @@ const readProductsQuery = async (params) => {
 				where: { ...params?.Inventories },
 				include: [
 					{ model: Branches, attributes: ["name"] },
-					{ model: Inventory_promotions, as: "promo" },
+					{
+						model: Inventory_promotions,
+						as: "promo",
+						include: [{ model: Promotions, attributes: ["name"] }],
+					},
 				],
 				attributes: ["id", "stock"],
 			},
