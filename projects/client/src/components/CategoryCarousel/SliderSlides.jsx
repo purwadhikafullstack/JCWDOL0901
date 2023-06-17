@@ -49,7 +49,7 @@ const DesktopSlides = ({ categories }) => {
 					<SplideSlide key={index}>
 						<div className="flex flex-col items-center mx-2">
 							<img
-								className="w-[75px] cursor-pointer"
+								className="w-[125px] cursor-pointer"
 								src={process.env.REACT_APP_IMAGE_BASE_URL + category.image}
 								alt={category.name}
 								loading="lazy"
@@ -70,7 +70,7 @@ const SliderSlides = ({ categories }) => {
 			<div className="block sm:hidden">
 				<MobileSlides categories={categories} />
 			</div>
-			<div className="hidden sm:block sm:flex sm:shrink-0">
+			<div className="hidden sm:block sm:flex sm:shrink-0 sm:my-12">
 				<DesktopSlides categories={categories} />
 			</div>
 		</>

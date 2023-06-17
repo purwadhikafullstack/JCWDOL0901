@@ -1,5 +1,6 @@
 const { Op } = require("sequelize");
 const { sequelize } = require("../models/index.js");
+const { query } = require("express");
 
 const getAdminQueryFilter = async (query) => {
 	const filter = { branch: [] };
@@ -31,6 +32,37 @@ const getInventoryPromotionQueryFilter = async (query) => {
 		if (query[key]) filter.Inventory_promotions[key] = query[key];
 	});
 
+	return filter;
+};
+
+const getProductsRecommendationFilter = async (query) => {
+	const filter = { Inventories: {} };
+
+	const inventoriesFilter = ["branch_id"];
+
+	await inventoriesFilter.forEach((key) => {
+		if (query[key]) filter.Inventories[key] = query[key];
+	});
+
+	return filter;
+};
+
+const getRelatedProductsFilter = async (query) => {
+	const filter = { Products: {}, Inventories: {} };
+
+	const inventoriesFilter = ["branch_id"];
+	const inventoriesFilterNegate = ["id"];
+	const productsFilter = ["category_id"];
+
+	await inventoriesFilter.forEach((key) => {
+		if (query[key]) filter.Inventories[key] = query[key];
+	});
+	await inventoriesFilterNegate.forEach((key) => {
+		if (query[key]) filter.Inventories[key] = { [Op.not]: query[key] };
+	});
+	await productsFilter.forEach((key) => {
+		if (query[key]) filter.Products[key] = query[key];
+	});
 	return filter;
 };
 
@@ -125,4 +157,6 @@ module.exports = {
 	getInventoriesQueryOrder,
 	getProductQueryFilter,
 	getProductQueryOrder,
+	getProductsRecommendationFilter,
+	getRelatedProductsFilter,
 };

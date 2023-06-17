@@ -17,6 +17,7 @@ import UpdateCategoryPage from "./pages/UpdateCategory/UpdateCategoryPage";
 import AdminAuthGuard from "./pages/AdminAuthGuard";
 import ChangePasswordPage from "./pages/ChangePassword/ChangePasswordPage";
 import ProductPage from "./pages/Product/ProductPage";
+import ProductDetail from "./pages/ProductDetail/ProductDetail";
 
 function App() {
 	return (
@@ -31,6 +32,7 @@ function App() {
 				<Route path="/admin/login" element={<AdminLoginPage />} />
 				<Route path="/account/change-password" element={<ChangePasswordPage />} />
 				<Route path="/products/" element={<ProductPage />} />
+				<Route path="/detail/:inventory_id" element={<ProductDetail />} />
 
 				{/* //Admin Auth Page */}
 				<Route path="/admin/promo" element={<AdminAuthGuard component={<ProductPromotion />} />} />
