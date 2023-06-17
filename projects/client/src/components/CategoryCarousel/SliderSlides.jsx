@@ -38,7 +38,7 @@ const DesktopSlides = ({ categories }) => {
 	return (
 		<Splide
 			options={{
-				perPage: 14,
+				perPage: 10,
 				padding: 5,
 				pagination: false,
 				arrows: false,
