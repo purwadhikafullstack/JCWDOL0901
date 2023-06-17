@@ -30,6 +30,7 @@ const getPromo = (promoDetail) => {
 
 export const determinePrice = (product, setPrice) => {
 	const promoDetail = product?.Inventories[0]?.promo;
+
 	if (!promoDetail?.value) setPrice((previousValue) => ({ ...previousValue, original, final: original }));
 
 	const original = promoDetail?.Promotion?.id === 4 ? null : product.price;
