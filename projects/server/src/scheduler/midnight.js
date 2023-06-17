@@ -21,13 +21,17 @@ const deleteExpiredPromotion = async () => {
 const midnightTask = cron.schedule(
 	"0 0 * * *",
 	async () => {
+		console.log("[Scheduler] midnightTask started.");
+
 		await deleteExpiredPromotion()
 			.then((result) => {
-				console.log(result);
+				console.log(`[Notice] midnightTask: ${result}`);
 			})
 			.catch((error) => {
-				console.log(`Scheduler error: ${error}`);
+				console.log(`[Notice] midnightTask: ${error}`);
 			});
+
+		console.log("[Scheduler] midnightTask completed.");
 	},
 	{ scheduled: true, timezone: "Asia/Bangkok" },
 );
