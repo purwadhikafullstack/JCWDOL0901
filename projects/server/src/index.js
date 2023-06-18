@@ -15,6 +15,7 @@ const {
 	adminPromoRoute,
 	adminInventoryRoute,
 } = require("./routers/index.js");
+const { log } = require("console");
 
 const PORT = process.env.PORT || 8000;
 const app = express();
@@ -33,7 +34,6 @@ midnightTask.start();
 
 // ===========================
 // NOTE : Add your routes here
-
 app.use("/api/auth", authRoute);
 app.use("/api/branch", branchRoute);
 app.use("/api/category", categoryRoute);

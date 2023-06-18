@@ -65,7 +65,6 @@ const getProductsRecommendationQuerySanitizer = async (request, response, next) 
 	const sanitizedQuery = {
 		filter: await getProductsRecommendationFilter(request.query),
 	};
-
 	request.query = sanitizedQuery;
 
 	next();
@@ -77,7 +76,6 @@ const getRelatedProductsQuerySanitizer = async (request, response, next) => {
 	};
 
 	request.query = sanitizedQuery;
-
 	next();
 };
 
@@ -113,7 +111,7 @@ const getCategorySanitizer = async (request, response, next) => {
 	next();
 };
 
-const getProductSanitizer = async (request, response, next) => {
+const getProductsSanitizer = async (request, response, next) => {
 	const sanitizedQuery = {
 		filter: await getProductQueryFilter(request.query),
 		order: await getProductQueryOrder(request.query),
@@ -121,6 +119,7 @@ const getProductSanitizer = async (request, response, next) => {
 		itemPerPage: request.query.itemPerPage,
 	};
 	request.query = sanitizedQuery;
+	console.log(sanitizedQuery);
 	next();
 };
 
@@ -132,7 +131,7 @@ module.exports = {
 	postInventoryPromotionBodySanitizer,
 	patchInventoryPromotionBodySanitizer,
 	getCategorySanitizer,
-	getProductSanitizer,
+	getProductsSanitizer,
 	getRelatedProductsQuerySanitizer,
 	getProductsRecommendationQuerySanitizer,
 };

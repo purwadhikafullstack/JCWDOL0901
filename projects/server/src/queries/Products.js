@@ -38,10 +38,10 @@ const readProductQuery = async (inventory_id) => {
 };
 
 const readProductsQuery = async (params) => {
+	console.log(params);
 	const offset = params?.page ? (params?.page - 1) * params?.itemPerPage : null;
 	const limit = params?.itemPerPage ? params?.itemPerPage : null;
 	const order = params?.order ? [...params?.order] : [];
-	console.log(params);
 	return await Products.findAndCountAll({
 		where: { ...params?.Products },
 		include: [

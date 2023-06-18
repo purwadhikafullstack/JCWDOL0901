@@ -23,8 +23,7 @@ const randomizeProducts = async (Products) => {
 
 const generateRandomProducts = async (filter) => {
 	const Products = await readProductsQuery(filter);
-
-	return await randomizeProducts(Products);
+	return await randomizeProducts(Products.rows);
 };
 
 module.exports = {
@@ -66,7 +65,7 @@ module.exports = {
 			try {
 				const relatedProducts = await readProductsQuery(filter);
 
-				return resolve(relatedProducts);
+				return resolve(relatedProducts.rows);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
 			}
