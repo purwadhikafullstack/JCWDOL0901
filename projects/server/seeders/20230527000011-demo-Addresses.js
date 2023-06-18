@@ -8,7 +8,7 @@ module.exports = {
 			[
 				{
 					user_id: 1,
-					city_id: 3,
+					city_id: 399,
 					label: "Rumah (utama)",
 					address: "Jl. Gang Lombok no. 14, Semarang Tengah, 50188",
 					latitude: -6.973867860991175,
@@ -17,7 +17,7 @@ module.exports = {
 				},
 				{
 					user_id: 1,
-					city_id: 2,
+					city_id: 399,
 					label: "Warung",
 					address: "Jl. Empu Tantular No.1, Semarang Tengah, 50137",
 					latitude: -6.970715842286184,
@@ -26,7 +26,7 @@ module.exports = {
 				},
 				{
 					user_id: 3,
-					city_id: 3,
+					city_id: 399,
 					label: "Omah",
 					address: "Jl. Semarang Indah No.2, Semarang Barat, 50144",
 					latitude: -6.969610927226034,
@@ -44,7 +44,7 @@ module.exports = {
 					default: true,
 				},
 			],
-			{}
+			{},
 		);
 	},
 

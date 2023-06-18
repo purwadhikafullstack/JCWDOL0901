@@ -7,6 +7,7 @@ const { join } = require("path");
 const { midnightTask } = require("./scheduler/midnight.js");
 const {
 	authRoute,
+	addressRoute,
 	dataRoute,
 	adminTransactionRoute,
 	categoryRoute,
@@ -36,6 +37,7 @@ midnightTask.start();
 // NOTE : Add your routes here
 
 app.use("/api/auth", authRoute);
+app.use("/api/address", addressRoute);
 app.use("/api/branch", branchRoute);
 app.use("/api/category", categoryRoute);
 app.use("/api/cart", cartRoute);
