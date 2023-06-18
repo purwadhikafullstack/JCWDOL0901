@@ -11,6 +11,7 @@ const {
 	adminTransactionRoute,
 	categoryRoute,
 	branchRoute,
+	cartRoute,
 	productRoute,
 	adminPromoRoute,
 	adminInventoryRoute,
@@ -37,6 +38,7 @@ midnightTask.start();
 app.use("/api/auth", authRoute);
 app.use("/api/branch", branchRoute);
 app.use("/api/category", categoryRoute);
+app.use("/api/cart", cartRoute);
 app.use("/api/data", dataRoute);
 app.use("/api/admin/transaction", adminTransactionRoute);
 app.use("/api/admin/inventory", adminInventoryRoute);
