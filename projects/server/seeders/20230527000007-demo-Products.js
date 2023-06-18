@@ -582,8 +582,7 @@ module.exports = {
 					image: "/product/61.png",
 					name: "Oreo Red Velvet 119.6gr",
 					price: 12500,
-					description:
-						"Merupakan biskuit Oreo dengan kelezatan krim rasa keji dan kukis merah Oreo",
+					description: "Merupakan biskuit Oreo dengan kelezatan krim rasa keji dan kukis merah Oreo",
 					weight: 119,
 					unit: "119 gram",
 					category_id: 10,
@@ -726,8 +725,7 @@ module.exports = {
 					image: "/product/76.png",
 					name: "Bogasari Segitiga Biru Tepung Terigu Protein Sedang Premium 1kg",
 					price: 15300,
-					description:
-						"Bogasari Segitiga Biru tepung terigu berkualitas untuk membuat aneka variasi makanan",
+					description: "Bogasari Segitiga Biru tepung terigu berkualitas untuk membuat aneka variasi makanan",
 					weight: 1000,
 					unit: "1 kilogram",
 					category_id: 13,
@@ -1087,8 +1085,7 @@ module.exports = {
 					image: "/product/113.png",
 					name: "Stimuno Syrup Grape 60ml",
 					price: 31200,
-					description:
-						"Suplemen fitofarmaka yang mengandung esktrak daun Meniran dengan rasa anggur",
+					description: "Suplemen fitofarmaka yang mengandung esktrak daun Meniran dengan rasa anggur",
 					weight: 60,
 					unit: "60 mililiter",
 					category_id: 19,
@@ -1110,7 +1107,7 @@ module.exports = {
 					description:
 						"Suplemen makanan dengan kandungan Omega 3, EPA dan DHA yang berasal dari minyak ikan yang digunakan untuk membantu memelihara kesehatan jantung",
 					weight: 100,
-					unit: "100 gram",
+					unit: "600 gram",
 					category_id: 19,
 				},
 				{
@@ -1126,8 +1123,7 @@ module.exports = {
 					image: "/product/117.png",
 					name: "Comvita Manuka Honey Blend 500gr/Madu Manuka",
 					price: 302900,
-					description:
-						"Madu hutan murni super premium dari nektar bunga manuka liar asli New Zealand",
+					description: "Madu hutan murni super premium dari nektar bunga manuka liar asli New Zealand",
 					weight: 500,
 					unit: "500 gram",
 					category_id: 19,
@@ -1175,8 +1171,7 @@ module.exports = {
 					image: "/product/122.png",
 					name: "Tempra Paracetamol +6 Thn - 60ml",
 					price: 60000,
-					description:
-						"Obat yang digunakan untuk menurunkan demam pada segala usia (diatas 6 tahun)",
+					description: "Obat yang digunakan untuk menurunkan demam pada segala usia (diatas 6 tahun)",
 					weight: 70,
 					unit: "70 mililiter",
 					category_id: 20,
@@ -1263,8 +1258,7 @@ module.exports = {
 					image: "/product/131.png",
 					name: "SoKlin Powder Detergent Soft Sakura Bag 770gr",
 					price: 26500,
-					description:
-						"Deterjen yang mampu menghilangkan noda membandel hingga ke serat kain dengan mudah",
+					description: "Deterjen yang mampu menghilangkan noda membandel hingga ke serat kain dengan mudah",
 					weight: 770,
 					unit: "770 gram",
 					category_id: 22,
@@ -1283,8 +1277,7 @@ module.exports = {
 					image: "/product/133.png",
 					name: "Kit Wiper Fluid 500ml cairan wiper",
 					price: 15300,
-					description:
-						"Cairan pembersih yang dapat membersihkan kaca mobil agar bebas dari kotoran",
+					description: "Cairan pembersih yang dapat membersihkan kaca mobil agar bebas dari kotoran",
 					weight: 500,
 					unit: "500 mililiter",
 					category_id: 22,
@@ -1323,8 +1316,7 @@ module.exports = {
 					image: "/product/137.png",
 					name: "Cesar Chicken & Veg wet dog food - 100gr/Makanan Anjing Basah",
 					price: 20800,
-					description:
-						"Makanan untuk anjing dewasa berupa potongan daging segar yang dimasak secara khusus",
+					description: "Makanan untuk anjing dewasa berupa potongan daging segar yang dimasak secara khusus",
 					weight: 100,
 					unit: "100 gram",
 					category_id: 23,
@@ -1361,8 +1353,7 @@ module.exports = {
 					image: "/product/141.png",
 					name: "Whiskas Tuna Dry Cat Food - 1.2kg/Makanan Kucing Kering",
 					price: 80500,
-					description:
-						"Makanan kering untuk kucing dengan kandungan gizi yang lengkap dan seimbang",
+					description: "Makanan kering untuk kucing dengan kandungan gizi yang lengkap dan seimbang",
 					weight: 1200,
 					unit: "1200 gram",
 					category_id: 23,
@@ -1371,8 +1362,7 @@ module.exports = {
 					image: "/product/142.png",
 					name: "Whiskas Adult Wet Cat Food Tuna - 80gr Pouch/Makanan Kucing Basah",
 					price: 7700,
-					description:
-						"Makanan basah untuk kucing yang terbuat dari ikan tuna yang dimasak secara lembut",
+					description: "Makanan basah untuk kucing yang terbuat dari ikan tuna yang dimasak secara lembut",
 					weight: 80,
 					unit: "80 gram",
 					category_id: 23,
@@ -1435,7 +1425,7 @@ module.exports = {
 				// =========================================================
 				// =========================================================
 			],
-			{}
+			{},
 		);
 	},
 

@@ -9,7 +9,6 @@ module.exports = {
 
 				return await resolve(Address);
 			} catch (error) {
-				console.log(error);
 				return await reject(await startFindErrorHandler(error));
 			}
 		});

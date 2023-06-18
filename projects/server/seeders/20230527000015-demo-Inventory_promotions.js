@@ -34,8 +34,29 @@ module.exports = {
 					expired_at: "2023-06-25",
 					promotion_id: 2,
 				},
+				{
+					inventory_id: 9,
+					value: 8000,
+					start_at: "2023-05-25",
+					expired_at: "2023-08-25",
+					promotion_id: 2,
+				},
+				{
+					inventory_id: 22,
+					value: 1,
+					start_at: "2023-05-25",
+					expired_at: "2023-08-25",
+					promotion_id: 4,
+				},
+				{
+					inventory_id: 56,
+					value: 25,
+					start_at: "2023-05-25",
+					expired_at: "2023-08-25",
+					promotion_id: 3,
+				},
 			],
-			{}
+			{},
 		);
 	},
 
