@@ -16,13 +16,13 @@ const writeLogFile = (error, source) => {
 	});
 };
 
-const startFindErrorHandler = async error => {
+const startFindErrorHandler = async (error) => {
 	await writeLogFile(error, "startFindErrorHandler");
 
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
-const startRegistrationErrorHandler = async error => {
+const startRegistrationErrorHandler = async (error) => {
 	await writeLogFile(error, "startRegistrationErrorHandler");
 
 	if (error.name === "SequelizeUniqueConstraintError") {
@@ -39,7 +39,7 @@ const startRegistrationErrorHandler = async error => {
 	};
 };
 
-const startUpdatePasswordErrorHandler = async error => {
+const startUpdatePasswordErrorHandler = async (error) => {
 	await writeLogFile(error, "startUpdatePasswordErrorHandler");
 
 	if (error === "PASS_NOT_VERIFIED") {
@@ -59,7 +59,7 @@ const startUpdatePasswordErrorHandler = async error => {
 const forbiddenErrorHandler = async () => {
 	await writeLogFile(
 		"Forbidden access, a non super admin trying to access restricted request",
-		"forbiddenErrorHandler"
+		"forbiddenErrorHandler",
 	);
 
 	return {
@@ -68,7 +68,7 @@ const forbiddenErrorHandler = async () => {
 	};
 };
 
-const startVerificationErrorHandler = async error => {
+const startVerificationErrorHandler = async (error) => {
 	await writeLogFile(error, "startVerificationErrorHandler");
 
 	if (error === "INVALID_TOKEN") {
@@ -81,21 +81,27 @@ const startVerificationErrorHandler = async error => {
 	};
 };
 
-const startCreateHandler = async error => {
+const startCreateHandler = async (error) => {
 	await writeLogFile(error, "startCreateHandler");
 
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
-const startDeleteteHandler = async error => {
+const startDeleteteHandler = async (error) => {
 	await writeLogFile(error, "startDeleteteHandler");
 	if (error.name === "SequelizeForeignKeyConstraintError") {
 		return { code: 500, message: "ER_ROW_IS_REFERENCED_2" };
 	}
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
-const startUpdateErrorHandler = async error => {
+const startUpdateErrorHandler = async (error) => {
 	await writeLogFile(error, "startUpdateErrorHandler");
+
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
+
+const startCreateTransactionErrorHandler = async (error) => {
+	await writeLogFile(error, "startCreateTransactionErrorHandler");
 
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
@@ -109,4 +115,5 @@ module.exports = {
 	startDeleteteHandler,
 	startUpdateErrorHandler,
 	startUpdatePasswordErrorHandler,
+	startCreateTransactionErrorHandler,
 };

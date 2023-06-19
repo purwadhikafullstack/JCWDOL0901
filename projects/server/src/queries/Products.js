@@ -25,7 +25,7 @@ const readProductQuery = async (inventory_id) => {
 					{
 						model: Inventory_promotions,
 						as: "promo",
-						where: { active: true },
+						where: { isActive: true },
 						required: false,
 						attributes: ["value"],
 						include: { model: Promotions },

@@ -6,7 +6,8 @@ export const getProductDetail = (inventory_id) => {
 
 const getFinalPrice = (original, promoDetail) => {
 	if (promoDetail?.Promotion?.id === 2) {
-		return original - promoDetail?.value;
+		const discountedPrice = original - promoDetail?.value;
+		return discountedPrice >= 0 ? discountedPrice : 0;
 	} else if (promoDetail?.Promotion?.id === 3) {
 		return original - (promoDetail?.value / 100) * original;
 	}
