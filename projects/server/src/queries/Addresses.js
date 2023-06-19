@@ -7,4 +7,12 @@ const readDefaultAddressQuery = async (filter) => {
 	});
 };
 
-module.exports = { readDefaultAddressQuery };
+const readAddressQuery = async (filter) => {
+	return await Addresses.findAll({
+		where: { ...filter },
+		include: [{ model: Cities, include: [{ model: Provinces }] }],
+		order: [["default", "DESC"]],
+	});
+};
+
+module.exports = { readDefaultAddressQuery, readAddressQuery };
