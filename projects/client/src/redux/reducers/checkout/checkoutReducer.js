@@ -26,37 +26,39 @@ const removeVoucher = (state, action) => {
 	return { ...state, summary, voucher: null };
 };
 
-export const checkout = createSlice({
-	name: "checkout",
-	initialState: {
-		address: {
+const initialState = {
+	address: {
+		id: null,
+		label: "",
+		detail: "",
+		City: { type: "", name: "", Province: { name: "" } },
+	},
+	cart: [],
+	voucher: {
+		id: null,
+		name: "",
+		description: "",
+		value: null,
+		Promotion: {
 			id: null,
-			label: "",
-			detail: "",
-			City: { type: "", name: "", Province: { name: "" } },
-		},
-		cart: [],
-		voucher: {
-			id: null,
-			name: "",
-			description: "",
-			value: null,
-			Promotion: {
-				id: null,
-			},
-		},
-		summary: {
-			hasLoaded: false,
-			subtotal: 0,
-			logistic: 0,
-			discount: 0,
-			total: 0,
-			raw: {
-				subtotal: 0,
-				logistic: 0,
-			},
 		},
 	},
+	summary: {
+		hasLoaded: false,
+		subtotal: 0,
+		logistic: 0,
+		discount: 0,
+		total: 0,
+		raw: {
+			subtotal: 0,
+			logistic: 0,
+		},
+	},
+};
+
+export const checkout = createSlice({
+	name: "checkout",
+	initialState,
 	reducers: {
 		setAddress,
 		initializeCart,
