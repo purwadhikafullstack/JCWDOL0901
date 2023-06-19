@@ -1,18 +1,20 @@
 const multer = require("multer");
 
-const storage = multer.diskStorage({
+const categoryStorage = multer.diskStorage({
 	destination: (req, res, cb) => {
 		cb(null, "uploads/category");
 	},
 	filename: (req, file, cb) => {
-		cb(
-			null,
-			"category_" +
-				Date.now() +
-				Math.round(Math.random() * 1000000000) +
-				"." +
-				file.mimetype.split("/")[1]
-		);
+		cb(null, "category_" + Date.now() + Math.round(Math.random() * 1000000000) + "." + file.mimetype.split("/")[1]);
+	},
+});
+// `${__dirname}../../../../client/public/assets/avatar`
+const avatarStorage = multer.diskStorage({
+	destination: (req, res, cb) => {
+		cb(null, "uploads/category");
+	},
+	filename: (req, file, cb) => {
+		cb(null, "avatar_" + Date.now() + Math.round(Math.random() * 1000000000) + "." + file.mimetype.split("/")[1]);
 	},
 });
 
@@ -29,6 +31,8 @@ const limits = {
 	fileSize: 1024 * 1024,
 };
 
-const uploadFile = multer({ storage, fileFilter, limits }).single("image");
+const uploadCategoryFile = multer({ categoryStorage, fileFilter, limits }).single("image");
 
-module.exports = { uploadFile };
+const uploadAvatarFile = multer({ avatarStorage, fileFilter, limits }).single("image");
+
+module.exports = { uploadCategoryFile, uploadAvatarFile };
