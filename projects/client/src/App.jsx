@@ -19,6 +19,7 @@ import ChangePasswordPage from "./pages/ChangePassword/ChangePasswordPage";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import CheckoutPage from "./pages/Checkout/CheckoutPage";
 import SwitchAddress from "./components/Checkout/SwitchAddress";
+import SwitchVoucher from "./components/Checkout/SwitchVoucher";
 
 function App() {
 	return (
@@ -35,6 +36,7 @@ function App() {
 				<Route path="/detail/:inventory_id" element={<ProductDetail />} />
 				<Route path="/cart/checkout" element={<CheckoutPage />} />
 				<Route path="/cart/checkout/address/change" element={<SwitchAddress />} />
+				<Route path="/cart/checkout/voucher/change" element={<SwitchVoucher />} />
 
 				{/* //Admin Auth Page */}
 				<Route path="/admin/promo" element={<AdminAuthGuard component={<ProductPromotion />} />} />
