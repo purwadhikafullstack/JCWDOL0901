@@ -8,7 +8,10 @@ const SwitchAddress = () => {
 		<div className="flex flex-col bg-white min-h-screen">
 			<BackButton color="text-green-400" url="/cart/checkout" />
 			<Addresses />
-			<span className="ml-auto mr-5 mt-2 text-sm text-green-400 underline cursor-pointer">+ Add Address</span>
+			<span className="flex flex-row items-center ml-auto mr-6 mt-3 text-sm text-green-400 cursor-pointer">
+				<span className="material-symbols-rounded">domain_add</span>
+				<span className="ml-3 underline ">Edit / Add Address</span>
+			</span>
 		</div>
 	);
 };
