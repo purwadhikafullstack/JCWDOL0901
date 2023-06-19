@@ -1,6 +1,7 @@
 import React from "react";
 import { getDefaultAddress } from "../handlers/checkoutHandler";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setAddress } from "../../../redux/reducers/checkout/checkoutAction.js";
 
 const Detail = ({ address }) => {
 	return (
@@ -17,13 +18,17 @@ const Detail = ({ address }) => {
 const AddressBoxDetail = () => {
 	const [userAddress, setUserAddress] = React.useState(undefined);
 	const checkout = useSelector((state) => state.checkout);
+	const dispatch = useDispatch();
 
 	React.useEffect(() => {
 		if (checkout.address.id) {
 			setUserAddress(checkout.address);
 		} else {
 			getDefaultAddress()
-				.then((result) => setUserAddress(result.data))
+				.then((result) => {
+					dispatch(setAddress(result.data));
+					setUserAddress(result.data);
+				})
 				.catch((error) => setUserAddress({ id: null, name: "Server Error!" }));
 		}
 	}, [checkout.address.id]);

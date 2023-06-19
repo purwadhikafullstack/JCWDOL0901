@@ -5,6 +5,10 @@ const setAddress = (state, action) => {
 	return { ...state, address: { id, label, detail, City } };
 };
 
+const initializeCart = (state, action) => {
+	return { ...state, cart: [...action.payload] };
+};
+
 const setVoucher = (state, action) => {
 	const { id, value, type } = action.payload;
 	return { ...state, voucher: { id, value, type } };
@@ -19,14 +23,25 @@ export const checkout = createSlice({
 			detail: "",
 			City: { type: "", name: "", Province: { name: "" } },
 		},
+		cart: [],
 		voucher: {
 			id: null,
+			name: "",
+			description: "",
 			value: null,
-			type: {},
+			Promotion: {
+				id: null,
+			},
+		},
+		summary: {
+			subtotal: 0,
+			logistic: 0,
+			total: 0,
 		},
 	},
 	reducers: {
 		setAddress,
+		initializeCart,
 		setVoucher,
 	},
 });
