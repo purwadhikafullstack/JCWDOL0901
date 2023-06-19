@@ -39,6 +39,7 @@ export const checkout = createSlice({
 		summary: {
 			subtotal: 0,
 			logistic: 0,
+			discount: 0,
 			total: 0,
 		},
 	},

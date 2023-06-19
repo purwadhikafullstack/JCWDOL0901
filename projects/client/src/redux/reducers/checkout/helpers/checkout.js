@@ -7,7 +7,7 @@ const getPromoPrice = (price, promo) => {
 };
 
 export const initializeSummary = (cart) => {
-	const summary = { subtotal: 0, logistic: 0, total: 0 };
+	const summary = { subtotal: 0, logistic: 0, discount: 0, total: 0 };
 
 	cart.forEach((item) => {
 		const quantity = item.quantity;
