@@ -11,21 +11,16 @@ module.exports = {
 	startFindInventoryPromotion: async (branch_id, name, filter, order, page) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const Inventory_promotion = await readInventoryPromotionQuery(
-					branch_id,
-					name,
-					filter,
-					order,
-					page
-				);
+				const Inventory_promotion = await readInventoryPromotionQuery(branch_id, name, filter, order, page);
 
 				return resolve(Inventory_promotion);
 			} catch (error) {
+				console.log(error);
 				return reject(await startFindErrorHandler(error));
 			}
 		});
 	},
-	startInventoryPromotionRegistration: async data => {
+	startInventoryPromotionRegistration: async (data) => {
 		return new Promise(async (resolve, reject) => {
 			try {
 				await createInventoryPromotionQuery(data);
@@ -46,7 +41,7 @@ module.exports = {
 			}
 		});
 	},
-	startInventoryPromotionDelete: async id => {
+	startInventoryPromotionDelete: async (id) => {
 		return new Promise(async (resolve, reject) => {
 			try {
 				// TODO: Implement to frontend

@@ -25,7 +25,7 @@ const readProductQuery = async (inventory_id) => {
 					{
 						model: Inventory_promotions,
 						as: "promo",
-						where: { expired_at: { [Op.gte]: new Date() } },
+						where: { active: true },
 						required: false,
 						attributes: ["value"],
 						include: { model: Promotions },

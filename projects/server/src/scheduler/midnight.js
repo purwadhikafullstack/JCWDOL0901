@@ -5,11 +5,14 @@ const { Op } = require("sequelize");
 const deleteExpiredPromotion = async () => {
 	return new Promise(async (resolve, reject) => {
 		try {
-			await Inventory_promotions.destroy({
-				where: {
-					expired_at: { [Op.lte]: new Date() },
+			await Inventory_promotions.update(
+				{ isActive: false },
+				{
+					where: {
+						expired_at: { [Op.lte]: new Date() },
+					},
 				},
-			});
+			);
 
 			return await resolve("deleteExpiredPromotion task succeeded");
 		} catch (error) {
