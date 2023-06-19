@@ -5,6 +5,7 @@ import DesktopNavBar from "../DesktopNavBar";
 import { AdjustmentsIcon } from "@heroicons/react/outline";
 import BackButton from "../BackButton";
 import SearchSort from "./SearchSort";
+import DeleteAlert from "../DeleteAlert";
 
 const ProductsHeader = ({ setFilter, order, setOrder, sort, setSort }) => {
 	return (
@@ -18,7 +19,10 @@ const ProductsHeader = ({ setFilter, order, setOrder, sort, setSort }) => {
 						<BackButton url={"/"} color="text-gray-400 sm:text-green-100 text-3xl" />
 					</div>
 					<SearchBar setFilter={setFilter} />
-					<button className="flex-1 flex items-center px-2 py-2 ml-6 text-base font-medium hover:bg-green-100/20 rounded-md">
+					<button
+						className="flex-1 flex items-center px-2 py-2 ml-6 text-base font-medium hover:bg-green-100/20 rounded-md"
+						onClick={() => {}}
+					>
 						<AdjustmentsIcon
 							className="text-gray-400 mr-4 flex-shrink-0 h-6 w-6 sm:text-green-100"
 							aria-hidden="true"

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const generateUrlQuery = (page, itemPerPage, branch_id, category_id, filter) => {
+export const generateUrlQuery = (page, itemPerPage, branch_id, category_id, filter, sort, order) => {
 	let url = "";
 
 	url += `?page=${page}`;
@@ -8,8 +8,8 @@ export const generateUrlQuery = (page, itemPerPage, branch_id, category_id, filt
 	url += filter ? `&name=${filter}` : "";
 	url += branch_id ? `&branch_id=${branch_id}` : "";
 	url += category_id ? `&category_id=${category_id}` : "";
-	// url += sort ? `&order=${sort.id}` : "";
-	// url += order ? `&asc=${order.id}` : "";
+	url += sort ? `&order=${sort.id}` : "";
+	url += order ? `&asc=${order.id}` : "";
 
 	return url;
 };
@@ -22,7 +22,10 @@ export const getProducts = (query) => {
 export const getProductsSortBy = () => {
 	return new Promise((resolve, reject) => {
 		resolve({
-			data: [{ id: "name", name: "Name" }],
+			data: [
+				{ id: "name", name: "Name" },
+				{ id: "price", name: "Price" },
+			],
 		});
 	});
 };

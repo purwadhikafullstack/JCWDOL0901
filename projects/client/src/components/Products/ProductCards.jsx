@@ -12,18 +12,18 @@ const ProductCards = ({ page, itemPerPage, setMaxPage, filter, sort, order }) =>
 	const [products, setProducts] = React.useState([]);
 
 	React.useEffect(() => {
-		const query = generateUrlQuery(page, itemPerPage, branch_id, category_id, filter);
+		const query = generateUrlQuery(page, itemPerPage, branch_id, category_id, filter, sort, order);
 		getProducts(query)
 			.then((result) => {
 				setProducts(result.data.rows);
 				setMaxPage(Math.ceil(result.data.count / itemPerPage));
 			})
 			.catch((error) => setProducts([{ name: "Server Error!", image: "" }]));
-	}, [page, itemPerPage, branch_id, setMaxPage, category_id, filter]);
+	}, [page, itemPerPage, branch_id, setMaxPage, category_id, filter, sort, order]);
 	return (
 		<div className="mx-4 my-7 grid grid-cols-2 sm:grid-cols-4 gap-4">
 			{products.map((product) => {
-				return <ProductCard product={product} />;
+				return <ProductCard product={product} key={product.name} />;
 			})}
 		</div>
 	);
