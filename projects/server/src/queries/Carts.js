@@ -15,11 +15,11 @@ const readCartQuery = async (query) => {
 			{
 				model: Inventories,
 				include: [
-					{ model: Branches, include: [{ model: Cities }], attributes: ["name"] },
+					{ model: Branches, include: [{ model: Cities }], attributes: ["name", "id"] },
 					{ model: Products },
 					{ model: Inventory_promotions, as: "promo", include: { model: Promotions }, attributes: ["value"] },
 				],
-				attributes: ["stock"],
+				attributes: ["id", "stock"],
 			},
 		],
 		attributes: ["quantity"],

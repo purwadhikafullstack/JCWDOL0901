@@ -21,8 +21,13 @@ module.exports = {
 					voucher_id: 3,
 					isUsed: false,
 				},
+				{
+					user_id: 1,
+					voucher_id: 4,
+					isUsed: false,
+				},
 			],
-			{}
+			{},
 		);
 	},
 

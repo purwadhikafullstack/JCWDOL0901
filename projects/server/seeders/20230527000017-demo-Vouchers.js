@@ -20,8 +20,7 @@ module.exports = {
 				},
 				{
 					name: "[Grand Opening] Diskon Belanja",
-					description:
-						"Diskon 25% hingga Rp 40.000, dengan minimal belanja Rp 100.000",
+					description: "Diskon 25% hingga Rp 40.000, dengan minimal belanja Rp 100.000",
 					value: 25,
 					start_at: "2023-05-22",
 					expired_at: "2023-05-23",
@@ -41,10 +40,22 @@ module.exports = {
 					promotion_id: 2,
 					min_spend: 0,
 					max_discount: null,
-					inventory_id: 3,
+					inventory_id: null,
+				},
+				{
+					name: "[Groseria Semarang] Diskon Belanja",
+					description: "Diskon Omeheart Softgels 600mg hingga Rp 10.000 tanpa minimal transaksi",
+					value: 20000,
+					start_at: "1971-01-01",
+					expired_at: null,
+					claim_limit: 1,
+					promotion_id: 2,
+					min_spend: 0,
+					max_discount: 10000,
+					inventory_id: 115,
 				},
 			],
-			{}
+			{},
 		);
 	},
 

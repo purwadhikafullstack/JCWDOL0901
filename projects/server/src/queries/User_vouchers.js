@@ -1,4 +1,32 @@
-const { User_vouchers } = require("../models/index.js");
+const { User_vouchers, Vouchers } = require("../models/index.js");
+const { Op } = require("sequelize");
+
+const readUserVouchersQuery = async (user_id) => {
+	return await User_vouchers.findAll({
+		where: { [Op.and]: { user_id, isUsed: false } },
+		include: [
+			{
+				model: Vouchers,
+				where: {
+					[Op.or]: [{ expired_at: { [Op.gte]: new Date() } }, { expired_at: null }],
+				},
+				attributes: [
+					"id",
+					"name",
+					"description",
+					"value",
+					"start_at",
+					"expired_at",
+					"min_spend",
+					"max_discount",
+					"inventory_id",
+					"branch_id",
+				],
+			},
+		],
+		attributes: ["id"],
+	});
+};
 
 const createUserVouchersAsReferralReward = async (registrant_id, referred_id, transaction) => {
 	return await User_vouchers.bulkCreate(
@@ -6,8 +34,8 @@ const createUserVouchersAsReferralReward = async (registrant_id, referred_id, tr
 			{ user_id: registrant_id, voucher_id: 1 },
 			{ user_id: referred_id, voucher_id: 1 },
 		],
-		{ transaction }
+		{ transaction },
 	);
 };
 
-module.exports = { createUserVouchersAsReferralReward };
+module.exports = { readUserVouchersQuery, createUserVouchersAsReferralReward };
