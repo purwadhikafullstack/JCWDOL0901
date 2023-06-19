@@ -9,7 +9,7 @@ const registerPayload = async (Transaction, payload) => {
 const createTransactionDetailsQuery = async (Transaction, payload, transaction) => {
 	const registeredData = await registerPayload(Transaction, payload);
 
-	return await Transaction_details.bulkCreate([...signedData], { transaction });
+	return await Transaction_details.bulkCreate([...registeredData], { transaction });
 };
 
 module.exports = { createTransactionDetailsQuery };
