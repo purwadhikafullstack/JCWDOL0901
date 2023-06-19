@@ -2,6 +2,7 @@ import React from "react";
 import BackButton from "../BackButton.jsx";
 import Addresses from "./SwitchAddress/Addresses.jsx";
 
+// TODO: redirect to edit address page
 const SwitchAddress = () => {
 	return (
 		<div className="flex flex-col bg-white min-h-screen">

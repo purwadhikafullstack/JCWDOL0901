@@ -6,7 +6,10 @@ const AddressOptions = ({ addresses, dispatch, selected }) => {
 		return (
 			<div key={index} className="flex flex-row items-center justify-between w-full px-10 border-b border-dotted">
 				<div className="flex flex-col py-3">
-					<span className="font-semibold text-lg text-left">{address.label}</span>
+					<span className="font-semibold text-lg text-left">
+						{address.label}{" "}
+						{address.default && <span className="text-green-300 font-light text-sm ml-2">(Default)</span>}
+					</span>
 					<span className="text-left mt-2 mb-1">{address.detail}</span>
 					<span className="text-left uppercase font-light">
 						{address?.City?.type} {address?.City?.name}, {address?.City?.Province?.name}
@@ -16,7 +19,7 @@ const AddressOptions = ({ addresses, dispatch, selected }) => {
 					type="radio"
 					name="select_address"
 					onClick={() => dispatch(setAddress(address))}
-					checked={selected === address.id || address.default}
+					checked={selected === address.id || (!selected && address.default)}
 				/>
 			</div>
 		);
