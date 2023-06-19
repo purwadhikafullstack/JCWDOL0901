@@ -14,13 +14,13 @@ export const getUserAddresses = () => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/address/list`, headers);
 };
 
-export const filterVoucherByBranch = (vouchers, globalState) => {
+const filterVoucherByBranch = (vouchers, globalState) => {
 	const branch_id = globalState?.checkout?.cart[0]?.Inventory?.Branch?.id;
 
 	return vouchers.filter((item) => item.Voucher.branch_id === branch_id || item.Voucher.branch_id === null);
 };
 
-export const filterVoucherByCart = (vouchers, globalState) => {
+const filterVoucherByCart = (vouchers, globalState) => {
 	const cart = globalState?.checkout?.cart;
 	const inventory_ids = [];
 
@@ -31,6 +31,13 @@ export const filterVoucherByCart = (vouchers, globalState) => {
 
 		return inventory_id === null || inventory_ids.includes(inventory_id);
 	});
+};
+
+export const filterVoucherByBranchAndCart = (vouchers, globalState) => {
+	const cartFilteredVouchers = filterVoucherByCart(vouchers, globalState);
+	const branchFilteredVouchers = filterVoucherByBranch(cartFilteredVouchers, globalState);
+
+	return branchFilteredVouchers;
 };
 
 export const getUserVouchers = () => {
@@ -61,7 +68,7 @@ export const getMaxDiscount = (data) => {
 
 export const getMinSpend = (data) => {
 	if (data?.Voucher?.min_spend) {
-		return `With a minimum purchase of ${data?.Voucher?.min_spend}`;
+		return `With a minimum purchase of Rp ${data?.Voucher?.min_spend.toLocaleString("id")}`;
 	} else {
 		return `Without minimum purchase`;
 	}

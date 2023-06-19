@@ -1,16 +1,22 @@
 import React from "react";
-import { getUserVouchers, filterVoucherByBranch, filterVoucherByCart } from "../handlers/checkoutHandler";
+import {
+	getUserVouchers,
+	filterVoucherByBranch,
+	filterVoucherByCart,
+	filterVoucherByBranchAndCart,
+} from "../handlers/checkoutHandler";
 import VoucherOptions from "./VoucherOptions";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Vouchers = () => {
 	const [vouchers, setVouchers] = React.useState([]);
 	const globalState = useSelector((state) => state);
+	const dispatch = useDispatch();
+
 	React.useEffect(() => {
 		getUserVouchers()
 			.then((result) => {
-				let filteredVouchers = filterVoucherByBranch(result.data, globalState);
-				filteredVouchers = filterVoucherByCart(filteredVouchers, globalState);
+				let filteredVouchers = filterVoucherByBranchAndCart(result.data, globalState);
 				setVouchers(filteredVouchers);
 			})
 			.catch((error) => {
@@ -18,7 +24,7 @@ const Vouchers = () => {
 			});
 	}, []);
 
-	return vouchers && <VoucherOptions vouchers={vouchers} />;
+	return vouchers && <VoucherOptions vouchers={vouchers} dispatch={dispatch} />;
 };
 
 export default Vouchers;

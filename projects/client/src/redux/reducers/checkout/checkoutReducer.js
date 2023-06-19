@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { initializeSummary } from "./helpers/checkout";
+import { getSummaryAfterVoucher, initializeSummary } from "./helpers/checkout";
 
 const setAddress = (state, action) => {
 	const { id, label, detail, City } = action.payload;
@@ -7,14 +7,17 @@ const setAddress = (state, action) => {
 };
 
 const initializeCart = (state, action) => {
-	const summary = initializeSummary(action.payload);
+	const summary = state.summary.hasLoaded ? state.summary : initializeSummary(action.payload);
 
 	return { ...state, cart: [...action.payload], summary };
 };
 
-const setVoucher = (state, action) => {
-	const { id, value, type } = action.payload;
-	return { ...state, voucher: { id, value, type } };
+const applyVoucher = (state, action) => {
+	const { id, name, description, value, max_discount } = action.payload?.Voucher;
+
+	const summary = getSummaryAfterVoucher(state.summary, action.payload);
+
+	return { ...state, voucher: { id, name, value, max_discount, description }, summary };
 };
 
 export const checkout = createSlice({
@@ -37,15 +40,20 @@ export const checkout = createSlice({
 			},
 		},
 		summary: {
+			hasLoaded: false,
 			subtotal: 0,
 			logistic: 0,
 			discount: 0,
 			total: 0,
+			raw: {
+				subtotal: 0,
+				logistic: 0,
+			},
 		},
 	},
 	reducers: {
 		setAddress,
 		initializeCart,
-		setVoucher,
+		applyVoucher,
 	},
 });

@@ -1,5 +1,7 @@
 import React from "react";
 import { getMaxDiscount, getMinSpend } from "../handlers/checkoutHandler";
+import { applyVoucher } from "../../../redux/reducers/checkout/checkoutAction";
+import { useSelector } from "react-redux";
 
 const Period = ({ data }) => {
 	return (
@@ -22,10 +24,16 @@ const Spending = ({ data }) => {
 	);
 };
 
-const VoucherOptions = ({ vouchers }) => {
+const VoucherOptions = ({ vouchers, dispatch }) => {
+	const summary = useSelector((state) => state.checkout.summary);
 	return vouchers.map((data, index) => {
+		const disabled = data?.Voucher?.min_spend > summary.subtotal;
 		return (
-			<div key={index} className="flex flex-row items-center justify-between w-full px-6 border-b border-dotted">
+			<div
+				key={index}
+				className="flex flex-row items-center justify-between w-full px-6 border-b border-dotted"
+				onClick={() => dispatch(applyVoucher(data))}
+			>
 				<div className="flex flex-col py-3">
 					<span className="font-semibold text-lg text-left">{data.Voucher.name}</span>
 					<span className="text-left mt-2 mb-1">{data.Voucher.description}</span>
@@ -34,7 +42,7 @@ const VoucherOptions = ({ vouchers }) => {
 						<Spending data={data} />
 					</span>
 				</div>
-				<input type="radio" name="select_voucher" />
+				<input type="radio" name="select_voucher" disabled={disabled} />
 			</div>
 		);
 	});
