@@ -14,6 +14,7 @@ const {
 	productRoute,
 	adminPromoRoute,
 	adminInventoryRoute,
+	profileRoute,
 } = require("./routers/index.js");
 const { log } = require("console");
 
@@ -34,6 +35,8 @@ midnightTask.start();
 
 // ===========================
 // NOTE : Add your routes here
+
+app.use("/api/profile", profileRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/branch", branchRoute);
 app.use("/api/category", categoryRoute);

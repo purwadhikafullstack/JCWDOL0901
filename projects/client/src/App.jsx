@@ -11,6 +11,7 @@ import AdminLoginPage from "./pages/Login/AdminLoginPage";
 import DashboardPage from "./pages/Dashboard/DashboardPage";
 import CreateCategoryPage from "./pages/CreateCategory/CreateCategoryPage";
 import UserLoginPage from "./pages/UserLogin/UserLoginPage";
+import UserAccountSettingPage from "./pages/UserAccountSetting/UserAccountSettingPage";
 import ManageCategory from "./pages/ManageCategory/ManageCategory";
 import ManageStock from "./pages/ManageStock/ManageStock";
 import UpdateCategoryPage from "./pages/UpdateCategory/UpdateCategoryPage";
@@ -33,6 +34,7 @@ function App() {
 				<Route path="/account/change-password" element={<ChangePasswordPage />} />
 				<Route path="/products/" element={<ProductPage />} />
 				<Route path="/product/detail/:inventory_id" element={<ProductDetail />} />
+				<Route path="/user/profile-update" element={<UserAccountSettingPage />} />
 
 				{/* //Admin Auth Page */}
 				<Route path="/admin/promo" element={<AdminAuthGuard component={<ProductPromotion />} />} />

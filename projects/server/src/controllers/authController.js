@@ -3,7 +3,7 @@ const {
 	startFindAdmins,
 	startAdminRegistration,
 	startVerification,
-	startLoginAuthentication,
+	startAdminLoginAuthentication,
 	startUserLoginAuthentication,
 	startUpdatePassword,
 } = require("../services/authService");
