@@ -2,6 +2,7 @@ import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 const MobileSlides = ({ categories }) => {
+
 	return (
 		<Splide
 			options={{
@@ -58,6 +59,7 @@ const DesktopSlides = ({ categories }) => {
 		</Splide>
 	);
 };
+
 
 const SliderSlides = ({ categories }) => {
 	return (

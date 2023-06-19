@@ -14,6 +14,7 @@ const {
 	productRoute,
 	adminPromoRoute,
 	adminInventoryRoute,
+	profileRoute,
 } = require("./routers/index.js");
 
 const PORT = process.env.PORT || 8000;
@@ -32,6 +33,7 @@ app.use(express.json());
 // ===========================
 // NOTE : Add your routes here
 
+app.use("/api/profile", profileRoute)
 app.use("/api/auth", authRoute);
 app.use("/api/branch", branchRoute);
 app.use("/api/category", categoryRoute);

@@ -3,24 +3,24 @@ const { forbiddenErrorHandler } = require("../errors/serviceError.js");
 const { verifyJWToken } = require("../utils/jsonwebtoken.js");
 
 const getReferrerId = async (request, response, next) => {
-	const referrer = await Users.findOne({
-		where: { referral_code: request.body.reference },
-	});
+  const referrer = await Users.findOne({
+    where: { referral_code: request.body.reference },
+  });
 
-	request.body.referrer = null || referrer?.id;
+  request.body.referrer = null || referrer?.id;
 
-	delete request.body.reference;
+  delete request.body.reference;
 
-	next();
+  next();
 };
 
 const isSuperAdmin = async (request, response, next) => {
-	try {
-		if (!request.adminData.super) throw error;
-		next();
-	} catch (error) {
-		response.status(403).send("Not a superadmin!");
-	}
+  try {
+    if (!request.adminData.super) throw error;
+    next();
+  } catch (error) {
+    response.status(403).send("Not a superadmin!");
+  }
 };
 
 const isAdmin = async (request, response, next) => {
