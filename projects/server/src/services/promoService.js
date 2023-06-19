@@ -15,7 +15,6 @@ module.exports = {
 
 				return resolve(Inventory_promotion);
 			} catch (error) {
-				console.log(error);
 				return reject(await startFindErrorHandler(error));
 			}
 		});
