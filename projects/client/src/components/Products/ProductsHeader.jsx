@@ -14,7 +14,7 @@ const ProductsHeader = ({}) => {
 				<DesktopNavBar />
 				<div className="flex flex-row items-center">
 					<div className="pr-5">
-						<BackButton url={-1} color="text-gray-400 sm:text-green-100 text-3xl" />
+						<BackButton url={"/"} color="text-gray-400 sm:text-green-100 text-3xl" />
 					</div>
 					<SearchBar />
 					<button className="flex-1 flex items-center px-2 py-2 ml-6 text-base font-medium hover:bg-green-100/20 rounded-md">
