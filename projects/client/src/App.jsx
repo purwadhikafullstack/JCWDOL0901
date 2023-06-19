@@ -32,7 +32,7 @@ function App() {
 				<Route path="/admin/login" element={<AdminLoginPage />} />
 				<Route path="/account/change-password" element={<ChangePasswordPage />} />
 				<Route path="/products/" element={<ProductPage />} />
-				<Route path="/detail/:inventory_id" element={<ProductDetail />} />
+				<Route path="/product/detail/:inventory_id" element={<ProductDetail />} />
 
 				{/* //Admin Auth Page */}
 				<Route path="/admin/promo" element={<AdminAuthGuard component={<ProductPromotion />} />} />

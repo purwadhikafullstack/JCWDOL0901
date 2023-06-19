@@ -15,7 +15,6 @@ export const generateUrlQuery = (page, itemPerPage, branch_id, category_id, filt
 };
 
 export const getProducts = (query) => {
-	console.log(query);
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/product/list${query}`);
 };
 
@@ -39,4 +38,40 @@ export const getProductsOrder = () => {
 			],
 		});
 	});
+};
+
+const getFinalPrice = (original, promoDetail) => {
+	if (promoDetail?.Promotion?.id === 2) {
+		console.log(original - promoDetail?.value);
+		return original - promoDetail?.value > 0 ? original - promoDetail?.value : 0;
+	} else if (promoDetail?.Promotion?.id === 3) {
+		return original - (promoDetail?.value / 100) * original;
+	}
+
+	return original;
+};
+
+const getPromo = (promoDetail) => {
+	let promo;
+	if (promoDetail?.Promotion?.id === 2) {
+		promo = { value: `Save Rp ${promoDetail?.value.toLocaleString("id")}`, type: promoDetail?.Promotion?.name };
+	} else if (promoDetail?.Promotion?.id === 3) {
+		promo = { value: `${promoDetail?.value}% off`, type: promoDetail?.Promotion?.name };
+	} else if (promoDetail?.Promotion?.id === 4) {
+		promo = { value: `Buy 1 Get 1!` };
+	}
+
+	return promo;
+};
+
+export const determinePrice = (product, setPrice) => {
+	const promoDetail = product?.Inventories[0]?.promo;
+
+	if (!promoDetail?.value) setPrice((previousValue) => ({ ...previousValue, original, final: original }));
+
+	const original = promoDetail?.Promotion?.id === 4 ? null : product.price;
+	const final = getFinalPrice(product.price, promoDetail);
+	const promo = getPromo(promoDetail);
+
+	setPrice({ original, final, promo });
 };

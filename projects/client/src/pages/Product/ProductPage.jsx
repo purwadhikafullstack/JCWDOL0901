@@ -33,13 +33,10 @@ const ProductPage = () => {
 	const [order, setOrder] = useState("");
 	const itemPerPage = window.innerWidth > 640 ? 12 : 4;
 
-	console.log(sort, order);
-
 	const dispatch = useDispatch();
 	const user = useSelector((state) => state.user);
 
 	React.useEffect(() => {
-		console.log(!user.branch.name);
 		if (!user.branch.name) {
 			promptUserPermissionForLocation()
 				.then((result) => {

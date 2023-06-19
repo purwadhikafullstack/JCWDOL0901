@@ -53,7 +53,7 @@ const readProductsQuery = async (params) => {
 					{
 						model: Inventory_promotions,
 						as: "promo",
-						include: [{ model: Promotions, attributes: ["name"] }],
+						include: [{ model: Promotions }],
 					},
 				],
 				attributes: ["id", "stock"],
