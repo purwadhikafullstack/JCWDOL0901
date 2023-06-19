@@ -7,6 +7,13 @@ export const getDefaultAddress = () => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/address/default`, headers);
 };
 
+export const getUserAddresses = () => {
+	const token = localStorage.getItem("token");
+	const headers = { headers: { Authorization: `Bearer ${token}` } };
+
+	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/address/list`, headers);
+};
+
 export const getUserCart = () => {
 	const token = localStorage.getItem("token");
 	const headers = { headers: { Authorization: `Bearer ${token}` } };
