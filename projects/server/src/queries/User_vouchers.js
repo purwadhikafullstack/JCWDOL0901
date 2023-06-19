@@ -1,4 +1,4 @@
-const { User_vouchers, Vouchers } = require("../models/index.js");
+const { User_vouchers, Vouchers, Promotions } = require("../models/index.js");
 const { Op } = require("sequelize");
 
 const readUserVouchersQuery = async (user_id) => {
@@ -22,6 +22,7 @@ const readUserVouchersQuery = async (user_id) => {
 					"inventory_id",
 					"branch_id",
 				],
+				include: [{ model: Promotions }],
 			},
 		],
 		attributes: ["id"],
