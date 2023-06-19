@@ -1,15 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const setSuper = (state, action) => {
-	return { ...state, super: action.payload };
+const setAdminLogin = (state, action) => {
+	const { hasLogged, superAdmin } = action.payload || null;
+	return { hasLogged, superAdmin };
 };
 
 export const admin = createSlice({
 	name: "admin",
 	initialState: {
-		super: true,
+		hasLogged: false,
+		superAdmin: false,
 	},
 	reducers: {
-		setSuper,
+		setAdminLogin,
 	},
 });

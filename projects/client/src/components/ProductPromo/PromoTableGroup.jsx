@@ -1,21 +1,11 @@
 import React from "react";
-import PromoTable from "./PromoTable.jsx";
+import PromoTable from "./PromoTable/PromoTable.jsx";
 import Pagination from "../Pagination.jsx";
-import SearchSort from "./SearchSort.jsx";
-import SearchFilter from "./SearchFilter.jsx";
-import CreateButton from "./CreateButton.jsx";
-import ResetButton from "./ResetButton.jsx";
-
-const sortDefault = { id: "start_at", name: "Start Date" };
-const orderDefault = { id: "0", name: "Descending" };
-
-const resetSetting = (setFilter, setSort, setOrder) => {
-	setFilter("");
-	setSort(sortDefault);
-	setOrder(orderDefault);
-};
+import SearchConfiguration from "./SearchConfiguration.jsx";
+import { orderDefault, sortDefault } from "./handlers/productPromoHandler.js";
 
 const PromoTableGroup = () => {
+	const [name, setName] = React.useState("");
 	const [filter, setFilter] = React.useState("");
 	const [sort, setSort] = React.useState(sortDefault);
 	const [order, setOrder] = React.useState(orderDefault);
@@ -23,17 +13,26 @@ const PromoTableGroup = () => {
 	const [maxPage, setMaxPage] = React.useState(1);
 
 	return (
-		<div className="flex flex-col justify-start mt-12 px-4 h-full">
-			<div className="flex flex-row w-full justify-between mt-2 mb-4 p-4 rounded-xl z-50">
-				<div className="flex flex-col h-full w-[40%]">
-					<SearchFilter filter={filter} setFilter={setFilter} />
-					<CreateButton />
-				</div>
-				<SearchSort sort={sort} setSort={setSort} order={order} setOrder={setOrder} />
-				<ResetButton onClick={() => resetSetting(setFilter, setSort, setOrder)} />
-			</div>
-			<PromoTable sort={sort} filter={filter} order={order} page={page} setMaxPage={setMaxPage} />
-			<div className="mx-auto mt-auto mb-4">
+		<div className="flex flex-col justify-start mt-11 px-4 h-full">
+			<SearchConfiguration
+				setName={setName}
+				filter={filter}
+				setFilter={setFilter}
+				order={order}
+				setOrder={setOrder}
+				sort={sort}
+				setSort={setSort}
+				setPage={setPage}
+			/>
+			<PromoTable
+				name={name}
+				sort={sort}
+				filter={filter}
+				order={order}
+				page={page}
+				setMaxPage={setMaxPage}
+			/>
+			<div className="mx-auto mt-16">
 				<Pagination page={page} setPage={setPage} maxPage={maxPage} />
 			</div>
 		</div>

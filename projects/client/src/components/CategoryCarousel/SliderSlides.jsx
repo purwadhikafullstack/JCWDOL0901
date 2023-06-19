@@ -1,8 +1,8 @@
 import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { useSelector } from "react-redux";
 
 const MobileSlides = ({ categories }) => {
+
 	return (
 		<Splide
 			options={{
@@ -18,7 +18,7 @@ const MobileSlides = ({ categories }) => {
 						<div className="flex flex-col items-center mx-2">
 							<img
 								className="w-[75px] cursor-pointer"
-								src={category.image}
+								src={process.env.REACT_APP_IMAGE_BASE_URL + category.image}
 								alt={category.name}
 								loading="lazy"
 							/>
@@ -47,7 +47,7 @@ const DesktopSlides = ({ categories }) => {
 						<div className="flex flex-col items-center mx-2">
 							<img
 								className="w-[75px] cursor-pointer"
-								src={category.image}
+								src={process.env.REACT_APP_IMAGE_BASE_URL + category.image}
 								alt={category.name}
 								loading="lazy"
 							/>
@@ -59,6 +59,7 @@ const DesktopSlides = ({ categories }) => {
 		</Splide>
 	);
 };
+
 
 const SliderSlides = ({ categories }) => {
 	return (

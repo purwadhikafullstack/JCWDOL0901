@@ -1,9 +1,9 @@
-import React from "react";
-import { Listbox } from "@headlessui/react";
+import React, { Fragment } from "react";
+import { Listbox, Transition } from "@headlessui/react";
 
 const ToggleDropDown = ({ open, data }) => {
 	return (
-		<Listbox.Button className={`bg-white w-full border-2 border-green-200 py-2 rounded-lg mb-2`}>
+		<Listbox.Button className={`bg-white w-full border border-green-200 py-2 rounded-lg`}>
 			<div className="flex flex-row items-center justify-end max-w-full">
 				<div className="max-w-[70%] mx-auto font-semibold text-sm overflow-x-hidden ">
 					<div className="max-w-full whitespace-nowrap text-xs box-border">
@@ -34,7 +34,7 @@ const DataLists = ({ lists, setter }) => {
 	return lists.map((item, index) => {
 		return (
 			<Listbox.Option
-				className="border ml-2 py-2 px-4 mb-0.5 rounded-lg shadow whitespace-nowrap max-w-full bg-white"
+				className="border-b py-2 px-4 shadow whitespace-nowrap min-w-inherit max-w-full bg-white"
 				key={index}
 				value={item.id}
 				onClick={() => setter(item)}
@@ -55,9 +55,23 @@ const DropDownOptions = ({ setter, getter }) => {
 	}, []);
 
 	return (
-		<Listbox.Options className="absolute max-w-inherit max-h-20 overflow-y-scroll">
-			{lists && <DataLists lists={lists} setter={setter} />}
-		</Listbox.Options>
+		lists && (
+			<div className="relative">
+				<Transition
+					as={Fragment}
+					enter="transition-opacity ease-in-out duration-300"
+					enterFrom="opacity-0"
+					enterTo="opacity-100"
+					leave="transition ease-in duration-200"
+					leaveFrom="opacity-100"
+					leaveTo="opacity-0"
+				>
+					<Listbox.Options className="border absolute h-fit inset-0 max-h-44 min-w-full w-fit overflow-auto rounded-lg text-xs cursor-pointer">
+						<DataLists lists={lists} setter={setter} />
+					</Listbox.Options>
+				</Transition>
+			</div>
+		)
 	);
 };
 

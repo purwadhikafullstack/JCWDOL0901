@@ -10,8 +10,9 @@ export default function SideBarMobile({ children }) {
 
 	return (
 		<div className="relative top-0 pb-10">
+			<div className="w-80 bg-[#f4f4f4] overflow-hidden z-50 fixed inset-y-0 -translate-x-80"></div>
 			<div
-				className={`z-50 flex w-64 flex-col fixed inset-y-0 overflow-hidden transition duration-500 ${
+				className={`z-40 flex w-64 flex-col fixed inset-y-0 overflow-hidden transition duration-500  ${
 					sidebarOpen ? "" : " -translate-x-72"
 				}`}
 			>

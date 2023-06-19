@@ -4,10 +4,11 @@ const CreateButton = () => {
 	const navigate = useNavigate();
 	return (
 		<button
-			className="rounded-lg font-bold h-fit text-green-500 underline px-2 mt-auto mb-1"
+			className="flex flex flex-row rounded-lg border border-2 border-green-200 font-bold h-fit bg-white text-green-200 px-4 py-2 mb-2 mr-4 mt-auto ml-auto z-20"
 			onClick={() => navigate("create")}
 		>
-			Create Promotion
+			<div>Create Promotion </div>
+			<span class="material-symbols-rounded ml-1">add</span>
 		</button>
 	);
 };

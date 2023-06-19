@@ -4,7 +4,6 @@ import BackButton from "../../components/BackButton.jsx";
 import CompanyLogo from "../../components/CompanyLogo.jsx";
 import PageTitle from "../../components/PageTitle.jsx";
 import CreateProductPromoForm from "../../components/CreateProductPromo/CreateProductPromoForm.jsx";
-import SideBar from "../../components/SideBar/SideBar.jsx";
 
 const Img = ({ className }) => {
 	return <img src="/assets/images/create_promotion_illustration.png" className={className} />;
@@ -39,16 +38,16 @@ const ResponsiveLogo = () => {
 	);
 };
 const CreatePromotion = () => {
-	return (
-		<div className="flex flex-col mx-auto flex-1 min-w-[480px] overflow-hidden px-8 w-full bg-white sm:bg-gray-100 sm:flex-row sm:justify-center sm:py-20 sm:max-w-full min-h-screen sm:drop-shadow-2xl ">
-			<CircularBackgroundDecoration />
-			<div className="z-10 relative sm:flex sm:flex-col sm:bg-green-400 sm:h-inherit sm:rounded-xl sm:p-6">
-				<BackButton url={-1} color="text-green-100" />
-				<Illustration />
-			</div>
-			<CreateProductPromoForm />
-		</div>
-	);
+    return (
+        <div className="flex flex-col mx-auto flex-1 min-w-[480px] overflow-hidden px-8 w-full bg-white sm:bg-gray-100 sm:flex-row sm:justify-center sm:py-20 sm:max-w-full min-h-screen sm:drop-shadow-2xl ">
+            <CircularBackgroundDecoration />
+            <div className="z-10 relative sm:flex sm:flex-col sm:bg-green-400 sm:h-inherit sm:rounded-xl sm:p-6">
+                <BackButton url={-1} color="text-green-100" />
+                <Illustration />
+            </div>
+            <CreateProductPromoForm />
+        </div>
+    );
 };
 
 export default CreatePromotion;

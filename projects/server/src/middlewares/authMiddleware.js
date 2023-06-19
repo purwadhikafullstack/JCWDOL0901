@@ -24,55 +24,64 @@ const isSuperAdmin = async (request, response, next) => {
 };
 
 const isAdmin = async (request, response, next) => {
-  try {
-    if (!request.headers.authorization) throw "Missing token!";
-    const token = await verifyJWToken(
-      request.headers.authorization,
-      process.env.JWT_ADMIN_SECRET_KEY
-    );
+	try {
+		if (!request.headers.authorization) throw "Missing token!";
+		const token = await verifyJWToken(
+			request.headers.authorization,
+			process.env.JWT_ADMIN_SECRET_KEY
+		);
+		request.adminData = token;
 
-    request.adminData = token;
-
-    next();
-  } catch (error) {
-    response.status(403).send({ message: error });
-  }
+		next();
+	} catch (error) {
+		response.status(403).send({ message: error });
+	}
 };
 
 const isUser = async (request, response, next) => {
-  try {
-    if (!request.headers.authorization) throw "Missing token!";
-    const token = await verifyJWToken(
-      request.headers.authorization,
-      process.env.JWT_USER_SECRET_KEY
-    );
+	try {
+		if (!request.headers.authorization) throw "Missing token!";
+		const token = await verifyJWToken(
+			request.headers.authorization,
+			process.env.JWT_USER_SECRET_KEY
+		);
+		request.userData = token;
 
-    request.userData = token;
+		next();
+	} catch (error) {
+		response.status(403).send({ message: error });
+	}
+};
 
-    next();
-  } catch (error) {
-    response.status(403).send({ message: error });
-  }
+const isVerifiedUser = async (request, response, next) => {
+	try {
+		const verified = request.userData.verified;
+		if (!verified) throw "User not verified!";
+		next();
+	} catch (error) {
+		response.status(403).send({ message: error });
+	}
 };
 
 const getBranchId = async (request, response, next) => {
-  try {
-    if (request.adminData.super) {
-      request.branchData = { id: 0 };
-    } else if (request.adminData.id) {
-      const branchData = await Branches.findOne({ where: { admin_id: request.adminData.id } });
-      request.branchData = branchData;
-    }
-    next();
-  } catch (error) {
-    response.status(500).send("Internal Server Error");
-  }
+	try {
+		if (request.adminData.super) {
+			request.branchData = { id: 0 };
+		} else if (request.adminData.id) {
+			const branchData = await Branches.findOne({ where: { admin_id: request.adminData.id } });
+			request.branchData = branchData;
+		}
+		next();
+	} catch (error) {
+		response.status(500).send("Internal Server Error");
+	}
 };
 
 module.exports = {
-  getReferrerId,
-  isSuperAdmin,
-  isAdmin,
-  getBranchId,
-  isUser,
+	getReferrerId,
+	isSuperAdmin,
+	isAdmin,
+	getBranchId,
+	isUser,
+	isVerifiedUser,
 };

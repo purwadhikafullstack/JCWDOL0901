@@ -1,3 +1,4 @@
+const { log } = require("console");
 const fs = require("fs");
 
 const writeLogFile = (error, source) => {
@@ -35,7 +36,24 @@ const startRegistrationErrorHandler = async (error) => {
   return {
     code: 500,
     message: "Internal Server Error, please contact us!",
-  };
+  }
+};
+
+const startUpdatePasswordErrorHandler = async error => {
+	await writeLogFile(error, "startUpdatePasswordErrorHandler");
+
+	if (error === "PASS_NOT_VERIFIED") {
+		return { code: 400, message: `Your old password is wrong!` };
+	}
+
+	if (error === "PASS_CANNOT_SAME") {
+		return { code: 400, message: `Your new password is the same with your old password!` };
+	}
+
+	return {
+		code: 500,
+		message: "Internal Server Error, please contact us!",
+	};
 };
 
 const forbiddenErrorHandler = async () => {
@@ -86,11 +104,34 @@ const startUserAuthenticationErrorHandler = async (error) => {
   return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
+const startCreateHandler = async error => {
+	await writeLogFile(error, "startCreateHandler");
+
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
+
+const startDeleteteHandler = async error => {
+	await writeLogFile(error, "startDeleteteHandler");
+	if (error.name === "SequelizeForeignKeyConstraintError") {
+		return { code: 500, message: "ER_ROW_IS_REFERENCED_2" };
+	}
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
+const startUpdateErrorHandler = async error => {
+	await writeLogFile(error, "startUpdateErrorHandler");
+
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
+
 module.exports = {
-  startRegistrationErrorHandler,
-  startFindErrorHandler,
-  forbiddenErrorHandler,
-  startVerificationErrorHandler,
+	startRegistrationErrorHandler,
+	startFindErrorHandler,
+	forbiddenErrorHandler,
+	startVerificationErrorHandler,
+	startCreateHandler,
+	startDeleteteHandler,
+	startUpdateErrorHandler,
+	startUpdatePasswordErrorHandler,
   startProfileUpdateErrorHandler,
   startGetUserProfileErrorHandler,
   startAdminAuthenticationErrorHandler,

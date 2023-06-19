@@ -1,11 +1,13 @@
 const {
-  startUserRegistration,
-  startFindAdmins,
-  startAdminRegistration,
-  startVerification,
+	startUserRegistration,
+	startFindAdmins,
+	startAdminRegistration,
+	startVerification,
   startAdminLoginAuthentication,
-  startUserLoginAuthentication,
+	startUserLoginAuthentication,
+	startUpdatePassword,
 } = require("../services/authService");
+const { verifyJWToken } = require("../utils/jsonwebtoken");
 
 const registerUser = async (request, response) => {
   await startUserRegistration(request.body)
@@ -50,13 +52,13 @@ const loginAdmin = async (request, response) => {
 };
 
 const loginUser = async (request, response) => {
-  await startUserLoginAuthentication(request.body, "Users")
-    .then((result) => {
-      response.status(200).send(result);
-    })
-    .catch((error) => {
-      response.status(error.code).send(error.message);
-    });
+	await startUserLoginAuthentication(request.body, "Users")
+		.then(result => {
+			response.status(200).send(result);
+		})
+		.catch(error => {
+			response.status(error.code).send(error.message);
+		});
 };
 
 
@@ -70,11 +72,36 @@ const verifyUser = async (request, response) => {
     });
 };
 
+const isSuper = async (request, response) => {
+	try {
+		if (!request.headers.authorization) throw "Missing token!";
+		const token = await verifyJWToken(
+			request.headers.authorization,
+			process.env.JWT_ADMIN_SECRET_KEY
+		);
+		response.status(200).send(token);
+	} catch (error) {
+		response.status(403).send({ message: error });
+	}
+};
+
+const updatePassword = async (request, response) => {
+	await startUpdatePassword(request.userData.id, request.body)
+		.then(result => {
+			response.status(200).send(result);
+		})
+		.catch(error => {
+			response.status(error.code).send(error.message);
+		});
+};
+
 module.exports = {
-  registerUser,
-  getAdmins,
-  registerAdmin,
-  verifyUser,
-  loginAdmin,
-  loginUser,
+	registerUser,
+	getAdmins,
+	registerAdmin,
+	verifyUser,
+	loginAdmin,
+	loginUser,
+	isSuper,
+	updatePassword,
 };

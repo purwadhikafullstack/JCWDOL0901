@@ -18,9 +18,14 @@ module.exports = (sequelize, DataTypes) => {
 	}
 	Stock_changes.init(
 		{
+			id: {
+				allowNull: false,
+				type: DataTypes.INTEGER,
+				primaryKey: true,
+				autoIncrement: true,
+			},
 			inventory_id: {
 				allowNull: false,
-
 				type: DataTypes.INTEGER,
 			},
 			stock_before: {
