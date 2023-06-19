@@ -17,11 +17,11 @@ const ProductsHeader = ({ setFilter, order, setOrder, sort, setSort }) => {
 				<DesktopNavBar />
 				<div className="flex flex-row items-center">
 					<div className="pr-5">
-						<BackButton url={"/"} color="text-gray-400 sm:text-green-100 text-3xl" />
+						<BackButton url={"/"} color="text-gray-400 sm:text-green-100 text-3xl hover:text-green-300" />
 					</div>
 					<SearchBar setFilter={setFilter} />
 					<button
-						className="flex-1 flex items-center px-2 py-2 ml-6 text-base font-medium hover:bg-gray-100 sm:hover:bg-green-100/20 rounded-md"
+						className="flex-1 flex items-center px-2 py-2 ml-6 text-base font-medium hover:bg-gray-100 sm:hover:bg-green-100/20 rounded-md group"
 						onClick={() => setOpen(true)}
 					>
 						<AdjustmentsIcon
