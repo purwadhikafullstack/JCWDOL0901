@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { initializeSummary } from "./helpers/checkout";
 
 const setAddress = (state, action) => {
 	const { id, label, detail, City } = action.payload;
@@ -6,7 +7,9 @@ const setAddress = (state, action) => {
 };
 
 const initializeCart = (state, action) => {
-	return { ...state, cart: [...action.payload] };
+	const summary = initializeSummary(action.payload);
+
+	return { ...state, cart: [...action.payload], summary };
 };
 
 const setVoucher = (state, action) => {
