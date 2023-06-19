@@ -11,10 +11,10 @@ const { verifyJWToken } = require("../utils/jsonwebtoken");
 
 const registerUser = async (request, response) => {
 	await startUserRegistration(request.body)
-		.then(result => {
+		.then((result) => {
 			response.status(200).send(result);
 		})
-		.catch(error => {
+		.catch((error) => {
 			response.status(error.code).send(error.message);
 		});
 };
@@ -23,50 +23,50 @@ const getAdmins = async (request, response) => {
 	const { filter, order, page } = request.query;
 
 	await startFindAdmins(filter, order, page)
-		.then(result => {
+		.then((result) => {
 			response.status(200).send(result);
 		})
-		.catch(error => {
+		.catch((error) => {
 			response.status(error.code).send(error.message);
 		});
 };
 
 const registerAdmin = async (request, response) => {
 	await startAdminRegistration(request.body)
-		.then(result => {
+		.then((result) => {
 			response.status(200).send(result);
 		})
-		.catch(error => {
+		.catch((error) => {
 			response.status(error.code).send(error.message);
 		});
 };
 
 const loginAdmin = async (request, response) => {
 	await startLoginAuthentication(request.body, "Admins")
-		.then(result => {
+		.then((result) => {
 			response.status(200).send(result);
 		})
-		.catch(error => {
+		.catch((error) => {
 			response.status(error.code).send(error.message);
 		});
 };
 
 const loginUser = async (request, response) => {
 	await startUserLoginAuthentication(request.body, "Users")
-		.then(result => {
+		.then((result) => {
 			response.status(200).send(result);
 		})
-		.catch(error => {
+		.catch((error) => {
 			response.status(error.code).send(error.message);
 		});
 };
 
 const verifyUser = async (request, response) => {
 	await startVerification(request.params.token)
-		.then(result => {
+		.then((result) => {
 			response.status(200).send(result);
 		})
-		.catch(error => {
+		.catch((error) => {
 			response.status(error.code).send(error.message);
 		});
 };
@@ -74,10 +74,7 @@ const verifyUser = async (request, response) => {
 const isSuper = async (request, response) => {
 	try {
 		if (!request.headers.authorization) throw "Missing token!";
-		const token = await verifyJWToken(
-			request.headers.authorization,
-			process.env.JWT_ADMIN_SECRET_KEY
-		);
+		const token = await verifyJWToken(request.headers.authorization, process.env.JWT_ADMIN_SECRET_KEY);
 		response.status(200).send(token);
 	} catch (error) {
 		response.status(403).send({ message: error });
@@ -86,10 +83,10 @@ const isSuper = async (request, response) => {
 
 const updatePassword = async (request, response) => {
 	await startUpdatePassword(request.userData.id, request.body)
-		.then(result => {
+		.then((result) => {
 			response.status(200).send(result);
 		})
-		.catch(error => {
+		.catch((error) => {
 			response.status(error.code).send(error.message);
 		});
 };

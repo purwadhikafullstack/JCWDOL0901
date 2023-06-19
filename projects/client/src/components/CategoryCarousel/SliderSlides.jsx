@@ -12,10 +12,6 @@ const MobileSlides = ({ categories }) => {
 	const parsed = queryString.parse(location.search);
 	const { category_id } = parsed;
 
-	React.useEffect(() => {
-		// refs.current[1].focus();
-	}, []);
-
 	return (
 		<Splide
 			options={{
