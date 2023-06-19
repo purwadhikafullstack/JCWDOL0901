@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getSummaryAfterVoucher, initializeSummary } from "./helpers/checkout";
+import { getSummaryAfterVoucher, initializeSummary, resetSummary } from "./helpers/checkout.js";
 
 const setAddress = (state, action) => {
 	const { id, label, detail, City } = action.payload;
@@ -18,6 +18,12 @@ const applyVoucher = (state, action) => {
 	const summary = getSummaryAfterVoucher(state.summary, action.payload);
 
 	return { ...state, voucher: { id, name, value, max_discount, description }, summary };
+};
+
+const removeVoucher = (state, action) => {
+	const summary = resetSummary(state.summary);
+
+	return { ...state, summary, voucher: null };
 };
 
 export const checkout = createSlice({
@@ -55,5 +61,6 @@ export const checkout = createSlice({
 		setAddress,
 		initializeCart,
 		applyVoucher,
+		removeVoucher,
 	},
 });

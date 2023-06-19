@@ -8,7 +8,7 @@ const VoucherBox = () => {
 	return (
 		<>
 			<MenuHeader Content={HeaderContent} />
-			{voucher.id ? (
+			{voucher?.id ? (
 				<div className="flex flex-row items-center justify-between w-full px-6 border-b border-dotted">
 					<div className="flex flex-col py-3">
 						<span className="font-semibold text-lg text-left">{voucher.name}</span>

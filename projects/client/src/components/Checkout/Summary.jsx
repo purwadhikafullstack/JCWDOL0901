@@ -42,7 +42,7 @@ const Summary = () => {
 
 	return (
 		summary && (
-			<div className="flex flex-col my-6 mt-8 ml-auto mr-6">
+			<div className="flex flex-col mb-2 mt-8 ml-auto mr-6">
 				<Subtotal summary={summary} />
 				<Logistic summary={summary} />
 				<Discount summary={summary} />

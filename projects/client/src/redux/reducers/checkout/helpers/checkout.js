@@ -38,8 +38,16 @@ export const initializeSummary = (cart) => {
 	return summary;
 };
 
-export const getSummaryAfterVoucherRemoval = (summaryState) => {
-	return;
+export const resetSummary = (summaryState) => {
+	const raw = summaryState.raw;
+
+	return {
+		...summaryState,
+		subtotal: raw.subtotal,
+		logistic: raw.logistic,
+		discount: 0,
+		total: raw.subtotal + raw.logistic,
+	};
 };
 
 export const getSummaryAfterVoucher = (summaryState, voucher) => {
