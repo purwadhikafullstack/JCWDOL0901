@@ -48,7 +48,7 @@ const initialState = {
 
 const setAddress = (state, action) => {
 	const { id, label, detail, City } = action.payload;
-	return { ...state, address: { id, label, detail, City } };
+	return { ...state, address: { id, label, detail, City }, logistic: { code: null } };
 };
 
 const setLogistic = (state, action) => {
@@ -62,7 +62,18 @@ const setLogistic = (state, action) => {
 };
 
 const initializeCart = (state, action) => {
-	const summary = state.summary?.hasLoaded ? state.summary : initializeSummary(action.payload);
+	const Voucher = { ...state.voucher };
+
+	let summary = initializeSummary(action.payload);
+
+	if (state.logistic?.cost) {
+		summary = getSummaryAfterLogistic(summary, state.logistic.cost);
+	}
+
+	if (Voucher.id) {
+		summary = getSummaryAfterVoucher(summary, { Voucher });
+	}
+
 	const branch = determineBranch(action.payload);
 
 	return { ...state, cart: [...action.payload], summary, branch };
@@ -82,7 +93,7 @@ const removeVoucher = (state, action) => {
 	return { ...state, summary, voucher: null };
 };
 
-const defaultCheckout = (state, action) => {
+const clearCheckout = (state, action) => {
 	return { ...initialState };
 };
 
@@ -95,6 +106,6 @@ export const checkout = createSlice({
 		initializeCart,
 		applyVoucher,
 		removeVoucher,
-		defaultCheckout,
+		clearCheckout,
 	},
 });
