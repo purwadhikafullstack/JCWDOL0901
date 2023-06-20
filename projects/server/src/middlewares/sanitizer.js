@@ -8,6 +8,8 @@ const {
 	getCategoryQueryOrder,
 	getInventoriesQueryFilter,
 	getInventoriesQueryOrder,
+	getProductQueryFilter,
+	getProductQueryOrder,
 	getRelatedProductsFilter,
 	getProductsRecommendationFilter,
 } = require("../helpers/queryHelper");
@@ -64,7 +66,7 @@ const getProductsRecommendationQuerySanitizer = async (request, response, next) 
 	const sanitizedQuery = {
 		filter: await getProductsRecommendationFilter(request.query),
 	};
-
+  
 	request.query = sanitizedQuery;
 
 	next();
@@ -76,7 +78,6 @@ const getRelatedProductsQuerySanitizer = async (request, response, next) => {
 	};
 
 	request.query = sanitizedQuery;
-
 	next();
 };
 
@@ -146,6 +147,14 @@ const postRajaOngkirCostBodySanitizer = async (request, response, next) => {
 
 	delete request.body;
 
+const getProductsSanitizer = async (request, response, next) => {
+	const sanitizedQuery = {
+		filter: await getProductQueryFilter(request.query),
+		order: await getProductQueryOrder(request.query),
+		page: request.query.page,
+		itemPerPage: request.query.itemPerPage,
+	};
+	request.query = sanitizedQuery;
 	next();
 };
 
@@ -161,4 +170,7 @@ module.exports = {
 	getProductsRecommendationQuerySanitizer,
 	postTransactionBodySanitizer,
 	postRajaOngkirCostBodySanitizer,
+	getProductsSanitizer,
+	getRelatedProductsQuerySanitizer,
+	getProductsRecommendationQuerySanitizer,
 };

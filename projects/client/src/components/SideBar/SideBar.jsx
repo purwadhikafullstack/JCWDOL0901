@@ -3,7 +3,6 @@ import { useState } from "react";
 import SideBarMenuButton from "./SideBarMenuButton";
 import SideBarContent from "./SideBarContent";
 import SideBarDesktop from "./SideBarDesktop";
-
 import navigation from "./config/navigationConfig";
 
 export default function SideBar({ children }) {

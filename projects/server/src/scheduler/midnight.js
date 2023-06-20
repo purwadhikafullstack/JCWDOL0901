@@ -13,7 +13,6 @@ const deleteExpiredPromotion = async () => {
 					},
 				},
 			);
-
 			return await resolve("deleteExpiredPromotion task succeeded");
 		} catch (error) {
 			return await reject("deleteExpiredPromotion task failed");

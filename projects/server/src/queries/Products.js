@@ -37,20 +37,33 @@ const readProductQuery = async (inventory_id) => {
 	});
 };
 
-const readProductsQuery = async (filter) => {
-	return await Products.findAll({
-		where: { ...filter?.Products },
+
+const readProductsQuery = async (params) => {
+
+	const offset = params?.page ? (params?.page - 1) * params?.itemPerPage : null;
+	const limit = params?.itemPerPage ? params?.itemPerPage : null;
+	const order = params?.order ? [...params?.order] : [];
+  
+	return await Products.findAndCountAll({
+		where: { ...params?.Products },
 		include: [
 			{
 				model: Inventories,
 				where: { ...filter?.Inventories },
 				include: [
 					{ model: Branches, attributes: ["name"] },
-					{ model: Inventory_promotions, as: "promo" },
+					{
+						model: Inventory_promotions,
+						as: "promo",
+						include: [{ model: Promotions }],
+					},
 				],
 				attributes: ["id", "stock"],
 			},
 		],
+		offset,
+		limit,
+		order,
 	});
 };
 

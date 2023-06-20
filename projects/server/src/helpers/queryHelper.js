@@ -77,6 +77,22 @@ const getCategoryQueryOrder = async (query) => {
 	return order;
 };
 
+const getProductQueryFilter = async (query) => {
+	const filter = {};
+	const productFilter = ["name", "category_id", "branch_id"];
+	await productFilter.forEach((key) => {
+		if (key === "name" && query[key]) filter[key] = { [Op.like]: "%" + query[key] + "%" };
+		else if (query[key]) filter[key] = query[key];
+	});
+	return filter;
+};
+
+const getProductQueryOrder = async (query) => {
+	const ascending = query.asc == 1 ? "ASC" : "DESC";
+	const order = query.order && query.asc ? [[query.order, ascending]] : [];
+	return order;
+};
+
 const getInventoryPromotionQueryOrder = async (query) => {
 	const order = { Inventory_promotions: [] };
 	const inventoryPromotionsOrder = ["start_at", "expired_at"];
@@ -139,6 +155,8 @@ module.exports = {
 	getCategoryQueryOrder,
 	getInventoriesQueryFilter,
 	getInventoriesQueryOrder,
+	getProductQueryFilter,
+	getProductQueryOrder,
 	getProductsRecommendationFilter,
 	getRelatedProductsFilter,
 };

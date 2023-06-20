@@ -2,11 +2,24 @@ const {
 	startFindProductsRecommendation,
 	startFindRelatedProducts,
 	startFindProductDetail,
+	startFindProducts,
 } = require("../services/productService.js");
 
 const getProductsRecommendation = async (request, response) => {
 	const { filter } = request.query;
 	await startFindProductsRecommendation(filter)
+		.then((result) => {
+			response.status(200).send(result);
+		})
+		.catch((error) => {
+			response.status(error.code).send(error.message);
+		});
+};
+
+const getProducts = async (request, response) => {
+	const { filter, order, page, itemPerPage } = request.query;
+	const { branch_id } = filter;
+	await startFindProducts(filter, order, branch_id, page, Number(itemPerPage))
 		.then((result) => {
 			response.status(200).send(result);
 		})
@@ -36,4 +49,5 @@ const getProductDetail = async (request, response) => {
 			response.status(error.code).send(error.message);
 		});
 };
-module.exports = { getProductsRecommendation, getRelatedProducts, getProductDetail };
+
+module.exports = { getProductsRecommendation, getRelatedProducts, getProductDetail, getProducts };

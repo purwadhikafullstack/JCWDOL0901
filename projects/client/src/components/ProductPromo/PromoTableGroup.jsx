@@ -1,7 +1,6 @@
 import React from "react";
 import PromoTable from "./PromoTable/PromoTable.jsx";
 import Pagination from "../Pagination.jsx";
-
 import SearchConfiguration from "./SearchConfiguration.jsx";
 import { orderDefault, sortDefault } from "./handlers/productPromoHandler.js";
 
