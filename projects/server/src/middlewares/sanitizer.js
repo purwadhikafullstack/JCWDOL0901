@@ -114,14 +114,15 @@ const getCategorySanitizer = async (request, response, next) => {
 
 const postTransactionBodySanitizer = async (request, response, next) => {
 	const payload = {
-		Transaction: await getTransactionPayload(request.body, request.userData),
-		Transaction_detail: await getTransactionDetailPayload(request.body),
-		Logistic: {
+		transaction: await getTransactionPayload(request.body, request.userData),
+		transaction_detail: await getTransactionDetailPayload(request.body),
+		logistic: {
 			code: request.body.logistic.code,
 			service: request.body.logistic.service,
-			cost: request.body.logistic.cost,
+			shipping_cost: request.body.logistic.cost,
 		},
-		Voucher: request.body.voucher.id,
+		voucher: { id: request.body.voucher.id },
+		user: { id: request.userData.id },
 	};
 
 	request.payload = payload;
