@@ -1,3 +1,4 @@
+const { request } = require("express");
 const {
 	getAdminQueryFilter,
 	getAdminQueryOrder,
@@ -7,7 +8,10 @@ const {
 	getCategoryQueryOrder,
 	getInventoriesQueryFilter,
 	getInventoriesQueryOrder,
+	getRelatedProductsFilter,
+	getProductsRecommendationFilter,
 } = require("../helpers/queryHelper");
+const { getTransactionPayload, getTransactionDetailPayload } = require("../helpers/bodyHelper");
 
 const getAdminsQuerySanitizer = async (request, response, next) => {
 	const sanitizedQuery = {
@@ -56,6 +60,26 @@ const getInventoriesQuerySanitizer = async (request, response, next) => {
 	next();
 };
 
+const getProductsRecommendationQuerySanitizer = async (request, response, next) => {
+	const sanitizedQuery = {
+		filter: await getProductsRecommendationFilter(request.query),
+	};
+
+	request.query = sanitizedQuery;
+
+	next();
+};
+
+const getRelatedProductsQuerySanitizer = async (request, response, next) => {
+	const sanitizedQuery = {
+		filter: await getRelatedProductsFilter(request.query),
+	};
+
+	request.query = sanitizedQuery;
+
+	next();
+};
+
 const postInventoryPromotionBodySanitizer = async (request, response, next) => {
 	const { promotion_id, value, start_at, expired_at, inventory_id } = request.body;
 	delete request.body;
@@ -88,6 +112,20 @@ const getCategorySanitizer = async (request, response, next) => {
 	next();
 };
 
+const postTransactionBodySanitizer = async (request, response, next) => {
+	const payload = {
+		Transaction: await getTransactionPayload(request.body, request.userData),
+		Transaction_detail: await getTransactionDetailPayload(request.body),
+		Logistic: true,
+	};
+
+	request.payload = payload;
+
+	delete request.body;
+
+	next();
+};
+
 module.exports = {
 	getInventoriesQuerySanitizer,
 	getAdminsQuerySanitizer,
@@ -96,4 +134,7 @@ module.exports = {
 	postInventoryPromotionBodySanitizer,
 	patchInventoryPromotionBodySanitizer,
 	getCategorySanitizer,
+	getRelatedProductsQuerySanitizer,
+	getProductsRecommendationQuerySanitizer,
+	postTransactionBodySanitizer,
 };

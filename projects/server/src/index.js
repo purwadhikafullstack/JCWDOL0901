@@ -1,19 +1,23 @@
 const path = require("path");
 require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
-
 const express = require("express");
 const cors = require("cors");
 const { join } = require("path");
 
+const { midnightTask } = require("./scheduler/midnight.js");
 const {
 	authRoute,
+	addressRoute,
 	dataRoute,
 	adminTransactionRoute,
 	categoryRoute,
 	branchRoute,
+	cartRoute,
 	productRoute,
 	adminPromoRoute,
 	adminInventoryRoute,
+	voucherRoute,
+	transactionRoute,
 } = require("./routers/index.js");
 
 const PORT = process.env.PORT || 8000;
@@ -22,10 +26,12 @@ const app = express();
 app.use(
 	cors({
 		origin: [process.env.WHITELISTED_DOMAIN && process.env.WHITELISTED_DOMAIN.split(",")],
-	})
+	}),
 );
 
 app.use(express.json());
+
+midnightTask.start();
 
 //#region API ROUTES
 
@@ -33,13 +39,17 @@ app.use(express.json());
 // NOTE : Add your routes here
 
 app.use("/api/auth", authRoute);
+app.use("/api/address", addressRoute);
 app.use("/api/branch", branchRoute);
 app.use("/api/category", categoryRoute);
+app.use("/api/cart", cartRoute);
 app.use("/api/data", dataRoute);
 app.use("/api/admin/transaction", adminTransactionRoute);
 app.use("/api/admin/inventory", adminInventoryRoute);
 app.use("/api/admin/promo", adminPromoRoute);
 app.use("/api/product", productRoute);
+app.use("/api/voucher", voucherRoute);
+app.use("/api/transaction", transactionRoute);
 
 app.use("/uploads", express.static("uploads/"));
 
@@ -77,7 +87,7 @@ app.get("*", (req, res) => {
 
 //#endregion
 
-app.listen(PORT, err => {
+app.listen(PORT, (err) => {
 	if (err) {
 		console.log(`ERROR: ${err}`);
 	} else {

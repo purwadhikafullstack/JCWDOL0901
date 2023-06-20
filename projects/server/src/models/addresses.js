@@ -37,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
 				allowNull: false,
 				type: DataTypes.STRING,
 			},
-			address: {
+			detail: {
 				allowNull: false,
 				type: DataTypes.STRING,
 			},
@@ -57,7 +57,7 @@ module.exports = (sequelize, DataTypes) => {
 			sequelize,
 			modelName: "Addresses",
 			timestamps: false,
-		}
+		},
 	);
 	return Addresses;
 };

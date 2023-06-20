@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
 
 			Inventory_promotions.belongsTo(models.Inventories, {
 				foreignKey: "inventory_id",
+				targetKey: "id",
 			});
 		}
 	}
@@ -47,12 +48,16 @@ module.exports = (sequelize, DataTypes) => {
 				allowNull: false,
 				type: DataTypes.INTEGER,
 			},
+			isActive: {
+				defaultValue: true,
+				type: DataTypes.BOOLEAN,
+			},
 		},
 		{
 			sequelize,
 			modelName: "Inventory_promotions",
 			timestamps: false,
-		}
+		},
 	);
 	return Inventory_promotions;
 };
