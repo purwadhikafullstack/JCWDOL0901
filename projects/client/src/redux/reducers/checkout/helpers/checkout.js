@@ -63,45 +63,57 @@ export const resetSummary = (summaryState) => {
 	};
 };
 
+const handleNominalDiscount = (summary, raw_discount) => {
+	let subtotal = summary.raw.subtotal - raw_discount;
+	if (subtotal < 0) subtotal = 0;
+
+	return {
+		...summary,
+		subtotal,
+		logistic: summary.raw.logistic,
+		discount: raw_discount,
+		total: subtotal + summary.raw.logistic,
+	};
+};
+
+const handlePercentageDiscount = (summary, raw_discount, voucher) => {
+	const max_discount = voucher?.Voucher?.max_discount;
+	let discount = (raw_discount / 100) * summary.raw.subtotal;
+	if (discount > max_discount) discount = max_discount;
+
+	const subtotal = summary.raw.subtotal - discount;
+
+	return {
+		...summary,
+		subtotal,
+		logistic: summary.raw.logistic,
+		discount,
+		total: subtotal + summary.raw.logistic,
+	};
+};
+
+const handleLogisticDiscount = (summary, raw_discount) => {
+	let logistic = summary?.raw?.logistic - raw_discount;
+	if (logistic < 0) logistic = 0;
+
+	return { ...summary, logistic, discount: raw_discount, total: logistic + summary?.raw?.subtotal };
+};
+
 export const getSummaryAfterVoucher = (summaryState, voucher) => {
 	const summary = { ...summaryState };
 	const promotion_id = voucher?.Voucher?.Promotion?.id;
 	const raw_discount = voucher?.Voucher?.value;
 
 	if (promotion_id === 2) {
-		let subtotal = summary.raw.subtotal - raw_discount;
-		if (subtotal < 0) subtotal = 0;
-
-		return {
-			...summary,
-			subtotal,
-			logistic: summary.raw.logistic,
-			discount: raw_discount,
-			total: subtotal + summary.raw.logistic,
-		};
+		return handleNominalDiscount(summary, raw_discount);
 	}
 
 	if (promotion_id === 3) {
-		const max_discount = voucher?.Voucher?.max_discount;
-		let discount = (raw_discount / 100) * summary.raw.subtotal;
-		if (discount > max_discount) discount = max_discount;
-
-		const subtotal = summary.raw.subtotal - discount;
-
-		return {
-			...summary,
-			subtotal,
-			logistic: summary.raw.logistic,
-			discount,
-			total: subtotal + summary.raw.logistic,
-		};
+		return handlePercentageDiscount(summary, raw_discount, voucher);
 	}
 
 	if (promotion_id === 1) {
-		let logistic = summary?.raw?.logistic - raw_discount;
-		if (logistic < 0) logistic = 0;
-
-		return { ...summary, logistic, discount: raw_discount, total: logistic + summary?.raw?.subtotal };
+		return handleLogisticDiscount(summary, raw_discount);
 	}
 };
 

@@ -63,7 +63,6 @@ const setLogistic = (state, action) => {
 
 const initializeCart = (state, action) => {
 	const summary = state.summary?.hasLoaded ? state.summary : initializeSummary(action.payload);
-
 	const branch = determineBranch(action.payload);
 
 	return { ...state, cart: [...action.payload], summary, branch };
