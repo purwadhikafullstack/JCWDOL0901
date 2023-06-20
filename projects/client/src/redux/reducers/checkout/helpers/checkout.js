@@ -9,14 +9,19 @@ const getPromoPrice = (price, promo) => {
 	}
 };
 
-export const determineBranchId = (payload) => {
-	return payload[0]?.Inventory?.Branch?.id || null;
+export const determineBranch = (payload) => {
+	return {
+		branch_id: payload[0]?.Inventory?.Branch?.id || null,
+		city_id: payload[0]?.Inventory?.Branch?.City?.id,
+	};
 };
 
 const accumulateItem = (item, summary) => {
 	const quantity = item.quantity;
 	const price = item.Inventory.Product.price;
 	const promo = item.Inventory.promo;
+
+	summary.weight += quantity * item.Inventory.Product.weight;
 
 	if (!promo || promo.Promotion.id === 4) {
 		summary.subtotal += quantity * price;
@@ -30,6 +35,7 @@ const accumulateItem = (item, summary) => {
 export const initializeSummary = (cart) => {
 	const summary = {
 		hasLoaded: true,
+		weight: 0,
 		subtotal: 0,
 		logistic: 0,
 		discount: 0,
@@ -92,9 +98,26 @@ export const getSummaryAfterVoucher = (summaryState, voucher) => {
 	}
 
 	if (promotion_id === 1) {
-		let logistic = summary.raw.logistic - raw_discount;
+		let logistic = summary?.raw?.logistic - raw_discount;
 		if (logistic < 0) logistic = 0;
 
-		return { ...summary, logistic, discount: raw_discount, total: logistic + summary.raw.subtotal };
+		return { ...summary, logistic, discount: raw_discount, total: logistic + summary?.raw?.subtotal };
 	}
+};
+
+export const getSummaryAfterLogistic = (summary, cost) => {
+	return {
+		...summary,
+		logistic: cost,
+		total: summary?.raw?.subtotal + cost,
+		raw: { ...summary?.raw, logistic: cost },
+	};
+};
+
+export const getLogisticData = (payload) => {
+	return {
+		code: payload.courier,
+		service: payload.logistic.service,
+		cost: payload.logistic.cost[0].value,
+	};
 };

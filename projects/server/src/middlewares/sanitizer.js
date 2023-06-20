@@ -114,9 +114,32 @@ const getCategorySanitizer = async (request, response, next) => {
 
 const postTransactionBodySanitizer = async (request, response, next) => {
 	const payload = {
-		Transaction: await getTransactionPayload(request.body, request.userData),
-		Transaction_detail: await getTransactionDetailPayload(request.body),
-		Logistic: true,
+		transaction: await getTransactionPayload(request.body, request.userData),
+		transaction_detail: await getTransactionDetailPayload(request.body),
+		logistic: {
+			code: request.body.logistic.code,
+			service: request.body.logistic.service,
+			shipping_cost: request.body.logistic.cost,
+		},
+		voucher: { id: request.body.voucher.id },
+		user: { id: request.userData.id },
+	};
+
+	request.payload = payload;
+
+	delete request.body;
+
+	next();
+};
+
+const postRajaOngkirCostBodySanitizer = async (request, response, next) => {
+	const { branch_city_id, city_id, weight, courier } = request.body;
+
+	const payload = {
+		branch_city_id,
+		city_id,
+		weight,
+		courier,
 	};
 
 	request.payload = payload;
@@ -137,4 +160,5 @@ module.exports = {
 	getRelatedProductsQuerySanitizer,
 	getProductsRecommendationQuerySanitizer,
 	postTransactionBodySanitizer,
+	postRajaOngkirCostBodySanitizer,
 };

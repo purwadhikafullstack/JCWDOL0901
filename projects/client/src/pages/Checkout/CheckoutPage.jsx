@@ -7,6 +7,7 @@ import Summary from "../../components/Checkout/Summary.jsx";
 import CreateOrder from "../../components/Checkout/CreateOrder.jsx";
 import { useDispatch } from "react-redux";
 import { defaultCheckout } from "../../redux/reducers/checkout/checkoutAction.js";
+import LogisticBox from "../../components/Checkout/LogisticBox.jsx";
 
 const CheckoutPage = () => {
 	const dispatch = useDispatch();
@@ -16,6 +17,7 @@ const CheckoutPage = () => {
 			<BackButton url="/cart" color="text-green-400" onClick={() => dispatch(defaultCheckout())} />
 			<AddressBox />
 			<OrderBox />
+			<LogisticBox />
 			<VoucherBox />
 			<Summary />
 			<CreateOrder />

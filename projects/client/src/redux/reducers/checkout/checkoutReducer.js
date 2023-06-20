@@ -1,5 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getSummaryAfterVoucher, initializeSummary, determineBranchId, resetSummary } from "./helpers/checkout.js";
+import {
+	getSummaryAfterVoucher,
+	getSummaryAfterLogistic,
+	initializeSummary,
+	determineBranch,
+	resetSummary,
+	getLogisticData,
+} from "./helpers/checkout.js";
 
 const initialState = {
 	address: {
@@ -8,10 +15,17 @@ const initialState = {
 		detail: "",
 		City: { type: "", name: "", Province: { name: "" } },
 	},
-	branch_id: null,
+	branch: {
+		id: null,
+		city_id: null,
+	},
 	cart: [],
+	logistic: {
+		code: null,
+	},
 	summary: {
 		hasLoaded: false,
+		weight: 0,
 		subtotal: 0,
 		logistic: 0,
 		discount: 0,
@@ -37,19 +51,30 @@ const setAddress = (state, action) => {
 	return { ...state, address: { id, label, detail, City } };
 };
 
-const initializeCart = (state, action) => {
-	const summary = state.summary.hasLoaded ? state.summary : initializeSummary(action.payload);
-	const branch_id = determineBranchId(action.payload);
+const setLogistic = (state, action) => {
+	const Voucher = { ...state.voucher };
+	const logistic = getLogisticData(action.payload);
 
-	return { ...state, cart: [...action.payload], summary, branch_id };
+	let summary = getSummaryAfterLogistic(state.summary, logistic.cost);
+	summary = Voucher.id ? getSummaryAfterVoucher(summary, { Voucher }) : summary;
+
+	return { ...state, logistic, summary };
+};
+
+const initializeCart = (state, action) => {
+	const summary = state.summary?.hasLoaded ? state.summary : initializeSummary(action.payload);
+
+	const branch = determineBranch(action.payload);
+
+	return { ...state, cart: [...action.payload], summary, branch };
 };
 
 const applyVoucher = (state, action) => {
-	const { id, name, description, value, max_discount } = action.payload?.Voucher;
+	const { id, name, description, value, max_discount, Promotion } = action.payload?.Voucher;
 
 	const summary = getSummaryAfterVoucher(state.summary, action.payload);
 
-	return { ...state, voucher: { id, name, value, max_discount, description }, summary };
+	return { ...state, voucher: { id, name, value, max_discount, description, Promotion: { ...Promotion } }, summary };
 };
 
 const removeVoucher = (state, action) => {
@@ -61,11 +86,13 @@ const removeVoucher = (state, action) => {
 const defaultCheckout = (state, action) => {
 	return { ...initialState };
 };
+
 export const checkout = createSlice({
 	name: "checkout",
 	initialState,
 	reducers: {
 		setAddress,
+		setLogistic,
 		initializeCart,
 		applyVoucher,
 		removeVoucher,

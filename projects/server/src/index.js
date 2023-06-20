@@ -18,6 +18,7 @@ const {
 	adminInventoryRoute,
 	voucherRoute,
 	transactionRoute,
+	rajaOngkirRoute,
 } = require("./routers/index.js");
 
 const PORT = process.env.PORT || 8000;
@@ -50,6 +51,7 @@ app.use("/api/admin/promo", adminPromoRoute);
 app.use("/api/product", productRoute);
 app.use("/api/voucher", voucherRoute);
 app.use("/api/transaction", transactionRoute);
+app.use("/api/rajaongkir", rajaOngkirRoute);
 
 app.use("/uploads", express.static("uploads/"));
 
