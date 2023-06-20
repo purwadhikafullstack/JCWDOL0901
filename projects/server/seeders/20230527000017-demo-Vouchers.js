@@ -8,8 +8,8 @@ module.exports = {
 			[
 				{
 					name: "[Referral Reward] Gratis Ongkir",
-					description: "Gratis Ongkir hingga Rp 15.000, tanpa minimal belanja",
-					value: 15000,
+					description: "Gratis Ongkir hingga Rp 25.000, tanpa minimal belanja",
+					value: 25000,
 					start_at: "2023-05-25",
 					expired_at: null,
 					claim_limit: null,
