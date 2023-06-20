@@ -15,6 +15,7 @@ const {
 	adminPromoRoute,
 	adminInventoryRoute,
 	profileRoute,
+	addressRoute,
 } = require("./routers/index.js");
 const { log } = require("console");
 
@@ -45,6 +46,7 @@ app.use("/api/admin/transaction", adminTransactionRoute);
 app.use("/api/admin/inventory", adminInventoryRoute);
 app.use("/api/admin/promo", adminPromoRoute);
 app.use("/api/product", productRoute);
+app.use("/api/address", addressRoute);
 
 app.use("/uploads", express.static("uploads/"));
 
