@@ -24,7 +24,7 @@ const updateCategoryQuery = async (body, file, params) => {
 	return await Categories.update({ name, image }, { where: { id } });
 };
 
-const deleteCategoryQuery = async params => {
+const deleteCategoryQuery = async (params) => {
 	const id = Number(params.categoryId);
 	return await Categories.destroy({ where: { id } });
 };

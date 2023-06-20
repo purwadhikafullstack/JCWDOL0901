@@ -1,4 +1,4 @@
-const getRadian = latitude => {
+const getRadian = (latitude) => {
 	return (Math.PI * latitude) / 180;
 };
 
@@ -27,7 +27,7 @@ module.exports = {
 		let nearestBranch = null;
 		let minDistance = Infinity;
 
-		await Branches.forEach(branch => {
+		await Branches.forEach((branch) => {
 			const { latitude, longitude } = branch;
 			const distance = getBranchDistance(latitude, longitude, userGeolocation);
 
@@ -36,7 +36,6 @@ module.exports = {
 				nearestBranch = branch;
 			}
 		});
-
 		return nearestBranch;
 	},
 };
