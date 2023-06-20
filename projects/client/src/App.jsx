@@ -23,7 +23,6 @@ import SwitchAddress from "./components/Checkout/SwitchAddress";
 import SwitchVoucher from "./components/Checkout/SwitchVoucher";
 import SwitchLogistic from "./components/Checkout/SwitchLogistic";
 import ProductPage from "./pages/Product/ProductPage";
-import ProductDetail from "./pages/ProductDetail/ProductDetail";
 
 function App() {
 	return (
