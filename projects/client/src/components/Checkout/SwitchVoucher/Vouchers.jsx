@@ -15,13 +15,12 @@ const Vouchers = () => {
 		getUserCart()
 			.then((result) => {
 				cart = result.data;
-			})
-			.catch((error) => alert(error));
-
-		getUserVouchers()
-			.then((result) => {
-				let filteredVouchers = filterVoucherByBranchAndCart(result.data, cart);
-				setVouchers(filteredVouchers);
+				getUserVouchers()
+					.then((result) => {
+						let filteredVouchers = filterVoucherByBranchAndCart(result.data, cart);
+						setVouchers(filteredVouchers);
+					})
+					.catch((error) => alert(error));
 			})
 			.catch((error) => alert(error));
 	}, []);
