@@ -1,4 +1,4 @@
-const { startGetUserAddresses, startGetDefaultAddress } = require("../services/addressService");
+const { startGetUserAddresses, startGetDefaultAddress, startCreateAddress } = require("../services/addressService");
 
 const getAddresses = async (request, response) => {
 	await startGetUserAddresses(request.userData.id)
@@ -20,7 +20,18 @@ const getDefaultAddress = async (request, response) => {
 		});
 };
 
+const createAddress = async (request, response) => {
+	await startCreateAddress(request.userData.id, request.body)
+		.then((result) => {
+			response.status(200).send(result);
+		})
+		.catch((error) => {
+			response.status(error.code).send(error.message);
+		});
+};
+
 module.exports = {
 	getAddresses,
 	getDefaultAddress,
+	createAddress,
 };

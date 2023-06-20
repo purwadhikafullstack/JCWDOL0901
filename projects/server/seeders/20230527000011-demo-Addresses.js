@@ -12,7 +12,7 @@ module.exports = {
 					label: "Rumah (utama)",
 					address: "Jl. Gang Lombok no. 14, Semarang Tengah, 50188",
 					latitude: -6.973867860991175,
-					longtitude: 110.42577549626587,
+					longitude: 110.42577549626587,
 					default: true,
 				},
 				{
@@ -21,7 +21,7 @@ module.exports = {
 					label: "Warung",
 					address: "Jl. Empu Tantular No.1, Semarang Tengah, 50137",
 					latitude: -6.970715842286184,
-					longtitude: 110.42576355368963,
+					longitude: 110.42576355368963,
 					default: false,
 				},
 				{
@@ -30,7 +30,7 @@ module.exports = {
 					label: "Omah",
 					address: "Jl. Semarang Indah No.2, Semarang Barat, 50144",
 					latitude: -6.969610927226034,
-					longtitude: 110.3945889516456,
+					longitude: 110.3945889516456,
 					default: true,
 				},
 				{
@@ -40,11 +40,11 @@ module.exports = {
 					address:
 						"Jl. Medan Merdeka Sel. No.11, RT.11/RW.2, Gambir, Kecamatan Gambir, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10110",
 					latitude: -6.181277772102812,
-					longtitude: 106.82691787141256,
+					longitude: 106.82691787141256,
 					default: true,
 				},
 			],
-			{}
+			{},
 		);
 	},
 

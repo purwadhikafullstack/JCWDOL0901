@@ -1,18 +1,32 @@
 const { Addresses } = require("../models/index.js");
 
 const getUserAddressesQuery = async (user_id) => {
-	const address = await Addresses.findAll({
+	const addressData = await Addresses.findAll({
 		where: { user_id },
 	});
 
-	return address;
+	return addressData;
 };
+
 const getDefaultAddressQuery = async (user_id) => {
-	const address = await Addresses.findOne({
+	const addressData = await Addresses.findOne({
 		where: { user_id, default: true },
 	});
 
-	return address;
+	return addressData;
+};
+const createAddressQuery = async (user_id, label, city_id, address, latitude, longitude) => {
+	const addressData = await Addresses.create({
+		user_id,
+		label,
+		city_id,
+		address,
+		latitude,
+		longitude,
+		default: false,
+	});
+
+	return addressData;
 };
 
-module.exports = { getUserAddressesQuery, getDefaultAddressQuery };
+module.exports = { getUserAddressesQuery, getDefaultAddressQuery, createAddressQuery };
