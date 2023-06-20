@@ -116,7 +116,12 @@ const postTransactionBodySanitizer = async (request, response, next) => {
 	const payload = {
 		Transaction: await getTransactionPayload(request.body, request.userData),
 		Transaction_detail: await getTransactionDetailPayload(request.body),
-		Logistic: true,
+		Logistic: {
+			code: request.body.logistic.code,
+			service: request.body.logistic.service,
+			cost: request.body.logistic.cost,
+		},
+		Voucher: request.body.voucher.id,
 	};
 
 	request.payload = payload;
