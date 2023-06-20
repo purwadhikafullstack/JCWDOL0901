@@ -1,4 +1,9 @@
-const { startUserProfileUpdate, startGetUserProfile, startUpdateAvatar } = require("../services/profileService");
+const {
+	startUserProfileUpdate,
+	startGetUserProfile,
+	startUpdateAvatar,
+	startGetAvatar,
+} = require("../services/profileService");
 
 const updateProfile = async (request, response) => {
 	await startUserProfileUpdate(request.body, request.userData.id)
@@ -34,8 +39,23 @@ const updateAvatar = async (request, response) => {
 		});
 };
 
+const getAvatar = async (request, response) => {
+	console.log("request getAvatar ctrller : ", request);
+	// console.log("req file getAvatar ctrller: ", request.file);
+	// console.log("req userData.id getAvatar ctrller: ", request.userData.id);
+	// console.log("req filePath getAvatar ctrller: ", request.file.path);
+	await startGetAvatar(request.file, request.userData.id)
+		.then((result) => {
+			response.status(200).send(result);
+		})
+		.catch((error) => {
+			response.status(error.code).send(error.message);
+		});
+};
+
 module.exports = {
 	updateProfile,
 	getProfile,
 	updateAvatar,
+	getAvatar,
 };

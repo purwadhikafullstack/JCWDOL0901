@@ -12,6 +12,7 @@ import DashboardPage from "./pages/Dashboard/DashboardPage";
 import CreateCategoryPage from "./pages/CreateCategory/CreateCategoryPage";
 import UserLoginPage from "./pages/UserLogin/UserLoginPage";
 import UserAccountSettingPage from "./pages/UserAccountSetting/UserAccountSettingPage";
+import UserAvatarUploadPage from "./pages/UserAvatarUpload/UserAvatarUploadPage";
 import ManageCategory from "./pages/ManageCategory/ManageCategory";
 import ManageStock from "./pages/ManageStock/ManageStock";
 import UpdateCategoryPage from "./pages/UpdateCategory/UpdateCategoryPage";
@@ -30,8 +31,9 @@ function App() {
 				<Route path="/verify/:token" element={<VerifyPage />} />
 				<Route path="/admin/login" element={<AdminLoginPage />} />
 				<Route path="/account/change-password" element={<ChangePasswordPage />} />
-        <Route path="/user/login" element={<UserLoginPage />} />
-        <Route path="/user/profile-update" element={<UserAccountSettingPage />} />
+				<Route path="/user/login" element={<UserLoginPage />} />
+				<Route path="/user/profile-update" element={<UserAccountSettingPage />} />
+				<Route path="/user/avatar-update" element={<UserAvatarUploadPage />} />
 
 				{/* //Admin Auth Page */}
 				<Route path="/admin/promo" element={<AdminAuthGuard component={<ProductPromotion />} />} />

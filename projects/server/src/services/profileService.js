@@ -1,5 +1,5 @@
-const { startGetUserProfileErrorHandler, startUpdateAvatarErrorHandler } = require("../errors/serviceError");
-const { updateUserProfileQuery, getUserProfileQuery, updateAvatarQuery } = require("../queries/Profiles");
+const { startGetUserProfileErrorHandler, startUpdateAvatarErrorHandler, startGetAvatarErrorHandler } = require("../errors/serviceError");
+const { updateUserProfileQuery, getUserProfileQuery, updateAvatarQuery, getAvatarQuery } = require("../queries/Profiles");
 
 module.exports = {
 	startUserProfileUpdate: async (body, id) => {
@@ -34,6 +34,17 @@ module.exports = {
 				return resolve(result);
 			} catch (error) {
 				return reject(await startUpdateAvatarErrorHandler(error));
+			}
+		});
+	},
+	startGetAvatar: async (file, id) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const result = await getAvatarQuery(file, id);
+				// console.log(result);
+				return resolve(result);
+			} catch (error) {
+				return reject(await startGetAvatarErrorHandler(error));
 			}
 		});
 	},

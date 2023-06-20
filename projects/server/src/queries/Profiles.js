@@ -40,10 +40,21 @@ const updateUserProfileQuery = async (body, id) => {
 };
 
 const updateAvatarQuery = async (file, user_id) => {
-	console.log(file);
-	console.log(user_id);
-	const avatar = file ? file.path : undefined;
-	return await Profiles.update({ avatar }, { where: { user_id } });
+	// console.log(file);
+	// console.log(user_id);
+	// const avatar = file ? file.path : undefined;
+	return await Profiles.update({ avatar: file }, { where: { user_id } });
 };
 
-module.exports = { createProfileQuery, getUserProfileQuery, updateUserProfileQuery, updateAvatarQuery };
+const getAvatarQuery = async (id) => {
+	const user = await Profiles.findOne({
+		where: { id },
+	});
+
+	const data = {
+		avatar: user.avatar,
+	};
+	return data;
+};
+
+module.exports = { createProfileQuery, getUserProfileQuery, updateUserProfileQuery, updateAvatarQuery, getAvatarQuery };

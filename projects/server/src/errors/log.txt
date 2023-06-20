@@ -4,3 +4,8 @@
 	Source: startCreateHandler
 	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_TRUNCATED_WRONG_VALUE","errno":1292,"sqlState":"22007","sqlMessage":"Truncated incorrect INTEGER value: ':category_id'","sql":"UPDATE `Categories` SET `name`=? WHERE `id` = ?","parameters":["Buah-buahan",":category_id"]},"original":{"code":"ER_TRUNCATED_WRONG_VALUE","errno":1292,"sqlState":"22007","sqlMessage":"Truncated incorrect INTEGER value: ':category_id'","sql":"UPDATE `Categories` SET `name`=? WHERE `id` = ?","parameters":["Buah-buahan",":category_id"]},"sql":"UPDATE `Categories` SET `name`=? WHERE `id` = ?","parameters":["Buah-buahan",":category_id"]}
 	
+	===
+	Time: Tue Jun 20 2023 18:33:45 GMT+0700 (Western Indonesia Time)
+	Source: startGetAvatarErrorHandler
+	Error: {}
+	
