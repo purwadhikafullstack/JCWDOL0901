@@ -54,6 +54,13 @@ export const getUserCart = () => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/cart`, headers);
 };
 
+export const postTransaction = (data) => {
+	const token = localStorage.getItem("token");
+	const headers = { headers: { Authorization: `Bearer ${token}` } };
+
+	return axios.post(`${process.env.REACT_APP_API_BASE_URL}/transaction/create`, data, headers);
+};
+
 export const getMaxDiscount = (data) => {
 	let text = "Discount Up To ";
 
@@ -76,7 +83,9 @@ export const getMinSpend = (data) => {
 
 const getFinalPrice = (original, promo) => {
 	if (promo.Promotion.id === 2) {
-		return original - promo.value;
+		const discountedPrice = original - promo.value;
+
+		return discountedPrice < 0 ? 0 : discountedPrice;
 	} else if (promo.Promotion.id === 3) {
 		return original - (original * promo.value) / 100;
 	}

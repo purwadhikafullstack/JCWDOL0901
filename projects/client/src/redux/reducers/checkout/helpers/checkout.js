@@ -1,6 +1,7 @@
 const getPromoPrice = (price, promo) => {
 	if (promo.Promotion.id === 2) {
-		return price - promo.value;
+		const discountedPrice = price - promo.value;
+		return discountedPrice < 0 ? 0 : discountedPrice;
 	} else if (promo.Promotion.id === 3) {
 		return price - (promo.value * price) / 100;
 	}
