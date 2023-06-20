@@ -117,15 +117,14 @@ const startDeleteteHandler = async (error) => {
 	}
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
+
 const startUpdateErrorHandler = async (error) => {
 	await writeLogFile(error, "startUpdateErrorHandler");
-
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
 const startGetUserAddressesErrorHandler = async (error) => {
 	await writeLogFile(error, "startGetUserAddressesErrorHandler");
-	console.log(error);
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 

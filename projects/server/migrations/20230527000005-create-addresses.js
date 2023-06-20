@@ -34,7 +34,7 @@ module.exports = {
 				allowNull: false,
 				type: Sequelize.DECIMAL(11, 8),
 			},
-			default: {
+			is_default: {
 				allowNull: false,
 				type: Sequelize.BOOLEAN,
 			},
