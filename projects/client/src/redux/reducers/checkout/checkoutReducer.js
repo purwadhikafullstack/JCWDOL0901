@@ -52,10 +52,11 @@ const setAddress = (state, action) => {
 };
 
 const setLogistic = (state, action) => {
+	const Voucher = { ...state.voucher };
 	const logistic = getLogisticData(action.payload);
 
 	let summary = getSummaryAfterLogistic(state.summary, logistic.cost);
-	summary = getSummaryAfterVoucher(summary, { Voucher: { ...state.voucher } });
+	summary = Voucher.id ? getSummaryAfterVoucher(summary, { Voucher }) : summary;
 
 	return { ...state, logistic, summary };
 };
