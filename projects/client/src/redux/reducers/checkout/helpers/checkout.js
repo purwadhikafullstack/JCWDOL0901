@@ -1,10 +1,16 @@
 const getPromoPrice = (price, promo) => {
 	if (promo.Promotion.id === 2) {
-		const discountedPrice = price - promo.value;
-		return discountedPrice < 0 ? 0 : discountedPrice;
+		let discountedPrice = price - promo.value;
+		if (discountedPrice < 0) discountedPrice = 0;
+
+		return discountedPrice;
 	} else if (promo.Promotion.id === 3) {
 		return price - (promo.value * price) / 100;
 	}
+};
+
+export const determineBranchId = (payload) => {
+	return payload[0]?.Inventory?.Branch?.id || null;
 };
 
 const accumulateItem = (item, summary) => {
@@ -57,7 +63,9 @@ export const getSummaryAfterVoucher = (summaryState, voucher) => {
 	const raw_discount = voucher?.Voucher?.value;
 
 	if (promotion_id === 2) {
-		const subtotal = summary.raw.subtotal - raw_discount;
+		let subtotal = summary.raw.subtotal - raw_discount;
+		if (subtotal < 0) subtotal = 0;
+
 		return {
 			...summary,
 			subtotal,

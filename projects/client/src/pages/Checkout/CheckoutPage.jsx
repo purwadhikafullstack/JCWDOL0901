@@ -11,13 +11,9 @@ import { defaultCheckout } from "../../redux/reducers/checkout/checkoutAction.js
 const CheckoutPage = () => {
 	const dispatch = useDispatch();
 
-	React.useEffect(() => {
-		return () => dispatch(defaultCheckout());
-	});
-
 	return (
 		<div className="flex flex-col bg-white">
-			<BackButton url="/cart" color="text-green-400" />
+			<BackButton url="/cart" color="text-green-400" onClick={() => dispatch(defaultCheckout())} />
 			<AddressBox />
 			<OrderBox />
 			<VoucherBox />

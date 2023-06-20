@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getSummaryAfterVoucher, initializeSummary, resetSummary } from "./helpers/checkout.js";
+import { getSummaryAfterVoucher, initializeSummary, determineBranchId, resetSummary } from "./helpers/checkout.js";
 
 const initialState = {
 	address: {
@@ -8,16 +8,8 @@ const initialState = {
 		detail: "",
 		City: { type: "", name: "", Province: { name: "" } },
 	},
+	branch_id: null,
 	cart: [],
-	voucher: {
-		id: null,
-		name: "",
-		description: "",
-		value: null,
-		Promotion: {
-			id: null,
-		},
-	},
 	summary: {
 		hasLoaded: false,
 		subtotal: 0,
@@ -29,6 +21,15 @@ const initialState = {
 			logistic: 0,
 		},
 	},
+	voucher: {
+		id: null,
+		name: "",
+		description: "",
+		value: null,
+		Promotion: {
+			id: null,
+		},
+	},
 };
 
 const setAddress = (state, action) => {
@@ -38,8 +39,9 @@ const setAddress = (state, action) => {
 
 const initializeCart = (state, action) => {
 	const summary = state.summary.hasLoaded ? state.summary : initializeSummary(action.payload);
+	const branch_id = determineBranchId(action.payload);
 
-	return { ...state, cart: [...action.payload], summary };
+	return { ...state, cart: [...action.payload], summary, branch_id };
 };
 
 const applyVoucher = (state, action) => {

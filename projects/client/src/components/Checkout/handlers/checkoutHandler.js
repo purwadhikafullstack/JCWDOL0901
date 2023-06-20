@@ -83,9 +83,10 @@ export const getMinSpend = (data) => {
 
 const getFinalPrice = (original, promo) => {
 	if (promo.Promotion.id === 2) {
-		const discountedPrice = original - promo.value;
+		let discountedPrice = original - promo.value;
+		if (discountedPrice < 0) discountedPrice = 0;
 
-		return discountedPrice < 0 ? 0 : discountedPrice;
+		return discountedPrice;
 	} else if (promo.Promotion.id === 3) {
 		return original - (original * promo.value) / 100;
 	}
