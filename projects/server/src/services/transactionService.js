@@ -5,11 +5,13 @@ const { createTransactionDetailsQuery } = require("../queries/Transaction_detail
 const { createLogisticsQuery } = require("../queries/Logistics.js");
 const { deleteCartsQueryOnOrder } = require("../queries/Carts.js");
 const { updateUsedUserVouchersQuery } = require("../queries/User_vouchers.js");
+const { decrementInventoriesStockQuery } = require("../queries/Inventories.js");
 
 const userTransactionGeneration = async (payload, transaction) => {
 	const Transaction = await createTransactionQuery(payload.transaction, transaction);
 	await createTransactionDetailsQuery(Transaction, payload.transaction_detail, transaction);
 	await createLogisticsQuery(Transaction, payload.logistic, transaction);
+	await decrementInventoriesStockQuery(payload.transaction_detail, transaction);
 	await deleteCartsQueryOnOrder(payload.user, transaction);
 
 	if (payload.voucher.id) await updateUsedUserVouchersQuery(payload.user, payload.voucher, transaction);
