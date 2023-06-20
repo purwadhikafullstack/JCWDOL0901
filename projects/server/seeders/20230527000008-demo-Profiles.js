@@ -34,8 +34,43 @@ module.exports = {
 					birth: "1979-12-12",
 					avatar: "/avatars/default.jpg",
 				},
+				{
+					user_id: 5,
+					gender: "M",
+					name: "Gepard",
+					birth: "1988-05-28",
+					avatar: "/avatars/default.jpg",
+				},
+				{
+					user_id: 6,
+					gender: "F",
+					name: "Mary nara",
+					birth: "1999-10-12",
+					avatar: "/avatars/default.jpg",
+				},
+				{
+					user_id: 7,
+					gender: "M",
+					name: "Sanji Pratama",
+					birth: "1997-06-05",
+					avatar: "/avatars/default.jpg",
+				},
+				{
+					user_id: 8,
+					gender: "F",
+					name: "Andrea Lenny",
+					birth: "1998-01-05",
+					avatar: "/avatars/default.jpg",
+				},
+				{
+					user_id: 9,
+					gender: "M",
+					name: "Budi Harto",
+					birth: "1978-08-03",
+					avatar: "/avatars/default.jpg",
+				},
 			],
-			{}
+			{},
 		);
 	},
 
