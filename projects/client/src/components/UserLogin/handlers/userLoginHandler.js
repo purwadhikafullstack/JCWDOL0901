@@ -1,7 +1,7 @@
 import axios from "axios";
 import { storeAdminToken } from "../../../utils/jsCookie";
 
-const userLoginErrorHandler = async error => {
+const userLoginErrorHandler = async (error) => {
 	if (error?.code === "ERR_NETWORK") {
 		return "Server unreachable, try again later!";
 	} else if (error?.code === "CONFIRM_PASS_ERR") {
