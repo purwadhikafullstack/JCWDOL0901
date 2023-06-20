@@ -4,15 +4,17 @@ const { createTransactionQuery } = require("../queries/Transactions.js");
 const { createTransactionDetailsQuery } = require("../queries/Transaction_details.js");
 
 module.exports = {
-	startCreateTransaction: async (user_id, payload) => {
+	startCreateTransaction: async (payload) => {
 		return new Promise(async (resolve, reject) => {
-			const transaction = sequelize.transaction();
+			const transaction = await sequelize.transaction();
 			try {
-				const Transaction = await createTransactionQuery(user_id, payload.Transaction, transaction);
+				const Transaction = await createTransactionQuery(payload.Transaction, transaction);
 				await createTransactionDetailsQuery(Transaction, payload.Transaction_detail, transaction);
 
+				await transaction.commit();
 				return await resolve("Order Created!");
 			} catch (error) {
+				await transaction.rollback();
 				return await reject(await startCreateTransactionErrorHandler(error));
 			}
 		});

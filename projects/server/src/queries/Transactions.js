@@ -50,8 +50,8 @@ const readAdminTransactionsQuery = async (from, to, status, branch) => {
 	});
 };
 
-const createTransactionQuery = async (user_id, payload, transaction) => {
-	return await Transactions.create({ user_id, ...payload, status_id: 1 }, { transaction });
+const createTransactionQuery = async (payload, transaction) => {
+	return await Transactions.create({ ...payload, status_id: 1 }, { transaction });
 };
 
 module.exports = { readAdminTransactionsQuery, createTransactionQuery };

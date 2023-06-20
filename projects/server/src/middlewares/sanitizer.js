@@ -11,6 +11,7 @@ const {
 	getRelatedProductsFilter,
 	getProductsRecommendationFilter,
 } = require("../helpers/queryHelper");
+const { getTransactionPayload, getTransactionDetailPayload } = require("../helpers/bodyHelper");
 
 const getAdminsQuerySanitizer = async (request, response, next) => {
 	const sanitizedQuery = {
@@ -111,6 +112,20 @@ const getCategorySanitizer = async (request, response, next) => {
 	next();
 };
 
+const postTransactionBodySanitizer = async (request, response, next) => {
+	const payload = {
+		Transaction: await getTransactionPayload(request.body, request.userData),
+		Transaction_detail: await getTransactionDetailPayload(request.body),
+		Logistic: true,
+	};
+
+	request.payload = payload;
+
+	delete request.body;
+
+	next();
+};
+
 module.exports = {
 	getInventoriesQuerySanitizer,
 	getAdminsQuerySanitizer,
@@ -121,4 +136,5 @@ module.exports = {
 	getCategorySanitizer,
 	getRelatedProductsQuerySanitizer,
 	getProductsRecommendationQuerySanitizer,
+	postTransactionBodySanitizer,
 };
