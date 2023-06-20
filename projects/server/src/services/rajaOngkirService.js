@@ -8,7 +8,7 @@ const headers = {
 module.exports = {
 	getRajaOngkirLogisticFee: async (branch_city_id, city_id, weight, courier) => {
 		return new Promise(async (resolve, reject) => {
-			var options = {
+			const options = {
 				method: "POST",
 				url: `${process.env.RAJAONGKIR_API_URL}/cost`,
 				headers,
