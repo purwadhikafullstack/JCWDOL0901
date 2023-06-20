@@ -1,5 +1,5 @@
 import React from "react";
-import { getUserVouchers, filterVoucherByBranchAndCart } from "../handlers/checkoutHandler.js";
+import { getUserVouchers, filterVoucherByBranchAndCart, getUserCart } from "../handlers/checkoutHandler.js";
 import VoucherOptions from "./VoucherOptions.jsx";
 import { removeVoucher } from "../../../redux/reducers/checkout/checkoutAction.js";
 import { useDispatch, useSelector } from "react-redux";
@@ -11,14 +11,19 @@ const Vouchers = () => {
 	const dispatch = useDispatch();
 
 	React.useEffect(() => {
+		let cart;
+		getUserCart()
+			.then((result) => {
+				cart = result.data;
+			})
+			.catch((error) => alert(error));
+
 		getUserVouchers()
 			.then((result) => {
-				let filteredVouchers = filterVoucherByBranchAndCart(result.data, globalState);
+				let filteredVouchers = filterVoucherByBranchAndCart(result.data, cart);
 				setVouchers(filteredVouchers);
 			})
-			.catch((error) => {
-				setVouchers([]);
-			});
+			.catch((error) => alert(error));
 	}, []);
 
 	return (

@@ -1,6 +1,6 @@
 import axios from "axios";
 import Swal from "sweetalert2";
-import { defaultCheckout } from "../../../redux/reducers/checkout/checkoutAction";
+import { clearCheckout } from "../../../redux/reducers/checkout/checkoutAction";
 
 export const getDefaultAddress = () => {
 	const token = localStorage.getItem("token");
@@ -16,14 +16,13 @@ export const getUserAddresses = () => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/address/list`, headers);
 };
 
-const filterVoucherByBranch = (vouchers, globalState) => {
-	const branch_id = globalState?.checkout?.cart[0]?.Inventory?.Branch?.id;
+const filterVoucherByBranch = (vouchers, cart) => {
+	const branch_id = cart[0]?.Inventory?.Branch?.id;
 
 	return vouchers.filter((item) => item.Voucher.branch_id === branch_id || item.Voucher.branch_id === null);
 };
 
-const filterVoucherByCart = (vouchers, globalState) => {
-	const cart = globalState?.checkout?.cart;
+const filterVoucherByCart = (vouchers, cart) => {
 	const inventory_ids = [];
 
 	cart.forEach((item) => inventory_ids.push(item?.Inventory?.id));
@@ -35,9 +34,9 @@ const filterVoucherByCart = (vouchers, globalState) => {
 	});
 };
 
-export const filterVoucherByBranchAndCart = (vouchers, globalState) => {
-	const cartFilteredVouchers = filterVoucherByCart(vouchers, globalState);
-	const branchFilteredVouchers = filterVoucherByBranch(cartFilteredVouchers, globalState);
+export const filterVoucherByBranchAndCart = (vouchers, cart) => {
+	const cartFilteredVouchers = filterVoucherByCart(vouchers, cart);
+	const branchFilteredVouchers = filterVoucherByBranch(cartFilteredVouchers, cart);
 
 	return branchFilteredVouchers;
 };
@@ -75,7 +74,7 @@ const successAlert = (navigate, dispatch) => {
 		confirmButtonColor: "#0EB177",
 	});
 	navigate("/order");
-	dispatch(defaultCheckout());
+	dispatch(clearCheckout());
 };
 
 export const postTransaction = (data, dispatch, navigate) => {
