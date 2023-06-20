@@ -25,7 +25,6 @@ module.exports = {
 				await transaction.commit();
 				return await resolve("Order Created!");
 			} catch (error) {
-				console.log(error);
 				await transaction.rollback();
 				return await reject(await startCreateTransactionErrorHandler(error));
 			}
