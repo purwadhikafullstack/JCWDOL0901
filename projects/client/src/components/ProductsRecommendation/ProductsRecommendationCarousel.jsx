@@ -31,7 +31,7 @@ const ProductsRecommendationCarousel = () => {
 		products && (
 			<Splide
 				options={{
-					perPage: 3,
+					perPage: 5,
 					pagination: false,
 					arrows: false,
 				}}

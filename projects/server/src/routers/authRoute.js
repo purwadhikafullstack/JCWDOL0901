@@ -9,13 +9,7 @@ const {
 	updatePassword,
 } = require("../controllers/authController");
 
-const {
-	getReferrerId,
-	isSuperAdmin,
-	isAdmin,
-	isUser,
-	isVerifiedUser,
-} = require("../middlewares/authMiddleware");
+const { getReferrerId, isSuperAdmin, isAdmin, isUser, isVerifiedUser } = require("../middlewares/authMiddleware");
 
 const { getAdminsQuerySanitizer } = require("../middlewares/sanitizer.js");
 

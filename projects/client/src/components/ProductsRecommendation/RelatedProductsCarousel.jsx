@@ -5,7 +5,7 @@ import { getRelatedProducts } from "./handlers/ProductsRecommendationCarouselHan
 const Slide = ({ products }) => {
 	return products.map((item, index) => {
 		return (
-			<SplideSlide>
+			<SplideSlide key={item?.name}>
 				<div className="flex flex-col items-center">
 					<img className="w-[150px]" src={item?.image} alt={item?.name} />
 					<span className="text-black text-xs mt-1.5 ">{item?.name}</span>

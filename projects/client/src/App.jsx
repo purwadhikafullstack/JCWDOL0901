@@ -11,6 +11,7 @@ import AdminLoginPage from "./pages/Login/AdminLoginPage";
 import DashboardPage from "./pages/Dashboard/DashboardPage";
 import CreateCategoryPage from "./pages/CreateCategory/CreateCategoryPage";
 import UserLoginPage from "./pages/UserLogin/UserLoginPage";
+import UserAccountSettingPage from "./pages/UserAccountSetting/UserAccountSettingPage";
 import ManageCategory from "./pages/ManageCategory/ManageCategory";
 import ManageStock from "./pages/ManageStock/ManageStock";
 import UpdateCategoryPage from "./pages/UpdateCategory/UpdateCategoryPage";
@@ -21,6 +22,8 @@ import CheckoutPage from "./pages/Checkout/CheckoutPage";
 import SwitchAddress from "./components/Checkout/SwitchAddress";
 import SwitchVoucher from "./components/Checkout/SwitchVoucher";
 import SwitchLogistic from "./components/Checkout/SwitchLogistic";
+import ProductPage from "./pages/Product/ProductPage";
+import ProductDetail from "./pages/ProductDetail/ProductDetail";
 
 function App() {
 	return (
@@ -34,11 +37,13 @@ function App() {
 				<Route path="/verify/:token" element={<VerifyPage />} />
 				<Route path="/admin/login" element={<AdminLoginPage />} />
 				<Route path="/account/change-password" element={<ChangePasswordPage />} />
-				<Route path="/detail/:inventory_id" element={<ProductDetail />} />
 				<Route path="/cart/checkout" element={<CheckoutPage />} />
 				<Route path="/cart/checkout/address/change" element={<SwitchAddress />} />
 				<Route path="/cart/checkout/voucher/change" element={<SwitchVoucher />} />
 				<Route path="/cart/checkout/logistic/change" element={<SwitchLogistic />} />
+				<Route path="/products/" element={<ProductPage />} />
+				<Route path="/product/detail/:inventory_id" element={<ProductDetail />} />
+				<Route path="/user/profile-update" element={<UserAccountSettingPage />} />
 
 				{/* //Admin Auth Page */}
 				<Route path="/admin/promo" element={<AdminAuthGuard component={<ProductPromotion />} />} />
