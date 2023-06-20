@@ -54,13 +54,14 @@ const setAddress = (state, action) => {
 const setLogistic = (state, action) => {
 	const logistic = getLogisticData(action.payload);
 
-	const summary = getSummaryAfterLogistic(state.summary, logistic.cost);
+	let summary = getSummaryAfterLogistic(state.summary, logistic.cost);
+	summary = getSummaryAfterVoucher(summary, { Voucher: { ...state.voucher } });
 
 	return { ...state, logistic, summary };
 };
 
 const initializeCart = (state, action) => {
-	const summary = state.summary.hasLoaded ? state.summary : initializeSummary(action.payload);
+	const summary = state.summary?.hasLoaded ? state.summary : initializeSummary(action.payload);
 
 	const branch = determineBranch(action.payload);
 
@@ -68,11 +69,11 @@ const initializeCart = (state, action) => {
 };
 
 const applyVoucher = (state, action) => {
-	const { id, name, description, value, max_discount } = action.payload?.Voucher;
+	const { id, name, description, value, max_discount, Promotion } = action.payload?.Voucher;
 
 	const summary = getSummaryAfterVoucher(state.summary, action.payload);
 
-	return { ...state, voucher: { id, name, value, max_discount, description }, summary };
+	return { ...state, voucher: { id, name, value, max_discount, description, Promotion: { ...Promotion } }, summary };
 };
 
 const removeVoucher = (state, action) => {

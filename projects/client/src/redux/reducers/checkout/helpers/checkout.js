@@ -98,15 +98,20 @@ export const getSummaryAfterVoucher = (summaryState, voucher) => {
 	}
 
 	if (promotion_id === 1) {
-		let logistic = summary.raw.logistic - raw_discount;
+		let logistic = summary?.raw?.logistic - raw_discount;
 		if (logistic < 0) logistic = 0;
 
-		return { ...summary, logistic, discount: raw_discount, total: logistic + summary.raw.subtotal };
+		return { ...summary, logistic, discount: raw_discount, total: logistic + summary?.raw?.subtotal };
 	}
 };
 
 export const getSummaryAfterLogistic = (summary, cost) => {
-	return { ...summary, logistic: cost, total: summary.raw.subtotal + cost, raw: { ...summary.raw, logistic: cost } };
+	return {
+		...summary,
+		logistic: cost,
+		total: summary?.raw?.subtotal + cost,
+		raw: { ...summary?.raw, logistic: cost },
+	};
 };
 
 export const getLogisticData = (payload) => {
