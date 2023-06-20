@@ -1,4 +1,6 @@
 import axios from "axios";
+import Swal from "sweetalert2";
+import { defaultCheckout } from "../../../redux/reducers/checkout/checkoutAction";
 
 export const getDefaultAddress = () => {
 	const token = localStorage.getItem("token");
@@ -54,11 +56,44 @@ export const getUserCart = () => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/cart`, headers);
 };
 
-export const postTransaction = (data) => {
+const promtCreateOrder = (data) =>
+	Swal.fire({
+		title: "Create Order?",
+		html: `Total Payment: <b>Rp ${data.summary.total.toLocaleString("id")}</b>`,
+		icon: "question",
+		showCancelButton: true,
+		confirmButtonColor: "#0EB177",
+		cancelButtonColor: "#d33",
+		confirmButtonText: "Confirm",
+	});
+
+const successAlert = (navigate, dispatch) => {
+	Swal.fire({
+		title: "Order Created!",
+		html: `Send Payment Within 1 x 24 Hour<br><br><b class="mt-2">BCA 8885059123 A/N Groseria Store ID</b>`,
+		icon: "success",
+		confirmButtonColor: "#0EB177",
+	});
+	navigate("/order");
+	dispatch(defaultCheckout());
+};
+
+export const postTransaction = (data, dispatch, navigate) => {
 	const token = localStorage.getItem("token");
 	const headers = { headers: { Authorization: `Bearer ${token}` } };
 
-	return axios.post(`${process.env.REACT_APP_API_BASE_URL}/transaction/create`, data, headers);
+	promtCreateOrder(data).then(async (result) => {
+		if (result.isConfirmed) {
+			await axios
+				.post(`${process.env.REACT_APP_API_BASE_URL}/transaction/create`, data, headers)
+				.then((result) => {
+					successAlert(navigate, dispatch);
+				})
+				.catch((error) => {
+					Swal.fire(error.response.data);
+				});
+		}
+	});
 };
 
 export const getMaxDiscount = (data) => {
@@ -71,6 +106,19 @@ export const getMaxDiscount = (data) => {
 	}
 
 	return text;
+};
+
+export const postLogisticServices = (checkout, courier) => {
+	const token = localStorage.getItem("token");
+	const headers = { headers: { Authorization: `Bearer ${token}` } };
+	const body = {
+		branch_city_id: checkout.branch.city_id,
+		city_id: checkout.address.City.id,
+		weight: checkout.summary.weight,
+		courier,
+	};
+
+	return axios.post(`${process.env.REACT_APP_API_BASE_URL}/rajaongkir/cost`, body, headers);
 };
 
 export const getMinSpend = (data) => {
