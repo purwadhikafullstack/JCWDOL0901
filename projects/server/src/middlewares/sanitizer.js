@@ -126,6 +126,23 @@ const postTransactionBodySanitizer = async (request, response, next) => {
 	next();
 };
 
+const postRajaOngkirCostBodySanitizer = async (request, response, next) => {
+	const { branch_city_id, city_id, weight, courier } = request.body;
+
+	const payload = {
+		branch_city_id,
+		city_id,
+		weight,
+		courier,
+	};
+
+	request.payload = payload;
+
+	delete request.body;
+
+	next();
+};
+
 module.exports = {
 	getInventoriesQuerySanitizer,
 	getAdminsQuerySanitizer,
@@ -137,4 +154,5 @@ module.exports = {
 	getRelatedProductsQuerySanitizer,
 	getProductsRecommendationQuerySanitizer,
 	postTransactionBodySanitizer,
+	postRajaOngkirCostBodySanitizer,
 };

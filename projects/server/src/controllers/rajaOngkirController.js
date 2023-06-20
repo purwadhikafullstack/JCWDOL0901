@@ -5,7 +5,7 @@ const postRajaOngkirCost = async (request, response) => {
 
 	await startFindLogisticFee(branch_city_id, city_id, weight, courier)
 		.then((data) => {
-			response.status(200).send(data.rajaongkir);
+			response.status(200).send(data.rajaongkir.results);
 		})
 		.catch((error) => {
 			response.status(error.code).send(error.message);
