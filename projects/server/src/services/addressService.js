@@ -14,6 +14,8 @@ const {
 	setDefaultAddressQuery,
 	deleteAddressQuery,
 } = require("../queries/Addresses");
+const { readCityQuery } = require("../queries/Data");
+const { getCoordinates } = require("../utils/opencage");
 
 module.exports = {
 	startGetUserAddresses: async (user_id) => {
@@ -41,7 +43,9 @@ module.exports = {
 	startCreateAddress: async (user_id, body) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const { label, city_id, address, latitude, longitude } = body;
+				const { label, city_id, address } = body;
+				const city = await readCityQuery(city_id);
+				const { latitude, longitude } = await getCoordinates(city.type, city.name, city.Province.name);
 				const is_default = false;
 				const result = await createAddressQuery(
 					user_id,
@@ -55,6 +59,7 @@ module.exports = {
 
 				return resolve(result);
 			} catch (error) {
+				console.log(error);
 				return reject(await startCreateHandler(error));
 			}
 		});

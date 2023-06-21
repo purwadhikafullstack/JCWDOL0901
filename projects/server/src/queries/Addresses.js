@@ -1,8 +1,9 @@
-const { Addresses } = require("../models/index.js");
+const { Addresses, Cities } = require("../models/index.js");
 
 const getUserAddressesQuery = async (user_id) => {
 	const addressData = await Addresses.findAll({
 		where: { user_id },
+		include: Cities,
 	});
 
 	return addressData;

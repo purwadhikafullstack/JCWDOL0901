@@ -13,7 +13,7 @@ const createNewAddressErrorHandler = async (error) => {
 	return "Something went wrong!";
 };
 
-export const createNewAddressHandler = async (input) => {
+export const createNewAddressHandler = async (input, navigate) => {
 	try {
 		const token = localStorage.getItem("token");
 		const config = {
@@ -27,6 +27,7 @@ export const createNewAddressHandler = async (input) => {
 			showConfirmButton: false,
 			timer: 2000,
 		});
+		navigate("/account/manage-address");
 	} catch (error) {
 		Swal.fire({
 			icon: "error",

@@ -1,13 +1,14 @@
 import React from "react";
 import BackButton from "../../components/BackButton.jsx";
 import CompanyLogo from "../../components/CompanyLogo.jsx";
-import CreateNewAddressForm from "../../components/ManageAddress/CreateNewAddressForm.jsx";
+import EditAddressForm from "../../components/ManageAddress/EditAddressForm.jsx";
+import { useLocation } from "react-router-dom";
 
 const Illustration = () => {
 	return (
 		<div className="my-auto mx-12 flex flex-row sm:flex-col items-center">
 			<div className="mb-10 text-green-100 text-2xl sm:text-3xl font-medium text-left sm:text-center sm:mt-24">
-				Create New Address
+				Edit Address
 			</div>
 			<img
 				className="w-[200px] sm:w-[250px] pb-12 mx-auto"
@@ -18,7 +19,8 @@ const Illustration = () => {
 	);
 };
 
-const CreateNewAddress = () => {
+const EditAddress = () => {
+	const address = useLocation().state;
 	return (
 		<div className="bg-green-100 flex items-center justify-center h-screen">
 			<div className="flex flex-col sm:flex-row bg-white rounded-lg h-full sm:h-auto">
@@ -30,11 +32,11 @@ const CreateNewAddress = () => {
 					<div className="flex justify-center">
 						<CompanyLogo color="true" className="mt-8 w-[50px] cursor-pointer hidden sm:block" />
 					</div>
-					<CreateNewAddressForm />
+					<EditAddressForm address={address} />
 				</div>
 			</div>
 		</div>
 	);
 };
 
-export default CreateNewAddress;
+export default EditAddress;

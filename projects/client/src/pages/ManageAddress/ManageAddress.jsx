@@ -3,7 +3,6 @@ import PageTitle from "../../components/PageTitle";
 import CompanyLogo from "../../components/CompanyLogo.jsx";
 import BackButton from "../../components/BackButton";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
 
 const ResponsiveLogo = () => {
 	return (
@@ -22,7 +21,7 @@ const Header = () => {
 	return (
 		<div className="text-black flex flex-col bg-green-200 sm:bg-white pb-4">
 			<BackButton
-				url={-1}
+				url="/account"
 				color="sm:text-gray-400 text-green-100 text-3xl sm:hover:text-green-300 hover:text-gray-200"
 			/>
 			<ResponsiveLogo />

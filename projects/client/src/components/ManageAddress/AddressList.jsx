@@ -1,15 +1,18 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { ChevronRightIcon } from "@heroicons/react/solid";
-import { IdentificationIcon, KeyIcon, LocationMarkerIcon, PencilIcon, UserCircleIcon } from "@heroicons/react/outline";
+import { LocationMarkerIcon, PencilIcon } from "@heroicons/react/outline";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
 const AddressItem = ({ address }) => {
 	const navigate = useNavigate();
+	console.log(address);
 	return (
 		<li key={address.label}>
-			<button className="block hover:bg-gray-100 w-full" onClick={() => navigate("/")}>
+			<button
+				className="block hover:bg-gray-100 w-full"
+				onClick={() => navigate("/account/edit-address", { state: address })}
+			>
 				<div className="flex flex-row items-center px-4 py-4 sm:px-6">
 					<div className="min-w-0 flex-1 flex items-center">
 						<div className="flex-shrink-0">
@@ -47,7 +50,6 @@ export default function AddressList() {
 			})
 			.catch((error) => alert("Server Unavailable"));
 	}, []);
-	console.log(addresses);
 
 	return (
 		<div className="my-6 sm:mx-2">

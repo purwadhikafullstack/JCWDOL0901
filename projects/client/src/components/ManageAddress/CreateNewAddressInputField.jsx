@@ -4,10 +4,10 @@ import SelectMenus from "../SelectMenus";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const CreateNewAddressInputField = ({ formik }) => {
+const CreateNewAddressInputField = ({ formik, address }) => {
 	const [cities, setCities] = useState([]);
 	const [provinces, setProvinces] = useState([]);
-	const [provinceId, setProvinceId] = useState(6);
+	const [provinceId, setProvinceId] = useState(address ? address.City.province_id : 0);
 	useEffect(() => {
 		async function getCitiesAndProvinces() {
 			const cityData = await axios.get(

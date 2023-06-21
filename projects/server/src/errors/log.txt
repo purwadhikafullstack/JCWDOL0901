@@ -129,3 +129,63 @@
 	Source: startCreateHandler
 	Error: {"name":"SequelizeValidationError","errors":[{"message":"Addresses.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"user_id":1,"label":"Kantor","city_id":"153","address":"Kemang","is_default":false},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Addresses.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"user_id":1,"label":"Kantor","city_id":"153","address":"Kemang","is_default":false},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
 	
+	===
+	Time: Wed Jun 21 2023 22:19:39 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Addresses.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"user_id":1,"label":"ASD","city_id":"151","address":"ASD","is_default":false},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Addresses.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"user_id":1,"label":"ASD","city_id":"151","address":"ASD","is_default":false},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Wed Jun 21 2023 22:20:43 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Addresses.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"user_id":1,"label":"ASD","city_id":"94","address":"ASD","is_default":false},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Addresses.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"user_id":1,"label":"ASD","city_id":"94","address":"ASD","is_default":false},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Wed Jun 21 2023 22:21:21 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Addresses.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"user_id":1,"label":"ASD","city_id":"94","address":"ASD","is_default":false},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Addresses.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"user_id":1,"label":"ASD","city_id":"94","address":"ASD","is_default":false},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Wed Jun 21 2023 22:25:20 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 21 2023 22:25:23 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 21 2023 22:25:29 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 21 2023 22:25:30 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 21 2023 22:25:58 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 21 2023 22:26:20 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 21 2023 22:26:35 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Addresses.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"user_id":1,"label":"ASD","city_id":"94","address":"ASD","is_default":false},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Addresses.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"user_id":1,"label":"ASD","city_id":"94","address":"ASD","is_default":false},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Wed Jun 21 2023 22:27:05 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Addresses.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"user_id":1,"label":"ASD","city_id":"94","address":"ASD","is_default":false},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Addresses.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"user_id":1,"label":"ASD","city_id":"94","address":"ASD","is_default":false},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Wed Jun 21 2023 22:28:26 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {}
+	
