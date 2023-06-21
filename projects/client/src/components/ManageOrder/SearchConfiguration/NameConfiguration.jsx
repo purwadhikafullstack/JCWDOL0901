@@ -1,6 +1,6 @@
 import React from "react";
 
-const NameConfiguration = ({ setName }) => {
+const NameConfiguration = ({ name, setName }) => {
 	const [input, setInput] = React.useState("");
 
 	return (
@@ -16,9 +16,10 @@ const NameConfiguration = ({ setName }) => {
 				</div>
 				<input
 					type="text"
-					className="border border-green-400 px-3 py-2 w-[70%] rounded-lg mb-auto text-black outline-0"
+					className="border border-green-400 px-3 py-2 w-[90%] rounded-lg mb-auto text-black outline-0 lg:w-[70%]"
 					placeholder="Order ID / Customer"
-					onKeyDown={(event) => (event.key === "Enter" ? setName(input) : null)}
+					value={name}
+					onKeyDown={(event) => setName((previousKeys) => previousKeys + event.key)}
 					onChange={(event) => setInput(event.target.value)}
 				/>
 				<div

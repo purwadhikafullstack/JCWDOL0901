@@ -12,6 +12,17 @@ export const getFilterBy = () => {
 	});
 };
 
+export const getFilterByForBranchAdmin = () => {
+	return new Promise((resolve, reject) => {
+		resolve({
+			data: [
+				{ id: "status_id", name: "Status" },
+				{ id: "voucher_id", name: "Voucher" },
+			],
+		});
+	});
+};
+
 export const getStatuses = () => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/data/statuses`);
 };
@@ -62,4 +73,14 @@ export const getOrderOfAmount = () => {
 			],
 		});
 	});
+};
+
+export const resetSetting = (setStartDate, setEndDate, setName, setFilterBy, setFilter, setSort, setOrder) => {
+	setStartDate("");
+	setEndDate("");
+	setName("");
+	setFilterBy("");
+	setFilter("");
+	setSort("");
+	setOrder("");
 };

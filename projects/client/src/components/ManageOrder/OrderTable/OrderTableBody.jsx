@@ -1,14 +1,17 @@
 import React from "react";
 
-const OrderTableBody = () => {
+const OrderTableBody = ({ superAdmin }) => {
+	console.log(superAdmin);
 	return (
 		<>
 			<div className="rounded-lg border border-green-300 border-2 mt-4">
 				<div className="text-sm px-8 grid grid-cols-12 w-full h-16 py-2">
 					<div className="col-span-1 text-[#f47229] font-bold my-auto">1</div>
-					<div className="col-span-2 my-auto whitespace-nowrap overflow-hidden truncate font-medium">
-						Groseria Store Semarang
-					</div>
+					{superAdmin && (
+						<div className="col-span-2 my-auto whitespace-nowrap overflow-hidden truncate font-medium">
+							Groseria Store Semarang
+						</div>
+					)}
 
 					<div className="col-span-2 my-auto flex flex-col">
 						<span>24 Juli 2023</span>
@@ -24,14 +27,22 @@ const OrderTableBody = () => {
 							check_small
 						</span>
 					</div>
+					{!superAdmin && (
+						<div className="col-span-2 my-auto">
+							<button className="bg-green-300 text-green-100 px-2 py-1 rounded-lg mr-2">Update</button>
+							<button className="bg-red text-green-100 px-2 py-1 rounded-lg mr-2">Decline</button>
+						</div>
+					)}
 				</div>
 			</div>
 			<div className="rounded-lg border border-green-300 border-2 mt-4">
 				<div className="text-sm px-8 grid grid-cols-12 w-full h-16 py-2">
 					<div className="col-span-1 text-[#f47229] font-bold my-auto">2</div>
-					<div className="col-span-2 my-auto whitespace-nowrap overflow-hidden truncate font-medium">
-						Groseria Store Semarang
-					</div>
+					{superAdmin && (
+						<div className="col-span-2 my-auto whitespace-nowrap overflow-hidden truncate font-medium">
+							Groseria Store Semarang
+						</div>
+					)}
 
 					<div className="col-span-2 my-auto flex flex-col">
 						<span>24 Juli 2023</span>
@@ -47,14 +58,22 @@ const OrderTableBody = () => {
 							check_small
 						</span>
 					</div>
+					{!superAdmin && (
+						<div className="col-span-2 my-auto">
+							<button className="bg-green-300 text-green-100 px-2 py-1 rounded-lg mr-2">Update</button>
+							<button className="bg-red text-green-100 px-2 py-1 rounded-lg mr-2">Decline</button>
+						</div>
+					)}
 				</div>
 			</div>
 			<div className="rounded-lg border border-green-300  border-2  mt-3">
 				<div className="text-sm px-8 grid grid-cols-12 w-full h-16 py-2">
 					<div className="col-span-1 text-[#f47229] font-bold my-auto">3</div>
-					<div className="col-span-2 my-auto whitespace-nowrap overflow-hidden truncate font-medium">
-						Groseria Store Semarang
-					</div>
+					{superAdmin && (
+						<div className="col-span-2 my-auto whitespace-nowrap overflow-hidden truncate font-medium">
+							Groseria Store Semarang
+						</div>
+					)}
 					<div className="col-span-2 my-auto flex flex-col">
 						<span>24 Juli 2023</span>
 						<span>12:30:00</span>
@@ -69,14 +88,22 @@ const OrderTableBody = () => {
 							horizontal_rule{" "}
 						</span>
 					</div>
+					{!superAdmin && (
+						<div className="col-span-2 my-auto">
+							<button className="bg-green-300 text-green-100 px-2 py-1 rounded-lg mr-2">Update</button>
+							<button className="bg-red text-green-100 px-2 py-1 rounded-lg mr-2">Decline</button>
+						</div>
+					)}
 				</div>
 			</div>
 			<div className="rounded-lg border border-green-300  border-2  mt-3">
 				<div className="text-sm px-8 grid grid-cols-12 w-full h-16 py-2">
 					<div className="col-span-1 text-[#f47229] font-bold my-auto">4</div>
-					<div className="col-span-2 my-auto whitespace-nowrap overflow-hidden truncate font-medium">
-						Groseria Store Semarang
-					</div>
+					{superAdmin && (
+						<div className="col-span-2 my-auto whitespace-nowrap overflow-hidden truncate font-medium">
+							Groseria Store Semarang
+						</div>
+					)}
 
 					<div className="col-span-2 my-auto flex flex-col">
 						<span>24 Juli 2023</span>
@@ -92,14 +119,22 @@ const OrderTableBody = () => {
 							horizontal_rule{" "}
 						</span>
 					</div>
+					{!superAdmin && (
+						<div className="col-span-2 my-auto">
+							<button className="bg-green-300 text-green-100 px-2 py-1 rounded-lg mr-2">Update</button>
+							<button className="bg-red text-green-100 px-2 py-1 rounded-lg mr-2">Decline</button>
+						</div>
+					)}
 				</div>
 			</div>
 			<div className="rounded-lg border border-green-300  border-2  mt-3">
 				<div className="text-sm px-8 grid grid-cols-12 w-full h-16 py-2">
 					<div className="col-span-1 text-[#f47229] font-bold my-auto">5</div>
-					<div className="col-span-2 my-auto whitespace-nowrap overflow-hidden truncate font-medium">
-						Groseria Store Semarang
-					</div>
+					{superAdmin && (
+						<div className="col-span-2 my-auto whitespace-nowrap overflow-hidden truncate font-medium">
+							Groseria Store Semarang
+						</div>
+					)}
 
 					<div className="col-span-2 my-auto flex flex-col">
 						<span>24 Juli 2023</span>
@@ -115,14 +150,22 @@ const OrderTableBody = () => {
 							horizontal_rule{" "}
 						</span>
 					</div>
+					{!superAdmin && (
+						<div className="col-span-2 my-auto">
+							<button className="bg-green-300 text-green-100 px-2 py-1 rounded-lg mr-2">Update</button>
+							<button className="bg-red text-green-100 px-2 py-1 rounded-lg mr-2">Decline</button>
+						</div>
+					)}
 				</div>
 			</div>
 			<div className="rounded-lg border border-green-300  border-2  mt-3">
 				<div className="text-sm px-8 grid grid-cols-12 w-full h-16 py-2">
 					<div className="col-span-1 text-[#f47229] font-bold my-auto">6</div>
-					<div className="col-span-2 my-auto whitespace-nowrap overflow-hidden truncate font-medium">
-						Groseria Store Semarang
-					</div>
+					{superAdmin && (
+						<div className="col-span-2 my-auto whitespace-nowrap overflow-hidden truncate font-medium">
+							Groseria Store Semarang
+						</div>
+					)}
 
 					<div className="col-span-2 my-auto flex flex-col">
 						<span>24 Juli 2023</span>
@@ -138,6 +181,12 @@ const OrderTableBody = () => {
 							horizontal_rule{" "}
 						</span>
 					</div>
+					{!superAdmin && (
+						<div className="col-span-2 my-auto">
+							<button className="bg-green-300 text-green-100 px-2 py-1 rounded-lg mr-2">Update</button>
+							<button className="bg-red text-green-100 px-2 py-1 rounded-lg mr-2">Decline</button>
+						</div>
+					)}
 				</div>
 			</div>
 		</>
