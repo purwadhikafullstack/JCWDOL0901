@@ -2,7 +2,6 @@ const { updateProfile, getProfile, updateAvatar, getAvatar } = require("../contr
 
 const { isUser } = require("../middlewares/authMiddleware");
 const { uploadAvatarFile } = require("../middlewares/multer");
-// const { uploadAvatar } = require("../middlewares/avatarMulter");
 
 const router = require("express").Router();
 

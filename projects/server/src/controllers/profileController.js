@@ -26,15 +26,11 @@ const getProfile = async (request, response) => {
 };
 
 const updateAvatar = async (request, response) => {
-	console.log("req.file controller: ", request.file);
-	console.log("req.body controller: ", request.body);
-	console.log("req.id controller: ", request.userData.id);
-	await startUpdateAvatar(request.file, request.userData.id)
+	await startUpdateAvatar(request.file.filename, request.userData.id)
 		.then((result) => {
 			response.status(200).send(result);
 		})
 		.catch((error) => {
-			console.log("error controller: ", error);
 			response.status(error.code).send(error.message);
 		});
 };

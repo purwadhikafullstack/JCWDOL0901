@@ -11,7 +11,7 @@ const UpdateCategoryForm = ({ item }) => {
 	const navigate = useNavigate();
 	const [file, setFile] = useState(process.env.REACT_APP_IMAGE_BASE_URL + item.image);
 	const formik = useFormik(formikUpdateCategoryConfiguration(navigate, item));
-console.log("item of category useLocation: ", item)
+
 	return (
 		<div className="my-auto items-center min-w-fit shrink-0 flex flex-col pb-10 px-8">
 			<form onSubmit={formik.handleSubmit} encType="multipart/form-data">

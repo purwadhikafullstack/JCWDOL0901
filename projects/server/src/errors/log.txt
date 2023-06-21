@@ -84,3 +84,8 @@
 	Source: startUpdateAvatarErrorHandler
 	Error: {}
 	
+	===
+	Time: Wed Jun 21 2023 20:54:49 GMT+0700 (Western Indonesia Time)
+	Source: startUpdateAvatarErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"avatar cannot be an array or an object","type":"string violation","path":"avatar","value":{"fieldname":"avatar","originalname":"snap2.png","encoding":"7bit","mimetype":"image/png","destination":"C:\\Users\\farre\\OneDrive\\Desktop\\code\\purwadhika\\OGWA\\JCWDOL0901\\projects\\server\\src\\middlewares../../../../client/public/assets/avatars","filename":"avatar_1687355687099601141539.png","path":"C:\\Users\\farre\\OneDrive\\Desktop\\code\\purwadhika\\OGWA\\JCWDOL0901\\projects\\client\\public\\assets\\avatars\\avatar_1687355687099601141539.png","size":448331},"origin":"CORE","instance":{"gender":null,"birth":null,"user_id":null,"avatar":{"fieldname":"avatar","originalname":"snap2.png","encoding":"7bit","mimetype":"image/png","destination":"C:\\Users\\farre\\OneDrive\\Desktop\\code\\purwadhika\\OGWA\\JCWDOL0901\\projects\\server\\src\\middlewares../../../../client/public/assets/avatars","filename":"avatar_1687355687099601141539.png","path":"C:\\Users\\farre\\OneDrive\\Desktop\\code\\purwadhika\\OGWA\\JCWDOL0901\\projects\\client\\public\\assets\\avatars\\avatar_1687355687099601141539.png","size":448331}},"validatorKey":"not_a_string","validatorName":null,"validatorArgs":[]}]}
+	

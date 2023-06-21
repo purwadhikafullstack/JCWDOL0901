@@ -41,7 +41,6 @@ module.exports = {
 				const result = await updateAvatarQuery(file, id);
 				return resolve(result);
 			} catch (error) {
-				console.log("error service update: ", error);
 				return reject(await startUpdateAvatarErrorHandler(error));
 			}
 		});

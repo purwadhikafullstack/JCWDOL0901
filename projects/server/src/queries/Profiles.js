@@ -40,7 +40,7 @@ const updateUserProfileQuery = async (body, id) => {
 };
 
 const updateAvatarQuery = async (file, user_id) => {
-	return await Profiles.update({ avatar: file }, { where: { user_id } });
+	return await Profiles.update({ avatar: `/assets/avatars/${file}` }, { where: { user_id } });
 };
 
 const getAvatarQuery = async (user_id) => {

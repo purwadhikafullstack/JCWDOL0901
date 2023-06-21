@@ -23,19 +23,8 @@ const validationSchema = Yup.object({
 			(value) => !value || (value && SUPPORTED_FORMATS.includes(value.type)),
 		),
 });
-// const validationSchema = Yup.object({
-// 	avatar: Yup.mixed().required(requiredMessage),
-// 	// .nullable()
-// 	// .test("FILE_SIZE", "Uploaded file is too big.", (value) => !value || (value && value.size <= FILE_SIZE))
-// 	// .test(
-// 	// 	"FILE_FORMAT",
-// 	// 	"Uploaded file has unsupported format.",
-// 	// 	(value) => !value || (value && SUPPORTED_FORMATS.includes(value.type)),
-// 	// ),
-// });
 
 const onSubmitConfiguration = async (values) => {
-	console.log("data FE formikConfig: ", values);
 	await updateAvatarHandler(values);
 };
 

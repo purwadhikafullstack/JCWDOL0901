@@ -21,13 +21,13 @@ const updateAvatarErrorHandler = async (error) => {
 
 export const updateAvatarHandler = async (data) => {
 	try {
+		const formData = new FormData();
+		formData.append("avatar", data.avatar);
 		const token = localStorage.getItem("token");
 		const config = {
 			headers: { Authorization: `Bearer ${token}` },
 		};
-		await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/profile/avatar/update`, data, config);
-		console.log("data FE handler: ", data);
-		console.log("config FE handler: ", config);
+		await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/profile/avatar/update`, formData, config);
 
 		Swal.fire({
 			icon: "success",
