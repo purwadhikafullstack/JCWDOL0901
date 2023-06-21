@@ -109,3 +109,13 @@
 	Source: startDeleteteHandler
 	Error: "No rows deleted"
 	
+	===
+	Time: Wed Jun 21 2023 16:20:06 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: "No rows deleted"
+	
+	===
+	Time: Wed Jun 21 2023 16:20:10 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: "No rows deleted"
+	

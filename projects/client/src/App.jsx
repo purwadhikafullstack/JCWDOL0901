@@ -20,6 +20,7 @@ import ChangePasswordPage from "./pages/ChangePassword/ChangePasswordPage";
 import ProductPage from "./pages/Product/ProductPage";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import AccountPage from "./pages/Account/AccountPage";
+import ManageAddress from "./pages/ManageAddress/ManageAddress";
 
 function App() {
 	return (
@@ -35,7 +36,8 @@ function App() {
 				<Route path="/account/change-password" element={<ChangePasswordPage />} />
 				<Route path="/products/" element={<ProductPage />} />
 				<Route path="/product/detail/:inventory_id" element={<ProductDetail />} />
-				<Route path="/user/profile-update" element={<UserAccountSettingPage />} />
+				<Route path="/account/profile-update" element={<UserAccountSettingPage />} />
+				<Route path="/account/manage-address" element={<ManageAddress />} />
 				<Route path="/account" element={<AccountPage />} />
 
 				{/* //Admin Auth Page */}
