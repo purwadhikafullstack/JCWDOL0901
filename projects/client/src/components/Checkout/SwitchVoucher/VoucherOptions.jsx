@@ -27,7 +27,7 @@ const Spending = ({ data }) => {
 const VoucherOptions = ({ vouchers, dispatch, globalState }) => {
 	const summary = useSelector((state) => state.checkout.summary);
 	return vouchers.map((data, index) => {
-		const disabled = data?.Voucher?.min_spend > summary.subtotal;
+		const disabled = data?.Voucher?.min_spend > summary.total;
 		return (
 			<div
 				key={index}
@@ -45,6 +45,7 @@ const VoucherOptions = ({ vouchers, dispatch, globalState }) => {
 				<input
 					type="radio"
 					name="select_voucher"
+					className="border border-green-400 checked:bg-green-400 disabled:opacity-20 disabled:bg-gray-200 "
 					disabled={disabled}
 					checked={globalState?.checkout?.voucher?.id === data.id}
 				/>
