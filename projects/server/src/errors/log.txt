@@ -199,3 +199,8 @@
 	Source: startUpdateErrorHandler
 	Error: {}
 	
+	===
+	Time: Thu Jun 22 2023 00:37:29 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: "No rows deleted"
+	

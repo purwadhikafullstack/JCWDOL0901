@@ -22,7 +22,7 @@ const CreateNewAddress = () => {
 	return (
 		<div className="bg-green-100 flex items-center justify-center h-screen">
 			<div className="flex flex-col sm:flex-row bg-white rounded-lg h-full sm:h-auto">
-				<div className="sm:bg-green-200 z-10 rounded-t-lg sm:rounded-tr-none rounded-tr-lg sm:rounded-l-lg bg-green-200">
+				<div className="sm:bg-green-500 z-10 rounded-t-lg sm:rounded-tr-none rounded-tr-lg sm:rounded-l-lg bg-green-500">
 					<BackButton url="/account/manage-address" color="text-green-100" />
 					<Illustration />
 				</div>

@@ -6,7 +6,6 @@ import axios from "axios";
 
 const AddressItem = ({ address }) => {
 	const navigate = useNavigate();
-	console.log(address);
 	return (
 		<li key={address.label}>
 			<button
