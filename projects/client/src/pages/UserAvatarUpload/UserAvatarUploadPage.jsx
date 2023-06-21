@@ -44,8 +44,8 @@ const Illustration = () => {
 // 	);
 // }
 function UserAvatarUploadPage() {
-	const item = useLocation().state;
-  console.log(item);
+	// const item = useLocation().state;
+	// console.log("useLocation item in avatar page: ", item);
 	// useEffect(() => {
 	// 	console.log(item);
 	// }, []);
@@ -57,9 +57,6 @@ function UserAvatarUploadPage() {
 					<Illustration />
 				</div>
 				<div className="bg-white rounded-r-lg pb-4">
-					<div className="flex justify-center py-4">
-						<CompanyLogo color="true" className="mt-8 w-[75px] cursor-pointer hidden sm:block" />
-					</div>
 					<UpdateAvatarForm />
 					{/* <UpdateAvatarForm item={item} /> */}
 				</div>

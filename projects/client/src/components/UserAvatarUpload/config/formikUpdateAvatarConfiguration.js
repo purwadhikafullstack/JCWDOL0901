@@ -2,13 +2,10 @@ import * as Yup from "yup";
 
 import { updateAvatarHandler } from "../handlers/updateAvatarHandler";
 
-const initialValues = (file) => {
-	console.log("file in initialValues formik: ", file);
-	return {
-		name: "",
-		image: "",
-	};
-};
+const FILE_SIZE = 1000000;
+const SUPPORTED_FORMATS = ["image/jpeg", "image/png", "image/jpg", "image/gif"];
+
+const initialValues = {};
 
 const validateOnChange = true;
 
@@ -16,21 +13,36 @@ const validateOnBlur = true;
 
 const requiredMessage = "Field can't be empty";
 
-const name = Yup.string().required(requiredMessage);
-
 const validationSchema = Yup.object({
-	name,
+	avatar: Yup.mixed()
+		.required(requiredMessage)
+		.test("FILE_SIZE", "Uploaded file is too big.", (value) => !value || (value && value.size <= FILE_SIZE))
+		.test(
+			"FILE_FORMAT",
+			"Uploaded file has unsupported format.",
+			(value) => !value || (value && SUPPORTED_FORMATS.includes(value.type)),
+		),
 });
+// const validationSchema = Yup.object({
+// 	avatar: Yup.mixed().required(requiredMessage),
+// 	// .nullable()
+// 	// .test("FILE_SIZE", "Uploaded file is too big.", (value) => !value || (value && value.size <= FILE_SIZE))
+// 	// .test(
+// 	// 	"FILE_FORMAT",
+// 	// 	"Uploaded file has unsupported format.",
+// 	// 	(value) => !value || (value && SUPPORTED_FORMATS.includes(value.type)),
+// 	// ),
+// });
 
-const onSubmitConfiguration = async (values, setError) => {
-	console.log("values in onSubmitConfiguration: ", values, "setError in onSubmitConfiguration: ", setError);
+const onSubmitConfiguration = async (values) => {
+	console.log("data FE formikConfig: ", values);
 	await updateAvatarHandler(values);
 };
 
-export const formikUpdateAvatarConfiguration = (file, setError) => {
+export const formikUpdateAvatarConfiguration = () => {
 	return {
-		initialValues: initialValues(file),
-		onSubmit: async (values) => onSubmitConfiguration(values, setError),
+		initialValues,
+		onSubmit: async (values) => onSubmitConfiguration(values),
 		validateOnChange,
 		validateOnBlur,
 		validationSchema,

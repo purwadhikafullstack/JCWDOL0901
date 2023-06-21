@@ -7,7 +7,7 @@ function AvatarInputField({ formik, setFile }) {
 			<FileUploadInputGroup
 				name="Upload Image"
 				type="file"
-				inputKey="image"
+				inputKey="avatar"
 				formik={formik}
 				setFile={setFile}
 			/>

@@ -9,3 +9,73 @@
 	Source: startGetAvatarErrorHandler
 	Error: {}
 	
+	===
+	Time: Wed Jun 21 2023 09:18:10 GMT+0700 (Western Indonesia Time)
+	Source: startGetAvatarErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 21 2023 09:25:04 GMT+0700 (Western Indonesia Time)
+	Source: startGetAvatarErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Profiles.id' in 'where clause'","sql":"SELECT `user_id`, `name`, `gender`, `birth`, `avatar` FROM `Profiles` AS `Profiles` WHERE `Profiles`.`id` = 1 LIMIT 1;"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Profiles.id' in 'where clause'","sql":"SELECT `user_id`, `name`, `gender`, `birth`, `avatar` FROM `Profiles` AS `Profiles` WHERE `Profiles`.`id` = 1 LIMIT 1;"},"sql":"SELECT `user_id`, `name`, `gender`, `birth`, `avatar` FROM `Profiles` AS `Profiles` WHERE `Profiles`.`id` = 1 LIMIT 1;","parameters":{}}
+	
+	===
+	Time: Wed Jun 21 2023 09:26:49 GMT+0700 (Western Indonesia Time)
+	Source: startGetAvatarErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Profiles.id' in 'where clause'","sql":"SELECT `user_id`, `name`, `gender`, `birth`, `avatar` FROM `Profiles` AS `Profiles` WHERE `Profiles`.`id` = 1 LIMIT 1;"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Profiles.id' in 'where clause'","sql":"SELECT `user_id`, `name`, `gender`, `birth`, `avatar` FROM `Profiles` AS `Profiles` WHERE `Profiles`.`id` = 1 LIMIT 1;"},"sql":"SELECT `user_id`, `name`, `gender`, `birth`, `avatar` FROM `Profiles` AS `Profiles` WHERE `Profiles`.`id` = 1 LIMIT 1;","parameters":{}}
+	
+	===
+	Time: Wed Jun 21 2023 10:44:47 GMT+0700 (Western Indonesia Time)
+	Source: startUpdateAvatarErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 21 2023 10:45:54 GMT+0700 (Western Indonesia Time)
+	Source: startUpdateAvatarErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 21 2023 10:48:44 GMT+0700 (Western Indonesia Time)
+	Source: startUpdateAvatarErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 21 2023 10:51:34 GMT+0700 (Western Indonesia Time)
+	Source: startUpdateAvatarErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 21 2023 10:53:10 GMT+0700 (Western Indonesia Time)
+	Source: startUpdateAvatarErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 21 2023 10:53:32 GMT+0700 (Western Indonesia Time)
+	Source: startUpdateAvatarErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 21 2023 10:55:41 GMT+0700 (Western Indonesia Time)
+	Source: startUpdateAvatarErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 21 2023 11:13:01 GMT+0700 (Western Indonesia Time)
+	Source: startUpdateAvatarErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 21 2023 11:16:55 GMT+0700 (Western Indonesia Time)
+	Source: startUpdateAvatarErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 21 2023 11:18:34 GMT+0700 (Western Indonesia Time)
+	Source: startUpdateAvatarErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jun 21 2023 11:23:11 GMT+0700 (Western Indonesia Time)
+	Source: startUpdateAvatarErrorHandler
+	Error: {}
+	

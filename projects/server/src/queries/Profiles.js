@@ -40,15 +40,12 @@ const updateUserProfileQuery = async (body, id) => {
 };
 
 const updateAvatarQuery = async (file, user_id) => {
-	// console.log(file);
-	// console.log(user_id);
-	// const avatar = file ? file.path : undefined;
-	return await Profiles.update({ avatar: file }, { where: { user_id } });
+	return await Profiles.update({ avatar: file.path }, { where: { user_id } });
 };
 
-const getAvatarQuery = async (id) => {
+const getAvatarQuery = async (user_id) => {
 	const user = await Profiles.findOne({
-		where: { id },
+		where: { user_id },
 	});
 
 	const data = {

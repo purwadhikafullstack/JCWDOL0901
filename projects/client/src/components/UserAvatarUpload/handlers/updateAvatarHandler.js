@@ -19,13 +19,15 @@ const updateAvatarErrorHandler = async (error) => {
 	return "Something went wrong!";
 };
 
-export const updateAvatarHandler = async (data,setError) => {
+export const updateAvatarHandler = async (data) => {
 	try {
 		const token = localStorage.getItem("token");
 		const config = {
 			headers: { Authorization: `Bearer ${token}` },
 		};
-		await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/avatar/update`, data, config);
+		await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/profile/avatar/update`, data, config);
+		console.log("data FE handler: ", data);
+		console.log("config FE handler: ", config);
 
 		Swal.fire({
 			icon: "success",
@@ -36,7 +38,7 @@ export const updateAvatarHandler = async (data,setError) => {
 	} catch (error) {
 		Swal.fire({
 			icon: "error",
-			title: await setError(updateAvatarErrorHandler(error)),
+			title: "failed to update avatar",
 			showConfirmButton: false,
 			timer: 2000,
 		});
