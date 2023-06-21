@@ -9,10 +9,10 @@ import OrderTableGroup from "../../components/ManageOrder/OrderTableGroup";
 const ResponsiveLogo = () => {
 	return (
 		<>
-			<div className="block z-40 mt-10 sm:hidden">
+			<div className="block z-40 mt-6 sm:hidden">
 				<CompanyLogo color={false} className="w-[100px] mx-auto mb-2 z-40" />
 			</div>
-			<div className="hidden mt-10 sm:block">
+			<div className="hidden mt-6 sm:block">
 				<CompanyLogo color={true} className="w-[100px] mx-auto mb-2 z-40" />
 			</div>
 		</>

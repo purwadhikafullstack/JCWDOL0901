@@ -1,8 +1,8 @@
 import React from "react";
 
-const TableHeader = () => {
+const OrderTableHead = () => {
 	return (
-		<div className="rounded-lg bg-green-500 text-green-100 min-w-[1200px] mx-6 py-2">
+		<div className="rounded-lg bg-green-500 text-green-100 py-3">
 			<div className="text-sm px-8 grid grid-cols-12 w-full uppercase font-semibold sm:text-lg">
 				<div className="col-span-1 whitespace-nowrap">Order ID</div>
 				<div className="col-span-2 whitespace-nowrap">Branch</div>
@@ -16,4 +16,4 @@ const TableHeader = () => {
 	);
 };
 
-export default TableHeader;
+export default OrderTableHead;

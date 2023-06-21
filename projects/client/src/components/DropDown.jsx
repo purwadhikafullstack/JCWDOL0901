@@ -3,12 +3,12 @@ import { Listbox, Transition } from "@headlessui/react";
 
 const ToggleDropDown = ({ open, data }) => {
 	return (
-		<Listbox.Button className={`bg-white w-full border border-green-200 py-2 rounded-lg`}>
+		<Listbox.Button
+			className={`bg-white w-full border border-green-200 py-2 rounded-lg disabled:opacity-50 disabled:border-gray-300 disabled:cursor-no-drop`}
+		>
 			<div className="flex flex-row items-center justify-end max-w-full">
 				<div className="max-w-[70%] mx-auto font-semibold text-sm overflow-x-hidden ">
-					<div className="max-w-full whitespace-nowrap text-xs box-border">
-						{data?.name || "..."}
-					</div>
+					<div className="max-w-full whitespace-nowrap text-xs box-border">{data?.name || "..."}</div>
 				</div>
 				<span className="material-symbols-rounded">expand_more</span>
 			</div>
@@ -50,8 +50,8 @@ const DropDownOptions = ({ setter, getter }) => {
 
 	React.useEffect(() => {
 		getter()
-			.then(result => setLists(result.data))
-			.catch(error => setLists([{ name: "Server Unavailable", id: 0 }]));
+			.then((result) => setLists(result.data))
+			.catch((error) => setLists([{ name: "Server Unavailable", id: 0 }]));
 	}, []);
 
 	return (
@@ -75,9 +75,9 @@ const DropDownOptions = ({ setter, getter }) => {
 	);
 };
 
-const DropDown = ({ data, setter, getter }) => {
+const DropDown = ({ data, setter, getter, disabled = false }) => {
 	return (
-		<Listbox>
+		<Listbox disabled={disabled}>
 			{({ open }) => {
 				return (
 					<div className="w-full">
