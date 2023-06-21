@@ -68,8 +68,8 @@ export const getOrderOfAmount = () => {
 	return new Promise((resolve, reject) => {
 		resolve({
 			data: [
-				{ id: "1", name: "High to Low" },
-				{ id: "0", name: "Low to High" },
+				{ id: "1", name: "Low to High" },
+				{ id: "0", name: "High to Low" },
 			],
 		});
 	});
@@ -83,4 +83,18 @@ export const resetSetting = (setStartDate, setEndDate, setName, setFilterBy, set
 	setFilter("");
 	setSort("");
 	setOrder("");
+};
+
+export const generateUrlQuery = (name, startDate, endDate, filterBy, filter, sort, order, page) => {
+	let url = "";
+
+	url += `?page=${page}`;
+	url += `&name=${name}`;
+	url += `&start_after=${startDate}`;
+	url += `&end_before=${endDate}`;
+	url += filter ? `&${filterBy.id}=${filter.id}` : "";
+	url += order.id ? `&order=${sort.id}` : "";
+	url += order.id ? `&asc=${order.id}` : "";
+
+	return url;
 };

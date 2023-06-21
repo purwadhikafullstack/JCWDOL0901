@@ -11,7 +11,7 @@ import DisabledDropDown from "../../DisabledDropDown";
 import { useSelector } from "react-redux";
 
 const Filter = ({ filterBy, filter, setFilter }) => {
-	React.useState(() => {
+	React.useEffect(() => {
 		setFilter("");
 	}, [filterBy.id]);
 

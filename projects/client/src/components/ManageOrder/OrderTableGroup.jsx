@@ -11,8 +11,8 @@ const OrderTableGroup = () => {
 	const [order, setOrder] = React.useState("");
 	const [page, setPage] = React.useState(1);
 	const [maxPage, setMaxPage] = React.useState(1);
-	const [startDate, setStartDate] = React.useState(undefined);
-	const [endDate, setEndDate] = React.useState(undefined);
+	const [startDate, setStartDate] = React.useState("");
+	const [endDate, setEndDate] = React.useState("");
 
 	return (
 		<div className="flex flex-col justify-start overflow-x-auto mt-3.5 pt-4 px-4">
