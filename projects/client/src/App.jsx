@@ -21,6 +21,7 @@ import ProductPage from "./pages/Product/ProductPage";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import AccountPage from "./pages/Account/AccountPage";
 import ManageAddress from "./pages/ManageAddress/ManageAddress";
+import CreateNewAddress from "./pages/CreateNewAddress/CreateNewAddress";
 
 function App() {
 	return (
@@ -38,6 +39,7 @@ function App() {
 				<Route path="/product/detail/:inventory_id" element={<ProductDetail />} />
 				<Route path="/account/profile-update" element={<UserAccountSettingPage />} />
 				<Route path="/account/manage-address" element={<ManageAddress />} />
+				<Route path="/account/create-new-address" element={<CreateNewAddress />} />
 				<Route path="/account" element={<AccountPage />} />
 
 				{/* //Admin Auth Page */}

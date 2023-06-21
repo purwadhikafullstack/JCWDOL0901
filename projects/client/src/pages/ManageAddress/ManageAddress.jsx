@@ -21,7 +21,10 @@ const ResponsiveLogo = () => {
 const Header = () => {
 	return (
 		<div className="text-black flex flex-col bg-green-200 sm:bg-white pb-4">
-			<BackButton url={-1} color="sm:text-gray-400 text-green-100 text-3xl hover:text-green-300" />
+			<BackButton
+				url={-1}
+				color="sm:text-gray-400 text-green-100 text-3xl sm:hover:text-green-300 hover:text-gray-200"
+			/>
 			<ResponsiveLogo />
 			<PageTitle title="Manage Address" color={"text-green-100 sm:text-green-400 z-10"} />
 		</div>
@@ -34,9 +37,9 @@ const CreateButton = () => {
 		<>
 			<button
 				className="rounded-lg font-bold h-fit bg-green-500 text-green-100 w-full sm:w-fit px-10 py-2 mx-auto mb-6"
-				onClick={() => navigate("create")}
+				onClick={() => navigate("/account/create-new-address")}
 			>
-				Create New Category
+				Add New Address
 			</button>
 		</>
 	);

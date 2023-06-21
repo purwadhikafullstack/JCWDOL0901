@@ -119,3 +119,8 @@
 	Source: startDeleteteHandler
 	Error: "No rows deleted"
 	
+	===
+	Time: Wed Jun 21 2023 17:59:07 GMT+0700 (Western Indonesia Time)
+	Source: startCreateHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Addresses.latitude cannot be null","type":"notNull Violation","path":"latitude","value":null,"origin":"CORE","instance":{"id":null,"user_id":1,"label":"Kantor","city_id":"153","address":"Kemang","is_default":false},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Addresses.longitude cannot be null","type":"notNull Violation","path":"longitude","value":null,"origin":"CORE","instance":{"id":null,"user_id":1,"label":"Kantor","city_id":"153","address":"Kemang","is_default":false},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
