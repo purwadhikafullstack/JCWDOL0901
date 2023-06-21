@@ -2,17 +2,10 @@ const multer = require("multer");
 
 const storage = multer.diskStorage({
 	destination: (req, res, cb) => {
-		cb(null, "uploads/category");
+		cb(null, `${__dirname}../../../../client/public/assets/categories`);
 	},
 	filename: (req, file, cb) => {
-		cb(
-			null,
-			"category_" +
-				Date.now() +
-				Math.round(Math.random() * 1000000000) +
-				"." +
-				file.mimetype.split("/")[1]
-		);
+		cb(null, "category_" + Date.now() + Math.round(Math.random() * 1000000000) + "." + file.mimetype.split("/")[1]);
 	},
 });
 
