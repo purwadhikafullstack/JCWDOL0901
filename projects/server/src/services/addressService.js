@@ -67,11 +67,18 @@ module.exports = {
 	startUpdateAddress: async (user_id, body, id) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const { label, city_id, address, latitude, longitude } = body;
-				const result = await updateAddressQuery(id, user_id, label, city_id, address, latitude, longitude);
-
-				return resolve(result);
+				const { label, city_id, address } = body;
+				if (city_id) {
+					const city = await readCityQuery(city_id);
+					const { latitude, longitude } = await getCoordinates(city.type, city.name, city.Province.name);
+					const result = await updateAddressQuery(id, user_id, label, city_id, address, latitude, longitude);
+					return resolve(result);
+				} else {
+					const result = await updateAddressQuery(id, user_id, label, city_id, address);
+					return resolve(result);
+				}
 			} catch (error) {
+				console.log(error);
 				return reject(await startUpdateErrorHandler(error));
 			}
 		});
