@@ -2,7 +2,6 @@ import axios from "axios";
 import Swal from "sweetalert2";
 
 const createNewAddressErrorHandler = async (error) => {
-	console.log(error);
 	if (error?.code === "ERR_NETWORK") {
 		return "Server unreachable, try again later!";
 	} else if (error?.response?.status === 400) {
