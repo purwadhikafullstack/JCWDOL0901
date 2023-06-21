@@ -19,6 +19,9 @@ const createCategory = async (request, response) => {
 };
 
 const updateCategory = async (request, response) => {
+	console.log("req.body category controller: ", request.body);
+	console.log("req.file category controller: ", request.file);
+	console.log("req.params category controller: ", request.params);
 	await startUpdateCategory(request.body, request.file, request.params)
 		.then(result => response.status(200).send(result))
 		.catch(error => response.status(error.code).send(error.message));

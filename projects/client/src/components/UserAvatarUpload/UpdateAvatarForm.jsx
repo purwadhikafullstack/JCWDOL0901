@@ -9,8 +9,7 @@ import AvatarImagePreview from "./AvatarImagePreview";
 import AvatarInputField from "./AvatarInputField";
 import Button from "../Button";
 
-function UpdateAvatarForm() {
-	// const [file, setFile] = useState(process.env.REACT_APP_IMAGE_BASE_URL + item.image);
+function UpdateAvatarForm({ item }) {
 	const [file, setFile] = useState();
 	const [error, setError] = React.useState("");
 	const formik = useFormik(formikUpdateAvatarConfiguration());
@@ -27,7 +26,7 @@ function UpdateAvatarForm() {
 				console.log(error);
 			});
 	}, []);
-
+	console.log("item of avatar useLocation: ", item)
 	return (
 		<div className="my-auto items-center min-w-fit shrink-0 flex flex-col pb-10 px-8">
 			<ErrorWarning error={error} />
