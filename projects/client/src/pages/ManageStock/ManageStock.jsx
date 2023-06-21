@@ -1,5 +1,4 @@
 import React from "react";
-import BackButton from "../../components/BackButton";
 import PageTitle from "../../components/PageTitle";
 import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration.jsx";
 import CompanyLogo from "../../components/CompanyLogo.jsx";

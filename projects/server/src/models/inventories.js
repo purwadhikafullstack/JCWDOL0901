@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
 				foreignKey: "inventory_id",
 			});
 			Inventories.hasMany(models.Vouchers, { foreignKey: "inventory_id" });
-			Inventories.hasMany(models.Inventory_promotions, {
+			Inventories.hasOne(models.Inventory_promotions, {
 				foreignKey: "inventory_id",
 				sourceKey: "id",
 				as: "promo",
@@ -57,7 +57,7 @@ module.exports = (sequelize, DataTypes) => {
 			sequelize,
 			modelName: "Inventories",
 			timestamps: false,
-		}
+		},
 	);
 	return Inventories;
 };

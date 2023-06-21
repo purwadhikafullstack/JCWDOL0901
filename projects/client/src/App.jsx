@@ -18,6 +18,8 @@ import ManageStock from "./pages/ManageStock/ManageStock";
 import UpdateCategoryPage from "./pages/UpdateCategory/UpdateCategoryPage";
 import AdminAuthGuard from "./pages/AdminAuthGuard";
 import ChangePasswordPage from "./pages/ChangePassword/ChangePasswordPage";
+import ProductPage from "./pages/Product/ProductPage";
+import ProductDetail from "./pages/ProductDetail/ProductDetail";
 
 function App() {
 	return (
@@ -34,6 +36,8 @@ function App() {
 				<Route path="/user/login" element={<UserLoginPage />} />
 				<Route path="/user/profile-update" element={<UserAccountSettingPage />} />
 				<Route path="/user/avatar-update" element={<UserAvatarUploadPage />} />
+				<Route path="/products/" element={<ProductPage />} />
+				<Route path="/product/detail/:inventory_id" element={<ProductDetail />} />
 
 				{/* //Admin Auth Page */}
 				<Route path="/admin/promo" element={<AdminAuthGuard component={<ProductPromotion />} />} />

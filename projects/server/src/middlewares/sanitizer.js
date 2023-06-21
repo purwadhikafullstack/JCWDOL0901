@@ -1,3 +1,4 @@
+const { request } = require("express");
 const {
 	getAdminQueryFilter,
 	getAdminQueryOrder,
@@ -7,6 +8,10 @@ const {
 	getCategoryQueryOrder,
 	getInventoriesQueryFilter,
 	getInventoriesQueryOrder,
+	getProductQueryFilter,
+	getProductQueryOrder,
+	getRelatedProductsFilter,
+	getProductsRecommendationFilter,
 } = require("../helpers/queryHelper");
 
 const getAdminsQuerySanitizer = async (request, response, next) => {
@@ -56,6 +61,24 @@ const getInventoriesQuerySanitizer = async (request, response, next) => {
 	next();
 };
 
+const getProductsRecommendationQuerySanitizer = async (request, response, next) => {
+	const sanitizedQuery = {
+		filter: await getProductsRecommendationFilter(request.query),
+	};
+	request.query = sanitizedQuery;
+
+	next();
+};
+
+const getRelatedProductsQuerySanitizer = async (request, response, next) => {
+	const sanitizedQuery = {
+		filter: await getRelatedProductsFilter(request.query),
+	};
+
+	request.query = sanitizedQuery;
+	next();
+};
+
 const postInventoryPromotionBodySanitizer = async (request, response, next) => {
 	const { promotion_id, value, start_at, expired_at, inventory_id } = request.body;
 	delete request.body;
@@ -88,6 +111,18 @@ const getCategorySanitizer = async (request, response, next) => {
 	next();
 };
 
+const getProductsSanitizer = async (request, response, next) => {
+	const sanitizedQuery = {
+		filter: await getProductQueryFilter(request.query),
+		order: await getProductQueryOrder(request.query),
+		page: request.query.page,
+		itemPerPage: request.query.itemPerPage,
+	};
+	request.query = sanitizedQuery;
+	console.log(sanitizedQuery);
+	next();
+};
+
 module.exports = {
 	getInventoriesQuerySanitizer,
 	getAdminsQuerySanitizer,
@@ -96,4 +131,7 @@ module.exports = {
 	postInventoryPromotionBodySanitizer,
 	patchInventoryPromotionBodySanitizer,
 	getCategorySanitizer,
+	getProductsSanitizer,
+	getRelatedProductsQuerySanitizer,
+	getProductsRecommendationQuerySanitizer,
 };
