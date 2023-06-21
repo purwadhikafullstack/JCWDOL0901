@@ -1,6 +1,22 @@
 import React from "react";
 import DropDown from "../../DropDown";
-import { getFilterBy, getStatuses } from "../handlers/manageOrderHandler";
+import { getBranches, getFilterBy, getStatuses, getVouchers } from "../handlers/manageOrderHandler";
+import DisabledDropDown from "../../DisabledDropDown";
+
+const Filter = ({ filterBy, filter, setFilter }) => {
+	React.useState(() => {
+		setFilter("");
+	}, [filterBy.id]);
+
+	if (filterBy.id === "voucher_id") {
+		return <DropDown data={filter} setter={setFilter} getter={getVouchers} />;
+	} else if (filterBy.id === "status_id") {
+		return <DropDown data={filter} setter={setFilter} getter={getStatuses} />;
+	} else if (filterBy.id === "branch_id") {
+		return <DropDown data={filter} setter={setFilter} getter={getBranches} />;
+	}
+	return <DisabledDropDown />;
+};
 
 const FilterConfiguration = ({ filterBy, setFilterBy, filter, setFilter }) => {
 	return (
@@ -11,7 +27,7 @@ const FilterConfiguration = ({ filterBy, setFilterBy, filter, setFilter }) => {
 					<DropDown data={filterBy} setter={setFilterBy} getter={getFilterBy} />
 				</div>
 				<div className="flex justify-center w-full lg:w-[45%]">
-					<DropDown data={filter} setter={setFilter} getter={getStatuses} />
+					<Filter filterBy={filterBy} filter={filter} setFilter={setFilter} />
 				</div>
 			</div>
 		</div>

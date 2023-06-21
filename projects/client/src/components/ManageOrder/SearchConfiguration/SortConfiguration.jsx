@@ -1,6 +1,21 @@
 import React from "react";
-import { getOrder, getOrderBy } from "../handlers/manageOrderHandler";
+import { getEmptyPromise, getOrderBy, getOrderOfAmount, getOrderOfDate } from "../handlers/manageOrderHandler";
 import DropDown from "../../DropDown";
+import DisabledDropDown from "../../DisabledDropDown.jsx";
+
+const SortBy = ({ sort, order, setOrder }) => {
+	React.useEffect(() => {
+		setOrder("");
+	}, [sort.id]);
+
+	if (sort.id === "created_at") {
+		return <DropDown data={order} setter={setOrder} getter={getOrderOfDate} />;
+	} else if (sort.id === "amount") {
+		return <DropDown data={order} setter={setOrder} getter={getOrderOfAmount} />;
+	}
+
+	return <DisabledDropDown />;
+};
 
 const SortConfiguration = ({ sort, setSort, order, setOrder }) => {
 	return (
@@ -11,7 +26,7 @@ const SortConfiguration = ({ sort, setSort, order, setOrder }) => {
 					<DropDown data={sort} setter={setSort} getter={getOrderBy} />
 				</div>
 				<div className="flex justify-center w-full lg:w-[45%]">
-					<DropDown data={order} setter={setOrder} getter={getOrder} />
+					<SortBy sort={sort} order={order} setOrder={setOrder} />
 				</div>
 			</div>
 		</div>

@@ -16,6 +16,21 @@ export const getStatuses = () => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/data/statuses`);
 };
 
+export const getBranches = () => {
+	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/branch/list`);
+};
+
+export const getVouchers = () => {
+	return new Promise((resolve, reject) => {
+		resolve({
+			data: [
+				{ id: 0, name: "Not Using" },
+				{ id: 1, name: "Using" },
+			],
+		});
+	});
+};
+
 export const getOrderBy = () => {
 	return new Promise((resolve, reject) => {
 		resolve({
@@ -27,12 +42,23 @@ export const getOrderBy = () => {
 	});
 };
 
-export const getOrder = () => {
+export const getOrderOfDate = () => {
 	return new Promise((resolve, reject) => {
 		resolve({
 			data: [
-				{ id: "1", name: "Ascending" },
-				{ id: "0", name: "Descending" },
+				{ id: "1", name: "Latest" },
+				{ id: "0", name: "Oldest" },
+			],
+		});
+	});
+};
+
+export const getOrderOfAmount = () => {
+	return new Promise((resolve, reject) => {
+		resolve({
+			data: [
+				{ id: "1", name: "High to Low" },
+				{ id: "0", name: "Low to High" },
 			],
 		});
 	});

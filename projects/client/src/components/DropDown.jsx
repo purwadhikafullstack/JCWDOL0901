@@ -52,7 +52,7 @@ const DropDownOptions = ({ setter, getter }) => {
 		getter()
 			.then((result) => setLists(result.data))
 			.catch((error) => setLists([{ name: "Server Unavailable", id: 0 }]));
-	}, []);
+	}, [getter]);
 
 	return (
 		lists && (
