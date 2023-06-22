@@ -5,13 +5,12 @@ const {
 } = require("../services/adminTransactionService");
 
 const getAdminTransactions = async (request, response) => {
-	const { from, to, status } = request.query;
-	const branch = request.branchData;
-	await startFindAdminTransactions(from, to, status, branch)
-		.then(result => {
+	const branch_id = request.branchData.id;
+	await startFindAdminTransactions(request.query, branch_id)
+		.then((result) => {
 			response.status(200).send(result);
 		})
-		.catch(error => {
+		.catch((error) => {
 			response.status(error.code).send(error.message);
 		});
 };
@@ -20,10 +19,10 @@ const getAdminDashboardData = async (request, response) => {
 	const { from, to, status } = request.query;
 	const branch = request.branchData.id;
 	await startGetAdminDashboardData(from, to, status, branch)
-		.then(result => {
+		.then((result) => {
 			response.status(200).send(result);
 		})
-		.catch(error => {
+		.catch((error) => {
 			response.status(error.code).send(error.message);
 		});
 };
@@ -32,10 +31,10 @@ const getAdminAllTimeData = async (request, response) => {
 	const { status } = request.query;
 	const branch = request.branchData.id;
 	await startGetAdminAllTimeData(status, branch)
-		.then(result => {
+		.then((result) => {
 			response.status(200).send(result);
 		})
-		.catch(error => {
+		.catch((error) => {
 			response.status(error.code).send(error.message);
 		});
 };

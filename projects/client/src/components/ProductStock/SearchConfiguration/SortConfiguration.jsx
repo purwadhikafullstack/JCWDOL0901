@@ -12,7 +12,7 @@ const Icon = () => {
 
 const SortConfiguration = ({ sort, setSort, order, setOrder }) => {
 	return (
-		<div className="flex flex-col w-[30%]">
+		<div className="flex flex-col w-[25%]">
 			<Icon />
 			<div className="flex flex-col items w-full lg:flex-row lg:justify-around">
 				<div className="flex justify-center w-full lg:w-[45%]">

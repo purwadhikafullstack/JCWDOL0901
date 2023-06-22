@@ -21,7 +21,7 @@ const ProductPromotion = () => {
 	return (
 		<div className="flex flex-col mx-auto pt-6 pb-10 flex-1 min-w-[480px] overflow-hidden bg-white z-10 sm:w-full">
 			<SideBar>
-				<div className="flex flex-col bg-white">
+				<div className="flex flex-col bg-white min-h-screen">
 					<div className="flex flex-col z-10">
 						<CircularBackgroundDecoration />
 						<ResponsiveLogo />

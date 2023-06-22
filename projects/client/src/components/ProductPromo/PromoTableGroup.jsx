@@ -12,6 +12,10 @@ const PromoTableGroup = () => {
 	const [page, setPage] = React.useState(1);
 	const [maxPage, setMaxPage] = React.useState(1);
 
+	React.useEffect(() => {
+		setPage(1);
+	}, [name, filter, sort, order]);
+
 	return (
 		<div className="flex flex-col justify-start mt-11 px-4 h-full">
 			<SearchConfiguration
@@ -24,14 +28,7 @@ const PromoTableGroup = () => {
 				setSort={setSort}
 				setPage={setPage}
 			/>
-			<PromoTable
-				name={name}
-				sort={sort}
-				filter={filter}
-				order={order}
-				page={page}
-				setMaxPage={setMaxPage}
-			/>
+			<PromoTable name={name} sort={sort} filter={filter} order={order} page={page} setMaxPage={setMaxPage} />
 			<div className="mx-auto mt-16">
 				<Pagination page={page} setPage={setPage} maxPage={maxPage} />
 			</div>

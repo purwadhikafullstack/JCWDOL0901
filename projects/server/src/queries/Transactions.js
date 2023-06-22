@@ -1,5 +1,15 @@
-const { Transactions, Transaction_details, Inventories, Products } = require("../models/index.js");
-const { Op } = require("sequelize");
+const {
+	Transactions,
+	Transaction_details,
+	Inventories,
+	Products,
+	Statuses,
+	Branches,
+	Users,
+	Profiles,
+	Proofs,
+} = require("../models/index.js");
+const { Op, literal } = require("sequelize");
 
 const dateQueryHelper = (from, to) => {
 	return {
@@ -10,14 +20,14 @@ const dateQueryHelper = (from, to) => {
 	};
 };
 
-const statusQueryHelper = status =>
+const statusQueryHelper = (status) =>
 	status
 		? {
 				status_id: status,
 		  }
 		: {};
 
-const branchQueryHelper = branch =>
+const branchQueryHelper = (branch) =>
 	branch
 		? {
 				branch_id: branch,
@@ -50,4 +60,26 @@ const readAdminTransactionsQuery = async (from, to, status, branch) => {
 	});
 };
 
-module.exports = { readAdminTransactionsQuery };
+const readBranchAdminTransactionsQuery = async (query, branch) => {
+	return await Transactions.findAndCountAll({
+		where: {
+			...query.filter?.Transactions,
+			...branchQueryHelper(branch),
+		},
+		include: [
+			{ model: Users },
+			{ model: Statuses },
+			{ model: Branches },
+			{ model: Proofs },
+			{
+				model: Transaction_details,
+			},
+		],
+		order: [...query.order?.Transactions, ["id", "DESC"]],
+		distinct: true,
+		offset: (query.page - 1) * 5,
+		limit: 5,
+	});
+};
+
+module.exports = { readAdminTransactionsQuery, readBranchAdminTransactionsQuery };
