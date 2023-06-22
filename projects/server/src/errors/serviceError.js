@@ -92,7 +92,6 @@ const startGetUserProfileErrorHandler = async (error) => {
 	await writeLogFile(error, "startGetUserProfileErrorHandler");
 
 	return { code: 500, message: "Internal Server Error, please contact us!" };
-<<<<<<< HEAD
 };
 
 const startUpdateAvatarErrorHandler = async (error) => {
@@ -105,8 +104,6 @@ const startGetAvatarErrorHandler = async (error) => {
 	await writeLogFile(error, "startGetAvatarErrorHandler");
 
 	return { code: 500, message: "Internal Server Error, please contact us!" };
-=======
->>>>>>> development
 };
 
 const startAdminAuthenticationErrorHandler = async (error) => {
@@ -165,18 +162,12 @@ module.exports = {
 	startDeleteteHandler,
 	startUpdateErrorHandler,
 	startUpdatePasswordErrorHandler,
-<<<<<<< HEAD
-=======
 	startCreateTransactionErrorHandler,
 	rajaOngkirErrorHandler,
->>>>>>> development
 	startProfileUpdateErrorHandler,
 	startGetUserProfileErrorHandler,
 	startAdminAuthenticationErrorHandler,
 	startUserAuthenticationErrorHandler,
-<<<<<<< HEAD
 	startUpdateAvatarErrorHandler,
 	startGetAvatarErrorHandler,
-=======
->>>>>>> development
 };
