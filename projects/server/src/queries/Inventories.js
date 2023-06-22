@@ -33,4 +33,15 @@ const updateInventoriesQuery = async (inventory_id, stock, transaction) => {
 	return { Inventory, previousStock };
 };
 
-module.exports = { readInventoriesQuery, createInventoryQueryForNewBranch, updateInventoriesQuery };
+const decrementInventoriesStockQuery = async (transaction_detail, transaction) => {
+	await transaction_detail.forEach(async (item) => {
+		await Inventories.decrement("stock", { by: item.quantity, where: { id: item.inventory_id }, transaction });
+	});
+};
+
+module.exports = {
+	readInventoriesQuery,
+	createInventoryQueryForNewBranch,
+	updateInventoriesQuery,
+	decrementInventoriesStockQuery,
+};
