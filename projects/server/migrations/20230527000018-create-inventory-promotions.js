@@ -29,6 +29,10 @@ module.exports = {
 				allowNull: false,
 				type: Sequelize.INTEGER,
 			},
+			isActive: {
+				defaultValue: true,
+				type: Sequelize.BOOLEAN,
+			},
 		});
 
 		// TODO: addConstraint 1 (from inventory_id to Promotions.id);

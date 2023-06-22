@@ -33,6 +33,7 @@ const startRegistrationErrorHandler = async (error) => {
 			message: `Service Unavailable, please try again later!`,
 		};
 	}
+
 	return {
 		code: 500,
 		message: "Internal Server Error, please contact us!",
@@ -91,6 +92,7 @@ const startGetUserProfileErrorHandler = async (error) => {
 	await writeLogFile(error, "startGetUserProfileErrorHandler");
 
 	return { code: 500, message: "Internal Server Error, please contact us!" };
+<<<<<<< HEAD
 };
 
 const startUpdateAvatarErrorHandler = async (error) => {
@@ -103,6 +105,8 @@ const startGetAvatarErrorHandler = async (error) => {
 	await writeLogFile(error, "startGetAvatarErrorHandler");
 
 	return { code: 500, message: "Internal Server Error, please contact us!" };
+=======
+>>>>>>> development
 };
 
 const startAdminAuthenticationErrorHandler = async (error) => {
@@ -135,6 +139,23 @@ const startUpdateErrorHandler = async (error) => {
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
+const startCreateTransactionErrorHandler = async (error) => {
+	await writeLogFile(error, "startCreateTransactionErrorHandler");
+
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
+
+const rajaOngkirErrorHandler = async (body) => {
+	await writeLogFile(body, "rajaOngkirErrorHandler");
+
+	const statusCode = body.rajaongkir.status.code;
+
+	if (statusCode === 400) {
+		return { code: 400, message: body.rajaongkir.status.description };
+	}
+
+	return { code: 500, message: "Service Unavailable" };
+};
 module.exports = {
 	startRegistrationErrorHandler,
 	startFindErrorHandler,
@@ -144,10 +165,18 @@ module.exports = {
 	startDeleteteHandler,
 	startUpdateErrorHandler,
 	startUpdatePasswordErrorHandler,
+<<<<<<< HEAD
+=======
+	startCreateTransactionErrorHandler,
+	rajaOngkirErrorHandler,
+>>>>>>> development
 	startProfileUpdateErrorHandler,
 	startGetUserProfileErrorHandler,
 	startAdminAuthenticationErrorHandler,
 	startUserAuthenticationErrorHandler,
+<<<<<<< HEAD
 	startUpdateAvatarErrorHandler,
 	startGetAvatarErrorHandler,
+=======
+>>>>>>> development
 };

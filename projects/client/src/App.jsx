@@ -18,8 +18,12 @@ import ManageStock from "./pages/ManageStock/ManageStock";
 import UpdateCategoryPage from "./pages/UpdateCategory/UpdateCategoryPage";
 import AdminAuthGuard from "./pages/AdminAuthGuard";
 import ChangePasswordPage from "./pages/ChangePassword/ChangePasswordPage";
-import ProductPage from "./pages/Product/ProductPage";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
+import CheckoutPage from "./pages/Checkout/CheckoutPage";
+import SwitchAddress from "./components/Checkout/SwitchAddress";
+import SwitchVoucher from "./components/Checkout/SwitchVoucher";
+import SwitchLogistic from "./components/Checkout/SwitchLogistic";
+import ProductPage from "./pages/Product/ProductPage";
 
 function App() {
 	return (
@@ -27,7 +31,6 @@ function App() {
 			<Routes>
 				{/* //Unauth Page */}
 				<Route path="/" element={<HomePage />} />
-				<Route path="/login" element={<UserLoginPage />} />
 				<Route path="/register" element={<RegisterPage />} />
 				<Route path="/register/greeting" element={<GreetingPage />} />
 				<Route path="/verify/:token" element={<VerifyPage />} />
@@ -36,6 +39,10 @@ function App() {
 				<Route path="/user/login" element={<UserLoginPage />} />
 				<Route path="/user/profile-update" element={<UserAccountSettingPage />} />
 				<Route path="/user/avatar-update" element={<UserAvatarUploadPage />} />
+				<Route path="/cart/checkout" element={<CheckoutPage />} />
+				<Route path="/cart/checkout/address/change" element={<SwitchAddress />} />
+				<Route path="/cart/checkout/voucher/change" element={<SwitchVoucher />} />
+				<Route path="/cart/checkout/logistic/change" element={<SwitchLogistic />} />
 				<Route path="/products/" element={<ProductPage />} />
 				<Route path="/product/detail/:inventory_id" element={<ProductDetail />} />
 
