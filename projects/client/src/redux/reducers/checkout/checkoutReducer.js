@@ -13,11 +13,7 @@ const initialState = {
 		id: null,
 		label: "",
 		detail: "",
-<<<<<<< HEAD
-		City: { type: "", name: "", Province: { name: "" } },
-=======
 		City: { id: undefined, type: "", name: "", Province: { name: "" } },
->>>>>>> development
 	},
 	branch: {
 		id: null,

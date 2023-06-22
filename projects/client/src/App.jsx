@@ -19,13 +19,10 @@ import UpdateCategoryPage from "./pages/UpdateCategory/UpdateCategoryPage";
 import AdminAuthGuard from "./pages/AdminAuthGuard";
 import ChangePasswordPage from "./pages/ChangePassword/ChangePasswordPage";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
-<<<<<<< HEAD
-=======
 import AccountPage from "./pages/Account/AccountPage";
 import ManageAddress from "./pages/ManageAddress/ManageAddress";
 import CreateNewAddress from "./pages/CreateNewAddress/CreateNewAddress";
 import EditAddress from "./pages/EditAddress/EditAddress";
->>>>>>> development
 import CheckoutPage from "./pages/Checkout/CheckoutPage";
 import SwitchAddress from "./components/Checkout/SwitchAddress";
 import SwitchVoucher from "./components/Checkout/SwitchVoucher";
@@ -42,11 +39,7 @@ function App() {
 				<Route path="/register/greeting" element={<GreetingPage />} />
 				<Route path="/verify/:token" element={<VerifyPage />} />
 				<Route path="/admin/login" element={<AdminLoginPage />} />
-<<<<<<< HEAD
-				<Route path="/account/change-password" element={<ChangePasswordPage />} />
-=======
 				<Route path="/login" element={<UserLoginPage />} />
->>>>>>> development
 				<Route path="/cart/checkout" element={<CheckoutPage />} />
 				<Route path="/cart/checkout/address/change" element={<SwitchAddress />} />
 				<Route path="/cart/checkout/voucher/change" element={<SwitchVoucher />} />

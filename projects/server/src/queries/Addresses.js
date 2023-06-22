@@ -1,23 +1,5 @@
 const { Addresses, Cities, Provinces } = require("../models/index.js");
 
-<<<<<<< HEAD
-const readDefaultAddressQuery = async (filter) => {
-	return await Addresses.findOne({
-		where: { ...filter },
-		include: [{ model: Cities, include: [{ model: Provinces }] }],
-	});
-};
-
-const readAddressQuery = async (filter) => {
-	return await Addresses.findAll({
-		where: { ...filter },
-		include: [{ model: Cities, include: [{ model: Provinces }] }],
-		order: [["default", "DESC"]],
-	});
-};
-
-module.exports = { readDefaultAddressQuery, readAddressQuery };
-=======
 const getUserAddressesQuery = async (user_id) => {
 	const addressData = await Addresses.findAll({
 		where: { user_id },
@@ -104,4 +86,3 @@ module.exports = {
 	// readDefaultAddressQuery,
 	// readAddressQuery,
 };
->>>>>>> development

@@ -37,20 +37,11 @@ const readProductQuery = async (inventory_id) => {
 	});
 };
 
-
 const readProductsQuery = async (params) => {
-<<<<<<< HEAD
-
-	const offset = params?.page ? (params?.page - 1) * params?.itemPerPage : null;
-	const limit = params?.itemPerPage ? params?.itemPerPage : null;
-	const order = params?.order ? [...params?.order] : [];
-  
-=======
 	const offset = params?.page ? (params?.page - 1) * params?.itemPerPage : null;
 	const limit = params?.itemPerPage ? params?.itemPerPage : null;
 	const order = params?.order ? [...params?.order] : [];
 
->>>>>>> development
 	return await Products.findAndCountAll({
 		where: { ...params?.Products },
 		include: [

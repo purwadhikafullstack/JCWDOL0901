@@ -11,10 +11,6 @@ const Addresses = () => {
 	React.useEffect(() => {
 		getUserAddresses()
 			.then((result) => {
-<<<<<<< HEAD
-=======
-				console.log(result);
->>>>>>> development
 				setAddresses(result.data);
 			})
 			.catch((error) => {

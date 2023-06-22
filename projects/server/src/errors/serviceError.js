@@ -33,10 +33,6 @@ const startRegistrationErrorHandler = async (error) => {
 			message: `Service Unavailable, please try again later!`,
 		};
 	}
-<<<<<<< HEAD
-
-=======
->>>>>>> development
 	return {
 		code: 500,
 		message: "Internal Server Error, please contact us!",
@@ -95,8 +91,6 @@ const startGetUserProfileErrorHandler = async (error) => {
 	await writeLogFile(error, "startGetUserProfileErrorHandler");
 
 	return { code: 500, message: "Internal Server Error, please contact us!" };
-<<<<<<< HEAD
-=======
 };
 
 const startUpdateAvatarErrorHandler = async (error) => {
@@ -109,7 +103,6 @@ const startGetAvatarErrorHandler = async (error) => {
 	await writeLogFile(error, "startGetAvatarErrorHandler");
 
 	return { code: 500, message: "Internal Server Error, please contact us!" };
->>>>>>> development
 };
 
 const startAdminAuthenticationErrorHandler = async (error) => {
@@ -152,15 +145,6 @@ const startCreateTransactionErrorHandler = async (error) => {
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
-<<<<<<< HEAD
-const startCreateTransactionErrorHandler = async (error) => {
-	await writeLogFile(error, "startCreateTransactionErrorHandler");
-
-	return { code: 500, message: "Internal Server Error, please contact us!" };
-};
-
-=======
->>>>>>> development
 const rajaOngkirErrorHandler = async (body) => {
 	await writeLogFile(body, "rajaOngkirErrorHandler");
 
@@ -172,10 +156,7 @@ const rajaOngkirErrorHandler = async (body) => {
 
 	return { code: 500, message: "Service Unavailable" };
 };
-<<<<<<< HEAD
-=======
 
->>>>>>> development
 module.exports = {
 	startRegistrationErrorHandler,
 	startFindErrorHandler,
@@ -191,10 +172,7 @@ module.exports = {
 	startGetUserProfileErrorHandler,
 	startAdminAuthenticationErrorHandler,
 	startUserAuthenticationErrorHandler,
-<<<<<<< HEAD
-=======
 	startGetUserAddressesErrorHandler,
 	startUpdateAvatarErrorHandler,
 	startGetAvatarErrorHandler,
->>>>>>> development
 };

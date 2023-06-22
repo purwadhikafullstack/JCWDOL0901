@@ -172,3 +172,18 @@
 	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_TRUNCATED_WRONG_VALUE_FOR_FIELD","errno":1366,"sqlState":"HY000","sqlMessage":"Incorrect integer value: '[object Object]' for column 'product_id' at row 1","sql":"INSERT INTO `Inventories` (`id`,`product_id`,`branch_id`,`stock`) VALUES (NULL,'[object Object]',7,0);"},"original":{"code":"ER_TRUNCATED_WRONG_VALUE_FOR_FIELD","errno":1366,"sqlState":"HY000","sqlMessage":"Incorrect integer value: '[object Object]' for column 'product_id' at row 1","sql":"INSERT INTO `Inventories` (`id`,`product_id`,`branch_id`,`stock`) VALUES (NULL,'[object Object]',7,0);"},"sql":"INSERT INTO `Inventories` (`id`,`product_id`,`branch_id`,`stock`) VALUES (NULL,'[object Object]',7,0);","parameters":{}}
 >>>>>>> development
 	
+	===
+	Time: Thu Jun 22 2023 17:59:53 GMT+0700 (Western Indonesia Time)
+	Source: rajaOngkirErrorHandler
+	Error: {"rajaongkir":{"status":{"code":400,"description":"Invalid referer. Perujuk tidak sesuai! Harap periksa pengaturan perujuk Anda."}}}
+	
+	===
+	Time: Thu Jun 22 2023 17:59:53 GMT+0700 (Western Indonesia Time)
+	Source: rajaOngkirErrorHandler
+	Error: {"rajaongkir":{"status":{"code":400,"description":"Invalid referer. Perujuk tidak sesuai! Harap periksa pengaturan perujuk Anda."}}}
+	
+	===
+	Time: Thu Jun 22 2023 17:59:53 GMT+0700 (Western Indonesia Time)
+	Source: rajaOngkirErrorHandler
+	Error: {"rajaongkir":{"status":{"code":400,"description":"Invalid referer. Perujuk tidak sesuai! Harap periksa pengaturan perujuk Anda."}}}
+	
