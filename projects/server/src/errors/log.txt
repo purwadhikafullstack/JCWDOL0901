@@ -187,3 +187,33 @@
 	Source: rajaOngkirErrorHandler
 	Error: {"rajaongkir":{"status":{"code":400,"description":"Invalid referer. Perujuk tidak sesuai! Harap periksa pengaturan perujuk Anda."}}}
 	
+	===
+	Time: Thu Jun 22 2023 18:26:49 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 22 2023 18:26:49 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Thu Jun 22 2023 18:27:00 GMT+0700 (Western Indonesia Time)
+	Source: rajaOngkirErrorHandler
+	Error: {"rajaongkir":{"status":{"code":400,"description":"Invalid referer. Perujuk tidak sesuai! Harap periksa pengaturan perujuk Anda."}}}
+	
+	===
+	Time: Thu Jun 22 2023 18:27:00 GMT+0700 (Western Indonesia Time)
+	Source: rajaOngkirErrorHandler
+	Error: {"rajaongkir":{"status":{"code":400,"description":"Invalid referer. Perujuk tidak sesuai! Harap periksa pengaturan perujuk Anda."}}}
+	
+	===
+	Time: Thu Jun 22 2023 18:27:01 GMT+0700 (Western Indonesia Time)
+	Source: rajaOngkirErrorHandler
+	Error: {"rajaongkir":{"status":{"code":400,"description":"Invalid referer. Perujuk tidak sesuai! Harap periksa pengaturan perujuk Anda."}}}
+	
+	===
+	Time: Thu Jun 22 2023 20:03:12 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	

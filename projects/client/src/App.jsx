@@ -28,6 +28,7 @@ import SwitchAddress from "./components/Checkout/SwitchAddress";
 import SwitchVoucher from "./components/Checkout/SwitchVoucher";
 import SwitchLogistic from "./components/Checkout/SwitchLogistic";
 import ProductPage from "./pages/Product/ProductPage";
+import UploadPaymentProofPage from "./pages/Demo/UploadPaymentProofDemoPage";
 
 function App() {
 	return (
@@ -53,6 +54,7 @@ function App() {
 				<Route path="/account/create-new-address" element={<CreateNewAddress />} />
 				<Route path="/account/edit-address" element={<EditAddress />} />
 				<Route path="/account" element={<AccountPage />} />
+				<Route path="/order/upload/" element={<UploadPaymentProofPage />} />
 
 				{/* //Admin Auth Page */}
 				<Route path="/admin/promo" element={<AdminAuthGuard component={<ProductPromotion />} />} />
