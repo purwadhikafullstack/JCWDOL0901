@@ -19,6 +19,10 @@ import UpdateCategoryPage from "./pages/UpdateCategory/UpdateCategoryPage";
 import AdminAuthGuard from "./pages/AdminAuthGuard";
 import ChangePasswordPage from "./pages/ChangePassword/ChangePasswordPage";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
+import AccountPage from "./pages/Account/AccountPage";
+import ManageAddress from "./pages/ManageAddress/ManageAddress";
+import CreateNewAddress from "./pages/CreateNewAddress/CreateNewAddress";
+import EditAddress from "./pages/EditAddress/EditAddress";
 import CheckoutPage from "./pages/Checkout/CheckoutPage";
 import SwitchAddress from "./components/Checkout/SwitchAddress";
 import SwitchVoucher from "./components/Checkout/SwitchVoucher";
@@ -35,16 +39,20 @@ function App() {
 				<Route path="/register/greeting" element={<GreetingPage />} />
 				<Route path="/verify/:token" element={<VerifyPage />} />
 				<Route path="/admin/login" element={<AdminLoginPage />} />
-				<Route path="/account/change-password" element={<ChangePasswordPage />} />
-				<Route path="/user/login" element={<UserLoginPage />} />
-				<Route path="/user/profile-update" element={<UserAccountSettingPage />} />
-				<Route path="/user/avatar-update" element={<UserAvatarUploadPage />} />
+				<Route path="/login" element={<UserLoginPage />} />
 				<Route path="/cart/checkout" element={<CheckoutPage />} />
 				<Route path="/cart/checkout/address/change" element={<SwitchAddress />} />
 				<Route path="/cart/checkout/voucher/change" element={<SwitchVoucher />} />
 				<Route path="/cart/checkout/logistic/change" element={<SwitchLogistic />} />
 				<Route path="/products/" element={<ProductPage />} />
 				<Route path="/product/detail/:inventory_id" element={<ProductDetail />} />
+				<Route path="/account/change-password" element={<ChangePasswordPage />} />
+				<Route path="/account/profile-update" element={<UserAccountSettingPage />} />
+				<Route path="/account/avatar-update" element={<UserAvatarUploadPage />} />
+				<Route path="/account/manage-address" element={<ManageAddress />} />
+				<Route path="/account/create-new-address" element={<CreateNewAddress />} />
+				<Route path="/account/edit-address" element={<EditAddress />} />
+				<Route path="/account" element={<AccountPage />} />
 
 				{/* //Admin Auth Page */}
 				<Route path="/admin/promo" element={<AdminAuthGuard component={<ProductPromotion />} />} />

@@ -4,22 +4,20 @@ import Button from "../Button";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { formikUserLoginConfiguration } from "./config/formikUserLoginConfiguration";
+import { useDispatch } from "react-redux";
 
-function UserLoginFormWithValidator({setError}) {
-  const navigate = useNavigate();
+function UserLoginFormWithValidator({ setError }) {
+	const navigate = useNavigate();
+	const dispatch = useDispatch();
 
-  const formik = useFormik(formikUserLoginConfiguration(setError, navigate));
+	const formik = useFormik(formikUserLoginConfiguration(setError, navigate, dispatch));
 
-  return (
-    <form onSubmit={formik.handleSubmit} noValidate>
-      <UserLoginInputField formik={formik} />
-      <Button
-        type="submit"
-        name="User Login"
-        disabled={formik.isSubmitting || formik.isValidating}
-      />
-    </form>
-  );
+	return (
+		<form onSubmit={formik.handleSubmit} noValidate>
+			<UserLoginInputField formik={formik} />
+			<Button type="submit" name="User Login" disabled={formik.isSubmitting || formik.isValidating} />
+		</form>
+	);
 }
 
 export default UserLoginFormWithValidator;

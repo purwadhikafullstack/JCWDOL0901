@@ -22,7 +22,7 @@ const readInventoriesQuery = async (branch_id, name, filter, order, page) => {
 const createInventoryQueryForNewBranch = async (Branch, transaction) => {
 	const Product = await readProductsQuery();
 
-	return Branch.addProducts(Product, { transaction });
+	return Branch.addProducts(Product.rows, { transaction });
 };
 
 const updateInventoriesQuery = async (inventory_id, stock, transaction) => {

@@ -20,7 +20,7 @@ const RelatedProductsCarousel = ({ branch_id, category_id, inventory_id }) => {
 
 	React.useEffect(() => {
 		getRelatedProducts(branch_id, category_id, inventory_id)
-			.then((result) => setProducts(result.data))
+			.then((result) => setProducts(result.data.rows))
 			.catch((error) => setProducts([{ name: "Server Error!", image: "" }]));
 	}, []);
 

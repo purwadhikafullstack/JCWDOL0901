@@ -9,7 +9,7 @@ import CategoryImagePreview from "./CategoryImagePreview";
 
 const UpdateCategoryForm = ({ item }) => {
 	const navigate = useNavigate();
-	const [file, setFile] = useState(process.env.REACT_APP_IMAGE_BASE_URL + item.image);
+	const [file, setFile] = useState(item.image);
 	const formik = useFormik(formikUpdateCategoryConfiguration(navigate, item));
 
 	return (
