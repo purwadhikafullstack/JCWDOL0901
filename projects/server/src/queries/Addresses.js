@@ -1,4 +1,4 @@
-const { Addresses, Cities } = require("../models/index.js");
+const { Addresses, Cities, Provinces } = require("../models/index.js");
 
 const getUserAddressesQuery = async (user_id) => {
 	const addressData = await Addresses.findAll({
@@ -58,6 +58,21 @@ const deleteAddressQuery = async (id, user_id) => {
 	return await Addresses.destroy({ where: { id, user_id } });
 };
 
+const readDefaultAddressQuery = async (filter) => {
+	return await Addresses.findOne({
+		where: { ...filter },
+		include: [{ model: Cities, include: [{ model: Provinces }] }],
+	});
+};
+
+const readAddressQuery = async (filter) => {
+	return await Addresses.findAll({
+		where: { ...filter },
+		include: [{ model: Cities, include: [{ model: Provinces }] }],
+		order: [["default", "DESC"]],
+	});
+};
+
 module.exports = {
 	getUserAddressesQuery,
 	getDefaultAddressQuery,
@@ -66,4 +81,6 @@ module.exports = {
 	resetDefaultAddressQuery,
 	setDefaultAddressQuery,
 	deleteAddressQuery,
+	readDefaultAddressQuery,
+	readAddressQuery,
 };

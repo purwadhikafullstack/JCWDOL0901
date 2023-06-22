@@ -93,6 +93,18 @@ const startGetUserProfileErrorHandler = async (error) => {
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
+const startUpdateAvatarErrorHandler = async (error) => {
+	await writeLogFile(error, "startUpdateAvatarErrorHandler");
+
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
+
+const startGetAvatarErrorHandler = async (error) => {
+	await writeLogFile(error, "startGetAvatarErrorHandler");
+
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
+
 const startAdminAuthenticationErrorHandler = async (error) => {
 	await writeLogFile(error, "startAdminAuthenticationErrorHandler");
 
@@ -117,7 +129,6 @@ const startDeleteteHandler = async (error) => {
 	}
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
-
 const startUpdateErrorHandler = async (error) => {
 	await writeLogFile(error, "startUpdateErrorHandler");
 	return { code: 500, message: "Internal Server Error, please contact us!" };
@@ -126,6 +137,24 @@ const startUpdateErrorHandler = async (error) => {
 const startGetUserAddressesErrorHandler = async (error) => {
 	await writeLogFile(error, "startGetUserAddressesErrorHandler");
 	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
+
+const startCreateTransactionErrorHandler = async (error) => {
+	await writeLogFile(error, "startCreateTransactionErrorHandler");
+
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
+
+const rajaOngkirErrorHandler = async (body) => {
+	await writeLogFile(body, "rajaOngkirErrorHandler");
+
+	const statusCode = body.rajaongkir.status.code;
+
+	if (statusCode === 400) {
+		return { code: 400, message: body.rajaongkir.status.description };
+	}
+
+	return { code: 500, message: "Service Unavailable" };
 };
 
 module.exports = {
@@ -137,9 +166,13 @@ module.exports = {
 	startDeleteteHandler,
 	startUpdateErrorHandler,
 	startUpdatePasswordErrorHandler,
+	startCreateTransactionErrorHandler,
+	rajaOngkirErrorHandler,
 	startProfileUpdateErrorHandler,
 	startGetUserProfileErrorHandler,
 	startAdminAuthenticationErrorHandler,
 	startUserAuthenticationErrorHandler,
 	startGetUserAddressesErrorHandler,
+	startUpdateAvatarErrorHandler,
+	startGetAvatarErrorHandler,
 };

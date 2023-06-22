@@ -1,7 +1,7 @@
 const { Op } = require("sequelize");
 const { Inventory_promotions, Inventories, Promotions, Products } = require("../models/index.js");
 
-const createInventoryPromotionQuery = async data => {
+const createInventoryPromotionQuery = async (data) => {
 	return await Inventory_promotions.create({ ...data });
 };
 
@@ -9,7 +9,7 @@ const readInventoryPromotionQuery = async (branch_id, name, filter, order, page)
 	return await Inventory_promotions.findAndCountAll({
 		where: {
 			...filter.Inventory_promotions,
-			expired_at: { [Op.gte]: new Date() },
+			isActive: true,
 		},
 		include: [
 			{
@@ -34,7 +34,7 @@ const updateInventoryPromotionQuery = async (data, id) => {
 	return await Inventory_promotions.update({ ...data }, { where: { id } });
 };
 
-const deleteInventoryPromotionQuery = async id => {
+const deleteInventoryPromotionQuery = async (id) => {
 	return await Inventory_promotions.destroy({ where: { id } });
 };
 

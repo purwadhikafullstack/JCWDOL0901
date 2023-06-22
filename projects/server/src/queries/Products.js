@@ -25,7 +25,7 @@ const readProductQuery = async (inventory_id) => {
 					{
 						model: Inventory_promotions,
 						as: "promo",
-						where: { expired_at: { [Op.gte]: new Date() } },
+						where: { isActive: true },
 						required: false,
 						attributes: ["value"],
 						include: { model: Promotions },
@@ -37,17 +37,19 @@ const readProductQuery = async (inventory_id) => {
 	});
 };
 
+
 const readProductsQuery = async (params) => {
-	console.log(params);
+
 	const offset = params?.page ? (params?.page - 1) * params?.itemPerPage : null;
 	const limit = params?.itemPerPage ? params?.itemPerPage : null;
 	const order = params?.order ? [...params?.order] : [];
+  
 	return await Products.findAndCountAll({
 		where: { ...params?.Products },
 		include: [
 			{
 				model: Inventories,
-				where: { ...params?.Inventories },
+				where: { ...filter?.Inventories },
 				include: [
 					{ model: Branches, attributes: ["name"] },
 					{
