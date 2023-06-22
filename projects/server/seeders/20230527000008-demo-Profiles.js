@@ -11,31 +11,31 @@ module.exports = {
 					gender: "F",
 					name: "Shania",
 					birth: "1999-07-15",
-					avatar: "/avatars/default.jpg",
+					avatar: "/assets/avatars/default.png",
 				},
 				{
 					user_id: 2,
 					gender: "M",
 					name: "John Doe",
 					birth: "1997-03-26",
-					avatar: "/avatars/default.jpg",
+					avatar: "/assets/avatars/default.png",
 				},
 				{
 					user_id: 3,
 					gender: "M",
 					name: "Chris",
 					birth: "1999-10-30",
-					avatar: "/avatars/default.jpg",
+					avatar: "/assets/avatars/default.png",
 				},
 				{
 					user_id: 4,
 					gender: "M",
 					name: "Demo",
 					birth: "1979-12-12",
-					avatar: "/avatars/default.jpg",
+					avatar: "/assets/avatars/default.png",
 				},
 			],
-			{}
+			{},
 		);
 	},
 

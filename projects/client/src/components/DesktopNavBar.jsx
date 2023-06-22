@@ -22,7 +22,7 @@ const DesktopNavBar = () => {
 			<Menu active={location === "/"} name="Home" to="/" />
 			<Menu active={location === "/cart"} name="Cart" to="/cart" />
 			<Menu active={location === "/history"} name="History" to="/history" />
-			<Menu active={location === "/profile"} name="Account" to="/account/change-password" />
+			<Menu active={location === "/account"} name="Account" to="/account" />
 		</div>
 	);
 };

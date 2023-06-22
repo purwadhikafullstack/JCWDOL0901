@@ -25,8 +25,16 @@ module.exports = {
 	categoryRoute,
 	productRoute,
 	adminInventoryRoute,
+<<<<<<< HEAD
 	voucherRoute,
 	transactionRoute,
 	rajaOngkirRoute,
 	profileRoute
+=======
+	addressRoute,
+	voucherRoute,
+	transactionRoute,
+	rajaOngkirRoute,
+	profileRoute,
+>>>>>>> development
 };

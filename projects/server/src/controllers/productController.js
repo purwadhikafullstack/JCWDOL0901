@@ -50,4 +50,8 @@ const getProductDetail = async (request, response) => {
 		});
 };
 
+<<<<<<< HEAD
 module.exports = { getProductsRecommendation, getRelatedProducts, getProductDetail, getProducts };
+=======
+module.exports = { getProductsRecommendation, getRelatedProducts, getProductDetail, getProducts };
+>>>>>>> development
