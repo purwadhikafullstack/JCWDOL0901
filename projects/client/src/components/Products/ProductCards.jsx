@@ -22,8 +22,8 @@ const ProductCards = ({ page, itemPerPage, setMaxPage, filter, sort, order }) =>
 	}, [page, itemPerPage, branch_id, setMaxPage, category_id, filter, sort, order]);
 	return (
 		<div className="mx-4 my-7 grid grid-cols-2 sm:grid-cols-4 gap-4">
-			{products.map((product) => {
-				return <ProductCard product={product} key={product.name} />;
+			{products.map((product, index) => {
+				return <ProductCard product={product} key={index} />;
 			})}
 		</div>
 	);

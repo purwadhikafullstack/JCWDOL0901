@@ -7,7 +7,7 @@ import { setUserLogin } from "../../redux/reducers/user/userAction";
 
 const menus = [
 	{ name: "Edit Profile", icon: IdentificationIcon, nav: "/account/profile-update" },
-	{ name: "Update Profile Picture", icon: UserCircleIcon, nav: "/account/profile-update" },
+	{ name: "Update Profile Picture", icon: UserCircleIcon, nav: "/account/avatar-update" },
 	{ name: "Manage Address", icon: LocationMarkerIcon, nav: "/account/manage-address" },
 	{ name: "Change Password", icon: KeyIcon, nav: "/account/change-password" },
 ];

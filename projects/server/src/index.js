@@ -20,7 +20,6 @@ const {
 	transactionRoute,
 	rajaOngkirRoute,
 	profileRoute,
-	addressRoute,
 } = require("./routers/index.js");
 const { log } = require("console");
 
@@ -44,7 +43,6 @@ midnightTask.start();
 
 app.use("/api/profile", profileRoute);
 app.use("/api/auth", authRoute);
-app.use("/api/address", addressRoute);
 app.use("/api/branch", branchRoute);
 app.use("/api/category", categoryRoute);
 app.use("/api/cart", cartRoute);

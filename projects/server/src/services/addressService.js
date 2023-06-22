@@ -43,7 +43,7 @@ module.exports = {
 	startCreateAddress: async (user_id, body) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const { label, city_id, address } = body;
+				const { label, city_id, detail } = body;
 				const city = await readCityQuery(city_id);
 				const { latitude, longitude } = await getCoordinates(city.type, city.name, city.Province.name);
 				const is_default = false;
@@ -51,7 +51,7 @@ module.exports = {
 					user_id,
 					label,
 					city_id,
-					address,
+					detail,
 					latitude,
 					longitude,
 					is_default,
@@ -67,14 +67,14 @@ module.exports = {
 	startUpdateAddress: async (user_id, body, id) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const { label, city_id, address } = body;
+				const { label, city_id, detail } = body;
 				if (city_id) {
 					const city = await readCityQuery(city_id);
 					const { latitude, longitude } = await getCoordinates(city.type, city.name, city.Province.name);
-					const result = await updateAddressQuery(id, user_id, label, city_id, address, latitude, longitude);
+					const result = await updateAddressQuery(id, user_id, label, city_id, detail, latitude, longitude);
 					return resolve(result);
 				} else {
-					const result = await updateAddressQuery(id, user_id, label, city_id, address);
+					const result = await updateAddressQuery(id, user_id, label, city_id, detail);
 					return resolve(result);
 				}
 			} catch (error) {

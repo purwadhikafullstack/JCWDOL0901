@@ -3,7 +3,7 @@ const { Addresses, Cities, Provinces } = require("../models/index.js");
 const getUserAddressesQuery = async (user_id) => {
 	const addressData = await Addresses.findAll({
 		where: { user_id },
-		include: Cities,
+		include: [{ model: Cities, include: [{ model: Provinces }] }],
 	});
 
 	return addressData;
@@ -12,17 +12,18 @@ const getUserAddressesQuery = async (user_id) => {
 const getDefaultAddressQuery = async (user_id) => {
 	const addressData = await Addresses.findOne({
 		where: { user_id, is_default: true },
+		include: [{ model: Cities, include: [{ model: Provinces }] }],
 	});
 
 	return addressData;
 };
 
-const createAddressQuery = async (user_id, label, city_id, address, latitude, longitude, is_default) => {
+const createAddressQuery = async (user_id, label, city_id, detail, latitude, longitude, is_default) => {
 	const addressData = await Addresses.create({
 		user_id,
 		label,
 		city_id,
-		address,
+		detail,
 		latitude,
 		longitude,
 		is_default,
@@ -31,12 +32,13 @@ const createAddressQuery = async (user_id, label, city_id, address, latitude, lo
 	return addressData;
 };
 
-const updateAddressQuery = async (id, user_id, label, city_id, address, latitude, longitude) => {
+const updateAddressQuery = async (id, user_id, label, city_id, detail, latitude, longitude) => {
+	console.log(detail);
 	const addressData = await Addresses.update(
 		{
 			label,
 			city_id,
-			address,
+			detail,
 			latitude,
 			longitude,
 		},
@@ -58,20 +60,20 @@ const deleteAddressQuery = async (id, user_id) => {
 	return await Addresses.destroy({ where: { id, user_id } });
 };
 
-const readDefaultAddressQuery = async (filter) => {
-	return await Addresses.findOne({
-		where: { ...filter },
-		include: [{ model: Cities, include: [{ model: Provinces }] }],
-	});
-};
+// const readDefaultAddressQuery = async (filter) => {
+// 	return await Addresses.findOne({
+// 		where: { ...filter },
+// 		include: [{ model: Cities, include: [{ model: Provinces }] }],
+// 	});
+// };
 
-const readAddressQuery = async (filter) => {
-	return await Addresses.findAll({
-		where: { ...filter },
-		include: [{ model: Cities, include: [{ model: Provinces }] }],
-		order: [["default", "DESC"]],
-	});
-};
+// const readAddressQuery = async (filter) => {
+// 	return await Addresses.findAll({
+// 		where: { ...filter },
+// 		include: [{ model: Cities, include: [{ model: Provinces }] }],
+// 		order: [["default", "DESC"]],
+// 	});
+// };
 
 module.exports = {
 	getUserAddressesQuery,
@@ -81,6 +83,6 @@ module.exports = {
 	resetDefaultAddressQuery,
 	setDefaultAddressQuery,
 	deleteAddressQuery,
-	readDefaultAddressQuery,
-	readAddressQuery,
+	// readDefaultAddressQuery,
+	// readAddressQuery,
 };

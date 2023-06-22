@@ -2,7 +2,7 @@ import AddressList from "../../components/ManageAddress/AddressList";
 import PageTitle from "../../components/PageTitle";
 import CompanyLogo from "../../components/CompanyLogo.jsx";
 import BackButton from "../../components/BackButton";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const ResponsiveLogo = () => {
 	return (
@@ -18,10 +18,11 @@ const ResponsiveLogo = () => {
 };
 
 const Header = () => {
+	const source = useLocation()?.state?.source;
 	return (
 		<div className="text-black flex flex-col bg-green-200 sm:bg-white pb-4">
 			<BackButton
-				url="/account"
+				url={source ? source : "/account"}
 				color="sm:text-gray-400 text-green-100 text-3xl sm:hover:text-green-300 hover:text-gray-200"
 			/>
 			<ResponsiveLogo />

@@ -37,19 +37,17 @@ const readProductQuery = async (inventory_id) => {
 	});
 };
 
-
 const readProductsQuery = async (params) => {
-
 	const offset = params?.page ? (params?.page - 1) * params?.itemPerPage : null;
 	const limit = params?.itemPerPage ? params?.itemPerPage : null;
 	const order = params?.order ? [...params?.order] : [];
-  
+
 	return await Products.findAndCountAll({
 		where: { ...params?.Products },
 		include: [
 			{
 				model: Inventories,
-				where: { ...filter?.Inventories },
+				where: { ...params?.Inventories },
 				include: [
 					{ model: Branches, attributes: ["name"] },
 					{

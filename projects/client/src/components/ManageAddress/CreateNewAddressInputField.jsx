@@ -31,7 +31,7 @@ const CreateNewAddressInputField = ({ formik, address }) => {
 				data={provinces}
 			/>
 			<SelectMenus name="City" inputKey="city_id" formik={formik} data={cities} />
-			<InputGroup name="Detail Address" type="text" inputKey="address" formik={formik} />
+			<InputGroup name="Detail Address" type="text" inputKey="detail" formik={formik} />
 		</div>
 	);
 };

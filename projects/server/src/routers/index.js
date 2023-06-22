@@ -12,7 +12,6 @@ const voucherRoute = require("./voucherRoute.js");
 const transactionRoute = require("./transactionRoute.js");
 const rajaOngkirRoute = require("./rajaOngkirRoute.js");
 const profileRoute = require("./profileRoute.js");
-const addressRoute = require("./addressRoute.js");
 
 module.exports = {
 	authRoute,
