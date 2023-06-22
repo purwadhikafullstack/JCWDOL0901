@@ -29,12 +29,23 @@ export const getProductsSortBy = () => {
 	});
 };
 
-export const getProductsOrder = () => {
+export const getOrderByName = (sort) => {
 	return new Promise((resolve, reject) => {
 		resolve({
 			data: [
-				{ id: "1", name: "Ascending" },
-				{ id: "0", name: "Descending" },
+				{ id: "1", name: "A to Z" },
+				{ id: "0", name: "Z to A" },
+			],
+		});
+	});
+};
+
+export const getOrderByPrice = (sort) => {
+	return new Promise((resolve, reject) => {
+		resolve({
+			data: [
+				{ id: "1", name: "Low to High" },
+				{ id: "0", name: "High to Low" },
 			],
 		});
 	});

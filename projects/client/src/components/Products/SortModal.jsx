@@ -1,13 +1,10 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useRef } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { ExclamationIcon } from "@heroicons/react/outline";
-import { useNavigate } from "react-router-dom";
 import SearchSort from "./SearchSort";
 
 export default function SortModal({ open, setOpen, order, setOrder, sort, setSort }) {
 	const cancelButtonRef = useRef(null);
-	const navigate = useNavigate();
 	return (
 		<Transition.Root show={open} as={Fragment}>
 			<Dialog
