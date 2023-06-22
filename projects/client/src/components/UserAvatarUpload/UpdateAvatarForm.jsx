@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import ErrorWarning from "../ErrorWarning";
-import axios from "axios";
 import { useFormik } from "formik";
 import { getAvatar } from "./handlers/updateAvatarHandler";
 import { formikUpdateAvatarConfiguration } from "./config/formikUpdateAvatarConfiguration";
-import { useNavigate } from "react-router-dom";
 import AvatarImagePreview from "./AvatarImagePreview";
 import AvatarInputField from "./AvatarInputField";
 import Button from "../Button";
