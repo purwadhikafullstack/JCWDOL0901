@@ -44,7 +44,7 @@ const ProductDetail = () => {
 				setProduct(result.data);
 			})
 			.catch((error) => {
-				alert(error.data.message);
+				alert(error);
 			});
 	}, []);
 

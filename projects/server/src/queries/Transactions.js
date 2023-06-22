@@ -60,6 +60,7 @@ const readAdminTransactionsQuery = async (from, to, status, branch) => {
 	});
 };
 
+
 const readBranchAdminTransactionsQuery = async (query, branch) => {
 	return await Transactions.findAndCountAll({
 		where: {
@@ -82,4 +83,8 @@ const readBranchAdminTransactionsQuery = async (query, branch) => {
 	});
 };
 
-module.exports = { readAdminTransactionsQuery, readBranchAdminTransactionsQuery };
+const createTransactionQuery = async (payload, transaction) => {
+	return await Transactions.create({ ...payload, status_id: 1 }, { transaction });
+};
+
+module.exports = { readAdminTransactionsQuery, readBranchAdminTransactionsQuery, createTransactionQuery };
