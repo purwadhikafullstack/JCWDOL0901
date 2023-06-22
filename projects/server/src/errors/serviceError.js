@@ -33,7 +33,6 @@ const startRegistrationErrorHandler = async (error) => {
 			message: `Service Unavailable, please try again later!`,
 		};
 	}
-
 	return {
 		code: 500,
 		message: "Internal Server Error, please contact us!",
@@ -92,7 +91,6 @@ const startGetUserProfileErrorHandler = async (error) => {
 	await writeLogFile(error, "startGetUserProfileErrorHandler");
 
 	return { code: 500, message: "Internal Server Error, please contact us!" };
-<<<<<<< HEAD
 };
 
 const startUpdateAvatarErrorHandler = async (error) => {
@@ -105,8 +103,6 @@ const startGetAvatarErrorHandler = async (error) => {
 	await writeLogFile(error, "startGetAvatarErrorHandler");
 
 	return { code: 500, message: "Internal Server Error, please contact us!" };
-=======
->>>>>>> development
 };
 
 const startAdminAuthenticationErrorHandler = async (error) => {
@@ -135,7 +131,11 @@ const startDeleteteHandler = async (error) => {
 };
 const startUpdateErrorHandler = async (error) => {
 	await writeLogFile(error, "startUpdateErrorHandler");
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
 
+const startGetUserAddressesErrorHandler = async (error) => {
+	await writeLogFile(error, "startGetUserAddressesErrorHandler");
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
@@ -156,6 +156,7 @@ const rajaOngkirErrorHandler = async (body) => {
 
 	return { code: 500, message: "Service Unavailable" };
 };
+
 module.exports = {
 	startRegistrationErrorHandler,
 	startFindErrorHandler,
@@ -165,18 +166,13 @@ module.exports = {
 	startDeleteteHandler,
 	startUpdateErrorHandler,
 	startUpdatePasswordErrorHandler,
-<<<<<<< HEAD
-=======
 	startCreateTransactionErrorHandler,
 	rajaOngkirErrorHandler,
->>>>>>> development
 	startProfileUpdateErrorHandler,
 	startGetUserProfileErrorHandler,
 	startAdminAuthenticationErrorHandler,
 	startUserAuthenticationErrorHandler,
-<<<<<<< HEAD
+	startGetUserAddressesErrorHandler,
 	startUpdateAvatarErrorHandler,
 	startGetAvatarErrorHandler,
-=======
->>>>>>> development
 };

@@ -12,7 +12,7 @@ const OverlengthDescription = ({ description }) => {
 				onClick={() => setViewMore(false)}
 			>
 				<span className="underline text-sm">Show Less</span>
-				<span class="material-symbols-rounded">expand_less</span>
+				<span className="material-symbols-rounded">expand_less</span>
 			</div>
 		</div>
 	) : (
@@ -23,7 +23,7 @@ const OverlengthDescription = ({ description }) => {
 				onClick={() => setViewMore(true)}
 			>
 				<span className="underline text-sm">Show More</span>
-				<span class="material-symbols-rounded">expand_more</span>
+				<span className="material-symbols-rounded">expand_more</span>
 			</div>
 		</div>
 	);
