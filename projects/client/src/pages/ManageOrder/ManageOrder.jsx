@@ -2,7 +2,6 @@ import React from "react";
 import CompanyLogo from "../../components/CompanyLogo";
 import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration";
 import PageTitle from "../../components/PageTitle";
-import StockTableGroup from "../../components/ProductStock/StockTableGroup";
 import SideBar from "../../components/SideBar/SideBar";
 import OrderTableGroup from "../../components/ManageOrder/OrderTableGroup";
 

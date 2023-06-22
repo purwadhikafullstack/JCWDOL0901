@@ -42,7 +42,6 @@ export const getProductsOrder = () => {
 
 const getFinalPrice = (original, promoDetail) => {
 	if (promoDetail?.Promotion?.id === 2) {
-		console.log(original - promoDetail?.value);
 		return original - promoDetail?.value > 0 ? original - promoDetail?.value : 0;
 	} else if (promoDetail?.Promotion?.id === 3) {
 		return original - (promoDetail?.value / 100) * original;

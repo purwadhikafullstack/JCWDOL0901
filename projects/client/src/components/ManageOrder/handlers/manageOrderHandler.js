@@ -57,8 +57,8 @@ export const getOrderOfDate = () => {
 	return new Promise((resolve, reject) => {
 		resolve({
 			data: [
-				{ id: "1", name: "Latest" },
-				{ id: "0", name: "Oldest" },
+				{ id: "0", name: "Latest" },
+				{ id: "1", name: "Oldest" },
 			],
 		});
 	});
@@ -75,6 +75,22 @@ export const getOrderOfAmount = () => {
 	});
 };
 
+export const getBorderColor = (status) => {
+	if (status === 1) {
+		return "border-gray-300";
+	} else if (status === 2) {
+		return "border-yellow";
+	} else if (status === 3) {
+		return "border-purple";
+	} else if (status === 4) {
+		return "border-cyan";
+	} else if (status === 5) {
+		return "border-green-200";
+	}
+
+	return "border-red";
+};
+
 export const resetSetting = (setStartDate, setEndDate, setName, setFilterBy, setFilter, setSort, setOrder) => {
 	setStartDate("");
 	setEndDate("");
@@ -89,7 +105,7 @@ export const generateUrlQuery = (name, startDate, endDate, filterBy, filter, sor
 	let url = "";
 
 	url += `?page=${page}`;
-	url += `&name=${name}`;
+	url += `&id=${name}`;
 	url += `&start_after=${startDate}`;
 	url += `&end_before=${endDate}`;
 	url += filter ? `&${filterBy.id}=${filter.id}` : "";
@@ -97,4 +113,10 @@ export const generateUrlQuery = (name, startDate, endDate, filterBy, filter, sor
 	url += order.id ? `&asc=${order.id}` : "";
 
 	return url;
+};
+
+export const getAdminTransactions = (query) => {
+	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/admin/transaction/list${query}`, {
+		headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+	});
 };

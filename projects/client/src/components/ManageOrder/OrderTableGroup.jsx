@@ -10,9 +10,13 @@ const OrderTableGroup = () => {
 	const [sort, setSort] = React.useState("");
 	const [order, setOrder] = React.useState("");
 	const [page, setPage] = React.useState(1);
-	const [maxPage, setMaxPage] = React.useState(1);
+	const [maxPage, setMaxPage] = React.useState(0);
 	const [startDate, setStartDate] = React.useState("");
 	const [endDate, setEndDate] = React.useState("");
+
+	React.useEffect(() => {
+		setPage(1);
+	}, [name, filterBy, filter, sort, order, startDate, endDate]);
 
 	return (
 		<div className="flex flex-col justify-start overflow-x-auto mt-3.5 pt-4 px-4">
@@ -31,6 +35,7 @@ const OrderTableGroup = () => {
 				setSort={setSort}
 				order={order}
 				setOrder={setOrder}
+				setPage={setPage}
 			/>
 			<OrderTable
 				name={name}
@@ -44,7 +49,7 @@ const OrderTableGroup = () => {
 				setMaxPage={setMaxPage}
 			/>
 			<div className="mx-auto my-12">
-				<Pagination setPage={setPage} maxPage={maxPage} />
+				<Pagination page={page} setPage={setPage} maxPage={maxPage} />
 			</div>
 		</div>
 	);
