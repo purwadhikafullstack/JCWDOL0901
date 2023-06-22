@@ -42,7 +42,7 @@ const registerAdmin = async (request, response) => {
 };
 
 const loginAdmin = async (request, response) => {
-	await startLoginAuthentication(request.body, "Admins")
+	await startAdminLoginAuthentication(request.body, "Admins")
 		.then((result) => {
 			response.status(200).send(result);
 		})

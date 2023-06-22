@@ -18,7 +18,7 @@ const ProductCard = ({ product }) => {
 			>
 				{product.Inventories[0].promo ? (
 					<div className="flex items-center my-auto ml-2">
-						<span className="absolute text-sm text-left text-green-100 px-2 py-0.5 rounded ml-2 bg-rose-500 w-fit">
+						<span className="z-50 absolute text-sm text-left text-green-100 px-2 py-0.5 rounded ml-2 bg-rose-500 w-fit">
 							{price?.promo?.value}
 						</span>
 					</div>

@@ -22,7 +22,7 @@ module.exports = {
 				allowNull: false,
 				type: Sequelize.STRING,
 			},
-			address: {
+			detail: {
 				allowNull: false,
 				type: Sequelize.STRING,
 			},
@@ -30,11 +30,11 @@ module.exports = {
 				allowNull: false,
 				type: Sequelize.DECIMAL(11, 8),
 			},
-			longtitude: {
+			longitude: {
 				allowNull: false,
 				type: Sequelize.DECIMAL(11, 8),
 			},
-			default: {
+			is_default: {
 				allowNull: false,
 				type: Sequelize.BOOLEAN,
 			},

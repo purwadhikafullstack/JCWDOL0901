@@ -49,4 +49,5 @@ const getProductDetail = async (request, response) => {
 			response.status(error.code).send(error.message);
 		});
 };
+
 module.exports = { getProductsRecommendation, getRelatedProducts, getProductDetail, getProducts };
