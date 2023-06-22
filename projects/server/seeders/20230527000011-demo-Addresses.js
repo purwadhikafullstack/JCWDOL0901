@@ -43,8 +43,26 @@ module.exports = {
 					longtitude: 106.82691787141256,
 					default: true,
 				},
+				{
+					user_id: 6,
+					city_id: 445,
+					label: "Rumah",
+					address: "Jl. Cakra II 15, Kauman, Kec. Ps. Kliwon, Kota Surakarta, Jawa Tengah 57122",
+					latitude: -6.181277772102812,
+					longtitude: 106.82691787141256,
+					default: true,
+				},
+				{
+					user_id: 8,
+					city_id: 444,
+					label: "Toko",
+					address: "Jl. Pacar Keling No.19, RW.10, Pacar Keling, Kec. Tambaksari, Surabaya, Jawa Timur 60131",
+					latitude: -7.573409615070734,
+					longtitude: 110.82391915834977,
+					default: true,
+				},
 			],
-			{}
+			{},
 		);
 	},
 
