@@ -34,7 +34,6 @@ module.exports = {
 
 				return resolve(randomProducts);
 			} catch (error) {
-				console.log(error);
 				return reject(await startFindErrorHandler(error));
 			}
 		});
