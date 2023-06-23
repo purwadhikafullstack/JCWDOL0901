@@ -9,13 +9,14 @@ import SelectBranchModal from "../../components/SelectBranchModal";
 import DesktopHeader from "../../components/DesktopHeader";
 const HomePage = () => {
 	const [showModal, setShowModal] = React.useState(false);
+	const [page, setPage] = React.useState(1);
 	return (
 		<div className="max-w-[640px] min-h-screen mx-auto bg-white overflow-hidden flex flex-col overflow-y-hidden sm:max-w-full">
 			{showModal && <SelectBranchModal toggleBranchModal={setShowModal} />}
 			<HomeHeader toggleBranchModal={setShowModal} />
 			<div className="flex flex-col sm:px-8">
 				<PromoCarousel />
-				<CategoryCarousel />
+				<CategoryCarousel setPage={setPage} />
 				<ProductsRecommendation />
 			</div>
 			<MobileNavBar />
