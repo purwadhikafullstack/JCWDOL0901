@@ -10,7 +10,14 @@ const SelectMenus = ({ name, inputKey, data, formik, ignore, setInput }) => {
 				<select
 					name={inputKey}
 					id={name}
-					onChange={formik.handleChange}
+					onChange={
+						ignore
+							? (e) => {
+									setInput(e.target.value);
+									formik.handleChange(e);
+							  }
+							: formik.handleChange
+					}
 					onBlur={formik.handleBlur}
 					value={formik.values[inputKey]}
 					className="bg-gray-100 text-gray-500 placeholder-gray-200 border-2 border-white active:bg-white focus:border-green-500 focus:outline-none focus:border-2 focus:bg-white focus:text-black rounded-lg text-sm w-full p-2.5"
