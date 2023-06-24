@@ -27,7 +27,6 @@ const validationSchema = Yup.object({
 });
 
 const onSubmitConfiguration = async (values, navigate) => {
-	console.log(values);
 	await createNewAddressHandler(values, navigate);
 };
 

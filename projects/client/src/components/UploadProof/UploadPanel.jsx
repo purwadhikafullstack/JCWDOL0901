@@ -3,12 +3,14 @@ import ImagePreview from "../../components/UploadImagePreview";
 import Button from "../../components/Button";
 import CompanyLogo from "../../components/CompanyLogo";
 import { useFormik } from "formik";
+import { useNavigate } from "react-router-dom";
 import { formikUploadProofConfiguration } from "./config/UploadPaymentProofFormikConfiguration";
 import FileUploadInputGroup from "../../components/FileUploadInputGroup";
 
 const UploadPanel = ({ transaction_id }) => {
 	const [file, setFile] = React.useState();
-	const formik = useFormik(formikUploadProofConfiguration(transaction_id));
+	const navigate = useNavigate();
+	const formik = useFormik(formikUploadProofConfiguration(transaction_id, navigate));
 
 	return (
 		<div className="flex flex-col items-center justify-center px-6 pb-6">
@@ -22,7 +24,7 @@ const UploadPanel = ({ transaction_id }) => {
 					inputKey="proof"
 					setFile={setFile}
 				/>
-				<Button type="submit" name="Upload">
+				<Button type="submit" name="Upload" disabled={formik.isSubmitting || formik.isValidating}>
 					<span className="material-symbols-rounded text-green-100 mr-2">upload_file</span>
 				</Button>
 			</form>

@@ -1,11 +1,12 @@
 import * as Yup from "yup";
-import { postProof } from "../handler/uploadPaymentProofHandler";
+import { errorAlert, postProof, promptUploadProof, successAlert } from "../handler/uploadPaymentProofHandler";
 
 const initialValues = (transaction_id) => {
 	return { transaction_id, proof: "" };
 };
 
 const validateOnChange = true;
+
 const validateOnBlur = false;
 
 const requiredMessage = "Please upload your payment proof";
@@ -24,18 +25,28 @@ const validationSchema = Yup.object({
 	proof,
 });
 
-const onSubmitConfiguration = async (values) => {
-	const data = new FormData();
-	await data.append("transaction_id", values.transaction_id);
-	await data.append("proof", values.proof);
+const onSubmitConfiguration = async (values, navigate) => {
+	await promptUploadProof().then(async (result) => {
+		if (result.isConfirmed) {
+			const data = new FormData();
+			await data.append("transaction_id", values.transaction_id);
+			await data.append("proof", values.proof);
 
-	await postProof(data);
+			await postProof(data)
+				.then(async (postResult) => {
+					await successAlert(navigate);
+				})
+				.catch(async (error) => {
+					await errorAlert();
+				});
+		}
+	});
 };
 
-export const formikUploadProofConfiguration = (transaction_id) => {
+export const formikUploadProofConfiguration = (transaction_id, navigate) => {
 	return {
 		initialValues: initialValues(transaction_id),
-		onSubmit: async (values) => onSubmitConfiguration(values),
+		onSubmit: async (values) => onSubmitConfiguration(values, navigate),
 		validateOnChange,
 		validateOnBlur,
 		validationSchema,

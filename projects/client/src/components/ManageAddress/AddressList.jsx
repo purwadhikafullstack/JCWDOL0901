@@ -49,7 +49,6 @@ export default function AddressList() {
 			})
 			.catch((error) => alert("Server Unavailable"));
 	}, []);
-	console.log(addresses);
 
 	return (
 		<div className="my-6 sm:mx-2">

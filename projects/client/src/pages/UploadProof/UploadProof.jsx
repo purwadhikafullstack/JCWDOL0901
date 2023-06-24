@@ -7,6 +7,8 @@ import BackButton from "../../components/BackButton";
 import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration";
 import PaymentInformation from "../../components/UploadProof/PaymentInformation";
 import UploadPanel from "../../components/UploadProof/UploadPanel";
+import Footer from "../../components/Footer";
+import MobileNavBar from "../../components/MobileNavBar";
 
 const Header = () => {
 	return (
@@ -23,7 +25,7 @@ const Header = () => {
 
 const UploadPaymentProofPage = () => {
 	// const transaction_id = useSelector((state) => state.proof.transaction_id);
-	const transaction_id = 1;
+	const transaction_id = 6;
 	const dispatch = useDispatch();
 
 	React.useEffect(() => {
@@ -31,16 +33,18 @@ const UploadPaymentProofPage = () => {
 	}, []);
 
 	return (
-		<div className="flex flex-col">
-			<div className="flex flex-col bg-white min-h-screen max-w-[640px] overflow-x-hidden sm:max-w-full">
+		<div className="flex flex-col justify-between bg-white">
+			<div className="flex flex-col max-w-[640px] min-h-screen overflow-x-hidden sm:max-w-full">
 				<CircularBackgroundDecoration />
 				<Header />
 				<PageTitle title="Upload Payment Proof" color={"text-green-100 sm:text-green-400 z-10"} />
-				<div className="flex flex-col w-fit self-center border bg-white mt-16 mx-4 rounded-lg shadow z-50 sm:mt-8 sm:flex-row">
+				<div className="flex flex-col w-fit self-center border bg-white mt-12 mx-4 rounded-lg shadow z-50 sm:my-auto sm:flex-row">
 					<PaymentInformation transaction_id={transaction_id} />
 					<UploadPanel transaction_id={transaction_id} />
 				</div>
+				<Footer />
 			</div>
+			<MobileNavBar />
 		</div>
 	);
 };
