@@ -16,7 +16,7 @@ const OrderTableGroup = () => {
 
 	React.useEffect(() => {
 		setPage(1);
-	}, [name, filterBy, filter, sort, order, startDate, endDate]);
+	}, [name, filter, order, startDate, endDate]);
 
 	return (
 		<div className="flex flex-col justify-start overflow-x-auto mt-3.5 pt-4 px-4">
