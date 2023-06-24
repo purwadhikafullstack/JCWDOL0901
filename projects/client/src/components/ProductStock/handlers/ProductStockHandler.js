@@ -65,10 +65,10 @@ export const generateUrlQuery = (name = "", page, filterBy, filter, sort, order)
 
 	url += `?page=${page}`;
 	url += `&name=${name}`;
-	url += filterBy?.id ? `&${filterBy?.id}=${filter?.id}` : "";
+	url += filter?.id ? `&${filterBy?.id}=${filter?.id}` : "";
 	url += `&order=${sort?.id}`;
 	url += `&asc=${order?.id}`;
-
+	console.log(url);
 	return url;
 };
 

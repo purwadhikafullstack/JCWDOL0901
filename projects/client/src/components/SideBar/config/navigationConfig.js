@@ -23,7 +23,7 @@ const navigation = () => {
 		{ name: "Categories", href: "/admin/category", icon: ViewGridIcon },
 		{ name: "Stocks", href: "/admin/stock", icon: ServerIcon, super: false },
 		{ name: "Product Promos", href: "/admin/promo", icon: CurrencyDollarIcon, super: false },
-		{ name: "Orders", href: "#", icon: DocumentTextIcon },
+		{ name: "Orders", href: "/admin/order", icon: DocumentTextIcon },
 		{ name: "Vouchers", href: "#", icon: TicketIcon },
 		{ name: "Reports", href: "#", icon: ChartBarIcon },
 	];

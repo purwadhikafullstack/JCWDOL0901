@@ -19,6 +19,7 @@ import UpdateCategoryPage from "./pages/UpdateCategory/UpdateCategoryPage";
 import AdminAuthGuard from "./pages/AdminAuthGuard";
 import ChangePasswordPage from "./pages/ChangePassword/ChangePasswordPage";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
+import ManageOrder from "./pages/ManageOrder/ManageOrder";
 import AccountPage from "./pages/Account/AccountPage";
 import ManageAddress from "./pages/ManageAddress/ManageAddress";
 import CreateNewAddress from "./pages/CreateNewAddress/CreateNewAddress";
@@ -58,6 +59,7 @@ function App() {
 				<Route path="/order/upload/" element={<UploadProof />} />
 
 				{/* //Admin Auth Page */}
+				<Route path="/admin/order" element={<AdminAuthGuard component={<ManageOrder />} />} />
 				<Route path="/admin/promo" element={<AdminAuthGuard component={<ProductPromotion />} />} />
 				<Route path="/admin/promo/create" element={<AdminAuthGuard component={<CreatePromotion />} />} />
 				<Route path="/admin/stock" element={<AdminAuthGuard component={<ManageStock />} />} />
