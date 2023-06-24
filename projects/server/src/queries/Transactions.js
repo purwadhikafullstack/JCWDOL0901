@@ -54,4 +54,8 @@ const createTransactionQuery = async (payload, transaction) => {
 	return await Transactions.create({ ...payload, status_id: 1 }, { transaction });
 };
 
-module.exports = { readAdminTransactionsQuery, createTransactionQuery };
+const readUserTransactionQuery = async (transaction_id) => {
+	return await Transactions.findOne({ where: { id: transaction_id } });
+};
+
+module.exports = { readAdminTransactionsQuery, createTransactionQuery, readUserTransactionQuery };

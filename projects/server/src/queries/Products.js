@@ -47,7 +47,7 @@ const readProductsQuery = async (params) => {
 		include: [
 			{
 				model: Inventories,
-				where: { ...filter?.Inventories },
+				where: { ...params?.Inventories },
 				include: [
 					{ model: Branches, attributes: ["name"] },
 					{

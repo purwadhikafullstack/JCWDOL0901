@@ -19,6 +19,9 @@ const writeLogFile = (error, source) => {
 const startFindErrorHandler = async (error) => {
 	await writeLogFile(error, "startFindErrorHandler");
 
+	if (error === "ERR_UNAUTHORIZED") {
+		return { code: 403, message: "Unauthorized!" };
+	}
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 

@@ -1,11 +1,12 @@
 const { sequelize } = require("../models/index.js");
-const { startCreateTransactionErrorHandler } = require("../errors/serviceError.js");
-const { createTransactionQuery } = require("../queries/Transactions.js");
+const { startCreateTransactionErrorHandler, startFindErrorHandler } = require("../errors/serviceError.js");
+const { createTransactionQuery, readUserTransactionQuery } = require("../queries/Transactions.js");
 const { createTransactionDetailsQuery } = require("../queries/Transaction_details.js");
 const { createLogisticsQuery } = require("../queries/Logistics.js");
 const { deleteCartsQueryOnOrder } = require("../queries/Carts.js");
 const { updateUsedUserVouchersQuery } = require("../queries/User_vouchers.js");
 const { decrementInventoriesStockQuery } = require("../queries/Inventories.js");
+const { createProofQuery } = require("../queries/Proofs.js");
 
 const userTransactionGeneration = async (payload, transaction) => {
 	const Transaction = await createTransactionQuery(payload.transaction, transaction);
@@ -29,6 +30,31 @@ module.exports = {
 			} catch (error) {
 				await transaction.rollback();
 				return await reject(await startCreateTransactionErrorHandler(error));
+			}
+		});
+	},
+	startFindUserTransaction: async (transaction_id, user_id) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const Transaction = await readUserTransactionQuery(transaction_id);
+
+				if (Transaction.user_id !== user_id) throw "ERR_UNAUTHORIZED";
+
+				return await resolve(Transaction);
+			} catch (error) {
+				return await reject(await startFindErrorHandler(error));
+			}
+		});
+	},
+	startCreateProof: async (transaction_id, path) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const Proof = await createProofQuery(transaction_id, path);
+
+				return await resolve("Success!");
+			} catch (error) {
+				console.log(error);
+				return await reject({ code: 500, message: "0" });
 			}
 		});
 	},
