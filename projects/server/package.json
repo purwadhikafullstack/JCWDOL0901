@@ -23,6 +23,7 @@
 		"node-cron": "^3.0.2",
 		"nodemailer": "^6.9.3",
 		"opencage-api-client": "^1.0.1",
+     "request": "^2.88.2",
 		"sequelize": "^6.31.1"
 	},
 	"devDependencies": {

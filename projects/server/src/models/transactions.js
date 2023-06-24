@@ -1,5 +1,5 @@
 "use strict";
-const { Model } = require("sequelize");
+const { Model, Sequelize } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
 	class Transactions extends Model {
 		/**
@@ -71,10 +71,12 @@ module.exports = (sequelize, DataTypes) => {
 			created_at: {
 				allowNull: false,
 				type: DataTypes.DATE,
+				defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
 			},
 			updated_at: {
 				allowNull: false,
 				type: DataTypes.DATE,
+				defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
 			},
 		},
 		{

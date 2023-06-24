@@ -22,6 +22,11 @@ const switchBranch = (state, action) => {
 	return { ...state, branch: { ...action.payload } };
 };
 
+const setUserLogin = (state, action) => {
+	const { hasLogged } = action.payload || null;
+	return { ...state, hasLogged };
+};
+
 export const user = createSlice({
 	name: "user",
 	initialState: {
@@ -33,5 +38,6 @@ export const user = createSlice({
 		setUserNearestBranch,
 		setUserLocation,
 		switchBranch,
+		setUserLogin,
 	},
 });
