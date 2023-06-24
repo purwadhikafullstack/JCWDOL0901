@@ -1,6 +1,5 @@
 const { Op } = require("sequelize");
 const { sequelize } = require("../models/index.js");
-const { query } = require("express");
 
 const getAdminQueryFilter = async (query) => {
 	const filter = { branch: [] };
@@ -145,6 +144,45 @@ const getInventoriesQueryOrder = async (query) => {
 	return order;
 };
 
+const transactionsFilter = ["branch_id", "status_id"];
+const getAdminTransactionQueryFilter = async (query) => {
+	const filter = {
+		Transactions: {
+			created_at: {
+				[Op.and]: {
+					[Op.gte]: query?.start_after || "1971-01-01",
+					[Op.lte]: query?.end_before || new Date(),
+				},
+			},
+		},
+	};
+	if (query.id) filter.Transactions.id = query.id;
+
+	if (query.voucher_id > 0) {
+		filter.Transactions.voucher_id = { [Op.not]: null };
+	} else if (query.voucher_id === "0") {
+		filter.Transactions.voucher_id = null;
+	}
+
+	transactionsFilter.forEach((key) => {
+		if (query[key]) filter.Transactions[key] = query[key];
+	});
+
+	return filter;
+};
+
+const transactionsOrder = ["amount", "created_at"];
+const getAdminTransactionQueryOrder = async (query) => {
+	const order = { Transactions: [] };
+	const ascending = query.asc == 1 ? "ASC" : "DESC";
+
+	transactionsOrder.forEach((key) => {
+		if (query.order === key) order.Transactions.push([key, ascending]);
+	});
+
+	return order;
+};
+
 module.exports = {
 	paginateData,
 	getAdminQueryFilter,
@@ -159,4 +197,6 @@ module.exports = {
 	getProductQueryOrder,
 	getProductsRecommendationFilter,
 	getRelatedProductsFilter,
+	getAdminTransactionQueryFilter,
+	getAdminTransactionQueryOrder,
 };

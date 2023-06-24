@@ -325,86 +325,48 @@ module.exports = {
 			onDelete: "CASCADE",
 			onUpdate: "CASCADE",
 		});
+
+		await queryInterface.addConstraint("Proofs", {
+			fields: ["transaction_id"],
+			type: "foreign key",
+			name: "FK_Proofs-Transactions",
+			references: {
+				table: "Transactions",
+				field: "id",
+			},
+			onDelete: "RESTRICT",
+			onUpdate: "CASCADE",
+		});
 	},
 
 	async down(queryInterface, Sequelize) {
 		await queryInterface.removeConstraint("Profiles", "FK_Profiles-Users");
-		await queryInterface.removeConstraint(
-			"User_tokens",
-			"FK_User_tokens-Users"
-		);
+		await queryInterface.removeConstraint("User_tokens", "FK_User_tokens-Users");
 		await queryInterface.removeConstraint("Addresses", "FK_Addresses-Users");
 		await queryInterface.removeConstraint("Cities", "FK_Cities-Provinces");
 		await queryInterface.removeConstraint("Addresses", "FK_Addresses-Cities");
-		await queryInterface.removeConstraint(
-			"User_vouchers",
-			"FK_User_vouchers-Users"
-		);
-		await queryInterface.removeConstraint(
-			"User_vouchers",
-			"FK_User_vouchers-Vouchers"
-		);
+		await queryInterface.removeConstraint("User_vouchers", "FK_User_vouchers-Users");
+		await queryInterface.removeConstraint("User_vouchers", "FK_User_vouchers-Vouchers");
 		await queryInterface.removeConstraint("Branches", "FK_Branches-Cities");
 		await queryInterface.removeConstraint("Branches", "FK_Branches-Admins");
 		await queryInterface.removeConstraint("Products", "FK_Products-Categories");
-		await queryInterface.removeConstraint(
-			"Stock_changes",
-			"FK_Stock_changes-Inventories"
-		);
-		await queryInterface.removeConstraint(
-			"Logistics",
-			"FK_Logistics-Transactions"
-		);
-		await queryInterface.removeConstraint(
-			"Transactions",
-			"FK_Transactions-Users"
-		);
-		await queryInterface.removeConstraint(
-			"Transactions",
-			"FK_Transactions-Branches"
-		);
-		await queryInterface.removeConstraint(
-			"Transactions",
-			"FK_Transactions-Vouchers"
-		);
-		await queryInterface.removeConstraint(
-			"Transactions",
-			"FK_Transactions-Statuses"
-		);
+		await queryInterface.removeConstraint("Stock_changes", "FK_Stock_changes-Inventories");
+		await queryInterface.removeConstraint("Logistics", "FK_Logistics-Transactions");
+		await queryInterface.removeConstraint("Transactions", "FK_Transactions-Users");
+		await queryInterface.removeConstraint("Transactions", "FK_Transactions-Branches");
+		await queryInterface.removeConstraint("Transactions", "FK_Transactions-Vouchers");
+		await queryInterface.removeConstraint("Transactions", "FK_Transactions-Statuses");
 		await queryInterface.removeConstraint("Carts", "FK_Carts-Users");
 		await queryInterface.removeConstraint("Carts", "FK_Carts-Inventories");
-		await queryInterface.removeConstraint(
-			"Transaction_details",
-			"FK_Transaction_details-Transactions"
-		);
-		await queryInterface.removeConstraint(
-			"Transaction_details",
-			"FK_Transaction_details-Inventories"
-		);
-		await queryInterface.removeConstraint(
-			"Transaction_details",
-			"FK_Transaction_details-Inventory_promotions"
-		);
-		await queryInterface.removeConstraint(
-			"Inventories",
-			"FK_Inventories-Products"
-		);
-		await queryInterface.removeConstraint(
-			"Inventories",
-			"FK_Inventories-Branches"
-		);
-		await queryInterface.removeConstraint(
-			"Inventory_promotions",
-			"FK_Inventory_promotions-Inventories"
-		);
-		await queryInterface.removeConstraint(
-			"Inventory_promotions",
-			"FK_Inventory_promotions-Promotions"
-		);
+		await queryInterface.removeConstraint("Transaction_details", "FK_Transaction_details-Transactions");
+		await queryInterface.removeConstraint("Transaction_details", "FK_Transaction_details-Inventories");
+		await queryInterface.removeConstraint("Transaction_details", "FK_Transaction_details-Inventory_promotions");
+		await queryInterface.removeConstraint("Inventories", "FK_Inventories-Products");
+		await queryInterface.removeConstraint("Inventories", "FK_Inventories-Branches");
+		await queryInterface.removeConstraint("Inventory_promotions", "FK_Inventory_promotions-Inventories");
+		await queryInterface.removeConstraint("Inventory_promotions", "FK_Inventory_promotions-Promotions");
 		await queryInterface.removeConstraint("Vouchers", "FK_Vouchers-Promotions");
-		await queryInterface.removeConstraint(
-			"Vouchers",
-			"FK_Vouchers-Inventories"
-		);
+		await queryInterface.removeConstraint("Vouchers", "FK_Vouchers-Inventories");
+		await queryInterface.removeConstraint("Proofs", "FK_Proofs-Transactions");
 	},
 };

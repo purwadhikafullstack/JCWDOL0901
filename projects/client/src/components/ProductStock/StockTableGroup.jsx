@@ -15,6 +15,10 @@ const StockTableGroup = () => {
 	const [page, setPage] = React.useState(1);
 	const [maxPage, setMaxPage] = React.useState(1);
 
+	React.useEffect(() => {
+		setPage(1);
+	}, [name, filterBy, filter, sort, order]);
+
 	return (
 		<div className="flex flex-col justify-start mt-24 px-4 h-full">
 			<SearchConfiguration
