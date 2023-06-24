@@ -9,7 +9,7 @@ const {
 	Profiles,
 	Proofs,
 } = require("../models/index.js");
-const { Op, literal } = require("sequelize");
+const { Op, literal, Transaction } = require("sequelize");
 
 const dateQueryHelper = (from, to) => {
 	return {
@@ -90,9 +90,14 @@ const readUserTransactionQuery = async (transaction_id) => {
 	return await Transactions.findOne({ where: { id: transaction_id } });
 };
 
+const updateTransactionStatusQuery = async (status_id, transaction_id, transaction) => {
+	return await Transactions.update({ status_id }, { where: { id: transaction_id }, transaction });
+};
+
 module.exports = {
 	readAdminTransactionsQuery,
 	readBranchAdminTransactionsQuery,
 	createTransactionQuery,
 	readUserTransactionQuery,
+	updateTransactionStatusQuery,
 };

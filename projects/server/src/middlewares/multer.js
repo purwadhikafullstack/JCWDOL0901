@@ -20,7 +20,7 @@ const avatarStorage = multer.diskStorage({
 
 const proofStorage = multer.diskStorage({
 	destination: (request, response, callback) => {
-		callback(null, `uploads/proofs/`);
+		callback(null, `uploads/payment_proofs/`);
 	},
 	filename: (request, file, callback) => {
 		callback(

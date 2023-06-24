@@ -17,8 +17,9 @@ const postTransaction = async (request, response) => {
 const postTransactionProof = async (request, response) => {
 	const { file } = request;
 	const { transaction_id } = request.body;
+	const path = file.destination + file.filename;
 
-	await startCreateProof(transaction_id, file)
+	await startCreateProof(transaction_id, path)
 		.then((result) => {
 			response.status(200).send(result);
 		})

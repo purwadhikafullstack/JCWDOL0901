@@ -2,7 +2,7 @@ const {
 	startGetUserAddressesErrorHandler,
 	startDeleteteHandler,
 	startUpdateErrorHandler,
-	startCreateHandler,
+	startCreateErrorHandler,
 } = require("../errors/serviceError");
 
 const { sequelize } = require("../models");
@@ -61,8 +61,7 @@ module.exports = {
 
 				return resolve(result);
 			} catch (error) {
-				console.log(error);
-				return reject(await startCreateHandler(error));
+				return reject(await startCreateErrorHandler(error));
 			}
 		});
 	},
@@ -80,7 +79,6 @@ module.exports = {
 					return resolve(result);
 				}
 			} catch (error) {
-				console.log(error);
 				return reject(await startUpdateErrorHandler(error));
 			}
 		});

@@ -1,6 +1,14 @@
 const { sequelize } = require("../models/index.js");
-const { startCreateTransactionErrorHandler, startFindErrorHandler } = require("../errors/serviceError.js");
-const { createTransactionQuery, readUserTransactionQuery } = require("../queries/Transactions.js");
+const {
+	startCreateTransactionErrorHandler,
+	startFindErrorHandler,
+	startCreateErrorHandler,
+} = require("../errors/serviceError.js");
+const {
+	createTransactionQuery,
+	readUserTransactionQuery,
+	updateTransactionStatusQuery,
+} = require("../queries/Transactions.js");
 const { createTransactionDetailsQuery } = require("../queries/Transaction_details.js");
 const { createLogisticsQuery } = require("../queries/Logistics.js");
 const { deleteCartsQueryOnOrder } = require("../queries/Carts.js");
@@ -48,13 +56,16 @@ module.exports = {
 	},
 	startCreateProof: async (transaction_id, path) => {
 		return new Promise(async (resolve, reject) => {
+			const transaction = await sequelize.transaction();
 			try {
-				const Proof = await createProofQuery(transaction_id, path);
+				await createProofQuery(transaction_id, path, transaction);
+				await updateTransactionStatusQuery(2, transaction_id, transaction);
 
+				await transaction.commit();
 				return await resolve("Success!");
 			} catch (error) {
-				console.log(error);
-				return await reject({ code: 500, message: "0" });
+				await transaction.rollback();
+				return await reject(await startCreateErrorHandler(error));
 			}
 		});
 	},
