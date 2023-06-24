@@ -65,26 +65,22 @@ export const generateUrlQuery = (name = "", page, filterBy, filter, sort, order)
 
 	url += `?page=${page}`;
 	url += `&name=${name}`;
-	url += filterBy?.id ? `&${filterBy.id}=${filter.id}` : "";
-	url += `&order=${sort.id}`;
-	url += `&asc=${order.id}`;
-
+	url += filter?.id ? `&${filterBy?.id}=${filter?.id}` : "";
+	url += `&order=${sort?.id}`;
+	url += `&asc=${order?.id}`;
+	console.log(url);
 	return url;
 };
 
 export const editStockButtonHandler = async (values, setError) => {
 	await axios
-		.patch(
-			`${process.env.REACT_APP_API_BASE_URL}/admin/inventory/${values.inventory_id}/update`,
-			values,
-			{
-				headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-			}
-		)
-		.then(result => {
+		.patch(`${process.env.REACT_APP_API_BASE_URL}/admin/inventory/${values.inventory_id}/update`, values, {
+			headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+		})
+		.then((result) => {
 			window.location.reload(false);
 		})
-		.catch(error => {
+		.catch((error) => {
 			setError(error.message);
 		});
 };

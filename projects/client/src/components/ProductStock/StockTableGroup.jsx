@@ -17,7 +17,7 @@ const StockTableGroup = () => {
 
 	React.useEffect(() => {
 		setPage(1);
-	}, [name, filterBy, filter, sort.order]);
+	}, [name, filterBy, filter, sort, order]);
 
 	return (
 		<div className="flex flex-col justify-start mt-24 px-4 h-full">
