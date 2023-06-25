@@ -1,5 +1,5 @@
 import React from "react";
-import { editCategory, showDeleteAlert, deleteCategoryHandler } from "./handlers/categoryHandler";
+import { editProduct, showDeleteAlert, deleteCategoryHandler } from "./handlers/manageProductsHandler";
 import { useNavigate } from "react-router-dom";
 import { TrashIcon } from "@heroicons/react/outline";
 import DeleteAlert from "../DeleteAlert";
@@ -37,16 +37,21 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 								</div>
 							</td>
 							<td className={tdClassName}>{item.name}</td>
+							<td className={tdClassName}>{item.unit}</td>
+							<td className={tdClassName}>{item.weight}</td>
+							<td className={tdClassName}>Rp {item.price.toLocaleString("id")}</td>
+							<td className={tdClassName}>{item.description}</td>
+							<td className={tdClassName}>{item.active ? "Active" : "Not Active"}</td>
 							<td className={tdClassName}>
 								<div className="flex justify-center gap-2">
 									<button
 										className="bg-green-400 text-white px-4 py-2 rounded-lg disabled:bg-gray-300"
-										onClick={() => editCategory(item, navigate)}
+										onClick={() => editProduct(item, navigate)}
 										disabled={!admin.superAdmin}
 									>
 										Edit
 									</button>
-									<div>{alert}</div>
+									{/* <div>{alert}</div> */}
 									<button
 										className="bg-red text-white px-2 py-2 rounded-lg flex justify-center disabled:bg-gray-300"
 										onClick={() => showDeleteAlert(item, setOpen, setCategoryId, setCategoryName)}

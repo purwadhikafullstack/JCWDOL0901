@@ -18,6 +18,10 @@ export const getProducts = (query) => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/product/list${query}`);
 };
 
+export const getProductsOnly = (query) => {
+	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/product/only${query}`);
+};
+
 export const getProductsSortBy = () => {
 	return new Promise((resolve, reject) => {
 		resolve({

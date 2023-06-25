@@ -34,3 +34,13 @@
 	Source: startFindErrorHandler
 	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Categories.price' in 'order clause'","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` ORDER BY `Categories`.`price` ASC LIMIT 0, 5;"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Categories.price' in 'order clause'","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` ORDER BY `Categories`.`price` ASC LIMIT 0, 5;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` ORDER BY `Categories`.`price` ASC LIMIT 0, 5;","parameters":{}}
 	
+	===
+	Time: Sun Jun 25 2023 17:49:36 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Sun Jun 25 2023 17:51:04 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	

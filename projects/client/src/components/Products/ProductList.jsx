@@ -1,6 +1,6 @@
 import Pagination from "../Pagination";
 import { useState } from "react";
-import CategoryTable from "./CategoryTable";
+import ProductTable from "./ProductTable";
 import { useNavigate } from "react-router-dom";
 import CategoryFilterSort from "./CategoryFilterSort";
 import { useSelector } from "react-redux";
@@ -16,7 +16,7 @@ const CreateButton = () => {
 					className="rounded-lg font-bold h-fit bg-green-500 text-green-100 px-4 py-2 ml-auto"
 					onClick={() => navigate("create")}
 				>
-					Create New Category
+					Create New Product
 				</button>
 			) : null}
 		</>
@@ -34,7 +34,7 @@ const ProductList = () => {
 	return (
 		<div className="flex flex-col bg-white p-4 justify-center items-center gap-4">
 			<div className="max-w-3xl flex flex-col gap-4 py-4 px-10 w-screen">
-				<CategoryFilterSort
+				{/* <CategoryFilterSort
 					setFilter={setFilter}
 					order={order}
 					setOrder={setOrder}
@@ -43,19 +43,19 @@ const ProductList = () => {
 					input={input}
 					setInput={setInput}
 					setPage={setPage}
-				/>
+				/> */}
 				<div className="flex">
-					<ResetButton
+					{/* <ResetButton
 						onClick={() => {
 							setFilter("");
 							setInput("");
 							setSort("");
 							setOrder("");
 						}}
-					/>
+					/> */}
 					<CreateButton />
 				</div>
-				<CategoryTable
+				<ProductTable
 					page={page}
 					setMaxPage={setMaxPage}
 					itemPerPage={itemPerPage}

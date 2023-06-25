@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import DropDown from "../DropDown";
-import { getOrderByName, getOrderByPrice, getProductsSortBy } from "./handlers/ProductsHandler";
+import { getOrderByName, getOrderByPrice, getProductsSortBy } from "./handlers/productsHandler";
 
 const SearchSort = ({ sort, setSort, order, setOrder }) => {
 	useEffect(() => {

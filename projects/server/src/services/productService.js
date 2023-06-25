@@ -1,5 +1,5 @@
 const { startFindErrorHandler } = require("../errors/serviceError");
-const { readProductQuery, readProductsQuery } = require("../queries/Products");
+const { readProductQuery, readProductsQuery, readProductsOnlyQuery } = require("../queries/Products");
 
 const generateRandomIndex = (top, indexHit) => {
 	let randomIndex = Math.ceil(Math.random() * top);
@@ -49,6 +49,26 @@ module.exports = {
 				const ProductList = await readProductsQuery({
 					Products,
 					Inventories: { branch_id },
+					order,
+					page,
+					itemPerPage,
+				});
+
+				return resolve(ProductList);
+			} catch (error) {
+				return reject(await startFindErrorHandler(error));
+			}
+		});
+	},
+	startFindProductsOnly: async (filter, order, page, itemPerPage) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const Products = {};
+				["name", "category_id"].forEach((key) => {
+					if (filter[key]) Products[key] = filter[key];
+				});
+				const ProductList = await readProductsOnlyQuery({
+					Products,
 					order,
 					page,
 					itemPerPage,
