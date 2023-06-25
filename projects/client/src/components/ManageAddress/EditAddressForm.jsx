@@ -34,17 +34,11 @@ const EditAddressForm = ({ address }) => {
 	const navigate = useNavigate();
 	const formik = useFormik(formikEditAddressConfiguration(navigate, address));
 
-	const useDidMountEffect = (func, deps) => {
-		const didMount = useRef(false);
+	const didMount = useRef(false);
 
-		useEffect(() => {
-			if (didMount.current) func();
-			else didMount.current = true;
-		}, deps);
-	};
-
-	useDidMountEffect(() => {
-		formik.setFieldValue("city_id", 0);
+	useEffect(() => {
+		if (didMount.current) formik.setFieldValue("city_id", 0);
+		else didMount.current = true;
 	}, [formik.values.province_id]);
 
 	return (
