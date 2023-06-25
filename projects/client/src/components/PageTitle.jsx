@@ -1,8 +1,8 @@
 import React from "react";
 
-const PageTitle = ({ title, color }) => {
-	const className = `mx-auto text-xl font-semibold ${color} sm:text-2xl`;
-	return <div className={className}>{title}</div>;
+const PageTitle = ({ title, className }) => {
+	const jsxClassName = `mx-auto text-xl font-semibold ${className} sm:text-2xl`;
+	return <div className={jsxClassName}>{title}</div>;
 };
 
 export default PageTitle;

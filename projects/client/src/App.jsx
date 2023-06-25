@@ -29,6 +29,7 @@ import SwitchAddress from "./components/Checkout/SwitchAddress";
 import SwitchVoucher from "./components/Checkout/SwitchVoucher";
 import SwitchLogistic from "./components/Checkout/SwitchLogistic";
 import ProductPage from "./pages/Product/ProductPage";
+import StockHistory from "./pages/StockHistory/StockHistory";
 
 function App() {
 	return (
@@ -60,6 +61,7 @@ function App() {
 				<Route path="/admin/promo" element={<AdminAuthGuard component={<ProductPromotion />} />} />
 				<Route path="/admin/promo/create" element={<AdminAuthGuard component={<CreatePromotion />} />} />
 				<Route path="/admin/stock" element={<AdminAuthGuard component={<ManageStock />} />} />
+				<Route path="/admin/stock/history" element={<AdminAuthGuard component={<StockHistory />} />} />
 				<Route path="/admin/dashboard" element={<AdminAuthGuard component={<DashboardPage />} />} />
 				<Route
 					path="/admin/create-branch-admin"

@@ -4,10 +4,11 @@ import {
 	HomeIcon,
 	GiftIcon,
 	ViewGridIcon,
-	ServerIcon,
+	CubeIcon,
 	TicketIcon,
 	CurrencyDollarIcon,
 	UserAddIcon,
+	CubeTransparentIcon,
 } from "@heroicons/react/outline";
 
 const navigation = () => {
@@ -21,7 +22,8 @@ const navigation = () => {
 		},
 		{ name: "Products", href: "#", icon: GiftIcon },
 		{ name: "Categories", href: "/admin/category", icon: ViewGridIcon },
-		{ name: "Stocks", href: "/admin/stock", icon: ServerIcon, super: false },
+		{ name: "Stocks", href: "/admin/stock", icon: CubeIcon, super: false },
+		{ name: "Stocks History", href: "/admin/stock/history", icon: CubeTransparentIcon, super: false },
 		{ name: "Product Promos", href: "/admin/promo", icon: CurrencyDollarIcon, super: false },
 		{ name: "Orders", href: "/admin/order", icon: DocumentTextIcon },
 		{ name: "Vouchers", href: "#", icon: TicketIcon },
