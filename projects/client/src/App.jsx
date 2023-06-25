@@ -30,6 +30,7 @@ import SwitchVoucher from "./components/Checkout/SwitchVoucher";
 import SwitchLogistic from "./components/Checkout/SwitchLogistic";
 import ProductPage from "./pages/Product/ProductPage";
 import UploadProof from "./pages/UploadProof/UploadProof";
+import ManageProduct from "./pages/ManageProduct/ManageProduct";
 
 function App() {
 	return (
@@ -71,6 +72,7 @@ function App() {
 				<Route path="/admin/category" element={<AdminAuthGuard component={<ManageCategory />} />} />
 				<Route path="/admin/category/create" element={<AdminAuthGuard component={<CreateCategoryPage />} />} />
 				<Route path="/admin/category/update" element={<AdminAuthGuard component={<UpdateCategoryPage />} />} />
+				<Route path="/admin/product" element={<AdminAuthGuard component={<ManageProduct />} />} />
 			</Routes>
 		</div>
 	);

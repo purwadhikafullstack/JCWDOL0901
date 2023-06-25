@@ -23,7 +23,7 @@ const CreateButton = () => {
 	);
 };
 
-const CategoryTableGroup = () => {
+const ProductList = () => {
 	const [page, setPage] = useState(1);
 	const [maxPage, setMaxPage] = useState(1);
 	const [filter, setFilter] = useState("");
@@ -32,41 +32,43 @@ const CategoryTableGroup = () => {
 	const [input, setInput] = useState("");
 	const itemPerPage = 5;
 	return (
-		<div className="max-w-3xl flex flex-col gap-4 py-4 px-10 w-screen">
-			<CategoryFilterSort
-				setFilter={setFilter}
-				order={order}
-				setOrder={setOrder}
-				sort={sort}
-				setSort={setSort}
-				input={input}
-				setInput={setInput}
-				setPage={setPage}
-			/>
-			<div className="flex">
-				<ResetButton
-					onClick={() => {
-						setFilter("");
-						setInput("");
-						setSort("");
-						setOrder("");
-					}}
+		<div className="flex flex-col bg-white p-4 justify-center items-center gap-4">
+			<div className="max-w-3xl flex flex-col gap-4 py-4 px-10 w-screen">
+				<CategoryFilterSort
+					setFilter={setFilter}
+					order={order}
+					setOrder={setOrder}
+					sort={sort}
+					setSort={setSort}
+					input={input}
+					setInput={setInput}
+					setPage={setPage}
 				/>
-				<CreateButton />
-			</div>
-			<CategoryTable
-				page={page}
-				setMaxPage={setMaxPage}
-				itemPerPage={itemPerPage}
-				filter={filter}
-				sort={sort}
-				order={order}
-			/>
-			<div className="flex justify-center">
-				<Pagination page={page} setPage={setPage} maxPage={maxPage} />
+				<div className="flex">
+					<ResetButton
+						onClick={() => {
+							setFilter("");
+							setInput("");
+							setSort("");
+							setOrder("");
+						}}
+					/>
+					<CreateButton />
+				</div>
+				<CategoryTable
+					page={page}
+					setMaxPage={setMaxPage}
+					itemPerPage={itemPerPage}
+					filter={filter}
+					sort={sort}
+					order={order}
+				/>
+				<div className="flex justify-center">
+					<Pagination page={page} setPage={setPage} maxPage={maxPage} />
+				</div>
 			</div>
 		</div>
 	);
 };
 
-export default CategoryTableGroup;
+export default ProductList;

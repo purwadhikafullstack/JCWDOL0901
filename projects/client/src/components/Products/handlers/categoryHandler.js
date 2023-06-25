@@ -1,7 +1,7 @@
 import axios from "axios";
 import Swal from "sweetalert2";
 
-const validateCategoryInput = (values) => {
+const validateCategoryInput = values => {
 	const formData = new FormData();
 	for (let value in values) {
 		formData.append(value, values[value]);
@@ -9,7 +9,7 @@ const validateCategoryInput = (values) => {
 	return formData;
 };
 
-const categoryErrorHandler = async (error) => {
+const categoryErrorHandler = async error => {
 	if (error?.code === "ERR_NETWORK") {
 		return "Server unreachable, try again later!";
 	} else if (error?.response?.status === 400) {
@@ -34,7 +34,11 @@ export const createCategoryHandler = async (input, navigate) => {
 		const config = {
 			headers: { Authorization: `Bearer ${token}` },
 		};
-		await axios.post(`${process.env.REACT_APP_API_BASE_URL}/category/create`, validatedInput, config);
+		await axios.post(
+			`${process.env.REACT_APP_API_BASE_URL}/category/create`,
+			validatedInput,
+			config
+		);
 
 		Swal.fire({
 			icon: "success",
@@ -60,7 +64,11 @@ export const updateCategoryHandler = async (input, item, navigate) => {
 		const config = {
 			headers: { Authorization: `Bearer ${token}` },
 		};
-		await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/category/${item.id}/update`, validatedInput, config);
+		await axios.patch(
+			`${process.env.REACT_APP_API_BASE_URL}/category/${item.id}/update`,
+			validatedInput,
+			config
+		);
 
 		Swal.fire({
 			icon: "success",
@@ -143,8 +151,8 @@ export const getCategoryOrder = () => {
 	return new Promise((resolve, reject) => {
 		resolve({
 			data: [
-				{ id: "1", name: "A to Z" },
-				{ id: "0", name: "Z to A" },
+				{ id: "1", name: "Ascending" },
+				{ id: "0", name: "Descending" },
 			],
 		});
 	});
