@@ -17,7 +17,9 @@ const HomePage = () => {
 			<div className="flex flex-col sm:px-8">
 				<PromoCarousel />
 				<CategoryCarousel setPage={setPage} />
-				<ProductsRecommendation />
+				<div className="px-6">
+					<ProductsRecommendation />
+				</div>
 			</div>
 			<MobileNavBar />
 			<Footer />

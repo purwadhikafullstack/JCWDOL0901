@@ -29,7 +29,7 @@ const RelatedProductsCarousel = ({ branch_id, category_id, inventory_id }) => {
 					perPage: itemPerPage,
 					padding: 5,
 					pagination: false,
-					arrows: true,
+					arrows: false,
 					gap: 15,
 				}}
 			>
