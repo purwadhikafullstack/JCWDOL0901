@@ -1,9 +1,9 @@
 import React from "react";
-import CompanyLogo from "../../components/CompanyLogo";
-import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration";
 import PageTitle from "../../components/PageTitle";
+import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration.jsx";
+import CompanyLogo from "../../components/CompanyLogo.jsx";
 import SideBar from "../../components/SideBar/SideBar";
-import OrderTableGroup from "../../components/ManageOrder/OrderTableGroup";
+import StockTableGroup from "../../components/ProductStock/StockTableGroup";
 
 const ResponsiveLogo = () => {
 	return (
@@ -18,20 +18,24 @@ const ResponsiveLogo = () => {
 	);
 };
 
-const ManageOrder = () => {
+const StockHistory = () => {
 	return (
-		<div className="flex flex-col mx-auto flex-1 min-w-[480px] overflow-hidden bg-white z-10 sm:w-full">
+		<div className="flex flex-col mx-auto pb-10 flex-1 min-w-[480px] overflow-hidden bg-white z-10 sm:w-full">
 			<SideBar>
 				<div className="flex flex-col bg-white min-h-screen">
 					<div className="flex flex-col z-10">
 						<CircularBackgroundDecoration />
 						<ResponsiveLogo />
-						<PageTitle title="Manage Order" className={"text-green-100 sm:text-green-400 z-10 mb-auto"} />
-						<OrderTableGroup />
+						<PageTitle
+							title="View Stock History"
+							className={"text-green-100 sm:text-green-400 z-10 mb-auto"}
+						/>
+						<StockTableGroup />
 					</div>
 				</div>
 			</SideBar>
 		</div>
 	);
 };
-export default ManageOrder;
+
+export default StockHistory;

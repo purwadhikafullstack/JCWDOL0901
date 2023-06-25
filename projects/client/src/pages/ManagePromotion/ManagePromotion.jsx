@@ -28,7 +28,7 @@ const ProductPromotion = () => {
 						<ResponsiveLogo />
 						<PageTitle
 							title="Manage Inventory Promotion"
-							color={"text-green-100 sm:text-green-400 z-10 mb-auto"}
+							className={"text-green-100 sm:text-green-400 z-10 mb-auto"}
 						/>
 						<PromoTableGroup />
 					</div>
