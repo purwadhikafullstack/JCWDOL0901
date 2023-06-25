@@ -64,8 +64,7 @@ module.exports = {
 		return new Promise(async (resolve, reject) => {
 			try {
 				const relatedProducts = await readProductsQuery(filter);
-
-				return resolve(relatedProducts.rows);
+				return resolve(relatedProducts);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
 			}
