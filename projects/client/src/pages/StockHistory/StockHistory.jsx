@@ -3,7 +3,7 @@ import PageTitle from "../../components/PageTitle";
 import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration.jsx";
 import CompanyLogo from "../../components/CompanyLogo.jsx";
 import SideBar from "../../components/SideBar/SideBar";
-import StockTableGroup from "../../components/ProductStock/StockTableGroup";
+import StockHistoryTableGroup from "../../components/ProductStockHistory/StockHistoryTableGroup";
 
 const ResponsiveLogo = () => {
 	return (
@@ -30,7 +30,7 @@ const StockHistory = () => {
 							title="View Stock History"
 							className={"text-green-100 sm:text-green-400 z-10 mb-auto"}
 						/>
-						<StockTableGroup />
+						<StockHistoryTableGroup />
 					</div>
 				</div>
 			</SideBar>
