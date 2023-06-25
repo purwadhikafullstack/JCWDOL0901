@@ -10,7 +10,7 @@ module.exports = {
 					name: "Menunggu Pembayaran",
 				},
 				{
-					name: "Menunggu Konfirmasi Pembayaran",
+					name: "Menunggu Konfirmasi",
 				},
 				{
 					name: "Diproses",
@@ -19,13 +19,13 @@ module.exports = {
 					name: "Dikirim",
 				},
 				{
-					name: "Dikonfirmasi",
+					name: "Diterima",
 				},
 				{
 					name: "Dibatalkan",
 				},
 			],
-			{}
+			{},
 		);
 	},
 

@@ -18,6 +18,18 @@ const avatarStorage = multer.diskStorage({
 	},
 });
 
+const proofStorage = multer.diskStorage({
+	destination: (request, response, callback) => {
+		callback(null, `uploads/payment_proofs/`);
+	},
+	filename: (request, file, callback) => {
+		callback(
+			null,
+			Date.now() + "_proof_transaction_" + request.body.transaction_id + "." + file.mimetype.split("/")[1],
+		);
+	},
+});
+
 const fileFilter = (req, file, cb) => {
 	const fileType = file.mimetype.split("/")[1];
 	if (fileType === "png" || fileType === "jpg" || fileType === "jpeg" || fileType === "gif") {
@@ -35,4 +47,6 @@ const uploadCategoryFile = multer({ storage: categoryStorage, fileFilter, limits
 
 const uploadAvatarFile = multer({ storage: avatarStorage, fileFilter, limits }).single("avatar");
 
-module.exports = { uploadCategoryFile, uploadAvatarFile };
+const uploadProofFile = multer({ storage: proofStorage, fileFilter, limits }).single("proof");
+
+module.exports = { uploadCategoryFile, uploadAvatarFile, uploadProofFile };

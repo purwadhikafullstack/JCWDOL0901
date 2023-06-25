@@ -42,8 +42,14 @@ module.exports = {
 					service: "REG",
 					shipping_cost: 38000,
 				},
+				{
+					transaction_id: 7,
+					code: "jne",
+					service: "REG",
+					shipping_cost: 38000,
+				},
 			],
-			{}
+			{},
 		);
 	},
 

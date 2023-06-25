@@ -27,6 +27,8 @@ module.exports = (sequelize, DataTypes) => {
 			Transactions.hasOne(models.Logistics, {
 				foreignKey: "transaction_id",
 			});
+
+			Transactions.hasOne(models.Proofs, { foreignKey: "transaction_id", sourceKey: "id" });
 		}
 	}
 	Transactions.init(

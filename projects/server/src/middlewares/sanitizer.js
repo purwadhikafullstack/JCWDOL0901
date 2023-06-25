@@ -1,4 +1,3 @@
-const { request } = require("express");
 const {
 	getAdminQueryFilter,
 	getAdminQueryOrder,
@@ -12,6 +11,8 @@ const {
 	getProductQueryOrder,
 	getRelatedProductsFilter,
 	getProductsRecommendationFilter,
+	getAdminTransactionQueryFilter,
+	getAdminTransactionQueryOrder,
 } = require("../helpers/queryHelper");
 const { getTransactionPayload, getTransactionDetailPayload } = require("../helpers/bodyHelper");
 
@@ -146,6 +147,8 @@ const postRajaOngkirCostBodySanitizer = async (request, response, next) => {
 	request.payload = payload;
 
 	delete request.body;
+
+	next();
 };
 
 const getProductsSanitizer = async (request, response, next) => {
@@ -155,7 +158,21 @@ const getProductsSanitizer = async (request, response, next) => {
 		page: request.query.page,
 		itemPerPage: request.query.itemPerPage,
 	};
+  
 	request.query = sanitizedQuery;
+
+	next();
+};
+
+const getAdminTransactionQuerySanitizer = async (request, response, next) => {
+	const sanitizedQuery = {
+		filter: await getAdminTransactionQueryFilter(request.query),
+		order: await getAdminTransactionQueryOrder(request.query),
+		page: request.query.page,
+	};
+  
+	request.query = sanitizedQuery;
+
 	next();
 };
 
@@ -174,4 +191,5 @@ module.exports = {
 	getProductsSanitizer,
 	getRelatedProductsQuerySanitizer,
 	getProductsRecommendationQuerySanitizer,
+	getAdminTransactionQuerySanitizer,
 };
