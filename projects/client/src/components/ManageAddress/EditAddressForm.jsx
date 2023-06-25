@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import CreateNewAddressInputField from "./CreateNewAddressInputField";
 import Button from "../Button.jsx";
 import { useNavigate } from "react-router-dom";
@@ -33,6 +33,20 @@ const OtherButtons = ({ address }) => {
 const EditAddressForm = ({ address }) => {
 	const navigate = useNavigate();
 	const formik = useFormik(formikEditAddressConfiguration(navigate, address));
+
+	const useDidMountEffect = (func, deps) => {
+		const didMount = useRef(false);
+
+		useEffect(() => {
+			if (didMount.current) func();
+			else didMount.current = true;
+		}, deps);
+	};
+
+	useDidMountEffect(() => {
+		formik.setFieldValue("city_id", 0);
+	}, [formik.values.province_id]);
+
 	return (
 		<div className="h-full items-center min-w-fit shrink-0 flex flex-col pb-10 px-6">
 			<form onSubmit={formik.handleSubmit} noValidate className="h-full">
