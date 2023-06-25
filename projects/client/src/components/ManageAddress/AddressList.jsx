@@ -24,7 +24,10 @@ const AddressItem = ({ address }) => {
 									<span className="font-medium text-red text-xs ml-2">*Default Address</span>
 								) : null}
 							</p>
-							<p className="mx-6 text-sm text-gray-300 truncate text-left mt-2">{address.detail}</p>
+							<p className="mx-6 text-sm text-gray-500 truncate text-left mt-2">{address.detail}</p>
+							<p className="mx-6 text-sm text-gray-300 truncate text-left mt-2">
+								{`${address.City.type} ${address.City.name}, Provinsi ${address.City.Province.name}`}
+							</p>
 						</div>
 					</div>
 					<PencilIcon className="h-5 w-5 text-gray-300" aria-hidden="true" />
