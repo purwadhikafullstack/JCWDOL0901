@@ -28,7 +28,7 @@ const ManageStock = () => {
 						<ResponsiveLogo />
 						<PageTitle
 							title="Manage Inventory Stock"
-							color={"text-green-100 sm:text-green-400 z-10 mb-auto"}
+							className={"text-green-100 sm:text-green-400 z-10 mb-auto"}
 						/>
 						<StockTableGroup />
 					</div>
