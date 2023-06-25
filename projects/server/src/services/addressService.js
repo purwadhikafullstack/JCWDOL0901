@@ -59,7 +59,6 @@ module.exports = {
 
 				return resolve(result);
 			} catch (error) {
-				console.log(error);
 				return reject(await startCreateHandler(error));
 			}
 		});
@@ -78,7 +77,6 @@ module.exports = {
 					return resolve(result);
 				}
 			} catch (error) {
-				console.log(error);
 				return reject(await startUpdateErrorHandler(error));
 			}
 		});

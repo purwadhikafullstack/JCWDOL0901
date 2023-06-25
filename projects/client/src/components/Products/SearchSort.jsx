@@ -5,7 +5,6 @@ import { getOrderByName, getOrderByPrice, getProductsSortBy } from "./handlers/P
 const SearchSort = ({ sort, setSort, order, setOrder }) => {
 	useEffect(() => {
 		setOrder("");
-		console.log(sort, order);
 	}, [sort]);
 	return (
 		<div className="flex flex-col sm:flex-row gap-16 sm:gap-2 pb-16 sm:pb-12">
