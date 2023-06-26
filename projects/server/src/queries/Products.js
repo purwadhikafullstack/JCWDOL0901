@@ -43,7 +43,7 @@ const readProductsQuery = async (params) => {
 	const order = params?.order ? [...params?.order] : [];
 
 	return await Products.findAndCountAll({
-		where: { ...params?.Products },
+		where: { ...params?.Products, active: true },
 		include: [
 			{
 				model: Inventories,

@@ -38,10 +38,16 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 							</td>
 							<td className={tdClassName}>{item.name}</td>
 							<td className={tdClassName}>{item.unit}</td>
-							<td className={tdClassName}>{item.weight}</td>
-							<td className={tdClassName}>Rp {item.price.toLocaleString("id")}</td>
+							<td className={tdClassName}>{item.weight} g</td>
+							<td className={tdClassName}>Rp{item.price.toLocaleString("id")}</td>
 							<td className={tdClassName}>{item.description}</td>
-							<td className={tdClassName}>{item.active ? "Active" : "Not Active"}</td>
+							<td className={tdClassName}>
+								{item.active ? (
+									<div className="bg-green-200/90 text-gray-100 rounded-md py-1 px-1">Active</div>
+								) : (
+									<div className="bg-red/90 text-gray-100 rounded-md py-1 px-1">Not Active</div>
+								)}
+							</td>
 							<td className={tdClassName}>
 								<div className="flex justify-center gap-2">
 									<button

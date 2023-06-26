@@ -30,10 +30,10 @@ const ProductList = () => {
 	const [sort, setSort] = useState("");
 	const [order, setOrder] = useState("");
 	const [input, setInput] = useState("");
-	const itemPerPage = 5;
+	const itemPerPage = window.innerWidth > 640 ? 8 : 6;
 	return (
 		<div className="flex flex-col bg-white p-4 justify-center items-center gap-4">
-			<div className="max-w-3xl flex flex-col gap-4 py-4 px-10 w-screen">
+			<div className="max-w-3xl flex flex-col gap-4 py-4 px-4 sm:px-10 w-screen ">
 				{/* <CategoryFilterSort
 					setFilter={setFilter}
 					order={order}
@@ -63,7 +63,7 @@ const ProductList = () => {
 					sort={sort}
 					order={order}
 				/>
-				<div className="flex justify-center">
+				<div className="flex justify-center pb-20 sm:pb-10">
 					<Pagination page={page} setPage={setPage} maxPage={maxPage} />
 				</div>
 			</div>

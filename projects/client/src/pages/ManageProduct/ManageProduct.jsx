@@ -27,9 +27,9 @@ const Header = () => {
 
 const ManageProduct = () => {
 	return (
-		<div className="flex flex-col">
+		<div className="flex flex-col ">
 			<SideBar>
-				<div className="flex flex-col bg-white">
+				<div className="flex flex-col bg-white ">
 					<Header />
 					<ProductList />
 				</div>
