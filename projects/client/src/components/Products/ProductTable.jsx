@@ -13,6 +13,7 @@ const ProductTableHead = () => {
 				<th className={thClassName}>Weight</th>
 				<th className={thClassName + "px-8"}>Price</th>
 				<th className={thClassName + "px-20"}>Description</th>
+				<th className={thClassName + "px-2"}>Category</th>
 				<th className={thClassName + "px-8"}>Active</th>
 				<th className={thClassName}>Action</th>
 			</tr>
@@ -20,7 +21,7 @@ const ProductTableHead = () => {
 	);
 };
 
-const ProductTable = ({ page, setMaxPage, itemPerPage, filter, sort, order }) => {
+const ProductTable = ({ page, setMaxPage, itemPerPage, filter, sort, order, name }) => {
 	return (
 		<div className="flex overflow-x-auto rounded-lg border-green-300 border-2">
 			<table className="w-full">
@@ -29,7 +30,7 @@ const ProductTable = ({ page, setMaxPage, itemPerPage, filter, sort, order }) =>
 					page={page}
 					setMaxPage={setMaxPage}
 					itemPerPage={itemPerPage}
-					filter={filter}
+					name={name}
 					sort={sort}
 					order={order}
 				/>

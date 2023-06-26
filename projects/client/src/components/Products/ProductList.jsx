@@ -2,7 +2,7 @@ import Pagination from "../Pagination";
 import { useState } from "react";
 import ProductTable from "./ProductTable";
 import { useNavigate } from "react-router-dom";
-import CategoryFilterSort from "./CategoryFilterSort";
+import ProductFilterSort from "./ProductFilterSort";
 import { useSelector } from "react-redux";
 import ResetButton from "./ResetButton";
 
@@ -27,14 +27,17 @@ const ProductList = () => {
 	const [page, setPage] = useState(1);
 	const [maxPage, setMaxPage] = useState(1);
 	const [filter, setFilter] = useState("");
+	const [name, setName] = useState("");
 	const [sort, setSort] = useState("");
 	const [order, setOrder] = useState("");
 	const [input, setInput] = useState("");
 	const itemPerPage = window.innerWidth > 640 ? 8 : 6;
+	console.log(input, "name: ", name);
 	return (
 		<div className="flex flex-col bg-white p-4 justify-center items-center gap-4">
 			<div className="max-w-3xl flex flex-col gap-4 py-4 px-4 sm:px-10 w-screen ">
-				{/* <CategoryFilterSort
+				<ProductFilterSort
+					setName={setName}
 					setFilter={setFilter}
 					order={order}
 					setOrder={setOrder}
@@ -43,16 +46,16 @@ const ProductList = () => {
 					input={input}
 					setInput={setInput}
 					setPage={setPage}
-				/> */}
+				/>
 				<div className="flex">
-					{/* <ResetButton
+					<ResetButton
 						onClick={() => {
 							setFilter("");
 							setInput("");
 							setSort("");
 							setOrder("");
 						}}
-					/> */}
+					/>
 					<CreateButton />
 				</div>
 				<ProductTable
@@ -62,6 +65,7 @@ const ProductList = () => {
 					filter={filter}
 					sort={sort}
 					order={order}
+					name={name}
 				/>
 				<div className="flex justify-center pb-20 sm:pb-10">
 					<Pagination page={page} setPage={setPage} maxPage={maxPage} />

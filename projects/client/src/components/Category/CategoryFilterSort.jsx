@@ -22,7 +22,7 @@ const CategoryFilterSort = ({ setFilter, order, setOrder, sort, setSort, input, 
 							value={input}
 						/>
 						<div
-							className="flex max-w-[20%] w-fit bg-green-300  rounded-lg p-1 px-2 cursor-pointer block"
+							className="flex max-w-[20%] w-fit bg-green-300  rounded-lg p-2 cursor-pointer block"
 							onClick={() => {
 								setFilter(input);
 								setPage(1);

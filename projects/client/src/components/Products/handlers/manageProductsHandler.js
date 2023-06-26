@@ -1,12 +1,12 @@
 import axios from "axios";
 import Swal from "sweetalert2";
 
-export const generateUrlQuery = (page, itemPerPage, category_id, filter, sort, order) => {
+export const generateUrlQuery = (page, itemPerPage, category_id, filter, sort, order, name) => {
 	let url = "";
 
 	url += `?page=${page}`;
 	url += `&itemPerPage=${itemPerPage}`;
-	url += filter ? `&name=${filter}` : "";
+	url += name ? `&name=${name}` : "";
 	url += category_id ? `&category_id=${category_id}` : "";
 	url += sort ? `&order=${sort.id}` : "";
 	url += order ? `&asc=${order.id}` : "";
