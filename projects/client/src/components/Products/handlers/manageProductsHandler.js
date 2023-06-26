@@ -1,13 +1,13 @@
 import axios from "axios";
 import Swal from "sweetalert2";
 
-export const generateUrlQuery = (page, itemPerPage, category_id, filter, sort, order, name) => {
+export const generateUrlQuery = (page, itemPerPage, filter, sort, order, name, filterBy) => {
 	let url = "";
 
 	url += `?page=${page}`;
 	url += `&itemPerPage=${itemPerPage}`;
 	url += name ? `&name=${name}` : "";
-	url += category_id ? `&category_id=${category_id}` : "";
+	url += filter?.id ? `&${filterBy?.id}=${filter?.id}` : "";
 	url += sort ? `&order=${sort.id}` : "";
 	url += order ? `&asc=${order.id}` : "";
 

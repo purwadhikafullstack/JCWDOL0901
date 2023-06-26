@@ -1,9 +1,21 @@
 import { AdjustmentsIcon } from "@heroicons/react/outline";
-import SearchSort from "./SearchSort";
-import SortModal from "./SortModal";
+import FilterAndSortModal from "./FilterAndSortModal";
 import { useState } from "react";
 
-const ProductFilterSort = ({ setName, setFilter, order, setOrder, sort, setSort, input, setInput, setPage }) => {
+const ProductFilterSort = ({
+	setName,
+	setFilter,
+	order,
+	setOrder,
+	sort,
+	setSort,
+	input,
+	setInput,
+	setPage,
+	setFilterBy,
+	filterBy,
+	filter,
+}) => {
 	const [open, setOpen] = useState(false);
 	const enterHandler = (event) => {
 		if (event.key === "Enter") {
@@ -40,15 +52,18 @@ const ProductFilterSort = ({ setName, setFilter, order, setOrder, sort, setSort,
 					<AdjustmentsIcon className="text-gray-400 flex-shrink-0 h-6 w-6 " aria-hidden="true" />
 					<p className="hidden sm:block text-base font-medium text-gray-400 ml-4 w-24">Filter & Sort</p>
 				</button>
-				<SortModal
+				<FilterAndSortModal
 					open={open}
 					setOpen={setOpen}
 					order={order}
 					setOrder={setOrder}
 					sort={sort}
 					setSort={setSort}
+					setFilterBy={setFilterBy}
+					setFilter={setFilter}
+					filterBy={filterBy}
+					filter={filter}
 				/>
-				{/* <SearchSort order={order} setOrder={setOrder} sort={sort} setSort={setSort} /> */}
 			</div>
 		</div>
 	);

@@ -32,6 +32,16 @@ export const getProductsSortBy = () => {
 		});
 	});
 };
+export const getProductsFilterBy = () => {
+	return new Promise((resolve, reject) => {
+		resolve({
+			data: [
+				{ id: "category_id", name: "Category" },
+				{ id: "active", name: "Status" },
+			],
+		});
+	});
+};
 
 export const getOrderByName = (sort) => {
 	return new Promise((resolve, reject) => {
@@ -50,6 +60,26 @@ export const getOrderByPrice = (sort) => {
 			data: [
 				{ id: "1", name: "Low to High" },
 				{ id: "0", name: "High to Low" },
+			],
+		});
+	});
+};
+
+export const getProductsFilterByCategory = (sort) => {
+	return new Promise(async (resolve, reject) => {
+		const categories = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/category/list`);
+		resolve({
+			data: categories.data.rows,
+		});
+	});
+};
+
+export const getProductsFilterByStatus = (sort) => {
+	return new Promise((resolve, reject) => {
+		resolve({
+			data: [
+				{ id: "1", name: "Active" },
+				{ id: "0", name: "Not Active" },
 			],
 		});
 	});

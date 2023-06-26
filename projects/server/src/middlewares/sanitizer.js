@@ -160,7 +160,6 @@ const getProductsSanitizer = async (request, response, next) => {
 	};
 
 	request.query = sanitizedQuery;
-
 	next();
 };
 

@@ -64,7 +64,7 @@ module.exports = {
 		return new Promise(async (resolve, reject) => {
 			try {
 				const Products = {};
-				["name", "category_id"].forEach((key) => {
+				["name", "category_id", "active"].forEach((key) => {
 					if (filter[key]) Products[key] = filter[key];
 				});
 				const ProductList = await readProductsOnlyQuery({

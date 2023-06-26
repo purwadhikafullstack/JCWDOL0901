@@ -53,7 +53,7 @@ const getProductDetail = async (request, response) => {
 
 const getProductsOnly = async (request, response) => {
 	const { filter, order, page, itemPerPage } = request.query;
-	console.log(request.query);
+
 	await startFindProductsOnly(filter, order, page, Number(itemPerPage))
 		.then((result) => {
 			response.status(200).send(result);

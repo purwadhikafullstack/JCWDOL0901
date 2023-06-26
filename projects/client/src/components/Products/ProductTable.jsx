@@ -21,7 +21,7 @@ const ProductTableHead = () => {
 	);
 };
 
-const ProductTable = ({ page, setMaxPage, itemPerPage, filter, sort, order, name }) => {
+const ProductTable = ({ page, setMaxPage, itemPerPage, filter, sort, order, name, filterBy }) => {
 	return (
 		<div className="flex overflow-x-auto rounded-lg border-green-300 border-2">
 			<table className="w-full">
@@ -33,6 +33,8 @@ const ProductTable = ({ page, setMaxPage, itemPerPage, filter, sort, order, name
 					name={name}
 					sort={sort}
 					order={order}
+					filter={filter}
+					filterBy={filterBy}
 				/>
 			</table>
 		</div>

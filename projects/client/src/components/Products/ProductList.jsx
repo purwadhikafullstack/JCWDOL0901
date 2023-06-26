@@ -27,12 +27,13 @@ const ProductList = () => {
 	const [page, setPage] = useState(1);
 	const [maxPage, setMaxPage] = useState(1);
 	const [filter, setFilter] = useState("");
+	const [filterBy, setFilterBy] = useState("");
 	const [name, setName] = useState("");
 	const [sort, setSort] = useState("");
 	const [order, setOrder] = useState("");
 	const [input, setInput] = useState("");
 	const itemPerPage = window.innerWidth > 640 ? 8 : 6;
-	console.log(input, "name: ", name);
+
 	return (
 		<div className="flex flex-col bg-white p-4 justify-center items-center gap-4">
 			<div className="max-w-3xl flex flex-col gap-4 py-4 px-4 sm:px-10 w-screen ">
@@ -46,14 +47,19 @@ const ProductList = () => {
 					input={input}
 					setInput={setInput}
 					setPage={setPage}
+					setFilterBy={setFilterBy}
+					filterBy={filterBy}
+					filter={filter}
 				/>
 				<div className="flex">
 					<ResetButton
 						onClick={() => {
 							setFilter("");
+							setFilterBy("");
 							setInput("");
 							setSort("");
 							setOrder("");
+							setName("");
 						}}
 					/>
 					<CreateButton />
@@ -66,11 +72,16 @@ const ProductList = () => {
 					sort={sort}
 					order={order}
 					name={name}
+					filterBy={filterBy}
 				/>
+			</div>
+			{maxPage !== 0 ? (
 				<div className="flex justify-center pb-20 sm:pb-10">
 					<Pagination page={page} setPage={setPage} maxPage={maxPage} />
 				</div>
-			</div>
+			) : (
+				<div>No data matching the filter</div>
+			)}
 		</div>
 	);
 };
