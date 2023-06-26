@@ -20,7 +20,7 @@ const SearchFilter = ({ setFilterBy, setFilter, filterBy, filter }) => {
 				<DropDown data={filterBy} setter={setFilterBy} getter={getProductsFilterBy} />
 			</div>
 			<div className="flex flex-col w-60 gap-3 text-left mx-10 sm:mx-2">
-				<h3>Direction:</h3>
+				<h3>Options:</h3>
 				{filterBy?.id == "category_id" ? (
 					<DropDown data={filter} setter={setFilter} getter={() => getProductsFilterByCategory(filterBy)} />
 				) : null}
