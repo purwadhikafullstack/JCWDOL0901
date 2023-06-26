@@ -1,15 +1,13 @@
 import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { getRelatedProducts } from "./handlers/ProductsRecommendationCarouselHandler.js";
+import ProductCard from "../Products/ProductCard.jsx";
 
 const Slide = ({ products }) => {
 	return products.map((item, index) => {
 		return (
 			<SplideSlide key={item?.name}>
-				<div className="flex flex-col items-center">
-					<img className="w-[150px]" src={item?.image} alt={item?.name} />
-					<span className="text-black text-xs mt-1.5 ">{item?.name}</span>
-				</div>
+				<ProductCard product={item} key={index} />
 			</SplideSlide>
 		);
 	});
@@ -23,15 +21,16 @@ const RelatedProductsCarousel = ({ branch_id, category_id, inventory_id }) => {
 			.then((result) => setProducts(result.data.rows))
 			.catch((error) => setProducts([{ name: "Server Error!", image: "" }]));
 	}, []);
-
+	const itemPerPage = window.innerWidth > 640 ? 4 : 2;
 	return (
 		products && (
 			<Splide
 				options={{
-					perPage: 3,
+					perPage: itemPerPage,
 					padding: 5,
 					pagination: false,
 					arrows: false,
+					gap: 15,
 				}}
 			>
 				<Slide products={products} />

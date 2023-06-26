@@ -23,7 +23,6 @@ const userAuthenticationQuery = async (body, Name) => {
 			[Op.or]: [{ username: body.user }, { email: body.user }],
 		},
 	});
-
 	return data;
 };
 

@@ -8,7 +8,7 @@ const ProductCard = ({ product }) => {
 	const [price, setPrice] = useState({ original: 0, final: 0, promo: false });
 	useEffect(() => {
 		determinePrice(product, setPrice);
-	}, []);
+	}, [product]);
 	return (
 		<div key={product.name} className="flex flex-col border rounded-lg pb-4">
 			<button
