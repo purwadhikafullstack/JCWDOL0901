@@ -8,10 +8,10 @@ const ResponsiveLogo = () => {
 	return (
 		<>
 			<div className="block sm:hidden z-40">
-				<CompanyLogo color={false} className="w-[40px] mx-auto mb-2 z-40" />
+				<CompanyLogo color={false} className="w-[50px] mx-auto mb-2 z-40" />
 			</div>
 			<div className="hidden sm:block">
-				<CompanyLogo color={true} className="w-[40px] mx-auto mb-2 z-40" />
+				<CompanyLogo color={true} className="w-[70px] mx-auto mb-2 z-40" />
 			</div>
 		</>
 	);

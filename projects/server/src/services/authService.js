@@ -112,7 +112,6 @@ module.exports = {
 
 				return resolve({ message: "Login success!", token });
 			} catch (error) {
-				console.log(error);
 				return reject(await startUserAuthenticationErrorHandler(error));
 			}
 		});
@@ -126,7 +125,6 @@ module.exports = {
 				await transaction.commit();
 				return resolve("Registration success!");
 			} catch (error) {
-				console.log(error);
 				await transaction.rollback();
 				return reject(await startRegistrationErrorHandler(error));
 			}

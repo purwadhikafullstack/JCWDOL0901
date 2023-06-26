@@ -5,6 +5,7 @@ const {
 	getCity,
 	getBranch,
 	getPromotions,
+	getStatuses,
 } = require("../controllers/dataController");
 
 const { getBranchId, isAdmin } = require("../middlewares/authMiddleware");
@@ -17,5 +18,5 @@ router.get("/provinces", getProvinces);
 router.get("/province/:province_id/cities", getCitiesInProvince);
 router.get("/promotions", getPromotions);
 router.get("/branch", isAdmin, getBranchId, getBranch);
-
+router.get("/statuses", getStatuses);
 module.exports = router;

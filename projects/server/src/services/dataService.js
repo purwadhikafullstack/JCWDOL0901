@@ -5,6 +5,7 @@ const {
 	readProvincesQuery,
 	readCitiesInProvinceQuery,
 	readBranchQuery,
+	readStatusesQuery,
 } = require("../queries/Data.js");
 const { readPromotionQuery } = require("../queries/Promotions.js");
 
@@ -20,7 +21,7 @@ module.exports = {
 			}
 		});
 	},
-	startFindCity: async city_id => {
+	startFindCity: async (city_id) => {
 		return new Promise(async (resolve, reject) => {
 			try {
 				const city = await readCityQuery(city_id);
@@ -41,7 +42,7 @@ module.exports = {
 			}
 		});
 	},
-	startFindCitiesInProvince: async province_id => {
+	startFindCitiesInProvince: async (province_id) => {
 		return new Promise(async (resolve, reject) => {
 			try {
 				const cities = await readCitiesInProvinceQuery(province_id);
@@ -52,7 +53,7 @@ module.exports = {
 			}
 		});
 	},
-	startFindBranch: async branch_id => {
+	startFindBranch: async (branch_id) => {
 		return new Promise(async (resolve, reject) => {
 			try {
 				if (branch_id === 0)
@@ -79,6 +80,17 @@ module.exports = {
 				const Promotions = await readPromotionQuery();
 
 				return resolve(Promotions);
+			} catch (error) {
+				return reject(startFindErrorHandler(error));
+			}
+		});
+	},
+	startFindStatuses: async () => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const Statuses = await readStatusesQuery();
+
+				return resolve(Statuses);
 			} catch (error) {
 				return reject(startFindErrorHandler(error));
 			}

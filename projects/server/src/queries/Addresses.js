@@ -33,7 +33,6 @@ const createAddressQuery = async (user_id, label, city_id, detail, latitude, lon
 };
 
 const updateAddressQuery = async (id, user_id, label, city_id, detail, latitude, longitude) => {
-	console.log(detail);
 	const addressData = await Addresses.update(
 		{
 			label,

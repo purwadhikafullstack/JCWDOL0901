@@ -35,7 +35,6 @@ module.exports = {
 
 				return resolve(randomProducts);
 			} catch (error) {
-				console.log(error);
 				return reject(await startFindErrorHandler(error));
 			}
 		});
@@ -57,7 +56,6 @@ module.exports = {
 
 				return resolve(ProductList);
 			} catch (error) {
-				console.log(error);
 				return reject(await startFindErrorHandler(error));
 			}
 		});
@@ -69,7 +67,6 @@ module.exports = {
 
 				return resolve(relatedProducts.rows);
 			} catch (error) {
-				console.log(error);
 				return reject(await startFindErrorHandler(error));
 			}
 		});
