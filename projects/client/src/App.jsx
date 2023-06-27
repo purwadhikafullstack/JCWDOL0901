@@ -34,6 +34,7 @@ import ManageProduct from "./pages/ManageProduct/ManageProduct";
 import CreateProduct from "./pages/CreateProduct/CreateProduct";
 import UpdateProduct from "./pages/UpdateProduct/UpdateProduct";
 import ResetPassword from "./pages/ResetPassword/ResetPassword";
+import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 
 function App() {
 	return (
@@ -59,7 +60,8 @@ function App() {
 				<Route path="/account/create-new-address" element={<CreateNewAddress />} />
 				<Route path="/account/edit-address" element={<EditAddress />} />
 				<Route path="/account" element={<AccountPage />} />
-				<Route path="/password-reset" element={<ResetPassword />} />
+				<Route path="/password/reset" element={<ResetPassword />} />
+				<Route path="/password/forgot" element={<ForgotPassword />} />
 
 				<Route path="/order/upload/" element={<UploadProof />} />
 

@@ -11,7 +11,7 @@ const ForgotPassword = () => {
 			<button
 				className="my-10 py-2 w-48 border border-2 border-green-200 rounded-lg text-green-300"
 				onClick={() => {
-					navigate("/password-reset");
+					navigate("/password/forgot");
 				}}
 			>
 				Forgot Password?

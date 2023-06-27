@@ -74,3 +74,123 @@
 	Source: startFindErrorHandler
 	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Products.1' in 'order clause'","sql":"SELECT `Products`.`id`, `Products`.`image`, `Products`.`name`, `Products`.`price`, `Products`.`description`, `Products`.`weight`, `Products`.`unit`, `Products`.`category_id`, `Products`.`active`, `Category`.`id` AS `Category.id`, `Category`.`name` AS `Category.name`, `Category`.`image` AS `Category.image` FROM `Products` AS `Products` LEFT OUTER JOIN `Categories` AS `Category` ON `Products`.`category_id` = `Category`.`id` ORDER BY `Products`.`1` DESC LIMIT 0, 8;"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Products.1' in 'order clause'","sql":"SELECT `Products`.`id`, `Products`.`image`, `Products`.`name`, `Products`.`price`, `Products`.`description`, `Products`.`weight`, `Products`.`unit`, `Products`.`category_id`, `Products`.`active`, `Category`.`id` AS `Category.id`, `Category`.`name` AS `Category.name`, `Category`.`image` AS `Category.image` FROM `Products` AS `Products` LEFT OUTER JOIN `Categories` AS `Category` ON `Products`.`category_id` = `Category`.`id` ORDER BY `Products`.`1` DESC LIMIT 0, 8;"},"sql":"SELECT `Products`.`id`, `Products`.`image`, `Products`.`name`, `Products`.`price`, `Products`.`description`, `Products`.`weight`, `Products`.`unit`, `Products`.`category_id`, `Products`.`active`, `Category`.`id` AS `Category.id`, `Category`.`name` AS `Category.name`, `Category`.`image` AS `Category.image` FROM `Products` AS `Products` LEFT OUTER JOIN `Categories` AS `Category` ON `Products`.`category_id` = `Category`.`id` ORDER BY `Products`.`1` DESC LIMIT 0, 8;","parameters":{}}
 	
+	===
+	Time: Tue Jun 27 2023 14:24:10 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Users.phone cannot be null","type":"notNull Violation","path":"phone","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"danang@mail.com","password":""},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Users.username cannot be null","type":"notNull Violation","path":"username","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"danang@mail.com","password":""},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 27 2023 14:24:51 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Users.phone cannot be null","type":"notNull Violation","path":"phone","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"danang@mail.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Users.password cannot be null","type":"notNull Violation","path":"password","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"danang@mail.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Users.username cannot be null","type":"notNull Violation","path":"username","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"danang@mail.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 27 2023 14:47:44 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Users.phone cannot be null","type":"notNull Violation","path":"phone","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"verified@mail.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Users.password cannot be null","type":"notNull Violation","path":"password","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"verified@mail.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Users.username cannot be null","type":"notNull Violation","path":"username","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"verified@mail.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 27 2023 14:48:32 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Users.phone cannot be null","type":"notNull Violation","path":"phone","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"verified@mail.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Users.password cannot be null","type":"notNull Violation","path":"password","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"verified@mail.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Users.username cannot be null","type":"notNull Violation","path":"username","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"verified@mail.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 27 2023 14:49:08 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Users.phone cannot be null","type":"notNull Violation","path":"phone","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"verified@mail.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Users.password cannot be null","type":"notNull Violation","path":"password","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"verified@mail.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Users.username cannot be null","type":"notNull Violation","path":"username","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"verified@mail.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 27 2023 14:49:24 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 27 2023 14:49:32 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 27 2023 14:49:48 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jun 27 2023 14:50:23 GMT+0700 (Western Indonesia Time)
+	Source: startRegistrationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Users.phone cannot be null","type":"notNull Violation","path":"phone","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"verified@mail.commm"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Users.password cannot be null","type":"notNull Violation","path":"password","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"verified@mail.commm"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Users.username cannot be null","type":"notNull Violation","path":"username","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"verified@mail.commm"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 27 2023 14:53:28 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: "EMAIL_NOT_FOUND"
+	
+	===
+	Time: Tue Jun 27 2023 14:53:35 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: "EMAIL_NOT_FOUND"
+	
+	===
+	Time: Tue Jun 27 2023 14:53:36 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: "EMAIL_NOT_FOUND"
+	
+	===
+	Time: Tue Jun 27 2023 14:53:38 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: "EMAIL_NOT_FOUND"
+	
+	===
+	Time: Tue Jun 27 2023 14:54:00 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: "EMAIL_NOT_FOUND"
+	
+	===
+	Time: Tue Jun 27 2023 14:55:10 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: "EMAIL_NOT_FOUND"
+	
+	===
+	Time: Tue Jun 27 2023 14:55:12 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: "EMAIL_NOT_FOUND"
+	
+	===
+	Time: Tue Jun 27 2023 14:55:32 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: "EMAIL_NOT_FOUND"
+	
+	===
+	Time: Tue Jun 27 2023 14:55:32 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: "EMAIL_NOT_FOUND"
+	
+	===
+	Time: Tue Jun 27 2023 14:55:40 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: "EMAIL_NOT_FOUND"
+	
+	===
+	Time: Tue Jun 27 2023 14:55:56 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Users.phone cannot be null","type":"notNull Violation","path":"phone","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"verified@mail.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Users.password cannot be null","type":"notNull Violation","path":"password","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"verified@mail.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Users.username cannot be null","type":"notNull Violation","path":"username","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"verified@mail.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 27 2023 14:56:01 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Users.phone cannot be null","type":"notNull Violation","path":"phone","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"verified@mail.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Users.password cannot be null","type":"notNull Violation","path":"password","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"verified@mail.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Users.username cannot be null","type":"notNull Violation","path":"username","value":null,"origin":"CORE","instance":{"verified":false,"referral_code":null,"referrer":null,"created_at":{"val":"CURRENT_TIMESTAMP"},"updated_at":{"val":"CURRENT_TIMESTAMP"},"id":null,"email":"verified@mail.com"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jun 27 2023 15:04:31 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: "EMAIL_NOT_FOUND"
+	
+	===
+	Time: Tue Jun 27 2023 15:07:00 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: "EMAIL_NOT_FOUND"
+	
+	===
+	Time: Tue Jun 27 2023 15:10:37 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: "EMAIL_NOT_FOUND"
+	

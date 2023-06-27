@@ -1,24 +1,24 @@
 const jwt = require("jsonwebtoken");
 
-const generateUserJWToken = async payload => {
+const generateUserJWToken = async (payload) => {
 	const expiresIn = process.env.JWT_USER_TOKEN_EXPIRATION_TIME;
 	const secretKey = process.env.JWT_USER_SECRET_KEY;
 
 	return await jwt.sign(payload, secretKey, { expiresIn });
 };
 
-const generateAdminJWToken = async payload => {
+const generateAdminJWToken = async (payload) => {
 	const expiresIn = process.env.JWT_ADMIN_TOKEN_EXPIRATION_TIME;
 	const secretKey = process.env.JWT_ADMIN_SECRET_KEY;
 
 	return await jwt.sign(payload, secretKey, { expiresIn });
 };
 
-const generateUserJWTPayload = data => {
+const generateUserJWTPayload = (data) => {
 	return { id: data.id, verified: data.verified };
 };
 
-const generateAdminJWTPayload = data => {
+const generateAdminJWTPayload = (data) => {
 	return { id: data.id, super: data.super };
 };
 
@@ -34,4 +34,11 @@ const verifyJWToken = async (token, secretKey) => {
 	return await jwt.verify(jwtoken, secretKey);
 };
 
-module.exports = { generateJWToken, verifyJWToken };
+const generateResetPasswordJWToken = async (id) => {
+	const expiresIn = process.env.JWT_FORGOT_PASSWORD_TOKEN_EXPIRATION_TIME;
+	const secretKey = process.env.JWT_FORGOT_PASSWORD_SECRET_KEY;
+
+	return await jwt.sign({ id: id }, secretKey, { expiresIn });
+};
+
+module.exports = { generateJWToken, verifyJWToken, generateResetPasswordJWToken };

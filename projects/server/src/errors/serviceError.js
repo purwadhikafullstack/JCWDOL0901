@@ -76,8 +76,9 @@ const startVerificationErrorHandler = async (error) => {
 
 	if (error === "INVALID_TOKEN") {
 		return { code: 404, message: "Invalid token!" };
+	} else if (error === "EMAIL_NOT_FOUND") {
+		return { code: 404, message: "Email not found!" };
 	}
-
 	return {
 		code: 500,
 		message: "Internal Server Error, please contact us!",
