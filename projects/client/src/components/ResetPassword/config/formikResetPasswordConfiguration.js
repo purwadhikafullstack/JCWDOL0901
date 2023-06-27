@@ -3,7 +3,6 @@ import * as Yup from "yup";
 import { resetPasswordButtonHandler } from "../handlers/resetPasswordButtonHandler";
 
 const initialValues = {
-	old_password: "",
 	password: "",
 	confirm_password: "",
 };
@@ -14,8 +13,6 @@ const validateOnBlur = true;
 
 const requiredMessage = "Field can't be empty";
 
-const old_password = Yup.string().min(8, "Password must be at least 8 character long").required(requiredMessage);
-
 const password = Yup.string().min(8, "Password must be at least 8 character long").required(requiredMessage);
 
 const confirm_password = Yup.string().test("Match password", "Password must match", (input, formik) => {
@@ -23,7 +20,6 @@ const confirm_password = Yup.string().test("Match password", "Password must matc
 });
 
 const validationSchema = Yup.object({
-	old_password,
 	password,
 	confirm_password,
 });
