@@ -194,3 +194,243 @@
 	Source: startVerificationErrorHandler
 	Error: "EMAIL_NOT_FOUND"
 	
+	===
+	Time: Tue Jun 27 2023 20:41:59 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: "INVALID_TOKEN"
+	
+	===
+	Time: Tue Jun 27 2023 20:42:23 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: "INVALID_TOKEN"
+	
+	===
+	Time: Tue Jun 27 2023 20:43:44 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: "INVALID_TOKEN"
+	
+	===
+	Time: Tue Jun 27 2023 20:47:22 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt must be provided"}
+	
+	===
+	Time: Tue Jun 27 2023 20:48:21 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 20:48:47 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 20:48:57 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 20:49:08 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 20:49:26 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 20:49:32 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 20:49:32 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 20:50:04 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 20:50:04 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 20:51:18 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 20:51:20 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 20:51:54 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 20:52:33 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 20:52:34 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 20:55:02 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 20:56:00 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 20:56:14 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 20:57:27 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 20:57:28 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 20:57:34 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-06-27T09:28:16.000Z"}
+	
+	===
+	Time: Tue Jun 27 2023 21:02:31 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:02:33 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:02:34 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:02:34 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:02:34 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:02:34 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:02:35 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:02:55 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:03:38 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:03:38 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:03:41 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:03:52 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:04:05 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:04:08 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:05:40 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:05:41 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:05:51 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:05:57 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:06:41 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:06:53 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:07:18 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:07:19 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:07:20 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	
+	===
+	Time: Tue Jun 27 2023 21:07:20 GMT+0700 (Western Indonesia Time)
+	Source: startVerificationErrorHandler
+	Error: {"name":"JsonWebTokenError","message":"jwt malformed"}
+	

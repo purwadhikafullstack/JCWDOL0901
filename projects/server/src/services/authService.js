@@ -27,7 +27,7 @@ const { createInventoryQueryForNewBranch } = require("../queries/Inventories.js"
 const { paginateData } = require("../helpers/queryHelper.js");
 
 const { sendRegistrationVerificationEmail, sendResetPasswordVerificationEmail } = require("../utils/nodemailer.js");
-const { generateJWToken, generateResetPasswordJWToken } = require("../utils/jsonwebtoken.js");
+const { generateJWToken, generateResetPasswordJWToken, verifyJWToken } = require("../utils/jsonwebtoken.js");
 const { verifyHashPassword } = require("../utils/bcrypt.js");
 const { Op } = require("sequelize");
 
@@ -81,7 +81,6 @@ module.exports = {
 				const User = await getUserIdByEmail(body.email);
 				if (!User) throw "EMAIL_NOT_FOUND";
 				const token = await generateResetPasswordJWToken(User.id);
-				console.log(token);
 
 				await sendResetPasswordVerificationEmail(User, token);
 
@@ -172,6 +171,18 @@ module.exports = {
 			} catch (error) {
 				await transaction.rollback();
 				return reject(await startUpdatePasswordErrorHandler(error));
+			}
+		});
+	},
+	startResetPassword: async (body, token) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const verifiedToken = await verifyJWToken("Bearer " + token, process.env.JWT_RESET_PASSWORD_SECRET_KEY);
+				const { id } = verifiedToken;
+				await updatePasswordQuery(id, body.password);
+				return resolve("Reset password success");
+			} catch (error) {
+				return reject(await startVerificationErrorHandler(error));
 			}
 		});
 	},

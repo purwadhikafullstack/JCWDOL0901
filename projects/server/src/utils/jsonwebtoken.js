@@ -35,8 +35,8 @@ const verifyJWToken = async (token, secretKey) => {
 };
 
 const generateResetPasswordJWToken = async (id) => {
-	const expiresIn = process.env.JWT_FORGOT_PASSWORD_TOKEN_EXPIRATION_TIME;
-	const secretKey = process.env.JWT_FORGOT_PASSWORD_SECRET_KEY;
+	const expiresIn = process.env.JWT_RESET_PASSWORD_TOKEN_EXPIRATION_TIME;
+	const secretKey = process.env.JWT_RESET_PASSWORD_SECRET_KEY;
 
 	return await jwt.sign({ id: id }, secretKey, { expiresIn });
 };

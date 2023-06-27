@@ -8,6 +8,7 @@ const {
 	isSuper,
 	updatePassword,
 	forgotPassword,
+	resetPassword,
 } = require("../controllers/authController");
 
 const { getReferrerId, isSuperAdmin, isAdmin, isUser, isVerifiedUser } = require("../middlewares/authMiddleware");
@@ -26,5 +27,6 @@ router.post("/user/register", getReferrerId, registerUser);
 router.get("/user/verify/:token", verifyUser);
 router.patch("/user/password/update", isUser, isVerifiedUser, updatePassword);
 router.post("/user/password/request", forgotPassword);
+router.patch("/user/password/reset/:token", resetPassword);
 
 module.exports = router;

@@ -24,14 +24,14 @@ const validationSchema = Yup.object({
 	confirm_password,
 });
 
-const onSubmitConfiguration = async (values, setError, navigate) => {
-	await resetPasswordButtonHandler(values, setError, navigate);
+const onSubmitConfiguration = async (values, setError, navigate, token) => {
+	await resetPasswordButtonHandler(values, setError, navigate, token);
 };
 
-export const formikResetPasswordConfiguration = (setError, navigate) => {
+export const formikResetPasswordConfiguration = (setError, navigate, token) => {
 	return {
 		initialValues,
-		onSubmit: async (values) => onSubmitConfiguration(values, setError, navigate),
+		onSubmit: async (values) => onSubmitConfiguration(values, setError, navigate, token),
 		validateOnChange,
 		validateOnBlur,
 		validationSchema,

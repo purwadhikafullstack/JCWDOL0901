@@ -24,7 +24,7 @@ const ForgotPasswordForm = () => {
 					<ForgotPasswordInputField formik={formik} />
 					<Button
 						type="submit"
-						name="Send verification to email"
+						name="Send verification email"
 						disabled={formik.isSubmitting || formik.isValidating}
 					/>
 				</form>

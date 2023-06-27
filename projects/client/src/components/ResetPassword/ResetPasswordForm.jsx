@@ -5,12 +5,13 @@ import { useFormik } from "formik";
 import { formikResetPasswordConfiguration } from "./config/formikResetPasswordConfiguration";
 import ResetPasswordInputField from "./ResetPasswordInputField";
 import Button from "../Button.jsx";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const ResetPasswordForm = () => {
 	const [error, setError] = React.useState("");
 	const navigate = useNavigate();
-	const formik = useFormik(formikResetPasswordConfiguration(setError, navigate));
+	const token = useParams().token;
+	const formik = useFormik(formikResetPasswordConfiguration(setError, navigate, token));
 
 	return (
 		<div className="flex flex-col items-center min-w-fit shrink-0 px-6 bg-white sm:h-inherit sm:px-24 sm:py-8 sm:justify-center sm:rounded-r-xl">

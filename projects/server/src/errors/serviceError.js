@@ -78,6 +78,10 @@ const startVerificationErrorHandler = async (error) => {
 		return { code: 404, message: "Invalid token!" };
 	} else if (error === "EMAIL_NOT_FOUND") {
 		return { code: 404, message: "Email not found!" };
+	} else if (error?.expiredAt < new Date()) {
+		return { code: 403, message: "Token expired" };
+	} else if (error == "JsonWebTokenError: jwt malformed") {
+		return { code: 403, message: "Token not valid" };
 	}
 	return {
 		code: 500,
