@@ -60,8 +60,8 @@ function App() {
 				<Route path="/account/create-new-address" element={<CreateNewAddress />} />
 				<Route path="/account/edit-address" element={<EditAddress />} />
 				<Route path="/account" element={<AccountPage />} />
-				<Route path="/password/reset" element={<ResetPassword />} />
 				<Route path="/password/forgot" element={<ForgotPassword />} />
+				<Route path="/reset-password/verify/:token" element={<ResetPassword />} />
 
 				<Route path="/order/upload/" element={<UploadProof />} />
 
