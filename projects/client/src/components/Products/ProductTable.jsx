@@ -2,19 +2,19 @@ import React from "react";
 import ProductTableBody from "./ProductTableBody";
 
 const ProductTableHead = () => {
-	const thClassName = "py-4 bg-green-500 text-green-100 px-6 whitespace-nowrap ";
+	const thClassName = "py-4 bg-green-500 text-green-100 px-10 whitespace-nowrap ";
 	return (
 		<thead className="uppercase">
 			<tr className="text-center text-xs">
 				<th className={thClassName}>No</th>
 				<th className={thClassName}>Image</th>
-				<th className={thClassName + "px-14"}>Name</th>
+				<th className={thClassName}>Name</th>
 				<th className={thClassName}>Unit</th>
 				<th className={thClassName}>Weight</th>
-				<th className={thClassName + "px-8"}>Price</th>
-				<th className={thClassName + "px-20"}>Description</th>
-				<th className={thClassName + "px-2"}>Category</th>
-				<th className={thClassName + "px-8"}>Active</th>
+				<th className={thClassName}>Price</th>
+				<th className={thClassName}>Description</th>
+				<th className={thClassName}>Category</th>
+				<th className={thClassName}>Active</th>
 				<th className={thClassName}>Action</th>
 			</tr>
 		</thead>

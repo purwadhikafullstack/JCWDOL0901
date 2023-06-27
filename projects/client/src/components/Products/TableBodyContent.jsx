@@ -12,7 +12,7 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 	const [open, setOpen] = useState(false);
 	const [categoryId, setCategoryId] = useState(0);
 	const [categoryName, setCategoryName] = useState(0);
-	const tdClassName = "py-1 h-16 text-xs text-center px-4";
+	const tdClassName = "py-1 h-16 text-xs text-center px-4 ";
 	return (
 		<>
 			{alert ? (
@@ -38,7 +38,7 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 							</td>
 							<td className={tdClassName}>{item.name}</td>
 							<td className={tdClassName}>{item.unit}</td>
-							<td className={tdClassName}>{item.weight} g</td>
+							<td className={tdClassName}>{item.weight} gram</td>
 							<td className={tdClassName}>Rp{item.price.toLocaleString("id")}</td>
 							<td className={tdClassName}>{item.description}</td>
 							<td className={tdClassName}>{item.Category.name}</td>
