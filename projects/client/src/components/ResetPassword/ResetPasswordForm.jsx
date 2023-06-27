@@ -18,7 +18,7 @@ const ResetPasswordForm = () => {
 			<div className="w-80">
 				<CompanyLogo color={true} className="w-[100px] hidden mx-auto sm:block sm:mb-4" />
 				<ErrorWarning error={error} />
-				<form onSubmit={formik.handleSubmit} noValidate>
+				<form onSubmit={formik.handleSubmit} noValidate className="flex flex-col justify-between">
 					<ResetPasswordInputField formik={formik} />
 					<Button
 						type="submit"
