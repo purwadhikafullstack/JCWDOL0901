@@ -7,6 +7,7 @@ const {
 	startUpdatePasswordErrorHandler,
 	startAdminAuthenticationErrorHandler,
 	startUserAuthenticationErrorHandler,
+	startConfirmPasswordErrorHandler,
 } = require("../errors/serviceError.js");
 
 const {
@@ -57,6 +58,17 @@ const checkAndUpdatePassword = async (id, body, transaction) => {
 	if (User.password === body.password) throw "PASS_CANNOT_SAME";
 
 	await updatePasswordQuery(id, body.password, transaction);
+};
+
+const checkPassword = async (id, body, transaction) => {
+	const User = await getOldPasswordQuery(id, transaction);
+
+	const isPasswordVerified = verifyHashPassword(body.password, User.password);
+	// const isPasswordVerified = body.password === User.password;
+	// console.log("User.password: ", User.password);
+	// console.log("body.password: ", body.password);
+	// console.log("isPasswordVerified: ", isPasswordVerified);
+	return await isPasswordVerified;
 };
 
 module.exports = {
@@ -155,6 +167,20 @@ module.exports = {
 			} catch (error) {
 				await transaction.rollback();
 				return reject(await startUpdatePasswordErrorHandler(error));
+			}
+		});
+	},
+	startConfirmPassword: async (id, body) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const isPasswordVerified = await checkPassword(id, body);
+				if (isPasswordVerified) {
+					resolve("Password confirmation success!");
+				} else {
+					reject("Invalid password");
+				}
+			} catch (error) {
+				return reject(await startConfirmPasswordErrorHandler(error));
 			}
 		});
 	},

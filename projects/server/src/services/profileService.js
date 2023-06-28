@@ -15,7 +15,7 @@ module.exports = {
 		return new Promise(async (resolve, reject) => {
 			try {
 				const result = await updateUserProfileQuery(body, id);
-
+				
 				return resolve(result);
 			} catch (error) {
 				return reject(await startGetUserProfileErrorHandler(error));

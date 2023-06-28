@@ -6,6 +6,7 @@ const {
 	startAdminLoginAuthentication,
 	startUserLoginAuthentication,
 	startUpdatePassword,
+	startConfirmPassword,
 } = require("../services/authService");
 const { verifyJWToken } = require("../utils/jsonwebtoken");
 
@@ -89,6 +90,15 @@ const updatePassword = async (request, response) => {
 		.catch((error) => {
 			response.status(error.code).send(error.message);
 		});
+};		
+
+const confirmPassword = async(request, response) => {
+	await startConfirmPassword(request.userData.id, request.body).then((result) => {
+		console.log("result berhasil: ", result)
+		response.status(200).send(result);
+	}).catch((error) => {
+		response.status(error.code).send(error.message)
+	});
 };
 
 module.exports = {
@@ -100,4 +110,5 @@ module.exports = {
 	loginUser,
 	isSuper,
 	updatePassword,
+	confirmPassword,
 };
