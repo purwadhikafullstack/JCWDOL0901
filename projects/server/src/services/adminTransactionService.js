@@ -1,6 +1,12 @@
-const { startFindErrorHandler } = require("../errors/serviceError.js");
-const { readAdminTransactionsQuery, readBranchAdminTransactionsQuery } = require("../queries/Transactions.js");
+const { startUpdateErrorHandler } = require("../errors/serviceError.js");
+const {
+	readAdminTransactionsQuery,
+	readBranchAdminTransactionsQuery,
+	readUserTransactionQuery,
+	updateTransactionStatusQuery,
+} = require("../queries/Transactions.js");
 const moment = require("moment");
+const { sequelize } = require("../models/index.js");
 
 const getTotalGrossIncome = (data) => data.reduce((total, current) => total + current, 0);
 
@@ -97,6 +103,70 @@ module.exports = {
 				return resolve(AllTimeData);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
+			}
+		});
+	},
+	startSendUserOrder: async (transaction_id, branch_id) => {
+		return new Promise(async (resolve, reject) => {
+			const transaction = await sequelize.transaction();
+			try {
+				const Transaction = await readUserTransactionQuery(transaction_id);
+				if (Transaction.branch_id !== branch_id) throw "ERR_UNAUTHORIZED";
+				if (Transaction.status_id !== 3) throw "ERR_UNAUTHORIZED";
+				await updateTransactionStatusQuery(4, transaction_id, transaction);
+				await transaction.commit();
+				return await resolve("Success update transaction status!");
+			} catch (error) {
+				await transaction.rollback();
+				return await reject(await startUpdateErrorHandler(error));
+			}
+		});
+	},
+	startCancelUserOrder: async (transaction_id, branch_id) => {
+		return new Promise(async (resolve, reject) => {
+			const transaction = await sequelize.transaction();
+			try {
+				const Transaction = await readUserTransactionQuery(transaction_id);
+				if (Transaction.branch_id !== branch_id) throw "ERR_UNAUTHORIZED";
+				if (Transaction.status_id > 3) throw "ERR_UNAUTHORIZED";
+				await updateTransactionStatusQuery(6, transaction_id, transaction);
+				await transaction.commit();
+				return await resolve("Success update transaction status!");
+			} catch (error) {
+				await transaction.rollback();
+				return await reject(await startUpdateErrorHandler(error));
+			}
+		});
+	},
+	startConfirmUserOrder: async (transaction_id, branch_id) => {
+		return new Promise(async (resolve, reject) => {
+			const transaction = await sequelize.transaction();
+			try {
+				const Transaction = await readUserTransactionQuery(transaction_id);
+				if (Transaction.branch_id !== branch_id) throw "ERR_UNAUTHORIZED";
+				if (Transaction.status_id !== 2) throw "ERR_UNAUTHORIZED";
+				await updateTransactionStatusQuery(3, transaction_id, transaction);
+				await transaction.commit();
+				return await resolve("Success update transaction status!");
+			} catch (error) {
+				await transaction.rollback();
+				return await reject(await startUpdateErrorHandler(error));
+			}
+		});
+	},
+	startRejectUserOrder: async (transaction_id, branch_id) => {
+		return new Promise(async (resolve, reject) => {
+			const transaction = await sequelize.transaction();
+			try {
+				const Transaction = await readUserTransactionQuery(transaction_id);
+				if (Transaction.branch_id !== branch_id) throw "ERR_UNAUTHORIZED";
+				if (Transaction.status_id !== 2) throw "ERR_UNAUTHORIZED";
+				await updateTransactionStatusQuery(1, transaction_id, transaction);
+				await transaction.commit();
+				return await resolve("Success update transaction status!");
+			} catch (error) {
+				await transaction.rollback();
+				return await reject(await startUpdateErrorHandler(error));
 			}
 		});
 	},
