@@ -12,7 +12,7 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 	const [open, setOpen] = useState(false);
 	const [categoryId, setCategoryId] = useState(0);
 	const [categoryName, setCategoryName] = useState(0);
-	const tdClassName = "py-1 h-16 text-xs text-center px-4 ";
+	const tdClassName = "py-1 h-16 text-xs text-center px-4";
 	return (
 		<>
 			{alert ? (
