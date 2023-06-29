@@ -2,20 +2,20 @@ import React from "react";
 import ProductTableBody from "./ProductTableBody";
 
 const ProductTableHead = () => {
-	const thClassName = "py-4 bg-green-500 text-green-100 px-6 whitespace-nowrap ";
+	const thClassName = "py-4 bg-green-500 text-green-100 whitespace-nowrap ";
 	return (
 		<thead className="uppercase">
 			<tr className="text-center text-xs">
-				<th className={thClassName}>No</th>
-				<th className={thClassName}>Image</th>
-				<th className={thClassName + "px-14"}>Name</th>
-				<th className={thClassName}>Unit</th>
-				<th className={thClassName}>Weight</th>
-				<th className={thClassName + "px-8"}>Price</th>
-				<th className={thClassName + "px-20"}>Description</th>
-				<th className={thClassName + "px-2"}>Category</th>
-				<th className={thClassName + "px-8"}>Active</th>
-				<th className={thClassName}>Action</th>
+				<th className={thClassName + "px-6"}>No</th>
+				<th className={thClassName + "px-6"}>Image</th>
+				<th className={thClassName + "px-12"}>Name</th>
+				<th className={thClassName + "px-6"}>Unit</th>
+				<th className={thClassName + "px-4"}>Weight</th>
+				<th className={thClassName + "px-6"}>Price</th>
+				<th className={thClassName + "px-16"}>Description</th>
+				<th className={thClassName + "px-6"}>Category</th>
+				<th className={thClassName + "px-6"}>Active</th>
+				<th className={thClassName + "px-6"}>Action</th>
 			</tr>
 		</thead>
 	);
