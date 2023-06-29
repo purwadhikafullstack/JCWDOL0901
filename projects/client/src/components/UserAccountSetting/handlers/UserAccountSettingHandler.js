@@ -1,14 +1,6 @@
 import axios from "axios";
 import Swal from "sweetalert2";
 
-// const validatePasswordInput = input => {
-// 	if (input.password !== input.confirm_password) throw { code: "CONFIRM_PASS_ERR" };
-
-// 	const { old_password, password } = input;
-
-// 	return { old_password, password };
-// };
-
 const userAccountSettingErrorHandler = async (error) => {
 	if (error?.code === "ERR_NETWORK") {
 		return "Server unreachable, try again later!";
@@ -29,18 +21,10 @@ export const userAccountSettingHandler = async (data, setError, user) => {
 			headers: { Authorization: `Bearer ${token}` },
 		});
 
-		// console.log("data result: ", data);
-		console.log("data email result: ", data.email);
-		console.log("user email result: ", user.email);
-		console.log("response email result: ", response.data.user.email);
-		// console.log("email data changed isTrue: ", data.email !== user.email);
-		// console.log("email response changed isTrue: ", response.data.user.email !== user.email);
-		console.log("==========================");
-
 		if (data.email !== user.email) {
-		
 			Swal.fire({
 				title: "Submit your password",
+				text: "Changing email require password confirmation!",
 				input: "password",
 				inputAttributes: {
 					autocapitalize: "off",
@@ -61,11 +45,9 @@ export const userAccountSettingHandler = async (data, setError, user) => {
 						if (!response.data) {
 							throw new Error("Invalid response");
 						}
-						// return response.data;
 					} catch (error) {
 						const errorMessage = error.response ? error.response.data : `Request failed: ${error.message}`;
 						Swal.showValidationMessage(errorMessage);
-						console.log("error swal: ", error);
 					}
 				},
 				allowOutsideClick: () => !Swal.isLoading(),
@@ -77,6 +59,14 @@ export const userAccountSettingHandler = async (data, setError, user) => {
 						showConfirmButton: false,
 						timer: 2000,
 					});
+					user.email = data.email;
+				} else if (result.dismiss === Swal.DismissReason.cancel) {
+					Swal.fire({
+						icon: "error",
+						title: "Updates Cancelled",
+						showConfirmButton: false,
+						timer: 1000,
+					});
 				}
 			});
 		} else {
@@ -87,59 +77,9 @@ export const userAccountSettingHandler = async (data, setError, user) => {
 				timer: 2000,
 			});
 		}
-
-		// 	Swal.fire({
-		// 		title: "Changing email require password confirmation",
-		// 		input: "text",
-		// 		inputAttributes: {
-		// 			autocapitalize: "off",
-		// 		},
-		// 		showCancelButton: true,
-		// 		confirmButtonText: "Confirm password",
-		// 		showLoaderOnConfirm: true,
-		// 		preConfirm: (login) => {
-		// 			return fetch(`//api.github.com/users/${login}`)
-		// 				.then((response) => {
-		// 					if (!response.ok) {
-		// 						throw new Error(response.statusText);
-		// 					}
-		// 					return response.json();
-		// 				})
-		// 				.catch((error) => {
-		// 					Swal.showValidationMessage(`Request failed: ${error}`);
-		// 				});
-		// 		},
-		// 		allowOutsideClick: () => !Swal.isLoading(),
-		// 	}).then((result) => {
-		// 		if (result.isConfirmed) {
-		// 			Swal.fire({
-		// 				icon: "success",
-		// 				title: "Updates Saved",
-		// 				showConfirmButton: false,
-		// 				timer: 2000,
-		// 			});
-		// 		}
-		// 	});
-		// 	return response.data;
-		// } catch (error) {
-		// 	Swal.fire({
-		// 		icon: "error",
-		// 		title: await setError(await userAccountSettingErrorHandler(error)),
-		// 		showConfirmButton: false,
-		// 		timer: 2000,
-		// 	});
-		// }
-
-		// console.log("email result: ", response.data.user.email);
-		// console.log("password result: ", response.data.user.password);
-		// Swal.fire({
-		// 	icon: "success",
-		// 	title: "Updates Saved",
-		// 	showConfirmButton: false,
-		// 	timer: 2000,
-		// });
-
-		return response.data;
+		if (data.email === user.email) {
+			return response.data;
+		}
 	} catch (error) {
 		Swal.fire({
 			icon: "error",

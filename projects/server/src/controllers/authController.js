@@ -90,16 +90,16 @@ const updatePassword = async (request, response) => {
 		.catch((error) => {
 			response.status(error.code).send(error.message);
 		});
-};		
+};
 
-const confirmPassword = async(request, response) => {
-	await startConfirmPassword(request.body, request.userData.id).then((result) => {
-		console.log("result berhasil: ", result)
-		response.status(200).send(result);
-	}).catch((error) => {
-		console.log("error ctrlr: ", error)
-		response.status(error.code).send(error.message)
-	});
+const confirmPassword = async (request, response) => {
+	await startConfirmPassword(request.body, request.userData.id)
+		.then((result) => {
+			response.status(200).send(result);
+		})
+		.catch((error) => {
+			response.status(error.code).send(error.message);
+		});
 };
 
 module.exports = {

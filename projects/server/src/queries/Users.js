@@ -29,9 +29,6 @@ const userAuthenticationQuery = async (body, Name) => {
 const userPasswordAuthenticationQuery = async (id, body) => {
 	const data = await Users.findOne({ where: { id } });
 
-	console.log("data.password: ", data?.password);
-	console.log("body.password: ", body.password);
-
 	if (data?.password !== body.password || !data) {
 		throw "PASS_NOT_VERIFIED";
 	}

@@ -161,20 +161,13 @@ module.exports = {
 		});
 	},
 	startConfirmPassword: async (body, id) => {
-		console.log("body.password: ", body.password);
-		console.log("id: ", id);
 		return new Promise(async (resolve, reject) => {
 			try {
-				const result = await userPasswordAuthenticationQuery(id, body);
+				await userPasswordAuthenticationQuery(id, body);
 
 				// if (!(await verifyHashPassword(body.password, result?.password)) || !result) {
 				// 	return reject({ code: 400, message: "Wrong password!" });
 				// }
-
-				// if (!isPasswordVerified) throw "PASS_NOT_VERIFIED";
-
-				console.log("User.password: ", result.password);
-				console.log("body.password: ", body.password);
 
 				return resolve({ message: "Login success!" });
 			} catch (error) {
