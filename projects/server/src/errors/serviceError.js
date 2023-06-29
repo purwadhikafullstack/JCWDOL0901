@@ -62,6 +62,10 @@ const startUpdatePasswordErrorHandler = async (error) => {
 const startConfirmPasswordErrorHandler = async (error) => {
 	await writeLogFile(error, "startConfirmPasswordErrorHandler");
 
+	if (error === "PASS_NOT_VERIFIED") {
+		return { code: 400, message: `Your password is wrong!` };
+	}
+
 	return {
 		code: 500,
 		message: "Internal Server Error, please contact us!",

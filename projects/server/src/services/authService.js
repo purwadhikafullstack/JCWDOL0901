@@ -61,24 +61,6 @@ const checkAndUpdatePassword = async (id, body, transaction) => {
 	await updatePasswordQuery(id, body.password, transaction);
 };
 
-// const checkPassword = async (id, body, transaction) => {
-// 	const result = await userPasswordAuthenticationQuery(id);
-
-// 	// const isPasswordVerified = await verifyHashPassword(body.password, user.password);
-// 	// const isPasswordVerified = body.password === User.password;
-
-// 	if (!(await verifyHashPassword(body.password, result?.password)) || !result)
-// 		return reject({ code: 400, message: "Wrong password!" });
-
-// 	// if (!isPasswordVerified) throw "PASS_NOT_VERIFIED";
-
-// 	console.log("User.password: ", User.password);
-// 	console.log("body.password: ", body.password);
-// 	console.log("isPasswordVerified: ", isPasswordVerified);
-
-// 	return result;
-// };
-
 module.exports = {
 	startUserRegistration: async (body) => {
 		return new Promise(async (resolve, reject) => {
@@ -185,17 +167,16 @@ module.exports = {
 			try {
 				const result = await userPasswordAuthenticationQuery(id, body);
 
-
-				// if (!(await verifyHashPassword(body.password, result?.password)) || !result)
+				// if (!(await verifyHashPassword(body.password, result?.password)) || !result) {
 				// 	return reject({ code: 400, message: "Wrong password!" });
+				// }
 
 				// if (!isPasswordVerified) throw "PASS_NOT_VERIFIED";
 
 				console.log("User.password: ", result.password);
 				console.log("body.password: ", body.password);
-				// console.log("isPasswordVerified: ", isPasswordVerified);
 
-				return resolve({message: "Login success!"});
+				return resolve({ message: "Login success!" });
 			} catch (error) {
 				return reject(await startConfirmPasswordErrorHandler(error));
 			}

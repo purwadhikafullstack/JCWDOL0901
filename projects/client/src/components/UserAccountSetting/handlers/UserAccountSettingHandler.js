@@ -1,7 +1,6 @@
 import axios from "axios";
 import Swal from "sweetalert2";
 
-
 // const validatePasswordInput = input => {
 // 	if (input.password !== input.confirm_password) throw { code: "CONFIRM_PASS_ERR" };
 
@@ -9,7 +8,6 @@ import Swal from "sweetalert2";
 
 // 	return { old_password, password };
 // };
-
 
 const userAccountSettingErrorHandler = async (error) => {
 	if (error?.code === "ERR_NETWORK") {
@@ -40,82 +38,47 @@ export const userAccountSettingHandler = async (data, setError, user) => {
 		console.log("==========================");
 
 		if (data.email !== user.email) {
-			// Swal.fire({
-			// 	title: "Changing email require password confirmation",
-			// 	input: "password",
-			// 	inputAttributes: {
-			// 		autocapitalize: "off",
-			// 	},
-			// 	showCancelButton: true,
-			// 	confirmButtonText: "Confirm password",
-			// 	showLoaderOnConfirm: true,
-			// 	preConfirm: async (password) => {
-			// 		try {
-			// 			const token = localStorage.getItem("token");
-			// 			await axios.post(
-			// 				`${process.env.REACT_APP_API_BASE_URL}/auth/user/verify/password`,
-			// 				{ password },
-			// 				{
-			// 					headers: { Authorization: `Bearer ${token}` },
-			// 				},
-			// 			);
-			// 		} catch (error) {
-			// 			Swal.showValidationMessage(`Request failed: ${error}`);
-			// 		}
-			// 	},
-			// 	allowOutsideClick: () => !Swal.isLoading(),
-			// })
-			// 	.then((result) => {
-			// 		console.log("result: ", result);
-			// 		if (result.isConfirmed) {
-			// 			Swal.fire({
-			// 				icon: "success",
-			// 				title: "Updates Saved",
-			// 				showConfirmButton: false,
-			// 				timer: 2000,
-			// 			});
-			// 		}
-			// 	})
-
+		
 			Swal.fire({
-				title: 'Submit your password',
-				input: 'password',
+				title: "Submit your password",
+				input: "password",
 				inputAttributes: {
-				  autocapitalize: 'off'
+					autocapitalize: "off",
 				},
 				showCancelButton: true,
-				confirmButtonText: 'Submit',
+				confirmButtonText: "Submit",
 				showLoaderOnConfirm: true,
 				preConfirm: async (password) => {
-				  try {
-					const token = localStorage.getItem('token');
-					const response = await axios.post(
-					  `${process.env.REACT_APP_API_BASE_URL}/auth/user/verify/password`,
-					  { password },
-					  {
-						headers: { Authorization: `Bearer ${token}` },
-					  }
-					);
-					if (!response.data) {
-					  throw new Error('Invalid response');
+					try {
+						const token = localStorage.getItem("token");
+						const response = await axios.post(
+							`${process.env.REACT_APP_API_BASE_URL}/auth/user/verify/password`,
+							{ password },
+							{
+								headers: { Authorization: `Bearer ${token}` },
+							},
+						);
+						if (!response.data) {
+							throw new Error("Invalid response");
+						}
+						// return response.data;
+					} catch (error) {
+						const errorMessage = error.response ? error.response.data : `Request failed: ${error.message}`;
+						Swal.showValidationMessage(errorMessage);
+						console.log("error swal: ", error);
 					}
-					return response.data;
-				  } catch (error) {
-					Swal.showValidationMessage(`Request failed: ${error}`);
-				  }
 				},
-				allowOutsideClick: () => !Swal.isLoading()
-			  }).then((result) => {
+				allowOutsideClick: () => !Swal.isLoading(),
+			}).then((result) => {
 				if (result.isConfirmed) {
 					Swal.fire({
-						icon: 'success',
-						title: 'Updates Saved',
+						icon: "success",
+						title: "Updates Saved",
 						showConfirmButton: false,
 						timer: 2000,
-					  });
+					});
 				}
-			  });
-			  
+			});
 		} else {
 			Swal.fire({
 				icon: "success",
@@ -176,7 +139,7 @@ export const userAccountSettingHandler = async (data, setError, user) => {
 		// 	timer: 2000,
 		// });
 
-		// return response.data;
+		return response.data;
 	} catch (error) {
 		Swal.fire({
 			icon: "error",
