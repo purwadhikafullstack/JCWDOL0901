@@ -18,7 +18,7 @@ function UserAccountSettingForm() {
       })
       .catch();
   }, []);
-
+console.log("user in form: ", user)
   return (
     <div className="flex flex-col items-center min-w-fit shrink-0 px-6 bg-white sm:h-inherit sm:px-24 sm:pb-8 sm:pt-1 sm:justify-center sm:rounded-r-xl sm:mx-7">
       <ErrorWarning error={error} />

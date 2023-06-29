@@ -16,6 +16,7 @@ const {
 	getOldPasswordQuery,
 	updatePasswordQuery,
 	userAuthenticationQuery,
+	userPasswordAuthenticationQuery,
 } = require("../queries/Users.js");
 const { createProfileQuery } = require("../queries/Profiles.js");
 const { createVerificationTokenQuery, readUserTokensQuery } = require("../queries/User_tokens.js");
@@ -60,16 +61,23 @@ const checkAndUpdatePassword = async (id, body, transaction) => {
 	await updatePasswordQuery(id, body.password, transaction);
 };
 
-const checkPassword = async (id, body, transaction) => {
-	const User = await getOldPasswordQuery(id, transaction);
+// const checkPassword = async (id, body, transaction) => {
+// 	const result = await userPasswordAuthenticationQuery(id);
 
-	const isPasswordVerified = verifyHashPassword(body.password, User.password);
-	// const isPasswordVerified = body.password === User.password;
-	// console.log("User.password: ", User.password);
-	// console.log("body.password: ", body.password);
-	// console.log("isPasswordVerified: ", isPasswordVerified);
-	return await isPasswordVerified;
-};
+// 	// const isPasswordVerified = await verifyHashPassword(body.password, user.password);
+// 	// const isPasswordVerified = body.password === User.password;
+
+// 	if (!(await verifyHashPassword(body.password, result?.password)) || !result)
+// 		return reject({ code: 400, message: "Wrong password!" });
+
+// 	// if (!isPasswordVerified) throw "PASS_NOT_VERIFIED";
+
+// 	console.log("User.password: ", User.password);
+// 	console.log("body.password: ", body.password);
+// 	console.log("isPasswordVerified: ", isPasswordVerified);
+
+// 	return result;
+// };
 
 module.exports = {
 	startUserRegistration: async (body) => {
@@ -170,15 +178,24 @@ module.exports = {
 			}
 		});
 	},
-	startConfirmPassword: async (id, body) => {
+	startConfirmPassword: async (body, id) => {
+		console.log("body.password: ", body.password);
+		console.log("id: ", id);
 		return new Promise(async (resolve, reject) => {
 			try {
-				const isPasswordVerified = await checkPassword(id, body);
-				if (isPasswordVerified) {
-					resolve("Password confirmation success!");
-				} else {
-					reject("Invalid password");
-				}
+				const result = await userPasswordAuthenticationQuery(id, body);
+
+
+				// if (!(await verifyHashPassword(body.password, result?.password)) || !result)
+				// 	return reject({ code: 400, message: "Wrong password!" });
+
+				// if (!isPasswordVerified) throw "PASS_NOT_VERIFIED";
+
+				console.log("User.password: ", result.password);
+				console.log("body.password: ", body.password);
+				// console.log("isPasswordVerified: ", isPasswordVerified);
+
+				return resolve({message: "Login success!"});
 			} catch (error) {
 				return reject(await startConfirmPasswordErrorHandler(error));
 			}

@@ -93,10 +93,11 @@ const updatePassword = async (request, response) => {
 };		
 
 const confirmPassword = async(request, response) => {
-	await startConfirmPassword(request.userData.id, request.body).then((result) => {
+	await startConfirmPassword(request.body, request.userData.id).then((result) => {
 		console.log("result berhasil: ", result)
 		response.status(200).send(result);
 	}).catch((error) => {
+		console.log("error ctrlr: ", error)
 		response.status(error.code).send(error.message)
 	});
 };
