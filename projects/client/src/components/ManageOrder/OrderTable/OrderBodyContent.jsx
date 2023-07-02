@@ -1,6 +1,7 @@
 import React from "react";
-import { getBorderColor, sendUserOrder } from "../handlers/manageOrderHandler";
+import { getBorderColor } from "../handlers/manageOrderHandler";
 import { saveAs } from "file-saver";
+import { cancelUserOrder, confirmUserOrder, rejectUserOrder, sendUserOrder } from "../handlers/buttonHandler";
 
 const BranchName = ({ item }) => {
 	return (
@@ -66,12 +67,38 @@ const Voucher = ({ item }) => {
 };
 
 const Action = ({ item, setIsUpdated }) => {
-	if (item.status_id === 2) {
+	if (item.status_id === 1) {
 		return (
 			<div className="col-span-3 my-auto">
-				{/* <button className="bg-green-300 text-green-100 px-2 py-1 rounded-lg mr-2 w-20">Confirm</button>
-				<button className="bg-orange text-green-100 px-2 py-1 rounded-lg mr-2 w-20">Reject</button>
-				<button className="bg-red text-green-100 px-2 py-1 rounded-lg mr-2 w-20">Cancel</button> */}
+				<button
+					className="bg-red text-green-100 px-2 py-1 rounded-lg mr-2 w-20"
+					onClick={() => cancelUserOrder(item.id, setIsUpdated)}
+				>
+					Cancel
+				</button>
+			</div>
+		);
+	} else if (item.status_id === 2) {
+		return (
+			<div className="col-span-3 my-auto">
+				<button
+					className="bg-green-300 text-green-100 px-2 py-1 rounded-lg mr-2 w-20"
+					onClick={() => confirmUserOrder(item.id, setIsUpdated)}
+				>
+					Confirm
+				</button>
+				<button
+					className="bg-orange text-green-100 px-2 py-1 rounded-lg mr-2 w-20"
+					onClick={() => rejectUserOrder(item.id, setIsUpdated)}
+				>
+					Reject
+				</button>
+				<button
+					className="bg-red text-green-100 px-2 py-1 rounded-lg mr-2 w-20"
+					onClick={() => cancelUserOrder(item.id, setIsUpdated)}
+				>
+					Cancel
+				</button>
 			</div>
 		);
 	} else if (item.status_id === 3) {
@@ -82,6 +109,12 @@ const Action = ({ item, setIsUpdated }) => {
 					onClick={() => sendUserOrder(item.id, setIsUpdated)}
 				>
 					Send
+				</button>
+				<button
+					className="bg-red text-green-100 px-2 py-1 rounded-lg mr-2 w-20"
+					onClick={() => cancelUserOrder(item.id, setIsUpdated)}
+				>
+					Cancel
 				</button>
 			</div>
 		);
