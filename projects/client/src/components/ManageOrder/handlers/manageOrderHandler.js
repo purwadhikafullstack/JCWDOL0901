@@ -124,9 +124,10 @@ export const getAdminTransactions = (query) => {
 
 export const sendUserOrder = (transaction_id, setIsUpdated) => {
 	Swal.fire({
-		title: "Do you want to save the changes?",
+		title: "Do you want to send the order?",
 		showCancelButton: true,
 		confirmButtonText: "Yes",
+		confirmButtonColor: "#53B97C",
 		customClass: {
 			actions: "my-actions",
 			cancelButton: "order-1",
@@ -138,7 +139,7 @@ export const sendUserOrder = (transaction_id, setIsUpdated) => {
 				headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
 			});
 			setIsUpdated(true);
-			Swal.fire("Saved!", "", "success");
+			Swal.fire("Updated!", "", "success");
 		}
 	});
 	return;
