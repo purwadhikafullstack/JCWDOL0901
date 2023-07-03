@@ -21,21 +21,21 @@ const LocationDeniedMessage = () => {
 
 const BranchDetail = ({ toggleBranchModal }) => {
 	const dispatch = useDispatch();
-	const user = useSelector(state => state.user);
+	const user = useSelector((state) => state.user);
 
 	React.useEffect(() => {
 		if (!user.branch.name) {
 			promptUserPermissionForLocation()
-				.then(result => {
+				.then((result) => {
 					const { latitude, longitude } = result.coords;
 					dispatch(setUserLocation({ latitude, longitude, granted: true, pending: false }));
 				})
-				.catch(error => dispatch(setUserLocation({ granted: false, pending: false })));
+				.catch((error) => dispatch(setUserLocation({ granted: false, pending: false })));
 		}
 	}, []);
 
 	return (
-		<div className="text-green-100 flex flex-row items-center justify-items-start pt-1">
+		<div className="text-green-100 flex flex-row items-center justify-items-start md:pl-4">
 			{user.location.pending && <LocationPendingMessage />}
 			{!user.location.granted && !user.location.pending && <LocationDeniedMessage />}
 			{user.location.granted && <BranchName toggleBranchModal={toggleBranchModal} />}

@@ -12,13 +12,21 @@ const isSuperAdmin = async (navigate, dispatch) => {
 		};
 		const adminData = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/auth/admin/super`, config);
 		if (!adminData) {
-			navigate(`/admin/login`);
+			navigate(`/admin/login`, {
+				state: {
+					authGuard: true,
+				},
+			});
 		}
 		dispatch(setAdminLogin({ hasLogged: true, superAdmin: adminData.data.super }));
 		return;
 	} catch (error) {
 		dispatch(setAdminLogin({ hasLogged: false, superAdmin: false }));
-		navigate(`/admin/login`);
+		navigate(`/admin/login`, {
+			state: {
+				authGuard: true,
+			},
+		});
 	}
 };
 

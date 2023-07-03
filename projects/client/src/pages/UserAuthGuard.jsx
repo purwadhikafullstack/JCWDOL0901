@@ -12,13 +12,21 @@ const isUserLogged = async (navigate, dispatch) => {
 		};
 		const userData = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/auth/user/logged`, config);
 		if (!userData) {
-			navigate(`/login`);
+			navigate(`/login`, {
+				state: {
+					authGuard: true,
+				},
+			});
 		}
 		dispatch(setUserLogin({ hasLogged: true }));
 		return;
 	} catch (error) {
 		dispatch(setUserLogin({ hasLogged: false }));
-		navigate(`/login`);
+		navigate(`/login`, {
+			state: {
+				authGuard: true,
+			},
+		});
 	}
 };
 
