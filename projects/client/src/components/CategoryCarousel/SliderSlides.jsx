@@ -4,7 +4,7 @@ import { createSearchParams, useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import queryString from "query-string";
 
-const MobileSlides = ({ categories }) => {
+const MobileSlides = ({ categories, setPage }) => {
 	const navigate = useNavigate();
 	const user = useSelector((state) => state.user);
 
@@ -30,15 +30,16 @@ const MobileSlides = ({ categories }) => {
 							<button className={`rounded-2xl mt-1 ${isFocus ? "ring ring-green-200" : ""}`}>
 								<img
 									className="w-[75px] cursor-pointer rounded-2xl"
-									src={process.env.REACT_APP_IMAGE_BASE_URL + category.image}
+									src={category.image}
 									alt={category.name}
 									loading="lazy"
-									onClick={() =>
+									onClick={() => {
+										setPage(1);
 										navigate({
 											pathname: "/products",
 											search: `?${createSearchParams(params)}`,
-										})
-									}
+										});
+									}}
 								/>
 							</button>
 							<span className={`text-black text-sm mt-1.5 ${isFocus ? "text-green-400" : ""}`}>
@@ -56,7 +57,7 @@ const MobileSlides = ({ categories }) => {
 	);
 };
 
-const DesktopSlides = ({ categories }) => {
+const DesktopSlides = ({ categories, setPage }) => {
 	const navigate = useNavigate();
 	const user = useSelector((state) => state.user);
 
@@ -82,15 +83,16 @@ const DesktopSlides = ({ categories }) => {
 							<button className={`rounded-2xl mt-1 ${isFocus ? "ring ring-green-200" : ""}`}>
 								<img
 									className="w-[100px] cursor-pointer rounded-2xl"
-									src={process.env.REACT_APP_IMAGE_BASE_URL + category.image}
+									src={category.image}
 									alt={category.name}
 									loading="lazy"
-									onClick={() =>
+									onClick={() => {
+										setPage(1);
 										navigate({
 											pathname: "/products",
 											search: `?${createSearchParams(params)}`,
-										})
-									}
+										});
+									}}
 								/>
 							</button>
 							<span className={`text-black text-sm mt-1.5 ${isFocus ? "text-green-400" : ""}`}>
@@ -108,14 +110,14 @@ const DesktopSlides = ({ categories }) => {
 	);
 };
 
-const SliderSlides = ({ categories }) => {
+const SliderSlides = ({ categories, setPage }) => {
 	return (
 		<>
 			<div className="block sm:hidden">
-				<MobileSlides categories={categories} />
+				<MobileSlides categories={categories} setPage={setPage} />
 			</div>
 			<div className="hidden sm:block sm:mt-0">
-				<DesktopSlides categories={categories} />
+				<DesktopSlides categories={categories} setPage={setPage} />
 			</div>
 		</>
 	);

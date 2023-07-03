@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import { PlusIcon } from "@heroicons/react/outline";
 import { useEffect, useState } from "react";
-import { determinePrice } from "./handlers/ProductsHandler";
+import { determinePrice } from "./handlers/productsHandler";
 
 const ProductCard = ({ product }) => {
 	const navigate = useNavigate();
 	const [price, setPrice] = useState({ original: 0, final: 0, promo: false });
 	useEffect(() => {
 		determinePrice(product, setPrice);
-	}, []);
+	}, [product]);
 	return (
 		<div key={product.name} className="flex flex-col border rounded-lg pb-4">
 			<button
@@ -18,7 +18,7 @@ const ProductCard = ({ product }) => {
 			>
 				{product.Inventories[0].promo ? (
 					<div className="flex items-center my-auto ml-2">
-						<span className="absolute text-sm text-left text-green-100 px-2 py-0.5 rounded ml-2 bg-rose-500 w-fit">
+						<span className="z-50 absolute text-sm text-left text-green-100 px-2 py-0.5 rounded ml-2 bg-rose-500 w-fit">
 							{price?.promo?.value}
 						</span>
 					</div>

@@ -7,7 +7,7 @@ const fetchCategories = async (setCategories) => {
 		.get(`${process.env.REACT_APP_API_BASE_URL}/category/list`)
 		.then((result) => {
 			setCategories([
-				{ id: "", name: "All Category", image: "uploads/category/category_0.png" },
+				{ id: "", name: "All Category", image: "/assets/categories/category_0.png" },
 				...result.data.rows,
 			]);
 		})
@@ -16,14 +16,14 @@ const fetchCategories = async (setCategories) => {
 		});
 };
 
-const CategoriesSlider = () => {
+const CategoriesSlider = ({ setPage }) => {
 	const [categories, setCategories] = React.useState([]);
 
 	React.useEffect(() => {
 		fetchCategories(setCategories);
 	}, []);
 
-	return categories && <SliderSlides categories={categories} />;
+	return categories && <SliderSlides categories={categories} setPage={setPage} />;
 };
 
 export default CategoriesSlider;

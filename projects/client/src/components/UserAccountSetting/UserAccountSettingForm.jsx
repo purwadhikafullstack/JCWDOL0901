@@ -20,11 +20,8 @@ function UserAccountSettingForm() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center min-w-fit shrink-0 px-6 bg-white sm:h-inherit sm:px-24 sm:py-8 sm:justify-center sm:rounded-r-xl">
+    <div className="flex flex-col items-center min-w-fit shrink-0 px-6 bg-white sm:h-inherit sm:px-24 sm:pb-8 sm:pt-1 sm:justify-center sm:rounded-r-xl sm:mx-7">
       <ErrorWarning error={error} />
-      <h3 className="border-b px-5 pb-1 mx-auto text-lg font-medium leading-6 text-gray-900">
-        Personal Information
-      </h3>
       <hr className="h-5" />
       {user && <UserAccountSettingFormWithValidator setError={setError} user={user} />}
     </div>

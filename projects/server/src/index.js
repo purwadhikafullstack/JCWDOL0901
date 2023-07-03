@@ -7,13 +7,18 @@ const { join } = require("path");
 const { midnightTask } = require("./scheduler/midnight.js");
 const {
 	authRoute,
+	addressRoute,
 	dataRoute,
 	adminTransactionRoute,
 	categoryRoute,
 	branchRoute,
+	cartRoute,
 	productRoute,
 	adminPromoRoute,
 	adminInventoryRoute,
+	voucherRoute,
+	transactionRoute,
+	rajaOngkirRoute,
 	profileRoute,
 } = require("./routers/index.js");
 const { log } = require("console");
@@ -38,13 +43,19 @@ midnightTask.start();
 
 app.use("/api/profile", profileRoute);
 app.use("/api/auth", authRoute);
+app.use("/api/address", addressRoute);
 app.use("/api/branch", branchRoute);
 app.use("/api/category", categoryRoute);
+app.use("/api/cart", cartRoute);
 app.use("/api/data", dataRoute);
 app.use("/api/admin/transaction", adminTransactionRoute);
 app.use("/api/admin/inventory", adminInventoryRoute);
 app.use("/api/admin/promo", adminPromoRoute);
 app.use("/api/product", productRoute);
+app.use("/api/address", addressRoute);
+app.use("/api/voucher", voucherRoute);
+app.use("/api/transaction", transactionRoute);
+app.use("/api/rajaongkir", rajaOngkirRoute);
 
 app.use("/uploads", express.static("uploads/"));
 

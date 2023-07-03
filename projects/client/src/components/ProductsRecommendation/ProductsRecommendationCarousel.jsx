@@ -3,15 +3,13 @@ import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useSelector } from "react-redux";
 import { getProductsRecommendation } from "./handlers/ProductsRecommendationCarouselHandler";
+import ProductCard from "../Products/ProductCard.jsx";
 
 const Slide = ({ products }) => {
 	return products.map((item, index) => {
 		return (
 			<SplideSlide>
-				<div className="flex flex-col items-center">
-					<img className="w-[150px]" src={item?.image} alt={item?.name} />
-					<span className="text-black text-sm mt-1.5">{item?.name}</span>
-				</div>
+				<ProductCard product={item} key={index} />
 			</SplideSlide>
 		);
 	});
@@ -26,14 +24,15 @@ const ProductsRecommendationCarousel = () => {
 			.then((result) => setProducts(result.data))
 			.catch((error) => setProducts([{ name: "Server Error!", image: "" }]));
 	}, [user]);
-
+	const itemPerPage = window.innerWidth > 640 ? 4 : 2;
 	return (
 		products && (
 			<Splide
 				options={{
-					perPage: 5,
+					perPage: itemPerPage,
 					pagination: false,
 					arrows: false,
+					gap: 15,
 				}}
 			>
 				<Slide products={products} />

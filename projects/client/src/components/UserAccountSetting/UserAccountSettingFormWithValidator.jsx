@@ -6,18 +6,17 @@ import UserAccountSettingInputField from "./UserAccountSettingInputField";
 import Button from "../Button";
 
 function UserAccountSettingFormWithValidator({ setError, user }) {
-  const navigate = useNavigate();
+	const navigate = useNavigate();
+	const formik = useFormik(formikUserAccountSettingConfiguration(setError, navigate, user));
 
-  const formik = useFormik(formikUserAccountSettingConfiguration(setError, navigate, user));
-
-  if (formik) {
-    return (
-      <form onSubmit={formik.handleSubmit} noValidate>
-        <UserAccountSettingInputField formik={formik} />
-        <Button type="submit" name="Save" disabled={formik.isSubmitting || formik.isValidating} />
-      </form>
-    );
-  }
+	if (formik) {
+		return (
+			<form onSubmit={formik.handleSubmit} noValidate>
+				<UserAccountSettingInputField formik={formik} />
+				<Button type="submit" name="Save" disabled={formik.isSubmitting || formik.isValidating} />
+			</form>
+		);
+	}
 }
 
 export default UserAccountSettingFormWithValidator;

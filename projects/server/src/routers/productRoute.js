@@ -5,6 +5,7 @@ const {
 	getRelatedProducts,
 	getProductDetail,
 	getProducts,
+	getProductsOnly,
 } = require("../controllers/productController.js");
 
 const {
@@ -16,6 +17,8 @@ const {
 router.get("/recommend", getProductsRecommendationQuerySanitizer, getProductsRecommendation);
 router.get("/related", getRelatedProductsQuerySanitizer, getRelatedProducts);
 router.get("/list", getProductsSanitizer, getProducts);
+router.get("/only", getProductsSanitizer, getProductsOnly);
+
 router.get("/:inventory_id", getProductDetail);
 
 module.exports = router;
