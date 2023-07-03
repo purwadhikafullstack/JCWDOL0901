@@ -30,6 +30,12 @@ import SwitchVoucher from "./components/Checkout/SwitchVoucher";
 import SwitchLogistic from "./components/Checkout/SwitchLogistic";
 import ProductPage from "./pages/Product/ProductPage";
 import StockHistory from "./pages/StockHistory/StockHistory";
+import UploadProof from "./pages/UploadProof/UploadProof";
+import ManageProduct from "./pages/ManageProduct/ManageProduct";
+import CreateProduct from "./pages/CreateProduct/CreateProduct";
+import UpdateProduct from "./pages/UpdateProduct/UpdateProduct";
+import ResetPassword from "./pages/ResetPassword/ResetPassword";
+import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 
 function App() {
 	return (
@@ -55,6 +61,10 @@ function App() {
 				<Route path="/account/create-new-address" element={<CreateNewAddress />} />
 				<Route path="/account/edit-address" element={<EditAddress />} />
 				<Route path="/account" element={<AccountPage />} />
+				<Route path="/password/forgot" element={<ForgotPassword />} />
+				<Route path="/reset-password/verify/:token" element={<ResetPassword />} />
+
+				<Route path="/order/upload/" element={<UploadProof />} />
 
 				{/* //Admin Auth Page */}
 				<Route path="/admin/order" element={<AdminAuthGuard component={<ManageOrder />} />} />
@@ -70,6 +80,9 @@ function App() {
 				<Route path="/admin/category" element={<AdminAuthGuard component={<ManageCategory />} />} />
 				<Route path="/admin/category/create" element={<AdminAuthGuard component={<CreateCategoryPage />} />} />
 				<Route path="/admin/category/update" element={<AdminAuthGuard component={<UpdateCategoryPage />} />} />
+				<Route path="/admin/product" element={<AdminAuthGuard component={<ManageProduct />} />} />
+				<Route path="/admin/product/create" element={<AdminAuthGuard component={<CreateProduct />} />} />
+				<Route path="/admin/product/update" element={<AdminAuthGuard component={<UpdateProduct />} />} />
 			</Routes>
 		</div>
 	);

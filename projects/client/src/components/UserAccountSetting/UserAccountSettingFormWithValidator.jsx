@@ -7,7 +7,6 @@ import Button from "../Button";
 
 function UserAccountSettingFormWithValidator({ setError, user }) {
 	const navigate = useNavigate();
-
 	const formik = useFormik(formikUserAccountSettingConfiguration(setError, navigate, user));
 
 	if (formik) {

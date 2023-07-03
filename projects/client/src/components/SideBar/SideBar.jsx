@@ -17,11 +17,7 @@ export default function SideBar({ children }) {
 						sidebarOpen ? "" : " -translate-x-72"
 					}`}
 				>
-					<SideBarContent
-						sidebarOpen={sidebarOpen}
-						setSidebarOpen={setSidebarOpen}
-						navigation={navigation}
-					/>
+					<SideBarContent sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} navigation={navigation} />
 				</div>
 				<div className="flex flex-col flex-1">
 					<SideBarMenuButton sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />

@@ -78,7 +78,7 @@ const getCategoryQueryOrder = async (query) => {
 
 const getProductQueryFilter = async (query) => {
 	const filter = {};
-	const productFilter = ["name", "category_id", "branch_id"];
+	const productFilter = ["name", "category_id", "branch_id", "active"];
 	await productFilter.forEach((key) => {
 		if (key === "name" && query[key]) filter[key] = { [Op.like]: "%" + query[key] + "%" };
 		else if (query[key]) filter[key] = query[key];

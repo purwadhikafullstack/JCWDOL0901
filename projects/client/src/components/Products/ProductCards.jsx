@@ -1,6 +1,6 @@
 import React from "react";
 import ProductCard from "./ProductCard";
-import { getProducts, generateUrlQuery } from "./handlers/ProductsHandler.js";
+import { getProducts, generateUrlQuery } from "./handlers/productsHandler.js";
 import { useLocation } from "react-router-dom";
 import queryString from "query-string";
 

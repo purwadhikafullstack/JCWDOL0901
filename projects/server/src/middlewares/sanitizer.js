@@ -150,6 +150,8 @@ const postRajaOngkirCostBodySanitizer = async (request, response, next) => {
 	request.payload = payload;
 
 	delete request.body;
+
+	next();
 };
 
 const getProductsSanitizer = async (request, response, next) => {
@@ -161,7 +163,6 @@ const getProductsSanitizer = async (request, response, next) => {
 	};
 
 	request.query = sanitizedQuery;
-
 	next();
 };
 
