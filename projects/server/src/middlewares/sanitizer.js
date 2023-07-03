@@ -160,10 +160,6 @@ const getProductsSanitizer = async (request, response, next) => {
 	};
 
 	request.query = sanitizedQuery;
-<<<<<<< HEAD
-
-=======
->>>>>>> development
 	next();
 };
 
@@ -173,10 +169,6 @@ const getAdminTransactionQuerySanitizer = async (request, response, next) => {
 		order: await getAdminTransactionQueryOrder(request.query),
 		page: request.query.page,
 	};
-<<<<<<< HEAD
-=======
-
->>>>>>> development
 	request.query = sanitizedQuery;
 
 	next();

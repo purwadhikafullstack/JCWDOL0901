@@ -9,11 +9,7 @@ const {
 	Profiles,
 	Proofs,
 } = require("../models/index.js");
-<<<<<<< HEAD
-const { Op, literal } = require("sequelize");
-=======
 const { Op, literal, Transaction } = require("sequelize");
->>>>>>> development
 
 const dateQueryHelper = (from, to) => {
 	return {
@@ -86,9 +82,6 @@ const readBranchAdminTransactionsQuery = async (query, branch) => {
 	});
 };
 
-<<<<<<< HEAD
-module.exports = { readAdminTransactionsQuery, readBranchAdminTransactionsQuery };
-=======
 const createTransactionQuery = async (payload, transaction) => {
 	return await Transactions.create({ ...payload, status_id: 1 }, { transaction });
 };
@@ -108,4 +101,3 @@ module.exports = {
 	readUserTransactionQuery,
 	updateTransactionStatusQuery,
 };
->>>>>>> development
