@@ -35,6 +35,7 @@ import CreateProduct from "./pages/CreateProduct/CreateProduct";
 import UpdateProduct from "./pages/UpdateProduct/UpdateProduct";
 import ResetPassword from "./pages/ResetPassword/ResetPassword";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
+import UserAuthGuard from "./pages/UserAuthGuard";
 
 function App() {
 	return (
@@ -47,23 +48,33 @@ function App() {
 				<Route path="/verify/:token" element={<VerifyPage />} />
 				<Route path="/admin/login" element={<AdminLoginPage />} />
 				<Route path="/login" element={<UserLoginPage />} />
-				<Route path="/cart/checkout" element={<CheckoutPage />} />
-				<Route path="/cart/checkout/address/change" element={<SwitchAddress />} />
-				<Route path="/cart/checkout/voucher/change" element={<SwitchVoucher />} />
-				<Route path="/cart/checkout/logistic/change" element={<SwitchLogistic />} />
 				<Route path="/products/" element={<ProductPage />} />
 				<Route path="/product/detail/:inventory_id" element={<ProductDetail />} />
-				<Route path="/account/change-password" element={<ChangePasswordPage />} />
-				<Route path="/account/profile-update" element={<UserAccountSettingPage />} />
-				<Route path="/account/avatar-update" element={<UserAvatarUploadPage />} />
-				<Route path="/account/manage-address" element={<ManageAddress />} />
-				<Route path="/account/create-new-address" element={<CreateNewAddress />} />
-				<Route path="/account/edit-address" element={<EditAddress />} />
 				<Route path="/account" element={<AccountPage />} />
 				<Route path="/password/forgot" element={<ForgotPassword />} />
 				<Route path="/reset-password/verify/:token" element={<ResetPassword />} />
 
-				<Route path="/order/upload/" element={<UploadProof />} />
+				{/* //User Auth Page */}
+				<Route
+					path="/account/profile-update"
+					element={<UserAuthGuard component={<UserAccountSettingPage />} />}
+				/>
+				<Route path="/account/change-password" element={<UserAuthGuard component={<ChangePasswordPage />} />} />
+				<Route path="/account/avatar-update" element={<UserAuthGuard component={<UserAvatarUploadPage />} />} />
+				<Route path="/account/manage-address" element={<UserAuthGuard component={<ManageAddress />} />} />
+				<Route
+					path="/account/create-new-address"
+					element={<UserAuthGuard component={<CreateNewAddress />} />}
+				/>
+				<Route path="/account/edit-address" element={<UserAuthGuard component={<EditAddress />} />} />
+				<Route path="/cart/checkout" element={<UserAuthGuard component={<CheckoutPage />} />} />
+				<Route path="/cart/checkout/address/change" element={<UserAuthGuard component={<SwitchAddress />} />} />
+				<Route path="/cart/checkout/voucher/change" element={<UserAuthGuard component={<SwitchVoucher />} />} />
+				<Route
+					path="/cart/checkout/logistic/change"
+					element={<UserAuthGuard component={<SwitchLogistic />} />}
+				/>
+				<Route path="/order/upload" element={<UserAuthGuard component={<UploadProof />} />} />
 
 				{/* //Admin Auth Page */}
 				<Route path="/admin/order" element={<AdminAuthGuard component={<ManageOrder />} />} />
