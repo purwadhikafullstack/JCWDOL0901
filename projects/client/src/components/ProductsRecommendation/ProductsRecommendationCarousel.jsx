@@ -8,7 +8,7 @@ import ProductCard from "../Products/ProductCard.jsx";
 const Slide = ({ products }) => {
 	return products.map((item, index) => {
 		return (
-			<SplideSlide>
+			<SplideSlide key={index}>
 				<ProductCard product={item} key={index} />
 			</SplideSlide>
 		);
