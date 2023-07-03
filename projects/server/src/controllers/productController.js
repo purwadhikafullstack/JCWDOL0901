@@ -3,6 +3,9 @@ const {
 	startFindRelatedProducts,
 	startFindProductDetail,
 	startFindProducts,
+	startCreateProduct,
+	startUpdateProduct,
+	startDeleteProduct,
 } = require("../services/productService.js");
 
 const getProductsRecommendation = async (request, response) => {
@@ -50,4 +53,30 @@ const getProductDetail = async (request, response) => {
 		});
 };
 
-module.exports = { getProductsRecommendation, getRelatedProducts, getProductDetail, getProducts };
+const createProduct = async (request, response) => {
+	await startCreateProduct(request.body, request.file)
+		.then((result) => response.status(200).send(result))
+		.catch((error) => response.status(error.code).send(error.message));
+};
+
+const updateProduct = async (request, response) => {
+	await startUpdateProduct(request.body, request.file, request.params)
+		.then((result) => response.status(200).send(result))
+		.catch((error) => response.status(error.code).send(error.message));
+};
+
+const deleteProduct = async (request, response) => {
+	await startDeleteProduct(request.params)
+		.then((result) => response.status(200).send(result))
+		.catch((error) => response.status(error.code).send(error.message));
+};
+
+module.exports = {
+	getProductsRecommendation,
+	getRelatedProducts,
+	getProductDetail,
+	getProducts,
+	createProduct,
+	updateProduct,
+	deleteProduct,
+};
