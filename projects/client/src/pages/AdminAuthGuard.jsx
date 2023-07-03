@@ -10,10 +10,7 @@ const isSuperAdmin = async (navigate, dispatch) => {
 		const config = {
 			headers: { Authorization: `Bearer ${token}` },
 		};
-		const adminData = await axios.get(
-			`${process.env.REACT_APP_API_BASE_URL}/auth/admin/super`,
-			config
-		);
+		const adminData = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/auth/admin/super`, config);
 		if (!adminData) {
 			navigate(`/admin/login`);
 		}
@@ -28,17 +25,13 @@ const isSuperAdmin = async (navigate, dispatch) => {
 const AdminAuthGuard = ({ component }) => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
-	const admin = useSelector(state => state.admin);
+	const admin = useSelector((state) => state.admin);
 
 	useEffect(() => {
 		isSuperAdmin(navigate, dispatch);
 	}, []);
 
-	return admin.hasLogged ? (
-		<React.Fragment>{component}</React.Fragment>
-	) : (
-		<React.Fragment></React.Fragment>
-	);
+	return admin.hasLogged ? <React.Fragment>{component}</React.Fragment> : <React.Fragment></React.Fragment>;
 };
 
 export default AdminAuthGuard;
