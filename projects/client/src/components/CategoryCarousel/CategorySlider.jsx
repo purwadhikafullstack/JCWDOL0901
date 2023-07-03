@@ -16,14 +16,14 @@ const fetchCategories = async (setCategories) => {
 		});
 };
 
-const CategoriesSlider = () => {
+const CategoriesSlider = ({ setPage }) => {
 	const [categories, setCategories] = React.useState([]);
 
 	React.useEffect(() => {
 		fetchCategories(setCategories);
 	}, []);
 
-	return categories && <SliderSlides categories={categories} />;
+	return categories && <SliderSlides categories={categories} setPage={setPage} />;
 };
 
 export default CategoriesSlider;

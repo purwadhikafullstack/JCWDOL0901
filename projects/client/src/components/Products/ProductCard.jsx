@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import { PlusIcon } from "@heroicons/react/outline";
 import { useEffect, useState } from "react";
-import { determinePrice } from "./handlers/ProductsHandler";
+import { determinePrice } from "./handlers/productsHandler";
 
 const ProductCard = ({ product }) => {
 	const navigate = useNavigate();
 	const [price, setPrice] = useState({ original: 0, final: 0, promo: false });
 	useEffect(() => {
 		determinePrice(product, setPrice);
-	}, []);
+	}, [product]);
 	return (
 		<div key={product.name} className="flex flex-col border rounded-lg pb-4">
 			<button
