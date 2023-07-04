@@ -9,7 +9,8 @@ const {
 	Profiles,
 	Proofs,
 } = require("../models/index.js");
-const { Op, literal } = require("sequelize");
+
+const { Op, literal, Transaction } = require("sequelize");
 
 const dateQueryHelper = (from, to) => {
 	return {
@@ -60,7 +61,6 @@ const readAdminTransactionsQuery = async (from, to, status, branch) => {
 	});
 };
 
-
 const readBranchAdminTransactionsQuery = async (query, branch) => {
 	return await Transactions.findAndCountAll({
 		where: {
@@ -87,4 +87,18 @@ const createTransactionQuery = async (payload, transaction) => {
 	return await Transactions.create({ ...payload, status_id: 1 }, { transaction });
 };
 
-module.exports = { readAdminTransactionsQuery, readBranchAdminTransactionsQuery, createTransactionQuery };
+const readUserTransactionQuery = async (transaction_id) => {
+	return await Transactions.findOne({ where: { id: transaction_id } });
+};
+
+const updateTransactionStatusQuery = async (status_id, transaction_id, transaction) => {
+	return await Transactions.update({ status_id }, { where: { id: transaction_id }, transaction });
+};
+
+module.exports = {
+	readAdminTransactionsQuery,
+	readBranchAdminTransactionsQuery,
+	createTransactionQuery,
+	readUserTransactionQuery,
+	updateTransactionStatusQuery,
+};

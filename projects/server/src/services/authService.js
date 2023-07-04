@@ -15,6 +15,7 @@ const {
 	getOldPasswordQuery,
 	updatePasswordQuery,
 	userAuthenticationQuery,
+	getUserIdByEmail,
 } = require("../queries/Users.js");
 const { createProfileQuery } = require("../queries/Profiles.js");
 const { createVerificationTokenQuery, readUserTokensQuery } = require("../queries/User_tokens.js");
@@ -25,8 +26,8 @@ const { createInventoryQueryForNewBranch } = require("../queries/Inventories.js"
 
 const { paginateData } = require("../helpers/queryHelper.js");
 
-const { sendRegistrationVerificationEmail } = require("../utils/nodemailer.js");
-const { generateJWToken } = require("../utils/jsonwebtoken.js");
+const { sendRegistrationVerificationEmail, sendResetPasswordVerificationEmail } = require("../utils/nodemailer.js");
+const { generateJWToken, generateResetPasswordJWToken, verifyJWToken } = require("../utils/jsonwebtoken.js");
 const { verifyHashPassword } = require("../utils/bcrypt.js");
 const { Op } = require("sequelize");
 
@@ -74,6 +75,21 @@ module.exports = {
 			}
 		});
 	},
+	startForgotPasswordVerification: async (body) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const User = await getUserIdByEmail(body.email);
+				if (!User) throw "EMAIL_NOT_FOUND";
+				const token = await generateResetPasswordJWToken(User.id);
+
+				await sendResetPasswordVerificationEmail(User, token);
+
+				return resolve("Email has been sent, check your email!");
+			} catch (error) {
+				return reject(await startVerificationErrorHandler(error));
+			}
+		});
+	},
 	startFindAdmins: async (filter, order, page) => {
 		return new Promise(async (resolve, reject) => {
 			try {
@@ -112,7 +128,6 @@ module.exports = {
 
 				return resolve({ message: "Login success!", token });
 			} catch (error) {
-				console.log(error);
 				return reject(await startUserAuthenticationErrorHandler(error));
 			}
 		});
@@ -126,7 +141,6 @@ module.exports = {
 				await transaction.commit();
 				return resolve("Registration success!");
 			} catch (error) {
-				console.log(error);
 				await transaction.rollback();
 				return reject(await startRegistrationErrorHandler(error));
 			}
@@ -157,6 +171,18 @@ module.exports = {
 			} catch (error) {
 				await transaction.rollback();
 				return reject(await startUpdatePasswordErrorHandler(error));
+			}
+		});
+	},
+	startResetPassword: async (body, token) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const verifiedToken = await verifyJWToken("Bearer " + token, process.env.JWT_RESET_PASSWORD_SECRET_KEY);
+				const { id } = verifiedToken;
+				await updatePasswordQuery(id, body.password);
+				return resolve("Reset password success");
+			} catch (error) {
+				return reject(await startVerificationErrorHandler(error));
 			}
 		});
 	},

@@ -24,7 +24,6 @@ module.exports = {
 	categoryRoute,
 	productRoute,
 	adminInventoryRoute,
-	addressRoute,
 	voucherRoute,
 	transactionRoute,
 	rajaOngkirRoute,

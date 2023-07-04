@@ -43,7 +43,7 @@ const readProductsQuery = async (params) => {
 	const order = params?.order ? [...params?.order] : [];
 
 	return await Products.findAndCountAll({
-		where: { ...params?.Products },
+		where: { ...params?.Products, active: true },
 		include: [
 			{
 				model: Inventories,
@@ -64,5 +64,18 @@ const readProductsQuery = async (params) => {
 		order,
 	});
 };
+const readProductsOnlyQuery = async (params) => {
+	const offset = params?.page ? (params?.page - 1) * params?.itemPerPage : null;
+	const limit = params?.itemPerPage ? params?.itemPerPage : null;
+	const order = params?.order ? [...params?.order] : [];
 
-module.exports = { readProductQuery, readProductsQuery };
+	return await Products.findAndCountAll({
+		where: { ...params?.Products },
+		include: Categories,
+		offset,
+		limit,
+		order,
+	});
+};
+
+module.exports = { readProductQuery, readProductsQuery, readProductsOnlyQuery };

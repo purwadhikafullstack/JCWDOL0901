@@ -147,6 +147,8 @@ const postRajaOngkirCostBodySanitizer = async (request, response, next) => {
 	request.payload = payload;
 
 	delete request.body;
+
+	next();
 };
 
 const getProductsSanitizer = async (request, response, next) => {
@@ -155,6 +157,18 @@ const getProductsSanitizer = async (request, response, next) => {
 		order: await getProductQueryOrder(request.query),
 		page: request.query.page,
 		itemPerPage: request.query.itemPerPage,
+	};
+
+	request.query = sanitizedQuery;
+
+	next();
+};
+
+const getAdminTransactionQuerySanitizer = async (request, response, next) => {
+	const sanitizedQuery = {
+		filter: await getAdminTransactionQueryFilter(request.query),
+		order: await getAdminTransactionQueryOrder(request.query),
+		page: request.query.page,
 	};
   
 	request.query = sanitizedQuery;
@@ -168,7 +182,6 @@ const getAdminTransactionQuerySanitizer = async (request, response, next) => {
 		order: await getAdminTransactionQueryOrder(request.query),
 		page: request.query.page,
 	};
-  
 	request.query = sanitizedQuery;
 
 	next();

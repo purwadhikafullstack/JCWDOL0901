@@ -8,23 +8,27 @@ module.exports = {
 			[
 				{
 					transaction_id: 1,
-					image: "uploads/proof/proof.jpg",
+					image: "uploads/payment_proofs/dummy_proof.jpg",
 				},
 				{
 					transaction_id: 2,
-					image: "uploads/proof/proof.jpg",
+					image: "uploads/payment_proofs/dummy_proof.jpg",
+				},
+				{
+					transaction_id: 2,
+					image: "uploads/payment_proofs/dummy_proof.jpg",
 				},
 				{
 					transaction_id: 3,
-					image: "uploads/proof/proof.jpg",
+					image: "uploads/payment_proofs/dummy_proof.jpg",
 				},
 				{
 					transaction_id: 4,
-					image: "uploads/proof/proof.jpg",
+					image: "uploads/payment_proofs/dummy_proof.jpg",
 				},
 				{
 					transaction_id: 5,
-					image: "uploads/proof/proof.jpg",
+					image: "uploads/payment_proofs/dummy_proof.jpg",
 				},
 			],
 			{},

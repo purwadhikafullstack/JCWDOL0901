@@ -19,6 +19,9 @@ const writeLogFile = (error, source) => {
 const startFindErrorHandler = async (error) => {
 	await writeLogFile(error, "startFindErrorHandler");
 
+	if (error === "ERR_UNAUTHORIZED") {
+		return { code: 403, message: "Unauthorized!" };
+	}
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
@@ -73,8 +76,13 @@ const startVerificationErrorHandler = async (error) => {
 
 	if (error === "INVALID_TOKEN") {
 		return { code: 404, message: "Invalid token!" };
+	} else if (error === "EMAIL_NOT_FOUND") {
+		return { code: 404, message: "Email not found!" };
+	} else if (error?.expiredAt < new Date()) {
+		return { code: 403, message: "Token expired" };
+	} else if (error == "JsonWebTokenError: jwt malformed") {
+		return { code: 403, message: "Token not valid" };
 	}
-
 	return {
 		code: 500,
 		message: "Internal Server Error, please contact us!",
@@ -116,8 +124,8 @@ const startUserAuthenticationErrorHandler = async (error) => {
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
-const startCreateHandler = async (error) => {
-	await writeLogFile(error, "startCreateHandler");
+const startCreateErrorHandler = async (error) => {
+	await writeLogFile(error, "startCreateErrorHandler");
 
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
@@ -162,7 +170,7 @@ module.exports = {
 	startFindErrorHandler,
 	forbiddenErrorHandler,
 	startVerificationErrorHandler,
-	startCreateHandler,
+	startCreateErrorHandler,
 	startDeleteteHandler,
 	startUpdateErrorHandler,
 	startUpdatePasswordErrorHandler,
