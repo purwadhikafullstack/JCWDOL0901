@@ -6,7 +6,7 @@ import Pagination from "../Pagination.jsx";
 
 import InventoryTable from "./InventoryTable.jsx";
 
-const StockTableGroup = () => {
+const StockHistoryTableGroup = () => {
 	const [name, setName] = React.useState("");
 	const [filterBy, setFilterBy] = React.useState("");
 	const [filter, setFilter] = React.useState("");
@@ -14,13 +14,15 @@ const StockTableGroup = () => {
 	const [order, setOrder] = React.useState("");
 	const [page, setPage] = React.useState(1);
 	const [maxPage, setMaxPage] = React.useState(1);
+	const [startDate, setStartDate] = React.useState("");
+	const [endDate, setEndDate] = React.useState("");
 
 	React.useEffect(() => {
 		setPage(1);
-	}, [name, filter, order]);
+	}, [name, filter, order, startDate, endDate]);
 
 	return (
-		<div className="flex flex-col justify-start mt-24 px-4 h-full">
+		<div className="flex flex-col justify-start pt-0.5 mt-7 px-4 h-full">
 			<SearchConfiguration
 				setPage={setPage}
 				setName={setName}
@@ -32,6 +34,10 @@ const StockTableGroup = () => {
 				setSort={setSort}
 				order={order}
 				setOrder={setOrder}
+				startDate={startDate}
+				endDate={endDate}
+				setStartDate={setStartDate}
+				setEndDate={setEndDate}
 			/>
 			<InventoryTable
 				name={name}
@@ -41,6 +47,8 @@ const StockTableGroup = () => {
 				order={order}
 				page={page}
 				setMaxPage={setMaxPage}
+				startDate={startDate}
+				endDate={endDate}
 			/>
 			<div className="mx-auto mt-16">
 				<Pagination page={page} setPage={setPage} maxPage={maxPage} />
@@ -49,4 +57,4 @@ const StockTableGroup = () => {
 	);
 };
 
-export default StockTableGroup;
+export default StockHistoryTableGroup;

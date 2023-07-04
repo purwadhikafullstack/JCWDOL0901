@@ -1,14 +1,15 @@
 import React from "react";
 import DropDown from "../../DropDown";
-import { getCategories, getFilterBy } from "../handlers/ProductStockHandler";
+import { getFilterBy, getFilterOfDescription } from "../handlers/ProductStockHandler";
 import DisabledDropDown from "../../DisabledDropDown";
+
 const Filter = ({ filterBy, filter, setFilter }) => {
 	React.useEffect(() => {
 		setFilter("");
 	}, [filterBy?.id]);
 
-	if (filterBy?.id === "category_id") {
-		return <DropDown data={filter} setter={setFilter} getter={getCategories} />;
+	if (filterBy?.id === "description") {
+		return <DropDown data={filter} setter={setFilter} getter={getFilterOfDescription} />;
 	}
 
 	return <DisabledDropDown />;

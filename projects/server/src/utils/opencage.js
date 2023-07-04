@@ -3,7 +3,7 @@ const opencage = require("opencage-api-client");
 const determineSuccessMessage = (data) => {
 	if (data.status.code === 200 && data.results.length > 0) {
 		const place = data.results[0];
-
+    
 		return {
 			status: "OK",
 			type: place.components._type,

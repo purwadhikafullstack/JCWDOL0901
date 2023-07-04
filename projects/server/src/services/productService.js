@@ -60,6 +60,17 @@ module.exports = {
 			}
 		});
 	},
+	startFindRelatedProducts: async (filter) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const relatedProducts = await readProductsQuery(filter);
+
+				return resolve(relatedProducts.rows);
+			} catch (error) {
+				return reject(await startFindErrorHandler(error));
+			}
+		});
+	},
 	startFindProductsOnly: async (filter, order, page, itemPerPage) => {
 		return new Promise(async (resolve, reject) => {
 			try {

@@ -2,11 +2,11 @@ import React from "react";
 import TableBodyContent from "./TableBodyContent.jsx";
 import { generateUrlQuery, getBranchInventories } from "../handlers/ProductStockHandler.js";
 
-const InventoryTableBody = ({ name, filterBy, filter, sort, order, page, setMaxPage }) => {
+const InventoryTableBody = ({ name, filterBy, filter, sort, order, page, setMaxPage, startDate, endDate }) => {
 	const [datas, setDatas] = React.useState([]);
 
 	React.useEffect(() => {
-		const query = generateUrlQuery(name, page, filterBy, filter, sort, order);
+		const query = generateUrlQuery(name, page, filterBy, filter, sort, order, startDate, endDate);
 
 		getBranchInventories(query)
 			.then((result) => {
@@ -14,7 +14,7 @@ const InventoryTableBody = ({ name, filterBy, filter, sort, order, page, setMaxP
 				setMaxPage(Math.ceil(result.data.count / 3));
 			})
 			.catch((error) => alert("Server Unavailable"));
-	}, [filter, order, page, name]);
+	}, [filter, order, page, name, startDate, endDate]);
 
 	return datas && <TableBodyContent datas={datas} />;
 };

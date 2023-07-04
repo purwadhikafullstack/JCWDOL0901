@@ -91,7 +91,10 @@ const readUserTransactionQuery = async (transaction_id) => {
 };
 
 const updateTransactionStatusQuery = async (status_id, transaction_id, transaction) => {
-	return await Transactions.update({ status_id }, { where: { id: transaction_id }, transaction });
+	return await Transactions.update(
+		{ status_id, updated_at: new Date() },
+		{ where: { id: transaction_id }, transaction },
+	);
 };
 
 module.exports = {

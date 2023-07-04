@@ -1,4 +1,4 @@
-const { Op } = require("sequelize");
+const { Op, literal } = require("sequelize");
 const { sequelize } = require("../models/index.js");
 
 const getAdminQueryFilter = async (query) => {
@@ -183,6 +183,48 @@ const getAdminTransactionQueryOrder = async (query) => {
 	return order;
 };
 
+const getMutationByDescription = async (description) => {
+	if (description === "sales") {
+		return "Sales";
+	} else if (description === "other") {
+		return { [Op.ne]: "Sales" };
+	} else if (description === "all") {
+		return { [Op.not]: null };
+	}
+};
+
+// const productsFilter = ["name"];
+const getStockChangesQueryFilter = async (query) => {
+	const filter = await {
+		Stock_changes: {
+			created_at: {
+				[Op.and]: {
+					[Op.gte]: query?.start_after || "1971-01-01",
+					[Op.lte]: query?.end_before || new Date(),
+				},
+			},
+			description: query?.description ? await getMutationByDescription(query.description) : { [Op.not]: null },
+		},
+		Products: {},
+	};
+
+	if (query.name) filter.Products.name = { [Op.like]: "%" + query[key] + "%" };
+
+	return filter;
+};
+
+const stockChangesOrder = ["created_at"];
+const getStockChangesQueryOrder = async (query) => {
+	const order = { Stock_changes: [] };
+	const ascending = query.asc == 1 ? "ASC" : "DESC";
+
+	stockChangesOrder.forEach((key) => {
+		if (query.order === key) order.Stock_changes.push([key, ascending]);
+	});
+
+	return order;
+};
+
 module.exports = {
 	paginateData,
 	getAdminQueryFilter,
@@ -199,4 +241,6 @@ module.exports = {
 	getRelatedProductsFilter,
 	getAdminTransactionQueryFilter,
 	getAdminTransactionQueryOrder,
+	getStockChangesQueryFilter,
+	getStockChangesQueryOrder,
 };

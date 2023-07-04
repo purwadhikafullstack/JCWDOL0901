@@ -1,6 +1,6 @@
 import React from "react";
 import DropDown from "../../DropDown";
-import { getNameOrder, getOrder, getSortBy, getStockOrder } from "../handlers/ProductStockHandler";
+import { getOrderOfDate, getSortBy } from "../handlers/ProductStockHandler";
 import DisabledDropDown from "../../DisabledDropDown";
 
 const Icon = () => {
@@ -16,10 +16,8 @@ const Order = ({ sort, setSort, order, setOrder }) => {
 		setOrder("");
 	}, [sort?.id]);
 
-	if (sort?.id === "name") {
-		return <DropDown data={order} setter={setOrder} getter={getNameOrder} />;
-	} else if (sort?.id === "stock") {
-		return <DropDown data={order} setter={setOrder} getter={getStockOrder} />;
+	if (sort?.id === "created_at") {
+		return <DropDown data={order} setter={setOrder} getter={getOrderOfDate} />;
 	}
 
 	return <DisabledDropDown />;

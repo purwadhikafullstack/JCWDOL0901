@@ -2,19 +2,18 @@ import React from "react";
 import PromoTable from "./PromoTable/PromoTable.jsx";
 import Pagination from "../Pagination.jsx";
 import SearchConfiguration from "./SearchConfiguration.jsx";
-import { orderDefault, sortDefault } from "./handlers/productPromoHandler.js";
 
 const PromoTableGroup = () => {
 	const [name, setName] = React.useState("");
 	const [filter, setFilter] = React.useState("");
-	const [sort, setSort] = React.useState(sortDefault);
-	const [order, setOrder] = React.useState(orderDefault);
+	const [sort, setSort] = React.useState("");
+	const [order, setOrder] = React.useState("");
 	const [page, setPage] = React.useState(1);
 	const [maxPage, setMaxPage] = React.useState(1);
 
 	React.useEffect(() => {
 		setPage(1);
-	}, [name, filter, sort, order]);
+	}, [name, filter, order]);
 
 	return (
 		<div className="flex flex-col justify-start mt-11 px-4 h-full">
