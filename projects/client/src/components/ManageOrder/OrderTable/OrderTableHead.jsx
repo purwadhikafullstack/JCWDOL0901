@@ -7,11 +7,11 @@ const OrderTableHead = ({ superAdmin }) => {
 				<div className="col-span-1 whitespace-nowrap">Order ID</div>
 				{superAdmin && <div className="col-span-2 whitespace-nowrap">Branch</div>}
 				<div className="col-span-2 whitespace-nowrap">Created At</div>
-				<div className="col-span-2 whitespace-nowrap">Proof</div>
+				<div className="col-span-1 whitespace-nowrap">Proof</div>
 				<div className="col-span-2 whitespace-nowrap">Amount</div>
 				<div className="col-span-2 whitespace-nowrap">Status</div>
 				<div className="col-span-1 whitespace-nowrap">Voucher</div>
-				{!superAdmin && <div className="col-span-2 whitespace-nowrap">Action</div>}
+				{!superAdmin && <div className="col-span-3 whitespace-nowrap">Action</div>}
 			</div>
 		</div>
 	);
