@@ -32,7 +32,6 @@ const VerifyPageLayout = ({ isValid }) => {
 	return (
 		<div className="flex flex-col mx-auto h-screen ">
 			<div className="my-auto mx-auto flex flex-col items-center rounded-xl shadow-xl p-10 bg-white w-fit ">
-				<BackButton url="/" color="text-green-500" />
 				<CompanyLogo color={true} className="w-[150px] ml-3 mb-4" />
 				<VerificationMessage isValid={isValid} />
 			</div>
@@ -48,8 +47,8 @@ const VerifyPage = () => {
 	React.useEffect(() => {
 		axios
 			.get(`${process.env.REACT_APP_API_BASE_URL}/auth/user/verify/${token}`)
-			.then(result => setIsValid(true))
-			.catch(error => setIsValid(false))
+			.then((result) => setIsValid(true))
+			.catch((error) => setIsValid(false))
 			.finally(() => setIsBusy(false));
 	}, []);
 

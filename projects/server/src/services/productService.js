@@ -101,6 +101,36 @@ module.exports = {
 			}
 		});
 	},
+	startFindProductsOnly: async (filter, order, page, itemPerPage) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const Products = {};
+				["name", "category_id", "active"].forEach((key) => {
+					if (filter[key]) Products[key] = filter[key];
+				});
+				const ProductList = await readProductsOnlyQuery({
+					Products,
+					order,
+					page,
+					itemPerPage,
+				});
+
+				return resolve(ProductList);
+			} catch (error) {
+				return reject(await startFindErrorHandler(error));
+			}
+		});
+	},
+	startFindRelatedProducts: async (filter) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const relatedProducts = await readProductsQuery(filter);
+				return resolve(relatedProducts);
+			} catch (error) {
+				return reject(await startFindErrorHandler(error));
+			}
+		});
+	},
 	startFindProductDetail: async (inventory_id) => {
 		return new Promise(async (resolve, reject) => {
 			try {

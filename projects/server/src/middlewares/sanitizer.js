@@ -174,7 +174,7 @@ const getAdminTransactionQuerySanitizer = async (request, response, next) => {
 	};
 
 	request.query = sanitizedQuery;
-
+  
 	next();
 };
 
