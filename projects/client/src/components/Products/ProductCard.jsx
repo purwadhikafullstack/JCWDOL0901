@@ -10,7 +10,7 @@ const ProductCard = ({ product }) => {
 		determinePrice(product, setPrice);
 	}, [product]);
 	return (
-		<div key={product.id} className="flex flex-col border rounded-lg pb-4 shadow-xl">
+		<div key={product.id} className="flex flex-col border rounded-lg pb-4 shadow-xl min-h-[330px] sm:min-h-[440px]">
 			<button
 				key={product.id}
 				onClick={() => {
@@ -18,7 +18,7 @@ const ProductCard = ({ product }) => {
 				}}
 				className="group"
 			>
-				{product.Inventories[0].promo ? (
+				{product?.Inventories[0]?.promo?.isActive ? (
 					<div className="flex relative items-center my-auto ml-2">
 						<span className="z-50 absolute top-2 text-sm text-left text-green-100 px-2 py-0.5 rounded ml-2 bg-rose-500 w-fit">
 							{price?.promo?.value}
@@ -36,7 +36,7 @@ const ProductCard = ({ product }) => {
 				<h3 className="mt-4 text-sm font-semibold text-left px-4 truncate" aria-labelledby={product.name}>
 					{product.name}
 				</h3>
-				{product.Inventories[0].promo ? (
+				{product?.Inventories[0]?.promo?.isActive ? (
 					<>
 						<p className="mt-1 text-sm font-bold text-green-400 text-left px-4">
 							{`Rp ${price?.final?.toLocaleString("id")}`}
@@ -55,7 +55,7 @@ const ProductCard = ({ product }) => {
 					</>
 				)}
 			</button>
-			<button className="self-end px-2 py-2 text-base font-medium rounded-md group" onClick={() => {}}>
+			<button className="self-end mt-auto px-2 py-2 text-base font-medium rounded-md group" onClick={() => {}}>
 				<PlusIcon
 					className="text-green-200 mr-4 flex-shrink-0 h-6 w-6 border-2 border-green-200 rounded-lg group-hover:border-green-400 group-hover:text-green-400"
 					aria-hidden="true"

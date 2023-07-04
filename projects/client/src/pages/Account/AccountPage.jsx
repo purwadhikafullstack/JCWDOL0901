@@ -2,6 +2,7 @@ import React from "react";
 import MobileNavBar from "../../components/MobileNavBar";
 import DesktopNavBar from "../../components/DesktopNavBar";
 import AccountMenu from "../../components/AccountMenu/AccountMenu";
+import Profile from "../../components/AccountMenu/Profile";
 
 const AccountPage = () => {
 	return (
@@ -12,6 +13,7 @@ const AccountPage = () => {
 				</div>
 			</div>
 			<div className="flex flex-col sm:px-8">
+				<Profile />
 				<AccountMenu />
 			</div>
 			<MobileNavBar />

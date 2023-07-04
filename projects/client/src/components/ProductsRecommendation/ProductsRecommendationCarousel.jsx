@@ -24,7 +24,7 @@ const ProductsRecommendationCarousel = () => {
 			.then((result) => setProducts(result.data))
 			.catch((error) => setProducts([{ name: "Server Error!", image: "" }]));
 	}, [user]);
-	const itemPerPage = window.innerWidth > 640 ? 4 : 2;
+	const itemPerPage = window.innerWidth > 640 ? 5 : 2;
 	return (
 		products && (
 			<Splide
