@@ -18,7 +18,7 @@ const ResponsiveLogo = () => {
 
 const Header = () => {
 	return (
-		<div className="text-black flex flex-col bg-green-200 sm:bg-white pb-4">
+		<div className="text-black flex flex-col bg-green-200 sm:bg-green-100 pb-4">
 			<ResponsiveLogo />
 			<PageTitle title="Manage Product" color={"text-green-100 sm:text-green-400 z-10"} />
 		</div>
@@ -27,9 +27,9 @@ const Header = () => {
 
 const ManageProduct = () => {
 	return (
-		<div className="flex flex-col ">
+		<div className="flex flex-col mx-auto flex-1 min-h-screen overflow-hidden bg-green-100 z-10">
 			<SideBar>
-				<div className="flex flex-col bg-white ">
+				<div className="flex flex-col">
 					<Header />
 					<ProductList />
 				</div>

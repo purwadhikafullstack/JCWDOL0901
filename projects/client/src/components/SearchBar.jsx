@@ -1,8 +1,8 @@
 import React from "react";
 
-const SearchBar = ({ setFilter }) => {
+const SearchBar = ({ setFilter, className }) => {
 	return (
-		<div className="z-10 relative w-full sm:mx-20">
+		<div className={`z-10 relative w-full sm:mx-20 ${className}`}>
 			<div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
 				<span className="material-symbols-rounded text-gray-200">search</span>
 			</div>

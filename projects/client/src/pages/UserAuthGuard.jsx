@@ -18,10 +18,10 @@ const isUserLogged = async (navigate, dispatch) => {
 				},
 			});
 		}
-		dispatch(setUserLogin({ hasLogged: true }));
+		dispatch(setUserLogin({ hasLogged: true, avatar: userData.data.avatar, username: userData.data.username }));
 		return;
 	} catch (error) {
-		dispatch(setUserLogin({ hasLogged: false }));
+		dispatch(setUserLogin({ hasLogged: false, avatar: "", username: "" }));
 		navigate(`/login`, {
 			state: {
 				authGuard: true,

@@ -17,14 +17,14 @@ const HomeButton = () => {
 	);
 };
 
-const DesktopNavBar = () => {
+const DesktopNavBar = ({ setFilter }) => {
 	const navigate = useNavigate();
 	const user = useSelector((state) => state.user);
 
 	return (
 		<div className="hidden text-green-100 text-xl sm:flex sm:flex-row sm:justify-center sm:w-full sm:mt-2 items-center">
 			<HomeButton />
-			<SearchBar />
+			<SearchBar setFilter={setFilter} />
 			<button onClick={() => navigate("/cart")} className="ml-6 flex">
 				<span className="material-icons-outlined w-full">shopping_cart</span>
 			</button>
@@ -35,15 +35,15 @@ const DesktopNavBar = () => {
 				{user.hasLogged ? (
 					<div className="flex">
 						<img
-							className="h-8 w-8 rounded-full shrink-0"
-							src="/assets/avatars/avatar_1687355687099601141539.png"
-							alt=""
+							className="h-8 w-8 rounded-full shrink-0 object-contain bg-green-100"
+							src={user.avatar}
+							alt="avatar"
 						/>
-						<div className="pl-2 pr-10 text-base flex items-center">Danang</div>
+						<div className="pl-2 pr-10 text-base flex items-center capitalize">{user.username}</div>
 					</div>
 				) : (
 					<div className="flex w-8">
-						<img className="h-8 w-8 rounded-full shrink-0" src="/assets/avatars/default.png" alt="" />
+						<img className="h-8 w-8 rounded-full shrink-0" src="/assets/avatars/default.png" alt="avatar" />
 					</div>
 				)}
 			</button>

@@ -49,8 +49,8 @@ const LogoutButton = () => {
 
 	const logoutHandler = () => {
 		localStorage.removeItem("token");
-		dispatch(setUserLogin({ hasLogged: false }));
-		navigate("/login");
+		dispatch(setUserLogin({ hasLogged: false, avatar: "", username: "" }));
+		navigate("/");
 	};
 
 	return (

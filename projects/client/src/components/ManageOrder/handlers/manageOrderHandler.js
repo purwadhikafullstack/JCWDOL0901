@@ -1,5 +1,4 @@
 import axios from "axios";
-import Swal from "sweetalert2";
 
 export const getFilterBy = () => {
 	return new Promise((resolve, reject) => {
