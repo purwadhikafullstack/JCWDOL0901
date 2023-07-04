@@ -13,7 +13,10 @@ const {
 	getProductsRecommendationFilter,
 	getAdminTransactionQueryFilter,
 	getAdminTransactionQueryOrder,
+	getStockChangesQueryFilter,
+	getStockChangesQueryOrder,
 } = require("../helpers/queryHelper");
+
 const { getTransactionPayload, getTransactionDetailPayload } = require("../helpers/bodyHelper");
 
 const getAdminsQuerySanitizer = async (request, response, next) => {
@@ -175,6 +178,18 @@ const getAdminTransactionQuerySanitizer = async (request, response, next) => {
 	next();
 };
 
+const getStockChangesQuerySanitizer = async (request, response, next) => {
+	const sanitizedQuery = {
+		filter: await getStockChangesQueryFilter(request.query),
+		order: await getStockChangesQueryOrder(request.query),
+		page: request.query.page,
+	};
+
+	request.query = sanitizedQuery;
+
+	next();
+};
+
 module.exports = {
 	getInventoriesQuerySanitizer,
 	getAdminsQuerySanitizer,
@@ -191,4 +206,5 @@ module.exports = {
 	getRelatedProductsQuerySanitizer,
 	getProductsRecommendationQuerySanitizer,
 	getAdminTransactionQuerySanitizer,
+	getStockChangesQuerySanitizer,
 };
