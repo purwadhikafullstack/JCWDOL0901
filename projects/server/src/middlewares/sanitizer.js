@@ -158,9 +158,8 @@ const getProductsSanitizer = async (request, response, next) => {
 		page: request.query.page,
 		itemPerPage: request.query.itemPerPage,
 	};
-  
-	request.query = sanitizedQuery;
 
+	request.query = sanitizedQuery;
 	next();
 };
 
@@ -170,9 +169,9 @@ const getAdminTransactionQuerySanitizer = async (request, response, next) => {
 		order: await getAdminTransactionQueryOrder(request.query),
 		page: request.query.page,
 	};
-  
-	request.query = sanitizedQuery;
 
+	request.query = sanitizedQuery;
+  
 	next();
 };
 

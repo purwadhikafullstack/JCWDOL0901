@@ -59,7 +59,7 @@ const ProductPage = () => {
 			<ProductsHeader setFilter={setFilter} order={order} setOrder={setOrder} sort={sort} setSort={setSort} />
 			<LocationMessage user={user} />
 			<div className="flex flex-col sm:px-8 pb-6">
-				<CategoryCarousel />
+				<CategoryCarousel setPage={setPage} />
 				<ProductCards
 					page={page}
 					setMaxPage={setMaxPage}

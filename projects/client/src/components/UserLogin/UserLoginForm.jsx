@@ -2,6 +2,38 @@ import React from "react";
 import ErrorWarning from "../ErrorWarning";
 import UserLoginFormWithValidator from "./UserLoginFormWithValidator";
 import CompanyLogo from "../CompanyLogo";
+import { useNavigate } from "react-router-dom";
+
+const ForgotPassword = () => {
+	const navigate = useNavigate();
+	return (
+		<div className="w-full">
+			<button
+				className="my-10 py-2 w-48 border border-2 border-green-200 rounded-lg text-green-300"
+				onClick={() => {
+					navigate("/password/forgot");
+				}}
+			>
+				Forgot Password?
+			</button>
+		</div>
+	);
+};
+
+const SignUpLink = () => {
+	const navigate = useNavigate();
+	return (
+		<div>
+			Don't have an account?{" "}
+			<span
+				className="text-green-400 hover:underline cursor-pointer font-semibold"
+				onClick={() => navigate("/register")}
+			>
+				Sign up
+			</span>
+		</div>
+	);
+};
 
 function UserLoginForm() {
 	const [error, setError] = React.useState("");
@@ -11,6 +43,8 @@ function UserLoginForm() {
 			<CompanyLogo color={true} className="w-[100px] hidden sm:block sm:mb-4" />
 			<ErrorWarning error={error} />
 			<UserLoginFormWithValidator setError={setError} />
+			<ForgotPassword />
+			<SignUpLink />
 		</div>
 	);
 }
