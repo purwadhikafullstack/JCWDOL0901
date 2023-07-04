@@ -19,7 +19,7 @@ const OrderTableGroup = () => {
 	}, [name, filter, order, startDate, endDate]);
 
 	return (
-		<div className="flex flex-col justify-start overflow-x-auto mt-3.5 pt-4 px-4">
+		<div className="mt-3.5 pt-4 px-4">
 			<SearchConfiguration
 				startDate={startDate}
 				setStartDate={setStartDate}
@@ -37,19 +37,21 @@ const OrderTableGroup = () => {
 				setOrder={setOrder}
 				setPage={setPage}
 			/>
-			<OrderTable
-				name={name}
-				startDate={startDate}
-				endDate={endDate}
-				filterBy={filterBy}
-				filter={filter}
-				sort={sort}
-				order={order}
-				page={page}
-				setMaxPage={setMaxPage}
-			/>
-			<div className="mx-auto my-12">
-				<Pagination page={page} setPage={setPage} maxPage={maxPage} />
+			<div className="flex flex-col justify-start overflow-x-auto ">
+				<OrderTable
+					name={name}
+					startDate={startDate}
+					endDate={endDate}
+					filterBy={filterBy}
+					filter={filter}
+					sort={sort}
+					order={order}
+					page={page}
+					setMaxPage={setMaxPage}
+				/>
+				<div className="mx-auto my-12">
+					<Pagination page={page} setPage={setPage} maxPage={maxPage} />
+				</div>
 			</div>
 		</div>
 	);
