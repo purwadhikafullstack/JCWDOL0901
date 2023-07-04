@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import DropDown from "../DropDown";
-import { getOrderByName, getOrderByPrice, getProductsSortBy } from "./handlers/productsHandler";
+import { getOrderByName, getOrderByPrice, getProductsSortBy } from "./handlers/ProductsHandler";
 
 const SearchSort = ({ sort, setSort, order, setOrder }) => {
 	const didMount = useRef(false);

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { PlusIcon } from "@heroicons/react/outline";
 import { useEffect, useState } from "react";
-import { determinePrice } from "./handlers/productsHandler";
+import { determinePrice } from "./handlers/ProductsHandler";
 
 const ProductCard = ({ product }) => {
 	const navigate = useNavigate();

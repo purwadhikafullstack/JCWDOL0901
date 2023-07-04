@@ -4,7 +4,7 @@ import {
 	getProductsFilterByCategory,
 	getProductsFilterByStatus,
 	getProductsFilterBy,
-} from "./handlers/productsHandler";
+} from "./handlers/ProductsHandler";
 
 const SearchFilter = ({ setFilterBy, setFilter, filterBy, filter }) => {
 	const didMount = useRef(false);

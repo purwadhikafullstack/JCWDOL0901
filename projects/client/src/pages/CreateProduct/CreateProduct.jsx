@@ -1,8 +1,8 @@
 import React from "react";
 import BackButton from "../../components/BackButton.jsx";
-import CategoryIllustration from "../../components/Category/CategoryIllustration.jsx";
-import CreateCategoryForm from "../../components/Category/CreateCategoryForm.jsx";
 import CompanyLogo from "../../components/CompanyLogo.jsx";
+import ProductIllustration from "../../components/Products/ProductIllustration.jsx";
+import CreateProductForm from "../../components/Products/CreateProductForm.jsx";
 
 const Illustration = () => {
 	return (
@@ -10,7 +10,7 @@ const Illustration = () => {
 			<div className="mb-10 text-green-100 text-2xl sm:text-3xl font-medium text-left sm:text-center pr-4">
 				Create Product
 			</div>
-			<CategoryIllustration className="w-[160px] sm:w-[350px] pb-12 mx-auto" />
+			<ProductIllustration className="w-[160px] sm:w-[350px] pb-12 mx-auto" />
 		</div>
 	);
 };
@@ -27,7 +27,7 @@ const CreateProduct = () => {
 					<div className="flex justify-center py-4">
 						<CompanyLogo color="true" className="mt-8 w-[75px] cursor-pointer hidden sm:block" />
 					</div>
-					<CreateCategoryForm />
+					<CreateProductForm />
 				</div>
 			</div>
 		</div>

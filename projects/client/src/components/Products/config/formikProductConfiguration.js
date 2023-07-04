@@ -1,6 +1,6 @@
 import * as Yup from "yup";
 
-import { createProductHandler } from "../handlers/manageProductHandler";
+import { createProductHandler } from "../handlers/manageProductsHandler";
 
 const initialValues = {
 	name: "",
