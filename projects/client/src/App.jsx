@@ -19,11 +19,6 @@ import UpdateCategoryPage from "./pages/UpdateCategory/UpdateCategoryPage";
 import AdminAuthGuard from "./pages/AdminAuthGuard";
 import ChangePasswordPage from "./pages/ChangePassword/ChangePasswordPage";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
-<<<<<<< HEAD
-import CheckoutPage from "./pages/Checkout/CheckoutPage";
-import SwitchAddress from "./components/Checkout/SwitchAddress";
-import SwitchVoucher from "./components/Checkout/SwitchVoucher";
-=======
 import ManageOrder from "./pages/ManageOrder/ManageOrder";
 import AccountPage from "./pages/Account/AccountPage";
 import ManageAddress from "./pages/ManageAddress/ManageAddress";
@@ -41,7 +36,6 @@ import CreateProduct from "./pages/CreateProduct/CreateProduct";
 import UpdateProduct from "./pages/UpdateProduct/UpdateProduct";
 import ResetPassword from "./pages/ResetPassword/ResetPassword";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
->>>>>>> development
 
 function App() {
 	return (
