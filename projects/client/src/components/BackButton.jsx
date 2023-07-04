@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const BackButton = ({ url, color, className }) => {
+const BackButton = ({ url, color, className, replace }) => {
 	const navigate = useNavigate();
 	return (
 		<div className={`flex flex-row pl-5 py-5 z-20 ${className}`}>

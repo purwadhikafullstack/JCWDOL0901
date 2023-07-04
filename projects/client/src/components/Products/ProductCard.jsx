@@ -10,10 +10,12 @@ const ProductCard = ({ product }) => {
 		determinePrice(product, setPrice);
 	}, [product]);
 	return (
-		<div key={product.name} className="flex flex-col border rounded-lg pb-4">
+		<div key={product.id} className="flex flex-col border rounded-lg pb-4 shadow-xl">
 			<button
 				key={product.id}
-				onClick={() => navigate("/product/detail/" + product.Inventories[0].id)}
+				onClick={() => {
+					navigate("/product/detail/" + product?.Inventories[0]?.id);
+				}}
 				className="group"
 			>
 				{product.Inventories[0].promo ? (
@@ -37,17 +39,17 @@ const ProductCard = ({ product }) => {
 				{product.Inventories[0].promo ? (
 					<>
 						<p className="mt-1 text-sm font-bold text-green-400 text-left px-4">
-							{`Rp ${price.final.toLocaleString("id")}`}
+							{`Rp ${price?.final?.toLocaleString("id")}`}
 							<span className="text-xs font-light text-gray-300">{` / ${product.unit}`}</span>
 						</p>
-						<p className="mt-1 text-sm font-medium text-gray-200 text-left px-4 line-through">{`Rp ${price.original.toLocaleString(
+						<p className="mt-1 text-sm font-medium text-gray-200 text-left px-4 line-through">{`Rp ${price?.original?.toLocaleString(
 							"id",
 						)}`}</p>
 					</>
 				) : (
 					<>
 						<p className="mt-1 text-sm font-bold text-green-400 text-left px-4">
-							{`Rp ${price.final.toLocaleString("id")}`}
+							{`Rp ${price?.final?.toLocaleString("id")}`}
 							<span className="text-xs font-light text-gray-300">{` / ${product.unit}`}</span>
 						</p>
 					</>
