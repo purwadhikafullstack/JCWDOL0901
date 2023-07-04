@@ -70,7 +70,6 @@ module.exports = {
 					updated_at: "2023-06-10 11:13:00",
 					voucher_discount: 0,
 					status_id: 1,
-<<<<<<< HEAD
 					address: "Jl. Empu Tantular No.1, Semarang Tengah, 50137",
 				},
 				{
@@ -82,8 +81,6 @@ module.exports = {
 					updated_at: "2023-06-11 11:13:00",
 					voucher_discount: 0,
 					status_id: 1,
-=======
->>>>>>> development
 					address: "Jl. Empu Tantular No.1, Semarang Tengah, 50137",
 				},
 				{

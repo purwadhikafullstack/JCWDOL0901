@@ -112,8 +112,6 @@ export const generateUrlQuery = (name, startDate, endDate, filterBy, filter, sor
 	url += order.id ? `&order=${sort.id}` : "";
 	url += order.id ? `&asc=${order.id}` : "";
 
-	console.log(url);
-
 	return url;
 };
 
