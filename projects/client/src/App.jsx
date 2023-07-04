@@ -65,10 +65,6 @@ function App() {
 
 				<Route path="/order/upload/" element={<UploadProof />} />
 
-				<Route path="/order/upload/" element={<UploadProof />} />
-
-				<Route path="/order/upload/" element={<UploadProof />} />
-
 				{/* //Admin Auth Page */}
 				<Route path="/admin/order" element={<AdminAuthGuard component={<ManageOrder />} />} />
 				<Route path="/admin/promo" element={<AdminAuthGuard component={<ProductPromotion />} />} />
