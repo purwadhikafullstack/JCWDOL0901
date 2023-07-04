@@ -187,6 +187,18 @@ const getAdminTransactionQuerySanitizer = async (request, response, next) => {
 	next();
 };
 
+const getAdminTransactionQuerySanitizer = async (request, response, next) => {
+	const sanitizedQuery = {
+		filter: await getAdminTransactionQueryFilter(request.query),
+		order: await getAdminTransactionQueryOrder(request.query),
+		page: request.query.page,
+	};
+
+	request.query = sanitizedQuery;
+
+	next();
+};
+
 module.exports = {
 	getInventoriesQuerySanitizer,
 	getAdminsQuerySanitizer,

@@ -84,17 +84,6 @@ module.exports = {
 					address: "Jl. Empu Tantular No.1, Semarang Tengah, 50137",
 				},
 				{
-					user_id: 1,
-					branch_id: 2,
-					voucher_id: null,
-					amount: 138000,
-					created_at: "2023-06-11 11:13:06",
-					updated_at: "2023-06-11 11:13:00",
-					voucher_discount: 0,
-					status_id: 1,
-					address: "Jl. Empu Tantular No.1, Semarang Tengah, 50137",
-				},
-				{
 					user_id: 4,
 					branch_id: 3,
 					voucher_id: null,
