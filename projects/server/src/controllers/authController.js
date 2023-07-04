@@ -6,7 +6,8 @@ const {
 	startAdminLoginAuthentication,
 	startUserLoginAuthentication,
 	startUpdatePassword,
-	startConfirmPassword,
+	startForgotPasswordVerification,
+	startResetPassword,
 } = require("../services/authService");
 const { verifyJWToken } = require("../utils/jsonwebtoken");
 
@@ -92,8 +93,18 @@ const updatePassword = async (request, response) => {
 		});
 };
 
-const confirmPassword = async (request, response) => {
-	await startConfirmPassword(request.body, request.userData.id)
+const forgotPassword = async (request, response) => {
+	await startForgotPasswordVerification(request.body)
+		.then((result) => {
+			response.status(200).send(result);
+		})
+		.catch((error) => {
+			response.status(error.code).send(error.message);
+		});
+};
+
+const resetPassword = async (request, response) => {
+	await startResetPassword(request.body, request.params.token)
 		.then((result) => {
 			response.status(200).send(result);
 		})
@@ -111,5 +122,6 @@ module.exports = {
 	loginUser,
 	isSuper,
 	updatePassword,
-	confirmPassword,
+	forgotPassword,
+	resetPassword,
 };

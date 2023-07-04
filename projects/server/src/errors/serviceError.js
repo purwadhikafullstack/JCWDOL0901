@@ -89,8 +89,13 @@ const startVerificationErrorHandler = async (error) => {
 
 	if (error === "INVALID_TOKEN") {
 		return { code: 404, message: "Invalid token!" };
+	} else if (error === "EMAIL_NOT_FOUND") {
+		return { code: 404, message: "Email not found!" };
+	} else if (error?.expiredAt < new Date()) {
+		return { code: 403, message: "Token expired" };
+	} else if (error == "JsonWebTokenError: jwt malformed") {
+		return { code: 403, message: "Token not valid" };
 	}
-
 	return {
 		code: 500,
 		message: "Internal Server Error, please contact us!",
@@ -147,6 +152,9 @@ const startDeleteteHandler = async (error) => {
 };
 const startUpdateErrorHandler = async (error) => {
 	await writeLogFile(error, "startUpdateErrorHandler");
+	if (error === "ERR_UNAUTHORIZED") {
+		return { code: 403, message: "Unauthorized!" };
+	}
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 

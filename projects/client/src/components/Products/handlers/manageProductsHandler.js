@@ -32,13 +32,13 @@ const manageProductErrorHandler = async (error) => {
 	return "Something went wrong!";
 };
 
-export const deleteCategoryHandler = async (id, navigate) => {
+export const deleteProductHandler = async (id, navigate) => {
 	try {
 		const token = localStorage.getItem("token");
 		const config = {
 			headers: { Authorization: `Bearer ${token}` },
 		};
-		await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/category/${id}/delete`, config);
+		await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/product/${id}/delete`, config);
 
 		Swal.fire({
 			icon: "success",

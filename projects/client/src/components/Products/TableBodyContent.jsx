@@ -1,9 +1,10 @@
-import { TrashIcon } from "@heroicons/react/outline";
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React from "react";
+import { editProduct, showDeleteAlert, deleteProductHandler } from "./handlers/manageProductsHandler";
 import { useNavigate } from "react-router-dom";
+import { TrashIcon } from "@heroicons/react/outline";
 import DeleteAlert from "../DeleteAlert";
-import { deleteProductHandler } from "./handlers/manageProductHandler";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const TableBodyContent = ({ datas, page, itemPerPage }) => {
 	const navigate = useNavigate();
@@ -16,9 +17,9 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 		<>
 			{alert ? (
 				<DeleteAlert
-					title={`Delete Product "${categoryName}"`}
-					desc="Are you sure you want to delete this product? This product will be inactivated."
-					buttonName="Delete Product"
+					title={`Delete Category "${categoryName}"`}
+					desc="Are you sure you want to delete this category? You can only delete this category if there are no products under this category. This category will be permanently removed from the server forever. This action cannot be undone."
+					buttonName="Delete Category"
 					open={open}
 					setOpen={setOpen}
 					categoryId={categoryId}
@@ -36,16 +37,28 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 								</div>
 							</td>
 							<td className={tdClassName}>{item.name}</td>
+							<td className={tdClassName}>{item.unit}</td>
+							<td className={tdClassName}>{item.weight} gram</td>
+							<td className={tdClassName}>Rp{item.price.toLocaleString("id")}</td>
+							<td className={tdClassName}>{item.description}</td>
+							<td className={tdClassName}>{item.Category.name}</td>
+							<td className={tdClassName}>
+								{item.active ? (
+									<div className="bg-green-200/90 text-gray-100 rounded-md py-1 px-1">Active</div>
+								) : (
+									<div className="bg-red/90 text-gray-100 rounded-md py-1 px-1">Not Active</div>
+								)}
+							</td>
 							<td className={tdClassName}>
 								<div className="flex justify-center gap-2">
 									<button
 										className="bg-green-400 text-white px-4 py-2 rounded-lg disabled:bg-gray-300"
-										onClick={() => editCategory(item, navigate)}
+										onClick={() => editProduct(item, navigate)}
 										disabled={!admin.superAdmin}
 									>
 										Edit
 									</button>
-									<div>{alert}</div>
+									{/* <div>{alert}</div> */}
 									<button
 										className="bg-red text-white px-2 py-2 rounded-lg flex justify-center disabled:bg-gray-300"
 										onClick={() => showDeleteAlert(item, setOpen, setCategoryId, setCategoryName)}

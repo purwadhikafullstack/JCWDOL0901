@@ -1,6 +1,7 @@
 import React from "react";
 import { getBorderColor } from "../handlers/manageOrderHandler";
 import { saveAs } from "file-saver";
+import { cancelUserOrder, confirmUserOrder, rejectUserOrder, sendUserOrder } from "../handlers/buttonHandler";
 
 const BranchName = ({ item }) => {
 	return (
@@ -21,7 +22,7 @@ const CreatedAt = ({ item }) => {
 
 const Proof = ({ item }) => {
 	return item.Proof ? (
-		<div className="col-span-2 my-auto underline font-semibold cursor-pointer">
+		<div className="col-span-1 my-auto underline font-semibold cursor-pointer">
 			<span
 				onClick={() =>
 					saveAs(process.env.REACT_APP_IMAGE_BASE_URL + item.Proof.image, `proof_transaction_${item.id}.jpg`)
@@ -31,7 +32,7 @@ const Proof = ({ item }) => {
 			</span>
 		</div>
 	) : (
-		<div className="col-span-2 my-auto font-bold text-red cursor-">Awaiting...</div>
+		<div className="col-span-1 my-auto font-bold text-red cursor-">Awaiting...</div>
 	);
 };
 
@@ -65,19 +66,63 @@ const Voucher = ({ item }) => {
 	);
 };
 
-const Action = ({ item }) => {
-	if (item.status_id === 2 || item.status_id === 3) {
+const Action = ({ item, setIsUpdated }) => {
+	if (item.status_id === 1) {
 		return (
-			<div className="col-span-2 my-auto">
-				<button className="bg-green-300 text-green-100 px-2 py-1 rounded-lg mr-2">Update</button>
-				<button className="bg-red text-green-100 px-2 py-1 rounded-lg mr-2">Decline</button>
+			<div className="col-span-3 my-auto">
+				<button
+					className="bg-red text-green-100 px-2 py-1 rounded-lg mr-2 w-20"
+					onClick={() => cancelUserOrder(item.id, setIsUpdated)}
+				>
+					Cancel
+				</button>
+			</div>
+		);
+	} else if (item.status_id === 2) {
+		return (
+			<div className="col-span-3 my-auto">
+				<button
+					className="bg-green-300 text-green-100 px-2 py-1 rounded-lg mr-2 w-20"
+					onClick={() => confirmUserOrder(item.id, setIsUpdated)}
+				>
+					Confirm
+				</button>
+				<button
+					className="bg-orange text-green-100 px-2 py-1 rounded-lg mr-2 w-20"
+					onClick={() => rejectUserOrder(item.id, setIsUpdated)}
+				>
+					Reject
+				</button>
+				<button
+					className="bg-red text-green-100 px-2 py-1 rounded-lg mr-2 w-20"
+					onClick={() => cancelUserOrder(item.id, setIsUpdated)}
+				>
+					Cancel
+				</button>
+			</div>
+		);
+	} else if (item.status_id === 3) {
+		return (
+			<div className="col-span-3 my-auto">
+				<button
+					className="bg-green-300 text-green-100 px-2 py-1 rounded-lg mr-2 w-20"
+					onClick={() => sendUserOrder(item.id, setIsUpdated)}
+				>
+					Send
+				</button>
+				<button
+					className="bg-red text-green-100 px-2 py-1 rounded-lg mr-2 w-20"
+					onClick={() => cancelUserOrder(item.id, setIsUpdated)}
+				>
+					Cancel
+				</button>
 			</div>
 		);
 	}
 	return <></>;
 };
 
-const OrderBodyContent = ({ superAdmin, data }) => {
+const OrderBodyContent = ({ superAdmin, data, setIsUpdated }) => {
 	return data.map((item, index) => {
 		return (
 			<div className="rounded-lg border border-green-300 border-2 mt-4">
@@ -89,7 +134,7 @@ const OrderBodyContent = ({ superAdmin, data }) => {
 					<Amount item={item} />
 					<Status item={item} />
 					<Voucher item={item} />
-					{!superAdmin && <Action item={item} />}
+					{!superAdmin && <Action item={item} setIsUpdated={setIsUpdated} />}
 				</div>
 			</div>
 		);

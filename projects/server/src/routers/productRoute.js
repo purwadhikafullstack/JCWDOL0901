@@ -5,6 +5,7 @@ const {
 	getRelatedProducts,
 	getProductDetail,
 	getProducts,
+	getProductsOnly,
 } = require("../controllers/productController.js");
 const { isAdmin } = require("../middlewares/authMiddleware.js");
 const { uploadCategoryFile } = require("../middlewares/multer.js");
@@ -21,6 +22,7 @@ router.get("/list", getProductsSanitizer, getProducts);
 router.post("/create", isAdmin, uploadCategoryFile)
 router.patch("/:productId/update", isAdmin, uploadCategoryFile)
 router.delete("/:productId/delete", isAdmin)
+router.get("/only", getProductsSanitizer, getProductsOnly);
 
 router.get("/:inventory_id", getProductDetail);
 

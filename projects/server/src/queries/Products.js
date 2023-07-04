@@ -43,7 +43,7 @@ const readProductsQuery = async (params) => {
 	const order = params?.order ? [...params?.order] : [];
 
 	return await Products.findAndCountAll({
-		where: { ...params?.Products },
+		where: { ...params?.Products, active: true },
 		include: [
 			{
 				model: Inventories,
@@ -64,6 +64,11 @@ const readProductsQuery = async (params) => {
 		order,
 	});
 };
+const readProductsOnlyQuery = async (params) => {
+	const offset = params?.page ? (params?.page - 1) * params?.itemPerPage : null;
+	const limit = params?.itemPerPage ? params?.itemPerPage : null;
+	const order = params?.order ? [...params?.order] : [];
+};
 
 const createProductQuery = async (body, file) => {
 	const { name, price, description, weight, unit, category_id } = body;
@@ -83,4 +88,11 @@ const deleteProductQuery = async (params) => {
 	return await Products.destroy({ where: { id } });
 };
 
-module.exports = { readProductQuery, readProductsQuery, createProductQuery, updateProductQuery, deleteProductQuery };
+module.exports = {
+	readProductQuery,
+	readProductsQuery,
+	readProductsOnlyQuery,
+	createProductQuery,
+	updateProductQuery,
+	deleteProductQuery,
+};

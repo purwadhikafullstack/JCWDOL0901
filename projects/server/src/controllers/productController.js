@@ -6,6 +6,7 @@ const {
 	startCreateProduct,
 	startUpdateProduct,
 	startDeleteProduct,
+	startFindProductsOnly,
 } = require("../services/productService.js");
 
 const getProductsRecommendation = async (request, response) => {
@@ -71,11 +72,24 @@ const deleteProduct = async (request, response) => {
 		.catch((error) => response.status(error.code).send(error.message));
 };
 
+const getProductsOnly = async (request, response) => {
+	const { filter, order, page, itemPerPage } = request.query;
+
+	await startFindProductsOnly(filter, order, page, Number(itemPerPage))
+		.then((result) => {
+			response.status(200).send(result);
+		})
+		.catch((error) => {
+			response.status(error.code).send(error.message);
+		});
+};
+
 module.exports = {
 	getProductsRecommendation,
 	getRelatedProducts,
 	getProductDetail,
 	getProducts,
+	getProductsOnly,
 	createProduct,
 	updateProduct,
 	deleteProduct,

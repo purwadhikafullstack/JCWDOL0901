@@ -1,7 +1,7 @@
-import CompanyLogo from "../../components/CompanyLogo";
-import PageTitle from "../../components/PageTitle";
-import ProductList from "../../components/Products/ProductList";
 import SideBar from "../../components/SideBar/SideBar";
+import ProductList from "../../components/Products/ProductList.jsx";
+import PageTitle from "../../components/PageTitle";
+import CompanyLogo from "../../components/CompanyLogo.jsx";
 
 const ResponsiveLogo = () => {
 	return (
@@ -20,16 +20,16 @@ const Header = () => {
 	return (
 		<div className="text-black flex flex-col bg-green-200 sm:bg-white pb-4">
 			<ResponsiveLogo />
-			<PageTitle title="Manage Category" color={"text-green-100 sm:text-green-400 z-10"} />
+			<PageTitle title="Manage Product" color={"text-green-100 sm:text-green-400 z-10"} />
 		</div>
 	);
 };
 
 const ManageProduct = () => {
 	return (
-		<div className="flex flex-col">
+		<div className="flex flex-col ">
 			<SideBar>
-				<div className="flex flex-col bg-white">
+				<div className="flex flex-col bg-white ">
 					<Header />
 					<ProductList />
 				</div>
