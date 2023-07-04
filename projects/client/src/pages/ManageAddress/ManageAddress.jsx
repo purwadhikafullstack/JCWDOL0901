@@ -8,10 +8,10 @@ const ResponsiveLogo = () => {
 	return (
 		<>
 			<div className="block sm:hidden z-40">
-				<CompanyLogo color={false} className="w-[40px] mx-auto mb-2 z-40" />
+				<CompanyLogo color={false} className="w-[50px] mx-auto mb-2 z-40" />
 			</div>
 			<div className="hidden sm:block">
-				<CompanyLogo color={true} className="w-[40px] mx-auto mb-2 z-40" />
+				<CompanyLogo color={true} className="w-[70px] mx-auto mb-2 z-40" />
 			</div>
 		</>
 	);
@@ -26,7 +26,7 @@ const Header = () => {
 				color="sm:text-gray-400 text-green-100 text-3xl sm:hover:text-green-300 hover:text-gray-200"
 			/>
 			<ResponsiveLogo />
-			<PageTitle title="Manage Address" color={"text-green-100 sm:text-green-400 z-10"} />
+			<PageTitle title="Manage Address" className={"text-green-100 sm:text-green-400 z-10"} />
 		</div>
 	);
 };

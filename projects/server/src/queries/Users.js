@@ -1,4 +1,4 @@
-const { Users, sequelize } = require("../models/index.js");
+const { Users, Profiles, sequelize } = require("../models/index.js");
 const { Op } = require("sequelize");
 const { generateReferralCode } = require("../helpers/referralCodeHelper.js");
 const { generateJWToken } = require("../utils/jsonwebtoken.js");
@@ -23,7 +23,7 @@ const userAuthenticationQuery = async (body, Name) => {
 			[Op.or]: [{ username: body.user }, { email: body.user }],
 		},
 	});
-	console.log(data);
+
 	return data;
 };
 
@@ -35,10 +35,15 @@ const updatePasswordQuery = async (id, password, transaction) => {
 	return await Users.update({ password }, { where: { id }, transaction });
 };
 
+const getUserIdByEmail = async (email) => {
+	return await Users.findOne({ where: { email } });
+};
+
 module.exports = {
 	createUserQuery,
 	updateUserQuery,
 	getOldPasswordQuery,
 	updatePasswordQuery,
 	userAuthenticationQuery,
+	getUserIdByEmail,
 };
