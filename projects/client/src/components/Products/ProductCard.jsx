@@ -2,8 +2,10 @@ import { useNavigate } from "react-router-dom";
 import { PlusIcon } from "@heroicons/react/outline";
 import { useEffect, useState } from "react";
 import { determinePrice } from "./handlers/productsHandler";
+import { useSelector } from "react-redux";
 
 const ProductCard = ({ product }) => {
+	const user = useSelector((state) => state.user);
 	const navigate = useNavigate();
 	const [price, setPrice] = useState({ original: 0, final: 0, promo: false });
 	useEffect(() => {
@@ -55,9 +57,13 @@ const ProductCard = ({ product }) => {
 					</>
 				)}
 			</button>
-			<button className="self-end mt-auto px-2 py-2 text-base font-medium rounded-md group" onClick={() => {}}>
+			<button
+				className="self-end mt-auto px-2 py-2 text-base font-medium rounded-md group"
+				onClick={() => {}}
+				disabled={!user?.hasLogged}
+			>
 				<PlusIcon
-					className="text-green-200 mr-4 flex-shrink-0 h-6 w-6 border-2 border-green-200 rounded-lg group-hover:border-green-400 group-hover:text-green-400"
+					className="text-green-200 mr-4 flex-shrink-0 h-6 w-6 border-2 border-green-200 rounded-lg group-hover:border-green-400 group-hover:text-green-400 group-disabled:text-gray-200 group-disabled:border-gray-200"
 					aria-hidden="true"
 				/>
 			</button>
