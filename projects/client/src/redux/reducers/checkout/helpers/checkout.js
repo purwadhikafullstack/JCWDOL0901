@@ -9,8 +9,16 @@ const getPromoPrice = (price, promo) => {
 	}
 };
 
+<<<<<<< HEAD
 export const determineBranchId = (payload) => {
 	return payload[0]?.Inventory?.Branch?.id || null;
+=======
+export const determineBranch = (payload) => {
+	return {
+		branch_id: payload[0]?.Inventory?.Branch?.id || null,
+		city_id: payload[0]?.Inventory?.Branch?.City?.id,
+	};
+>>>>>>> development
 };
 
 const accumulateItem = (item, summary) => {
@@ -18,6 +26,11 @@ const accumulateItem = (item, summary) => {
 	const price = item.Inventory.Product.price;
 	const promo = item.Inventory.promo;
 
+<<<<<<< HEAD
+=======
+	summary.weight += quantity * item.Inventory.Product.weight;
+
+>>>>>>> development
 	if (!promo || promo.Promotion.id === 4) {
 		summary.subtotal += quantity * price;
 		summary.raw.subtotal = summary.subtotal;
@@ -30,6 +43,10 @@ const accumulateItem = (item, summary) => {
 export const initializeSummary = (cart) => {
 	const summary = {
 		hasLoaded: true,
+<<<<<<< HEAD
+=======
+		weight: 0,
+>>>>>>> development
 		subtotal: 0,
 		logistic: 0,
 		discount: 0,
@@ -57,12 +74,51 @@ export const resetSummary = (summaryState) => {
 	};
 };
 
+<<<<<<< HEAD
+=======
+const handleNominalDiscount = (summary, raw_discount) => {
+	let subtotal = summary.raw.subtotal - raw_discount;
+	if (subtotal < 0) subtotal = 0;
+
+	return {
+		...summary,
+		subtotal,
+		logistic: summary.raw.logistic,
+		discount: raw_discount,
+		total: subtotal + summary.raw.logistic,
+	};
+};
+
+const handlePercentageDiscount = (summary, raw_discount, voucher) => {
+	const max_discount = voucher?.Voucher?.max_discount;
+	let discount = (raw_discount / 100) * summary.raw.subtotal;
+	if (discount > max_discount) discount = max_discount;
+
+	const subtotal = summary.raw.subtotal - discount;
+
+	return {
+		...summary,
+		subtotal,
+		logistic: summary.raw.logistic,
+		discount,
+		total: subtotal + summary.raw.logistic,
+	};
+};
+
+const handleLogisticDiscount = (summary, raw_discount) => {
+	let logistic = summary?.raw?.logistic - raw_discount;
+	if (logistic < 0) logistic = 0;
+	return { ...summary, logistic, discount: raw_discount, total: logistic + summary?.raw?.subtotal };
+};
+
+>>>>>>> development
 export const getSummaryAfterVoucher = (summaryState, voucher) => {
 	const summary = { ...summaryState };
 	const promotion_id = voucher?.Voucher?.Promotion?.id;
 	const raw_discount = voucher?.Voucher?.value;
 
 	if (promotion_id === 2) {
+<<<<<<< HEAD
 		let subtotal = summary.raw.subtotal - raw_discount;
 		if (subtotal < 0) subtotal = 0;
 
@@ -98,3 +154,33 @@ export const getSummaryAfterVoucher = (summaryState, voucher) => {
 		return { ...summary, logistic, discount: raw_discount, total: logistic + summary.raw.subtotal };
 	}
 };
+=======
+		return handleNominalDiscount(summary, raw_discount);
+	}
+
+	if (promotion_id === 3) {
+		return handlePercentageDiscount(summary, raw_discount, voucher);
+	}
+
+	if (promotion_id === 1) {
+		return handleLogisticDiscount(summary, raw_discount);
+	}
+};
+
+export const getSummaryAfterLogistic = (summary, cost) => {
+	return {
+		...summary,
+		logistic: cost,
+		total: summary?.raw?.subtotal + cost,
+		raw: { ...summary?.raw, logistic: cost },
+	};
+};
+
+export const getLogisticData = (payload) => {
+	return {
+		code: payload.courier,
+		service: payload.logistic.service,
+		cost: payload.logistic.cost[0].value,
+	};
+};
+>>>>>>> development

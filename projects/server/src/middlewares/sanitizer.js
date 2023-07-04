@@ -8,9 +8,22 @@ const {
 	getCategoryQueryOrder,
 	getInventoriesQueryFilter,
 	getInventoriesQueryOrder,
+<<<<<<< HEAD
 	getRelatedProductsFilter,
 	getProductsRecommendationFilter,
+=======
+	getProductQueryFilter,
+	getProductQueryOrder,
+	getRelatedProductsFilter,
+	getProductsRecommendationFilter,
+	getAdminTransactionQueryFilter,
+	getAdminTransactionQueryOrder,
+	getStockChangesQueryFilter,
+	getStockChangesQueryOrder,
+>>>>>>> development
 } = require("../helpers/queryHelper");
+const { getTransactionPayload, getTransactionDetailPayload } = require("../helpers/bodyHelper");
+
 const { getTransactionPayload, getTransactionDetailPayload } = require("../helpers/bodyHelper");
 
 const getAdminsQuerySanitizer = async (request, response, next) => {
@@ -76,7 +89,10 @@ const getRelatedProductsQuerySanitizer = async (request, response, next) => {
 	};
 
 	request.query = sanitizedQuery;
+<<<<<<< HEAD
 
+=======
+>>>>>>> development
 	next();
 };
 
@@ -114,9 +130,21 @@ const getCategorySanitizer = async (request, response, next) => {
 
 const postTransactionBodySanitizer = async (request, response, next) => {
 	const payload = {
+<<<<<<< HEAD
 		Transaction: await getTransactionPayload(request.body, request.userData),
 		Transaction_detail: await getTransactionDetailPayload(request.body),
 		Logistic: true,
+=======
+		transaction: await getTransactionPayload(request.body, request.userData),
+		transaction_detail: await getTransactionDetailPayload(request.body),
+		logistic: {
+			code: request.body.logistic.code,
+			service: request.body.logistic.service,
+			shipping_cost: request.body.logistic.cost,
+		},
+		voucher: { id: request.body.voucher.id },
+		user: { id: request.userData.id },
+>>>>>>> development
 	};
 
 	request.payload = payload;
@@ -126,6 +154,63 @@ const postTransactionBodySanitizer = async (request, response, next) => {
 	next();
 };
 
+<<<<<<< HEAD
+=======
+const postRajaOngkirCostBodySanitizer = async (request, response, next) => {
+	const { branch_city_id, city_id, weight, courier } = request.body;
+
+	const payload = {
+		branch_city_id,
+		city_id,
+		weight,
+		courier,
+	};
+
+	request.payload = payload;
+
+	delete request.body;
+
+	next();
+};
+
+const getProductsSanitizer = async (request, response, next) => {
+	const sanitizedQuery = {
+		filter: await getProductQueryFilter(request.query),
+		order: await getProductQueryOrder(request.query),
+		page: request.query.page,
+		itemPerPage: request.query.itemPerPage,
+	};
+
+	request.query = sanitizedQuery;
+
+	next();
+};
+
+const getAdminTransactionQuerySanitizer = async (request, response, next) => {
+	const sanitizedQuery = {
+		filter: await getAdminTransactionQueryFilter(request.query),
+		order: await getAdminTransactionQueryOrder(request.query),
+		page: request.query.page,
+	};
+
+	request.query = sanitizedQuery;
+  
+	next();
+};
+
+const getStockChangesQuerySanitizer = async (request, response, next) => {
+	const sanitizedQuery = {
+		filter: await getStockChangesQueryFilter(request.query),
+		order: await getStockChangesQueryOrder(request.query),
+		page: request.query.page,
+	};
+
+	request.query = sanitizedQuery;
+
+	next();
+};
+
+>>>>>>> development
 module.exports = {
 	getInventoriesQuerySanitizer,
 	getAdminsQuerySanitizer,
@@ -137,4 +222,13 @@ module.exports = {
 	getRelatedProductsQuerySanitizer,
 	getProductsRecommendationQuerySanitizer,
 	postTransactionBodySanitizer,
+<<<<<<< HEAD
+=======
+	postRajaOngkirCostBodySanitizer,
+	getProductsSanitizer,
+	getRelatedProductsQuerySanitizer,
+	getProductsRecommendationQuerySanitizer,
+	getAdminTransactionQuerySanitizer,
+	getStockChangesQuerySanitizer,
+>>>>>>> development
 };

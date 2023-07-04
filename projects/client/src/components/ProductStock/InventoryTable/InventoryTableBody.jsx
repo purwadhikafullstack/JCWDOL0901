@@ -9,12 +9,12 @@ const InventoryTableBody = ({ name, filterBy, filter, sort, order, page, setMaxP
 		const query = generateUrlQuery(name, page, filterBy, filter, sort, order);
 
 		getBranchInventories(query)
-			.then(result => {
+			.then((result) => {
 				setDatas(result.data.rows);
 				setMaxPage(Math.ceil(result.data.count / 3));
 			})
-			.catch(error => alert("Server Unavailable"));
-	}, [filter, sort, order, page, name]);
+			.catch((error) => alert("Server Unavailable"));
+	}, [filter, order, page, name]);
 
 	return datas && <TableBodyContent datas={datas} />;
 };

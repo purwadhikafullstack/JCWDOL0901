@@ -18,6 +18,8 @@ const {
 	adminInventoryRoute,
 	voucherRoute,
 	transactionRoute,
+	rajaOngkirRoute,
+	profileRoute,
 } = require("./routers/index.js");
 
 const PORT = process.env.PORT || 8000;
@@ -38,6 +40,7 @@ midnightTask.start();
 // ===========================
 // NOTE : Add your routes here
 
+app.use("/api/profile", profileRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/address", addressRoute);
 app.use("/api/branch", branchRoute);
@@ -48,8 +51,10 @@ app.use("/api/admin/transaction", adminTransactionRoute);
 app.use("/api/admin/inventory", adminInventoryRoute);
 app.use("/api/admin/promo", adminPromoRoute);
 app.use("/api/product", productRoute);
+app.use("/api/address", addressRoute);
 app.use("/api/voucher", voucherRoute);
 app.use("/api/transaction", transactionRoute);
+app.use("/api/rajaongkir", rajaOngkirRoute);
 
 app.use("/uploads", express.static("uploads/"));
 

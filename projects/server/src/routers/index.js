@@ -10,6 +10,11 @@ const productRoute = require("./productRoute.js");
 const adminInventoryRoute = require("./adminInventoryRoute.js");
 const voucherRoute = require("./voucherRoute.js");
 const transactionRoute = require("./transactionRoute.js");
+<<<<<<< HEAD
+=======
+const rajaOngkirRoute = require("./rajaOngkirRoute.js");
+const profileRoute = require("./profileRoute.js");
+>>>>>>> development
 
 module.exports = {
 	authRoute,
@@ -24,4 +29,9 @@ module.exports = {
 	adminInventoryRoute,
 	voucherRoute,
 	transactionRoute,
+<<<<<<< HEAD
+=======
+	rajaOngkirRoute,
+	profileRoute,
+>>>>>>> development
 };

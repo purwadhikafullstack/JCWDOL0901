@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import Vouchers from "./VoucherBox/Vouchers";
+=======
+import Vouchers from "./SwitchVoucher/Vouchers";
+>>>>>>> development
 import BackButton from "../BackButton";
 
 const SwitchVoucher = () => {

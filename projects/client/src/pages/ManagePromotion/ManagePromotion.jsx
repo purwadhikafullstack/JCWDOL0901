@@ -8,10 +8,10 @@ import SideBar from "../../components/SideBar/SideBar";
 const ResponsiveLogo = () => {
 	return (
 		<>
-			<div className="block sm:hidden z-40">
+			<div className="block z-40 mt-6 sm:hidden ">
 				<CompanyLogo color={false} className="w-[100px] mx-auto mb-2 z-40" />
 			</div>
-			<div className="hidden sm:block">
+			<div className="hidden mt-6 sm:block">
 				<CompanyLogo color={true} className="w-[100px] mx-auto mb-2 z-40" />
 			</div>
 		</>
@@ -20,15 +20,15 @@ const ResponsiveLogo = () => {
 
 const ProductPromotion = () => {
 	return (
-		<div className="flex flex-col mx-auto pt-6 pb-10 flex-1 min-w-[480px] overflow-hidden bg-white z-10 sm:w-full">
+		<div className="flex flex-col mx-auto pb-10 flex-1 min-w-[480px] overflow-hidden bg-white z-10 sm:w-full">
 			<SideBar>
-				<div className="flex flex-col bg-white">
+				<div className="flex flex-col bg-white min-h-screen">
 					<div className="flex flex-col z-10">
 						<CircularBackgroundDecoration />
 						<ResponsiveLogo />
 						<PageTitle
 							title="Manage Inventory Promotion"
-							color={"text-green-100 sm:text-green-400 z-10 mb-auto"}
+							className={"text-green-100 sm:text-green-400 z-10 mb-auto"}
 						/>
 						<PromoTableGroup />
 					</div>

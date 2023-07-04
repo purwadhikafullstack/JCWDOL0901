@@ -1,3 +1,3 @@
 import { user } from "./userReducer.js";
 
-export const { setUserNearestBranch, setUserLocation, switchBranch } = user.actions;
+export const { setUserNearestBranch, setUserLocation, switchBranch, setUserLogin } = user.actions;

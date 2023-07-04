@@ -1,5 +1,16 @@
-const { Transactions, Transaction_details, Inventories, Products } = require("../models/index.js");
-const { Op } = require("sequelize");
+const {
+	Transactions,
+	Transaction_details,
+	Inventories,
+	Products,
+	Statuses,
+	Branches,
+	Users,
+	Profiles,
+	Proofs,
+} = require("../models/index.js");
+
+const { Op, literal, Transaction } = require("sequelize");
 
 const dateQueryHelper = (from, to) => {
 	return {
@@ -50,8 +61,54 @@ const readAdminTransactionsQuery = async (from, to, status, branch) => {
 	});
 };
 
+<<<<<<< HEAD
+=======
+const readBranchAdminTransactionsQuery = async (query, branch) => {
+	return await Transactions.findAndCountAll({
+		where: {
+			...query.filter?.Transactions,
+			...branchQueryHelper(branch),
+		},
+		include: [
+			{ model: Users },
+			{ model: Statuses },
+			{ model: Branches },
+			{ model: Proofs },
+			{
+				model: Transaction_details,
+			},
+		],
+		order: [...query.order?.Transactions, ["id", "DESC"]],
+		distinct: true,
+		offset: (query.page - 1) * 5,
+		limit: 5,
+	});
+};
+
+>>>>>>> development
 const createTransactionQuery = async (payload, transaction) => {
 	return await Transactions.create({ ...payload, status_id: 1 }, { transaction });
 };
 
+<<<<<<< HEAD
 module.exports = { readAdminTransactionsQuery, createTransactionQuery };
+=======
+const readUserTransactionQuery = async (transaction_id) => {
+	return await Transactions.findOne({ where: { id: transaction_id } });
+};
+
+const updateTransactionStatusQuery = async (status_id, transaction_id, transaction) => {
+	return await Transactions.update(
+		{ status_id, updated_at: new Date() },
+		{ where: { id: transaction_id }, transaction },
+	);
+};
+
+module.exports = {
+	readAdminTransactionsQuery,
+	readBranchAdminTransactionsQuery,
+	createTransactionQuery,
+	readUserTransactionQuery,
+	updateTransactionStatusQuery,
+};
+>>>>>>> development

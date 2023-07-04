@@ -31,6 +31,14 @@ module.exports = {
 					voucher_id: 5,
 					isUsed: false,
 				},
+<<<<<<< HEAD
+=======
+				{
+					user_id: 1,
+					voucher_id: 6,
+					isUsed: false,
+				},
+>>>>>>> development
 			],
 			{},
 		);

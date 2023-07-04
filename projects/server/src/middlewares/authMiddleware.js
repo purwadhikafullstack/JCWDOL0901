@@ -26,10 +26,7 @@ const isSuperAdmin = async (request, response, next) => {
 const isAdmin = async (request, response, next) => {
 	try {
 		if (!request.headers.authorization) throw "Missing token!";
-		const token = await verifyJWToken(
-			request.headers.authorization,
-			process.env.JWT_ADMIN_SECRET_KEY
-		);
+		const token = await verifyJWToken(request.headers.authorization, process.env.JWT_ADMIN_SECRET_KEY);
 		request.adminData = token;
 
 		next();
@@ -41,12 +38,8 @@ const isAdmin = async (request, response, next) => {
 const isUser = async (request, response, next) => {
 	try {
 		if (!request.headers.authorization) throw "Missing token!";
-		const token = await verifyJWToken(
-			request.headers.authorization,
-			process.env.JWT_USER_SECRET_KEY
-		);
+		const token = await verifyJWToken(request.headers.authorization, process.env.JWT_USER_SECRET_KEY);
 		request.userData = token;
-
 		next();
 	} catch (error) {
 		response.status(403).send({ message: error });

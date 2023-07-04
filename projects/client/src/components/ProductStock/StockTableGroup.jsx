@@ -7,13 +7,17 @@ import Pagination from "../Pagination.jsx";
 import InventoryTable from "./InventoryTable.jsx";
 
 const StockTableGroup = () => {
-	const [name, setName] = React.useState(undefined);
-	const [filterBy, setFilterBy] = React.useState(undefined);
-	const [filter, setFilter] = React.useState(undefined);
-	const [sort, setSort] = React.useState(sortDefault);
-	const [order, setOrder] = React.useState(orderDefault);
+	const [name, setName] = React.useState("");
+	const [filterBy, setFilterBy] = React.useState("");
+	const [filter, setFilter] = React.useState("");
+	const [sort, setSort] = React.useState("");
+	const [order, setOrder] = React.useState("");
 	const [page, setPage] = React.useState(1);
 	const [maxPage, setMaxPage] = React.useState(1);
+
+	React.useEffect(() => {
+		setPage(1);
+	}, [name, filter, order]);
 
 	return (
 		<div className="flex flex-col justify-start mt-24 px-4 h-full">

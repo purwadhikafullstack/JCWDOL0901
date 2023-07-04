@@ -10,11 +10,7 @@ const BackButton = ({ page, setPage, disabled }) => {
 
 const FirstPageButton = ({ page, setPage, disabled }) => {
 	return (
-		<button
-			disabled={disabled}
-			onClick={() => setPage(page)}
-			className="text-green-300 mx-4 underline"
-		>
+		<button disabled={disabled} onClick={() => setPage(page)} className="text-green-300 mx-4 underline">
 			{"<<"}
 		</button>
 	);
@@ -30,11 +26,7 @@ const NextButton = ({ page, setPage, disabled }) => {
 
 const LastPageButton = ({ page, setPage, disabled }) => {
 	return (
-		<button
-			disabled={disabled}
-			onClick={() => setPage(page)}
-			className="text-green-300 mx-4 underline"
-		>
+		<button disabled={disabled} onClick={() => setPage(page)} className="text-green-300 mx-4 underline">
 			{">>"}
 		</button>
 	);
@@ -48,8 +40,8 @@ const Pagination = ({ page, setPage, maxPage }) => {
 			<span className="mx-4">
 				Page {page} of {maxPage}
 			</span>
-			<NextButton page={page} setPage={setPage} disabled={page === maxPage} />
-			<LastPageButton page={maxPage} setPage={setPage} disabled={page === maxPage} />
+			<NextButton page={page} setPage={setPage} disabled={page === maxPage || maxPage === 0} />
+			<LastPageButton page={maxPage} setPage={setPage} disabled={page === maxPage || maxPage === 0} />
 		</div>
 	);
 };

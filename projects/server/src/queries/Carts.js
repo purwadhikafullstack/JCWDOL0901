@@ -26,4 +26,14 @@ const readCartQuery = async (query) => {
 	});
 };
 
+<<<<<<< HEAD
 module.exports = { readCartQuery };
+=======
+const deleteCartsQueryOnOrder = async (user, transaction) => {
+	return await Carts.destroy({
+		where: { user_id: user.id },
+	});
+};
+
+module.exports = { readCartQuery, deleteCartsQueryOnOrder };
+>>>>>>> development

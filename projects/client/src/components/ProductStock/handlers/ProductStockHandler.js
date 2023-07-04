@@ -7,14 +7,14 @@ export const getBranchInventories = (query = "") => {
 };
 
 export const sortDefault = { id: "name", name: "Product Name" };
-export const orderDefault = { id: "1", name: "Ascending" };
+export const orderDefault = { id: "1", name: "A to Z" };
 
 export const resetSetting = (setName, setFilterBy, setFilter, setSort, setOrder, setPage) => {
 	setName("");
 	setFilterBy("");
 	setFilter("");
-	setSort(sortDefault);
-	setOrder(orderDefault);
+	setSort("");
+	setOrder("");
 	setPage(1);
 };
 
@@ -29,12 +29,23 @@ export const getSortBy = () => {
 	});
 };
 
-export const getOrder = () => {
+export const getNameOrder = () => {
 	return new Promise((resolve, reject) => {
 		resolve({
 			data: [
-				{ id: "1", name: "Ascending" },
-				{ id: "0", name: "Descending" },
+				{ id: "1", name: "A to Z" },
+				{ id: "0", name: "Z to A" },
+			],
+		});
+	});
+};
+
+export const getStockOrder = () => {
+	return new Promise((resolve, reject) => {
+		resolve({
+			data: [
+				{ id: "1", name: "Least Available" },
+				{ id: "0", name: "Most Available" },
 			],
 		});
 	});
@@ -65,26 +76,22 @@ export const generateUrlQuery = (name = "", page, filterBy, filter, sort, order)
 
 	url += `?page=${page}`;
 	url += `&name=${name}`;
-	url += filterBy?.id ? `&${filterBy.id}=${filter.id}` : "";
-	url += `&order=${sort.id}`;
-	url += `&asc=${order.id}`;
+	url += filter?.id ? `&${filterBy?.id}=${filter?.id}` : "";
+	url += `&order=${sort?.id}`;
+	url += `&asc=${order?.id}`;
 
 	return url;
 };
 
 export const editStockButtonHandler = async (values, setError) => {
 	await axios
-		.patch(
-			`${process.env.REACT_APP_API_BASE_URL}/admin/inventory/${values.inventory_id}/update`,
-			values,
-			{
-				headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-			}
-		)
-		.then(result => {
+		.patch(`${process.env.REACT_APP_API_BASE_URL}/admin/inventory/${values.inventory_id}/update`, values, {
+			headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+		})
+		.then((result) => {
 			window.location.reload(false);
 		})
-		.catch(error => {
+		.catch((error) => {
 			setError(error.message);
 		});
 };

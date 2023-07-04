@@ -1,4 +1,9 @@
 import axios from "axios";
+<<<<<<< HEAD
+=======
+import Swal from "sweetalert2";
+import { clearCheckout } from "../../../redux/reducers/checkout/checkoutAction";
+>>>>>>> development
 
 export const getDefaultAddress = () => {
 	const token = localStorage.getItem("token");
@@ -14,14 +19,23 @@ export const getUserAddresses = () => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/address/list`, headers);
 };
 
+<<<<<<< HEAD
 const filterVoucherByBranch = (vouchers, globalState) => {
 	const branch_id = globalState?.checkout?.cart[0]?.Inventory?.Branch?.id;
+=======
+const filterVoucherByBranch = (vouchers, cart) => {
+	const branch_id = cart[0]?.Inventory?.Branch?.id;
+>>>>>>> development
 
 	return vouchers.filter((item) => item.Voucher.branch_id === branch_id || item.Voucher.branch_id === null);
 };
 
+<<<<<<< HEAD
 const filterVoucherByCart = (vouchers, globalState) => {
 	const cart = globalState?.checkout?.cart;
+=======
+const filterVoucherByCart = (vouchers, cart) => {
+>>>>>>> development
 	const inventory_ids = [];
 
 	cart.forEach((item) => inventory_ids.push(item?.Inventory?.id));
@@ -33,9 +47,15 @@ const filterVoucherByCart = (vouchers, globalState) => {
 	});
 };
 
+<<<<<<< HEAD
 export const filterVoucherByBranchAndCart = (vouchers, globalState) => {
 	const cartFilteredVouchers = filterVoucherByCart(vouchers, globalState);
 	const branchFilteredVouchers = filterVoucherByBranch(cartFilteredVouchers, globalState);
+=======
+export const filterVoucherByBranchAndCart = (vouchers, cart) => {
+	const cartFilteredVouchers = filterVoucherByCart(vouchers, cart);
+	const branchFilteredVouchers = filterVoucherByBranch(cartFilteredVouchers, cart);
+>>>>>>> development
 
 	return branchFilteredVouchers;
 };
@@ -54,11 +74,52 @@ export const getUserCart = () => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/cart`, headers);
 };
 
+<<<<<<< HEAD
 export const postTransaction = (data) => {
 	const token = localStorage.getItem("token");
 	const headers = { headers: { Authorization: `Bearer ${token}` } };
 
 	return axios.post(`${process.env.REACT_APP_API_BASE_URL}/transaction/create`, data, headers);
+=======
+const promtCreateOrder = (data) =>
+	Swal.fire({
+		title: "Create Order?",
+		html: `Total Payment: <b>Rp ${data.summary.total.toLocaleString("id")}</b>`,
+		icon: "question",
+		showCancelButton: true,
+		confirmButtonColor: "#0EB177",
+		cancelButtonColor: "#d33",
+		confirmButtonText: "Confirm",
+	});
+
+const successAlert = (navigate, dispatch) => {
+	Swal.fire({
+		title: "Order Created!",
+		html: `Send Payment Within 1 x 24 Hour<br><br><b class="mt-2">BCA 8885059123 A/N Groseria Store ID</b>`,
+		icon: "success",
+		confirmButtonColor: "#0EB177",
+	});
+	navigate("/order");
+	dispatch(clearCheckout());
+};
+
+export const postTransaction = (data, dispatch, navigate) => {
+	const token = localStorage.getItem("token");
+	const headers = { headers: { Authorization: `Bearer ${token}` } };
+
+	promtCreateOrder(data).then(async (result) => {
+		if (result.isConfirmed) {
+			await axios
+				.post(`${process.env.REACT_APP_API_BASE_URL}/transaction/create`, data, headers)
+				.then((result) => {
+					successAlert(navigate, dispatch);
+				})
+				.catch((error) => {
+					Swal.fire(error.response.data);
+				});
+		}
+	});
+>>>>>>> development
 };
 
 export const getMaxDiscount = (data) => {
@@ -73,6 +134,22 @@ export const getMaxDiscount = (data) => {
 	return text;
 };
 
+<<<<<<< HEAD
+=======
+export const postLogisticServices = (checkout, courier) => {
+	const token = localStorage.getItem("token");
+	const headers = { headers: { Authorization: `Bearer ${token}` } };
+	const body = {
+		branch_city_id: checkout.branch.city_id,
+		city_id: checkout.address.City.id,
+		weight: checkout.summary.weight,
+		courier,
+	};
+
+	return axios.post(`${process.env.REACT_APP_API_BASE_URL}/rajaongkir/cost`, body, headers);
+};
+
+>>>>>>> development
 export const getMinSpend = (data) => {
 	if (data?.Voucher?.min_spend) {
 		return `With a minimum purchase of Rp ${data?.Voucher?.min_spend.toLocaleString("id")}`;

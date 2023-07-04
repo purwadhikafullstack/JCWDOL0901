@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
 				foreignKey: "category_id",
 			});
 
-			Products.hasMany(models.Inventories, { foreignKey: "product_id" });
+			Products.hasMany(models.Inventories, { foreignKey: "product_id", sourceKey: "id" });
 		}
 	}
 	Products.init(
@@ -70,7 +70,7 @@ module.exports = (sequelize, DataTypes) => {
 			sequelize,
 			modelName: "Products",
 			timestamps: false,
-		}
+		},
 	);
 	return Products;
 };

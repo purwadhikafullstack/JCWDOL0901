@@ -19,6 +19,9 @@ const writeLogFile = (error, source) => {
 const startFindErrorHandler = async (error) => {
 	await writeLogFile(error, "startFindErrorHandler");
 
+	if (error === "ERR_UNAUTHORIZED") {
+		return { code: 403, message: "Unauthorized!" };
+	}
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
@@ -73,20 +76,68 @@ const startVerificationErrorHandler = async (error) => {
 
 	if (error === "INVALID_TOKEN") {
 		return { code: 404, message: "Invalid token!" };
+	} else if (error === "EMAIL_NOT_FOUND") {
+		return { code: 404, message: "Email not found!" };
+	} else if (error?.expiredAt < new Date()) {
+		return { code: 403, message: "Token expired" };
+	} else if (error == "JsonWebTokenError: jwt malformed") {
+		return { code: 403, message: "Token not valid" };
 	}
-
 	return {
 		code: 500,
 		message: "Internal Server Error, please contact us!",
 	};
 };
 
+<<<<<<< HEAD
 const startCreateHandler = async (error) => {
 	await writeLogFile(error, "startCreateHandler");
+=======
+const startProfileUpdateErrorHandler = async (error) => {
+	await writeLogFile(error, "startProfileUpdateErrorHandler");
+>>>>>>> development
 
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
+<<<<<<< HEAD
+=======
+const startGetUserProfileErrorHandler = async (error) => {
+	await writeLogFile(error, "startGetUserProfileErrorHandler");
+
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
+
+const startUpdateAvatarErrorHandler = async (error) => {
+	await writeLogFile(error, "startUpdateAvatarErrorHandler");
+
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
+
+const startGetAvatarErrorHandler = async (error) => {
+	await writeLogFile(error, "startGetAvatarErrorHandler");
+
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
+
+const startAdminAuthenticationErrorHandler = async (error) => {
+	await writeLogFile(error, "startAdminAuthenticationErrorHandler");
+
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
+const startUserAuthenticationErrorHandler = async (error) => {
+	await writeLogFile(error, "startUserAuthenticationErrorHandler");
+
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
+
+const startCreateErrorHandler = async (error) => {
+	await writeLogFile(error, "startCreateErrorHandler");
+
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
+
+>>>>>>> development
 const startDeleteteHandler = async (error) => {
 	await writeLogFile(error, "startDeleteteHandler");
 	if (error.name === "SequelizeForeignKeyConstraintError") {
@@ -96,7 +147,14 @@ const startDeleteteHandler = async (error) => {
 };
 const startUpdateErrorHandler = async (error) => {
 	await writeLogFile(error, "startUpdateErrorHandler");
+	if (error === "ERR_UNAUTHORIZED") {
+		return { code: 403, message: "Unauthorized!" };
+	}
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+};
 
+const startGetUserAddressesErrorHandler = async (error) => {
+	await writeLogFile(error, "startGetUserAddressesErrorHandler");
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
@@ -106,14 +164,44 @@ const startCreateTransactionErrorHandler = async (error) => {
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
+<<<<<<< HEAD
+const startCreateTransactionErrorHandler = async (error) => {
+	await writeLogFile(error, "startCreateTransactionErrorHandler");
+
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+=======
+const rajaOngkirErrorHandler = async (body) => {
+	await writeLogFile(body, "rajaOngkirErrorHandler");
+
+	const statusCode = body.rajaongkir.status.code;
+
+	if (statusCode === 400) {
+		return { code: 400, message: body.rajaongkir.status.description };
+	}
+
+	return { code: 500, message: "Service Unavailable" };
+>>>>>>> development
+};
+
 module.exports = {
 	startRegistrationErrorHandler,
 	startFindErrorHandler,
 	forbiddenErrorHandler,
 	startVerificationErrorHandler,
-	startCreateHandler,
+	startCreateErrorHandler,
 	startDeleteteHandler,
 	startUpdateErrorHandler,
 	startUpdatePasswordErrorHandler,
 	startCreateTransactionErrorHandler,
+<<<<<<< HEAD
+=======
+	rajaOngkirErrorHandler,
+	startProfileUpdateErrorHandler,
+	startGetUserProfileErrorHandler,
+	startAdminAuthenticationErrorHandler,
+	startUserAuthenticationErrorHandler,
+	startGetUserAddressesErrorHandler,
+	startUpdateAvatarErrorHandler,
+	startGetAvatarErrorHandler,
+>>>>>>> development
 };

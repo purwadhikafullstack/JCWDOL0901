@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 
 const TableBodyContent = ({ datas, page, itemPerPage }) => {
 	const navigate = useNavigate();
-	const admin = useSelector(state => state.admin);
+	const admin = useSelector((state) => state.admin);
 	const [open, setOpen] = useState(false);
 	const [categoryId, setCategoryId] = useState(0);
 	const [categoryName, setCategoryName] = useState(0);
@@ -33,11 +33,7 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 							<td className={tdClassName}>{(page - 1) * itemPerPage + (index + 1)}</td>
 							<td className={tdClassName}>
 								<div className="flex justify-center">
-									<img
-										src={process.env.REACT_APP_IMAGE_BASE_URL + item.image}
-										className="w-[80px] max-h-20"
-										alt={item.name}
-									/>
+									<img src={item.image} className="w-[80px] max-h-20" alt={item.name} />
 								</div>
 							</td>
 							<td className={tdClassName}>{item.name}</td>

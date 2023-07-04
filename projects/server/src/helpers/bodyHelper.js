@@ -1,7 +1,11 @@
 const getTransactionPayload = async (body, userData) => {
 	return await {
 		user_id: userData.id,
+<<<<<<< HEAD
 		branch_id: body.branch_id,
+=======
+		branch_id: body.branch.branch_id,
+>>>>>>> development
 		address: body.address.detail,
 		amount: body.summary.total,
 		voucher_discount: body.summary.discount,

@@ -11,7 +11,13 @@ const SimilarProducts = ({ category_id, branch_id, inventory_id }) => {
 					<span className="material-symbols-rounded">chevron_right</span>
 				</div>
 			</div>
+<<<<<<< HEAD
 			<RelatedProductsCarousel branch_id={branch_id} category_id={category_id} inventory_id={inventory_id} />
+=======
+			<div className="px-6">
+				<RelatedProductsCarousel branch_id={branch_id} category_id={category_id} inventory_id={inventory_id} />
+			</div>
+>>>>>>> development
 		</div>
 	);
 };
