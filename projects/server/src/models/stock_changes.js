@@ -10,9 +10,9 @@ module.exports = (sequelize, DataTypes) => {
 		 */
 		static associate(models) {
 			// define association here
-			Stock_changes.hasMany(models.Inventories, {
-				foreignKey: "id",
-				sourceKey: "inventory_id",
+			Stock_changes.belongsTo(models.Inventories, {
+				foreignKey: "inventory_id",
+				targetKey: "id",
 			});
 		}
 	}
@@ -49,7 +49,7 @@ module.exports = (sequelize, DataTypes) => {
 			sequelize,
 			modelName: "Stock_changes",
 			timestamps: false,
-		}
+		},
 	);
 	return Stock_changes;
 };

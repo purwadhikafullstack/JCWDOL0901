@@ -3,6 +3,10 @@ import DropDown from "../../DropDown";
 import { getPromotionsOrder, getPromotionsSortBy } from "../handlers/productPromoHandler";
 
 const SearchSort = ({ sort, setSort, order, setOrder }) => {
+	React.useEffect(() => {
+		setOrder("");
+	}, [sort.id]);
+
 	return (
 		<div className="flex flex-col w-[25%]">
 			<span class="material-symbols-rounded mb-2.5">sort</span>

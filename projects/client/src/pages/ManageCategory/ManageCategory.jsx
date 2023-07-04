@@ -20,7 +20,7 @@ const Header = () => {
 	return (
 		<div className="text-black flex flex-col bg-green-200 sm:bg-green-100 pb-4">
 			<ResponsiveLogo />
-			<PageTitle title="Manage Category" color={"text-green-100 sm:text-green-400 z-10"} />
+			<PageTitle title="Manage Category" className={"text-green-100 sm:text-green-400 z-10"} />
 		</div>
 	);
 };
