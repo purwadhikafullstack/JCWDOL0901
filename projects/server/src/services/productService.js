@@ -60,7 +60,6 @@ module.exports = {
 			}
 		});
 	},
-
 	startFindRelatedProducts: async (filter) => {
 		return new Promise(async (resolve, reject) => {
 			try {
@@ -72,7 +71,6 @@ module.exports = {
 			}
 		});
 	},
-
 	startFindProductsOnly: async (filter, order, page, itemPerPage) => {
 		return new Promise(async (resolve, reject) => {
 			try {
