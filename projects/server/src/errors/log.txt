@@ -69,3 +69,143 @@
 	Source: startVerificationErrorHandler
 	Error: "EMAIL_NOT_FOUND"
 	
+	===
+	Time: Wed Jul 05 2023 22:43:30 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:43:35 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:43:36 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:43:58 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:44:50 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:45:20 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:45:22 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:45:39 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:45:45 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:46:30 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:47:15 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:47:55 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:49:19 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:49:56 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:50:59 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:51:04 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:52:06 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:52:16 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:52:18 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:52:48 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:52:49 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:52:51 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:53:15 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:54:25 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:55:01 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:55:02 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:55:07 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 22:55:22 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	

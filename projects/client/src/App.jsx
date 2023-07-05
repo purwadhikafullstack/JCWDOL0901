@@ -37,6 +37,7 @@ import UpdateProduct from "./pages/UpdateProduct/UpdateProduct";
 import ResetPassword from "./pages/ResetPassword/ResetPassword";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import UserAuthGuard from "./pages/UserAuthGuard";
+import OrderPage from "./pages/Order/OrderPage";
 
 function App() {
 	return (
@@ -75,6 +76,7 @@ function App() {
 					path="/cart/checkout/logistic/change"
 					element={<UserAuthGuard component={<SwitchLogistic />} />}
 				/>
+				<Route path="/order" element={<UserAuthGuard component={<OrderPage />} />} />
 				<Route path="/order/upload" element={<UserAuthGuard component={<UploadProof />} />} />
 
 				{/* //Admin Auth Page */}

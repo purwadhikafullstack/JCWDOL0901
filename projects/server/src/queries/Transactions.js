@@ -98,10 +98,19 @@ const updateTransactionStatusQuery = async (status_id, transaction_id, transacti
 	);
 };
 
+const readUserTransactionsQuery = async (user_id) => {
+	return await Transactions.findAndCountAll({
+		where: { user_id },
+		include: { model: Transaction_details, include: { model: Inventories, include: Products } },
+		distinct: true,
+	});
+};
+
 module.exports = {
 	readAdminTransactionsQuery,
 	readBranchAdminTransactionsQuery,
 	createTransactionQuery,
 	readUserTransactionQuery,
 	updateTransactionStatusQuery,
+	readUserTransactionsQuery,
 };

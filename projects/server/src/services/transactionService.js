@@ -8,6 +8,7 @@ const {
 	createTransactionQuery,
 	readUserTransactionQuery,
 	updateTransactionStatusQuery,
+	readUserTransactionsQuery,
 } = require("../queries/Transactions.js");
 const { createTransactionDetailsQuery } = require("../queries/Transaction_details.js");
 const { createLogisticsQuery } = require("../queries/Logistics.js");
@@ -66,6 +67,16 @@ module.exports = {
 			} catch (error) {
 				await transaction.rollback();
 				return await reject(await startCreateErrorHandler(error));
+			}
+		});
+	},
+	startFindUserTransactions: async (user_id) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const Transaction = await readUserTransactionsQuery(user_id);
+				return await resolve(Transaction);
+			} catch (error) {
+				return await reject(await startFindErrorHandler(error));
 			}
 		});
 	},
