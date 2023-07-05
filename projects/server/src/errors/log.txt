@@ -194,3 +194,8 @@
 	Source: startCreateErrorHandler
 	Error: {}
 	
+	===
+	Time: Wed Jul 05 2023 22:07:25 GMT+0700 (Western Indonesia Time)
+	Source: startUpdateErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_TRUNCATED_WRONG_VALUE","errno":1292,"sqlState":"22007","sqlMessage":"Truncated incorrect DOUBLE value: ':product_id'","sql":"UPDATE `Products` SET `price`=?,`description`=?,`weight`=?,`unit`=?,`category_id`=? WHERE `id` = ?","parameters":[8000,"Lemon import florida",150,"1 pcs",1,":product_id"]},"original":{"code":"ER_TRUNCATED_WRONG_VALUE","errno":1292,"sqlState":"22007","sqlMessage":"Truncated incorrect DOUBLE value: ':product_id'","sql":"UPDATE `Products` SET `price`=?,`description`=?,`weight`=?,`unit`=?,`category_id`=? WHERE `id` = ?","parameters":[8000,"Lemon import florida",150,"1 pcs",1,":product_id"]},"sql":"UPDATE `Products` SET `price`=?,`description`=?,`weight`=?,`unit`=?,`category_id`=? WHERE `id` = ?","parameters":[8000,"Lemon import florida",150,"1 pcs",1,":product_id"]}
+	
