@@ -79,7 +79,8 @@ const readProductsOnlyQuery = async (params) => {
 
 const createProductQuery = async (body, file) => {
 	const { name, price, description, weight, unit, category_id } = body;
-	const image = `/product/${file.filename}`;
+	console.log("queries product file.?: ", file)
+	const image = `/product/${file}`;
 	return await Products.create({ name, image, price, description, weight, unit, category_id });
 };
 

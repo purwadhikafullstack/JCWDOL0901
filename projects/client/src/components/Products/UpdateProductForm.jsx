@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import ProductImagePreview from "./ProductImagePreview";
 import ProductInputField from "./ProductInputField";
 import { formikUpdateProductConfiguration } from "./config/formikUpdateProductConfiguration";
+import Button from "../Button";
 
 const UpdateProductForm = ({item}) => {
     const navigate = useNavigate();

@@ -32,7 +32,7 @@ export const createProductHandler = async (input, navigate) => {
 		const config = {
 			headers: { Authorization: `Bearer ${token}` },
 		};
-		await axios.post(`${process.env.REACT_APP_API_BASE_URL}/product/create`, validatedInput, config);
+		await axios.post(`${process.env.REACT_APP_API_BASE_URL}/admin/product/create`, validatedInput, config);
 
 		Swal.fire({
 			icon: "success",

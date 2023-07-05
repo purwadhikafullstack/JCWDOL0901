@@ -47,6 +47,7 @@ const validationSchema = Yup.object({
 });
 
 const onSubmitConfiguration = async (values, navigate) => {
+	console.log("values formikCreate: ", values);
 	await createProductHandler(values, navigate);
 };
 

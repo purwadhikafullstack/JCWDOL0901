@@ -119,6 +119,7 @@ module.exports = {
 				const Product = await createProductQuery(body, file);
 				return resolve(Product);
 			} catch (error) {
+				console.log("error createProductService: ", error);
 				return reject(await startCreateErrorHandler(error));
 			}
 		});
