@@ -13,6 +13,10 @@ const deleteExpiredPromotion = async () => {
 					},
 				},
 			);
+<<<<<<< HEAD
+
+=======
+>>>>>>> development
 			return await resolve("deleteExpiredPromotion task succeeded");
 		} catch (error) {
 			return await reject("deleteExpiredPromotion task failed");
@@ -38,4 +42,8 @@ const midnightTask = cron.schedule(
 	{ scheduled: true, timezone: "Asia/Bangkok" },
 );
 
+<<<<<<< HEAD
 module.exports = { midnightTask };
+=======
+module.exports = { midnightTask };
+>>>>>>> development

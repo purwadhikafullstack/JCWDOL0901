@@ -1,6 +1,9 @@
 import axios from "axios";
+<<<<<<< HEAD
+=======
 import Swal from "sweetalert2";
 import { clearCheckout } from "../../../redux/reducers/checkout/checkoutAction";
+>>>>>>> development
 
 export const getDefaultAddress = () => {
 	const token = localStorage.getItem("token");
@@ -16,13 +19,23 @@ export const getUserAddresses = () => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/address/list`, headers);
 };
 
+<<<<<<< HEAD
+const filterVoucherByBranch = (vouchers, globalState) => {
+	const branch_id = globalState?.checkout?.cart[0]?.Inventory?.Branch?.id;
+=======
 const filterVoucherByBranch = (vouchers, cart) => {
 	const branch_id = cart[0]?.Inventory?.Branch?.id;
+>>>>>>> development
 
 	return vouchers.filter((item) => item.Voucher.branch_id === branch_id || item.Voucher.branch_id === null);
 };
 
+<<<<<<< HEAD
+const filterVoucherByCart = (vouchers, globalState) => {
+	const cart = globalState?.checkout?.cart;
+=======
 const filterVoucherByCart = (vouchers, cart) => {
+>>>>>>> development
 	const inventory_ids = [];
 
 	cart.forEach((item) => inventory_ids.push(item?.Inventory?.id));
@@ -34,9 +47,15 @@ const filterVoucherByCart = (vouchers, cart) => {
 	});
 };
 
+<<<<<<< HEAD
+export const filterVoucherByBranchAndCart = (vouchers, globalState) => {
+	const cartFilteredVouchers = filterVoucherByCart(vouchers, globalState);
+	const branchFilteredVouchers = filterVoucherByBranch(cartFilteredVouchers, globalState);
+=======
 export const filterVoucherByBranchAndCart = (vouchers, cart) => {
 	const cartFilteredVouchers = filterVoucherByCart(vouchers, cart);
 	const branchFilteredVouchers = filterVoucherByBranch(cartFilteredVouchers, cart);
+>>>>>>> development
 
 	return branchFilteredVouchers;
 };
@@ -55,6 +74,13 @@ export const getUserCart = () => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/cart`, headers);
 };
 
+<<<<<<< HEAD
+export const postTransaction = (data) => {
+	const token = localStorage.getItem("token");
+	const headers = { headers: { Authorization: `Bearer ${token}` } };
+
+	return axios.post(`${process.env.REACT_APP_API_BASE_URL}/transaction/create`, data, headers);
+=======
 const promtCreateOrder = (data) =>
 	Swal.fire({
 		title: "Create Order?",
@@ -93,6 +119,7 @@ export const postTransaction = (data, dispatch, navigate) => {
 				});
 		}
 	});
+>>>>>>> development
 };
 
 export const getMaxDiscount = (data) => {
@@ -107,6 +134,8 @@ export const getMaxDiscount = (data) => {
 	return text;
 };
 
+<<<<<<< HEAD
+=======
 export const postLogisticServices = (checkout, courier) => {
 	const token = localStorage.getItem("token");
 	const headers = { headers: { Authorization: `Bearer ${token}` } };
@@ -120,6 +149,7 @@ export const postLogisticServices = (checkout, courier) => {
 	return axios.post(`${process.env.REACT_APP_API_BASE_URL}/rajaongkir/cost`, body, headers);
 };
 
+>>>>>>> development
 export const getMinSpend = (data) => {
 	if (data?.Voucher?.min_spend) {
 		return `With a minimum purchase of Rp ${data?.Voucher?.min_spend.toLocaleString("id")}`;

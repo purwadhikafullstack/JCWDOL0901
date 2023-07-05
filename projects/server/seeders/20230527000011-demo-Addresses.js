@@ -69,6 +69,15 @@ module.exports = {
 					longitude: 110.82391915834977,
 					is_default: true,
 				},
+				{
+					user_id: 1,
+					city_id: 23,
+					label: "Rumah (Bandung)",
+					detail: "Jl. ABC 54-44, Braga, 40111",
+					latitude: -6.918882842175393,
+					longtitude: 107.60618754038646,
+					default: false,
+				},
 			],
 			{},
 		);

@@ -89,12 +89,19 @@ const startVerificationErrorHandler = async (error) => {
 	};
 };
 
+<<<<<<< HEAD
+const startCreateHandler = async (error) => {
+	await writeLogFile(error, "startCreateHandler");
+=======
 const startProfileUpdateErrorHandler = async (error) => {
 	await writeLogFile(error, "startProfileUpdateErrorHandler");
+>>>>>>> development
 
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
+<<<<<<< HEAD
+=======
 const startGetUserProfileErrorHandler = async (error) => {
 	await writeLogFile(error, "startGetUserProfileErrorHandler");
 
@@ -130,6 +137,7 @@ const startCreateErrorHandler = async (error) => {
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
+>>>>>>> development
 const startDeleteteHandler = async (error) => {
 	await writeLogFile(error, "startDeleteteHandler");
 	if (error.name === "SequelizeForeignKeyConstraintError") {
@@ -156,6 +164,12 @@ const startCreateTransactionErrorHandler = async (error) => {
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
+<<<<<<< HEAD
+const startCreateTransactionErrorHandler = async (error) => {
+	await writeLogFile(error, "startCreateTransactionErrorHandler");
+
+	return { code: 500, message: "Internal Server Error, please contact us!" };
+=======
 const rajaOngkirErrorHandler = async (body) => {
 	await writeLogFile(body, "rajaOngkirErrorHandler");
 
@@ -166,6 +180,7 @@ const rajaOngkirErrorHandler = async (body) => {
 	}
 
 	return { code: 500, message: "Service Unavailable" };
+>>>>>>> development
 };
 
 module.exports = {
@@ -178,6 +193,8 @@ module.exports = {
 	startUpdateErrorHandler,
 	startUpdatePasswordErrorHandler,
 	startCreateTransactionErrorHandler,
+<<<<<<< HEAD
+=======
 	rajaOngkirErrorHandler,
 	startProfileUpdateErrorHandler,
 	startGetUserProfileErrorHandler,
@@ -186,4 +203,5 @@ module.exports = {
 	startGetUserAddressesErrorHandler,
 	startUpdateAvatarErrorHandler,
 	startGetAvatarErrorHandler,
+>>>>>>> development
 };

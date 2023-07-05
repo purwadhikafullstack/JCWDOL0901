@@ -7,7 +7,11 @@ module.exports = {
 				500: `rgb(244 63 94)`,
 			},
 			green: {
+<<<<<<< HEAD
+				50: "#dbefe3",
+=======
 				50: "#DBEFE3",
+>>>>>>> development
 				100: "#E8F2EC",
 				200: "#53B97C",
 				300: "#4CAD73",

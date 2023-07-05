@@ -1,5 +1,6 @@
 const { Op, literal } = require("sequelize");
 const { sequelize } = require("../models/index.js");
+const { query } = require("express");
 
 const getAdminQueryFilter = async (query) => {
 	const filter = { branch: [] };
@@ -76,6 +77,8 @@ const getCategoryQueryOrder = async (query) => {
 	return order;
 };
 
+<<<<<<< HEAD
+=======
 const getProductQueryFilter = async (query) => {
 	const filter = {};
 	const productFilter = ["name", "category_id", "branch_id", "active"];
@@ -92,6 +95,7 @@ const getProductQueryOrder = async (query) => {
 	return order;
 };
 
+>>>>>>> development
 const getInventoryPromotionQueryOrder = async (query) => {
 	const order = { Inventory_promotions: [] };
 	const inventoryPromotionsOrder = ["start_at", "expired_at"];
@@ -235,6 +239,10 @@ module.exports = {
 	getCategoryQueryOrder,
 	getInventoriesQueryFilter,
 	getInventoriesQueryOrder,
+<<<<<<< HEAD
+	getProductsRecommendationFilter,
+	getRelatedProductsFilter,
+=======
 	getProductQueryFilter,
 	getProductQueryOrder,
 	getProductsRecommendationFilter,
@@ -243,4 +251,5 @@ module.exports = {
 	getAdminTransactionQueryOrder,
 	getStockChangesQueryFilter,
 	getStockChangesQueryOrder,
+>>>>>>> development
 };

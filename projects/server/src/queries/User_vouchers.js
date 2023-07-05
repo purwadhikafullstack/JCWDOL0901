@@ -39,6 +39,9 @@ const createUserVouchersAsReferralReward = async (registrant_id, referred_id, tr
 	);
 };
 
+<<<<<<< HEAD
+module.exports = { readUserVouchersQuery, createUserVouchersAsReferralReward };
+=======
 const updateUsedUserVouchersQuery = async (user, voucher, transaction) => {
 	return await User_vouchers.update(
 		{ isUsed: true },
@@ -52,3 +55,4 @@ const updateUsedUserVouchersQuery = async (user, voucher, transaction) => {
 };
 
 module.exports = { readUserVouchersQuery, createUserVouchersAsReferralReward, updateUsedUserVouchersQuery };
+>>>>>>> development

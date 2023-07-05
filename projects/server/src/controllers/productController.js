@@ -2,8 +2,11 @@ const {
 	startFindProductsRecommendation,
 	startFindRelatedProducts,
 	startFindProductDetail,
+<<<<<<< HEAD
+=======
 	startFindProducts,
 	startFindProductsOnly,
+>>>>>>> development
 } = require("../services/productService.js");
 
 const getProductsRecommendation = async (request, response) => {
@@ -17,6 +20,8 @@ const getProductsRecommendation = async (request, response) => {
 		});
 };
 
+<<<<<<< HEAD
+=======
 const getProducts = async (request, response) => {
 	const { filter, order, page, itemPerPage } = request.query;
 	const { branch_id } = filter;
@@ -29,6 +34,7 @@ const getProducts = async (request, response) => {
 		});
 };
 
+>>>>>>> development
 const getRelatedProducts = async (request, response) => {
 	const { filter } = request.query;
 
@@ -50,6 +56,9 @@ const getProductDetail = async (request, response) => {
 			response.status(error.code).send(error.message);
 		});
 };
+<<<<<<< HEAD
+module.exports = { getProductsRecommendation, getRelatedProducts, getProductDetail };
+=======
 
 const getProductsOnly = async (request, response) => {
 	const { filter, order, page, itemPerPage } = request.query;
@@ -64,3 +73,4 @@ const getProductsOnly = async (request, response) => {
 };
 
 module.exports = { getProductsRecommendation, getRelatedProducts, getProductDetail, getProducts, getProductsOnly };
+>>>>>>> development

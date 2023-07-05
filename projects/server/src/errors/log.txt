@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 	===
 	Time: Thu Jun 29 2023 21:17:41 GMT+0700 (Western Indonesia Time)
@@ -119,3 +121,4 @@
 	Source: startUpdateErrorHandler
 	Error: "ERR_UNAUTHORIZED"
 	
+>>>>>>> development

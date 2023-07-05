@@ -14,7 +14,7 @@ module.exports = {
 					expired_at: null,
 					claim_limit: null,
 					promotion_id: 1,
-					min_spend: 0,
+					min_spend: 500000,
 					max_discount: null,
 					inventory_id: null,
 				},
@@ -65,6 +65,8 @@ module.exports = {
 					min_spend: 0,
 					max_discount: 5000,
 					inventory_id: 7,
+<<<<<<< HEAD
+=======
 				},
 				{
 					name: "[Groseria Semarang] Gratis Ongkir dengan minimal belanja Rp 500.000",
@@ -77,6 +79,7 @@ module.exports = {
 					min_spend: 500000,
 					max_discount: null,
 					inventory_id: null,
+>>>>>>> development
 				},
 			],
 			{},

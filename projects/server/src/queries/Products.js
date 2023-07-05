@@ -37,6 +37,11 @@ const readProductQuery = async (inventory_id) => {
 	});
 };
 
+<<<<<<< HEAD
+const readProductsQuery = async (filter) => {
+	return await Products.findAll({
+		where: { ...filter?.Products },
+=======
 const readProductsQuery = async (params) => {
 	const offset = params?.page ? (params?.page - 1) * params?.itemPerPage : null;
 	const limit = params?.itemPerPage ? params?.itemPerPage : null;
@@ -44,10 +49,11 @@ const readProductsQuery = async (params) => {
 
 	return await Products.findAndCountAll({
 		where: { ...params?.Products, active: true },
+>>>>>>> development
 		include: [
 			{
 				model: Inventories,
-				where: { ...params?.Inventories },
+				where: { ...filter?.Inventories },
 				include: [
 					{ model: Branches, attributes: ["name"] },
 					{
@@ -78,4 +84,8 @@ const readProductsOnlyQuery = async (params) => {
 	});
 };
 
+<<<<<<< HEAD
+module.exports = { readProductQuery, readProductsQuery };
+=======
 module.exports = { readProductQuery, readProductsQuery, readProductsOnlyQuery };
+>>>>>>> development

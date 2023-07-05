@@ -79,6 +79,16 @@ const DesktopSlides = ({ categories, setPage }) => {
 				const isFocus = category_id == category.id;
 				return (
 					<SplideSlide key={index}>
+<<<<<<< HEAD
+						<div className="flex flex-col items-center mx-2">
+							<img
+								className="w-[125px] cursor-pointer"
+								src={process.env.REACT_APP_IMAGE_BASE_URL + category.image}
+								alt={category.name}
+								loading="lazy"
+							/>
+							<span className="text-black text-sm mt-1.5">{category.name}</span>
+=======
 						<div className="flex flex-col items-center mx-2 pb-2 sm:pb-3 sm:pt-8">
 							<button className={`rounded-2xl mt-1 ${isFocus ? "ring ring-green-200" : ""}`}>
 								<img
@@ -102,6 +112,7 @@ const DesktopSlides = ({ categories, setPage }) => {
 							{isFocus ? (
 								<div className="w-16 rounded-lg h-2.5 bg-green-200 absolute -bottom-1"></div>
 							) : null}
+>>>>>>> development
 						</div>
 					</SplideSlide>
 				);
@@ -116,8 +127,13 @@ const SliderSlides = ({ categories, setPage }) => {
 			<div className="block sm:hidden">
 				<MobileSlides categories={categories} setPage={setPage} />
 			</div>
+<<<<<<< HEAD
+			<div className="hidden sm:block sm:flex sm:shrink-0 sm:my-12">
+				<DesktopSlides categories={categories} />
+=======
 			<div className="hidden sm:block sm:mt-0">
 				<DesktopSlides categories={categories} setPage={setPage} />
+>>>>>>> development
 			</div>
 		</>
 	);

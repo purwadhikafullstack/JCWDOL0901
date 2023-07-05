@@ -1,3 +1,4 @@
+const { request } = require("express");
 const {
 	getAdminQueryFilter,
 	getAdminQueryOrder,
@@ -7,6 +8,10 @@ const {
 	getCategoryQueryOrder,
 	getInventoriesQueryFilter,
 	getInventoriesQueryOrder,
+<<<<<<< HEAD
+	getRelatedProductsFilter,
+	getProductsRecommendationFilter,
+=======
 	getProductQueryFilter,
 	getProductQueryOrder,
 	getRelatedProductsFilter,
@@ -15,7 +20,9 @@ const {
 	getAdminTransactionQueryOrder,
 	getStockChangesQueryFilter,
 	getStockChangesQueryOrder,
+>>>>>>> development
 } = require("../helpers/queryHelper");
+const { getTransactionPayload, getTransactionDetailPayload } = require("../helpers/bodyHelper");
 
 const { getTransactionPayload, getTransactionDetailPayload } = require("../helpers/bodyHelper");
 
@@ -82,6 +89,10 @@ const getRelatedProductsQuerySanitizer = async (request, response, next) => {
 	};
 
 	request.query = sanitizedQuery;
+<<<<<<< HEAD
+
+=======
+>>>>>>> development
 	next();
 };
 
@@ -119,6 +130,11 @@ const getCategorySanitizer = async (request, response, next) => {
 
 const postTransactionBodySanitizer = async (request, response, next) => {
 	const payload = {
+<<<<<<< HEAD
+		Transaction: await getTransactionPayload(request.body, request.userData),
+		Transaction_detail: await getTransactionDetailPayload(request.body),
+		Logistic: true,
+=======
 		transaction: await getTransactionPayload(request.body, request.userData),
 		transaction_detail: await getTransactionDetailPayload(request.body),
 		logistic: {
@@ -128,6 +144,7 @@ const postTransactionBodySanitizer = async (request, response, next) => {
 		},
 		voucher: { id: request.body.voucher.id },
 		user: { id: request.userData.id },
+>>>>>>> development
 	};
 
 	request.payload = payload;
@@ -137,6 +154,8 @@ const postTransactionBodySanitizer = async (request, response, next) => {
 	next();
 };
 
+<<<<<<< HEAD
+=======
 const postRajaOngkirCostBodySanitizer = async (request, response, next) => {
 	const { branch_city_id, city_id, weight, courier } = request.body;
 
@@ -163,6 +182,7 @@ const getProductsSanitizer = async (request, response, next) => {
 	};
 
 	request.query = sanitizedQuery;
+
 	next();
 };
 
@@ -190,6 +210,7 @@ const getStockChangesQuerySanitizer = async (request, response, next) => {
 	next();
 };
 
+>>>>>>> development
 module.exports = {
 	getInventoriesQuerySanitizer,
 	getAdminsQuerySanitizer,
@@ -201,10 +222,13 @@ module.exports = {
 	getRelatedProductsQuerySanitizer,
 	getProductsRecommendationQuerySanitizer,
 	postTransactionBodySanitizer,
+<<<<<<< HEAD
+=======
 	postRajaOngkirCostBodySanitizer,
 	getProductsSanitizer,
 	getRelatedProductsQuerySanitizer,
 	getProductsRecommendationQuerySanitizer,
 	getAdminTransactionQuerySanitizer,
 	getStockChangesQuerySanitizer,
+>>>>>>> development
 };

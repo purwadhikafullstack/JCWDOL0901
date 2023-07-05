@@ -21,7 +21,6 @@ const {
 	rajaOngkirRoute,
 	profileRoute,
 } = require("./routers/index.js");
-const { log } = require("console");
 
 const PORT = process.env.PORT || 8000;
 const app = express();

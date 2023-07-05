@@ -65,6 +65,7 @@ module.exports = {
 			try {
 				const relatedProducts = await readProductsQuery(filter);
 
+
 				return resolve(relatedProducts.rows);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
@@ -125,6 +126,7 @@ module.exports = {
 		return new Promise(async (resolve, reject) => {
 			try {
 				const relatedProducts = await readProductsQuery(filter);
+
 				return resolve(relatedProducts);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));

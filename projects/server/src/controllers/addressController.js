@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+const { startFindDefaultAddress, startFindUserAddresses } = require("../services/addressService.js");
+
+const getDefaultAddress = async (request, response) => {
+	const filter = { user_id: request.userData.id, default: true };
+
+	await startFindDefaultAddress(filter)
+		.then((result) => {
+			response.status(200).send(result);
+		})
+		.catch((error) => {
+			response.status(error.code).send(error.message);
+		});
+};
+
+const getAddresses = async (request, response) => {
+	const filter = { user_id: request.userData.id };
+
+	await startFindUserAddresses(filter)
+=======
 const {
 	startGetUserAddresses,
 	startGetDefaultAddress,
@@ -9,6 +29,7 @@ const {
 
 const getAddresses = async (request, response) => {
 	await startGetUserAddresses(request.userData.id)
+>>>>>>> development
 		.then((result) => {
 			response.status(200).send(result);
 		})
@@ -17,6 +38,9 @@ const getAddresses = async (request, response) => {
 		});
 };
 
+<<<<<<< HEAD
+module.exports = { getDefaultAddress, getAddresses };
+=======
 const getDefaultAddress = async (request, response) => {
 	await startGetDefaultAddress(request.userData.id)
 		.then((result) => {
@@ -75,3 +99,4 @@ module.exports = {
 	setDefaultAddress,
 	deleteAddress,
 };
+>>>>>>> development

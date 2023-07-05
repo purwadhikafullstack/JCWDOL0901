@@ -21,7 +21,11 @@ const AddressBoxDetail = () => {
 	const dispatch = useDispatch();
 
 	React.useEffect(() => {
+<<<<<<< HEAD
+		if (checkout.address.id) {
+=======
 		if (checkout.address?.City?.id) {
+>>>>>>> development
 			setUserAddress(checkout.address);
 		} else {
 			getDefaultAddress()

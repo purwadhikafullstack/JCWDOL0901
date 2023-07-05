@@ -1,8 +1,12 @@
+<<<<<<< HEAD
+const { startCreateTransaction } = require("../services/transactionService.js");
+=======
 const {
 	startCreateTransaction,
 	startFindUserTransaction,
 	startCreateProof,
 } = require("../services/transactionService.js");
+>>>>>>> development
 
 const postTransaction = async (request, response) => {
 	await startCreateTransaction(request.payload)
@@ -14,6 +18,9 @@ const postTransaction = async (request, response) => {
 		});
 };
 
+<<<<<<< HEAD
+module.exports = { postTransaction };
+=======
 const postTransactionProof = async (request, response) => {
 	const { file } = request;
 	const { transaction_id } = request.body;
@@ -42,3 +49,4 @@ const getUserTransaction = async (request, response) => {
 };
 
 module.exports = { postTransaction, postTransactionProof, getUserTransaction };
+>>>>>>> development
