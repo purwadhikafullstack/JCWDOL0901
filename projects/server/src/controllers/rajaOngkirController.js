@@ -1,14 +1,14 @@
 const { startFindLogisticFee } = require("../services/rajaOngkirService");
 
 const postRajaOngkirCost = async (request, response) => {
-	const { branch_city_id, city_id, weight, courier } = request.payload;
+	const { branch_city_id, city_id, weight } = request.payload;
 
-	await startFindLogisticFee(branch_city_id, city_id, weight, courier)
-		.then((data) => {
-			response.status(200).send(data.rajaongkir.results);
+	await startFindLogisticFee(branch_city_id, city_id, weight)
+		.then((result) => {
+			return response.status(200).send(result);
 		})
 		.catch((error) => {
-			response.status(error.code).send(error.message);
+			return response.status(400).send("bad request");
 		});
 };
 

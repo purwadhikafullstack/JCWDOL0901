@@ -1,30 +1,38 @@
 const request = require("request");
-
+const axios = require("axios");
 const { rajaOngkirErrorHandler } = require("../errors/serviceError.js");
 
-const headers = {
-	key: `${process.env.RAJAONGKIR_API_KEY}`,
-	"content-type": "application/x-www-form-urlencoded",
+const getFeeByCourier = async (branch_city_id, city_id, weight, courier) => {
+	return new Promise(async (resolve, reject) => {
+		await axios
+			.post(`${process.env.RAJAONGKIR_API_URL}/cost`, {
+				key: `${process.env.RAJAONGKIR_API_KEY}`,
+				origin: branch_city_id,
+				destination: city_id,
+				weight,
+				courier,
+			})
+			.then((result) => {
+				resolve(...result.data.rajaongkir.results);
+			})
+			.catch((error) => {
+				reject(error);
+			});
+	});
 };
 
 module.exports = {
-	startFindLogisticFee: async (branch_city_id, city_id, weight, courier) => {
+	startFindLogisticFee: async (branch_city_id, city_id, weight) => {
 		return new Promise(async (resolve, reject) => {
-			const options = {
-				method: "POST",
-				url: `${process.env.RAJAONGKIR_API_URL}/cost`,
-				headers,
-				form: { origin: branch_city_id, destination: city_id, weight, courier },
-			};
+			try {
+				const jne = await getFeeByCourier(branch_city_id, city_id, weight, "jne");
+				const pos = await getFeeByCourier(branch_city_id, city_id, weight, "pos");
+				const tiki = await getFeeByCourier(branch_city_id, city_id, weight, "tiki");
 
-			await request(options, async (error, response, body) => {
-				const parsedBody = await JSON.parse(body);
-				const statusCode = parsedBody.rajaongkir.status.code;
-
-				if (statusCode !== 200) return reject(await rajaOngkirErrorHandler(parsedBody));
-
-				return resolve(parsedBody);
-			});
+				return resolve([jne, pos, tiki]);
+			} catch (error) {
+				return reject();
+			}
 		});
 	},
 };
