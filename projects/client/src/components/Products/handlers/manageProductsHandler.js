@@ -115,14 +115,8 @@ export const generateUrlQuery = (page, itemPerPage, filter, sort, order, name, f
 	return url;
 };
 
-export const getCategories = (token, query) => {
-	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/category/list${query}`, {
-		headers: { Authorization: `Bearer ${token}` },
-	});
-};
-
 export const getProductsOnly = (token, query) => {
-	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/product/only${query}`, {
+	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/admin/product/only${query}`, {
 		headers: { Authorization: `Bearer ${token}` },
 	});
 };

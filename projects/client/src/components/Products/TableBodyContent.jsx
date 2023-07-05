@@ -18,8 +18,8 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 			{alert ? (
 				<DeleteAlert
 					title={`Delete Category "${categoryName}"`}
-					desc="Are you sure you want to delete this category? You can only delete this category if there are no products under this category. This category will be permanently removed from the server forever. This action cannot be undone."
-					buttonName="Delete Category"
+					desc="Are you sure you want to delete this product?"
+					buttonName="Delete Product"
 					open={open}
 					setOpen={setOpen}
 					categoryId={categoryId}
@@ -27,6 +27,7 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 				/>
 			) : null}
 			{datas.map((item, index) => {
+				console.log("item TableBodyContent: ", item);
 				return (
 					<tbody key={index} className="odd:bg-green-100/50 even:bg-white">
 						<tr>
@@ -41,7 +42,7 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 							<td className={tdClassName}>{item.weight} gram</td>
 							<td className={tdClassName}>Rp{item.price.toLocaleString("id")}</td>
 							<td className={tdClassName}>{item.description}</td>
-							<td className={tdClassName}>{item.Category.name}</td>
+							<td className={tdClassName}>{item.category_id}</td>
 							<td className={tdClassName}>
 								{item.active ? (
 									<div className="bg-green-200/90 text-gray-100 rounded-md py-1 px-1">Active</div>

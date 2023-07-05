@@ -119,3 +119,63 @@
 	Source: startUpdateErrorHandler
 	Error: "ERR_UNAUTHORIZED"
 	
+	===
+	Time: Wed Jul 05 2023 08:00:46 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 08:01:12 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 08:01:44 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 08:01:46 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 08:02:26 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 08:02:33 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 08:02:35 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 08:30:44 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 18:20:05 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 18:20:26 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Wed Jul 05 2023 19:49:26 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` WHERE `Categories`.`name` LIKE '%[object Object]%' LIMIT NaN, 10000000000000;"},"original":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` WHERE `Categories`.`name` LIKE '%[object Object]%' LIMIT NaN, 10000000000000;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` WHERE `Categories`.`name` LIKE '%[object Object]%' LIMIT NaN, 10000000000000;","parameters":{}}
+	
+	===
+	Time: Wed Jul 05 2023 19:51:05 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` WHERE `Categories`.`name` LIKE '%[object Object]%' LIMIT NaN, 10000000000000;"},"original":{"code":"ER_SP_UNDECLARED_VAR","errno":1327,"sqlState":"42000","sqlMessage":"Undeclared variable: NaN","sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` WHERE `Categories`.`name` LIKE '%[object Object]%' LIMIT NaN, 10000000000000;"},"sql":"SELECT `id`, `name`, `image` FROM `Categories` AS `Categories` WHERE `Categories`.`name` LIKE '%[object Object]%' LIMIT NaN, 10000000000000;","parameters":{}}
+	

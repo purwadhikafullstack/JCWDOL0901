@@ -27,6 +27,7 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 				/>
 			) : null}
 			{datas.map((item, index) => {
+				console.log("item category: ", item);
 				return (
 					<tbody key={index} className="odd:bg-green-100/50 even:bg-white">
 						<tr>

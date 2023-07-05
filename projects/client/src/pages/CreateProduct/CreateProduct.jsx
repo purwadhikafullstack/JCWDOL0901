@@ -17,7 +17,7 @@ const Illustration = () => {
 
 const CreateProduct = () => {
 	return (
-		<div className="bg-green-100 flex items-center justify-center h-screen">
+		<div className="bg-green-100 flex items-center justify-center h-auto">
 			<div className="flex flex-col sm:flex-row bg-white rounded-lg h-screen sm:h-auto justify-between">
 				<div className="sm:bg-green-500 z-10 rounded-t-lg sm:rounded-tr-none rounded-tr-lg sm:rounded-l-lg bg-green-500">
 					<BackButton url={-1} color="text-green-100" />

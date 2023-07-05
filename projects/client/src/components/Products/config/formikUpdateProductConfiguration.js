@@ -5,6 +5,13 @@ import { updateProductHandler } from "../handlers/manageProductsHandler";
 const initialValues = (item) => {
 	return {
 		name: item.name,
+		image: item.image,
+		price: item.price,
+		description: item.description,
+		weight: item.weight,
+		unit: item.unit,
+		category_id: item.category,
+		active: item.isActive,
 	};
 };
 
@@ -15,6 +22,12 @@ const validateOnBlur = true;
 const requiredMessage = "Field can't be empty";
 
 const name = Yup.string().required(requiredMessage);
+const price = Yup.string().required(requiredMessage);
+const description = Yup.string().required(requiredMessage);
+const weight = Yup.string().required(requiredMessage);
+const unit = Yup.string().required(requiredMessage);
+const category_id = Yup.string().required(requiredMessage);
+const active = Yup.string().required(requiredMessage);
 const image = Yup.mixed()
 	.nullable()
 	.test("fileSize", "The file is too large", (value) => {
@@ -30,6 +43,12 @@ const image = Yup.mixed()
 const validationSchema = Yup.object({
 	name,
 	image,
+	price,
+	description,
+	weight,
+	unit,
+	category_id,
+	active,
 });
 
 const onSubmitConfiguration = async (values, item, navigate) => {
