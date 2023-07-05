@@ -3,9 +3,7 @@ import axios from "axios";
 export const getPromotionsType = () => {
 	return new Promise(async (resolve, reject) => {
 		try {
-			const inventoryPromotions = await axios.get(
-				`${process.env.REACT_APP_API_BASE_URL}/data/promotions`
-			);
+			const inventoryPromotions = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/data/promotions`);
 
 			resolve({ data: await inventoryPromotions.data.splice(1) });
 		} catch (error) {
@@ -14,13 +12,13 @@ export const getPromotionsType = () => {
 	});
 };
 
-export const getInventoryPromotions = query => {
+export const getInventoryPromotions = (query) => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/admin/promo/list${query}`, {
 		headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
 	});
 };
 
-export const patchInventoryPromotions = data => {
+export const patchInventoryPromotions = (data) => {
 	return axios.patch(`${process.env.REACT_APP_API_BASE_URL}/admin/promo/update`, data, {
 		headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
 	});
@@ -60,12 +58,9 @@ export const generateUrlQuery = (name, page, filter, sort, order) => {
 	return url;
 };
 
-export const sortDefault = { id: "start_at", name: "Start Date" };
-export const orderDefault = { id: "0", name: "Descending" };
-
 export const resetSetting = (setFilter, setSort, setOrder, setPage) => {
 	setFilter("");
-	setSort(sortDefault);
-	setOrder(orderDefault);
+	setSort("");
+	setOrder("");
 	setPage(1);
 };

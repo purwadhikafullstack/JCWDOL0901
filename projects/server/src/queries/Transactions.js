@@ -9,6 +9,7 @@ const {
 	Profiles,
 	Proofs,
 } = require("../models/index.js");
+
 const { Op, literal, Transaction } = require("sequelize");
 
 const dateQueryHelper = (from, to) => {

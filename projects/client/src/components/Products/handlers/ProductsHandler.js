@@ -110,12 +110,13 @@ const getPromo = (promoDetail) => {
 
 export const determinePrice = (product, setPrice) => {
 	const promoDetail = product?.Inventories[0]?.promo;
+	if (!promoDetail?.isActive)
+		setPrice((previousValue) => ({ ...previousValue, original: product.price, final: product.price }));
+	else {
+		const original = promoDetail?.Promotion?.id === 4 ? null : product.price;
+		const final = getFinalPrice(product.price, promoDetail);
+		const promo = getPromo(promoDetail);
 
-	if (!promoDetail?.value) setPrice((previousValue) => ({ ...previousValue, original, final: original }));
-
-	const original = promoDetail?.Promotion?.id === 4 ? null : product.price;
-	const final = getFinalPrice(product.price, promoDetail);
-	const promo = getPromo(promoDetail);
-
-	setPrice({ original, final, promo });
+		setPrice({ original, final, promo });
+	}
 };

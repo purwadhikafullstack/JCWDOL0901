@@ -8,13 +8,15 @@ import DesktopNavBar from "./DesktopNavBar";
 
 const HomeHeader = ({ toggleBranchModal }) => {
 	return (
-		<div className="flex flex-col sm:bg-green-200 sm:pb-4 sm:px-12">
+		<div className="flex flex-col sm:bg-green-200 sm:pb-2 sm:px-2">
 			<CircularBackgroundDecoration />
-			<CompanyLogo color={false} className="z-10 w-[40px] mx-auto my-3" clickable={false} />
 			<div className="flex flex-col justify-between items-between z-10 mx-6">
 				<DesktopNavBar />
-				<SearchBar />
-				<div className="flex flex-row justify-between items-start mt-2">
+				<div className="flex flex-row justify-between items-start mt-2 md:hidden">
+					<CompanyLogo color={false} className="z-10 w-[40px] my-auto mr-6 ml-2" clickable={false} />
+					<SearchBar />
+				</div>
+				<div className="flex flex-row justify-between items-center">
 					<BranchMenu toggleBranchModal={toggleBranchModal} />
 					<AddressMenu />
 				</div>

@@ -14,7 +14,7 @@ const InventoryTableBody = ({ name, filterBy, filter, sort, order, page, setMaxP
 				setMaxPage(Math.ceil(result.data.count / 3));
 			})
 			.catch((error) => alert("Server Unavailable"));
-	}, [filter, sort, order, page, name]);
+	}, [filter, order, page, name]);
 
 	return datas && <TableBodyContent datas={datas} />;
 };
