@@ -1,5 +1,5 @@
 import React from "react";
-import { getBorderColor, sendUserOrder } from "../handlers/manageOrderHandler";
+import { getBorderColor } from "../handlers/manageOrderHandler";
 import { saveAs } from "file-saver";
 import { cancelUserOrder, confirmUserOrder, rejectUserOrder, sendUserOrder } from "../handlers/buttonHandler";
 
@@ -125,7 +125,7 @@ const Action = ({ item, setIsUpdated }) => {
 const OrderBodyContent = ({ superAdmin, data, setIsUpdated }) => {
 	return data.map((item, index) => {
 		return (
-			<div className="rounded-lg border border-green-300 border-2 mt-4">
+			<div className="rounded-lg border-green-300 border-2 mt-4">
 				<div className="text-sm px-8 grid grid-cols-12 w-full h-16 py-2">
 					<div className="col-span-1 text-[#f47229] font-bold my-auto cursor-pointer">{item.id}</div>
 					{superAdmin && <BranchName item={item} />}

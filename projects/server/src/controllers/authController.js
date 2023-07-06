@@ -1,3 +1,4 @@
+const { getUserProfileQuery } = require("../queries/Profiles");
 const {
 	startUserRegistration,
 	startFindAdmins,
@@ -113,6 +114,17 @@ const resetPassword = async (request, response) => {
 		});
 };
 
+const isUserLogged = async (request, response) => {
+	try {
+		if (!request.headers.authorization) throw "Missing token!";
+		const token = await verifyJWToken(request.headers.authorization, process.env.JWT_USER_SECRET_KEY);
+		const userData = await getUserProfileQuery(token.id);
+		response.status(200).send({ token, ...userData });
+	} catch (error) {
+		response.status(403).send({ message: error });
+	}
+};
+
 module.exports = {
 	registerUser,
 	getAdmins,
@@ -124,4 +136,5 @@ module.exports = {
 	updatePassword,
 	forgotPassword,
 	resetPassword,
+	isUserLogged,
 };

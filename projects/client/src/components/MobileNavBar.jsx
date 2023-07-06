@@ -21,7 +21,7 @@ const MobileNavBar = () => {
 				<div className="mx-4 flex flex-row justify-around rounded-full bg-white">
 					<MobileNavButton active={location === "/"} name="home" to="/" />
 					<MobileNavButton active={location === "/cart"} name="shopping_cart" to="/cart" />
-					<MobileNavButton active={location === "/history"} name="history" to="/history" />
+					<MobileNavButton active={location === "/order"} name="sticky_note_2" to="/order" />
 					<MobileNavButton active={location === "/account"} name="account_circle" to="/account" />
 				</div>
 			</div>
