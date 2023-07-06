@@ -5,13 +5,12 @@ import { updateProductHandler } from "../handlers/manageProductsHandler";
 const initialValues = (item) => {
 	return {
 		name: item.name,
-		image: item.image,
 		price: item.price,
 		description: item.description,
 		weight: item.weight,
 		unit: item.unit,
-		category_id: item.category,
-		active: item.isActive,
+		category_id: item.category_id,
+		active: item.active,
 	};
 };
 

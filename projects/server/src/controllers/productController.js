@@ -55,8 +55,6 @@ const getProductDetail = async (request, response) => {
 };
 
 const createProduct = async (request, response) => {
-	console.log("reqBody create: ", request.body);
-	console.log("reqFile create: ", request.file);
 	await startCreateProduct(request.body, request.file)
 		.then((result) => response.status(200).send(result))
 		.catch((error) => response.status(error.code).send(error.message));

@@ -10,7 +10,6 @@ const UpdateProductForm = ({item}) => {
     const navigate = useNavigate();
 	const [file, setFile] = useState(item.image);
 	const formik = useFormik(formikUpdateProductConfiguration(navigate, item));
-
 	return (
         <div className="my-auto items-center min-w-fit shrink-0 flex flex-col pb-10 px-8">
 			<form onSubmit={formik.handleSubmit} encType="multipart/form-data">

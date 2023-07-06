@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import FormikError from "../InputGroup/FormikError";
-import { generateUrlQuery, getCategories } from "../Category/handlers/categoryHandler";
 import { getProductsOnly } from "./handlers/manageProductsHandler";
+import axios from "axios";
 
-const Options = ({datas}) => {
-
+const Options = ({ datas }) => {
 	return datas.map((item, index) => {
 		return (
 			<option value={item.id} key={index}>
@@ -22,14 +21,24 @@ function SelectBoxCategory({ name, inputKey, formik }) {
 	const [order, setOrder] = useState("");
 	const itemPerPage = window.innerWidth > 640 ? 6 : 6;
 
+	const getCategories = () => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const Categories = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/category/list`);
+				resolve(Categories.data.rows);
+			} catch (error) {
+				reject(error);
+			}
+		});
+	};
+
 	React.useEffect(() => {
-		const query = generateUrlQuery(page, itemPerPage, filter, sort, order);
-	  getCategories(localStorage.getItem("token"), query)
-		.then((result) => {
-		  setDatas(result.data.rows);
-		})
-		.catch((error) => alert("Server Unavailable"));
-	}, []); 
+		getCategories()
+			.then((result) => {
+				setDatas(result);
+			})
+			.catch((error) => alert("Server Unavailable"));
+	}, []);
 
 	return (
 		<div className="relative z-10">

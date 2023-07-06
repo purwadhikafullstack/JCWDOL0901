@@ -79,17 +79,19 @@ const readProductsOnlyQuery = async (params) => {
 
 const createProductQuery = async (body, file) => {
 	const { name, price, description, weight, unit, category_id } = body;
-	console.log("queries product file.?: ", file);
-	const image = `/product/${file}`;
+	const image = `/product/${file.filename}`;
 	// const image = `/product/${file.filename}`;
 	return await Products.create({ name, image, price, description, weight, unit, category_id });
 };
 
 const updateProductQuery = async (body, file, params) => {
 	const id = params.productId;
-	const { name, price, description, weight, unit, category_id } = body;
+	const { name, price, description, weight, unit, category_id, active } = body;
 	const image = file ? `/product/${file.filename}` : undefined;
-	return await Products.update({ price, description, weight, unit, category_id }, { where: { id } });
+	return await Products.update(
+		{ name, price, description, weight, unit, image, category_id, active },
+		{ where: { id } },
+	);
 };
 
 const deleteProductQuery = async (params) => {

@@ -22,12 +22,12 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 					buttonName="Delete Category"
 					open={open}
 					setOpen={setOpen}
-					categoryId={categoryId}
+					id={categoryId}
 					handler={deleteCategoryHandler}
+					url={"/admin/category"}
 				/>
 			) : null}
 			{datas.map((item, index) => {
-				console.log("item category: ", item);
 				return (
 					<tbody key={index} className="odd:bg-green-100/50 even:bg-white">
 						<tr>

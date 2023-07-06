@@ -12,8 +12,8 @@ const ProductInputField = ({ formik, setFile }) => {
 			<InputGroup name="Product's Description" type="text" inputKey="description" formik={formik} />
 			<InputGroup name="Product's Weight (in gram)" type="number" inputKey="weight" formik={formik} />
 			<InputGroup name="Product's Unit" type="text" inputKey="unit" formik={formik} />
-			<SelectGroupCategory name="Product's Category" inputKey="category" formik={formik} />
-			<SelectGroupProductIsActive name="Product's Active Status" inputKey="isActive" formik={formik} />
+			<SelectGroupCategory name="Product's Category" inputKey="category_id" formik={formik} />
+			<SelectGroupProductIsActive name="Product's Active Status" inputKey="active" formik={formik} />
 			<FileUploadInputGroup name="Upload Image" type="file" inputKey="image" formik={formik} setFile={setFile} />
 		</div>
 	);

@@ -58,7 +58,11 @@ export const updateProductHandler = async (input, item, navigate) => {
 		const config = {
 			headers: { Authorization: `Bearer ${token}` },
 		};
-		await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/product/${item.id}/update`, validatedInput, config);
+		await axios.patch(
+			`${process.env.REACT_APP_API_BASE_URL}/admin/product/${item.id}/update`,
+			validatedInput,
+			config,
+		);
 
 		Swal.fire({
 			icon: "success",
@@ -77,14 +81,13 @@ export const updateProductHandler = async (input, item, navigate) => {
 	}
 };
 
-
 export const deleteProductHandler = async (id, navigate) => {
 	try {
 		const token = localStorage.getItem("token");
 		const config = {
 			headers: { Authorization: `Bearer ${token}` },
 		};
-		await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/product/${id}/delete`, config);
+		await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/admin/product/${id}/delete`, config);
 
 		Swal.fire({
 			icon: "success",

@@ -52,7 +52,7 @@ const limits = {
 	fileSize: 1024 * 1024,
 };
 
-const uploadProductFile = multer({ storage: productStorage, fileFilter, limits }).single("product");
+const uploadProductFile = multer({ storage: productStorage, fileFilter, limits }).single("image");
 
 const uploadCategoryFile = multer({ storage: categoryStorage, fileFilter, limits }).single("image");
 

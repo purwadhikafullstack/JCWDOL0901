@@ -10,24 +10,24 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 	const navigate = useNavigate();
 	const admin = useSelector((state) => state.admin);
 	const [open, setOpen] = useState(false);
-	const [categoryId, setCategoryId] = useState(0);
-	const [categoryName, setCategoryName] = useState(0);
+	const [productId, setProductId] = useState(0);
+	const [productName, setProductName] = useState(0);
 	const tdClassName = "py-1 h-16 text-xs text-center px-4";
 	return (
 		<>
 			{alert ? (
 				<DeleteAlert
-					title={`Delete Category "${categoryName}"`}
+					title={`Delete Product "${productName}"`}
 					desc="Are you sure you want to delete this product?"
 					buttonName="Delete Product"
 					open={open}
 					setOpen={setOpen}
-					categoryId={categoryId}
+					id={productId}
 					handler={deleteProductHandler}
+					url={"/admin/product"}
 				/>
 			) : null}
 			{datas.map((item, index) => {
-				console.log("item TableBodyContent: ", item);
 				return (
 					<tbody key={index} className="odd:bg-green-100/50 even:bg-white">
 						<tr>
@@ -62,7 +62,7 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 									{/* <div>{alert}</div> */}
 									<button
 										className="bg-red text-white px-2 py-2 rounded-lg flex justify-center disabled:bg-gray-300"
-										onClick={() => showDeleteAlert(item, setOpen, setCategoryId, setCategoryName)}
+										onClick={() => showDeleteAlert(item, setOpen, setProductId, setProductName)}
 										disabled={!admin.superAdmin}
 									>
 										<TrashIcon

@@ -199,3 +199,23 @@
 	Source: startUpdateErrorHandler
 	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_TRUNCATED_WRONG_VALUE","errno":1292,"sqlState":"22007","sqlMessage":"Truncated incorrect DOUBLE value: ':product_id'","sql":"UPDATE `Products` SET `price`=?,`description`=?,`weight`=?,`unit`=?,`category_id`=? WHERE `id` = ?","parameters":[8000,"Lemon import florida",150,"1 pcs",1,":product_id"]},"original":{"code":"ER_TRUNCATED_WRONG_VALUE","errno":1292,"sqlState":"22007","sqlMessage":"Truncated incorrect DOUBLE value: ':product_id'","sql":"UPDATE `Products` SET `price`=?,`description`=?,`weight`=?,`unit`=?,`category_id`=? WHERE `id` = ?","parameters":[8000,"Lemon import florida",150,"1 pcs",1,":product_id"]},"sql":"UPDATE `Products` SET `price`=?,`description`=?,`weight`=?,`unit`=?,`category_id`=? WHERE `id` = ?","parameters":[8000,"Lemon import florida",150,"1 pcs",1,":product_id"]}
 	
+	===
+	Time: Wed Jul 05 2023 22:27:09 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'NaN' in 'where clause'","sql":"DELETE FROM `Products` WHERE `id` = NaN"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'NaN' in 'where clause'","sql":"DELETE FROM `Products` WHERE `id` = NaN"},"sql":"DELETE FROM `Products` WHERE `id` = NaN","parameters":{}}
+	
+	===
+	Time: Wed Jul 05 2023 22:31:22 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'NaN' in 'where clause'","sql":"DELETE FROM `Products` WHERE `id` = NaN"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'NaN' in 'where clause'","sql":"DELETE FROM `Products` WHERE `id` = NaN"},"sql":"DELETE FROM `Products` WHERE `id` = NaN","parameters":{}}
+	
+	===
+	Time: Wed Jul 05 2023 22:34:08 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'NaN' in 'where clause'","sql":"DELETE FROM `Products` WHERE `id` = NaN"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'NaN' in 'where clause'","sql":"DELETE FROM `Products` WHERE `id` = NaN"},"sql":"DELETE FROM `Products` WHERE `id` = NaN","parameters":{}}
+	
+	===
+	Time: Thu Jul 06 2023 09:46:42 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'NaN' in 'where clause'","sql":"DELETE FROM `Products` WHERE `id` = NaN"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'NaN' in 'where clause'","sql":"DELETE FROM `Products` WHERE `id` = NaN"},"sql":"DELETE FROM `Products` WHERE `id` = NaN","parameters":{}}
+	
