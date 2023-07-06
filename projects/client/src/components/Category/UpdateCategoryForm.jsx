@@ -17,7 +17,7 @@ const UpdateCategoryForm = ({ item }) => {
 			<form onSubmit={formik.handleSubmit} encType="multipart/form-data">
 				<CategoryImagePreview file={file} />
 				<CategoryInputField formik={formik} setFile={setFile} />
-				<Button type="submit" name="Update" disabled={formik.isSubmitting} />
+				<Button type="submit" name="Update" disabled={formik.isSubmitting} pending={formik.isSubmitting} />
 			</form>
 		</div>
 	);

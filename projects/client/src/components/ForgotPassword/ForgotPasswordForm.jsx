@@ -26,6 +26,7 @@ const ForgotPasswordForm = () => {
 						type="submit"
 						name="Send verification email"
 						disabled={formik.isSubmitting || formik.isValidating}
+						pending={formik.isSubmitting}
 					/>
 				</form>
 			</div>

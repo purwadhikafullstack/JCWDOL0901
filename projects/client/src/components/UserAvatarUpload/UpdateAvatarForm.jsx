@@ -28,7 +28,7 @@ function UpdateAvatarForm({ item }) {
 			<form onSubmit={formik.handleSubmit} encType="multipart/form-data" noValidate>
 				<AvatarImagePreview file={file} />
 				<AvatarInputField formik={formik} setFile={setFile} />
-				<Button type="submit" name="Update" disabled={formik.isSubmitting} />
+				<Button type="submit" name="Update" disabled={formik.isSubmitting} pending={formik.isSubmitting} />
 			</form>
 		</div>
 	);

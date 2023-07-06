@@ -15,7 +15,7 @@ const CreateNewAddressForm = () => {
 					<div className="mb-auto mt-6">
 						<CreateNewAddressInputField formik={formik} />
 					</div>
-					<Button type="submit" name="Create" disabled={formik.isSubmitting} />
+					<Button type="submit" name="Create" disabled={formik.isSubmitting} pending={formik.isSubmitting} />
 				</div>
 			</form>
 		</div>

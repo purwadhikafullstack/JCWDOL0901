@@ -24,7 +24,12 @@ const UploadPanel = ({ transaction_id }) => {
 					inputKey="proof"
 					setFile={setFile}
 				/>
-				<Button type="submit" name="Upload" disabled={formik.isSubmitting || formik.isValidating}>
+				<Button
+					type="submit"
+					name="Upload"
+					disabled={formik.isSubmitting || formik.isValidating}
+					pending={formik.isSubmitting}
+				>
 					<span className="material-symbols-rounded text-green-100 mr-2">upload_file</span>
 				</Button>
 			</form>
