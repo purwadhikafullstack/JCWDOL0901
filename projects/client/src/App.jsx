@@ -38,6 +38,7 @@ import ResetPassword from "./pages/ResetPassword/ResetPassword";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import UserAuthGuard from "./pages/UserAuthGuard";
 import OrderPage from "./pages/Order/OrderPage";
+import OrderDetail from "./pages/OrderDetail/OrderDetail";
 
 function App() {
 	return (
@@ -78,6 +79,7 @@ function App() {
 				/>
 				<Route path="/order" element={<UserAuthGuard component={<OrderPage />} />} />
 				<Route path="/order/upload" element={<UserAuthGuard component={<UploadProof />} />} />
+				<Route path="/order/detail/:transaction_id" element={<UserAuthGuard component={<OrderDetail />} />} />
 
 				{/* //Admin Auth Page */}
 				<Route path="/admin/order" element={<AdminAuthGuard component={<ManageOrder />} />} />
