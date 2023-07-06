@@ -1,0 +1,26 @@
+
+	===
+	Time: Thu Jul 06 2023 16:24:04 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: {"name":"SequelizeForeignKeyConstraintError","parent":{"code":"ER_ROW_IS_REFERENCED_2","errno":1451,"sqlState":"23000","sqlMessage":"Cannot delete or update a parent row: a foreign key constraint fails (`ogwa`.`inventories`, CONSTRAINT `FK_Inventories-Products` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)","sql":"DELETE FROM `Products` WHERE `id` = 2"},"original":{"code":"ER_ROW_IS_REFERENCED_2","errno":1451,"sqlState":"23000","sqlMessage":"Cannot delete or update a parent row: a foreign key constraint fails (`ogwa`.`inventories`, CONSTRAINT `FK_Inventories-Products` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)","sql":"DELETE FROM `Products` WHERE `id` = 2"},"sql":"DELETE FROM `Products` WHERE `id` = 2","parameters":{},"table":"products","fields":["product_id"],"index":"FK_Inventories-Products","reltype":"parent"}
+	
+	===
+	Time: Thu Jul 06 2023 16:24:15 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: {"name":"SequelizeForeignKeyConstraintError","parent":{"code":"ER_ROW_IS_REFERENCED_2","errno":1451,"sqlState":"23000","sqlMessage":"Cannot delete or update a parent row: a foreign key constraint fails (`ogwa`.`inventories`, CONSTRAINT `FK_Inventories-Products` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)","sql":"DELETE FROM `Products` WHERE `id` = 148"},"original":{"code":"ER_ROW_IS_REFERENCED_2","errno":1451,"sqlState":"23000","sqlMessage":"Cannot delete or update a parent row: a foreign key constraint fails (`ogwa`.`inventories`, CONSTRAINT `FK_Inventories-Products` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)","sql":"DELETE FROM `Products` WHERE `id` = 148"},"sql":"DELETE FROM `Products` WHERE `id` = 148","parameters":{},"table":"products","fields":["product_id"],"index":"FK_Inventories-Products","reltype":"parent"}
+	
+	===
+	Time: Thu Jul 06 2023 16:26:06 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: {"name":"SequelizeForeignKeyConstraintError","parent":{"code":"ER_ROW_IS_REFERENCED_2","errno":1451,"sqlState":"23000","sqlMessage":"Cannot delete or update a parent row: a foreign key constraint fails (`ogwa`.`inventories`, CONSTRAINT `FK_Inventories-Products` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)","sql":"DELETE FROM `Products` WHERE `id` = 146"},"original":{"code":"ER_ROW_IS_REFERENCED_2","errno":1451,"sqlState":"23000","sqlMessage":"Cannot delete or update a parent row: a foreign key constraint fails (`ogwa`.`inventories`, CONSTRAINT `FK_Inventories-Products` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)","sql":"DELETE FROM `Products` WHERE `id` = 146"},"sql":"DELETE FROM `Products` WHERE `id` = 146","parameters":{},"table":"products","fields":["product_id"],"index":"FK_Inventories-Products","reltype":"parent"}
+	
+	===
+	Time: Thu Jul 06 2023 16:27:15 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: {"name":"SequelizeForeignKeyConstraintError","parent":{"code":"ER_ROW_IS_REFERENCED_2","errno":1451,"sqlState":"23000","sqlMessage":"Cannot delete or update a parent row: a foreign key constraint fails (`ogwa`.`inventories`, CONSTRAINT `FK_Inventories-Products` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)","sql":"DELETE FROM `Products` WHERE `id` = 145"},"original":{"code":"ER_ROW_IS_REFERENCED_2","errno":1451,"sqlState":"23000","sqlMessage":"Cannot delete or update a parent row: a foreign key constraint fails (`ogwa`.`inventories`, CONSTRAINT `FK_Inventories-Products` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)","sql":"DELETE FROM `Products` WHERE `id` = 145"},"sql":"DELETE FROM `Products` WHERE `id` = 145","parameters":{},"table":"products","fields":["product_id"],"index":"FK_Inventories-Products","reltype":"parent"}
+	
+	===
+	Time: Thu Jul 06 2023 16:27:41 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: {"name":"SequelizeForeignKeyConstraintError","parent":{"code":"ER_ROW_IS_REFERENCED_2","errno":1451,"sqlState":"23000","sqlMessage":"Cannot delete or update a parent row: a foreign key constraint fails (`ogwa`.`inventories`, CONSTRAINT `FK_Inventories-Products` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)","sql":"DELETE FROM `Products` WHERE `id` = 145"},"original":{"code":"ER_ROW_IS_REFERENCED_2","errno":1451,"sqlState":"23000","sqlMessage":"Cannot delete or update a parent row: a foreign key constraint fails (`ogwa`.`inventories`, CONSTRAINT `FK_Inventories-Products` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)","sql":"DELETE FROM `Products` WHERE `id` = 145"},"sql":"DELETE FROM `Products` WHERE `id` = 145","parameters":{},"table":"products","fields":["product_id"],"index":"FK_Inventories-Products","reltype":"parent"}
+	

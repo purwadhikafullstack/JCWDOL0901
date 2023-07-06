@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 
 const TableBodyContent = ({ datas, page, itemPerPage }) => {
+	console.log(datas);
 	const navigate = useNavigate();
 	const admin = useSelector((state) => state.admin);
 	const [open, setOpen] = useState(false);
@@ -34,7 +35,11 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 							<td className={tdClassName}>{(page - 1) * itemPerPage + (index + 1)}</td>
 							<td className={tdClassName}>
 								<div className="flex justify-center">
-									<img src={item.image} className="w-[80px] max-h-20" alt={item.name} />
+									<img
+										src={item.image}
+										className="w-[80px] max-h-20 object-contain"
+										alt={item.name}
+									/>
 								</div>
 							</td>
 							<td className={tdClassName}>{item.name}</td>
@@ -42,7 +47,7 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 							<td className={tdClassName}>{item.weight} gram</td>
 							<td className={tdClassName}>Rp{item.price.toLocaleString("id")}</td>
 							<td className={tdClassName}>{item.description}</td>
-							<td className={tdClassName}>{item.category_id}</td>
+							<td className={tdClassName}>{item.Category.name}</td>
 							<td className={tdClassName}>
 								{item.active ? (
 									<div className="bg-green-200/90 text-gray-100 rounded-md py-1 px-1">Active</div>

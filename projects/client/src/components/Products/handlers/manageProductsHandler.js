@@ -20,6 +20,8 @@ const manageProductErrorHandler = async (error) => {
 		return error?.response?.data?.message;
 	} else if (error?.response?.data === "File type not allowed") {
 		return error?.response?.data;
+	} else if (error?.response?.data === "ER_ROW_IS_REFERENCED_2") {
+		return "Cannot delete, there are still inventories data under this product";
 	}
 
 	return "Something went wrong!";
