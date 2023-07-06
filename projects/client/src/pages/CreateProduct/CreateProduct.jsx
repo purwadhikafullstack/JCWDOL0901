@@ -1,8 +1,8 @@
 import React from "react";
 import BackButton from "../../components/BackButton.jsx";
-import CategoryIllustration from "../../components/Category/CategoryIllustration.jsx";
-import CreateCategoryForm from "../../components/Category/CreateCategoryForm.jsx";
 import CompanyLogo from "../../components/CompanyLogo.jsx";
+import ProductIllustration from "../../components/Products/ProductIllustration.jsx";
+import CreateProductForm from "../../components/Products/CreateProductForm.jsx";
 
 const Illustration = () => {
 	return (
@@ -10,14 +10,14 @@ const Illustration = () => {
 			<div className="mb-10 text-green-100 text-2xl sm:text-3xl font-medium text-left sm:text-center pr-4">
 				Create Product
 			</div>
-			<CategoryIllustration className="w-[160px] sm:w-[350px] pb-12 mx-auto" />
+			<ProductIllustration className="w-[160px] sm:w-[350px] pb-12 mx-auto" />
 		</div>
 	);
 };
 
 const CreateProduct = () => {
 	return (
-		<div className="bg-green-100 flex items-center justify-center h-screen">
+		<div className="bg-green-100 flex items-center justify-center h-auto">
 			<div className="flex flex-col sm:flex-row bg-white rounded-lg h-screen sm:h-auto justify-between">
 				<div className="sm:bg-green-500 z-10 rounded-t-lg sm:rounded-tr-none rounded-tr-lg sm:rounded-l-lg bg-green-500">
 					<BackButton url={-1} color="text-green-100" />
@@ -27,7 +27,7 @@ const CreateProduct = () => {
 					<div className="flex justify-center py-4">
 						<CompanyLogo color="true" className="mt-8 w-[75px] cursor-pointer hidden sm:block" />
 					</div>
-					<CreateCategoryForm />
+					<CreateProductForm />
 				</div>
 			</div>
 		</div>

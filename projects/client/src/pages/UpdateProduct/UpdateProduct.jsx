@@ -1,9 +1,9 @@
 import React from "react";
 import BackButton from "../../components/BackButton.jsx";
 import CategoryIllustration from "../../components/Category/CategoryIllustration.jsx";
-import UpdateCategoryForm from "../../components/Category/UpdateCategoryForm.jsx";
 import CompanyLogo from "../../components/CompanyLogo.jsx";
 import { useLocation } from "react-router-dom";
+import UpdateProductForm from "../../components/Products/UpdateProductForm.jsx";
 
 const Illustration = () => {
 	return (
@@ -19,7 +19,7 @@ const Illustration = () => {
 const UpdateProduct = () => {
 	const item = useLocation().state;
 	return (
-		<div className="bg-green-100 flex items-center justify-center h-screen">
+		<div className="bg-green-100 flex items-center justify-center">
 			<div className="flex flex-col sm:flex-row bg-white rounded-lg h-screen sm:h-auto justify-between">
 				<div className="sm:bg-green-500 z-10 rounded-t-lg sm:rounded-tr-none rounded-tr-lg sm:rounded-l-lg bg-green-500">
 					<BackButton url={-1} color="text-green-100" />
@@ -29,7 +29,7 @@ const UpdateProduct = () => {
 					<div className="flex justify-center py-4">
 						<CompanyLogo color="true" className="mt-8 w-[75px] cursor-pointer hidden sm:block" />
 					</div>
-					<UpdateCategoryForm item={item} />
+					<UpdateProductForm item={item} />
 				</div>
 			</div>
 		</div>

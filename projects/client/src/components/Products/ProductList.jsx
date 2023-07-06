@@ -35,8 +35,8 @@ const ProductList = () => {
 	const itemPerPage = window.innerWidth > 640 ? 8 : 6;
 
 	return (
-		<div className="flex flex-col bg-white p-4 justify-center items-center gap-4">
-			<div className="max-w-3xl flex flex-col gap-4 py-4 px-4 sm:px-10 w-screen ">
+		<div className="flex flex-col bg-green-100 p-4 justify-center items-center gap-4">
+			<div className=" w-full flex flex-col gap-4 py-4 px-4 sm:px-10 ">
 				<ProductFilterSort
 					setName={setName}
 					setFilter={setFilter}

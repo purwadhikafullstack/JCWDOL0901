@@ -22,8 +22,9 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 					buttonName="Delete Category"
 					open={open}
 					setOpen={setOpen}
-					categoryId={categoryId}
+					id={categoryId}
 					handler={deleteCategoryHandler}
+					url={"/admin/category"}
 				/>
 			) : null}
 			{datas.map((item, index) => {

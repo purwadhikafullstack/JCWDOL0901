@@ -1,5 +1,5 @@
 import React from "react";
-import { editProduct, showDeleteAlert, deleteCategoryHandler } from "./handlers/manageProductsHandler";
+import { editProduct, showDeleteAlert, deleteProductHandler } from "./handlers/manageProductsHandler";
 import { useNavigate } from "react-router-dom";
 import { TrashIcon } from "@heroicons/react/outline";
 import DeleteAlert from "../DeleteAlert";
@@ -10,20 +10,21 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 	const navigate = useNavigate();
 	const admin = useSelector((state) => state.admin);
 	const [open, setOpen] = useState(false);
-	const [categoryId, setCategoryId] = useState(0);
-	const [categoryName, setCategoryName] = useState(0);
+	const [productId, setProductId] = useState(0);
+	const [productName, setProductName] = useState(0);
 	const tdClassName = "py-1 h-16 text-xs text-center px-4";
 	return (
 		<>
 			{alert ? (
 				<DeleteAlert
-					title={`Delete Category "${categoryName}"`}
-					desc="Are you sure you want to delete this category? You can only delete this category if there are no products under this category. This category will be permanently removed from the server forever. This action cannot be undone."
-					buttonName="Delete Category"
+					title={`Delete Product "${productName}"`}
+					desc="Are you sure you want to delete this product?"
+					buttonName="Delete Product"
 					open={open}
 					setOpen={setOpen}
-					categoryId={categoryId}
-					handler={deleteCategoryHandler}
+					id={productId}
+					handler={deleteProductHandler}
+					url={"/admin/product"}
 				/>
 			) : null}
 			{datas.map((item, index) => {
@@ -41,7 +42,7 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 							<td className={tdClassName}>{item.weight} gram</td>
 							<td className={tdClassName}>Rp{item.price.toLocaleString("id")}</td>
 							<td className={tdClassName}>{item.description}</td>
-							<td className={tdClassName}>{item.Category.name}</td>
+							<td className={tdClassName}>{item.category_id}</td>
 							<td className={tdClassName}>
 								{item.active ? (
 									<div className="bg-green-200/90 text-gray-100 rounded-md py-1 px-1">Active</div>
@@ -61,7 +62,7 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 									{/* <div>{alert}</div> */}
 									<button
 										className="bg-red text-white px-2 py-2 rounded-lg flex justify-center disabled:bg-gray-300"
-										onClick={() => showDeleteAlert(item, setOpen, setCategoryId, setCategoryName)}
+										onClick={() => showDeleteAlert(item, setOpen, setProductId, setProductName)}
 										disabled={!admin.superAdmin}
 									>
 										<TrashIcon
