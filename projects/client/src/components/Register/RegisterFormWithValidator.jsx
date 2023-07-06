@@ -12,7 +12,12 @@ const RegisterFormWithValidator = ({ setError }) => {
 	return (
 		<form onSubmit={formik.handleSubmit} noValidate>
 			<RegisterInputField formik={formik} />
-			<Button type="submit" name="Register" disabled={formik.isSubmitting || formik.isValidating} />
+			<Button
+				type="submit"
+				name="Register"
+				disabled={formik.isSubmitting || formik.isValidating}
+				pending={formik.isSubmitting}
+			/>
 		</form>
 	);
 };

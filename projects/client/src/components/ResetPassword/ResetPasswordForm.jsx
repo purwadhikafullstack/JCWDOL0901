@@ -24,6 +24,7 @@ const ResetPasswordForm = () => {
 						type="submit"
 						name="Change Password"
 						disabled={formik.isSubmitting || formik.isValidating}
+						pending={formik.isSubmitting}
 					/>
 				</form>
 			</div>
