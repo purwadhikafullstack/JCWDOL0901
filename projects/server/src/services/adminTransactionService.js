@@ -7,6 +7,7 @@ const {
 } = require("../queries/Transactions.js");
 const moment = require("moment");
 const { sequelize } = require("../models/index.js");
+const { incrementInventoriesStockQuery } = require("../queries/Inventories.js");
 
 const getTotalGrossIncome = (data) => data.reduce((total, current) => total + current, 0);
 
@@ -130,6 +131,7 @@ module.exports = {
 				if (Transaction.branch_id !== branch_id) throw "ERR_UNAUTHORIZED";
 				if (Transaction.status_id > 3) throw "ERR_UNAUTHORIZED";
 				await updateTransactionStatusQuery(6, transaction_id, transaction);
+				await incrementInventoriesStockQuery(Transaction.Transaction_details, transaction);
 				await transaction.commit();
 				return await resolve("Success update transaction status!");
 			} catch (error) {
