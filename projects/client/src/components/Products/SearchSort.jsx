@@ -10,11 +10,11 @@ const SearchSort = ({ sort, setSort, order, setOrder }) => {
 	}, [sort.id]);
 	return (
 		<div className="flex flex-col sm:flex-row gap-6 sm:gap-2 pb-16 sm:pb-12">
-			<div className="flex flex-col w-60 gap-3 text-left mx-10 sm:mx-2">
+			<div className="flex flex-col w-48 gap-3 text-left mx-10 sm:mx-2">
 				<h3>Sort by:</h3>
 				<DropDown data={sort} setter={setSort} getter={getProductsSortBy} />
 			</div>
-			<div className="flex flex-col w-60 gap-3 text-left mx-10 sm:mx-2">
+			<div className="flex flex-col w-48 gap-3 text-left mx-10 sm:mx-2">
 				<h3>Direction:</h3>
 				{sort.id == "name" ? (
 					<DropDown data={order} setter={setOrder} getter={() => getOrderByName(sort)} />

@@ -24,7 +24,7 @@ const ProductFilterSort = ({
 		} else return null;
 	};
 	return (
-		<div className="max-w-5xl flex gap-8 flex-row items-center sm:items-start justify-between">
+		<div className="max-w-7xl flex gap-8 flex-row items-center sm:items-start justify-between">
 			<div className="flex flex-row gap-2 w-2/3">
 				<input
 					type="text"

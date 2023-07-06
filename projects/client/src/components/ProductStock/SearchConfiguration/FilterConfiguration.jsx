@@ -1,6 +1,18 @@
 import React from "react";
 import DropDown from "../../DropDown";
 import { getCategories, getFilterBy } from "../handlers/ProductStockHandler";
+import DisabledDropDown from "../../DisabledDropDown";
+const Filter = ({ filterBy, filter, setFilter }) => {
+	React.useEffect(() => {
+		setFilter("");
+	}, [filterBy?.id]);
+
+	if (filterBy?.id === "category_id") {
+		return <DropDown data={filter} setter={setFilter} getter={getCategories} />;
+	}
+
+	return <DisabledDropDown />;
+};
 
 const FilterConfiguration = ({ filterBy, setFilterBy, filter, setFilter }) => {
 	return (
@@ -10,15 +22,9 @@ const FilterConfiguration = ({ filterBy, setFilterBy, filter, setFilter }) => {
 				<div className="flex justify-center w-full lg:w-[45%]">
 					<DropDown data={filterBy} setter={setFilterBy} getter={getFilterBy} />
 				</div>
-				{filterBy?.id === "category_id" ? (
-					<div className="flex mt-2 justify-center w-full lg:w-[45%] lg:mt-0">
-						<DropDown data={filter} setter={setFilter} getter={getCategories} />
-					</div>
-				) : (
-					<div className="flex mt-2 justify-center w-full lg:w-[45%] lg:mt-0">
-						<DropDown data={filter} setter={setFilter} getter={getCategories} disabled={true} />
-					</div>
-				)}
+				<div className="flex mt-2 justify-center w-full lg:w-[45%] lg:mt-0">
+					<Filter filterBy={filterBy} filter={filter} setFilter={setFilter} />
+				</div>
 			</div>
 		</div>
 	);

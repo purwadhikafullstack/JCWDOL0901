@@ -26,7 +26,7 @@ const ManageOrder = () => {
 					<div className="flex flex-col z-10">
 						<CircularBackgroundDecoration />
 						<ResponsiveLogo />
-						<PageTitle title="Manage Order" color={"text-green-100 sm:text-green-400 z-10 mb-auto"} />
+						<PageTitle title="Manage Order" className={"text-green-100 sm:text-green-400 z-10 mb-auto"} />
 						<OrderTableGroup />
 					</div>
 				</div>

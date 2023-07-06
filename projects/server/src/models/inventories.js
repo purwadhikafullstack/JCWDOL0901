@@ -15,10 +15,11 @@ module.exports = (sequelize, DataTypes) => {
 				otherKey: "promotion_id",
 			});
 
-			Inventories.belongsTo(models.Stock_changes, {
-				foreignKey: "id",
+			Inventories.hasMany(models.Stock_changes, {
+				foreignKey: "inventory_id",
+				sourceKey: "id",
 			});
-			Inventories.belongsTo(models.Products, { foreignKey: "product_id" }); // TODO: TEST
+			Inventories.belongsTo(models.Products, { foreignKey: "product_id", targetKey: "id" }); // TODO: TEST
 			Inventories.belongsTo(models.Branches, { foreignKey: "branch_id" });
 			Inventories.hasMany(models.Carts, { foreignKey: "inventory_id" });
 			Inventories.hasMany(models.Transaction_details, {

@@ -2,6 +2,8 @@ import React from "react";
 import AdminLoginIllustration from "../../components/Login/AdminLoginIllustration";
 import AdminLoginForm from "../../components/Login/AdminLoginForm";
 import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration.jsx";
+import Notification from "../../components/Notification";
+import { useLocation } from "react-router-dom";
 
 const Illustration = () => {
 	return (
@@ -20,6 +22,8 @@ const Illustration = () => {
 };
 
 function AdminLoginPage() {
+	const authGuard = useLocation()?.state?.authGuard;
+
 	return (
 		<div className="flex flex-col mx-auto flex-1 min-w-[480px] w-full bg-white sm:bg-gray-100 sm:flex-row sm:justify-center sm:py-20 sm:max-w-full min-h-screen sm:drop-shadow-2xl overflow-hidden">
 			<CircularBackgroundDecoration />
@@ -27,6 +31,7 @@ function AdminLoginPage() {
 				<Illustration />
 			</div>
 			<AdminLoginForm />
+			{authGuard ? <Notification /> : null}
 		</div>
 	);
 }

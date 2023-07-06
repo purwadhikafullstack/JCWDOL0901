@@ -9,7 +9,10 @@ const Button = ({ name, type, onClickHandler = null, disabled, children }) => {
 			disabled={disabled}
 		>
 			{children}
-			<span>{name}</span>
+			<span className="flex items-center disabled:opacity-50">
+				{disabled && <span class="material-symbols-rounded animate-spin mr-2">progress_activity</span>}
+				{name}
+			</span>
 		</button>
 	);
 };
