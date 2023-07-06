@@ -24,15 +24,15 @@ const validationSchema = Yup.object({
   birth,
 });
 
-const onSubmitConfiguration = async (values, setError, navigate) => {
-  await userAccountSettingHandler(values, setError, navigate);
+const onSubmitConfiguration = async (values, setError, user) => {
+  await userAccountSettingHandler(values, setError, user);
 };
 
 export const formikUserAccountSettingConfiguration = (setError, navigate, user) => {
   
   return {
     initialValues: initialValues(user),
-    onSubmit: async (values) => onSubmitConfiguration(values, setError, navigate),
+    onSubmit: async (values) => onSubmitConfiguration(values, setError, user),
     validateOnChange,
     validateOnBlur,
     validationSchema,

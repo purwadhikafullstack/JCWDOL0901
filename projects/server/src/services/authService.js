@@ -7,6 +7,7 @@ const {
 	startUpdatePasswordErrorHandler,
 	startAdminAuthenticationErrorHandler,
 	startUserAuthenticationErrorHandler,
+	startConfirmPasswordErrorHandler,
 } = require("../errors/serviceError.js");
 
 const {
@@ -15,6 +16,7 @@ const {
 	getOldPasswordQuery,
 	updatePasswordQuery,
 	userAuthenticationQuery,
+	userPasswordAuthenticationQuery,
 	getUserIdByEmail,
 } = require("../queries/Users.js");
 const { createProfileQuery } = require("../queries/Profiles.js");
@@ -171,6 +173,21 @@ module.exports = {
 			} catch (error) {
 				await transaction.rollback();
 				return reject(await startUpdatePasswordErrorHandler(error));
+			}
+		});
+	},
+	startConfirmPassword: async (body, id) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				await userPasswordAuthenticationQuery(id, body);
+
+				// if (!(await verifyHashPassword(body.password, result?.password)) || !result) {
+				// 	return reject({ code: 400, message: "Wrong password!" });
+				// }
+
+				return resolve({ message: "Login success!" });
+			} catch (error) {
+				return reject(await startConfirmPasswordErrorHandler(error));
 			}
 		});
 	},

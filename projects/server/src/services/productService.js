@@ -1,5 +1,17 @@
-const { startFindErrorHandler } = require("../errors/serviceError");
-const { readProductQuery, readProductsQuery, readProductsOnlyQuery } = require("../queries/Products");
+const {
+	startFindErrorHandler,
+	startCreateErrorHandler,
+	startUpdateErrorHandler,
+	startDeleteteHandler,
+} = require("../errors/serviceError");
+const {
+	readProductQuery,
+	readProductsQuery,
+	createProductQuery,
+	updateProductQuery,
+	deleteProductQuery,
+	readProductsOnlyQuery,
+} = require("../queries/Products");
 
 const generateRandomIndex = (top, indexHit) => {
 	let randomIndex = Math.ceil(Math.random() * top);
@@ -139,6 +151,39 @@ module.exports = {
 				return resolve(Product);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
+			}
+		});
+	},
+	startCreateProduct: async (body, file) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const Product = await createProductQuery(body, file);
+				return resolve(Product);
+			} catch (error) {
+				return reject(await startCreateErrorHandler(error));
+			}
+		});
+	},
+	startUpdateProduct: async (body, file, params) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const Product = await updateProductQuery(body, file, params);
+				return resolve(Product);
+			} catch (error) {
+				return reject(await startUpdateErrorHandler(error));
+			}
+		});
+	},
+	startDeleteProduct: async (params) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				await deleteProductQuery(params);
+				return resolve({
+					status: 200,
+					message: "Product deleted successfully",
+				});
+			} catch (error) {
+				return reject(await startDeleteteHandler(error));
 			}
 		});
 	},

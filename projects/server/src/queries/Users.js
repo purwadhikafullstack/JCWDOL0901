@@ -27,6 +27,16 @@ const userAuthenticationQuery = async (body, Name) => {
 	return data;
 };
 
+const userPasswordAuthenticationQuery = async (id, body) => {
+	const data = await Users.findOne({ where: { id } });
+
+	if (data?.password !== body.password || !data) {
+		throw "PASS_NOT_VERIFIED";
+	}
+
+	return data;
+};
+
 const getOldPasswordQuery = async (id, transaction) => {
 	return await Users.findOne({ where: { id }, transaction });
 };
@@ -45,5 +55,6 @@ module.exports = {
 	getOldPasswordQuery,
 	updatePasswordQuery,
 	userAuthenticationQuery,
+	userPasswordAuthenticationQuery,
 	getUserIdByEmail,
 };

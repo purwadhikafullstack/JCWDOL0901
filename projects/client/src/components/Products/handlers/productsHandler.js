@@ -1,4 +1,5 @@
 import axios from "axios";
+import Swal from "sweetalert2";
 
 export const generateUrlQuery = (page, itemPerPage, branch_id, category_id, filter, sort, order) => {
 	let url = "";
