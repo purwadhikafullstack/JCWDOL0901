@@ -49,7 +49,7 @@ const TotalPrice = ({ transaction }) => {
 const YourOrder = ({ transaction }) => {
 	return (
 		<div className="py-6">
-			<div className="mx-10">
+			<div className="mx-10 max-w-[800px]">
 				<div className="mb-4 font-semibold text-left">Your Order</div>
 				<div className="text-sm text-left">
 					<span className="text-gray-200 mr-2">INV-{String(transaction.id).padStart(6, "0")}</span>

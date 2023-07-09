@@ -11,7 +11,7 @@ const orderStatusList = {
 	2: "Menunggu Konfirmasi Pembayaran",
 	3: "Diproses",
 	4: "Dikirim",
-	5: "Pesanan Dikonfirmasi",
+	5: "Pesanan Diterima",
 	6: "Dibatalkan",
 };
 
@@ -68,7 +68,7 @@ export default function OrderHistory() {
 				<h1 className="text-center font-bold ml-6 text-lg text-gray-400">Order History</h1>
 			</div>
 			<div className="bg-white overflow-hidden mb-6 mt-20 sm:mt-4">
-				<ul className="flex flex-col gap-2">
+				<ul className="flex flex-col gap-2 pb-16">
 					{user.hasLogged ? data?.map((item, index) => <OrderList item={item} key={index} />) : null}
 				</ul>
 			</div>

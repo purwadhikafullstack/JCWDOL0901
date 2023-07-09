@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import BackButton from "../../components/BackButton";
 import DeliveryAddress from "../../components/Order/DeliveryAddress";
 import YourOrder from "../../components/Order/YourOrder";
+import ActionButtons from "../../components/Order/ActionButtons";
 const moment = require("moment");
 
 const OrderHeader = ({ userData, user }) => {
@@ -96,7 +97,6 @@ const OrderStatus = ({ transaction }) => {
 };
 
 const OrderDetailLayout = ({ transaction, transaction_id }) => {
-	console.log(transaction);
 	const userData = useSelector((state) => state.user);
 	const [user, setUser] = useState();
 	useEffect(() => {
@@ -117,6 +117,9 @@ const OrderDetailLayout = ({ transaction, transaction_id }) => {
 					<OrderStatus transaction={transaction} />
 					<DeliveryAddress transaction={transaction} />
 					<YourOrder transaction={transaction} />
+					{transaction.status_id === 1 || transaction.status_id === 2 || transaction.status_id === 4 ? (
+						<ActionButtons transaction={transaction} />
+					) : null}
 				</div>
 			</div>
 		</div>
