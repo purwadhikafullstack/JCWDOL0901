@@ -3,6 +3,7 @@ const {
 	startCreateTransactionErrorHandler,
 	startFindErrorHandler,
 	startCreateErrorHandler,
+	startUpdateErrorHandler,
 } = require("../errors/serviceError.js");
 const {
 	createTransactionQuery,
@@ -14,7 +15,7 @@ const { createTransactionDetailsQuery } = require("../queries/Transaction_detail
 const { createLogisticsQuery } = require("../queries/Logistics.js");
 const { deleteCartsQueryOnOrder } = require("../queries/Carts.js");
 const { updateUsedUserVouchersQuery } = require("../queries/User_vouchers.js");
-const { decrementInventoriesStockQuery } = require("../queries/Inventories.js");
+const { decrementInventoriesStockQuery, incrementInventoriesStockQuery } = require("../queries/Inventories.js");
 const { createProofQuery } = require("../queries/Proofs.js");
 
 const userTransactionGeneration = async (payload, transaction) => {
@@ -77,6 +78,24 @@ module.exports = {
 				return await resolve(Transaction);
 			} catch (error) {
 				return await reject(await startFindErrorHandler(error));
+			}
+		});
+	},
+	startCancelUserOrderByUser: async (transaction_id, user_id) => {
+		return new Promise(async (resolve, reject) => {
+			const transaction = await sequelize.transaction();
+			try {
+				const Transaction = await readUserTransactionQuery(transaction_id);
+				if (Transaction.user_id !== user_id) throw "ERR_UNAUTHORIZED";
+				if (Transaction.status_id > 2) throw "ERR_UNAUTHORIZED";
+				await updateTransactionStatusQuery(6, transaction_id, transaction);
+				await incrementInventoriesStockQuery(Transaction.Transaction_details, transaction);
+				await transaction.commit();
+				return await resolve("Success update transaction status!");
+			} catch (error) {
+				console.log(error);
+				await transaction.rollback();
+				return await reject(await startUpdateErrorHandler(error));
 			}
 		});
 	},

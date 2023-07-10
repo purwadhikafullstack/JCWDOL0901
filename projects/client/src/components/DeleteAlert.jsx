@@ -62,7 +62,7 @@ export default function DeleteAlert({ title, desc, buttonName, open, setOpen, id
 									onClick={() => {
 										handler(id, navigate);
 										setOpen(false);
-										navigate(url);
+										// navigate(url);
 									}}
 								>
 									{buttonName}
