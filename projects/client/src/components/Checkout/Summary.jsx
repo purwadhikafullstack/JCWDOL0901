@@ -23,7 +23,7 @@ const Discount = ({ summary }) => {
 	return (
 		<div className="grid grid-cols-8 gap-2 font-normal whitespace-nowrap text-left">
 			<span className="col-start-4 col-span-2">Voucher Discount:</span>
-			<span className="col-start-7 col-span-2 "> Rp {summary?.discount?.toLocaleString("id")}</span>
+			<span className="col-start-7 col-span-2 text-red"> Rp {summary?.discount?.toLocaleString("id")}</span>
 		</div>
 	);
 };

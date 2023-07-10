@@ -44,9 +44,11 @@ const ProductCard = ({ product }) => {
 							{`Rp ${price?.final?.toLocaleString("id")}`}
 							<span className="text-xs font-light text-gray-300">{` / ${product.unit}`}</span>
 						</p>
-						<p className="mt-1 text-sm font-medium text-gray-200 text-left px-4 line-through">{`Rp ${price?.original?.toLocaleString(
-							"id",
-						)}`}</p>
+						{price?.original ? (
+							<p className="mt-1 text-sm font-medium text-gray-200 text-left px-4 line-through">{`Rp ${price?.original?.toLocaleString(
+								"id",
+							)}`}</p>
+						) : null}
 					</>
 				) : (
 					<>
