@@ -14,7 +14,12 @@ function UserAccountSettingFormWithValidator({ setError, user }) {
 		return (
 			<form onSubmit={formik.handleSubmit} noValidate>
 				<UserAccountSettingInputField formik={formik} />
-				<Button type="submit" name="Save" disabled={formik.isSubmitting || formik.isValidating} />
+				<Button
+					type="submit"
+					name="Save"
+					disabled={formik.isSubmitting || formik.isValidating}
+					pending={formik.isSubmitting}
+				/>
 			</form>
 		);
 	}
