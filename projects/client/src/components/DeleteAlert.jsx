@@ -4,7 +4,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { ExclamationIcon } from "@heroicons/react/outline";
 import { useNavigate } from "react-router-dom";
 
-export default function DeleteAlert({ title, desc, buttonName, open, setOpen, id, handler, url }) {
+export default function DeleteAlert({ title, desc, buttonName, open, setOpen, id, handler, url, cancelText }) {
 	const cancelButtonRef = useRef(null);
 	const navigate = useNavigate();
 	return (
@@ -73,7 +73,7 @@ export default function DeleteAlert({ title, desc, buttonName, open, setOpen, id
 									onClick={() => setOpen(false)}
 									ref={cancelButtonRef}
 								>
-									Cancel
+									{cancelText ? cancelText : "Cancel"}
 								</button>
 							</div>
 						</div>

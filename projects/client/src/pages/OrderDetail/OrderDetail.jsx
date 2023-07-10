@@ -111,8 +111,8 @@ const OrderDetailLayout = ({ transaction, transaction_id }) => {
 	}, []);
 	return (
 		<div>
-			<div className="flex lg:h-screen lg:justify-center">
-				<div className="flex flex-col divide-y-2 divide-gray-100 mx-auto w-full pb-32 min-h-screen bg-white lg:pb-0 lg:justify-between lg:min-h-fit lg:flex-col lg:my-auto lg:mx-20 lg:rounded-lg lg:shadow-xl">
+			<div className="flex lg:h-full lg:justify-center lg:py-12">
+				<div className="flex flex-col divide-y-2 divide-gray-100 mx-auto w-full pb-32 min-h-screen bg-white lg:pb-10 lg:justify-between lg:min-h-fit lg:flex-col lg:my-auto lg:mx-20 lg:rounded-lg lg:shadow-xl">
 					<OrderHeader userData={userData} user={user} />
 					<OrderStatus transaction={transaction} />
 					<DeliveryAddress transaction={transaction} />
