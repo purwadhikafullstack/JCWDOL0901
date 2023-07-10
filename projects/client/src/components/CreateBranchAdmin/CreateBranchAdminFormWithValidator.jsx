@@ -13,7 +13,7 @@ const CreateBranchAdminFormWithValidator = () => {
 	return (
 		<form onSubmit={formik.handleSubmit} noValidate>
 			<CreateBranchAdminInputField formik={formik} />
-			<Button type="submit" name="Create" disabled={formik.isSubmitting} />
+			<Button type="submit" name="Create" disabled={formik.isSubmitting} pending={formik.isSubmitting} />
 		</form>
 	);
 };

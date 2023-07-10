@@ -17,6 +17,7 @@ function AdminLoginFormWithValidator({ setError }) {
 				type="submit"
 				name="Admin Login"
 				disabled={formik.isSubmitting || formik.isValidating}
+				pending={formik.isSubmitting}
 			/>
 		</form>
 	);

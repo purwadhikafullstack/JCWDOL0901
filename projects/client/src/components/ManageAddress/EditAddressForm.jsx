@@ -48,7 +48,12 @@ const EditAddressForm = ({ address }) => {
 					<div className="mb-auto mt-6 w-72">
 						<CreateNewAddressInputField formik={formik} address={address} />
 					</div>
-					<Button type="submit" name="Save Address" disabled={formik.isSubmitting} />
+					<Button
+						type="submit"
+						name="Save Address"
+						disabled={formik.isSubmitting}
+						pending={formik.isSubmitting}
+					/>
 				</div>
 			</form>
 			<OtherButtons address={address} />

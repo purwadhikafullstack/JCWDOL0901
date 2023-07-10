@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({ name, type, onClickHandler = null, disabled, children }) => {
+const Button = ({ name, type, onClickHandler = null, disabled, pending, children }) => {
 	return (
 		<button
 			type={type}
@@ -10,7 +10,7 @@ const Button = ({ name, type, onClickHandler = null, disabled, children }) => {
 		>
 			{children}
 			<span className="flex items-center disabled:opacity-50">
-				{disabled && <span class="material-symbols-rounded animate-spin mr-2">progress_activity</span>}
+				{pending && <span class="material-symbols-rounded animate-spin mr-2">progress_activity</span>}
 				{name}
 			</span>
 		</button>
