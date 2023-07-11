@@ -1,8 +1,12 @@
 const { startFindErrorHandler } = require("../errors/serviceError");
 const { readProductQuery, readProductsQuery, readProductsOnlyQuery } = require("../queries/Products");
 
-const generateRandomIndex = (top, indexHit) => {
-	let randomIndex = Math.ceil(Math.random() * top);
+const generateRandomIndex = async (top, indexHit) => {
+	let randomIndex;
+
+	do {
+		randomIndex = await Math.ceil(Math.random() * top);
+	} while (indexHit.includes(randomIndex));
 
 	return randomIndex;
 };
