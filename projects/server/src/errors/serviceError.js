@@ -139,6 +139,9 @@ const startUserAuthenticationErrorHandler = async (error) => {
 
 const startCreateErrorHandler = async (error) => {
 	await writeLogFile(error, "startCreateErrorHandler");
+	if (error.name === "SequelizeUniqueConstraintError"){
+		return { code: 500, message: "SequelizeUniqueConstraintError" };
+	}
 
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };

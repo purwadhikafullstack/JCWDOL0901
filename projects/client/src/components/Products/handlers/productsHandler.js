@@ -7,8 +7,10 @@ const productErrorHandler = async (error) => {
 	} else if (error?.response?.status === 400) {
 		return error?.response?.data;
 	} else if (error?.response?.status === 403) {
-		return error?.response?.data;
-	} 
+		return "You must login for adding product to cart";
+	} else if (error?.response?.data === "SequelizeUniqueConstraintError"){
+		return "Product already added in cart";
+	}
 
 	return "Something went wrong!";
 };
@@ -28,13 +30,16 @@ export const generateUrlQuery = (page, itemPerPage, branch_id, category_id, filt
 	return url;
 };
 
-export const addProducts = async (product) => {
+export const addProducts = async (inventory_id, quantity) => {
+
 	try {
 		const token = localStorage.getItem("token");
 		const config = {
 			headers: { Authorization: `Bearer ${token}` },
 		};
-		await axios.post(`${process.env.REACT_APP_API_BASE_URL}/cart/add`, product, config);
+		const body = {inventory_id, quantity}
+		console.log("body at productHandler: ", body);
+		await axios.post(`${process.env.REACT_APP_API_BASE_URL}/cart/add`, body, config);
 
 		Swal.fire({
 			icon: "success",
@@ -43,6 +48,7 @@ export const addProducts = async (product) => {
 			timer: 1000,
 		});
 	} catch (error) {
+		console.log("error productHandler: ", error);
 		Swal.fire({
 			icon: "error",
 			title: await productErrorHandler(error),

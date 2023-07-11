@@ -26,12 +26,8 @@ const readCartQuery = async (query) => {
 		attributes: ["quantity"],
 	});
 };
-const addCartQuery = async (userProduct) => {
-	console.log("addCartQuery user_id: ", userProduct.userData.id);
-	console.log("addCartQuery inventory_id: ", userProduct.body.Inventories[0].id);
-	const user_id = userProduct.userData.id;
-	const inventory_id = userProduct.body.Inventories[0].id;
-	return await Carts.create({user_id: user_id, inventory_id: inventory_id, quantity: 1 })
+const addCartQuery = async (user_id, inventory_id, quantity) => {
+	return await Carts.create({user_id, inventory_id, quantity })
 };
 
 const deleteCartsQueryOnOrder = async (user, transaction) => {

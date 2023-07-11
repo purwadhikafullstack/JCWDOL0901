@@ -62,7 +62,7 @@ const ProductCard = ({ product }) => {
 				className="self-end mt-auto px-2 py-2 text-base font-medium rounded-md group"
 				onClick={() => {
 					console.log("click add btn in productCard: ", product);
-					addProducts(product)
+					addProducts(product.Inventories[0].id, 1)
 				}}
 				disabled={!user?.hasLogged}
 			>

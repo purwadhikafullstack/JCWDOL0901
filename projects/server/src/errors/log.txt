@@ -104,3 +104,108 @@
 	Source: startCreateErrorHandler
 	Error: {"name":"SequelizeValidationError","errors":[{"message":"Carts.user_id cannot be null","type":"notNull Violation","path":"user_id","value":null,"origin":"CORE","instance":{"user_id":null,"inventory_id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Carts.inventory_id cannot be null","type":"notNull Violation","path":"inventory_id","value":null,"origin":"CORE","instance":{"user_id":null,"inventory_id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]},{"message":"Carts.quantity cannot be null","type":"notNull Violation","path":"quantity","value":null,"origin":"CORE","instance":{"user_id":null,"inventory_id":null},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
 	
+	===
+	Time: Tue Jul 11 2023 09:27:25 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-268","origin":"DB","instance":{"user_id":1,"inventory_id":268,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-268' for key 'Carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,268,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-268' for key 'Carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,268,1]},"fields":{"PRIMARY":"1-268"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Tue Jul 11 2023 09:49:40 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-166","origin":"DB","instance":{"user_id":1,"inventory_id":166,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-166' for key 'Carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,166,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-166' for key 'Carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,166,1]},"fields":{"PRIMARY":"1-166"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Tue Jul 11 2023 09:50:49 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-166","origin":"DB","instance":{"user_id":1,"inventory_id":166,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-166' for key 'Carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,166,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-166' for key 'Carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,166,1]},"fields":{"PRIMARY":"1-166"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Tue Jul 11 2023 09:54:27 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-166","origin":"DB","instance":{"user_id":1,"inventory_id":166,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-166' for key 'Carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,166,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-166' for key 'Carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,166,1]},"fields":{"PRIMARY":"1-166"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Tue Jul 11 2023 09:59:21 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-166","origin":"DB","instance":{"user_id":1,"inventory_id":166,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-166' for key 'Carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,166,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-166' for key 'Carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,166,1]},"fields":{"PRIMARY":"1-166"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Tue Jul 11 2023 09:59:27 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-166","origin":"DB","instance":{"user_id":1,"inventory_id":166,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-166' for key 'Carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,166,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-166' for key 'Carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,166,1]},"fields":{"PRIMARY":"1-166"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Tue Jul 11 2023 10:07:37 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-160","origin":"DB","instance":{"user_id":1,"inventory_id":160,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-160' for key 'Carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,160,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-160' for key 'Carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,160,1]},"fields":{"PRIMARY":"1-160"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Tue Jul 11 2023 10:13:57 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Carts.quantity cannot be null","type":"notNull Violation","path":"quantity","value":null,"origin":"CORE","instance":{"user_id":1,"inventory_id":"160"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jul 11 2023 10:14:27 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Carts.quantity cannot be null","type":"notNull Violation","path":"quantity","value":null,"origin":"CORE","instance":{"user_id":1,"inventory_id":"158"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jul 11 2023 10:14:42 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Carts.quantity cannot be null","type":"notNull Violation","path":"quantity","value":null,"origin":"CORE","instance":{"user_id":1,"inventory_id":"158"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jul 11 2023 10:19:32 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Carts.quantity cannot be null","type":"notNull Violation","path":"quantity","value":null,"origin":"CORE","instance":{"user_id":1,"inventory_id":"159"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jul 11 2023 10:22:34 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Carts.quantity cannot be null","type":"notNull Violation","path":"quantity","value":null,"origin":"CORE","instance":{"user_id":1,"inventory_id":"159"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jul 11 2023 10:27:42 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Carts.quantity cannot be null","type":"notNull Violation","path":"quantity","value":null,"origin":"CORE","instance":{"user_id":1,"inventory_id":"159"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jul 11 2023 10:32:12 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Carts.quantity cannot be null","type":"notNull Violation","path":"quantity","value":null,"origin":"CORE","instance":{"user_id":1,"inventory_id":"159"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jul 11 2023 10:32:44 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Carts.quantity cannot be null","type":"notNull Violation","path":"quantity","value":null,"origin":"CORE","instance":{"user_id":1,"inventory_id":"159"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jul 11 2023 10:35:49 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Carts.quantity cannot be null","type":"notNull Violation","path":"quantity","value":null,"origin":"CORE","instance":{"user_id":1,"inventory_id":"159"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jul 11 2023 10:40:25 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Carts.quantity cannot be null","type":"notNull Violation","path":"quantity","value":null,"origin":"CORE","instance":{"user_id":1,"inventory_id":"159"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jul 11 2023 10:43:32 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Carts.quantity cannot be null","type":"notNull Violation","path":"quantity","value":null,"origin":"CORE","instance":{"user_id":1,"inventory_id":"159"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jul 11 2023 10:45:22 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Carts.quantity cannot be null","type":"notNull Violation","path":"quantity","value":null,"origin":"CORE","instance":{"user_id":1,"inventory_id":"159"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jul 11 2023 10:46:21 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Carts.quantity cannot be null","type":"notNull Violation","path":"quantity","value":null,"origin":"CORE","instance":{"user_id":1,"inventory_id":"159"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
+	===
+	Time: Tue Jul 11 2023 10:47:20 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Carts.quantity cannot be null","type":"notNull Violation","path":"quantity","value":null,"origin":"CORE","instance":{"user_id":1,"inventory_id":"159"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	

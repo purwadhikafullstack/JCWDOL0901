@@ -13,13 +13,15 @@ module.exports = {
 			}
 		});
 	},
-	startAddCarts: async (userProduct) => {
+	startAddCarts: async (userData, body) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const Carts = await addCartQuery(userProduct);
+				const {inventory_id, quantity} = body;
+				const Carts = await addCartQuery(userData.id, inventory_id, quantity);
 
 				return await resolve(Carts);
 			} catch (error) {
+				console.log("error cartService: ", error);
 				return await reject(await startCreateErrorHandler(error));
 			}
 		});

@@ -10,7 +10,8 @@ const getUserCarts = async (request, response) => {
 		});
 };
 const addUserCarts = async (request, response) => {
-	await startAddCarts(request)
+	console.log("request.body cartController: ", request.body );
+	await startAddCarts(request.userData, request.body)
 		.then((result) => {
 			response.status(200).send(result);
 		})
