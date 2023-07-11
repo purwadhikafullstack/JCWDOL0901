@@ -209,3 +209,13 @@
 	Source: startCreateErrorHandler
 	Error: {"name":"SequelizeValidationError","errors":[{"message":"Carts.quantity cannot be null","type":"notNull Violation","path":"quantity","value":null,"origin":"CORE","instance":{"user_id":1,"inventory_id":"159"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
 	
+	===
+	Time: Tue Jul 11 2023 11:12:35 GMT+0700 (Western Indonesia Time)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Tue Jul 11 2023 11:14:03 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeValidationError","errors":[{"message":"Carts.quantity cannot be null","type":"notNull Violation","path":"quantity","value":null,"origin":"CORE","instance":{"user_id":1,"inventory_id":"203"},"validatorKey":"is_null","validatorName":null,"validatorArgs":[]}]}
+	
