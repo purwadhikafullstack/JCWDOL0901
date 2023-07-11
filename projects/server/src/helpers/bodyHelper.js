@@ -13,7 +13,7 @@ const getTransactionDetailPayload = async (body) => {
 	const data = body.cart.map((item) => {
 		return {
 			inventory_id: item.Inventory.id,
-			inventory_promotion_id: item.Inventory.promo?.Promotion?.id || null,
+			inventory_promotion_id: item.Inventory.promo?.id || null,
 			name: item.Inventory.Product.name,
 			quantity: item.quantity,
 			price: item.Inventory.Product.price,
