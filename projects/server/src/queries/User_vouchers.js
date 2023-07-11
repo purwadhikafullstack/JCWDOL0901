@@ -39,6 +39,10 @@ const createUserVouchersAsReferralReward = async (registrant_id, referred_id, tr
 	);
 };
 
+const createUserVouchersAsTransactionReward = async (user_id, transaction) => {
+	return await User_vouchers.create({ user_id, voucher_id: 7 }, { transaction });
+};
+
 const updateUsedUserVouchersQuery = async (user, voucher, transaction) => {
 	return await User_vouchers.update(
 		{ isUsed: true },
@@ -51,4 +55,9 @@ const updateUsedUserVouchersQuery = async (user, voucher, transaction) => {
 	);
 };
 
-module.exports = { readUserVouchersQuery, createUserVouchersAsReferralReward, updateUsedUserVouchersQuery };
+module.exports = {
+	readUserVouchersQuery,
+	createUserVouchersAsReferralReward,
+	updateUsedUserVouchersQuery,
+	createUserVouchersAsTransactionReward,
+};

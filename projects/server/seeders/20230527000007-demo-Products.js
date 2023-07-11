@@ -964,12 +964,12 @@ module.exports = {
 				},
 				{
 					image: "/product/101.png",
-					name: "Lifebuoy Antibakteri Total 10 Activ Silver+ Formula 500ml/Sabun Mandi",
-					price: 70000,
+					name: "Lifebuoy Antibakteri Total 10 Activ Silver+ Formula 450ml/Sabun Mandi Refill",
+					price: 22500,
 					description:
 						"Sabun mandi cair yang dapat membersihkan kulit secara lembut dan menjaga kulit tetap sehat",
 					weight: 500,
-					unit: "500 mililiter",
+					unit: "450 mililiter",
 					category_id: 17,
 				},
 				{
