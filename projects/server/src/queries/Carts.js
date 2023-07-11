@@ -9,6 +9,8 @@ const {
 	Products,
 } = require("../models/index.js");
 
+// Update cart query isinya Carts.update yang isinya where user_id sekian , inventory_id sekian
+
 const readCartQuery = async (query) => {
 	return await Carts.findAll({
 		where: { user_id: query.user_id },
