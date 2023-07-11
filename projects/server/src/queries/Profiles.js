@@ -19,6 +19,8 @@ const getUserProfileQuery = async (id) => {
 		email: user.email,
 		birth: profile.birth,
 		referral_code: user.referral_code,
+		username: user.username,
+		avatar: profile.avatar,
 	};
 	return data;
 };

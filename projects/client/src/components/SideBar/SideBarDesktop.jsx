@@ -11,8 +11,8 @@ export default function SideBarDesktop({ children }) {
 					<SideBarFooter />
 				</div>
 			</div>
-			<div className="pl-64 flex flex-col flex-1">
-				<div className="min-w-[480px] w-full mx-auto bg-green-100">{children}</div>
+			<div className="sm:pl-64 flex flex-col flex-1">
+				<div className="min-w-[480px] max-w-7xl mx-auto bg-green-100">{children}</div>
 			</div>
 		</>
 	);

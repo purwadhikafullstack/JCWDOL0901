@@ -59,6 +59,19 @@ const startUpdatePasswordErrorHandler = async (error) => {
 	};
 };
 
+const startConfirmPasswordErrorHandler = async (error) => {
+	await writeLogFile(error, "startConfirmPasswordErrorHandler");
+
+	if (error === "PASS_NOT_VERIFIED") {
+		return { code: 400, message: `Your password is wrong!` };
+	}
+
+	return {
+		code: 500,
+		message: "Internal Server Error, please contact us!",
+	};
+};
+
 const forbiddenErrorHandler = async () => {
 	await writeLogFile(
 		"Forbidden access, a non super admin trying to access restricted request",
@@ -186,4 +199,5 @@ module.exports = {
 	startGetUserAddressesErrorHandler,
 	startUpdateAvatarErrorHandler,
 	startGetAvatarErrorHandler,
+	startConfirmPasswordErrorHandler,
 };

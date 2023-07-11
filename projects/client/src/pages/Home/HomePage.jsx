@@ -6,7 +6,7 @@ import ProductsRecommendation from "../../components/ProductsRecommendation";
 import MobileNavBar from "../../components/MobileNavBar";
 import Footer from "../../components/Footer";
 import SelectBranchModal from "../../components/SelectBranchModal";
-import DesktopHeader from "../../components/DesktopHeader";
+
 const HomePage = () => {
 	const [showModal, setShowModal] = React.useState(false);
 	const [page, setPage] = React.useState(1);
