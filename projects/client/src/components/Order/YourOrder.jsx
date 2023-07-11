@@ -1,36 +1,53 @@
 const ItemPrice = ({ item }) => {
 	return (
-		<div className="flex flex-row py-4 text-gray-200 text-sm">
+		<div className="flex flex-row py-4 text-gray-300 text-sm">
 			<div className="text-left">{item.quantity}x</div>
 			<div className="px-4 text-left">{item.name}</div>
-			<div className="px-4 text-right ml-auto text-black">Rp{item.price.toLocaleString("id")}</div>
+			<div className="px-4 text-right ml-auto text-red">{item?.Inventory_promotion?.Promotion?.name}</div>
+			{item?.Inventory_promotion?.Promotion?.id === 2 || item?.Inventory_promotion?.Promotion?.id === 3 ? (
+				<div className="px-4 text-right text-gray-200 line-through">
+					Rp{(item.price * item.quantity).toLocaleString("id")}
+				</div>
+			) : null}
+
+			{item?.Inventory_promotion?.Promotion?.id === 2 ? (
+				<div className="px-4 text-right text-black">
+					Rp{((item.price - item.branch_discount) * item.quantity).toLocaleString("id")}
+				</div>
+			) : item?.Inventory_promotion?.Promotion?.id === 3 ? (
+				<div className="px-4 text-right text-black">
+					Rp{((item.price - (item.branch_discount / 100) * item.price) * item.quantity).toLocaleString("id")}
+				</div>
+			) : (
+				<div className="px-4 text-right text-black">Rp{(item.price * item.quantity).toLocaleString("id")}</div>
+			)}
 		</div>
 	);
 };
 
-const SubTotal = ({ transaction }) => {
+const SubTotal = ({ subTotal }) => {
 	return (
 		<div className="flex flex-row pt-4 text-gray-200 text-sm">
 			<div className="text-left">Sub Total</div>
-			<div className="px-4 text-right ml-auto text-black">Rp{transaction.amount.toLocaleString("id")}</div>
+			<div className="px-4 text-right ml-auto text-black">Rp{subTotal.toLocaleString("id")}</div>
 		</div>
 	);
 };
 
-const DeliveryCost = ({ transaction }) => {
+const DeliveryCost = ({ deliveryCost }) => {
 	return (
 		<div className="flex flex-row pt-4 text-gray-200 text-sm">
 			<div className="text-left">Delivery Cost</div>
-			<div className="px-4 text-right ml-auto text-black">Rp{transaction.amount.toLocaleString("id")}</div>
+			<div className="px-4 text-right ml-auto text-black">Rp{deliveryCost.toLocaleString("id")}</div>
 		</div>
 	);
 };
 
-const VoucherDiscount = ({ transaction }) => {
+const VoucherDiscount = ({ voucher_discount }) => {
 	return (
 		<div className="flex flex-row py-4 text-gray-200 text-sm">
 			<div className="text-left">Voucher Discount</div>
-			<div className="px-4 text-right ml-auto text-black">Rp{transaction.amount.toLocaleString("id")}</div>
+			<div className="px-4 text-right ml-auto text-red">Rp{voucher_discount.toLocaleString("id")}</div>
 		</div>
 	);
 };
@@ -47,6 +64,9 @@ const TotalPrice = ({ transaction }) => {
 };
 
 const YourOrder = ({ transaction }) => {
+	const deliveryCost = transaction.Logistic.shipping_cost;
+	const voucher_discount = transaction.voucher_discount;
+	const subTotal = transaction.amount + voucher_discount - deliveryCost;
 	return (
 		<div className="py-6">
 			<div className="mx-10 max-w-[800px]">
@@ -59,9 +79,9 @@ const YourOrder = ({ transaction }) => {
 						return <ItemPrice item={item} key={index} />;
 					})}
 					<div className="flex flex-col">
-						<SubTotal transaction={transaction} />
-						<DeliveryCost transaction={transaction} />
-						<VoucherDiscount transaction={transaction} />
+						<SubTotal subTotal={subTotal} />
+						<DeliveryCost deliveryCost={deliveryCost} />
+						<VoucherDiscount voucher_discount={voucher_discount} />
 					</div>
 					<TotalPrice transaction={transaction} />
 				</div>

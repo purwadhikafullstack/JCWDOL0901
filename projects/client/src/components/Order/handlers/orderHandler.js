@@ -28,20 +28,22 @@ export const cancelOrderHandler = async (id, navigate) => {
 		const config = {
 			headers: { Authorization: `Bearer ${token}` },
 		};
-		await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/category/${id}/delete`, config);
-
+		await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/transaction/${id}/cancel`, null, config);
 		Swal.fire({
 			icon: "success",
-			title: "Category has been deleted",
+			title: "Order has been canceled",
 			showConfirmButton: false,
-			timer: 2000,
+			timer: 1000,
 		});
+		setTimeout(() => {
+			navigate("/order");
+		}, 2000);
 	} catch (error) {
 		Swal.fire({
 			icon: "error",
 			title: await cancelOrderErrorHandler(error),
 			showConfirmButton: false,
-			timer: 2000,
+			timer: 1000,
 		});
 	}
 };

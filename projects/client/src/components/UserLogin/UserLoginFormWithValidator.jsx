@@ -15,7 +15,12 @@ function UserLoginFormWithValidator({ setError }) {
 	return (
 		<form onSubmit={formik.handleSubmit} noValidate>
 			<UserLoginInputField formik={formik} />
-			<Button type="submit" name="Login" disabled={formik.isSubmitting || formik.isValidating} />
+			<Button
+				type="submit"
+				name="Login"
+				disabled={formik.isSubmitting || formik.isValidating}
+				pending={formik.isSubmitting}
+			/>
 		</form>
 	);
 }

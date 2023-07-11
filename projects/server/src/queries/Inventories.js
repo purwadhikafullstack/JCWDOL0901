@@ -45,10 +45,15 @@ const incrementInventoriesStockQuery = async (transaction_detail, transaction) =
 	});
 };
 
+const readInventoryQuery = async (inventory_id, transaction) => {
+	return Inventories.findOne({ where: { id: inventory_id } });
+};
+
 module.exports = {
 	readInventoriesQuery,
 	createInventoryQueryForNewBranch,
 	updateInventoriesQuery,
 	decrementInventoriesStockQuery,
 	incrementInventoriesStockQuery,
+	readInventoryQuery,
 };

@@ -172,13 +172,13 @@ const startCreateTransactionErrorHandler = async (error) => {
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
-const rajaOngkirErrorHandler = async (body) => {
-	await writeLogFile(body, "rajaOngkirErrorHandler");
+const rajaOngkirErrorHandler = async (data) => {
+	await writeLogFile(data, "rajaOngkirErrorHandler");
 
-	const statusCode = body.rajaongkir.status.code;
+	const statusCode = data.status;
 
 	if (statusCode === 400) {
-		return { code: 400, message: body.rajaongkir.status.description };
+		return { code: 400, message: "Bad request" };
 	}
 
 	return { code: 500, message: "Service Unavailable" };

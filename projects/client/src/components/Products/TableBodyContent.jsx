@@ -6,8 +6,7 @@ import DeleteAlert from "../DeleteAlert";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 
-const TableBodyContent = ({ datas, page, itemPerPage }) => {
-	console.log(datas);
+const TableBodyContent = ({ datas, page, itemPerPage, setIsUpdated }) => {
 	const navigate = useNavigate();
 	const admin = useSelector((state) => state.admin);
 	const [open, setOpen] = useState(false);
@@ -23,9 +22,7 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 					buttonName="Delete Product"
 					open={open}
 					setOpen={setOpen}
-					id={productId}
-					handler={deleteProductHandler}
-					url={"/admin/product"}
+					handler={() => deleteProductHandler(productId, navigate, setIsUpdated)}
 				/>
 			) : null}
 			{datas.map((item, index) => {

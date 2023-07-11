@@ -43,7 +43,7 @@ const DesktopNavBar = ({ setFilter }) => {
 					</div>
 				) : (
 					<div className="flex w-8">
-						<img className="h-8 w-8 rounded-full shrink-0" src="/assets/avatars/default.png" alt="avatar" />
+						<span className="material-icons-outlined w-full">account_circle</span>
 					</div>
 				)}
 			</button>

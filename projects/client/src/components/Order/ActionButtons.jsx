@@ -27,9 +27,7 @@ const ActionButtons = ({ transaction }) => {
 						buttonName="Cancel Order"
 						open={open}
 						setOpen={setOpen}
-						id={transaction.id}
-						handler={cancelOrderHandler}
-						url={"/order"}
+						handler={() => cancelOrderHandler(transaction.id, navigate)}
 						cancelText="No"
 					/>
 				) : null}

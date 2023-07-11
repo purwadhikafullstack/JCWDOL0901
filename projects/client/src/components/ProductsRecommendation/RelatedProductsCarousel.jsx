@@ -21,7 +21,7 @@ const RelatedProductsCarousel = ({ branch_id, category_id, inventory_id }) => {
 			.then((result) => setProducts(result.data.rows))
 			.catch((error) => setProducts([{ name: "Server Error!", image: "" }]));
 	}, []);
-	const itemPerPage = window.innerWidth > 640 ? 4 : 2;
+	const itemPerPage = window.innerWidth > 1024 ? 5 : window.innerWidth > 768 ? 4 : window.innerWidth > 640 ? 3 : 2;
 	return (
 		products && (
 			<Splide

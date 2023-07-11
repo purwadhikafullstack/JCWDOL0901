@@ -6,6 +6,7 @@ import { AdjustmentsIcon } from "@heroicons/react/outline";
 import BackButton from "../BackButton";
 import SearchSort from "./SearchSort";
 import SortModal from "./SortModal";
+import { useSelector } from "react-redux";
 
 const SortButton = ({ setOpen, open, order, setOrder, sort, setSort, className }) => {
 	return (
@@ -36,6 +37,7 @@ const SortButton = ({ setOpen, open, order, setOrder, sort, setSort, className }
 
 const ProductsHeader = ({ setFilter, order, setOrder, sort, setSort }) => {
 	const [open, setOpen] = useState(false);
+
 	return (
 		<>
 			<div className="flex flex-col sm:bg-green-200 sm:pb-4 sm:px-12 items-center">
@@ -53,6 +55,7 @@ const ProductsHeader = ({ setFilter, order, setOrder, sort, setSort }) => {
 					/>
 				</div>
 				<SearchBar setFilter={setFilter} className="sm:hidden" />
+
 				<SortButton
 					setOpen={setOpen}
 					open={open}

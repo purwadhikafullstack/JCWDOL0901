@@ -64,11 +64,20 @@ const DesktopSlides = ({ categories, setPage }) => {
 	const location = useLocation();
 	const parsed = queryString.parse(location.search);
 	const { category_id } = parsed;
-
+	const itemPerPage =
+		window.innerWidth > 1280
+			? 10
+			: window.innerWidth > 1024
+			? 8
+			: window.innerWidth > 768
+			? 6
+			: window.innerWidth > 640
+			? 5
+			: 4;
 	return (
 		<Splide
 			options={{
-				perPage: 6,
+				perPage: itemPerPage,
 				padding: 5,
 				pagination: false,
 				arrows: true,

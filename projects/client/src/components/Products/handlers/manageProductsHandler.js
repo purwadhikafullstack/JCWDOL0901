@@ -83,14 +83,14 @@ export const updateProductHandler = async (input, item, navigate) => {
 	}
 };
 
-export const deleteProductHandler = async (id, navigate) => {
+export const deleteProductHandler = async (id, navigate, setIsUpdated) => {
 	try {
 		const token = localStorage.getItem("token");
 		const config = {
 			headers: { Authorization: `Bearer ${token}` },
 		};
 		await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/admin/product/${id}/delete`, config);
-
+		setIsUpdated(true);
 		Swal.fire({
 			icon: "success",
 			title: "Product has been deleted",
