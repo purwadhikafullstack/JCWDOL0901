@@ -9,7 +9,7 @@ const SearchSort = ({ sort, setSort, order, setOrder }) => {
 
 	return (
 		<div className="flex flex-col w-[25%]">
-			<span class="material-symbols-rounded mb-2.5">sort</span>
+			<span className="material-symbols-rounded mb-2.5">sort</span>
 			<div className="flex flex-col items-center lg:justify-around lg:items-center lg:flex-row">
 				<div className="w-full mb-2 lg:w-[45%] lg:mb-0">
 					<DropDown data={sort} setter={setSort} getter={getPromotionsSortBy} />

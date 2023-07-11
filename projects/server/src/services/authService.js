@@ -110,11 +110,17 @@ module.exports = {
 			try {
 				const result = await adminAuthenticationQuery(body, Name);
 
+				if (result?.password !== body.password || !result)
+					return reject({ code: 400, message: "Wrong email or password!" });
+
 				// if (!(await verifyHashPassword(body.password, data?.password)) || !data)
 				// 	return reject({ code: 400, message: "Wrong email or password!" });
 
-				return resolve(result);
+				const token = await generateJWToken(result, "super" in result);
+
+				return resolve({ message: "Login success!", token });
 			} catch (error) {
+				console.log(error);
 				return reject(await startAdminAuthenticationErrorHandler(error));
 			}
 		});
@@ -123,6 +129,7 @@ module.exports = {
 		return new Promise(async (resolve, reject) => {
 			try {
 				const result = await userAuthenticationQuery(body, Name);
+
 				if (result?.password !== body.password || !result)
 					return reject({ code: 400, message: "Wrong email or password!" });
 
@@ -130,6 +137,7 @@ module.exports = {
 
 				return resolve({ message: "Login success!", token });
 			} catch (error) {
+				console.log(error);
 				return reject(await startUserAuthenticationErrorHandler(error));
 			}
 		});
