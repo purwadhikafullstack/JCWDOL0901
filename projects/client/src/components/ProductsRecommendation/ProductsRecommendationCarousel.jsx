@@ -23,8 +23,8 @@ const ProductsRecommendationCarousel = () => {
 		getProductsRecommendation(user.branch.id)
 			.then((result) => setProducts(result.data))
 			.catch((error) => setProducts([{ name: "Server Error!", image: "" }]));
-	}, [user]);
-	const itemPerPage = window.innerWidth > 640 ? 5 : 2;
+	}, [user, window.innerWidth]);
+	const itemPerPage = window.innerWidth > 1024 ? 5 : window.innerWidth > 768 ? 4 : window.innerWidth > 640 ? 3 : 2;
 	return (
 		products && (
 			<Splide

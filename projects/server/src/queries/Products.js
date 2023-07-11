@@ -70,7 +70,8 @@ const readProductsOnlyQuery = async (params) => {
 	const order = params?.order ? [...params?.order] : [];
 
 	return await Products.findAndCountAll({
-		where: { ...params?.Products, active: true },
+		where: { ...params?.Products },
+		include: Categories,
 		offset,
 		limit,
 		order,

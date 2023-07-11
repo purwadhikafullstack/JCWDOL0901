@@ -8,6 +8,9 @@ const {
 	Users,
 	Profiles,
 	Proofs,
+	Inventory_promotions,
+	Promotions,
+	Logistics,
 } = require("../models/index.js");
 
 const { Op, literal, Transaction } = require("sequelize");
@@ -88,7 +91,14 @@ const createTransactionQuery = async (payload, transaction) => {
 };
 
 const readUserTransactionQuery = async (transaction_id) => {
-	return await Transactions.findOne({ where: { id: transaction_id }, include: Transaction_details });
+	return await Transactions.findOne({
+		where: { id: transaction_id },
+		include: [
+			{ model: Transaction_details, include: { model: Inventory_promotions, include: Promotions } },
+			{ model: Logistics },
+			{ model: Branches },
+		],
+	});
 };
 
 const updateTransactionStatusQuery = async (status_id, transaction_id, transaction) => {
@@ -98,10 +108,19 @@ const updateTransactionStatusQuery = async (status_id, transaction_id, transacti
 	);
 };
 
+const readUserTransactionsQuery = async (user_id) => {
+	return await Transactions.findAndCountAll({
+		where: { user_id },
+		include: { model: Transaction_details, include: { model: Inventories, include: Products } },
+		distinct: true,
+	});
+};
+
 module.exports = {
 	readAdminTransactionsQuery,
 	readBranchAdminTransactionsQuery,
 	createTransactionQuery,
 	readUserTransactionQuery,
 	updateTransactionStatusQuery,
+	readUserTransactionsQuery,
 };

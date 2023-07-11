@@ -7,7 +7,8 @@ const {
 } = require("../queries/Transactions.js");
 const moment = require("moment");
 const { sequelize } = require("../models/index.js");
-const { incrementInventoriesStockQuery } = require("../queries/Inventories.js");
+const { incrementInventoriesStockQuery, readInventoryQuery } = require("../queries/Inventories.js");
+const { createStockChangeQuery } = require("../queries/Stock_changes.js");
 
 const getTotalGrossIncome = (data) => data.reduce((total, current) => total + current, 0);
 
@@ -115,6 +116,14 @@ module.exports = {
 				if (Transaction.branch_id !== branch_id) throw "ERR_UNAUTHORIZED";
 				if (Transaction.status_id !== 3) throw "ERR_UNAUTHORIZED";
 				await updateTransactionStatusQuery(4, transaction_id, transaction);
+
+				for (const item of Transaction.Transaction_details) {
+					const Inventory = await readInventoryQuery(item.inventory_id, transaction);
+					const previousStock = Inventory.stock + item.quantity;
+					const description = "Sales";
+					await createStockChangeQuery(Inventory, previousStock, description, transaction);
+				}
+
 				await transaction.commit();
 				return await resolve("Success update transaction status!");
 			} catch (error) {
