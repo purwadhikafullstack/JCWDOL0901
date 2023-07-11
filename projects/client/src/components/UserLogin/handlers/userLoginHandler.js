@@ -14,6 +14,32 @@ const userLoginErrorHandler = async (error) => {
 	return "Something went wrong!";
 };
 
+const isUserLogged = async (navigate, dispatch) => {
+	try {
+		const token = localStorage.getItem("token");
+		const config = {
+			headers: { Authorization: `Bearer ${token}` },
+		};
+		const userData = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/auth/user/logged`, config);
+		if (!userData) {
+			navigate(`/login`, {
+				state: {
+					authGuard: true,
+				},
+			});
+		}
+		dispatch(setUserLogin({ hasLogged: true, avatar: userData.data.avatar, username: userData.data.username }));
+		return;
+	} catch (error) {
+		dispatch(setUserLogin({ hasLogged: false, avatar: "", username: "" }));
+		navigate(`/login`, {
+			state: {
+				authGuard: true,
+			},
+		});
+	}
+};
+
 export const userLoginButtonHandler = async (input, setError, navigate, dispatch) => {
 	try {
 		const { user, password } = input;
@@ -23,8 +49,9 @@ export const userLoginButtonHandler = async (input, setError, navigate, dispatch
 		});
 		localStorage.setItem("token", response.data.token);
 		storeAdminToken(response.data.token);
-		dispatch(setUserLogin({ hasLogged: true }));
+
 		navigate("/");
+		isUserLogged(navigate, dispatch);
 	} catch (error) {
 		await setError(await userLoginErrorHandler(error));
 	}

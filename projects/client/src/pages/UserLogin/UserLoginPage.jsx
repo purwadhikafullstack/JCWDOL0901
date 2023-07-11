@@ -4,6 +4,8 @@ import BackButton from "../../components/BackButton";
 import UserLoginForm from "../../components/UserLogin/UserLoginForm";
 import CompanyLogo from "../../components/CompanyLogo";
 import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration";
+import Notification from "../../components/Notification";
+import { useLocation } from "react-router-dom";
 
 const Illustration = () => {
 	return (
@@ -21,6 +23,7 @@ const Illustration = () => {
 };
 
 function UserLoginPage() {
+	const authGuard = useLocation()?.state?.authGuard;
 	return (
 		<div className="flex flex-col mx-auto flex-1 min-w-[480px] w-full bg-white sm:bg-gray-100 sm:flex-row sm:justify-center sm:max-w-full min-h-screen sm:drop-shadow-2xl overflow-hidden">
 			<CircularBackgroundDecoration />
@@ -29,6 +32,7 @@ function UserLoginPage() {
 				<Illustration />
 			</div>
 			<UserLoginForm />
+			{authGuard ? <Notification /> : null}
 		</div>
 	);
 }
