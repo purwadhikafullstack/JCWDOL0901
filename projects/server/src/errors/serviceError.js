@@ -59,6 +59,19 @@ const startUpdatePasswordErrorHandler = async (error) => {
 	};
 };
 
+const startConfirmPasswordErrorHandler = async (error) => {
+	await writeLogFile(error, "startConfirmPasswordErrorHandler");
+
+	if (error === "PASS_NOT_VERIFIED") {
+		return { code: 400, message: `Your password is wrong!` };
+	}
+
+	return {
+		code: 500,
+		message: "Internal Server Error, please contact us!",
+	};
+};
+
 const forbiddenErrorHandler = async () => {
 	await writeLogFile(
 		"Forbidden access, a non super admin trying to access restricted request",
@@ -139,6 +152,9 @@ const startDeleteteHandler = async (error) => {
 };
 const startUpdateErrorHandler = async (error) => {
 	await writeLogFile(error, "startUpdateErrorHandler");
+	if (error === "ERR_UNAUTHORIZED") {
+		return { code: 403, message: "Unauthorized!" };
+	}
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
@@ -153,13 +169,13 @@ const startCreateTransactionErrorHandler = async (error) => {
 	return { code: 500, message: "Internal Server Error, please contact us!" };
 };
 
-const rajaOngkirErrorHandler = async (body) => {
-	await writeLogFile(body, "rajaOngkirErrorHandler");
+const rajaOngkirErrorHandler = async (data) => {
+	await writeLogFile(data, "rajaOngkirErrorHandler");
 
-	const statusCode = body.rajaongkir.status.code;
+	const statusCode = data.status;
 
 	if (statusCode === 400) {
-		return { code: 400, message: body.rajaongkir.status.description };
+		return { code: 400, message: "Bad request" };
 	}
 
 	return { code: 500, message: "Service Unavailable" };
@@ -183,4 +199,5 @@ module.exports = {
 	startGetUserAddressesErrorHandler,
 	startUpdateAvatarErrorHandler,
 	startGetAvatarErrorHandler,
+	startConfirmPasswordErrorHandler,
 };

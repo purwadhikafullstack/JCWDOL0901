@@ -107,14 +107,13 @@ export const getMaxDiscount = (data) => {
 	return text;
 };
 
-export const postLogisticServices = (checkout, courier) => {
+export const postLogisticServices = (checkout) => {
 	const token = localStorage.getItem("token");
 	const headers = { headers: { Authorization: `Bearer ${token}` } };
 	const body = {
 		branch_city_id: checkout.branch.city_id,
 		city_id: checkout.address.City.id,
 		weight: checkout.summary.weight,
-		courier,
 	};
 
 	return axios.post(`${process.env.REACT_APP_API_BASE_URL}/rajaongkir/cost`, body, headers);

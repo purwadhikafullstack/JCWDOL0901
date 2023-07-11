@@ -47,18 +47,18 @@ const CarouselWrapper = ({ children, app }) => {
 	);
 };
 const PromoCarousel = () => {
-	const app = useSelector(state => state.app);
+	const app = useSelector((state) => state.app);
 	return (
 		<div className="z-10 rounded-xl my-8 mx-auto sm:my-16">
 			<CarouselWrapper app={app}>
 				<div className="rounded-xl mx-3">
-					<img className="rounded-xl" src="/assets/promotions/inventory_promotions_1.png" />
+					<img className="rounded-xl" src="/assets/promotions/inventory_promotions_1.png" alt="promo_1" />
 				</div>
 				<div className="rounded-xl mx-3">
-					<img className="rounded-xl" src="/assets/promotions/global_promotions_1.png" />
+					<img className="rounded-xl" src="/assets/promotions/global_promotions_1.png" alt="promo_2" />
 				</div>
 				<div className="rounded-xl mx-3">
-					<img className="rounded-xl" src="/assets/promotions/global_promotions_2.png" />
+					<img className="rounded-xl" src="/assets/promotions/global_promotions_2.png" alt="promo_3" />
 				</div>
 			</CarouselWrapper>
 		</div>

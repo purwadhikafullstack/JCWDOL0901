@@ -1,29 +1,28 @@
 import React from "react";
-import { editProduct, showDeleteAlert, deleteCategoryHandler } from "./handlers/manageProductsHandler";
+import { editProduct, showDeleteAlert, deleteProductHandler } from "./handlers/manageProductsHandler";
 import { useNavigate } from "react-router-dom";
 import { TrashIcon } from "@heroicons/react/outline";
 import DeleteAlert from "../DeleteAlert";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 
-const TableBodyContent = ({ datas, page, itemPerPage }) => {
+const TableBodyContent = ({ datas, page, itemPerPage, setIsUpdated }) => {
 	const navigate = useNavigate();
 	const admin = useSelector((state) => state.admin);
 	const [open, setOpen] = useState(false);
-	const [categoryId, setCategoryId] = useState(0);
-	const [categoryName, setCategoryName] = useState(0);
+	const [productId, setProductId] = useState(0);
+	const [productName, setProductName] = useState(0);
 	const tdClassName = "py-1 h-16 text-xs text-center px-4";
 	return (
 		<>
 			{alert ? (
 				<DeleteAlert
-					title={`Delete Category "${categoryName}"`}
-					desc="Are you sure you want to delete this category? You can only delete this category if there are no products under this category. This category will be permanently removed from the server forever. This action cannot be undone."
-					buttonName="Delete Category"
+					title={`Delete Product "${productName}"`}
+					desc="Are you sure you want to delete this product?"
+					buttonName="Delete Product"
 					open={open}
 					setOpen={setOpen}
-					categoryId={categoryId}
-					handler={deleteCategoryHandler}
+					handler={() => deleteProductHandler(productId, navigate, setIsUpdated)}
 				/>
 			) : null}
 			{datas.map((item, index) => {
@@ -33,7 +32,11 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 							<td className={tdClassName}>{(page - 1) * itemPerPage + (index + 1)}</td>
 							<td className={tdClassName}>
 								<div className="flex justify-center">
-									<img src={item.image} className="w-[80px] max-h-20" alt={item.name} />
+									<img
+										src={item.image}
+										className="w-[80px] max-h-20 object-contain"
+										alt={item.name}
+									/>
 								</div>
 							</td>
 							<td className={tdClassName}>{item.name}</td>
@@ -61,7 +64,7 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 									{/* <div>{alert}</div> */}
 									<button
 										className="bg-red text-white px-2 py-2 rounded-lg flex justify-center disabled:bg-gray-300"
-										onClick={() => showDeleteAlert(item, setOpen, setCategoryId, setCategoryName)}
+										onClick={() => showDeleteAlert(item, setOpen, setProductId, setProductName)}
 										disabled={!admin.superAdmin}
 									>
 										<TrashIcon

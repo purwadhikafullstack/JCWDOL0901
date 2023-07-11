@@ -39,9 +39,21 @@ const decrementInventoriesStockQuery = async (transaction_detail, transaction) =
 	});
 };
 
+const incrementInventoriesStockQuery = async (transaction_detail, transaction) => {
+	await transaction_detail.forEach(async (item) => {
+		await Inventories.increment("stock", { by: item.quantity, where: { id: item.inventory_id }, transaction });
+	});
+};
+
+const readInventoryQuery = async (inventory_id, transaction) => {
+	return Inventories.findOne({ where: { id: inventory_id } });
+};
+
 module.exports = {
 	readInventoriesQuery,
 	createInventoryQueryForNewBranch,
 	updateInventoriesQuery,
 	decrementInventoriesStockQuery,
+	incrementInventoriesStockQuery,
+	readInventoryQuery,
 };

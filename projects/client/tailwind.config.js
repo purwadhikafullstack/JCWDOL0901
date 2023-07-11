@@ -28,6 +28,7 @@ module.exports = {
 			black: "#000000",
 			white: "#ffffff",
 			yellow: "#FFE082",
+			orange: "#E08020",
 		},
 		fontFamily: {
 			inter: ["Inter, sans-serif"],

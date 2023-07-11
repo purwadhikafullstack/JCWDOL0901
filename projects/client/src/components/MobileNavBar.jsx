@@ -16,12 +16,12 @@ const MobileNavBar = () => {
 	const location = useLocation().pathname;
 
 	return (
-		<div tabIndex="-1" className="fixed bottom-0 mx-auto z-50 w-[480px] inset-x-0 rounded-full md:hidden">
+		<div tabIndex="-1" className="fixed bottom-0 mx-auto z-50 w-full inset-x-0 rounded-full md:hidden">
 			<div className="w-full mb-2 drop-shadow-2xl">
 				<div className="mx-4 flex flex-row justify-around rounded-full bg-white">
 					<MobileNavButton active={location === "/"} name="home" to="/" />
 					<MobileNavButton active={location === "/cart"} name="shopping_cart" to="/cart" />
-					<MobileNavButton active={location === "/history"} name="history" to="/history" />
+					<MobileNavButton active={location === "/order"} name="sticky_note_2" to="/order" />
 					<MobileNavButton active={location === "/account"} name="account_circle" to="/account" />
 				</div>
 			</div>

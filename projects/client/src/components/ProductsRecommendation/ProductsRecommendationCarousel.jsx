@@ -8,7 +8,7 @@ import ProductCard from "../Products/ProductCard.jsx";
 const Slide = ({ products }) => {
 	return products.map((item, index) => {
 		return (
-			<SplideSlide>
+			<SplideSlide key={index}>
 				<ProductCard product={item} key={index} />
 			</SplideSlide>
 		);
@@ -23,8 +23,8 @@ const ProductsRecommendationCarousel = () => {
 		getProductsRecommendation(user.branch.id)
 			.then((result) => setProducts(result.data))
 			.catch((error) => setProducts([{ name: "Server Error!", image: "" }]));
-	}, [user]);
-	const itemPerPage = window.innerWidth > 640 ? 4 : 2;
+	}, [user, window.innerWidth]);
+	const itemPerPage = window.innerWidth > 1024 ? 5 : window.innerWidth > 768 ? 4 : window.innerWidth > 640 ? 3 : 2;
 	return (
 		products && (
 			<Splide

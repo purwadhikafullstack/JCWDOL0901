@@ -23,14 +23,16 @@ const switchBranch = (state, action) => {
 };
 
 const setUserLogin = (state, action) => {
-	const { hasLogged } = action.payload || null;
-	return { ...state, hasLogged };
+	const { hasLogged, avatar, username } = action.payload || null;
+	return { ...state, hasLogged, avatar, username };
 };
 
 export const user = createSlice({
 	name: "user",
 	initialState: {
 		hasLogged: false,
+		avatar: "",
+		username: "",
 		branch: { name: "", id: null },
 		location: { granted: false, pending: true, latitude: null, longitude: null },
 	},

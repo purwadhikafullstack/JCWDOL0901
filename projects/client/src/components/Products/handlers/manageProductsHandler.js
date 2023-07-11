@@ -1,17 +1,12 @@
 import axios from "axios";
 import Swal from "sweetalert2";
 
-export const generateUrlQuery = (page, itemPerPage, filter, sort, order, name, filterBy) => {
-	let url = "";
-
-	url += `?page=${page}`;
-	url += `&itemPerPage=${itemPerPage}`;
-	url += name ? `&name=${name}` : "";
-	url += filter?.id ? `&${filterBy?.id}=${filter?.id}` : "";
-	url += sort ? `&order=${sort.id}` : "";
-	url += order ? `&asc=${order.id}` : "";
-
-	return url;
+const validateProductInput = (values) => {
+	const formData = new FormData();
+	for (let value in values) {
+		formData.append(value, values[value]);
+	}
+	return formData;
 };
 
 const manageProductErrorHandler = async (error) => {
@@ -26,23 +21,79 @@ const manageProductErrorHandler = async (error) => {
 	} else if (error?.response?.data === "File type not allowed") {
 		return error?.response?.data;
 	} else if (error?.response?.data === "ER_ROW_IS_REFERENCED_2") {
-		return "Cannot delete, there are still products under this category";
+		return "Cannot delete, there are still inventories data under this product";
 	}
 
 	return "Something went wrong!";
 };
 
-export const deleteCategoryHandler = async (id, navigate) => {
+export const createProductHandler = async (input, navigate) => {
+	try {
+		const validatedInput = await validateProductInput(input);
+		const token = localStorage.getItem("token");
+		const config = {
+			headers: { Authorization: `Bearer ${token}` },
+		};
+		await axios.post(`${process.env.REACT_APP_API_BASE_URL}/admin/product/create`, validatedInput, config);
+
+		Swal.fire({
+			icon: "success",
+			title: "New product has been created",
+			showConfirmButton: false,
+			timer: 2000,
+		});
+		navigate(-1);
+	} catch (error) {
+		Swal.fire({
+			icon: "error",
+			title: await manageProductErrorHandler(error),
+			showConfirmButton: false,
+			timer: 2000,
+		});
+	}
+};
+
+export const updateProductHandler = async (input, item, navigate) => {
+	try {
+		const validatedInput = await validateProductInput(input);
+		const token = localStorage.getItem("token");
+		const config = {
+			headers: { Authorization: `Bearer ${token}` },
+		};
+		await axios.patch(
+			`${process.env.REACT_APP_API_BASE_URL}/admin/product/${item.id}/update`,
+			validatedInput,
+			config,
+		);
+
+		Swal.fire({
+			icon: "success",
+			title: "Product has been updated",
+			showConfirmButton: false,
+			timer: 2000,
+		});
+		navigate(-1);
+	} catch (error) {
+		Swal.fire({
+			icon: "error",
+			title: await manageProductErrorHandler(error),
+			showConfirmButton: false,
+			timer: 2000,
+		});
+	}
+};
+
+export const deleteProductHandler = async (id, navigate, setIsUpdated) => {
 	try {
 		const token = localStorage.getItem("token");
 		const config = {
 			headers: { Authorization: `Bearer ${token}` },
 		};
-		await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/category/${id}/delete`, config);
-
+		await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/admin/product/${id}/delete`, config);
+		setIsUpdated(true);
 		Swal.fire({
 			icon: "success",
-			title: "Category has been deleted",
+			title: "Product has been deleted",
 			showConfirmButton: false,
 			timer: 2000,
 		});
@@ -56,14 +107,21 @@ export const deleteCategoryHandler = async (id, navigate) => {
 	}
 };
 
-export const getCategories = (token, query) => {
-	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/category/list${query}`, {
-		headers: { Authorization: `Bearer ${token}` },
-	});
+export const generateUrlQuery = (page, itemPerPage, filter, sort, order, name, filterBy) => {
+	let url = "";
+
+	url += `?page=${page}`;
+	url += `&itemPerPage=${itemPerPage}`;
+	url += name ? `&name=${name}` : "";
+	url += filter?.id ? `&${filterBy?.id}=${filter?.id}` : "";
+	url += sort ? `&order=${sort.id}` : "";
+	url += order ? `&asc=${order.id}` : "";
+
+	return url;
 };
 
 export const getProductsOnly = (token, query) => {
-	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/product/only${query}`, {
+	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/admin/product/only${query}`, {
 		headers: { Authorization: `Bearer ${token}` },
 	});
 };

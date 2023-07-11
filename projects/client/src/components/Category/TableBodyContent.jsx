@@ -6,7 +6,7 @@ import DeleteAlert from "../DeleteAlert";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 
-const TableBodyContent = ({ datas, page, itemPerPage }) => {
+const TableBodyContent = ({ datas, page, itemPerPage, setIsUpdated }) => {
 	const navigate = useNavigate();
 	const admin = useSelector((state) => state.admin);
 	const [open, setOpen] = useState(false);
@@ -22,8 +22,9 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 					buttonName="Delete Category"
 					open={open}
 					setOpen={setOpen}
-					categoryId={categoryId}
-					handler={deleteCategoryHandler}
+					handler={() => {
+						deleteCategoryHandler(categoryId, navigate, setIsUpdated);
+					}}
 				/>
 			) : null}
 			{datas.map((item, index) => {
@@ -33,7 +34,11 @@ const TableBodyContent = ({ datas, page, itemPerPage }) => {
 							<td className={tdClassName}>{(page - 1) * itemPerPage + (index + 1)}</td>
 							<td className={tdClassName}>
 								<div className="flex justify-center">
-									<img src={item.image} className="w-[80px] max-h-20" alt={item.name} />
+									<img
+										src={item.image}
+										className="w-[80px] max-h-20 object-contain"
+										alt={item.name}
+									/>
 								</div>
 							</td>
 							<td className={tdClassName}>{item.name}</td>
