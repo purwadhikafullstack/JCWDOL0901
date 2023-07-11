@@ -120,7 +120,6 @@ module.exports = {
 
 				return resolve({ message: "Login success!", token });
 			} catch (error) {
-				console.log(error);
 				return reject(await startAdminAuthenticationErrorHandler(error));
 			}
 		});
@@ -137,7 +136,6 @@ module.exports = {
 
 				return resolve({ message: "Login success!", token });
 			} catch (error) {
-				console.log(error);
 				return reject(await startUserAuthenticationErrorHandler(error));
 			}
 		});
