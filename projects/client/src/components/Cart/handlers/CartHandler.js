@@ -51,7 +51,6 @@ export const determinePrice = (product, setPrice) => {
 };
 
 export const handleIncrement = async (inventory_id, quantity, stock, setIsUpdate) => {
-	console.log("axios invtryId add: ", inventory_id);
 	try {
 		const token = localStorage.getItem("token");
 		const config = {
@@ -65,19 +64,9 @@ export const handleIncrement = async (inventory_id, quantity, stock, setIsUpdate
 	} catch (error) {
 		alert(error);
 	}
-
-	// setAmount((previousValue) => {
-	// 	if (previousValue < stock) {
-	// 		return previousValue + 1;
-	// 	}
-
-	// 	return previousValue;
-	// });
 };
 
 export const handleDecrement = async (inventory_id, quantity, stock, setIsUpdate) => {
-	console.log("axios invtryId min: ", inventory_id);
-
 	try {
 		const token = localStorage.getItem("token");
 		const config = {
@@ -85,7 +74,6 @@ export const handleDecrement = async (inventory_id, quantity, stock, setIsUpdate
 		};
 		const body = { inventory_id, quantity: quantity - 1 };
 		if (quantity === 1) {
-			console.log("quantity==1: ", config);
 			await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/cart/delete/${inventory_id}`, config);
 			setIsUpdate(true);
 		}
@@ -96,12 +84,14 @@ export const handleDecrement = async (inventory_id, quantity, stock, setIsUpdate
 	} catch (error) {
 		alert(error);
 	}
+};
 
-	// setAmount((previousValue) => {
-	// 	if (previousValue > 0) {
-	// 		return previousValue - 1;
-	// 	}
+export const getDisplayPrice = (item) => {
+	const promo = item.Inventory.promo;
 
-	// 	return previousValue;
-	// });
+	const isBOGO = promo.Promotion.id === 4;
+	const original = item.Inventory.Product.price;
+	const final = isBOGO ? original : getFinalPrice(original, promo);
+
+	return { final, original, isBOGO };
 };

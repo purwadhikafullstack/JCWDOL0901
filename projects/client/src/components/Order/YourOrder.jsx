@@ -64,7 +64,6 @@ const TotalPrice = ({ transaction }) => {
 };
 
 const YourOrder = ({ transaction }) => {
-	console.log("transaction in YourOrder: ", transaction)
 	const deliveryCost = transaction.Logistic.shipping_cost;
 	const voucher_discount = transaction.voucher_discount;
 	const subTotal = transaction.amount + voucher_discount - deliveryCost;

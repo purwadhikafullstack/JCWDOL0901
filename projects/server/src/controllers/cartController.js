@@ -10,7 +10,6 @@ const getUserCarts = async (request, response) => {
 		});
 };
 const addUserCarts = async (request, response) => {
-	console.log("request.body cartController: ", request.body);
 	await startAddCarts(request.userData, request.body)
 		.then((result) => {
 			response.status(200).send(result);
@@ -21,7 +20,6 @@ const addUserCarts = async (request, response) => {
 };
 
 const updateUserCarts = async (request, response) => {
-	console.log("request.body cartController: ", request.body);
 	await startUpdateCarts(request.userData, request.body)
 		.then((result) => {
 			response.status(200).send(result);
@@ -31,14 +29,11 @@ const updateUserCarts = async (request, response) => {
 		});
 };
 const deleteUserCarts = async (request, response) => {
-	console.log("request id cartController: ", request.userData);
-	console.log("request params cartController: ", request.params);
 	await startDeleteCarts(request.userData, request.params)
 	.then((result) => {
 		response.status(200).send(result);
 	})
 	.catch((error) => {
-			console.log("error cartController: ", error);
 			response.status(error.code).send(error.message);
 		});
 };

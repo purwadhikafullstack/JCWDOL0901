@@ -5,7 +5,7 @@ const router = require("express").Router();
 
 router.get("/", isUser, getUserCarts);
 router.post("/add", isUser, addUserCarts);
-router.patch("/update", isUser, updateUserCarts)
-router.delete("/delete/:inventory_id", isUser, deleteUserCarts)
+router.patch("/update", isUser, updateUserCarts);
+router.delete("/delete/:inventory_id", isUser, deleteUserCarts);
 
 module.exports = router;

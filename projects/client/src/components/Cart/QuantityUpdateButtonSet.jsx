@@ -14,8 +14,6 @@ const Decrement = ({ inventory_id, amount, stock, setIsUpdate  }) => {
 };
 
 const Increment = ({ inventory_id, amount, stock, setIsUpdate }) => {
-	console.log("qty btn set invtryId: ", inventory_id);
-
 	return (
 		<button
 			className="border border-green-300 px-2 rounded-lg h-fit disabled:border-gray-300 disabled:text-gray-300 disabled:opacity-50"

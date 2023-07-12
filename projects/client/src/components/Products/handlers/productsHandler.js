@@ -38,7 +38,6 @@ export const addProducts = async (inventory_id, quantity) => {
 			headers: { Authorization: `Bearer ${token}` },
 		};
 		const body = {inventory_id, quantity}
-		console.log("body at productHandler: ", body);
 		await axios.post(`${process.env.REACT_APP_API_BASE_URL}/cart/add`, body, config);
 
 		Swal.fire({
@@ -48,7 +47,6 @@ export const addProducts = async (inventory_id, quantity) => {
 			timer: 1000,
 		});
 	} catch (error) {
-		console.log("error productHandler: ", error);
 		Swal.fire({
 			icon: "error",
 			title: await productErrorHandler(error),

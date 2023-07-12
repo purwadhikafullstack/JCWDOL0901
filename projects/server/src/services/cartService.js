@@ -26,7 +26,6 @@ module.exports = {
 
 				return await resolve(Carts);
 			} catch (error) {
-				console.log("error cartService: ", error);
 				return await reject(await startCreateErrorHandler(error));
 			}
 		});
@@ -39,7 +38,6 @@ module.exports = {
 
 				return await resolve(Carts);
 			} catch (error) {
-				console.log("error cartService: ", error);
 				return await reject(await startUpdateErrorHandler(error));
 			}
 		});
@@ -52,7 +50,6 @@ module.exports = {
 
 				return await resolve({ status: 200, message: "item deleted successfully" });
 			} catch (error) {
-				console.log("error cartService: ", error);
 				return await reject(await startDeleteteHandler(error));
 			}
 		});
