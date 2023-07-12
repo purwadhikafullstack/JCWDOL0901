@@ -47,34 +47,32 @@ export const cancelOrderHandler = async (id, navigate) => {
 		});
 	}
 };
-<<<<<<< HEAD
-// export const confirmOrderHandler = async (id, navigate) => {
-// 	try {
-// 		const token = localStorage.getItem("token");
-// 		const config = {
-// 			headers: { Authorization: `Bearer ${token}` },
-// 		};
-// 		await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/transaction/${id}/cancel`, null, config);
-// 		Swal.fire({
-// 			icon: "success",
-// 			title: "Order has been canceled",
-// 			showConfirmButton: false,
-// 			timer: 1000,
-// 		});
-// 		setTimeout(() => {
-// 			navigate("/order");
-// 		}, 2000);
-// 	} catch (error) {
-// 		Swal.fire({
-// 			icon: "error",
-// 			title: await cancelOrderErrorHandler(error),
-// 			showConfirmButton: false,
-// 			timer: 1000,
-// 		});
-// 	}
-// };
-=======
->>>>>>> 1e12e1c7c3ae6415b8fdf3b111e1b840a96d462c
+
+export const confirmOrderHandler = async (id, navigate) => {
+	try {
+		const token = localStorage.getItem("token");
+		const config = {
+			headers: { Authorization: `Bearer ${token}` },
+		};
+		await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/transaction/${id}/confirm`, null, config);
+		Swal.fire({
+			icon: "success",
+			title: "You have confirm the delivery of your order",
+			showConfirmButton: false,
+			timer: 1000,
+		});
+		setTimeout(() => {
+			navigate("/order");
+		}, 2000);
+	} catch (error) {
+		Swal.fire({
+			icon: "error",
+			title: await cancelOrderErrorHandler(error),
+			showConfirmButton: false,
+			timer: 1000,
+		});
+	}
+};
 
 const cancelOrderErrorHandler = async (error) => {
 	if (error?.code === "ERR_NETWORK") {

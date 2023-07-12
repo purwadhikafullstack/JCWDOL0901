@@ -40,6 +40,7 @@ import UserAuthGuard from "./pages/UserAuthGuard";
 import OrderPage from "./pages/Order/OrderPage";
 import OrderDetail from "./pages/OrderDetail/OrderDetail";
 import CartPage from "./pages/Cart/CartPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
 	return (
@@ -100,6 +101,8 @@ function App() {
 				<Route path="/admin/product" element={<AdminAuthGuard component={<ManageProduct />} />} />
 				<Route path="/admin/product/create" element={<AdminAuthGuard component={<CreateProduct />} />} />
 				<Route path="/admin/product/update" element={<AdminAuthGuard component={<UpdateProduct />} />} />
+				{/* //Not Found Page */}
+				<Route path="*" element={<NotFoundPage />} />
 			</Routes>
 		</div>
 	);
