@@ -4,6 +4,7 @@ const {
 	startCreateProof,
 	startFindUserTransactions,
 	startCancelUserOrderByUser,
+	startConfirmUserOrderByUser,
 } = require("../services/transactionService.js");
 
 const postTransaction = async (request, response) => {
@@ -65,6 +66,17 @@ const cancelUserOrderByUser = async (request, response) => {
 			response.status(error.code).send(error.message);
 		});
 };
+const confirmUserOrderByUser = async (request, response) => {
+	const { transaction_id } = request.params;
+	const { id } = request.userData;
+	await startConfirmUserOrderByUser(transaction_id, id)
+		.then((result) => {
+			response.status(200).send(result);
+		})
+		.catch((error) => {
+			response.status(error.code).send(error.message);
+		});
+};
 
 module.exports = {
 	postTransaction,
@@ -72,4 +84,5 @@ module.exports = {
 	getUserTransaction,
 	getUserTransactions,
 	cancelUserOrderByUser,
+	confirmUserOrderByUser
 };

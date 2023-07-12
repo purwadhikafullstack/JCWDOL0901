@@ -4,7 +4,7 @@ import { setTransactionID } from "../../redux/reducers/proof/proofAction";
 import DeleteAlert from "../DeleteAlert";
 import { useState } from "react";
 import { cancelUserOrder } from "../ManageOrder/handlers/buttonHandler";
-import { cancelOrderHandler } from "./handlers/orderHandler";
+import { cancelOrderHandler, confirmOrderHandler } from "./handlers/orderHandler";
 
 const uploadProofHandler = (navigate, dispatch, transaction) => {
 	dispatch(setTransactionID(transaction.id));
@@ -55,7 +55,9 @@ const ActionButtons = ({ transaction }) => {
 							Cancel Order
 						</button>
 					) : transaction.status_id === 4 ? (
-						<button className="bg-green-400 text-green-100 px-4 py-2 rounded-lg mr-4" onClick={() => {}}>
+						<button className="bg-green-400 text-green-100 px-4 py-2 rounded-lg mr-4" onClick={() => {
+							confirmOrderHandler(transaction.id, navigate)
+						}}>
 							Confirm the delivery of my order
 						</button>
 					) : null}

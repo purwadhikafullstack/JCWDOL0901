@@ -1,4 +1,5 @@
 const {
+	Users,
 	Branches,
 	Carts,
 	Cities,
@@ -7,6 +8,8 @@ const {
 	Promotions,
 	Products,
 } = require("../models/index.js");
+
+// Update cart query isinya Carts.update yang isinya where user_id sekian , inventory_id sekian
 
 const readCartQuery = async (query) => {
 	return await Carts.findAll({
@@ -30,6 +33,18 @@ const readCartQuery = async (query) => {
 		attributes: ["quantity"],
 	});
 };
+const addCartQuery = async (user_id, inventory_id, quantity) => {
+	return await Carts.create({ user_id, inventory_id, quantity });
+};
+const updateCartQuery = async (user_id, inventory_id, quantity) => {
+	return await Carts.update({ quantity }, { where: { user_id, inventory_id } });
+};
+
+const deleteCartItemQuery = async (user_id, inventory_id) => {
+	return await Carts.destroy({
+		where: { user_id, inventory_id },
+	});
+};
 
 const deleteCartsQueryOnOrder = async (user, transaction) => {
 	return await Carts.destroy({
@@ -37,4 +52,4 @@ const deleteCartsQueryOnOrder = async (user, transaction) => {
 	});
 };
 
-module.exports = { readCartQuery, deleteCartsQueryOnOrder };
+module.exports = { readCartQuery, deleteCartsQueryOnOrder, addCartQuery, updateCartQuery, deleteCartItemQuery };
