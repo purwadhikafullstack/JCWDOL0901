@@ -30,7 +30,7 @@ const Vouchers = () => {
 			<>
 				<VoucherOptions vouchers={vouchers} dispatch={dispatch} globalState={globalState} />
 				<Link
-					className="text-rose-500 ml-auto mt-2 mr-4 flex flex-row items-center cursor-pointer"
+					className="text-rose-500 ml-auto my-2 mr-4 flex flex-row items-center cursor-pointer"
 					onClick={() => dispatch(removeVoucher())}
 					to={-1}
 				>

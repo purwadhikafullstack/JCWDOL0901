@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 const Period = ({ data }) => {
 	return (
 		<span className="flex flex-row items-center mt-2">
-			<span class="material-symbols-rounded text-lg mr-1.5">schedule</span>
+			<span className="material-symbols-rounded text-lg mr-1.5">schedule</span>
 			<span>
 				Periode {data?.Voucher?.start_at.split("T")[0]} - {data?.Voucher?.expired_at || "Selamanya"}
 			</span>
@@ -17,7 +17,7 @@ const Period = ({ data }) => {
 const Spending = ({ data }) => {
 	return (
 		<span className="">
-			<span class="material-symbols-rounded text-lg mr-1.5">payments</span>
+			<span className="material-symbols-rounded text-lg mr-1.5">payments</span>
 			<span className="text-green-400 mr-2">{getMaxDiscount(data)},</span>
 			<span className="text-[#f47229]">{getMinSpend(data)}</span>
 		</span>

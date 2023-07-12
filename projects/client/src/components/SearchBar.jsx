@@ -8,7 +8,7 @@ const SearchBar = ({ setFilter, className }) => {
 	const navigate = useNavigate();
 	const location = useLocation();
 	const parsed = queryString.parse(location.search);
-	const { filter } = parsed;
+	const { filter, category_id } = parsed;
 
 	return (
 		<div className={`z-10 relative w-full sm:mx-4 md:mx-10 lg:mx-20 xl:mx-auto xl:max-w-3xl ${className}`}>
@@ -26,7 +26,7 @@ const SearchBar = ({ setFilter, className }) => {
 						navigate({
 							pathname: "/products",
 							search: `?${createSearchParams({
-								category_id: "",
+								category_id: category_id ? category_id : "",
 								branch_id: user?.branch?.id,
 								filter: event.target.value,
 							})}`,
