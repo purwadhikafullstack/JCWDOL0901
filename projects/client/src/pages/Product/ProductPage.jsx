@@ -62,7 +62,13 @@ const ProductPage = () => {
 				<CategoryCarousel setPage={setPage} />
 				<ProductCards page={page} setMaxPage={setMaxPage} itemPerPage={itemPerPage} sort={sort} order={order} />
 				<div className="flex justify-center">
-					<Pagination page={page} setPage={setPage} maxPage={maxPage} />
+					{maxPage ? (
+						<Pagination page={page} setPage={setPage} maxPage={maxPage} />
+					) : (
+						<div className="border rounded-lg p-6 border-green-400 shadow-md">
+							<div className="font-semibold text-green-400">Data not available</div>
+						</div>
+					)}
 				</div>
 			</div>
 		</div>

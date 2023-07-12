@@ -115,7 +115,7 @@ export default function AccountMenu() {
 			<h1 className="text-left font-bold mb-4 ml-6 text-lg text-gray-400">Account Settings</h1>
 			<div className="bg-white shadow overflow-hidden sm:rounded-md mb-6">
 				<ul className="divide-y divide-gray-100">
-					{user.hasLogged ? menus.map((menu) => <MenuButton menu={menu} />) : null}
+					{user.hasLogged ? menus.map((menu, index) => <MenuButton menu={menu} key={index} />) : null}
 					{user.hasLogged ? (
 						<LogoutButton />
 					) : (
