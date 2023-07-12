@@ -50,22 +50,58 @@ export const determinePrice = (product, setPrice) => {
 	setPrice({ original, final, promo });
 };
 
-export const handleIncrement = (setAmount, stock) => {
-	setAmount((previousValue) => {
-		if (previousValue < stock) {
-			return previousValue + 1;
+export const handleIncrement = async (inventory_id, quantity, stock, setIsUpdate) => {
+	console.log("axios invtryId add: ", inventory_id);
+	try {
+		const token = localStorage.getItem("token");
+		const config = {
+			headers: { Authorization: `Bearer ${token}` },
+		};
+		const body = { inventory_id, quantity: quantity + 1 };
+		if (quantity < stock) {
+			await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/cart/update`, body, config);
+			setIsUpdate(true);
 		}
+	} catch (error) {
+		alert(error);
+	}
 
-		return previousValue;
-	});
+	// setAmount((previousValue) => {
+	// 	if (previousValue < stock) {
+	// 		return previousValue + 1;
+	// 	}
+
+	// 	return previousValue;
+	// });
 };
 
-export const handleDecrement = (setAmount) => {
-	setAmount((previousValue) => {
-		if (previousValue > 0) {
-			return previousValue - 1;
-		}
+export const handleDecrement = async (inventory_id, quantity, stock, setIsUpdate) => {
+	console.log("axios invtryId min: ", inventory_id);
 
-		return previousValue;
-	});
+	try {
+		const token = localStorage.getItem("token");
+		const config = {
+			headers: { Authorization: `Bearer ${token}` },
+		};
+		const body = { inventory_id, quantity: quantity - 1 };
+		if (quantity === 1) {
+			console.log("quantity==1: ", config);
+			await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/cart/delete/${inventory_id}`, config);
+			setIsUpdate(true);
+		}
+		if (quantity > 1) {
+			await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/cart/update`, body, config);
+			setIsUpdate(true);
+		}
+	} catch (error) {
+		alert(error);
+	}
+
+	// setAmount((previousValue) => {
+	// 	if (previousValue > 0) {
+	// 		return previousValue - 1;
+	// 	}
+
+	// 	return previousValue;
+	// });
 };

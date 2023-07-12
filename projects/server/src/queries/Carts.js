@@ -34,7 +34,16 @@ const readCartQuery = async (query) => {
 	});
 };
 const addCartQuery = async (user_id, inventory_id, quantity) => {
-	return await Carts.create({user_id, inventory_id, quantity })
+	return await Carts.create({ user_id, inventory_id, quantity });
+};
+const updateCartQuery = async (user_id, inventory_id, quantity) => {
+	return await Carts.update({ quantity }, { where: { user_id, inventory_id } });
+};
+
+const deleteCartItemQuery = async (user_id, inventory_id) => {
+	return await Carts.destroy({
+		where: { user_id, inventory_id },
+	});
 };
 
 const deleteCartsQueryOnOrder = async (user, transaction) => {
@@ -43,4 +52,4 @@ const deleteCartsQueryOnOrder = async (user, transaction) => {
 	});
 };
 
-module.exports = { readCartQuery, deleteCartsQueryOnOrder, addCartQuery };
+module.exports = { readCartQuery, deleteCartsQueryOnOrder, addCartQuery, updateCartQuery, deleteCartItemQuery };
