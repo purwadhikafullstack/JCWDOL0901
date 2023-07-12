@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { PlusIcon } from "@heroicons/react/outline";
 import { useEffect, useState } from "react";
-import { determinePrice } from "./handlers/productsHandler";
+import { addProducts, determinePrice } from "./handlers/productsHandler";
 import { useSelector } from "react-redux";
 
 const ProductCard = ({ product }) => {
@@ -11,6 +11,7 @@ const ProductCard = ({ product }) => {
 	useEffect(() => {
 		determinePrice(product, setPrice);
 	}, [product]);
+
 	return (
 		<div key={product.id} className="flex flex-col border rounded-lg pb-4 shadow-xl min-h-[340px]">
 			<button
@@ -61,7 +62,9 @@ const ProductCard = ({ product }) => {
 			</button>
 			<button
 				className="self-end mt-auto px-2 py-2 text-base font-medium rounded-md group"
-				onClick={() => {}}
+				onClick={() => {
+					addProducts(product.Inventories[0].id, 1);
+				}}
 				disabled={!user?.hasLogged}
 			>
 				<PlusIcon

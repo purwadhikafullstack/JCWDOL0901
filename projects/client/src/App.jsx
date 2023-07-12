@@ -39,6 +39,7 @@ import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import UserAuthGuard from "./pages/UserAuthGuard";
 import OrderPage from "./pages/Order/OrderPage";
 import OrderDetail from "./pages/OrderDetail/OrderDetail";
+import CartPage from "./pages/Cart/CartPage";
 
 function App() {
 	return (
@@ -70,6 +71,7 @@ function App() {
 					element={<UserAuthGuard component={<CreateNewAddress />} />}
 				/>
 				<Route path="/account/edit-address" element={<UserAuthGuard component={<EditAddress />} />} />
+				<Route path="/cart" element={<UserAuthGuard component={<CartPage />} />} />
 				<Route path="/cart/checkout" element={<UserAuthGuard component={<CheckoutPage />} />} />
 				<Route path="/cart/checkout/address/change" element={<UserAuthGuard component={<SwitchAddress />} />} />
 				<Route path="/cart/checkout/voucher/change" element={<UserAuthGuard component={<SwitchVoucher />} />} />
