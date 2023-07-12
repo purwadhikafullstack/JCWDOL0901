@@ -1,16 +1,81 @@
 
 	===
-	Time: Mon Jul 10 2023 22:40:20 GMT+0700 (Western Indonesia Time)
-	Source: startFindErrorHandler
-	Error: {}
+	Time: Wed Jul 12 2023 22:36:35 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-260","origin":"DB","instance":{"user_id":1,"inventory_id":260,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-260' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,260,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-260' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,260,1]},"fields":{"PRIMARY":"1-260"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
 	
 	===
-	Time: Wed Jul 12 2023 20:13:10 GMT+0700 (Waktu Indonesia Barat)
-	Source: startUpdateErrorHandler
-	Error: "ERR_UNAUTHORIZED"
+	Time: Wed Jul 12 2023 23:08:26 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-165","origin":"DB","instance":{"user_id":1,"inventory_id":165,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-165' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,165,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-165' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,165,1]},"fields":{"PRIMARY":"1-165"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
 	
 	===
-	Time: Wed Jul 12 2023 20:14:04 GMT+0700 (Waktu Indonesia Barat)
-	Source: startUpdateErrorHandler
-	Error: "ERR_UNAUTHORIZED"
+	Time: Wed Jul 12 2023 23:08:32 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-165","origin":"DB","instance":{"user_id":1,"inventory_id":165,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-165' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,165,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-165' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,165,1]},"fields":{"PRIMARY":"1-165"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Wed Jul 12 2023 23:09:46 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-165","origin":"DB","instance":{"user_id":1,"inventory_id":165,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-165' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,165,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-165' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,165,1]},"fields":{"PRIMARY":"1-165"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Wed Jul 12 2023 23:09:49 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-164","origin":"DB","instance":{"user_id":1,"inventory_id":164,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-164' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,164,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-164' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,164,1]},"fields":{"PRIMARY":"1-164"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Wed Jul 12 2023 23:10:23 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-157","origin":"DB","instance":{"user_id":1,"inventory_id":157,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-157' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,157,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-157' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,157,1]},"fields":{"PRIMARY":"1-157"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Wed Jul 12 2023 23:11:04 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-158","origin":"DB","instance":{"user_id":1,"inventory_id":158,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-158' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,158,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-158' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,158,1]},"fields":{"PRIMARY":"1-158"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Wed Jul 12 2023 23:11:06 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-157","origin":"DB","instance":{"user_id":1,"inventory_id":157,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-157' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,157,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-157' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,157,1]},"fields":{"PRIMARY":"1-157"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Wed Jul 12 2023 23:12:08 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-179","origin":"DB","instance":{"user_id":1,"inventory_id":179,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-179' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,179,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-179' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,179,1]},"fields":{"PRIMARY":"1-179"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Wed Jul 12 2023 23:22:29 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-159","origin":"DB","instance":{"user_id":1,"inventory_id":159,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-159' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,159,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-159' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,159,1]},"fields":{"PRIMARY":"1-159"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Wed Jul 12 2023 23:22:38 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-196","origin":"DB","instance":{"user_id":1,"inventory_id":196,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-196' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,196,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-196' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,196,1]},"fields":{"PRIMARY":"1-196"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Wed Jul 12 2023 23:22:41 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-197","origin":"DB","instance":{"user_id":1,"inventory_id":197,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-197' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,197,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-197' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,197,1]},"fields":{"PRIMARY":"1-197"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Wed Jul 12 2023 23:24:14 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-164","origin":"DB","instance":{"user_id":1,"inventory_id":164,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-164' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,164,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-164' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,164,1]},"fields":{"PRIMARY":"1-164"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Wed Jul 12 2023 23:24:28 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-236","origin":"DB","instance":{"user_id":1,"inventory_id":236,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-236' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,236,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-236' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,236,1]},"fields":{"PRIMARY":"1-236"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Wed Jul 12 2023 23:24:30 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-237","origin":"DB","instance":{"user_id":1,"inventory_id":237,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-237' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,237,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-237' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,237,1]},"fields":{"PRIMARY":"1-237"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Wed Jul 12 2023 23:28:13 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-180","origin":"DB","instance":{"user_id":1,"inventory_id":180,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-180' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,180,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-180' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,180,1]},"fields":{"PRIMARY":"1-180"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
 	
