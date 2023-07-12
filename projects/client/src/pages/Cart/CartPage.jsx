@@ -79,19 +79,19 @@ const CartPage = () => {
 			});
 	}, [isUpdate]);
 	return (
-		<div className="sm:p-10 bg-green-100">
-			<div className="flex flex-col bg-white max-w-5xl mx-auto rounded-xl shadow-lg">
+		<div className="sm:p-10 bg-green-100 min-h-screen">
+			<div className="flex flex-col bg-white max-w-5xl min-h-[50vw] mx-auto rounded-xl shadow-lg">
 				<BackButton url="/" color="text-green-400" />
 				<CartHeader Content={CartHeaderContent} />
 				<div className="">
 					{cart && cart.map((item, index) => <ItemPrice item={item} key={index} setIsUpdate={setIsUpdate} />)}
-
+					{cart?.length === 0 ? <div className=" bg-green-100 py-20">Cart is empty</div> : null}
 					<div className="flex flex-col mb-10">
 						<SubTotal subTotal={subTotal} />
 					</div>
-					<div className="my-10">
-						<CheckoutButton />
-					</div>
+				</div>
+				<div className="mt-auto mb-10">
+					<CheckoutButton cart={cart} />
 				</div>
 			</div>
 		</div>

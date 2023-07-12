@@ -50,20 +50,35 @@ export const cancelOrderHandler = async (id, navigate) => {
 
 export const confirmOrderHandler = async (id, navigate) => {
 	try {
-		const token = localStorage.getItem("token");
-		const config = {
-			headers: { Authorization: `Bearer ${token}` },
-		};
-		await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/transaction/${id}/confirm`, null, config);
 		Swal.fire({
-			icon: "success",
-			title: "You have confirm the delivery of your order",
-			showConfirmButton: false,
-			timer: 1000,
+			title: "Do you want to confirm the delivery of you order?",
+			showCancelButton: true,
+			confirmButtonText: "Confirm order",
+			confirmButtonColor: "#53B97C",
+			cancelButtonText: "No",
+			customClass: {
+				actions: "my-actions",
+				cancelButton: "order-1",
+				confirmButton: "order-2",
+			},
+		}).then(async (result) => {
+			if (result.isConfirmed) {
+				const token = localStorage.getItem("token");
+				const config = {
+					headers: { Authorization: `Bearer ${token}` },
+				};
+				await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/transaction/${id}/confirm`, null, config);
+				Swal.fire({
+					icon: "success",
+					title: "You have confirm the delivery of your order",
+					showConfirmButton: false,
+					timer: 1000,
+				});
+				setTimeout(() => {
+					navigate("/order");
+				}, 2000);
+			}
 		});
-		setTimeout(() => {
-			navigate("/order");
-		}, 2000);
 	} catch (error) {
 		Swal.fire({
 			icon: "error",
