@@ -78,6 +78,18 @@ module.exports = {
 					max_discount: null,
 					inventory_id: null,
 				},
+				{
+					name: "[Transaction Reward] Gratis Ongkir hingga Rp 5.000 tanpa minimal transaksi",
+					description: "Gratis Ongkir hingga Rp 5.000",
+					value: 5000,
+					start_at: "1971-01-01",
+					expired_at: null,
+					claim_limit: 1,
+					promotion_id: 1,
+					min_spend: 0,
+					max_discount: null,
+					inventory_id: null,
+				},
 			],
 			{},
 		);

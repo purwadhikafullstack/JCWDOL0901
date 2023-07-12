@@ -47,6 +47,7 @@ export const cancelOrderHandler = async (id, navigate) => {
 		});
 	}
 };
+<<<<<<< HEAD
 // export const confirmOrderHandler = async (id, navigate) => {
 // 	try {
 // 		const token = localStorage.getItem("token");
@@ -72,6 +73,8 @@ export const cancelOrderHandler = async (id, navigate) => {
 // 		});
 // 	}
 // };
+=======
+>>>>>>> 1e12e1c7c3ae6415b8fdf3b111e1b840a96d462c
 
 const cancelOrderErrorHandler = async (error) => {
 	if (error?.code === "ERR_NETWORK") {
