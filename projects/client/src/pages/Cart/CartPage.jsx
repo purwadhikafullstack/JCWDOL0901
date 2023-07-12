@@ -73,7 +73,6 @@ const CartPage = () => {
 				alert(error);
 			});
 	}, [isUpdate]);
-	console.log("item cartPage: ", cart);
 	return (
 		// <div className="flex flex-col bg-white">
 		// 	<BackButton url="/cart" color="text-green-400" />

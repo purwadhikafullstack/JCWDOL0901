@@ -41,7 +41,6 @@ const CartBox = () => {
 				alert(error);
 			});
 	}, [isUpdate]);
-	console.log("cart cartBox: ", cart);
 	return (
 		<>
 			<CartHeader Content={CartHeaderContent} />
