@@ -1,7 +1,7 @@
 import React from "react";
 import { handleDecrement, handleIncrement } from "./handlers/CartHandler.js";
 
-const Decrement = ({ inventory_id, amount, stock, setIsUpdate  }) => {
+const Decrement = ({ inventory_id, amount, stock, setIsUpdate }) => {
 	return (
 		<button
 			className="border border-green-300 px-2 rounded-lg h-fit disabled:border-gray-300 disabled:text-gray-300 disabled:opacity-50"
@@ -27,7 +27,7 @@ const Increment = ({ inventory_id, amount, stock, setIsUpdate }) => {
 
 const QuantityUpdateButtonSet = ({ amount, inventory_id, stock, setIsUpdate }) => {
 	return (
-		<div className="flex flex-row w-fit items-center text-green-300 mr-auto">
+		<div className="flex flex-row w-fit items-center text-green-300 mr-auto my-2">
 			<Decrement inventory_id={inventory_id} amount={amount} stock={stock} setIsUpdate={setIsUpdate} />
 			<div className="flex justify-center items-center bg-green-50 px-2 py-2 rounded-xl mx-3 font-medium text-md box-border w-10 h-10 text-center">
 				<span className="h-fit">{amount}</span>

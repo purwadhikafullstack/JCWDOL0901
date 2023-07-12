@@ -14,7 +14,7 @@ const CheckoutButton = () => {
 				className="flex items-center bg-green-500 text-green-100 rounded-lg w-fit ml-auto mr-8 py-3 px-6 mb-6 disabled:opacity-50"
 				onClick={() => navigate("/cart/checkout")}
 			>
-				<span className="mr-8 font-bold">Checkout Order </span>
+				<span className="mr-8 font-bold">Checkout Cart</span>
 				<span className="material-symbols-rounded">arrow_right</span>
 			</button>
 		</div>

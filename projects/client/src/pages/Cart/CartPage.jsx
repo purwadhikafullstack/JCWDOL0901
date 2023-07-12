@@ -9,13 +9,19 @@ import CartBox from "../../components/Cart/CartBox";
 import CartPriceDetail from "../../components/Cart/CartPriceDetail";
 import CartHeader from "../../components/Cart/CartHeader";
 import CartHeaderContent from "../../components/Cart/CartHeaderContent";
+import { useDispatch } from "react-redux";
+import { initializeCart } from "../../redux/reducers/checkout/checkoutAction";
 
 const ItemPrice = ({ item, setIsUpdate, index }) => {
 	return (
 		<div className="flex flex-row p-4 border-b border-dashed">
-			<img src={item.Inventory.Product.image} className="max-w-[100px] border border-green-500 rounded p-2" />
+			<img
+				src={item.Inventory.Product.image}
+				alt={item.Inventory.Product.name}
+				className="max-w-[100px] border border-green-500 rounded p-2"
+			/>
 			<div className="flex flex-col items-start justify-between pl-4 py-1">
-				<span className="font-semibold text-sm">{item.Inventory.Product.name}</span>
+				<span className="font-semibold text-sm text-left">{item.Inventory.Product.name}</span>
 				<span className="text-sm text-left mb-auto mt-0.5">@{item.Inventory.Product.weight} gr</span>
 				<QuantityUpdateButtonSet
 					stock={item.Inventory.stock}
@@ -24,7 +30,6 @@ const ItemPrice = ({ item, setIsUpdate, index }) => {
 					setIsUpdate={setIsUpdate}
 				/>
 				<CartPriceDetail item={item} />
-				<div className="px-4 text-right ml-auto text-red">{item?.Inventory?.promo?.Promotion?.name}</div>
 			</div>
 			<span className="text-md font-light mt-auto ml-auto mb-1 mr-1">x {item.quantity}</span>
 		</div>
@@ -33,9 +38,9 @@ const ItemPrice = ({ item, setIsUpdate, index }) => {
 
 const SubTotal = ({ subTotal }) => {
 	return (
-		<div className="flex flex-row pt-4 text-gray-200 text-sm">
-			<div className="text-left">Sub Total</div>
-			<div className="px-4 text-right ml-auto text-black">Rp{subTotal?.toLocaleString("id")}</div>
+		<div className="flex flex-row pt-4 text-gray-400 text-base">
+			<div className="text-left ml-auto font-semibold">Sub Total:</div>
+			<div className="px-10 text-right ml-10 text-black font-bold">Rp{subTotal?.toLocaleString("id")}</div>
 		</div>
 	);
 };
@@ -44,7 +49,7 @@ const CartPage = () => {
 	const navigate = useNavigate();
 	const [cart, setCart] = useState();
 	const [subTotal, setSubTotal] = useState();
-	const [isUpdate, setIsUpdate] = useState(false);
+	const [isUpdate, setIsUpdate] = useState(true);
 
 	React.useEffect(() => {
 		getUserCart()
@@ -74,22 +79,19 @@ const CartPage = () => {
 			});
 	}, [isUpdate]);
 	return (
-		// <div className="flex flex-col bg-white">
-		// 	<BackButton url="/cart" color="text-green-400" />
-		// 	<CartBox />
-		// </div>
+		<div className="sm:p-10 bg-green-100">
+			<div className="flex flex-col bg-white max-w-5xl mx-auto rounded-xl shadow-lg">
+				<BackButton url="/" color="text-green-400" />
+				<CartHeader Content={CartHeaderContent} />
+				<div className="">
+					{cart && cart.map((item, index) => <ItemPrice item={item} key={index} setIsUpdate={setIsUpdate} />)}
 
-		<div className="flex flex-col bg-white">
-			<BackButton url="/cart" color="text-green-400" />
-			<CartHeader Content={CartHeaderContent} />
-			<div className="">
-				{cart && cart.map((item, index) => <ItemPrice item={item} key={index} setIsUpdate={setIsUpdate} />)}
-
-				<div className="flex flex-col">
-					<SubTotal subTotal={subTotal} />
-				</div>
-				<div>
-					<CheckoutButton />
+					<div className="flex flex-col mb-10">
+						<SubTotal subTotal={subTotal} />
+					</div>
+					<div className="my-10">
+						<CheckoutButton />
+					</div>
 				</div>
 			</div>
 		</div>

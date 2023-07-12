@@ -27,6 +27,11 @@ const setUserLogin = (state, action) => {
 	return { ...state, hasLogged, avatar, username };
 };
 
+const setCartUpdate = (state, action) => {
+	const { cartUpdate } = action.payload || null;
+	return { ...state, cartUpdate };
+};
+
 export const user = createSlice({
 	name: "user",
 	initialState: {
@@ -35,11 +40,13 @@ export const user = createSlice({
 		username: "",
 		branch: { name: "", id: null },
 		location: { granted: false, pending: true, latitude: null, longitude: null },
+		cartUpdate: false,
 	},
 	reducers: {
 		setUserNearestBranch,
 		setUserLocation,
 		switchBranch,
 		setUserLogin,
+		setCartUpdate,
 	},
 });
