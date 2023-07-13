@@ -29,8 +29,6 @@ const ViewMode = ({ item, index }) => {
 					<img src={item.Inventory.Product.image} className="max-w-[80px] mx-auto" />
 				</td>
 				<td className={tdClassName}>{item.Inventory.Product.name}</td>
-				<td className={tdClassName}>{item.stock_before}</td>
-				<td className={tdClassName}>{item.stock_after}</td>
 				<td className={tdClassName}>
 					<Mutation item={item} />
 				</td>

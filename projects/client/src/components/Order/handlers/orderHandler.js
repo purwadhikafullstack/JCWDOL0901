@@ -16,7 +16,6 @@ export const generateUrlQuery = (name, startDate, endDate, filterBy, filter, sor
 };
 
 export const getUserTransactions = () => {
-	// return axios.get(`${process.env.REACT_APP_API_BASE_URL}/transaction/list${query}`, {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/transaction/list`, {
 		headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
 	});

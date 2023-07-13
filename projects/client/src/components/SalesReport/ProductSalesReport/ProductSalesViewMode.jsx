@@ -20,27 +20,26 @@ const Time = ({ item }) => {
 	);
 };
 
-const ViewMode = ({ item, index }) => {
+const ProductSalesViewMode = ({ item, index }) => {
 	const tdClassName = index % 2 ? "py-4 bg-green-100 text-xs text-center" : "py-4 bg-white text-xs text-center";
 	return (
 		<tbody key={index}>
 			<tr>
-				<td className={tdClassName}>
+				{/* <td className={tdClassName}>
 					<img src={item.Inventory.Product.image} className="max-w-[80px] mx-auto" />
-				</td>
-				<td className={tdClassName}>{item.Inventory.Product.name}</td>
-				<td className={tdClassName}>{item.stock_before}</td>
-				<td className={tdClassName}>{item.stock_after}</td>
-				<td className={tdClassName}>
+				</td> */}
+				<td className={tdClassName}>{index + 1}</td>
+				<td className={tdClassName}>{item.name}</td>
+				<td className={tdClassName}>{item.qty}</td>
+				{/* <td className={tdClassName}>
 					<Mutation item={item} />
 				</td>
 				<td className={tdClassName}>
 					<Time item={item} />
-				</td>
-				<td className={tdClassName}>{item.description}</td>
+				</td> */}
 			</tr>
 		</tbody>
 	);
 };
 
-export default ViewMode;
+export default ProductSalesViewMode;
