@@ -109,7 +109,22 @@ module.exports = {
 				await transaction.commit();
 				return await resolve("Success update transaction status!");
 			} catch (error) {
-				console.log(error);
+				await transaction.rollback();
+				return await reject(await startUpdateErrorHandler(error));
+			}
+		});
+	},
+	startConfirmUserOrderByUser: async (transaction_id, user_id) => {
+		return new Promise(async (resolve, reject) => {
+			const transaction = await sequelize.transaction();
+			try {
+				const Transaction = await readUserTransactionQuery(transaction_id);
+				if (Transaction.user_id !== user_id) throw "ERR_UNAUTHORIZED";
+				if (Transaction.status_id !== 4) throw "ERR_UNAUTHORIZED";
+				await updateTransactionStatusQuery(5, transaction_id, transaction);
+				await transaction.commit();
+				return await resolve("Success update transaction status!");
+			} catch (error) {
 				await transaction.rollback();
 				return await reject(await startUpdateErrorHandler(error));
 			}
