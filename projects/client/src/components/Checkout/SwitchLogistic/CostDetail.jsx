@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setLogistic } from "../../../redux/reducers/checkout/checkoutAction.js";
+import { toCurrency } from "../../../helper/currency.js";
 
 const CostDetail = ({ costs, courier }) => {
 	const checkout = useSelector((state) => state.checkout);
@@ -19,7 +20,7 @@ const CostDetail = ({ costs, courier }) => {
 						Estimasi pengiriman: {logistic.cost[0].etd.split(" ")[0]} Hari
 					</span>
 					<span className="text-left uppercase font-semibold text-green-300">
-						Rp. {logistic.cost[0].value.toLocaleString("id")}
+						{toCurrency(logistic.cost[0].value)}
 					</span>
 				</div>
 				<input type="radio" name="select_logistic" checked={checkout.logistic.service === logistic.service} />

@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { toCurrency } from "../../../helper/currency";
 
 const LogisticBoxDetail = () => {
 	const logistic = useSelector((state) => state.checkout.logistic);
@@ -11,7 +12,7 @@ const LogisticBoxDetail = () => {
 					<span className="font-semibold text-lg text-left">
 						<span>{logistic.service}</span>
 					</span>
-					<span className="text-left mt-2 mb-1">Rp. {logistic.cost.toLocaleString("id")}</span>
+					<span className="text-left mt-2 mb-1">{toCurrency(logistic.cost)}</span>
 				</div>
 			</div>
 		);

@@ -5,6 +5,7 @@ import { TrashIcon } from "@heroicons/react/outline";
 import DeleteAlert from "../DeleteAlert";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { toCurrency } from "../../helper/currency";
 
 const TableBodyContent = ({ datas, page, itemPerPage, setIsUpdated }) => {
 	const navigate = useNavigate();
@@ -42,7 +43,7 @@ const TableBodyContent = ({ datas, page, itemPerPage, setIsUpdated }) => {
 							<td className={tdClassName}>{item.name}</td>
 							<td className={tdClassName}>{item.unit}</td>
 							<td className={tdClassName}>{item.weight} gram</td>
-							<td className={tdClassName}>Rp{item.price.toLocaleString("id")}</td>
+							<td className={tdClassName}>{toCurrency(item.price)}</td>
 							<td className={tdClassName}>{item.description}</td>
 							<td className={tdClassName}>{item.Category.name}</td>
 							<td className={tdClassName}>

@@ -2,6 +2,7 @@ import React from "react";
 import { getBorderColor } from "../handlers/manageOrderHandler";
 import { saveAs } from "file-saver";
 import { cancelUserOrder, confirmUserOrder, rejectUserOrder, sendUserOrder } from "../handlers/buttonHandler";
+import { toCurrency } from "../../../helper/currency";
 
 const BranchName = ({ item }) => {
 	return (
@@ -37,7 +38,7 @@ const Proof = ({ item }) => {
 };
 
 const Amount = ({ item }) => {
-	return <div className="col-span-2 my-auto font-semibold">Rp {item.amount.toLocaleString("id")}</div>;
+	return <div className="col-span-2 my-auto font-semibold">{toCurrency(item.amount)}</div>;
 };
 
 const Status = ({ item }) => {

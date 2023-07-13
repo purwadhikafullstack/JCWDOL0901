@@ -1,6 +1,7 @@
 import axios from "axios";
 import Swal from "sweetalert2";
 import { clearCheckout } from "../../../redux/reducers/checkout/checkoutAction";
+import { toCurrency } from "../../../helper/currency";
 
 export const getDefaultAddress = () => {
 	const token = localStorage.getItem("token");
@@ -58,7 +59,7 @@ export const getUserCart = () => {
 const promtCreateOrder = (data) =>
 	Swal.fire({
 		title: "Create Order?",
-		html: `Total Payment: <b>Rp ${data.summary.total.toLocaleString("id")}</b>`,
+		html: `Total Payment: <b>${toCurrency(data.summary.total)}</b>`,
 		icon: "question",
 		showCancelButton: true,
 		confirmButtonColor: "#0EB177",
@@ -99,9 +100,9 @@ export const getMaxDiscount = (data) => {
 	let text = "Discount Up To ";
 
 	if (data?.Voucher?.max_discount) {
-		text += `Rp ${data?.Voucher?.max_discount.toLocaleString("id")}`;
+		text += `${toCurrency(data?.Voucher?.max_discount)}`;
 	} else {
-		text += `Rp ${data?.Voucher?.value.toLocaleString("id")}`;
+		text += `Rp ${toCurrency(data?.Voucher?.value)}`;
 	}
 
 	return text;
@@ -121,7 +122,7 @@ export const postLogisticServices = (checkout) => {
 
 export const getMinSpend = (data) => {
 	if (data?.Voucher?.min_spend) {
-		return `With a minimum purchase of Rp ${data?.Voucher?.min_spend.toLocaleString("id")}`;
+		return `With a minimum purchase of Rp ${toCurrency(data?.Voucher?.min_spend)}`;
 	} else {
 		return `Without minimum purchase`;
 	}

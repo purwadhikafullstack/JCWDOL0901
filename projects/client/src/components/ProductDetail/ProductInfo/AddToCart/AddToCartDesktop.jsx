@@ -1,6 +1,7 @@
 import React from "react";
 import DesktopButtonSet from "./DesktopButtonSet";
 import AddToCart from "./AddToCart";
+import { toCurrency } from "../../../../helper/currency";
 
 const AddToCartDesktop = ({ stock, amount, setAmount, price }) => {
 	return (
@@ -9,7 +10,7 @@ const AddToCartDesktop = ({ stock, amount, setAmount, price }) => {
 			<DesktopButtonSet stock={stock} amount={amount} setAmount={setAmount} />
 			<div className="flex flex-row items-center justify-between w-full mt-8 mb-3 px-1">
 				<span className="text-gray-300 text-sm mr-auto">Subtotal: </span>
-				<span className="text-lg font-bold">Rp{(amount * price?.final).toLocaleString("id")}</span>
+				<span className="text-lg font-bold">{toCurrency(amount * price?.final)}</span>
 			</div>
 			<AddToCart amount={amount} />
 		</div>
