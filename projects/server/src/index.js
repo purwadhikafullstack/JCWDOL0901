@@ -20,6 +20,7 @@ const {
 	transactionRoute,
 	rajaOngkirRoute,
 	profileRoute,
+	salesReportRoute,
 } = require("./routers/index.js");
 const { log } = require("console");
 
@@ -53,6 +54,7 @@ app.use("/api/admin/transaction", adminTransactionRoute);
 app.use("/api/admin/inventory", adminInventoryRoute);
 app.use("/api/admin/promo", adminPromoRoute);
 app.use("/api/admin/product", productRoute);
+app.use("/api/admin/report", salesReportRoute);
 app.use("/api/address", addressRoute);
 app.use("/api/voucher", voucherRoute);
 app.use("/api/transaction", transactionRoute);
