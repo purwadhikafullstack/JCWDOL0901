@@ -7,6 +7,8 @@ const InventoryTableHead = () => {
 			<tr className="text-center">
 				<th className={thClassName}>Image</th>
 				<th className={thClassName}>Name</th>
+				<th className={thClassName}>Stock Before</th>
+				<th className={thClassName}>Stock After</th>
 				<th className={thClassName}>Changes</th>
 				<th className={thClassName}>Time</th>
 				<th className={thClassName}>Description</th>

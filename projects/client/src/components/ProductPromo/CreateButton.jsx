@@ -8,7 +8,7 @@ const CreateButton = () => {
 			onClick={() => navigate("create")}
 		>
 			<div>Create Promotion </div>
-			<span class="material-symbols-rounded ml-1">add</span>
+			<span className="material-symbols-rounded ml-1">add</span>
 		</button>
 	);
 };

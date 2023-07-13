@@ -9,6 +9,7 @@ const moment = require("moment");
 const { sequelize } = require("../models/index.js");
 const { incrementInventoriesStockQuery, readInventoryQuery } = require("../queries/Inventories.js");
 const { createStockChangeQuery } = require("../queries/Stock_changes.js");
+const { deleteProofQuery } = require("../queries/Proofs.js");
 
 const getTotalGrossIncome = (data) => data.reduce((total, current) => total + current, 0);
 
@@ -173,6 +174,7 @@ module.exports = {
 				if (Transaction.branch_id !== branch_id) throw "ERR_UNAUTHORIZED";
 				if (Transaction.status_id !== 2) throw "ERR_UNAUTHORIZED";
 				await updateTransactionStatusQuery(1, transaction_id, transaction);
+				await deleteProofQuery(transaction_id, transaction);
 				await transaction.commit();
 				return await resolve("Success update transaction status!");
 			} catch (error) {

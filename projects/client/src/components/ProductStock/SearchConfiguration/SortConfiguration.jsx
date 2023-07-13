@@ -6,7 +6,7 @@ import DisabledDropDown from "../../DisabledDropDown";
 const Icon = () => {
 	return (
 		<div className="self-center mb-1">
-			<span class="material-symbols-rounded">sort</span>
+			<span className="material-symbols-rounded">sort</span>
 		</div>
 	);
 };

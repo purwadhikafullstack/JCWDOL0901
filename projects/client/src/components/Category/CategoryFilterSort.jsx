@@ -28,7 +28,7 @@ const CategoryFilterSort = ({ setFilter, order, setOrder, sort, setSort, input, 
 								setPage(1);
 							}}
 						>
-							<span class="material-symbols-rounded w-full overflow-hidden whitespace-nowrap">
+							<span className="material-symbols-rounded w-full overflow-hidden whitespace-nowrap">
 								search
 							</span>
 						</div>

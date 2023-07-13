@@ -2,12 +2,15 @@ import { useNavigate } from "react-router-dom";
 import { PlusIcon } from "@heroicons/react/outline";
 import { useEffect, useState } from "react";
 import { addProducts, determinePrice } from "./handlers/productsHandler";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const ProductCard = ({ product }) => {
 	const user = useSelector((state) => state.user);
 	const navigate = useNavigate();
 	const [price, setPrice] = useState({ original: 0, final: 0, promo: false });
+
+	const dispatch = useDispatch();
+
 	useEffect(() => {
 		determinePrice(product, setPrice);
 	}, [product]);
@@ -63,7 +66,7 @@ const ProductCard = ({ product }) => {
 			<button
 				className="self-end mt-auto px-2 py-2 text-base font-medium rounded-md group"
 				onClick={() => {
-					addProducts(product.Inventories[0].id, 1);
+					addProducts(product.Inventories[0].id, 1, dispatch);
 				}}
 				disabled={!user?.hasLogged}
 			>

@@ -1,7 +1,6 @@
 import React from "react";
 import CartPriceDetail from "./CartPriceDetail";
 import QuantityUpdateButtonSet from "./QuantityUpdateButtonSet";
-// import PriceDetail from "./PriceDetail.jsx";
 
 const CartBoxDetail = ({ cart, setIsUpdate }) => {
 	return cart.length ? (
@@ -11,7 +10,8 @@ const CartBoxDetail = ({ cart, setIsUpdate }) => {
 					<div key={index} className="flex flex-row p-4 border-b border-dashed">
 						<img
 							src={item.Inventory.Product.image}
-							className="max-w-[100px] border border-green-500 rounded p-2"
+							className="max-w-[100px] border border-green-500 rounded p-2 object-contain"
+							alt={item.Inventory.Product.name}
 						/>
 						<div className="flex flex-col items-start justify-between pl-4 py-1">
 							<span className="font-semibold text-sm">{item.Inventory.Product.name}</span>

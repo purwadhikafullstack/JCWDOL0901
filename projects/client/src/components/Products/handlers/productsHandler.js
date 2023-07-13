@@ -1,5 +1,6 @@
 import axios from "axios";
 import Swal from "sweetalert2";
+import { setCartUpdate } from "../../../redux/reducers/user/userAction";
 
 const productErrorHandler = async (error) => {
 	if (error?.code === "ERR_NETWORK") {
@@ -8,13 +9,12 @@ const productErrorHandler = async (error) => {
 		return error?.response?.data;
 	} else if (error?.response?.status === 403) {
 		return "You must login for adding product to cart";
-	} else if (error?.response?.data === "SequelizeUniqueConstraintError"){
+	} else if (error?.response?.data === "SequelizeUniqueConstraintError") {
 		return "Product already added in cart";
 	}
 
 	return "Something went wrong!";
 };
-
 
 export const generateUrlQuery = (page, itemPerPage, branch_id, category_id, filter, sort, order) => {
 	let url = "";
@@ -30,15 +30,15 @@ export const generateUrlQuery = (page, itemPerPage, branch_id, category_id, filt
 	return url;
 };
 
-export const addProducts = async (inventory_id, quantity) => {
-
+export const addProducts = async (inventory_id, quantity, dispatch) => {
 	try {
 		const token = localStorage.getItem("token");
 		const config = {
 			headers: { Authorization: `Bearer ${token}` },
 		};
-		const body = {inventory_id, quantity}
+		const body = { inventory_id, quantity };
 		await axios.post(`${process.env.REACT_APP_API_BASE_URL}/cart/add`, body, config);
+		dispatch(setCartUpdate({ cartUpdate: true }));
 
 		Swal.fire({
 			icon: "success",
@@ -47,6 +47,7 @@ export const addProducts = async (inventory_id, quantity) => {
 			timer: 1000,
 		});
 	} catch (error) {
+		console.log("error ordctHandler: ", error);
 		Swal.fire({
 			icon: "error",
 			title: await productErrorHandler(error),
@@ -54,7 +55,7 @@ export const addProducts = async (inventory_id, quantity) => {
 			timer: 2000,
 		});
 	}
-}
+};
 
 export const getProducts = (query) => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/product/list${query}`);
