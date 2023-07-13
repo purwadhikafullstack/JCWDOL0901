@@ -1,5 +1,5 @@
 const { Inventories, Products } = require("../models/index.js");
-const { Sequelize, Op } = require("sequelize");
+const { Op, Sequelize, literal, Transaction } = require("sequelize");
 const { readProductsQuery } = require("./Products.js");
 
 const readInventoriesQuery = async (branch_id, name, filter, order, page) => {

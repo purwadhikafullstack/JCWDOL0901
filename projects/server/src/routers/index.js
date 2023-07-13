@@ -12,6 +12,7 @@ const voucherRoute = require("./voucherRoute.js");
 const transactionRoute = require("./transactionRoute.js");
 const rajaOngkirRoute = require("./rajaOngkirRoute.js");
 const profileRoute = require("./profileRoute.js");
+const salesReportRoute = require("./salesReportRoute.js");
 
 module.exports = {
 	authRoute,
@@ -28,4 +29,5 @@ module.exports = {
 	transactionRoute,
 	rajaOngkirRoute,
 	profileRoute,
+	salesReportRoute,
 };

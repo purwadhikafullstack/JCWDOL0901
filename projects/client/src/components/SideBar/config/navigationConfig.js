@@ -27,7 +27,7 @@ const navigation = () => {
 		{ name: "Product Promos", href: "/admin/promo", icon: CurrencyDollarIcon, super: false },
 		{ name: "Orders", href: "/admin/order", icon: DocumentTextIcon },
 		// { name: "Vouchers", href: "#", icon: TicketIcon },
-		{ name: "Reports", href: "#", icon: ChartBarIcon },
+		{ name: "Reports", href: "/admin/report", icon: ChartBarIcon },
 	];
 };
 

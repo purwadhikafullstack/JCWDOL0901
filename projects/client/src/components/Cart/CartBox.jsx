@@ -13,7 +13,6 @@ const CartBox = () => {
 	React.useEffect(() => {
 		getUserCart()
 			.then((result) => {
-				// if (!result.data) navigate("/404");
 				setCart(result.data);
 				setSubTotal(
 					cart?.reduce((acc, curr) => {
