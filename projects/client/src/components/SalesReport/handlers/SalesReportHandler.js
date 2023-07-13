@@ -6,6 +6,12 @@ export const getBranchInventories = (query = "") => {
 	});
 };
 
+export const getSalesReportByProduct = (query = "") => {
+	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/admin/report/product${query}`, {
+		headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+	});
+};
+
 export const sortDefault = { id: "name", name: "Product Name" };
 export const orderDefault = { id: "1", name: "A to Z" };
 
@@ -41,6 +47,18 @@ export const getFilterBy = () => {
 	return new Promise((resolve, reject) => {
 		resolve({
 			data: [{ id: "description", name: "Changes" }],
+		});
+	});
+};
+
+export const getSalesBy = () => {
+	return new Promise((resolve, reject) => {
+		resolve({
+			data: [
+				{ id: "product", name: "Product" },
+				{ id: "transaction", name: "Transaction" },
+				{ id: "user", name: "User" },
+			],
 		});
 	});
 };

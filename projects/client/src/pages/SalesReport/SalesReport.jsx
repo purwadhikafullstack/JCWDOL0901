@@ -1,9 +1,14 @@
-import React from "react";
-import CompanyLogo from "../../components/CompanyLogo";
+import React, { useState } from "react";
 import SideBar from "../../components/SideBar/SideBar";
 import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration";
 import PageTitle from "../../components/PageTitle";
-import SalesReportTableGroup from "../../components/SalesReport/SalesReportTableGroup";
+import ProductSalesReportTableGroup from "../../components/SalesReport/ProductSalesReport/ProductSalesReportTableGroup";
+// import TransactionSalesReportTableGroup from "../../components/SalesReport/TransactionSalesReportTableGroup";
+// import UserSalesReportTableGroup from "../../components/SalesReport/UserSalesReportTableGroup";
+import DisplayByConfiguration from "../../components/SalesReport/SearchConfiguration/DisplayByConfiguration";
+import CompanyLogo from "../../components/CompanyLogo";
+import TransactionSalesReportTableGroup from "../../components/SalesReport/TransactionSalesReport/TransactionSalesReportTableGroup";
+import UserSalesReportTableGroup from "../../components/SalesReport/UserSalesReport/UserSalesReportTableGroup";
 
 const ResponsiveLogo = () => {
 	return (
@@ -19,6 +24,8 @@ const ResponsiveLogo = () => {
 };
 
 const SalesReport = () => {
+	const [salesBy, setSalesBy] = useState({});
+
 	return (
 		<div className="flex flex-col mx-auto pb-10 flex-1 min-w-[480px] overflow-hidden bg-white z-10 sm:w-full">
 			<SideBar>
@@ -26,11 +33,15 @@ const SalesReport = () => {
 					<div className="flex flex-col z-10">
 						<CircularBackgroundDecoration />
 						<ResponsiveLogo />
-						<PageTitle
-							title="Sales Report"
-							className={"text-green-100 sm:text-green-400 z-10 mb-auto"}
-						/>
-						<SalesReportTableGroup />
+						<PageTitle title="Sales Report" className={"text-green-100 sm:text-green-400 z-10 mb-auto"} />
+						<DisplayByConfiguration salesBy={salesBy} setSalesBy={setSalesBy} />
+						{salesBy.id === "product" ? (
+							<ProductSalesReportTableGroup />
+						) : salesBy.id === "transaction" ? (
+							<TransactionSalesReportTableGroup />
+						) : salesBy.id === "user" ? (
+							<UserSalesReportTableGroup />
+						) : null}
 					</div>
 				</div>
 			</SideBar>

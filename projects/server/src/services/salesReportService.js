@@ -1,3 +1,4 @@
+const { startFindErrorHandler } = require("../errors/serviceError.js");
 const { sequelize } = require("../models/index.js");
 const {
 	readProductSalesReportQuery,
@@ -6,12 +7,13 @@ const {
 } = require("../queries/SalesReport.js");
 
 module.exports = {
-	startFindSalesReportByProduct: async (query, branch_id) => {
+	startFindSalesReportByProduct: async (branch_id) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const adminTransactionsData = await readProductSalesReportQuery(query, branch_id);
-				return resolve(adminTransactionsData);
+				const ProductSalesReport = await readProductSalesReportQuery(branch_id);
+				return resolve(ProductSalesReport);
 			} catch (error) {
+                console.log("error service: ", error);
 				return reject(await startFindErrorHandler(error));
 			}
 		});

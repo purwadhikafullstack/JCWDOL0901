@@ -1,10 +1,13 @@
-const { startFindSalesReportByProduct, startFindSalesReportByTransaction, startFindSalesReportByUser } = require("../services/salesReportService");
-
+const {
+	startFindSalesReportByProduct,
+	startFindSalesReportByTransaction,
+	startFindSalesReportByUser,
+} = require("../services/salesReportService");
 
 const getSalesReportByProduct = async (request, response) => {
-	const { transaction_id } = request.params;
-	const { id } = request.userData;
-	await startFindSalesReportByProduct(transaction_id, id)
+	console.log("branchData: ", request.branchData.id);
+	const branch_id = request.branchData.id;
+	await startFindSalesReportByProduct(branch_id)
 		.then((result) => {
 			response.status(200).send(result);
 		})
@@ -24,7 +27,7 @@ const getSalesReportByTransaction = async (request, response) => {
 		});
 };
 const getSalesReportByUser = async (request, response) => {
-	const { transaction_id } = request.params;
+	const { transaction_id } = request.branchData.id;
 	const { id } = request.userData;
 	await startFindSalesReportByUser(transaction_id, id)
 		.then((result) => {

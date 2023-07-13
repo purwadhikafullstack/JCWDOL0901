@@ -1,6 +1,6 @@
 import React from "react";
 
-const SalesReportTableHead = () => {
+const TransactionReportTableHead = () => {
 	const thClassName = "py-6 bg-green-500 text-green-100 px-10 whitespace-nowrap";
 	return (
 		<thead className="uppercase">
@@ -12,4 +12,4 @@ const SalesReportTableHead = () => {
 	);
 };
 
-export default SalesReportTableHead;
+export default TransactionReportTableHead;

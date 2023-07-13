@@ -1,6 +1,6 @@
 import React from "react";
 import DropDown from "../../DropDown";
-import { getFilterBy, getFilterOfDescription } from "../handlers/ProductStockHandler";
+import { getFilterBy, getFilterOfDescription } from "../handlers/SalesReportHandler";
 import DisabledDropDown from "../../DisabledDropDown";
 
 const Filter = ({ filterBy, filter, setFilter }) => {

@@ -1,12 +1,13 @@
 import React from "react";
 
-import { orderDefault, sortDefault } from "./handlers/ProductStockHandler.js";
-import SearchConfiguration from "./SearchConfiguration.jsx";
-import Pagination from "../Pagination.jsx";
+import { orderDefault, sortDefault } from "../handlers/SalesReportHandler";
+import SearchConfiguration from "../SearchConfiguration.jsx";
+import Pagination from "../../Pagination.jsx";
 
-import SalesReportTable from "./SalesReportTable.jsx";
+import SalesReportTable from "./ProductSalesReportTable.jsx";
+import ProductSalesReportTable from "./ProductSalesReportTable.jsx";
 
-const SalesReportTableGroup = () => {
+const ProductSalesReportTableGroup = () => {
 	const [name, setName] = React.useState("");
 	const [filterBy, setFilterBy] = React.useState("");
 	const [filter, setFilter] = React.useState("");
@@ -23,6 +24,7 @@ const SalesReportTableGroup = () => {
 
 	return (
 		<div className="flex flex-col justify-start pt-0.5 mt-7 px-4 h-full">
+			<h1>Product report</h1>
 			<SearchConfiguration
 				setPage={setPage}
 				setName={setName}
@@ -39,7 +41,7 @@ const SalesReportTableGroup = () => {
 				setStartDate={setStartDate}
 				setEndDate={setEndDate}
 			/>
-			<SalesReportTable
+			<ProductSalesReportTable
 				name={name}
 				sort={sort}
 				filterBy={filterBy}
@@ -57,4 +59,4 @@ const SalesReportTableGroup = () => {
 	);
 };
 
-export default SalesReportTableGroup;
+export default ProductSalesReportTableGroup;

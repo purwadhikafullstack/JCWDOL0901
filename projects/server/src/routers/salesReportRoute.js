@@ -3,12 +3,12 @@ const {
 	getSalesReportByTransaction,
 	getSalesReportByUser,
 } = require("../controllers/salesReportController");
-const { isAdmin, isSuperAdmin } = require("../middlewares/authMiddleware");
+const { isAdmin, getBranchId } = require("../middlewares/authMiddleware");
 
 const router = require("express").Router();
 
-router.get("/product", isAdmin, isSuperAdmin, getSalesReportByProduct);
-router.get("/transaction", isAdmin, isSuperAdmin, getSalesReportByTransaction);
-router.get("/user", isAdmin, isSuperAdmin, getSalesReportByUser);
+router.get("/product", isAdmin, getBranchId, getSalesReportByProduct);
+router.get("/transaction", isAdmin, getBranchId, getSalesReportByTransaction);
+router.get("/user", isAdmin, getBranchId, getSalesReportByUser);
 
 module.exports = router;

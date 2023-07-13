@@ -1,6 +1,6 @@
 import React from "react";
 import DropDown from "../../DropDown";
-import { getOrderOfDate, getSortBy } from "../handlers/ProductStockHandler";
+import { getOrderOfDate, getSortBy } from "../handlers/SalesReportHandler";
 import DisabledDropDown from "../../DisabledDropDown";
 
 const Icon = () => {

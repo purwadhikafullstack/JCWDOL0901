@@ -2,7 +2,7 @@ import React from "react";
 import { generateUrlQuery, getBranchInventories } from "../handlers/SalesReportHandler";
 import SalesReportBodyContent from "./SalesReportBodyContent.jsx";
 
-const SalesReportTableBody = ({ name, filterBy, filter, sort, order, page, setMaxPage, startDate, endDate }) => {
+const TransactionReportTableBody = ({ name, filterBy, filter, sort, order, page, setMaxPage, startDate, endDate }) => {
 	const [datas, setDatas] = React.useState([]);
 
 	React.useEffect(() => {
@@ -19,4 +19,4 @@ const SalesReportTableBody = ({ name, filterBy, filter, sort, order, page, setMa
 	return datas && <SalesReportBodyContent datas={datas} />;
 };
 
-export default SalesReportTableBody;
+export default TransactionReportTableBody;

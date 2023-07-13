@@ -3,8 +3,9 @@ import FilterConfiguration from "./SearchConfiguration/FilterConfiguration";
 import NameConfiguration from "./SearchConfiguration/NameConfiguration";
 import Reset from "./SearchConfiguration/Reset";
 import SortConfiguration from "./SearchConfiguration/SortConfiguration";
-import { resetSetting } from "./handlers/ProductStockHandler";
+import { resetSetting } from "./handlers/SalesReportHandler";
 import DateConfiguration from "../ManageOrder/SearchConfiguration/DateConfiguration";
+import DisplayByConfiguration from "./SearchConfiguration/DisplayByConfiguration";
 
 const SearchConfiguration = ({
 	setName,

@@ -15,13 +15,16 @@ const {
 
 const sequelize = require("sequelize");
 
-const readProductSalesReportQuery = async () => {
+const readProductSalesReportQuery = async (branch_id) => {
+	const where = branch_id == 0 ? { status_id: 5 } : { status_id: 5, branch_id };
+
 	const result = await Transaction_details.findAll({
-		attributes: ["name", [sequelize.fn("SUM", sequelize.col("quantity")), "qty"], "status_id"],
+		attributes: ["name", [sequelize.fn("SUM", sequelize.col("quantity")), "qty"]],
 		include: [
 			{
 				model: Transactions,
-				where: { status_id: 5, branch_id: 1 },
+				attributes: [],
+				where,
 				required: true,
 			},
 		],
@@ -34,11 +37,11 @@ const readProductSalesReportQuery = async () => {
 
 const readTransactionSalesReportQuery = async () => {
 	const result = await Transactions.findAll({
-        attributes: ['amount', 'updated_at'],
-        where: { status_id: 5, branch_id: 1 }
-      });
-    
-      return result;
+		attributes: ["amount", "updated_at"],
+		where: { status_id: 5, branch_id: 1 },
+	});
+
+	return result;
 };
 
 const readUserSalesReportQuery = async () => {
