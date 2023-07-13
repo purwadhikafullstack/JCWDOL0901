@@ -182,6 +182,22 @@ module.exports = {
 					price: 100000,
 					branch_discount: 16100,
 				},
+				{
+					transaction_id: 12,
+					inventory_id: 211,
+					name: "Khong Guan Assorted Can 1600gr",
+					quantity: 3,
+					price: 100000,
+					branch_discount: 0,
+				},
+				{
+					transaction_id: 13,
+					inventory_id: 211,
+					name: "Khong Guan Assorted Can 1600gr",
+					quantity: 8,
+					price: 100000,
+					branch_discount: 0,
+				},
 			],
 			{},
 		);

@@ -10,7 +10,7 @@ const Button = ({ name, type, onClickHandler = null, disabled, pending, children
 		>
 			{children}
 			<span className="flex items-center disabled:opacity-50">
-				{pending && <span class="material-symbols-rounded animate-spin mr-2">progress_activity</span>}
+				{pending && <span className="material-symbols-rounded animate-spin mr-2">progress_activity</span>}
 				{name}
 			</span>
 		</button>

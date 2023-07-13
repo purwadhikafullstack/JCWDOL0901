@@ -1,18 +1,22 @@
 import { useNavigate } from "react-router-dom";
 import { PlusIcon } from "@heroicons/react/outline";
 import { useEffect, useState } from "react";
-import { determinePrice } from "./handlers/productsHandler";
-import { useSelector } from "react-redux";
+import { addProducts, determinePrice } from "./handlers/productsHandler";
+import { useDispatch, useSelector } from "react-redux";
 
 const ProductCard = ({ product }) => {
 	const user = useSelector((state) => state.user);
 	const navigate = useNavigate();
 	const [price, setPrice] = useState({ original: 0, final: 0, promo: false });
+
+	const dispatch = useDispatch();
+
 	useEffect(() => {
 		determinePrice(product, setPrice);
 	}, [product]);
+
 	return (
-		<div key={product.id} className="flex flex-col border rounded-lg pb-4 shadow-xl min-h-[330px] sm:min-h-[440px]">
+		<div key={product.id} className="flex flex-col border rounded-lg pb-4 shadow-xl min-h-[340px]">
 			<button
 				key={product.id}
 				onClick={() => {
@@ -27,7 +31,7 @@ const ProductCard = ({ product }) => {
 						</span>
 					</div>
 				) : null}
-				<div className="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+				<div className="w-full bg-gray-200 rounded-lg overflow-hidden aspect-square">
 					<img
 						src={product.image}
 						alt={product.name}
@@ -44,9 +48,11 @@ const ProductCard = ({ product }) => {
 							{`Rp ${price?.final?.toLocaleString("id")}`}
 							<span className="text-xs font-light text-gray-300">{` / ${product.unit}`}</span>
 						</p>
-						<p className="mt-1 text-sm font-medium text-gray-200 text-left px-4 line-through">{`Rp ${price?.original?.toLocaleString(
-							"id",
-						)}`}</p>
+						{price?.original ? (
+							<p className="mt-1 text-sm font-medium text-gray-200 text-left px-4 line-through">{`Rp ${price?.original?.toLocaleString(
+								"id",
+							)}`}</p>
+						) : null}
 					</>
 				) : (
 					<>
@@ -59,7 +65,9 @@ const ProductCard = ({ product }) => {
 			</button>
 			<button
 				className="self-end mt-auto px-2 py-2 text-base font-medium rounded-md group"
-				onClick={() => {}}
+				onClick={() => {
+					addProducts(product.Inventories[0].id, 1, dispatch);
+				}}
 				disabled={!user?.hasLogged}
 			>
 				<PlusIcon

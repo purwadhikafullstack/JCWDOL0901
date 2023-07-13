@@ -79,14 +79,14 @@ export const updateCategoryHandler = async (input, item, navigate) => {
 	}
 };
 
-export const deleteCategoryHandler = async (id, navigate) => {
+export const deleteCategoryHandler = async (id, navigate, setIsUpdated) => {
 	try {
 		const token = localStorage.getItem("token");
 		const config = {
 			headers: { Authorization: `Bearer ${token}` },
 		};
 		await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/category/${id}/delete`, config);
-
+		setIsUpdated(true);
 		Swal.fire({
 			icon: "success",
 			title: "Category has been deleted",

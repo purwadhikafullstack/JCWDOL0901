@@ -8,7 +8,7 @@ const TransactionID = ({ transaction }) => {
 				<span className="ml-1 text-base whitespace-nowrap lg:text-xl">Transaction ID:</span>
 			</span>
 			<span className="text-green-300 font-bold text-left text-lg ml-2 mt-1 text-base lg:text-xl">
-				#{transaction.id}
+				INV-{String(transaction.id).padStart(6, "0")}
 			</span>
 		</div>
 	);

@@ -10,7 +10,7 @@ const AddToCartMobile = ({ stock, amount, setAmount }) => {
 		>
 			<div className="flex flex-row py-6 w-full border border-green-200 justify-around mt-auto rounded-3xl">
 				<MobileButtonSet stock={stock} amount={amount} setAmount={setAmount} />
-				<AddToCart />
+				<AddToCart amount={amount} />
 			</div>
 		</div>
 	);

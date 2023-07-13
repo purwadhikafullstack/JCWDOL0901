@@ -37,6 +37,10 @@ import UpdateProduct from "./pages/UpdateProduct/UpdateProduct";
 import ResetPassword from "./pages/ResetPassword/ResetPassword";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import UserAuthGuard from "./pages/UserAuthGuard";
+import OrderPage from "./pages/Order/OrderPage";
+import OrderDetail from "./pages/OrderDetail/OrderDetail";
+import CartPage from "./pages/Cart/CartPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
 	return (
@@ -68,6 +72,7 @@ function App() {
 					element={<UserAuthGuard component={<CreateNewAddress />} />}
 				/>
 				<Route path="/account/edit-address" element={<UserAuthGuard component={<EditAddress />} />} />
+				<Route path="/cart" element={<UserAuthGuard component={<CartPage />} />} />
 				<Route path="/cart/checkout" element={<UserAuthGuard component={<CheckoutPage />} />} />
 				<Route path="/cart/checkout/address/change" element={<UserAuthGuard component={<SwitchAddress />} />} />
 				<Route path="/cart/checkout/voucher/change" element={<UserAuthGuard component={<SwitchVoucher />} />} />
@@ -75,7 +80,9 @@ function App() {
 					path="/cart/checkout/logistic/change"
 					element={<UserAuthGuard component={<SwitchLogistic />} />}
 				/>
+				<Route path="/order" element={<UserAuthGuard component={<OrderPage />} />} />
 				<Route path="/order/upload" element={<UserAuthGuard component={<UploadProof />} />} />
+				<Route path="/order/detail/:transaction_id" element={<UserAuthGuard component={<OrderDetail />} />} />
 
 				{/* //Admin Auth Page */}
 				<Route path="/admin/order" element={<AdminAuthGuard component={<ManageOrder />} />} />
@@ -94,6 +101,8 @@ function App() {
 				<Route path="/admin/product" element={<AdminAuthGuard component={<ManageProduct />} />} />
 				<Route path="/admin/product/create" element={<AdminAuthGuard component={<CreateProduct />} />} />
 				<Route path="/admin/product/update" element={<AdminAuthGuard component={<UpdateProduct />} />} />
+				{/* //Not Found Page */}
+				<Route path="*" element={<NotFoundPage />} />
 			</Routes>
 		</div>
 	);
