@@ -110,7 +110,7 @@ module.exports = {
 			try {
 				const result = await adminAuthenticationQuery(body, Name);
 
-				if (!(await verifyHashPassword(body.password, data?.password)) || !data)
+				if (!(await verifyHashPassword(body.password, result?.password)) || !result)
 					return reject({ code: 400, message: "Wrong email or password!" });
 
 				const token = await generateJWToken(result, "super" in result);
