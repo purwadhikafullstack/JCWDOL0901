@@ -13,7 +13,6 @@ module.exports = {
 				const ProductSalesReport = await readProductSalesReportQuery(branch_id);
 				return resolve(ProductSalesReport);
 			} catch (error) {
-                console.log("error service: ", error);
 				return reject(await startFindErrorHandler(error));
 			}
 		});

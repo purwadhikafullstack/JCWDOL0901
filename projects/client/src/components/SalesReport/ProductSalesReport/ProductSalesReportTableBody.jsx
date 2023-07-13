@@ -5,7 +5,6 @@ import ProductSalesReportBodyContent from "./ProductSalesReportBodyContent";
 
 const ProductSalesReportTableBody = ({ name, filterBy, filter, sort, order, page, setMaxPage, startDate, endDate }) => {
 	const [datas, setDatas] = React.useState([]);
-	console.log("datas of productsalestablebody: ", datas);
 	React.useEffect(() => {
 		getSalesReportByProduct()
 			.then((result) => {

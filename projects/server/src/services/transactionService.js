@@ -109,7 +109,6 @@ module.exports = {
 				await transaction.commit();
 				return await resolve("Success update transaction status!");
 			} catch (error) {
-				console.log(error);
 				await transaction.rollback();
 				return await reject(await startUpdateErrorHandler(error));
 			}
@@ -126,7 +125,6 @@ module.exports = {
 				await transaction.commit();
 				return await resolve("Success update transaction status!");
 			} catch (error) {
-				console.log(error);
 				await transaction.rollback();
 				return await reject(await startUpdateErrorHandler(error));
 			}
