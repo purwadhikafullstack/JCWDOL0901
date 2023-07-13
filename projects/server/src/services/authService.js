@@ -53,10 +53,10 @@ const adminDatabaseGeneration = async (body, transaction) => {
 const checkAndUpdatePassword = async (id, body, transaction) => {
 	const User = await getOldPasswordQuery(id, transaction);
 
-	// const isOldPasswordVerified = verifyHashPassword(body.old_password, User.password);
-	const isOldPasswordVerified = body.old_password === User.password;
+	const isOldPasswordVerified = verifyHashPassword(body.old_password, User.password);
 
 	if (!isOldPasswordVerified) throw "PASS_NOT_VERIFIED";
+
 	if (User.password === body.password) throw "PASS_CANNOT_SAME";
 
 	await updatePasswordQuery(id, body.password, transaction);
@@ -82,6 +82,7 @@ module.exports = {
 			try {
 				const User = await getUserIdByEmail(body.email);
 				if (!User) throw "EMAIL_NOT_FOUND";
+
 				const token = await generateResetPasswordJWToken(User.id);
 
 				await sendResetPasswordVerificationEmail(User, token);
@@ -104,17 +105,13 @@ module.exports = {
 			}
 		});
 	},
-
 	startAdminLoginAuthentication: async (body, Name) => {
 		return new Promise(async (resolve, reject) => {
 			try {
 				const result = await adminAuthenticationQuery(body, Name);
 
-				if (result?.password !== body.password || !result)
+				if (!(await verifyHashPassword(body.password, data?.password)) || !data)
 					return reject({ code: 400, message: "Wrong email or password!" });
-
-				// if (!(await verifyHashPassword(body.password, data?.password)) || !data)
-				// 	return reject({ code: 400, message: "Wrong email or password!" });
 
 				const token = await generateJWToken(result, "super" in result);
 
@@ -129,7 +126,7 @@ module.exports = {
 			try {
 				const result = await userAuthenticationQuery(body, Name);
 
-				if (result?.password !== body.password || !result)
+				if (!(await verifyHashPassword(body.password, result?.password)) || !result)
 					return reject({ code: 400, message: "Wrong email or password!" });
 
 				const token = await generateJWToken(result, "super" in result);
