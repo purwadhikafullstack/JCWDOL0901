@@ -8,7 +8,7 @@ module.exports = {
 			[
 				{
 					email: "super@groseria.com",
-					password: "$2b$10$DynxESwoxK3bYmH4qCVw0ulZ.Mq5I/SwuxGMCNI2grwVtTUTXKdAC",
+					password: "$2b$10$nQq1bT.xMipXA.K7zCIPzOXDBMUDiFzGhEg2TrRxdPeK7dQuc7tEu",
 					super: true,
 				},
 				{
