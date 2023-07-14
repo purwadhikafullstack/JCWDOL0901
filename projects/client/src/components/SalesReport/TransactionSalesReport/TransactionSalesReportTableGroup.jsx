@@ -1,10 +1,9 @@
 import React from "react";
 
 import { orderDefault, sortDefault } from "../handlers/SalesReportHandler";
-// import SalesReportTable from "./ProductSalesReportTable.jsx";
 import Pagination from "../../Pagination";
-import SearchConfiguration from "../SearchConfiguration";
 import TransactionSalesReportTable from "./TransactionSalesReportTable";
+import TransactionSalesReportSearchConfiguration from "./TransactionSalesReportSearchConfiguration";
 
 const TransactionSalesReportTableGroup = () => {
 	const [name, setName] = React.useState("");
@@ -24,7 +23,7 @@ const TransactionSalesReportTableGroup = () => {
 	return (
 		<div className="flex flex-col justify-start pt-0.5 mt-7 px-4 h-full">
 			<h1>Transaction report</h1>
-			<SearchConfiguration
+			<TransactionSalesReportSearchConfiguration
 				setPage={setPage}
 				setName={setName}
 				filterBy={filterBy}

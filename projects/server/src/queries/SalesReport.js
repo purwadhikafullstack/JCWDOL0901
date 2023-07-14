@@ -14,6 +14,23 @@ const {
 } = require("../models/index.js");
 
 const sequelize = require("sequelize");
+const { Op, literal, Transaction } = require("sequelize");
+
+const dateQueryHelper = (from, to) => {
+	return {
+		updated_at: {
+			[Op.gte]: from,
+			[Op.lte]: to,
+		},
+	};
+};
+
+const branchQueryHelper = (branch_id) =>
+	branch_id
+		? {
+				branch_id,
+		  }
+		: {};
 
 const readProductSalesReportQuery = async (branch_id) => {
 	const where = branch_id == 0 ? { status_id: 5 } : { status_id: 5, branch_id };
@@ -23,8 +40,8 @@ const readProductSalesReportQuery = async (branch_id) => {
 		include: [
 			{
 				model: Transactions,
-				attributes: [],
 				where,
+				attributes: [],
 				required: true,
 			},
 		],
@@ -35,22 +52,30 @@ const readProductSalesReportQuery = async (branch_id) => {
 	return result;
 };
 
-const readTransactionSalesReportQuery = async () => {
+const readTransactionSalesReportQuery = async (branch_id, from, to) => {
 	const result = await Transactions.findAll({
 		attributes: ["amount", "updated_at"],
-		where: { status_id: 5, branch_id: 1 },
+		where: {
+			status_id: 5,
+			...dateQueryHelper(from, to),
+			...branchQueryHelper(branch_id),
+		},
+		order: [[sequelize.literal("updated_at"), "DESC"]],
 	});
 
 	return result;
 };
 
-const readUserSalesReportQuery = async () => {
+const readUserSalesReportQuery = async (branch_id) => {
+	const where = branch_id == 0 ? { status_id: 5 } : { status_id: 5, branch_id };
+
 	const result = await Transactions.findAll({
 		attributes: ["user_id", [sequelize.fn("SUM", sequelize.col("amount")), "total_spending"]],
+		where,
 		include: [
 			{
 				model: Users,
-				where: { status_id: 5, branch_id: 1 },
+				attributes: ["username", "email"],
 				required: true,
 			},
 		],

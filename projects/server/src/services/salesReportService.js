@@ -1,5 +1,6 @@
 const { startFindErrorHandler } = require("../errors/serviceError.js");
 const { sequelize } = require("../models/index.js");
+const moment = require("moment");
 const {
 	readProductSalesReportQuery,
 	readTransactionSalesReportQuery,
@@ -17,21 +18,26 @@ module.exports = {
 			}
 		});
 	},
-	startFindSalesReportByTransaction: async (query, branch_id) => {
+	startFindSalesReportByTransaction: async (branch_id, from, to) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const adminTransactionsData = await readTransactionSalesReportQuery(query, branch_id);
-				return resolve(adminTransactionsData);
+				from = from ? moment(from) : moment(0);
+				to = to ? moment(to).add(1, "d") : moment();
+				console.log("from services: ", from);
+				console.log("to services: ", to);
+				const TransactionSalesReport = await readTransactionSalesReportQuery(branch_id, from, to);
+				return resolve(TransactionSalesReport);
 			} catch (error) {
+				console.log("error msg:", error);
 				return reject(await startFindErrorHandler(error));
 			}
 		});
 	},
-	startFindSalesReportByUser: async (query, branch_id) => {
+	startFindSalesReportByUser: async (branch_id) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const adminTransactionsData = await readUserSalesReportQuery(query, branch_id);
-				return resolve(adminTransactionsData);
+				const UserSalesReport = await readUserSalesReportQuery(branch_id);
+				return resolve(UserSalesReport);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
 			}

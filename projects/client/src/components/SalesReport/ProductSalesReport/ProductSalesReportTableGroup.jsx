@@ -3,8 +3,6 @@ import React from "react";
 import { orderDefault, sortDefault } from "../handlers/SalesReportHandler";
 import SearchConfiguration from "../SearchConfiguration.jsx";
 import Pagination from "../../Pagination.jsx";
-
-import SalesReportTable from "./ProductSalesReportTable.jsx";
 import ProductSalesReportTable from "./ProductSalesReportTable.jsx";
 
 const ProductSalesReportTableGroup = () => {

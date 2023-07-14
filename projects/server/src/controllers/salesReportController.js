@@ -15,9 +15,9 @@ const getSalesReportByProduct = async (request, response) => {
 		});
 };
 const getSalesReportByTransaction = async (request, response) => {
-	const { transaction_id } = request.params;
-	const { id } = request.userData;
-	await startFindSalesReportByTransaction(transaction_id, id)
+	const { start_after, end_before } = request.query;
+	const branch_id = request.branchData.id;
+	await startFindSalesReportByTransaction(branch_id, start_after, end_before)
 		.then((result) => {
 			response.status(200).send(result);
 		})
@@ -26,9 +26,8 @@ const getSalesReportByTransaction = async (request, response) => {
 		});
 };
 const getSalesReportByUser = async (request, response) => {
-	const { transaction_id } = request.branchData.id;
-	const { id } = request.userData;
-	await startFindSalesReportByUser(transaction_id, id)
+	const branch_id = request.branchData.id;
+	await startFindSalesReportByUser(branch_id)
 		.then((result) => {
 			response.status(200).send(result);
 		})

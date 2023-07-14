@@ -12,6 +12,18 @@ export const getSalesReportByProduct = (query = "") => {
 	});
 };
 
+export const getSalesReportByTransaction = (query = "") => {
+	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/admin/report/transaction${query}`, {
+		headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+	});
+};
+
+export const getSalesReportByUser = (query = "") => {
+	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/admin/report/user${query}`, {
+		headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+	});
+};
+
 export const sortDefault = { id: "name", name: "Product Name" };
 export const orderDefault = { id: "1", name: "A to Z" };
 
@@ -78,13 +90,13 @@ export const getFilterOfDescription = () => {
 export const generateUrlQuery = (name = "", page, filterBy, filter, sort, order, startDate, endDate) => {
 	let url = "";
 
-	url += `?page=${page}`;
-	url += `&name=${name}`;
-	url += startDate ? `&start_after=${startDate}` : "";
-	url += endDate ? `&end_before=${new Date(new Date(endDate).getTime() + 1000 * 60 * 60 * 24)}` : "";
-	url += filter?.id ? `&${filterBy?.id}=${filter?.id}` : "";
-	url += sort?.id ? `&order=${sort?.id}` : "";
-	url += order?.id ? `&asc=${order?.id}` : "";
+	// url += `?page=${page}`;
+	// url += `&name=${name}`;
+	url += startDate ? `?start_after=${startDate}` : "";
+	url += endDate ? `&end_before=${endDate}` : "";
+	// url += filter?.id ? `&${filterBy?.id}=${filter?.id}` : "";
+	// url += sort?.id ? `&order=${sort?.id}` : "";
+	// url += order?.id ? `&asc=${order?.id}` : "";
 
 	return url;
 };

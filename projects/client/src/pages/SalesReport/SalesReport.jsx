@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import SideBar from "../../components/SideBar/SideBar";
 import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration";
 import PageTitle from "../../components/PageTitle";
-import ProductSalesReportTableGroup from "../../components/SalesReport/ProductSalesReport/ProductSalesReportTableGroup";
-// import TransactionSalesReportTableGroup from "../../components/SalesReport/TransactionSalesReportTableGroup";
-// import UserSalesReportTableGroup from "../../components/SalesReport/UserSalesReportTableGroup";
 import DisplayByConfiguration from "../../components/SalesReport/SearchConfiguration/DisplayByConfiguration";
 import CompanyLogo from "../../components/CompanyLogo";
+import ProductSalesReportTableGroup from "../../components/SalesReport/ProductSalesReport/ProductSalesReportTableGroup";
 import TransactionSalesReportTableGroup from "../../components/SalesReport/TransactionSalesReport/TransactionSalesReportTableGroup";
 import UserSalesReportTableGroup from "../../components/SalesReport/UserSalesReport/UserSalesReportTableGroup";
 

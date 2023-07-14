@@ -1,14 +1,14 @@
 import React from "react";
 
-import SalesReportTableHead from "../SalesTable/SalesReportTableHead.jsx";
-import SalesReportTableBody from "../SalesTable/SalesReportTableBody.jsx";
+import UserSalesReportTableHead from "./UserSalesReportTableHead";
+import UserSalesReportTableBody from "./UserSalesReportTableBody";
 
 const UserSalesReportTable = ({ name, filterBy, filter, sort, order, page, setMaxPage, startDate, endDate }) => {
 	return (
 		<div className="flex overflow-x-auto rounded-lg border border-green-300 border-2 mx-6">
 			<table className="w-full">
-				<SalesReportTableHead />
-				<SalesReportTableBody
+				<UserSalesReportTableHead />
+				<UserSalesReportTableBody
 					name={name}
 					filterBy={filterBy}
 					filter={filter}

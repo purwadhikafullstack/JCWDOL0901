@@ -19,3 +19,83 @@
 	Source: startCreateErrorHandler
 	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"1-173","origin":"DB","instance":{"user_id":1,"inventory_id":"173","quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-173' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,"173",1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '1-173' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[1,"173",1]},"fields":{"PRIMARY":"1-173"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
 	
+	===
+	Time: Fri Jul 14 2023 17:40:57 GMT+0700 (Waktu Indonesia Barat)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Fri Jul 14 2023 17:40:59 GMT+0700 (Waktu Indonesia Barat)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Fri Jul 14 2023 17:41:20 GMT+0700 (Waktu Indonesia Barat)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Fri Jul 14 2023 17:42:29 GMT+0700 (Waktu Indonesia Barat)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Fri Jul 14 2023 17:43:56 GMT+0700 (Waktu Indonesia Barat)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Fri Jul 14 2023 17:45:10 GMT+0700 (Waktu Indonesia Barat)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'User.status_id' in 'on clause'","sql":"SELECT `Transactions`.`user_id`, SUM(`amount`) AS `total_spending`, `User`.`id` AS `User.id`, `User`.`email` AS `User.email`, `User`.`phone` AS `User.phone`, `User`.`password` AS `User.password`, `User`.`username` AS `User.username`, `User`.`verified` AS `User.verified`, `User`.`referral_code` AS `User.referral_code`, `User`.`referrer` AS `User.referrer`, `User`.`created_at` AS `User.created_at`, `User`.`updated_at` AS `User.updated_at` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` AND `User`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'User.status_id' in 'on clause'","sql":"SELECT `Transactions`.`user_id`, SUM(`amount`) AS `total_spending`, `User`.`id` AS `User.id`, `User`.`email` AS `User.email`, `User`.`phone` AS `User.phone`, `User`.`password` AS `User.password`, `User`.`username` AS `User.username`, `User`.`verified` AS `User.verified`, `User`.`referral_code` AS `User.referral_code`, `User`.`referrer` AS `User.referrer`, `User`.`created_at` AS `User.created_at`, `User`.`updated_at` AS `User.updated_at` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` AND `User`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;"},"sql":"SELECT `Transactions`.`user_id`, SUM(`amount`) AS `total_spending`, `User`.`id` AS `User.id`, `User`.`email` AS `User.email`, `User`.`phone` AS `User.phone`, `User`.`password` AS `User.password`, `User`.`username` AS `User.username`, `User`.`verified` AS `User.verified`, `User`.`referral_code` AS `User.referral_code`, `User`.`referrer` AS `User.referrer`, `User`.`created_at` AS `User.created_at`, `User`.`updated_at` AS `User.updated_at` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` AND `User`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;","parameters":{}}
+	
+	===
+	Time: Fri Jul 14 2023 17:49:21 GMT+0700 (Waktu Indonesia Barat)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'User.status_id' in 'on clause'","sql":"SELECT `Transactions`.`user_id`, SUM(`amount`) AS `total_spending` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` AND `User`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'User.status_id' in 'on clause'","sql":"SELECT `Transactions`.`user_id`, SUM(`amount`) AS `total_spending` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` AND `User`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;"},"sql":"SELECT `Transactions`.`user_id`, SUM(`amount`) AS `total_spending` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` AND `User`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;","parameters":{}}
+	
+	===
+	Time: Fri Jul 14 2023 18:05:51 GMT+0700 (Waktu Indonesia Barat)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeEagerLoadingError"}
+	
+	===
+	Time: Fri Jul 14 2023 18:09:02 GMT+0700 (Waktu Indonesia Barat)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'User.status_id' in 'on clause'","sql":"SELECT `Transactions`.`user_id`, SUM(`amount`) AS `total_spending` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` AND `User`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'User.status_id' in 'on clause'","sql":"SELECT `Transactions`.`user_id`, SUM(`amount`) AS `total_spending` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` AND `User`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;"},"sql":"SELECT `Transactions`.`user_id`, SUM(`amount`) AS `total_spending` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` AND `User`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;","parameters":{}}
+	
+	===
+	Time: Fri Jul 14 2023 18:15:44 GMT+0700 (Waktu Indonesia Barat)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'User.status_id' in 'on clause'","sql":"SELECT `Transactions`.`user_id`, SUM(`amount`) AS `total_spending` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` AND `User`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'User.status_id' in 'on clause'","sql":"SELECT `Transactions`.`user_id`, SUM(`amount`) AS `total_spending` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` AND `User`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;"},"sql":"SELECT `Transactions`.`user_id`, SUM(`amount`) AS `total_spending` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` AND `User`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;","parameters":{}}
+	
+	===
+	Time: Fri Jul 14 2023 18:15:45 GMT+0700 (Waktu Indonesia Barat)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'User.status_id' in 'on clause'","sql":"SELECT `Transactions`.`user_id`, SUM(`amount`) AS `total_spending` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` AND `User`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'User.status_id' in 'on clause'","sql":"SELECT `Transactions`.`user_id`, SUM(`amount`) AS `total_spending` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` AND `User`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;"},"sql":"SELECT `Transactions`.`user_id`, SUM(`amount`) AS `total_spending` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` AND `User`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;","parameters":{}}
+	
+	===
+	Time: Fri Jul 14 2023 18:48:55 GMT+0700 (Waktu Indonesia Barat)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.username' in 'field list'","sql":"SELECT `Transactions`.`user_id`, `Transactions`.`username`, `Transactions`.`email`, SUM(`amount`) AS `total_spending` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` WHERE `Transactions`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.username' in 'field list'","sql":"SELECT `Transactions`.`user_id`, `Transactions`.`username`, `Transactions`.`email`, SUM(`amount`) AS `total_spending` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` WHERE `Transactions`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;"},"sql":"SELECT `Transactions`.`user_id`, `Transactions`.`username`, `Transactions`.`email`, SUM(`amount`) AS `total_spending` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` WHERE `Transactions`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;","parameters":{}}
+	
+	===
+	Time: Fri Jul 14 2023 18:48:57 GMT+0700 (Waktu Indonesia Barat)
+	Source: startFindErrorHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.username' in 'field list'","sql":"SELECT `Transactions`.`user_id`, `Transactions`.`username`, `Transactions`.`email`, SUM(`amount`) AS `total_spending` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` WHERE `Transactions`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;"},"original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlState":"42S22","sqlMessage":"Unknown column 'Transactions.username' in 'field list'","sql":"SELECT `Transactions`.`user_id`, `Transactions`.`username`, `Transactions`.`email`, SUM(`amount`) AS `total_spending` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` WHERE `Transactions`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;"},"sql":"SELECT `Transactions`.`user_id`, `Transactions`.`username`, `Transactions`.`email`, SUM(`amount`) AS `total_spending` FROM `Transactions` AS `Transactions` INNER JOIN `Users` AS `User` ON `Transactions`.`user_id` = `User`.`id` WHERE `Transactions`.`status_id` = 5 GROUP BY `user_id` ORDER BY total_spending DESC;","parameters":{}}
+	
+	===
+	Time: Fri Jul 14 2023 19:52:51 GMT+0700 (Waktu Indonesia Barat)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Fri Jul 14 2023 19:53:03 GMT+0700 (Waktu Indonesia Barat)
+	Source: startFindErrorHandler
+	Error: {}
+	
+	===
+	Time: Fri Jul 14 2023 19:53:47 GMT+0700 (Waktu Indonesia Barat)
+	Source: startFindErrorHandler
+	Error: {}
+	
