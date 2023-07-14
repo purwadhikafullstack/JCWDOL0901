@@ -107,7 +107,7 @@ module.exports = {
 		return new Promise(async (resolve, reject) => {
 			try {
 				const from = moment(0);
-				const to = moment(new Date().toISOString().split("T")[0]);
+				const to = moment();
 				const AllTimeData = getAllTimeData(from, to, status, branch);
 				return resolve(AllTimeData);
 			} catch (error) {
