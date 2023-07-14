@@ -42,6 +42,7 @@ import OrderDetail from "./pages/OrderDetail/OrderDetail";
 import CartPage from "./pages/Cart/CartPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import SalesReport from "./pages/SalesReport/SalesReport";
+import AdminOrderDetail from "./pages/AdminOrderDetail/AdminOrderDetail";
 
 function App() {
 	return (
@@ -87,6 +88,10 @@ function App() {
 
 				{/* //Admin Auth Page */}
 				<Route path="/admin/order" element={<AdminAuthGuard component={<ManageOrder />} />} />
+				<Route
+					path="/admin/order/detail/:transaction_id"
+					element={<AdminAuthGuard component={<AdminOrderDetail />} />}
+				/>
 				<Route path="/admin/promo" element={<AdminAuthGuard component={<ProductPromotion />} />} />
 				<Route path="/admin/promo/create" element={<AdminAuthGuard component={<CreatePromotion />} />} />
 				<Route path="/admin/stock" element={<AdminAuthGuard component={<ManageStock />} />} />

@@ -6,11 +6,24 @@ const {
 	startCancelUserOrder,
 	startConfirmUserOrder,
 	startRejectUserOrder,
+	startFindTransactionDetail,
 } = require("../services/adminTransactionService");
 
 const getAdminTransactions = async (request, response) => {
 	const branch_id = request.branchData.id;
 	await startFindAdminTransactions(request.query, branch_id)
+		.then((result) => {
+			response.status(200).send(result);
+		})
+		.catch((error) => {
+			response.status(error.code).send(error.message);
+		});
+};
+
+const getTransactionDetail = async (request, response) => {
+	const branch_id = request.branchData.id;
+	const { transaction_id } = request.params;
+	await startFindTransactionDetail(branch_id, transaction_id)
 		.then((result) => {
 			response.status(200).send(result);
 		})
@@ -99,4 +112,5 @@ module.exports = {
 	cancelUserOrder,
 	confirmUserOrder,
 	rejectUserOrder,
+	getTransactionDetail,
 };

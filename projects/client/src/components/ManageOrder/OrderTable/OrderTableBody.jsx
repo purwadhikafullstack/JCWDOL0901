@@ -5,6 +5,7 @@ import OrderBodyContent from "./OrderBodyContent";
 const OrderTableBody = ({ superAdmin, name, startDate, endDate, filterBy, filter, sort, order, page, setMaxPage }) => {
 	const [data, setData] = React.useState([]);
 	const [isUpdated, setIsUpdated] = React.useState(false);
+	// const navigate = React.useNavigate();
 
 	React.useEffect(() => {
 		const query = generateUrlQuery(name, startDate, endDate, filterBy, filter, sort, order, page);

@@ -38,7 +38,7 @@ const DeliveryCost = ({ deliveryCost }) => {
 	return (
 		<div className="flex flex-row pt-4 text-gray-200 text-sm">
 			<div className="text-left">Delivery Cost</div>
-			<div className="px-4 text-right ml-auto text-black">Rp{deliveryCost.toLocaleString("id")}</div>
+			<div className="px-4 text-right ml-auto text-black">Rp{deliveryCost?.toLocaleString("id")}</div>
 		</div>
 	);
 };
@@ -64,9 +64,9 @@ const TotalPrice = ({ transaction }) => {
 };
 
 const YourOrder = ({ transaction }) => {
-	const deliveryCost = transaction.Logistic.shipping_cost;
-	const voucher_discount = transaction.voucher_discount;
-	const subTotal = transaction.amount + voucher_discount - deliveryCost;
+	const deliveryCost = transaction?.Logistic?.shipping_cost;
+	const voucher_discount = transaction?.voucher_discount;
+	const subTotal = transaction?.amount + voucher_discount - deliveryCost;
 	return (
 		<div className="py-6">
 			<div className="mx-10 max-w-[800px]">
