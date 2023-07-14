@@ -113,6 +113,7 @@ const readUserTransactionsQuery = async (user_id) => {
 		where: { user_id },
 		include: { model: Transaction_details, include: { model: Inventories, include: Products } },
 		distinct: true,
+		order: [["updated_at", "DESC"]],
 	});
 };
 
