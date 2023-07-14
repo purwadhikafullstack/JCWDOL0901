@@ -25,7 +25,11 @@ const getRawData = (data) =>
 	});
 
 const getLabels = (from, to) => {
-	const diffInDays = moment(to).diff(moment(from), "days") + 1;
+	const diffInDays = moment(to)
+		.add(1, "days")
+		.set({ hour: 0, minute: 0, second: 0, millisecond: 0 })
+		.diff(moment(from), "days");
+	console.log(diffInDays, from, to);
 	return new Array(diffInDays).fill(0).map((cur, index, arr) => moment(from).add(index, "days").format("DD/MM/YYYY"));
 };
 
@@ -87,8 +91,10 @@ module.exports = {
 	startGetAdminDashboardData: async (from, to, status, branch) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				from = from ? moment(from) : moment(new Date().toISOString().split("T")[0]).subtract(6, "days");
-				to = to ? moment(to) : moment(new Date().toISOString().split("T")[0]);
+				from = from
+					? moment(from)
+					: moment(from).subtract(6, "days").set({ hour: 0, minute: 0, second: 0, millisecond: 0 });
+				to = to ? moment(to) : moment();
 
 				const DashboardData = getDashboardData(from, to, status, branch);
 				return resolve(DashboardData);
