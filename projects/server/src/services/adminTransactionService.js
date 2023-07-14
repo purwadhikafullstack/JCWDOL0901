@@ -4,6 +4,7 @@ const {
 	readBranchAdminTransactionsQuery,
 	readUserTransactionQuery,
 	updateTransactionStatusQuery,
+	readBranchAdminTransactionDetailQuery,
 } = require("../queries/Transactions.js");
 const moment = require("moment");
 const { sequelize } = require("../models/index.js");
@@ -83,6 +84,16 @@ module.exports = {
 			try {
 				const adminTransactionsData = await readBranchAdminTransactionsQuery(query, branch_id);
 				return resolve(adminTransactionsData);
+			} catch (error) {
+				return reject(await startFindErrorHandler(error));
+			}
+		});
+	},
+	startFindTransactionDetail: async (branch_id, transaction_id) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const adminTransactionDetail = await readBranchAdminTransactionDetailQuery(branch_id, transaction_id);
+				return resolve(adminTransactionDetail);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
 			}

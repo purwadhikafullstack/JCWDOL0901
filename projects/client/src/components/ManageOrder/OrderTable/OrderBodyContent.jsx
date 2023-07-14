@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { getBorderColor } from "../handlers/manageOrderHandler";
 import { saveAs } from "file-saver";
 import { cancelUserOrder, confirmUserOrder, rejectUserOrder, sendUserOrder } from "../handlers/buttonHandler";
@@ -123,11 +124,17 @@ const Action = ({ item, setIsUpdated }) => {
 };
 
 const OrderBodyContent = ({ superAdmin, data, setIsUpdated }) => {
+	const navigate = useNavigate();
 	return data.map((item, index) => {
 		return (
 			<div className="rounded-lg border-green-300 border-2 mt-4">
 				<div className="text-sm px-8 grid grid-cols-12 w-full h-16 py-2">
-					<div className="col-span-1 text-[#f47229] font-bold my-auto cursor-pointer">{item.id}</div>
+					<div
+						className="col-span-1 text-[#f47229] font-bold my-auto cursor-pointer"
+						onClick={() => navigate(`/admin/order/detail/${item.id}`)}
+					>
+						{item.id}
+					</div>
 					{superAdmin && <BranchName item={item} />}
 					<CreatedAt item={item} />
 					<Proof item={item} />
