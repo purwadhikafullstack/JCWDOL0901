@@ -1,18 +1,19 @@
 import React from "react";
 import { getSalesReportByProduct } from "../handlers/SalesReportHandler.js";
 import ProductSalesReportBodyContent from "./ProductSalesReportBodyContent";
-// import { generateUrlQuery, getBranchInventories } from "../handlers/SalesReportHandler.js";
+import { generateUrlQuery, getBranchInventories } from "../handlers/SalesReportHandler.js";
 
 const ProductSalesReportTableBody = ({ name, filterBy, filter, sort, order, page, setMaxPage, startDate, endDate }) => {
 	const [datas, setDatas] = React.useState([]);
 	React.useEffect(() => {
-		getSalesReportByProduct()
+		const query = generateUrlQuery(name, page, filterBy, filter, sort, order, startDate, endDate);
+		getSalesReportByProduct(query)
 			.then((result) => {
 				setDatas(result.data);
 				// setMaxPage(Math.ceil(result.data.count / 3));
 			})
 			.catch((error) => alert("Server Unavailable"));
-	}, []);
+	}, [startDate, endDate]);
 
 	// React.useEffect(() => {
 	// 	const query = generateUrlQuery(name, page, filterBy, filter, sort, order, startDate, endDate);

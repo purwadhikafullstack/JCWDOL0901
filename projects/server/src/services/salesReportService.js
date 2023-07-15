@@ -8,10 +8,12 @@ const {
 } = require("../queries/SalesReport.js");
 
 module.exports = {
-	startFindSalesReportByProduct: async (branch_id) => {
+	startFindSalesReportByProduct: async (branch_id, from, to) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const ProductSalesReport = await readProductSalesReportQuery(branch_id);
+				from = from ? moment(from) : moment(0);
+				to = to ? moment(to).add(1, "d") : moment();
+				const ProductSalesReport = await readProductSalesReportQuery(branch_id, from, to);
 				return resolve(ProductSalesReport);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
@@ -23,8 +25,6 @@ module.exports = {
 			try {
 				from = from ? moment(from) : moment(0);
 				to = to ? moment(to).add(1, "d") : moment();
-				console.log("from services: ", from);
-				console.log("to services: ", to);
 				const TransactionSalesReport = await readTransactionSalesReportQuery(branch_id, from, to);
 				return resolve(TransactionSalesReport);
 			} catch (error) {
@@ -33,10 +33,12 @@ module.exports = {
 			}
 		});
 	},
-	startFindSalesReportByUser: async (branch_id) => {
+	startFindSalesReportByUser: async (branch_id, from, to) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const UserSalesReport = await readUserSalesReportQuery(branch_id);
+				from = from ? moment(from) : moment(0);
+				to = to ? moment(to).add(1, "d") : moment();
+				const UserSalesReport = await readUserSalesReportQuery(branch_id, from, to);
 				return resolve(UserSalesReport);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
