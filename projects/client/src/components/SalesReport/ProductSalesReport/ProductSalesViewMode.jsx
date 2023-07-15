@@ -25,9 +25,9 @@ const ProductSalesViewMode = ({ item, index }) => {
 	return (
 		<tbody key={index}>
 			<tr>
-				{/* <td className={tdClassName}>
+				<td className={tdClassName}>
 					<img src={item.Inventory.Product.image} className="max-w-[80px] mx-auto" />
-				</td> */}
+				</td>
 				<td className={tdClassName}>{index + 1}</td>
 				<td className={tdClassName}>{item.name}</td>
 				<td className={tdClassName}>{item.qty}</td>

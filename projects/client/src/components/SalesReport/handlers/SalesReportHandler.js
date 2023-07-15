@@ -1,11 +1,5 @@
 import axios from "axios";
 
-export const getBranchInventories = (query = "") => {
-	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/admin/inventory/history${query}`, {
-		headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-	});
-};
-
 export const getSalesReportByProduct = (query = "") => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/admin/report/product${query}`, {
 		headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
@@ -54,6 +48,24 @@ export const getOrderOfDate = () => {
 		});
 	});
 };
+export const getSortTotalSpendingBy = () => {
+	return new Promise((resolve, reject) => {
+		resolve({
+			data: [{ id: "created_at", name: "Total Spending" }],
+		});
+	});
+};
+
+export const getOrderOfTotalSpending = () => {
+	return new Promise((resolve, reject) => {
+		resolve({
+			data: [
+				{ id: "0", name: "Highest" },
+				{ id: "1", name: "Lowest" },
+			],
+		});
+	});
+};
 
 export const getFilterBy = () => {
 	return new Promise((resolve, reject) => {
@@ -90,13 +102,13 @@ export const getFilterOfDescription = () => {
 export const generateUrlQuery = (name = "", page, filterBy, filter, sort, order, startDate, endDate) => {
 	let url = "";
 
-	// url += `?page=${page}`;
+	url += `?page=${page}`;
 	// url += `&name=${name}`;
-	url += startDate ? `?start_after=${startDate}` : "";
+	url += startDate ? `&start_after=${startDate}` : "";
 	url += endDate ? `&end_before=${endDate}` : "";
 	// url += filter?.id ? `&${filterBy?.id}=${filter?.id}` : "";
-	// url += sort?.id ? `&order=${sort?.id}` : "";
-	// url += order?.id ? `&asc=${order?.id}` : "";
+	url += sort?.id ? `&order=${sort?.id}` : "";
+	url += order?.id ? `&asc=${order?.id}` : "";
 
 	return url;
 };

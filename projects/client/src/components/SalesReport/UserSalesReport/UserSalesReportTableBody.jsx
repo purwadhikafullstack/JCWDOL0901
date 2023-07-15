@@ -8,11 +8,12 @@ const UserSalesReportTableBody = ({ name, filterBy, filter, sort, order, page, s
 		const query = generateUrlQuery(name, page, filterBy, filter, sort, order, startDate, endDate);
 		getSalesReportByUser(query)
 			.then((result) => {
+				console.log("result.data: ", result.data);
 				setDatas(result.data);
-				// setMaxPage(Math.ceil(result.data.count / 3));
+				setMaxPage(Math.ceil(result.data.count / 3));
 			})
 			.catch((error) => alert("Server Unavailable"));
-	}, [startDate, endDate]);
+	}, [filter, order, page, startDate, endDate]);
 
 	// const [datas, setDatas] = React.useState([]);
 	// React.useEffect(() => {
