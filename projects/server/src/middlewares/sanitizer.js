@@ -67,13 +67,17 @@ const getInventoriesQuerySanitizer = async (request, response, next) => {
 };
 
 const getProductsRecommendationQuerySanitizer = async (request, response, next) => {
-	const sanitizedQuery = {
-		filter: await getProductsRecommendationFilter(request.query),
-	};
+	if (request.query.branch_id === "null") {
+		return response.status(400).send("BRANCH ID IS NULL");
+	} else {
+		const sanitizedQuery = {
+			filter: await getProductsRecommendationFilter(request.query),
+		};
 
-	request.query = sanitizedQuery;
+		request.query = sanitizedQuery;
 
-	next();
+		next();
+	}
 };
 
 const getRelatedProductsQuerySanitizer = async (request, response, next) => {
