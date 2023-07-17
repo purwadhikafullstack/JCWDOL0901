@@ -15,10 +15,13 @@ const UserSalesReportTableGroup = () => {
 	const [maxPage, setMaxPage] = React.useState(1);
 	const [startDate, setStartDate] = React.useState("");
 	const [endDate, setEndDate] = React.useState("");
-
+	const [itemPerPage, setItemPerPage] = React.useState(5);
+	
 	React.useEffect(() => {
 		setPage(1);
 	}, [name, filter, order, startDate, endDate]);
+	console.log("page: ", page);
+	console.log("max page: ", maxPage);
 
 	return (
 		<div className="flex flex-col justify-start pt-0.5 mt-7 px-4 h-full">
@@ -49,6 +52,7 @@ const UserSalesReportTableGroup = () => {
 				setMaxPage={setMaxPage}
 				startDate={startDate}
 				endDate={endDate}
+				itemPerPage={itemPerPage}
 			/>
 			<div className="mx-auto mt-16">
 				<Pagination page={page} setPage={setPage} maxPage={maxPage} />

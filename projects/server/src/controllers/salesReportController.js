@@ -16,9 +16,9 @@ const getSalesReportByProduct = async (request, response) => {
 		});
 };
 const getSalesReportByTransaction = async (request, response) => {
-	const { start_after, end_before } = request.query;
+	const { start_after, end_before, page, item_per_page  } = request.query;
 	const branch_id = request.branchData.id;
-	await startFindSalesReportByTransaction(branch_id, start_after, end_before)
+	await startFindSalesReportByTransaction(branch_id, start_after, end_before, page, item_per_page)
 		.then((result) => {
 			response.status(200).send(result);
 		})
@@ -27,9 +27,9 @@ const getSalesReportByTransaction = async (request, response) => {
 		});
 };
 const getSalesReportByUser = async (request, response) => {
-	const { start_after, end_before } = request.query;
+	const { start_after, end_before, page, item_per_page } = request.query;
 	const branch_id = request.branchData.id;
-	await startFindSalesReportByUser(branch_id, start_after, end_before)
+	await startFindSalesReportByUser(branch_id, start_after, end_before, page, item_per_page)
 		.then((result) => {
 			response.status(200).send(result);
 		})

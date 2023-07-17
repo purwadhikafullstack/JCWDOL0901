@@ -1,5 +1,5 @@
 import React from "react";
-import { generateUrlQuery, getBranchInventories, getSalesReportByTransaction } from "../handlers/SalesReportHandler";
+import { generateUrlQuery, getSalesReportByTransaction } from "../handlers/SalesReportHandler";
 import TransactionSalesReportBodyContent from "./TransactionSalesReportBodyContent";
 
 const TransactionSalesReportTableBody = ({
@@ -12,17 +12,20 @@ const TransactionSalesReportTableBody = ({
 	setMaxPage,
 	startDate,
 	endDate,
+	itemPerPage,
 }) => {
 	const [datas, setDatas] = React.useState([]);
 	React.useEffect(() => {
-		const query = generateUrlQuery(name, page, filterBy, filter, sort, order, startDate, endDate);
+		const query = generateUrlQuery(name, page, filterBy, filter, sort, order, startDate, endDate, itemPerPage);
+		console.log("query in SalesTableReport: ", query);
 		getSalesReportByTransaction(query)
 			.then((result) => {
-				setDatas(result.data);
-				// setMaxPage(Math.ceil(result.data.count / 3));
+				console.log("result.data: ", result.data);
+				setDatas(result.data.rows);
+				setMaxPage(Math.ceil(result.data.count.length / itemPerPage));
 			})
 			.catch((error) => alert("Server Unavailable"));
-	}, [startDate, endDate]);
+	}, [filter, order, page, startDate, endDate]);
 
 	// const [datas, setDatas] = React.useState([]);
 	// React.useEffect(() => {
@@ -36,7 +39,7 @@ const TransactionSalesReportTableBody = ({
 	// 		.catch((error) => alert("Server Unavailable"));
 	// }, [filter, order, page, name, startDate, endDate]);
 
-	return datas && <TransactionSalesReportBodyContent datas={datas} />;
+	return datas && <TransactionSalesReportBodyContent datas={datas} page={page} itemPerPage={itemPerPage} />;
 };
 
 export default TransactionSalesReportTableBody;

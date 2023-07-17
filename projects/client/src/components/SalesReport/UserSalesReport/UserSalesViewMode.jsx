@@ -20,7 +20,7 @@ const Time = ({ item }) => {
 	);
 };
 
-const UserSalesViewMode = ({ item, index }) => {
+const UserSalesViewMode = ({ item, index, page, itemPerPage }) => {
 	const tdClassName = index % 2 ? "py-4 bg-green-100 text-xs text-center" : "py-4 bg-white text-xs text-center";
 	return (
 		<tbody key={index}>
@@ -28,7 +28,7 @@ const UserSalesViewMode = ({ item, index }) => {
 				{/* <td className={tdClassName}>
 					<img src={item.Inventory.Product.image} className="max-w-[80px] mx-auto" />
 				</td> */}
-				<td className={tdClassName}>{index + 1}</td>
+				<td className={tdClassName}>{(page - 1) * itemPerPage + (index + 1)}</td>
 				<td className={tdClassName}>{item.User.username}</td>
 				<td className={tdClassName}>{item.User.email}</td>
 				<td className={tdClassName}>Rp {parseInt(item.total_spending).toLocaleString("id")}</td>

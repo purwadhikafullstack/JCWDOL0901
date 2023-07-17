@@ -22,7 +22,7 @@ const Time = ({ item }) => {
 	);
 };
 
-const TransactionSalesViewMode = ({ item, index }) => {
+const TransactionSalesViewMode = ({ item, index, page, itemPerPage }) => {
 	const tdClassName = index % 2 ? "py-4 bg-green-100 text-xs text-center" : "py-4 bg-white text-xs text-center";
 	return (
 		<tbody key={index}>
@@ -30,7 +30,7 @@ const TransactionSalesViewMode = ({ item, index }) => {
 				{/* <td className={tdClassName}>
 					<img src={item.Inventory.Product.image} className="max-w-[80px] mx-auto" />
 				</td> */}
-				<td className={tdClassName}>{index + 1}</td>
+				<td className={tdClassName}>{(page - 1) * itemPerPage + (index + 1)}</td>
 				<td className={tdClassName}>Rp {item.amount.toLocaleString("id")}</td>
 				<td className={tdClassName}>{moment(item.updated_at).format("dddd, MMMM Do YYYY, h:mm:ss a")}</td>
 				{/* <td className={tdClassName}>

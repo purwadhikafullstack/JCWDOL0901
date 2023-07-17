@@ -38,6 +38,7 @@ const UserSalesReportSearchConfiguration = ({
 					setFilterBy={setFilterBy}
 					filter={filter}
 					setFilter={setFilter}
+					setOrder={setOrder}
 				/>
 				<SortConfiguration sort={sort} setSort={setSort} order={order} setOrder={setOrder} />
 				{/* <SortConfiguration sort={sort} setSort={setSort} order={order} setOrder={setOrder} /> */}

@@ -20,12 +20,12 @@ module.exports = {
 			}
 		});
 	},
-	startFindSalesReportByTransaction: async (branch_id, from, to) => {
+	startFindSalesReportByTransaction: async (branch_id, from, to, page, item_per_page) => {
 		return new Promise(async (resolve, reject) => {
 			try {
 				from = from ? moment(from) : moment(0);
 				to = to ? moment(to).add(1, "d") : moment();
-				const TransactionSalesReport = await readTransactionSalesReportQuery(branch_id, from, to);
+				const TransactionSalesReport = await readTransactionSalesReportQuery(branch_id, from, to, page, item_per_page);
 				return resolve(TransactionSalesReport);
 			} catch (error) {
 				console.log("error msg:", error);
@@ -33,14 +33,15 @@ module.exports = {
 			}
 		});
 	},
-	startFindSalesReportByUser: async (branch_id, from, to) => {
+	startFindSalesReportByUser: async (branch_id, from, to, page, item_per_page) => {
 		return new Promise(async (resolve, reject) => {
 			try {
 				from = from ? moment(from) : moment(0);
 				to = to ? moment(to).add(1, "d") : moment();
-				const UserSalesReport = await readUserSalesReportQuery(branch_id, from, to);
+				const UserSalesReport = await readUserSalesReportQuery(branch_id, from, to, page, item_per_page);
 				return resolve(UserSalesReport);
 			} catch (error) {
+				console.log("error:", error)
 				return reject(await startFindErrorHandler(error));
 			}
 		});

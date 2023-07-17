@@ -99,16 +99,18 @@ export const getFilterOfDescription = () => {
 	});
 };
 
-export const generateUrlQuery = (name = "", page, filterBy, filter, sort, order, startDate, endDate) => {
+export const generateUrlQuery = (name = "", page, filterBy, filter, sort, order, startDate, endDate, itemPerPage) => {
 	let url = "";
 
 	url += `?page=${page}`;
 	// url += `&name=${name}`;
 	url += startDate ? `&start_after=${startDate}` : "";
 	url += endDate ? `&end_before=${endDate}` : "";
+	url += itemPerPage ? `&item_per_page=${itemPerPage}` : "";
 	// url += filter?.id ? `&${filterBy?.id}=${filter?.id}` : "";
-	url += sort?.id ? `&order=${sort?.id}` : "";
-	url += order?.id ? `&asc=${order?.id}` : "";
+	// url += sort?.id ? `&order=${sort?.id}` : "";
+	// url += order?.id ? `&asc=${order?.id}` : "";
+	// url += order?.id ? `&asc=${order?.id}` : "";
 
 	return url;
 };
