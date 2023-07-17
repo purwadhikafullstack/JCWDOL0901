@@ -48,6 +48,7 @@ export const addProducts = async (inventory_id, quantity, dispatch) => {
 			timer: 1000,
 		});
 	} catch (error) {
+		console.log("error ordctHandler: ", error);
 		Swal.fire({
 			icon: "error",
 			title: await productErrorHandler(error),

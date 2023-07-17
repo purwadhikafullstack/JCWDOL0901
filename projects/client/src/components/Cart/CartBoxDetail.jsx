@@ -1,7 +1,6 @@
 import React from "react";
 import CartPriceDetail from "./CartPriceDetail";
 import QuantityUpdateButtonSet from "./QuantityUpdateButtonSet";
-// import PriceDetail from "./PriceDetail.jsx";
 
 const CartBoxDetail = ({ cart, setIsUpdate }) => {
 	return cart.length ? (

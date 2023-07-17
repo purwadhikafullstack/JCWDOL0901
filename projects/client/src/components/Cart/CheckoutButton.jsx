@@ -1,11 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-// import { useSelector, useDispatch } from "react-redux";
-// import { postTransaction } from "./handlers/checkoutHandler";
 
 const CheckoutButton = ({ cart }) => {
-	// const checkout = useSelector((state) => state.checkout);
-	// const dispatch = useDispatch();
 	const navigate = useNavigate();
 	return (
 		<div className="flex flex-col">

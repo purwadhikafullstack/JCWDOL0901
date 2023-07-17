@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import { getUserCart } from "../../components/Cart/handlers/CartHandler";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import QuantityUpdateButtonSet from "../../components/Cart/QuantityUpdateButtonSet";
 import CheckoutButton from "../../components/Cart/CheckoutButton";
 import BackButton from "../../components/BackButton";
-import CartBox from "../../components/Cart/CartBox";
 import CartPriceDetail from "../../components/Cart/CartPriceDetail";
 import CartHeader from "../../components/Cart/CartHeader";
 import CartHeaderContent from "../../components/Cart/CartHeaderContent";
