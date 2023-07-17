@@ -41,7 +41,7 @@ const SubTotal = ({ subTotal }) => {
 	return (
 		<div className="flex flex-row pt-4 text-gray-400 text-base">
 			<div className="text-left ml-auto font-semibold">Sub Total:</div>
-			<div className="px-10 text-right ml-10 text-black font-bold">{toCurrency(subTotal)}</div>
+			<div className="px-10 text-right ml-10 text-black font-bold">{subTotal && toCurrency(subTotal)}</div>
 		</div>
 	);
 };
