@@ -7,6 +7,9 @@ import BackButton from "../../components/BackButton";
 import CartPriceDetail from "../../components/Cart/CartPriceDetail";
 import CartHeader from "../../components/Cart/CartHeader";
 import CartHeaderContent from "../../components/Cart/CartHeaderContent";
+import { useDispatch } from "react-redux";
+import { initializeCart } from "../../redux/reducers/checkout/checkoutAction";
+import { toCurrency } from "../../helper/currency";
 
 const ItemPrice = ({ item, setIsUpdate, index }) => {
 	return (
@@ -36,7 +39,7 @@ const SubTotal = ({ subTotal }) => {
 	return (
 		<div className="flex flex-row pt-4 text-gray-400 text-base">
 			<div className="text-left ml-auto font-semibold">Sub Total:</div>
-			<div className="px-10 text-right ml-10 text-black font-bold">Rp{subTotal?.toLocaleString("id")}</div>
+			<div className="px-10 text-right ml-10 text-black font-bold">{subTotal && toCurrency(subTotal)}</div>
 		</div>
 	);
 };

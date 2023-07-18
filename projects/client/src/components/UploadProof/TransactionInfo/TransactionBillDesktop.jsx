@@ -1,4 +1,5 @@
 import React from "react";
+import { toCurrency } from "../../../helper/currency";
 
 const TransactionBillDesktop = ({ transaction }) => {
 	return (
@@ -8,7 +9,7 @@ const TransactionBillDesktop = ({ transaction }) => {
 				<span className="ml-1 text-base lg:text-xl">Amount:</span>
 			</span>
 			<span className="text-[#f47229] font-semibold text-left text-base ml-2 mt-1 lg:text-xl">
-				Rp {transaction.amount.toLocaleString("id")}
+				{toCurrency(transaction.amount)}
 			</span>
 		</div>
 	);
