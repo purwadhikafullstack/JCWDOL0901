@@ -78,11 +78,10 @@ const readProductsOnlyQuery = async (params) => {
 	});
 };
 
-const createProductQuery = async (body, file) => {
+const createProductQuery = async (body, file, transaction) => {
 	const { name, price, description, weight, unit, category_id } = body;
 	const image = `uploads/products/${file.filename}`;
-	// const image = `/product/${file.filename}`;
-	return await Products.create({ name, image, price, description, weight, unit, category_id });
+	return await Products.create({ name, image, price, description, weight, unit, category_id }, { transaction });
 };
 
 const updateProductQuery = async (body, file, params) => {
@@ -95,9 +94,9 @@ const updateProductQuery = async (body, file, params) => {
 	);
 };
 
-const deleteProductQuery = async (params) => {
+const deleteProductQuery = async (params, transaction) => {
 	const id = Number(params.productId);
-	return await Products.destroy({ where: { id } });
+	return await Products.destroy({ where: { id } }, { transaction });
 };
 
 module.exports = {

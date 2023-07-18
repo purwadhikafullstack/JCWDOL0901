@@ -19,7 +19,7 @@ const TableBodyContent = ({ datas, page, itemPerPage, setIsUpdated }) => {
 			{alert ? (
 				<DeleteAlert
 					title={`Delete Product "${productName}"`}
-					desc="Are you sure you want to delete this product?"
+					desc="Are you sure you want to delete this product? Deleting this product will also delete all inventories data for all branches related to this product."
 					buttonName="Delete Product"
 					open={open}
 					setOpen={setOpen}
