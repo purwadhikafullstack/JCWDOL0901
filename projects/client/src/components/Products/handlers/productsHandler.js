@@ -1,6 +1,7 @@
 import axios from "axios";
 import Swal from "sweetalert2";
 import { setCartUpdate } from "../../../redux/reducers/user/userAction";
+import { toCurrency } from "../../../helper/currency";
 
 const productErrorHandler = async (error) => {
 	if (error?.code === "ERR_NETWORK") {
@@ -141,7 +142,7 @@ const getFinalPrice = (original, promoDetail) => {
 const getPromo = (promoDetail) => {
 	let promo;
 	if (promoDetail?.Promotion?.id === 2) {
-		promo = { value: `Save Rp ${promoDetail?.value.toLocaleString("id")}`, type: promoDetail?.Promotion?.name };
+		promo = { value: `Save ${toCurrency(promoDetail?.value)}`, type: promoDetail?.Promotion?.name };
 	} else if (promoDetail?.Promotion?.id === 3) {
 		promo = { value: `${promoDetail?.value}% off`, type: promoDetail?.Promotion?.name };
 	} else if (promoDetail?.Promotion?.id === 4) {
