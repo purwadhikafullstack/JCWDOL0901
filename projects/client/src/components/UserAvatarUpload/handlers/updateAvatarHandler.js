@@ -1,5 +1,6 @@
 import axios from "axios";
 import Swal from "sweetalert2";
+import { setUserLogin } from "../../../redux/reducers/user/userAction";
 
 const updateAvatarErrorHandler = async (error) => {
 	if (error?.code === "ERR_NETWORK") {
@@ -19,7 +20,7 @@ const updateAvatarErrorHandler = async (error) => {
 	return "Something went wrong!";
 };
 
-export const updateAvatarHandler = async (data) => {
+export const updateAvatarHandler = async (data, navigate, dispatch) => {
 	try {
 		const formData = new FormData();
 		formData.append("avatar", data.avatar);
@@ -29,12 +30,16 @@ export const updateAvatarHandler = async (data) => {
 		};
 		await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/profile/avatar/update`, formData, config);
 
+		const profile = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/profile`, config);
+
 		Swal.fire({
 			icon: "success",
 			title: "Avatar has been updated",
 			showConfirmButton: false,
 			timer: 2000,
 		});
+		navigate("/account");
+		dispatch(setUserLogin({ hasLogged: true, avatar: profile.data.avatar, username: profile.data.username }));
 	} catch (error) {
 		Swal.fire({
 			icon: "error",

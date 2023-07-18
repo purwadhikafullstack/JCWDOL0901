@@ -85,6 +85,16 @@ const readBranchAdminTransactionsQuery = async (query, branch) => {
 		limit: 5,
 	});
 };
+const readBranchAdminTransactionDetailQuery = async (branch_id, id) => {
+	return await Transactions.findOne({
+		where: { id, branch_id },
+		include: [
+			{ model: Transaction_details, include: { model: Inventory_promotions, include: Promotions } },
+			{ model: Logistics },
+			{ model: Branches },
+		],
+	});
+};
 
 const createTransactionQuery = async (payload, transaction) => {
 	return await Transactions.create({ ...payload, status_id: 1 }, { transaction });
@@ -113,6 +123,7 @@ const readUserTransactionsQuery = async (user_id) => {
 		where: { user_id },
 		include: { model: Transaction_details, include: { model: Inventories, include: Products } },
 		distinct: true,
+		order: [["updated_at", "DESC"]],
 	});
 };
 
@@ -123,4 +134,5 @@ module.exports = {
 	readUserTransactionQuery,
 	updateTransactionStatusQuery,
 	readUserTransactionsQuery,
+	readBranchAdminTransactionDetailQuery,
 };

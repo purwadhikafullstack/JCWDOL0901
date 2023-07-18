@@ -33,7 +33,7 @@ const QuantityUpdateButtonSet = ({ amount, inventory_id, stock, setIsUpdate }) =
 				<span className="h-fit">{amount}</span>
 			</div>
 			<Increment inventory_id={inventory_id} amount={amount} stock={stock} setIsUpdate={setIsUpdate} />
-			<span className="text-[#f47229] ml-4 font-semibold">{stock - amount} left</span>
+			<span className="text-[#f47229] ml-4 font-semibold text-xs sm:text-base">{stock - amount} left</span>
 		</div>
 	);
 };

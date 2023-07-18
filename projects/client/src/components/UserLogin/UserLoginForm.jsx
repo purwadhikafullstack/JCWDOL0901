@@ -23,7 +23,7 @@ const ForgotPassword = () => {
 const SignUpLink = () => {
 	const navigate = useNavigate();
 	return (
-		<div>
+		<div className="mb-10">
 			Don't have an account?{" "}
 			<span
 				className="text-green-400 hover:underline cursor-pointer font-semibold"

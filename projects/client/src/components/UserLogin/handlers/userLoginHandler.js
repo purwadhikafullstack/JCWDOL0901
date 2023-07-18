@@ -1,6 +1,7 @@
 import axios from "axios";
 import { storeAdminToken } from "../../../utils/jsCookie";
 import { setUserLogin } from "../../../redux/reducers/user/userAction";
+import { clearCheckout } from "../../../redux/reducers/checkout/checkoutAction";
 
 const userLoginErrorHandler = async (error) => {
 	if (error?.code === "ERR_NETWORK") {
@@ -29,6 +30,7 @@ const isUserLogged = async (navigate, dispatch) => {
 			});
 		}
 		dispatch(setUserLogin({ hasLogged: true, avatar: userData.data.avatar, username: userData.data.username }));
+		dispatch(clearCheckout());
 		return;
 	} catch (error) {
 		dispatch(setUserLogin({ hasLogged: false, avatar: "", username: "" }));
