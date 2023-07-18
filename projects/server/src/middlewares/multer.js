@@ -11,7 +11,7 @@ const productStorage = multer.diskStorage({
 
 const categoryStorage = multer.diskStorage({
 	destination: (req, res, cb) => {
-		cb(null, `${__dirname}../../../../client/public/assets/categories`);
+		cb(null, `uploads/categories`);
 	},
 	filename: (req, file, cb) => {
 		cb(null, "category_" + Date.now() + Math.round(Math.random() * 1000000000) + "." + file.mimetype.split("/")[1]);

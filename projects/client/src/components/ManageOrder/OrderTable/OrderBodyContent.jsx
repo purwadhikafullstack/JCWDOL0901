@@ -150,6 +150,7 @@ const OrderBodyContent = ({ superAdmin, data, setIsUpdated }) => {
 			<div
 				className="rounded-lg border-green-300 border-2 mt-4 cursor-pointer hover:bg-green-100/50"
 				onClick={() => navigate(`/admin/order/detail/${item.id}`)}
+				key={index}
 			>
 				<div className="text-sm px-8 grid grid-cols-12 w-full h-16 py-2">
 					<div className="col-span-1 text-[#f47229] font-bold my-auto">{item.id}</div>

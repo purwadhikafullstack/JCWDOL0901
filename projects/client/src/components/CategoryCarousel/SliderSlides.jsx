@@ -92,7 +92,8 @@ const DesktopSlides = ({ categories, setPage }) => {
 							<button className={`rounded-2xl mt-1 ${isFocus ? "ring ring-green-200" : ""}`}>
 								<img
 									className="w-[100px] cursor-pointer rounded-2xl"
-									src={category.image}
+									src={process.env.REACT_APP_IMAGE_BASE_URL + category.image}
+									// src={category.image}
 									alt={category.name}
 									loading="lazy"
 									onClick={() => {

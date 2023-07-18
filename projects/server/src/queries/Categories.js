@@ -13,7 +13,7 @@ const readCategoryQuery = async (filter, order, page, itemPerPage) => {
 };
 const createCategoryQuery = async (body, file) => {
 	const { name } = body;
-	const image = `/assets/categories/${file.filename}`;
+	const image = `uploads/categories/${file.filename}`;
 	return await Categories.create({ name, image });
 };
 

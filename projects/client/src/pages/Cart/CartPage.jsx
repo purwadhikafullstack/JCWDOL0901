@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { getUserCart } from "../../components/Cart/handlers/CartHandler";
 import { useNavigate } from "react-router-dom";
 import QuantityUpdateButtonSet from "../../components/Cart/QuantityUpdateButtonSet";
@@ -7,8 +7,6 @@ import BackButton from "../../components/BackButton";
 import CartPriceDetail from "../../components/Cart/CartPriceDetail";
 import CartHeader from "../../components/Cart/CartHeader";
 import CartHeaderContent from "../../components/Cart/CartHeaderContent";
-import { useDispatch } from "react-redux";
-import { initializeCart } from "../../redux/reducers/checkout/checkoutAction";
 import { toCurrency } from "../../helper/currency";
 
 const ItemPrice = ({ item, setIsUpdate, index }) => {
@@ -76,7 +74,7 @@ const CartPage = () => {
 			.catch((error) => {
 				alert(error);
 			});
-	}, [isUpdate]);
+	}, [isUpdate, cart, navigate]);
 	return (
 		<div className="sm:p-10 bg-green-100 min-h-screen">
 			<div className="flex flex-col bg-white max-w-5xl min-h-[50vw] mx-auto rounded-xl shadow-lg">

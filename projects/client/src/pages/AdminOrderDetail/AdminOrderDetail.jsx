@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import ReferralCard from "../../components/ReferralCard";
 import { useSelector } from "react-redux";
 import BackButton from "../../components/BackButton";
 import DeliveryAddress from "../../components/Order/DeliveryAddress";
@@ -45,7 +44,7 @@ const OrderStatus = ({ transaction }) => {
 					<span>{moment(transaction.updated_at).format("D MMM YY, HH:MM")}</span>
 				</p>
 
-				{transaction.status_id == 6 ? (
+				{transaction.status_id === 6 ? (
 					<>
 						<div className="bg-gray-200 rounded-full overflow-hidden">
 							<div className="h-2 bg-red rounded-full" style={{ width: `100%` }} />
@@ -59,7 +58,7 @@ const OrderStatus = ({ transaction }) => {
 								className="h-2 bg-green-400 rounded-full"
 								style={{
 									width: `calc((${
-										transaction.status_id == 5 ? 6 : transaction.status_id
+										transaction.status_id === 5 ? 6 : transaction.status_id
 									} * 2 - 1) / 10 * 100%)`,
 								}}
 							/>
@@ -96,7 +95,7 @@ const OrderStatus = ({ transaction }) => {
 
 const OrderDetailLayout = ({ transaction, transaction_id }) => {
 	const userData = useSelector((state) => state.user);
-	const [user, setUser] = useState();
+	const [user, setUser] = useState({});
 	useEffect(() => {
 		axios
 			.get(`${process.env.REACT_APP_API_BASE_URL}/profile`, {
@@ -141,7 +140,7 @@ const AdminOrderDetail = () => {
 			.catch((error) => {
 				alert(error);
 			});
-	}, [transaction_id]);
+	}, [transaction_id, navigate]);
 
 	return transaction && <OrderDetailLayout transaction={transaction} transaction_id={transaction_id} />;
 };

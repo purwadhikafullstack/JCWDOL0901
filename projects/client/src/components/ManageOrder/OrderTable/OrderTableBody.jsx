@@ -16,7 +16,7 @@ const OrderTableBody = ({ superAdmin, name, startDate, endDate, filterBy, filter
 				setMaxPage(Math.ceil(result.data.count / 5));
 			})
 			.catch((error) => alert(error));
-	}, [name, startDate, endDate, filter, order, page, isUpdated]);
+	}, [name, startDate, endDate, filter, order, page, isUpdated, filterBy, setMaxPage, sort]);
 
 	return data && <OrderBodyContent superAdmin={superAdmin} data={data} setIsUpdated={setIsUpdated} />;
 };
