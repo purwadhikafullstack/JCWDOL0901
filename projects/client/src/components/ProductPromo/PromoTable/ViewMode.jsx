@@ -8,7 +8,7 @@ const ViewMode = ({ item, index, setEditMode }) => {
 			<tr>
 				<td className={tdClassName}>
 					<img
-						src={item.Inventory.Product.image}
+						src={process.env.REACT_APP_IMAGE_BASE_URL + item.Inventory.Product.image}
 						className="w-[80px] mx-auto"
 						alt={item.Inventory.Product.name}
 					/>
