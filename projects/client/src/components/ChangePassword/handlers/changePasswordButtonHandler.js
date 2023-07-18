@@ -10,12 +10,15 @@ const validateChangePasswordInput = (input) => {
 };
 
 const ChangePasswordErrorHandler = async (error) => {
+	console.log(error);
 	if (error?.code === "ERR_NETWORK") {
 		return "Server unreachable, try again later!";
 	} else if (error?.code === "CONFIRM_PASS_ERR") {
 		return "Confirm password not equal!";
 	} else if (error?.response?.status === 400) {
 		return error?.response?.data;
+	} else if (error?.response?.data?.message == "USER_NOT_VERIFIED") {
+		return "You need to verified your account first, please check your email!";
 	}
 
 	return "Something went wrong!";
