@@ -19,7 +19,7 @@ const createUserQuery = async (body, transaction) => {
 };
 
 const updateUserQuery = async (data, query, transaction) => {
-	return await Users.update({ data }, { where: { ...query }, transaction });
+	return await Users.update({ ...data }, { where: { ...query }, transaction });
 };
 
 const userAuthenticationQuery = async (body, Name) => {
