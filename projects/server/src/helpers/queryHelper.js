@@ -151,7 +151,7 @@ const getAdminTransactionQueryFilter = async (query) => {
 			created_at: {
 				[Op.and]: {
 					[Op.gte]: query?.start_after || "1971-01-01",
-					[Op.lte]: query?.end_before || new Date(),
+					[Op.lt]: query?.end_before || new Date(),
 				},
 			},
 		},
@@ -200,7 +200,7 @@ const getStockChangesQueryFilter = async (query) => {
 			created_at: {
 				[Op.and]: {
 					[Op.gte]: query?.start_after || "1971-01-01",
-					[Op.lte]: query?.end_before || new Date(),
+					[Op.lt]: query?.end_before || new Date(),
 				},
 			},
 			description: query?.description ? await getMutationByDescription(query.description) : { [Op.not]: null },
