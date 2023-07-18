@@ -2,7 +2,18 @@ import React from "react";
 import ProductSalesReportTableHead from "./ProductSalesReportTableHead.jsx";
 import ProductSalesReportTableBody from "./ProductSalesReportTableBody.jsx";
 
-const ProductSalesReportTable = ({ name, filterBy, filter, sort, order, page, setMaxPage, startDate, endDate }) => {
+const ProductSalesReportTable = ({
+	name,
+	filterBy,
+	filter,
+	sort,
+	order,
+	page,
+	setMaxPage,
+	startDate,
+	endDate,
+	itemPerPage,
+}) => {
 	return (
 		<div className="flex overflow-x-auto rounded-lg border border-green-300 border-2 mx-6">
 			<table className="w-full">
@@ -17,6 +28,7 @@ const ProductSalesReportTable = ({ name, filterBy, filter, sort, order, page, se
 					setMaxPage={setMaxPage}
 					startDate={startDate}
 					endDate={endDate}
+					itemPerPage={itemPerPage}
 				/>
 			</table>
 		</div>

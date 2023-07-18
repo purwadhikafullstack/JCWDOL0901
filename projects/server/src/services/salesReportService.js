@@ -8,12 +8,12 @@ const {
 } = require("../queries/SalesReport.js");
 
 module.exports = {
-	startFindSalesReportByProduct: async (branch_id, from, to) => {
+	startFindSalesReportByProduct: async (branch_id, from, to, page, item_per_page) => {
 		return new Promise(async (resolve, reject) => {
 			try {
 				from = from ? moment(from) : moment(0);
 				to = to ? moment(to).add(1, "d") : moment();
-				const ProductSalesReport = await readProductSalesReportQuery(branch_id, from, to);
+				const ProductSalesReport = await readProductSalesReportQuery(branch_id, from, to, page, item_per_page);
 				return resolve(ProductSalesReport);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));

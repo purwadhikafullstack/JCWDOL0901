@@ -32,9 +32,9 @@ const branchQueryHelper = (branch_id) =>
 		  }
 		: {};
 
-const readProductSalesReportQuery = async (branch_id, from, to) => {
+const readProductSalesReportQuery = async (branch_id, from, to, page, item_per_page) => {
 	// const where = branch_id == 0 ? { status_id: 5 } : { status_id: 5, branch_id };
-	const result = await Transaction_details.findAll({
+	const result = await Transaction_details.findAndCountAll({
 		attributes: ["name", [sequelize.fn("SUM", sequelize.col("quantity")), "qty"]],
 		include: [
 			{
@@ -51,6 +51,8 @@ const readProductSalesReportQuery = async (branch_id, from, to) => {
 		],
 		group: ["name"],
 		order: [[sequelize.literal("qty"), "DESC"]],
+		offset: (page - 1) * Number(item_per_page),
+		limit: Number(item_per_page),
 	});
 
 	return result;

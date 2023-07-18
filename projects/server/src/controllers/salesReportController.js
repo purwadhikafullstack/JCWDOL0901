@@ -5,9 +5,9 @@ const {
 } = require("../services/salesReportService");
 
 const getSalesReportByProduct = async (request, response) => {
-	const { start_after, end_before } = request.query;
+	const { start_after, end_before,  page, item_per_page } = request.query;
 	const branch_id = request.branchData.id;
-	await startFindSalesReportByProduct(branch_id, start_after, end_before)
+	await startFindSalesReportByProduct(branch_id, start_after, end_before, page, item_per_page)
 		.then((result) => {
 			response.status(200).send(result);
 		})

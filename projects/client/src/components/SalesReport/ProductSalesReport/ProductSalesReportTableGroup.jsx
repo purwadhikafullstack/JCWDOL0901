@@ -15,6 +15,8 @@ const ProductSalesReportTableGroup = () => {
 	const [maxPage, setMaxPage] = React.useState(1);
 	const [startDate, setStartDate] = React.useState("");
 	const [endDate, setEndDate] = React.useState("");
+	const [itemPerPage, setItemPerPage] = React.useState(5);
+
 
 	React.useEffect(() => {
 		setPage(1);
@@ -49,6 +51,8 @@ const ProductSalesReportTableGroup = () => {
 				setMaxPage={setMaxPage}
 				startDate={startDate}
 				endDate={endDate}
+				itemPerPage={itemPerPage}
+
 			/>
 			<div className="mx-auto mt-16">
 				<Pagination page={page} setPage={setPage} maxPage={maxPage} />
