@@ -33,7 +33,7 @@ const Total = ({ summary }) => {
 	return (
 		<div className="grid grid-cols-8 gap-2 text-green-400 py-2 mt-3 font-bold text-left">
 			<span className="col-start-4 col-span-2">Total:</span>
-			<span className="col-start-7 col-span-2">Rp {toCurrency(summary?.total)}</span>
+			<span className="col-start-7 col-span-2">{toCurrency(summary?.total)}</span>
 		</div>
 	);
 };
