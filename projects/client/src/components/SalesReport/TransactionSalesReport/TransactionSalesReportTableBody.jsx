@@ -22,7 +22,7 @@ const TransactionSalesReportTableBody = ({
 			.then((result) => {
 				console.log("result.data: ", result.data);
 				setDatas(result.data.rows);
-				setMaxPage(Math.ceil(result.data.count.length / itemPerPage));
+				setMaxPage(Math.ceil(result.data.count / itemPerPage));
 			})
 			.catch((error) => alert("Server Unavailable"));
 	}, [filter, order, page, startDate, endDate]);
