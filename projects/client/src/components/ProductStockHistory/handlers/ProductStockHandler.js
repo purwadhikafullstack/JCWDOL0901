@@ -63,7 +63,7 @@ export const generateUrlQuery = (name = "", page, filterBy, filter, sort, order,
 	url += `?page=${page}`;
 	url += `&name=${name}`;
 	url += startDate ? `&start_after=${startDate}` : "";
-	url += endDate ? `&end_before=${new Date(new Date(endDate).getTime() + 1000 * 60 * 60 * 24)}` : "";
+	url += endDate ? `&end_before=${new Date(endDate)}` : "";
 	url += filter?.id ? `&${filterBy?.id}=${filter?.id}` : "";
 	url += sort?.id ? `&order=${sort?.id}` : "";
 	url += order?.id ? `&asc=${order?.id}` : "";
