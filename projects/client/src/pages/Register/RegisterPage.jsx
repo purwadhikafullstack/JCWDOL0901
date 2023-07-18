@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BackButton from "../../components/BackButton.jsx";
 import RegisterIllustration from "../../components/Register/RegisterIllustration.jsx";
 import RegisterForm from "../../components/Register/RegisterForm.jsx";
 import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration.jsx";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Illustration = () => {
 	return (
@@ -20,6 +22,14 @@ const Illustration = () => {
 };
 
 const RegisterPage = () => {
+	const location = useLocation();
+	const navigate = useNavigate();
+	const user = useSelector((state) => state.user);
+	useEffect(() => {
+		if (location.pathname === "/register" && user.hasLogged) {
+			navigate("/");
+		}
+	}, []);
 	return (
 		<div className="flex flex-col mx-auto flex-1 w-full bg-white sm:bg-gray-100 sm:flex-row sm:justify-center sm:py-10 sm:max-w-full min-h-screen sm:drop-shadow-2xl overflow-hidden">
 			<CircularBackgroundDecoration />

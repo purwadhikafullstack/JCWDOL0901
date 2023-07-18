@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import UserLoginIllustration from "../../components/UserLogin/UserLoginIllustration";
 import BackButton from "../../components/BackButton";
 import UserLoginForm from "../../components/UserLogin/UserLoginForm";
-import CompanyLogo from "../../components/CompanyLogo";
 import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration";
 import Notification from "../../components/Notification";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Illustration = () => {
 	return (
@@ -24,6 +24,14 @@ const Illustration = () => {
 
 function UserLoginPage() {
 	const authGuard = useLocation()?.state?.authGuard;
+	const location = useLocation();
+	const navigate = useNavigate();
+	const user = useSelector((state) => state.user);
+	useEffect(() => {
+		if (location.pathname === "/login" && user.hasLogged) {
+			navigate("/");
+		}
+	}, []);
 	return (
 		<div className="flex flex-col mx-auto flex-1 w-full bg-white sm:py-10 sm:bg-gray-100 sm:flex-row sm:justify-center sm:max-w-full min-h-screen sm:drop-shadow-2xl overflow-hidden">
 			<CircularBackgroundDecoration />
