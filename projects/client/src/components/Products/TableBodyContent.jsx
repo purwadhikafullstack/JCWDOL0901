@@ -34,7 +34,7 @@ const TableBodyContent = ({ datas, page, itemPerPage, setIsUpdated }) => {
 							<td className={tdClassName}>
 								<div className="flex justify-center">
 									<img
-										src={item.image}
+										src={process.env.REACT_APP_IMAGE_BASE_URL + item.image}
 										className="w-[80px] max-h-20 object-contain"
 										alt={item.name}
 									/>

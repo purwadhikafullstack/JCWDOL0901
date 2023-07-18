@@ -20,7 +20,7 @@ const createCategoryQuery = async (body, file) => {
 const updateCategoryQuery = async (body, file, params) => {
 	const id = params.categoryId;
 	const { name } = body;
-	const image = file ? `/assets/categories/${file.filename}` : undefined;
+	const image = file ? `uploads/categories/${file.filename}` : undefined;
 	return await Categories.update({ name, image }, { where: { id } });
 };
 

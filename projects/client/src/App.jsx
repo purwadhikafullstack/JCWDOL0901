@@ -109,7 +109,7 @@ function App() {
 				<Route path="/admin/product/update" element={<AdminAuthGuard component={<UpdateProduct />} />} />
 				<Route path="/admin/report" element={<AdminAuthGuard component={<SalesReport />} />} />
 				{/* //Not Found Page */}
-				<Route path="*" element={<NotFoundPage />} />
+				{/* <Route path="*" element={<NotFoundPage />} /> */}
 			</Routes>
 		</div>
 	);
