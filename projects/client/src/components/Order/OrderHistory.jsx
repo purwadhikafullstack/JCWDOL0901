@@ -24,7 +24,10 @@ const OrderList = ({ item }) => {
 					<div className="min-w-0 flex-1 flex items-center">
 						<div className="flex-shrink-0">
 							<img
-								src={item?.Transaction_details[0]?.Inventory?.Product?.image}
+								src={
+									process.env.REACT_APP_IMAGE_BASE_URL +
+									item?.Transaction_details[0]?.Inventory?.Product?.image
+								}
 								alt={item?.Transaction_details[0]?.name}
 								className="h-10"
 							/>

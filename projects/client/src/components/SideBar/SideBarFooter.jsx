@@ -2,6 +2,7 @@ import { LogoutIcon } from "@heroicons/react/outline";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setAdminLogin } from "../../redux/reducers/admin/adminAction";
+import { setUserLogin } from "../../redux/reducers/user/userAction";
 
 export default function SideBarFooter() {
 	const navigate = useNavigate();
@@ -9,6 +10,7 @@ export default function SideBarFooter() {
 	const logoutHandler = () => {
 		localStorage.removeItem("token");
 		dispatch(setAdminLogin({ hasLogged: false, superAdmin: false }));
+		dispatch(setUserLogin({ hasLogged: false, avatar: "", username: "" }));
 		navigate("/admin/login");
 	};
 	return (

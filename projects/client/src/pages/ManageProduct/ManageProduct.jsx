@@ -27,13 +27,15 @@ const Header = () => {
 
 const ManageProduct = () => {
 	return (
-		<div className="flex flex-col mx-auto flex-1 min-h-screen overflow-hidden bg-green-100 z-10">
-			<SideBar>
-				<div className="flex flex-col">
-					<Header />
-					<ProductList />
-				</div>
-			</SideBar>
+		<div className="flex flex-col min-h-screen mx-auto overflow-hidden bg-green-100 z-10">
+			<div>
+				<SideBar>
+					<div className="flex flex-col ">
+						<Header />
+						<ProductList />
+					</div>
+				</SideBar>
+			</div>
 		</div>
 	);
 };

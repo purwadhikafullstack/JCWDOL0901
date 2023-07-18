@@ -3,6 +3,7 @@ import { PlusIcon } from "@heroicons/react/outline";
 import { useEffect, useState } from "react";
 import { addProducts, determinePrice } from "./handlers/productsHandler";
 import { useDispatch, useSelector } from "react-redux";
+import { toCurrency } from "../../helper/currency";
 
 const ProductCard = ({ product }) => {
 	const user = useSelector((state) => state.user);
@@ -33,7 +34,7 @@ const ProductCard = ({ product }) => {
 				) : null}
 				<div className="w-full bg-gray-200 rounded-lg overflow-hidden aspect-square">
 					<img
-						src={product.image}
+						src={process.env.REACT_APP_IMAGE_BASE_URL + product.image}
 						alt={product.name}
 						className="w-full h-full object-center object-cover group-hover:opacity-75 bg-white"
 					/>
@@ -45,19 +46,19 @@ const ProductCard = ({ product }) => {
 				{product?.Inventories[0]?.promo?.isActive ? (
 					<>
 						<p className="mt-1 text-sm font-bold text-green-400 text-left px-4">
-							{`Rp ${price?.final?.toLocaleString("id")}`}
+							{toCurrency(price?.final)}
 							<span className="text-xs font-light text-gray-300">{` / ${product.unit}`}</span>
 						</p>
 						{price?.original ? (
-							<p className="mt-1 text-sm font-medium text-gray-200 text-left px-4 line-through">{`Rp ${price?.original?.toLocaleString(
-								"id",
-							)}`}</p>
+							<p className="mt-1 text-sm font-medium text-gray-200 text-left px-4 line-through">
+								{toCurrency(price?.original)}
+							</p>
 						) : null}
 					</>
 				) : (
 					<>
 						<p className="mt-1 text-sm font-bold text-green-400 text-left px-4">
-							{`Rp ${price?.final?.toLocaleString("id")}`}
+							{toCurrency(price?.final)}
 							<span className="text-xs font-light text-gray-300">{` / ${product.unit}`}</span>
 						</p>
 					</>

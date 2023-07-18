@@ -5,6 +5,7 @@ import { TrashIcon } from "@heroicons/react/outline";
 import DeleteAlert from "../DeleteAlert";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { toCurrency } from "../../helper/currency";
 
 const TableBodyContent = ({ datas, page, itemPerPage, setIsUpdated }) => {
 	const navigate = useNavigate();
@@ -18,7 +19,7 @@ const TableBodyContent = ({ datas, page, itemPerPage, setIsUpdated }) => {
 			{alert ? (
 				<DeleteAlert
 					title={`Delete Product "${productName}"`}
-					desc="Are you sure you want to delete this product?"
+					desc="Are you sure you want to delete this product? Deleting this product will also delete all inventories data for all branches related to this product."
 					buttonName="Delete Product"
 					open={open}
 					setOpen={setOpen}
@@ -33,7 +34,7 @@ const TableBodyContent = ({ datas, page, itemPerPage, setIsUpdated }) => {
 							<td className={tdClassName}>
 								<div className="flex justify-center">
 									<img
-										src={item.image}
+										src={process.env.REACT_APP_IMAGE_BASE_URL + item.image}
 										className="w-[80px] max-h-20 object-contain"
 										alt={item.name}
 									/>
@@ -42,7 +43,7 @@ const TableBodyContent = ({ datas, page, itemPerPage, setIsUpdated }) => {
 							<td className={tdClassName}>{item.name}</td>
 							<td className={tdClassName}>{item.unit}</td>
 							<td className={tdClassName}>{item.weight} gram</td>
-							<td className={tdClassName}>Rp{item.price.toLocaleString("id")}</td>
+							<td className={tdClassName}>{toCurrency(item.price)}</td>
 							<td className={tdClassName}>{item.description}</td>
 							<td className={tdClassName}>{item.Category.name}</td>
 							<td className={tdClassName}>

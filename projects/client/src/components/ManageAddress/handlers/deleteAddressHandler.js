@@ -13,7 +13,7 @@ const deleteAddressErrorHandler = async (error) => {
 	return "Something went wrong!";
 };
 
-export const deleteAddressHandler = async (id) => {
+export const deleteAddressHandler = async (id, navigate) => {
 	try {
 		const token = localStorage.getItem("token");
 		const config = {
@@ -27,6 +27,7 @@ export const deleteAddressHandler = async (id) => {
 			showConfirmButton: false,
 			timer: 2000,
 		});
+		navigate("/account/manage-address");
 	} catch (error) {
 		Swal.fire({
 			icon: "error",

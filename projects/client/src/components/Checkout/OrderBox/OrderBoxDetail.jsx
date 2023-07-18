@@ -8,8 +8,9 @@ const OrderBoxDetail = ({ cart }) => {
 				return (
 					<div key={index} className="flex flex-row p-4 border-b border-dashed">
 						<img
-							src={item.Inventory.Product.image}
+							src={process.env.REACT_APP_IMAGE_BASE_URL + item.Inventory.Product.image}
 							className="max-w-[100px] border border-green-500 rounded p-2"
+							alt={item.Inventory.Product.name}
 						/>
 						<div className="flex flex-col items-start justify-between pl-4 py-1">
 							<span className="font-semibold text-sm">{item.Inventory.Product.name}</span>

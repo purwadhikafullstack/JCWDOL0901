@@ -14,7 +14,7 @@ const ProductDetailLayout = ({ product, inventory_id }) => {
 	}, [product]);
 
 	return (
-		<div className="flex lg:h-screen lg:justify-center">
+		<div className="flex lg:justify-center py-10">
 			<div className="flex flex-col mx-auto w-full pb-32 min-h-screen bg-white lg:pb-0 lg:shrink-0 lg:max-w-7xl lg:justify-between lg:min-w-7xl lg:min-h-fit lg:flex-col lg:my-auto lg:mx-20 lg:rounded-lg lg:shadow-xl">
 				<div className="flex flex-col lg:flex-row">
 					<BackButton color="text-green-400 h-fit mb-auto" url={-1} replace={{ replace: true }} />

@@ -62,9 +62,13 @@ const CategoryTableGroup = () => {
 				sort={sort}
 				order={order}
 			/>
-			<div className="flex justify-center">
-				<Pagination page={page} setPage={setPage} maxPage={maxPage} />
-			</div>
+			{maxPage !== 0 ? (
+				<div className="flex justify-center pb-20 sm:pb-10">
+					<Pagination page={page} setPage={setPage} maxPage={maxPage} />
+				</div>
+			) : (
+				<div>No data matching the filter</div>
+			)}
 		</div>
 	);
 };
