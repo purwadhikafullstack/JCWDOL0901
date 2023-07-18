@@ -20,7 +20,7 @@ const categoryStorage = multer.diskStorage({
 
 const avatarStorage = multer.diskStorage({
 	destination: (req, res, cb) => {
-		cb(null, `${__dirname}../../../../client/public/assets/avatars`);
+		cb(null, `uploads/avatars`);
 	},
 	filename: (req, file, cb) => {
 		cb(null, "avatar_" + Date.now() + Math.round(Math.random() * 1000000000) + "." + file.mimetype.split("/")[1]);
