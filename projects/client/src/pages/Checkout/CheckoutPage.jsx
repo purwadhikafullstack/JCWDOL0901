@@ -9,7 +9,7 @@ import LogisticBox from "../../components/Checkout/LogisticBox.jsx";
 
 const CheckoutPage = () => {
 	return (
-		<div className="bg-green-100 sm:p-20">
+		<div className="bg-green-100 sm:p-10">
 			<div className="flex flex-col bg-white max-w-5xl rounded-xl mx-auto">
 				<BackButton url="/cart" color="text-green-400" />
 				<AddressBox />
