@@ -208,7 +208,7 @@ const getStockChangesQueryFilter = async (query) => {
 		Products: {},
 	};
 
-	if (query.name) filter.Products.name = { [Op.like]: "%" + query[key] + "%" };
+	if (query.name) filter.Products.name = { [Op.like]: "%" + query.name + "%" };
 
 	return filter;
 };
