@@ -107,8 +107,8 @@ export const generateUrlQuery = (name, startDate, endDate, filterBy, filter, sor
 
 	url += `?page=${page}`;
 	url += `&id=${name}`;
-	url += startDate ? `&start_after=${new Date(startDate)}` : "";
-	url += endDate ? `&end_before=${new Date(new Date(endDate).getTime() + 1000 * 60 * 60 * 24)}` : "";
+	url += startDate ? `&start_after=${startDate}` : "";
+	url += endDate ? `&end_before=${new Date(new Date(endDate).getTime() + 1000 * 60 * 60 * 10)}` : "";
 	url += filter ? `&${filterBy.id}=${filter.id}` : "";
 	url += order.id ? `&order=${sort.id}` : "";
 	url += order.id ? `&asc=${order.id}` : "";

@@ -13,10 +13,14 @@ const BranchName = ({ item }) => {
 };
 
 const CreatedAt = ({ item }) => {
+	const fullDate = new Date(item.created_at).toString();
+	const date = fullDate.split(" ").slice(0, 4).join(" ").replace(" ", ", ");
+	const time = fullDate.split(" ").slice(4, 5).join(" ");
+
 	return (
 		<div className="col-span-2 my-auto flex flex-col">
-			<span>{item.created_at.split("T")[0]}</span>
-			<span>{item.created_at.split("T")[1].slice(0, 8)}</span>
+			<span>{date}</span>
+			<span>{time}</span>
 		</div>
 	);
 };
