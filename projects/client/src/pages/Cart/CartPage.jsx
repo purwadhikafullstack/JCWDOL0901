@@ -12,11 +12,13 @@ import { toCurrency } from "../../helper/currency";
 const ItemPrice = ({ item, setIsUpdate, index }) => {
 	return (
 		<div className="flex flex-row p-4 border-b border-dashed">
-			<img
-				src={item.Inventory.Product.image}
-				alt={item.Inventory.Product.name}
-				className="max-w-[100px] border border-green-500 rounded p-2"
-			/>
+			<div className="w-60">
+				<img
+					src={process.env.REACT_APP_IMAGE_BASE_URL + item.Inventory.Product.image}
+					alt={item.Inventory.Product.name}
+					className="border border-green-500 rounded p-2 object-contain"
+				/>
+			</div>
 			<div className="flex flex-col items-start justify-between pl-4 py-1">
 				<span className="font-semibold text-sm text-left">{item.Inventory.Product.name}</span>
 				<span className="text-sm text-left mb-auto mt-0.5">@{item.Inventory.Product.weight} gr</span>
@@ -47,6 +49,7 @@ const CartPage = () => {
 	const [cart, setCart] = useState();
 	const [subTotal, setSubTotal] = useState();
 	const [isUpdate, setIsUpdate] = useState(true);
+	console.log(cart);
 
 	React.useEffect(() => {
 		getUserCart()
@@ -74,7 +77,7 @@ const CartPage = () => {
 			.catch((error) => {
 				alert(error);
 			});
-	}, [isUpdate, cart, navigate]);
+	}, [isUpdate]);
 	return (
 		<div className="sm:p-10 bg-green-100 min-h-screen">
 			<div className="flex flex-col bg-white max-w-5xl min-h-[50vw] mx-auto rounded-xl shadow-lg">
