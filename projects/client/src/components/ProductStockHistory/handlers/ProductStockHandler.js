@@ -9,13 +9,15 @@ export const getBranchInventories = (query = "") => {
 export const sortDefault = { id: "name", name: "Product Name" };
 export const orderDefault = { id: "1", name: "A to Z" };
 
-export const resetSetting = (setName, setFilterBy, setFilter, setSort, setOrder, setPage) => {
+export const resetSetting = (setName, setFilterBy, setFilter, setSort, setOrder, setPage, setStartDate, setEndDate) => {
 	setName("");
 	setFilterBy("");
 	setFilter("");
 	setSort("");
 	setOrder("");
 	setPage(1);
+	setStartDate("");
+	setEndDate("");
 };
 
 export const getSortBy = () => {
