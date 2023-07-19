@@ -38,7 +38,7 @@ const OrderList = ({ item }) => {
 								<span className="font-semibold"> {orderStatusList[item.status_id]}</span>
 							</p>
 							<p className="mx-6 font-medium text-gray-300 truncate">
-								<span>{moment(item.created_at).format("D MMM YY, HH:MM")}</span>
+								<span>{moment(item.updated_at).format("D MMM YY, HH:mm")}</span>
 								<span> • </span>
 								<span>{item.Transaction_details.length} produk</span>
 							</p>
