@@ -16,7 +16,7 @@ const LocationPendingMessage = () => {
 };
 
 const LocationDeniedMessage = () => {
-	return <div className="font-semibold text-red mt-1.5">Location Access Denied</div>;
+	return <div className="font-semibold text-sm text-red mt-1.5">Location Access Denied</div>;
 };
 
 const BranchDetail = ({ toggleBranchModal }) => {

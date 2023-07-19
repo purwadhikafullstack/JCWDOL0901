@@ -6,19 +6,19 @@ import ProductInputField from "./ProductInputField";
 import { formikUpdateProductConfiguration } from "./config/formikUpdateProductConfiguration";
 import Button from "../Button";
 
-const UpdateProductForm = ({item}) => {
-    const navigate = useNavigate();
-	const [file, setFile] = useState(item.image);
+const UpdateProductForm = ({ item }) => {
+	const navigate = useNavigate();
+	const [file, setFile] = useState(process.env.REACT_APP_IMAGE_BASE_URL + item.image);
 	const formik = useFormik(formikUpdateProductConfiguration(navigate, item));
 	return (
-        <div className="my-auto items-center min-w-fit shrink-0 flex flex-col pb-10 px-8">
+		<div className="my-auto items-center min-w-fit shrink-0 flex flex-col pb-10 px-8">
 			<form onSubmit={formik.handleSubmit} encType="multipart/form-data">
 				<ProductImagePreview file={file} />
 				<ProductInputField formik={formik} setFile={setFile} />
 				<Button type="submit" name="Update" disabled={formik.isSubmitting} />
 			</form>
 		</div>
-    )
+	);
 };
 
 export default UpdateProductForm;

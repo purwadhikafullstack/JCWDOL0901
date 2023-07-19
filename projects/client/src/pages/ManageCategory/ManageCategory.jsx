@@ -28,12 +28,14 @@ const Header = () => {
 const ManageCategory = () => {
 	return (
 		<div className="flex flex-col flex-1 min-h-screen overflow-hidden bg-green-100 z-10">
-			<SideBar>
-				<div className="flex flex-col">
-					<Header />
-					<CategoryList />
-				</div>
-			</SideBar>
+			<div>
+				<SideBar>
+					<div className="flex flex-col">
+						<Header />
+						<CategoryList />
+					</div>
+				</SideBar>
+			</div>
 		</div>
 	);
 };

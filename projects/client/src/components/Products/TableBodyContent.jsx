@@ -19,7 +19,7 @@ const TableBodyContent = ({ datas, page, itemPerPage, setIsUpdated }) => {
 			{alert ? (
 				<DeleteAlert
 					title={`Delete Product "${productName}"`}
-					desc="Are you sure you want to delete this product?"
+					desc="Are you sure you want to delete this product? Deleting this product will also delete all inventories data for all branches related to this product."
 					buttonName="Delete Product"
 					open={open}
 					setOpen={setOpen}
@@ -34,7 +34,7 @@ const TableBodyContent = ({ datas, page, itemPerPage, setIsUpdated }) => {
 							<td className={tdClassName}>
 								<div className="flex justify-center">
 									<img
-										src={item.image}
+										src={process.env.REACT_APP_IMAGE_BASE_URL + item.image}
 										className="w-[80px] max-h-20 object-contain"
 										alt={item.name}
 									/>

@@ -30,7 +30,7 @@ const { paginateData } = require("../helpers/queryHelper.js");
 
 const { sendRegistrationVerificationEmail, sendResetPasswordVerificationEmail } = require("../utils/nodemailer.js");
 const { generateJWToken, generateResetPasswordJWToken, verifyJWToken } = require("../utils/jsonwebtoken.js");
-const { verifyHashPassword } = require("../utils/bcrypt.js");
+const { verifyHashPassword, getHashPassword } = require("../utils/bcrypt.js");
 const { Op } = require("sequelize");
 
 const userDatabaseGeneration = async (body, transaction) => {
@@ -53,13 +53,14 @@ const adminDatabaseGeneration = async (body, transaction) => {
 const checkAndUpdatePassword = async (id, body, transaction) => {
 	const User = await getOldPasswordQuery(id, transaction);
 
-	const isOldPasswordVerified = verifyHashPassword(body.old_password, User.password);
+	if (body.password === body.old_password) throw "PASS_CANNOT_SAME";
 
+	const isOldPasswordVerified = await verifyHashPassword(body.old_password, User.password);
 	if (!isOldPasswordVerified) throw "PASS_NOT_VERIFIED";
 
-	if (User.password === body.password) throw "PASS_CANNOT_SAME";
+	const hashPassword = await getHashPassword(body.password);
 
-	await updatePasswordQuery(id, body.password, transaction);
+	await updatePasswordQuery(id, hashPassword, transaction);
 };
 
 module.exports = {
@@ -199,7 +200,10 @@ module.exports = {
 			try {
 				const verifiedToken = await verifyJWToken("Bearer " + token, process.env.JWT_RESET_PASSWORD_SECRET_KEY);
 				const { id } = verifiedToken;
-				await updatePasswordQuery(id, body.password);
+
+				const hashPassword = await getHashPassword(body.password);
+
+				await updatePasswordQuery(id, hashPassword);
 				return resolve("Reset password success");
 			} catch (error) {
 				return reject(await startVerificationErrorHandler(error));

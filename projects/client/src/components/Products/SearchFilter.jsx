@@ -6,12 +6,13 @@ import {
 	getProductsFilterBy,
 } from "./handlers/productsHandler";
 
-const SearchFilter = ({ setFilterBy, setFilter, filterBy, filter }) => {
+const SearchFilter = ({ setFilterBy, setFilter, filterBy, filter, setPage }) => {
 	const didMount = useRef(false);
 
 	useEffect(() => {
 		if (didMount.current) setFilter("");
 		else didMount.current = true;
+		setPage(1);
 	}, [filterBy.id]);
 	return (
 		<div className="flex flex-col sm:flex-row gap-6 sm:gap-2 pb-16 sm:pb-12">

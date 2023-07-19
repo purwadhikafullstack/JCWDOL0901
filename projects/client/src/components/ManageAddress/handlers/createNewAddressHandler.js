@@ -27,7 +27,7 @@ export const createNewAddressHandler = async (input, navigate) => {
 			showConfirmButton: false,
 			timer: 2000,
 		});
-		navigate("/account/manage-address");
+		navigate(-1);
 	} catch (error) {
 		Swal.fire({
 			icon: "error",

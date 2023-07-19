@@ -18,7 +18,11 @@ const Addresses = () => {
 			});
 	}, []);
 
-	return addresses && <AddressOptions addresses={addresses} dispatch={dispatch} selected={address.id} />;
+	return addresses.length ? (
+		<AddressOptions addresses={addresses} dispatch={dispatch} selected={address.id} />
+	) : (
+		<div className="py-10">You don't have any address. Please add the new one.</div>
+	);
 };
 
 export default Addresses;

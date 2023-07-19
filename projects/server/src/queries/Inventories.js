@@ -49,6 +49,15 @@ const readInventoryQuery = async (inventory_id, transaction) => {
 	return Inventories.findOne({ where: { id: inventory_id } });
 };
 
+const createInventoryQuery = async (branch_id, product_id, transaction) => {
+	return Inventories.create({ branch_id, product_id, stock: 0 }, { transaction });
+};
+
+const deleteInventoryQuery = async (params, transaction) => {
+	const product_id = Number(params.productId);
+	return await Inventories.destroy({ where: { product_id } }, { transaction });
+};
+
 module.exports = {
 	readInventoriesQuery,
 	createInventoryQueryForNewBranch,
@@ -56,4 +65,6 @@ module.exports = {
 	decrementInventoriesStockQuery,
 	incrementInventoriesStockQuery,
 	readInventoryQuery,
+	createInventoryQuery,
+	deleteInventoryQuery,
 };

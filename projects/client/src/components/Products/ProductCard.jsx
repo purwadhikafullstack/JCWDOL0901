@@ -34,7 +34,7 @@ const ProductCard = ({ product }) => {
 				) : null}
 				<div className="w-full bg-gray-200 rounded-lg overflow-hidden aspect-square">
 					<img
-						src={product.image}
+						src={process.env.REACT_APP_IMAGE_BASE_URL + product.image}
 						alt={product.name}
 						className="w-full h-full object-center object-cover group-hover:opacity-75 bg-white"
 					/>

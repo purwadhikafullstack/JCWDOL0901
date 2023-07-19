@@ -29,7 +29,8 @@ const getDefaultAddress = async (request, response) => {
 
 const createAddress = async (request, response) => {
 	await startCreateAddress(request.userData.id, request.body)
-		.then((result) => {
+		.then(async (result) => {
+			await startSetDefaultAddress(request.userData.id, result.id);
 			response.status(200).send(result);
 		})
 		.catch((error) => {

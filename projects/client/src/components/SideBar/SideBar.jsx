@@ -19,7 +19,7 @@ export default function SideBar({ children }) {
 				>
 					<SideBarContent sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} navigation={navigation} />
 				</div>
-				<div className="flex flex-col flex-1">
+				<div className="flex flex-col">
 					<SideBarMenuButton sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 					<main className="flex-1 sm:pl-64">
 						<div className="max-w-7xl mx-auto">{children}</div>

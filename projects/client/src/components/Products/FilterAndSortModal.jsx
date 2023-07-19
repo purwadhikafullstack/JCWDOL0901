@@ -15,6 +15,7 @@ export default function FilterAndSortModal({
 	setFilter,
 	filterBy,
 	filter,
+	setPage,
 }) {
 	const cancelButtonRef = useRef(null);
 	return (
@@ -66,6 +67,7 @@ export default function FilterAndSortModal({
 											setFilter={setFilter}
 											filterBy={filterBy}
 											filter={filter}
+											setPage={setPage}
 										/>
 									</div>
 								</div>
