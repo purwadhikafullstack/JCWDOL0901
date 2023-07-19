@@ -11,17 +11,17 @@ import { toCurrency } from "../../helper/currency";
 
 const ItemPrice = ({ item, setIsUpdate, index }) => {
 	return (
-		<div className="flex flex-row p-4 border-b border-dashed">
-			<div className="w-60">
+		<div className="flex flex-row p-4 border-b border-dashedjustify-between">
+			<div className="w-1/4 min-w-[150px]">
 				<img
 					src={process.env.REACT_APP_IMAGE_BASE_URL + item.Inventory.Product.image}
 					alt={item.Inventory.Product.name}
 					className="border border-green-500 rounded p-2 object-contain"
 				/>
 			</div>
-			<div className="flex flex-col items-start justify-between pl-4 py-1">
+			<div className="flex flex-col items-start justify-between pl-4 py-1 mr-auto w-full">
 				<span className="font-semibold text-sm text-left">{item.Inventory.Product.name}</span>
-				<span className="text-sm text-left mb-auto mt-0.5">@{item.Inventory.Product.weight} gr</span>
+				<span className="text-xs sm:text-sm text-left mb-auto mt-0.5">@{item.Inventory.Product.weight} gr</span>
 				<QuantityUpdateButtonSet
 					stock={item.Inventory.stock}
 					amount={item.quantity}
@@ -30,7 +30,9 @@ const ItemPrice = ({ item, setIsUpdate, index }) => {
 				/>
 				<CartPriceDetail item={item} />
 			</div>
-			<span className="text-md font-light mt-auto ml-auto mb-1 mr-1">x {item.quantity}</span>
+			<div className="min-w-fit flex justify-end">
+				<span className="text-sm sm:text-md font-light mt-auto ml-auto mb-1 mr-1">x {item.quantity}</span>
+			</div>
 		</div>
 	);
 };
