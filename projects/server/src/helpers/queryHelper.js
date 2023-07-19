@@ -1,5 +1,6 @@
 const { Op, literal } = require("sequelize");
 const { sequelize } = require("../models/index.js");
+const moment = require("moment");
 
 const getAdminQueryFilter = async (query) => {
 	const filter = { branch: [] };
@@ -151,7 +152,7 @@ const getAdminTransactionQueryFilter = async (query) => {
 			created_at: {
 				[Op.and]: {
 					[Op.gte]: query?.start_after || "1971-01-01",
-					[Op.lt]: query?.end_before || new Date(),
+					[Op.lt]: moment(query?.end_before).add(1, "day").utc() || new Date(),
 				},
 			},
 		},
@@ -200,7 +201,7 @@ const getStockChangesQueryFilter = async (query) => {
 			created_at: {
 				[Op.and]: {
 					[Op.gte]: query?.start_after || "1971-01-01",
-					[Op.lt]: query?.end_before || new Date(),
+					[Op.lt]: moment(query?.end_before).add(1, "day").utc() || new Date(),
 				},
 			},
 			description: query?.description ? await getMutationByDescription(query.description) : { [Op.not]: null },
