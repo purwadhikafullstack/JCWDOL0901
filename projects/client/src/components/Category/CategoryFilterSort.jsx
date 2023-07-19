@@ -1,6 +1,13 @@
 import SearchSort from "./SearchSort";
 
 const CategoryFilterSort = ({ setFilter, order, setOrder, sort, setSort, input, setInput, setPage }) => {
+	const enterHandler = (event) => {
+		if (event.key === "Enter") {
+			setFilter(input);
+			setPage(1);
+		} else return null;
+	};
+
 	return (
 		<div className="max-w-5xl flex flex-col gap-8 sm:flex-row items-center sm:items-start justify-between mb-6">
 			<div className="pt-8">
@@ -10,14 +17,7 @@ const CategoryFilterSort = ({ setFilter, order, setOrder, sort, setSort, input, 
 							type="text"
 							className="border border-green-400 px-3 py-2 w-[70%] rounded-lg mb-auto text-black outline-0"
 							placeholder="Category Name"
-							onKeyDown={(event) =>
-								event.key === "Enter"
-									? () => {
-											setFilter(input);
-											setPage(1);
-									  }
-									: null
-							}
+							onKeyDown={enterHandler}
 							onChange={(event) => setInput(event.target.value)}
 							value={input}
 						/>

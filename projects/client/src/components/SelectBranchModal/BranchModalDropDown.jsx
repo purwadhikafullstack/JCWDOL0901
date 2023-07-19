@@ -38,7 +38,7 @@ const BranchLists = ({ branches, setBranch }) => {
 	return branches.map((branch, index) => {
 		return (
 			<Listbox.Option
-				className="border ml-2 py-2 px-4 mb-0.5 rounded-lg shadow whitespace-nowrap max-w-full bg-white"
+				className="border ml-2 py-2 px-4 mb-0.5 rounded-lg shadow whitespace-nowrap max-w-full bg-white cursor-pointer hover:bg-green-100"
 				key={index}
 				value={branch.id}
 				onClick={() => setBranch(branch)}
@@ -54,12 +54,12 @@ const DropDownOptions = ({ setBranch }) => {
 
 	React.useEffect(() => {
 		getAllBranches()
-			.then(result => setBranches(result.data))
-			.catch(error => setBranches({ name: "Server Unavailable", id: 0 }));
+			.then((result) => setBranches(result.data))
+			.catch((error) => setBranches({ name: "Server Unavailable", id: 0 }));
 	}, []);
 
 	return (
-		<Listbox.Options className="w-full mx-auto max-h-24  overflow-y-scroll mb-11 ">
+		<Listbox.Options className="w-full mx-auto max-h-40 sm:max-h-80  overflow-y-scroll mb-11 ">
 			<BranchLists branches={branches} setBranch={setBranch} />
 		</Listbox.Options>
 	);

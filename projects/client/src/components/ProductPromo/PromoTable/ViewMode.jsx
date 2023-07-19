@@ -7,7 +7,11 @@ const ViewMode = ({ item, index, setEditMode }) => {
 		<tbody key={index}>
 			<tr>
 				<td className={tdClassName}>
-					<img src={item.Inventory.Product.image} className="w-[80px] mx-auto" />
+					<img
+						src={process.env.REACT_APP_IMAGE_BASE_URL + item.Inventory.Product.image}
+						className="w-[80px] mx-auto"
+						alt={item.Inventory.Product.name}
+					/>
 				</td>
 				<td className={tdClassName}>{item.Inventory.Product.name}</td>
 				<td className={tdClassName}>{item.Promotion.name}</td>

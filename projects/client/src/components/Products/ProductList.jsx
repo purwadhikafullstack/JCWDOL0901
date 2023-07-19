@@ -32,10 +32,10 @@ const ProductList = () => {
 	const [sort, setSort] = useState("");
 	const [order, setOrder] = useState("");
 	const [input, setInput] = useState("");
-	const itemPerPage = window.innerWidth > 640 ? 8 : 6;
+	const itemPerPage = window.innerWidth > 640 ? 10 : 6;
 
 	return (
-		<div className="flex flex-col bg-green-100 p-4 justify-center items-center gap-4">
+		<div className="flex flex-col bg-green-100 p-4 justify-center items-center gap-4 mb-auto">
 			<div className=" w-full flex flex-col gap-4 py-4 px-4 sm:px-10 ">
 				<ProductFilterSort
 					setName={setName}

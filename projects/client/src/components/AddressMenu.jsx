@@ -17,10 +17,10 @@ const LoginBeforeSelecting = () => {
 const AddressMenu = () => {
 	const user = useSelector((state) => state.user);
 	return (
-		<div className="flex flex-col md:flex-row items-center text-right">
+		<div className="flex flex-col text-sm sm:text-base md:flex-row items-end justify-end text-right w-1/2">
 			<div className="text-green-100 flex flex-row items-center">
 				<span className="material-symbols-rounded font-thin text-lg">location_on</span>
-				<div className="mx-4 font-light antialiased">Deliver to:</div>
+				<div className="ml-4 sm:mx-4 font-light antialiased">Deliver to:</div>
 			</div>
 			{user.hasLogged ? <AddressDropDown /> : <LoginBeforeSelecting />}
 		</div>

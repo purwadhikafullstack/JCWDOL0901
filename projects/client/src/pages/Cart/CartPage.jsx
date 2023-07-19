@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { getUserCart } from "../../components/Cart/handlers/CartHandler";
 import { useNavigate } from "react-router-dom";
 import QuantityUpdateButtonSet from "../../components/Cart/QuantityUpdateButtonSet";
@@ -7,18 +7,18 @@ import BackButton from "../../components/BackButton";
 import CartPriceDetail from "../../components/Cart/CartPriceDetail";
 import CartHeader from "../../components/Cart/CartHeader";
 import CartHeaderContent from "../../components/Cart/CartHeaderContent";
-import { useDispatch } from "react-redux";
-import { initializeCart } from "../../redux/reducers/checkout/checkoutAction";
 import { toCurrency } from "../../helper/currency";
 
 const ItemPrice = ({ item, setIsUpdate, index }) => {
 	return (
 		<div className="flex flex-row p-4 border-b border-dashed">
-			<img
-				src={item.Inventory.Product.image}
-				alt={item.Inventory.Product.name}
-				className="max-w-[100px] border border-green-500 rounded p-2"
-			/>
+			<div className="w-60">
+				<img
+					src={process.env.REACT_APP_IMAGE_BASE_URL + item.Inventory.Product.image}
+					alt={item.Inventory.Product.name}
+					className="border border-green-500 rounded p-2 object-contain"
+				/>
+			</div>
 			<div className="flex flex-col items-start justify-between pl-4 py-1">
 				<span className="font-semibold text-sm text-left">{item.Inventory.Product.name}</span>
 				<span className="text-sm text-left mb-auto mt-0.5">@{item.Inventory.Product.weight} gr</span>
@@ -49,6 +49,7 @@ const CartPage = () => {
 	const [cart, setCart] = useState();
 	const [subTotal, setSubTotal] = useState();
 	const [isUpdate, setIsUpdate] = useState(true);
+	console.log(cart);
 
 	React.useEffect(() => {
 		getUserCart()

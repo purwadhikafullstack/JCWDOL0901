@@ -2,7 +2,7 @@ const multer = require("multer");
 
 const productStorage = multer.diskStorage({
 	destination: (req, res, cb) => {
-		cb(null, `${__dirname}../../../../client/public/product`);
+		cb(null, `uploads/products`);
 	},
 	filename: (req, file, cb) => {
 		cb(null, "product_" + Date.now() + Math.round(Math.random() * 1000000000) + "." + file.mimetype.split("/")[1]);
@@ -11,7 +11,7 @@ const productStorage = multer.diskStorage({
 
 const categoryStorage = multer.diskStorage({
 	destination: (req, res, cb) => {
-		cb(null, `${__dirname}../../../../client/public/assets/categories`);
+		cb(null, `uploads/categories`);
 	},
 	filename: (req, file, cb) => {
 		cb(null, "category_" + Date.now() + Math.round(Math.random() * 1000000000) + "." + file.mimetype.split("/")[1]);
@@ -20,7 +20,7 @@ const categoryStorage = multer.diskStorage({
 
 const avatarStorage = multer.diskStorage({
 	destination: (req, res, cb) => {
-		cb(null, `${__dirname}../../../../client/public/assets/avatars`);
+		cb(null, `uploads/avatars`);
 	},
 	filename: (req, file, cb) => {
 		cb(null, "avatar_" + Date.now() + Math.round(Math.random() * 1000000000) + "." + file.mimetype.split("/")[1]);

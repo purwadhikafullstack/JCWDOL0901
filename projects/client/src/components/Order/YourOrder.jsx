@@ -8,20 +8,20 @@ const ItemPrice = ({ item }) => {
 			<div className="px-4 text-right ml-auto text-red">{item?.Inventory_promotion?.Promotion?.name}</div>
 			{item?.Inventory_promotion?.Promotion?.id === 2 || item?.Inventory_promotion?.Promotion?.id === 3 ? (
 				<div className="px-4 text-right text-gray-200 line-through">
-					{toCurrency(item.price * item.quantity)}
+					{toCurrency(item?.price * item?.quantity)}
 				</div>
 			) : null}
 
 			{item?.Inventory_promotion?.Promotion?.id === 2 ? (
 				<div className="px-4 text-right text-black">
-					{toCurrency((item.price - item.branch_discount) * item.quantity)}
+					{toCurrency((item?.price - item?.branch_discount) * item?.quantity)}
 				</div>
 			) : item?.Inventory_promotion?.Promotion?.id === 3 ? (
 				<div className="px-4 text-right text-black">
-					{toCurrency((item.price - (item.branch_discount / 100) * item.price) * item.quantity)}
+					{toCurrency((item?.price - (item?.branch_discount / 100) * item?.price) * item?.quantity)}
 				</div>
 			) : (
-				<div className="px-4 text-right text-black">{toCurrency(item.price * item.quantity)}</div>
+				<div className="px-4 text-right text-black">{toCurrency(item?.price * item?.quantity)}</div>
 			)}
 		</div>
 	);
@@ -58,15 +58,16 @@ const TotalPrice = ({ transaction }) => {
 	return (
 		<div className="flex flex-row py-4 text-gray-200 text-sm">
 			<div className="text-left font-semibold text-gray-300">Total</div>
-			<div className="px-4 text-right ml-auto text-black font-semibold">{toCurrency(transaction.amount)}</div>
+			<div className="px-4 text-right ml-auto text-black font-semibold">{toCurrency(transaction?.amount)}</div>
 		</div>
 	);
 };
 
 const YourOrder = ({ transaction }) => {
-	const deliveryCost = transaction.Logistic.shipping_cost;
-	const voucher_discount = transaction.voucher_discount;
-	const subTotal = transaction.amount + voucher_discount - deliveryCost;
+	const deliveryCost = transaction?.Logistic?.shipping_cost || 0;
+	const voucher_discount = transaction?.voucher_discount;
+	const subTotal = transaction?.amount + voucher_discount - deliveryCost;
+	console.log(transaction);
 	return (
 		<div className="py-6">
 			<div className="mx-10 max-w-[800px]">

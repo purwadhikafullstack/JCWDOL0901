@@ -6,16 +6,21 @@ import { formikUpdateAvatarConfiguration } from "./config/formikUpdateAvatarConf
 import AvatarImagePreview from "./AvatarImagePreview";
 import AvatarInputField from "./AvatarInputField";
 import Button from "../Button";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 function UpdateAvatarForm({ item }) {
 	const [file, setFile] = useState();
 	const [error, setError] = React.useState("");
-	const formik = useFormik(formikUpdateAvatarConfiguration());
+	const navigate = useNavigate();
+	const dispatch = useDispatch();
+	const formik = useFormik(formikUpdateAvatarConfiguration(navigate, dispatch));
+	console.log(file);
 
 	useEffect(() => {
 		getAvatar()
 			.then((result) => {
-				setFile(result.data.avatar);
+				setFile(process.env.REACT_APP_IMAGE_BASE_URL + result.data.avatar);
 			})
 			.catch((error) => {
 				alert("Server Unavailable");

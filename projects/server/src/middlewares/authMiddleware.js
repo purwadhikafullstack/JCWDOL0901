@@ -52,7 +52,7 @@ const isVerifiedUser = async (request, response, next) => {
 		if (!verified) throw "User not verified!";
 		next();
 	} catch (error) {
-		response.status(403).send({ message: error });
+		response.status(403).send({ message: "USER_NOT_VERIFIED" });
 	}
 };
 

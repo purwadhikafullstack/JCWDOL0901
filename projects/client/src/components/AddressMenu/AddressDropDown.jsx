@@ -21,11 +21,11 @@ const AddressDropDown = () => {
 
 	return (
 		<div className="text-green-100 flex flex-row items-center">
-			<div className="font-medium underline underline-offset-4 decoration-dotted">
+			<div className="font-medium text-sm underline underline-offset-4 decoration-dotted">
 				{address ? address.label : "Loading"}
 			</div>
 			<button onClick={() => navigate("/account/manage-address")}>
-				<span className="ml-1 material-symbols-rounded font-bold text-3xl cursor-pointer">expand_more</span>
+				<span className="ml-1 material-symbols-rounded font-bold text-xl cursor-pointer">expand_more</span>
 			</button>
 		</div>
 	);

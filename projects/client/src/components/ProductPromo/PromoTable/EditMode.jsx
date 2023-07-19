@@ -20,8 +20,8 @@ const PromotionEdit = ({ formik }) => {
 
 	React.useEffect(() => {
 		getPromotionsType()
-			.then(result => setTypes(result.data))
-			.catch(error => alert(error));
+			.then((result) => setTypes(result.data))
+			.catch((error) => alert(error));
 	}, []);
 
 	return (
@@ -48,11 +48,7 @@ const PromotionEdit = ({ formik }) => {
 const EditModeButton = ({ setEditMode, formik }) => {
 	return (
 		<>
-			<button
-				type="button"
-				className="bg-green-500 px-3 py-1.5 rounded"
-				onClick={formik.handleSubmit}
-			>
+			<button type="button" className="bg-green-500 px-3 py-1.5 rounded" onClick={formik.handleSubmit}>
 				Save
 			</button>
 			<button className="bg-red px-3 py-1.5 rounded ml-2" onClick={() => setEditMode(-1)}>
@@ -71,7 +67,10 @@ const EditMode = ({ item, index, setEditMode }) => {
 		<tbody key={index}>
 			<tr>
 				<td className={tdClassName}>
-					<img src={item.Inventory.Product.image} className="w-[80px] mx-auto" />
+					<img
+						src={process.env.REACT_APP_IMAGE_BASE_URL + item.Inventory.Product.image}
+						className="w-[80px] mx-auto"
+					/>
 				</td>
 				<td className={tdClassName}>{item.Inventory.Product.name}</td>
 				<td className={tdClassName}>

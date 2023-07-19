@@ -63,9 +63,8 @@ export default function DeleteAlert({ open, setOpen, address }) {
 									type="button"
 									className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red text-base font-medium text-white hover:bg-red/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red sm:ml-3 sm:w-auto sm:text-sm"
 									onClick={() => {
-										deleteAddressHandler(address.id);
+										deleteAddressHandler(address.id, navigate);
 										setOpen(false);
-										navigate("/account/manage-address");
 									}}
 								>
 									Delete
