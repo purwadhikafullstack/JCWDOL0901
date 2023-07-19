@@ -49,7 +49,6 @@ const CartPage = () => {
 	const [cart, setCart] = useState();
 	const [subTotal, setSubTotal] = useState();
 	const [isUpdate, setIsUpdate] = useState(true);
-	console.log(cart);
 
 	React.useEffect(() => {
 		getUserCart()

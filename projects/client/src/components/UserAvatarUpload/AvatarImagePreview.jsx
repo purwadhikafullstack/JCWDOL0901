@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import axios from "axios";
 
 function AvatarImagePreview({ file }) {
-	console.log(file);
 	return (
 		<div className="flex flex-col justify-center items-center my-6">
 			<img

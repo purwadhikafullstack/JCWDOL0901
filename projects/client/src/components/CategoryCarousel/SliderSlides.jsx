@@ -86,7 +86,7 @@ const DesktopSlides = ({ categories, setPage }) => {
 			{categories.map((category, index) => {
 				const params = { category_id: category.id, branch_id: user?.branch?.id };
 				const isFocus = category_id == category.id;
-				console.log(process.env.REACT_APP_IMAGE_BASE_URL + category.image);
+
 				return (
 					<SplideSlide key={index}>
 						<div className="flex flex-col items-center mx-2 pb-2 sm:pb-3 sm:pt-8">

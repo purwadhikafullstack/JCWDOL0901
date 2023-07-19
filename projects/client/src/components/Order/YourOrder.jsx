@@ -67,7 +67,7 @@ const YourOrder = ({ transaction }) => {
 	const deliveryCost = transaction?.Logistic?.shipping_cost || 0;
 	const voucher_discount = transaction?.voucher_discount;
 	const subTotal = transaction?.amount + voucher_discount - deliveryCost;
-	console.log(transaction);
+
 	return (
 		<div className="py-6">
 			<div className="mx-10 max-w-[800px]">

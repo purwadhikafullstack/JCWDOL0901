@@ -1,5 +1,5 @@
 const multer = require("multer");
-console.log(__dirname);
+
 const productStorage = multer.diskStorage({
 	destination: (req, res, cb) => {
 		cb(null, `${__dirname}/../../uploads/products`);

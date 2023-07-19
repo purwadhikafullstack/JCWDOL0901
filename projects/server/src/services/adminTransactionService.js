@@ -30,7 +30,7 @@ const getLabels = (from, to) => {
 		.add(1, "days")
 		.set({ hour: 0, minute: 0, second: 0, millisecond: 0 })
 		.diff(moment(from), "days");
-	console.log(diffInDays, from, to);
+
 	return new Array(diffInDays).fill(0).map((cur, index, arr) => moment(from).add(index, "days").format("DD/MM/YYYY"));
 };
 
