@@ -1,6 +1,7 @@
 const { Users, Branches } = require("../models/index.js");
 const { forbiddenErrorHandler } = require("../errors/serviceError.js");
 const { verifyJWToken } = require("../utils/jsonwebtoken.js");
+const { isUserErrorHandler } = require("../errors/middlewareError.js");
 
 const getReferrerId = async (request, response, next) => {
 	const referrer = await Users.findOne({
@@ -40,9 +41,10 @@ const isUser = async (request, response, next) => {
 		if (!request.headers.authorization) throw "Missing token!";
 		const token = await verifyJWToken(request.headers.authorization, process.env.JWT_USER_SECRET_KEY);
 		request.userData = token;
+
 		next();
 	} catch (error) {
-		response.status(403).send({ message: error });
+		await isUserErrorHandler(response, error);
 	}
 };
 
