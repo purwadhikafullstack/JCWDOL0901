@@ -26,7 +26,7 @@ const Discount = ({ summary }) => {
 			<span className="col-start-4 col-span-2">Voucher Discount:</span>
 			<span className="col-start-7 col-span-2 text-red">
 				{" "}
-				{summary?.discount ? `- ${toCurrency(summary?.discount)}` : 0}
+				{summary?.discount ? `- ${toCurrency(summary?.discount)}` : "-"}
 			</span>
 		</div>
 	);
