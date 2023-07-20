@@ -11,13 +11,15 @@ const BranchName = ({ toggleBranchModal }) => {
 	const dispatch = useDispatch();
 
 	React.useEffect(() => {
-		getNearestBranch(user.location.latitude, user.location.longitude)
+		if(!user.branch.id) {
+			getNearestBranch(user.location.latitude, user.location.longitude)
 			.then((result) => {
 				dispatch(setUserNearestBranch({ name: result.data.name, id: result.data.id }));
 			})
 			.catch((error) => {
 				dispatch(setUserNearestBranch({ name: "Server Error!", id: null }));
 			});
+		};
 	}, []);
 
 	return (
