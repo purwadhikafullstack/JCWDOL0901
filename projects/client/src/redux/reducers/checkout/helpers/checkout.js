@@ -93,9 +93,15 @@ const handlePercentageDiscount = (summary, raw_discount, voucher) => {
 };
 
 const handleLogisticDiscount = (summary, raw_discount) => {
-	let logistic = summary?.raw?.logistic - raw_discount;
-	if (logistic < 0) logistic = 0;
-	return { ...summary, logistic, discount: raw_discount, total: logistic + summary?.raw?.subtotal };
+	let discount = raw_discount;
+	let logistic = summary?.raw?.logistic - discount;
+
+	if (logistic < 0) {
+		logistic = 0;
+		discount = summary?.raw?.logistic;
+	}
+
+	return { ...summary, logistic, discount, total: logistic + summary?.raw?.subtotal };
 };
 
 export const getSummaryAfterVoucher = (summaryState, voucher) => {

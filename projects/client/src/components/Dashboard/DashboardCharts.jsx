@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 
 const DashboardCharts = ({ containerClass, chartClass }) => {
 	const [dashboardData, setDashboardData] = useState({});
-
 	useEffect(() => {
 		getDashboardData(setDashboardData);
 	}, []);

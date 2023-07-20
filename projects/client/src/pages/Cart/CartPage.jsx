@@ -11,7 +11,7 @@ import { toCurrency } from "../../helper/currency";
 
 const ItemPrice = ({ item, setIsUpdate, index }) => {
 	return (
-		<div className="flex flex-row p-4 border-b border-dashedjustify-between">
+		<div className="flex flex-row p-4 border-b border-dashed justify-between">
 			<div className="w-1/4 min-w-[150px]">
 				<img
 					src={process.env.REACT_APP_IMAGE_BASE_URL + item.Inventory.Product.image}
@@ -51,6 +51,7 @@ const CartPage = () => {
 	const [cart, setCart] = useState();
 	const [subTotal, setSubTotal] = useState();
 	const [isUpdate, setIsUpdate] = useState(true);
+	console.log(cart);
 
 	React.useEffect(() => {
 		getUserCart()
