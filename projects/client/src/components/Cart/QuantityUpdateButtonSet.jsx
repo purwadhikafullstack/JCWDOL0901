@@ -27,7 +27,7 @@ const Increment = ({ inventory_id, amount, stock, setIsUpdate }) => {
 
 const QuantityUpdateButtonSet = ({ amount, inventory_id, stock, setIsUpdate }) => {
 	return (
-		<div className="flex flex-col sm:flex-row w-fit items-start text-green-300 mr-auto my-2">
+		<div className="flex flex-col sm:items-center sm:flex-row w-fit items-start text-green-300 mr-auto my-2">
 			<div className="flex flex-row items-center">
 				<Decrement inventory_id={inventory_id} amount={amount} stock={stock} setIsUpdate={setIsUpdate} />
 				<div className="flex justify-center items-center bg-green-50 px-2 py-2 rounded-xl mx-3 font-medium text-sm sm:text-md box-border w-8 sm:w-10 h-8 sm:h-10 text-center">
@@ -35,7 +35,9 @@ const QuantityUpdateButtonSet = ({ amount, inventory_id, stock, setIsUpdate }) =
 				</div>
 				<Increment inventory_id={inventory_id} amount={amount} stock={stock} setIsUpdate={setIsUpdate} />
 			</div>
-			<span className="text-[#f47229] sm:ml-4 font-semibold text-xs sm:text-base">{stock - amount} left</span>
+			<span className="text-[#f47229] sm:ml-4 font-semibold text-xs sm:text-base mt-2 sm:mt-0">
+				{stock - amount} left
+			</span>
 		</div>
 	);
 };

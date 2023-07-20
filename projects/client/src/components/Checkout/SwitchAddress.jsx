@@ -7,9 +7,9 @@ import ContinueButton from "../ContinueButton.jsx";
 const CreateButton = () => {
 	const navigate = useNavigate();
 	return (
-		<div className="pt-10">
+		<div className="pt-10 w-fit mx-auto">
 			<button
-				className="rounded-lg font-bold h-fit bg-green-500 text-green-100 w-full sm:w-fit px-10 py-2 mx-auto mb-6"
+				className="rounded-lg font-bold h-fit bg-green-500 text-green-100 w-full sm:w-fit px-20 py-2 mx-auto mb-6"
 				onClick={() => navigate("/account/create-new-address")}
 			>
 				Add New Address

@@ -17,16 +17,13 @@ const ProductDetailLayout = ({ product, inventory_id }) => {
 	return (
 		<div className="flex lg:justify-center xl:py-10 bg-green-100">
 			<div className="flex flex-col mx-auto w-full pb-20 sm:pb-32 min-h-screen bg-white lg:pb-0 lg:shrink-0 lg:max-w-7xl lg:justify-between lg:min-w-7xl lg:min-h-fit lg:flex-col lg:my-auto lg:mx-20 lg:rounded-lg lg:shadow-xl">
-				<div className="flex flex-col lg:flex-row">
-					<div className="flex flex-row items-center">
-						<BackButton color="text-green-400 h-fit mb-auto" url={-1} replace={{ replace: true }} />
-						<div
-							className="ml-auto mr-6 text-green-300 cursor-pointer text-sm"
-							onClick={() => navigate("/")}
-						>
-							Back to home
-						</div>
+				<div className="flex flex-row items-center">
+					<BackButton color="text-green-400 h-fit mb-auto" url={-1} replace={{ replace: true }} />
+					<div className="ml-auto mr-6 text-green-300 cursor-pointer text-sm" onClick={() => navigate("/")}>
+						Back to home
 					</div>
+				</div>
+				<div className="flex flex-col lg:flex-row">
 					<ProductImage product={product} />
 					<ProductInfo product={product} price={price} />
 					<AddToCart product={product} price={price} />
