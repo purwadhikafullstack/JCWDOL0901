@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { clearUser } from "../../redux/reducers/user/userAction";
 import { useDispatch } from "react-redux";
+import { showAlertByError } from "../../helper/alert";
 
 const AddressItem = ({ address }) => {
 	const navigate = useNavigate();
@@ -54,14 +55,7 @@ export default function AddressList() {
 			.then((result) => {
 				setAddresses(result.data);
 			})
-			.catch((error) => {
-				if (error.response.status === 401 || error.response.status === 403) {
-					localStorage.removeItem("token");
-					dispatch(clearUser());
-				}
-
-				alert(error.message);
-			});
+			.catch((error) => showAlertByError(error, dispatch));
 	}, []);
 
 	return (

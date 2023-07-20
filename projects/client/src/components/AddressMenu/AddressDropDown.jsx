@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { clearUser } from "../../redux/reducers/user/userAction";
+import { showAlertByError } from "../../helper/alert";
 
 const getDefaultAddress = (token) => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/address/default`, {
@@ -20,14 +20,7 @@ const AddressDropDown = () => {
 			.then((result) => {
 				setAddress(result.data);
 			})
-			.catch((error) => {
-				if (error.response.status === 401 || error.response.status === 403) {
-					localStorage.removeItem("token");
-					dispatch(clearUser());
-				}
-
-				alert(error.message);
-			});
+			.catch((error) => showAlertByError(error, dispatch));
 	}, []);
 
 	return (

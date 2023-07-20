@@ -8,6 +8,7 @@ import AddToCart from "../../components/ProductDetail/ProductInfo/AddToCart";
 import ProductImage from "../../components/ProductDetail/ProductImage";
 import { clearUser } from "../../redux/reducers/user/userAction";
 import { useDispatch } from "react-redux";
+import { showAlertByError } from "../../helper/alert";
 
 const ProductDetailLayout = ({ product, inventory_id }) => {
 	const [price, setPrice] = React.useState({ original: 0, final: 0, promo: false });
@@ -46,14 +47,7 @@ const ProductDetail = () => {
 				if (!result.data.id) navigate("/404");
 				setProduct(result.data);
 			})
-			.catch((error) => {
-				if (error.response.status === 401 || error.response.status === 403) {
-					localStorage.removeItem("token");
-					dispatch(clearUser());
-				}
-
-				alert(error.message);
-			});
+			.catch((error) => showAlertByError(error, dispatch));
 	}, [inventory_id]);
 
 	return product && <ProductDetailLayout product={product} inventory_id={inventory_id} />;

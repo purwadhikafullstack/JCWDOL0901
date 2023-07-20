@@ -3,6 +3,7 @@ import TableBodyContent from "./TableBodyContent.jsx";
 import { getCategories, generateUrlQuery } from "./handlers/categoryHandler.js";
 import { clearUser } from "../../redux/reducers/user/userAction.js";
 import { useDispatch } from "react-redux";
+import { showAlertByError } from "../../helper/alert.js";
 
 const CategoryTableBody = ({ page, setMaxPage, itemPerPage, filter, sort, order }) => {
 	const [datas, setDatas] = React.useState([]);
@@ -17,14 +18,7 @@ const CategoryTableBody = ({ page, setMaxPage, itemPerPage, filter, sort, order 
 				setMaxPage(Math.ceil(result.data.count / itemPerPage));
 				setIsUpdated(false);
 			})
-			.catch((error) => {
-				if (error.response.status === 401 || error.response.status === 403) {
-					localStorage.removeItem("token");
-					dispatch(clearUser());
-				}
-
-				alert(error.message);
-			});
+			.catch((error) => showAlertByError(error, dispatch));
 	}, [page, setMaxPage, itemPerPage, filter, sort, order, isUpdated]);
 
 	return (

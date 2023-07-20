@@ -5,6 +5,7 @@ import { removeVoucher } from "../../../redux/reducers/checkout/checkoutAction.j
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { clearUser } from "../../../redux/reducers/user/userAction.js";
+import { showAlertByError } from "../../../helper/alert.js";
 
 const Vouchers = () => {
 	const [vouchers, setVouchers] = React.useState([]);
@@ -21,23 +22,9 @@ const Vouchers = () => {
 						let filteredVouchers = filterVoucherByBranchAndCart(result.data, cart);
 						setVouchers(filteredVouchers);
 					})
-					.catch((error) => {
-						if (error.response.status === 401 || error.response.status === 403) {
-							localStorage.removeItem("token");
-							dispatch(clearUser());
-						}
-
-						alert(error.message);
-					});
+					.catch((error) => showAlertByError(error, dispatch));
 			})
-			.catch((error) => {
-				if (error.response.status === 401 || error.response.status === 403) {
-					localStorage.removeItem("token");
-					dispatch(clearUser());
-				}
-
-				alert(error.message);
-			});
+			.catch((error) => showAlertByError(error, dispatch));
 	}, []);
 
 	return (
