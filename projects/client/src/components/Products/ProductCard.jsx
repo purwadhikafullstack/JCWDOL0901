@@ -17,7 +17,7 @@ const ProductCard = ({ product }) => {
 	}, [product]);
 
 	return (
-		<div key={product.id} className="flex flex-col border rounded-lg pb-4 shadow-xl min-h-[340px]">
+		<div key={product.id} className="flex flex-col border rounded-lg pb-4 shadow-xl min-h-[340px] h-full">
 			<button
 				key={product.id}
 				onClick={() => {

@@ -11,7 +11,7 @@ const MobileButtonSet = ({ amount, setAmount, stock }) => {
 			>
 				–
 			</button>
-			<div className="flex justify-center items-center bg-green-50 px-5 py-3 rounded-xl mx-3 font-semibold text-lg box-border w-14 h-14 text-center">
+			<div className="flex justify-center items-center bg-green-50 px-5 py-3 rounded-xl mx-3 font-semibold text-sm sm:text-lg box-border w-10 sm:w-14 h-10 sm:h-14 text-center">
 				<span className="h-fit">{amount}</span>
 			</div>
 			<button

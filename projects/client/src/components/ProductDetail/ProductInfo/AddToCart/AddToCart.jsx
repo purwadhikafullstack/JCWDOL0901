@@ -15,7 +15,7 @@ const DesktopAddToCart = ({ amount }) => {
 			onClick={() => {
 				addProducts(inventory_id, amount, dispatch);
 			}}
-			className="bg-green-200 text-white font-semibold px-12 py-4 rounded-xl disabled:opacity-50 lg:w-full lg:px-0 lg:py-1.5 lg:rounded-lg"
+			className="bg-green-200 text-white font-semibold px-6 sm:px-12 py-2 sm:py-4 rounded-xl disabled:opacity-50 lg:w-full lg:px-0 lg:py-1.5 lg:rounded-lg"
 		>
 			Add To Cart
 		</button>
