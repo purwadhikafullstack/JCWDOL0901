@@ -9,8 +9,9 @@ const isUserErrorHandler = async (response, error) => {
 		if (error.message === "jwt expired") {
 			return response.status(401).send({ message: "token expired" });
 		}
+	} else if (error.name === "EmptyTokenError") {
+		return response.status(403).send({ message: "missing token" });
 	}
-
 	return response.status(403).send({ message: error });
 };
 

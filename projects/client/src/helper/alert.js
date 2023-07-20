@@ -13,6 +13,10 @@ export const showAlertByError = (error, dispatch) => {
             return alert("Expired Token, Please Relogin.");
         }
     } else if (error.response.status === 403) {
+        if(error.response?.data?.message === "missing token") {
+            dispatch(clearUserSession());
+            return alert ("Token Missing!");
+        };
         return alert ("Forbidden! Access Denied.");
     };
 
