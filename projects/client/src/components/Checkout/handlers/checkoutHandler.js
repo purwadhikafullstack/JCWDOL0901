@@ -56,7 +56,7 @@ export const getUserCart = () => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/cart`, headers);
 };
 
-const promtCreateOrder = (data) =>
+const promptCreateOrder = (data) =>
 	Swal.fire({
 		title: "Create Order?",
 		html: `Total Payment: <b>${toCurrency(data.summary.total)}</b>`,
@@ -82,7 +82,7 @@ export const postTransaction = (data, dispatch, navigate) => {
 	const token = localStorage.getItem("token");
 	const headers = { headers: { Authorization: `Bearer ${token}` } };
 
-	promtCreateOrder(data).then(async (result) => {
+	promptCreateOrder(data).then(async (result) => {
 		if (result.isConfirmed) {
 			await axios
 				.post(`${process.env.REACT_APP_API_BASE_URL}/transaction/create`, data, headers)

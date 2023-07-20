@@ -18,6 +18,7 @@ const {
 } = require("../helpers/queryHelper");
 
 const { getTransactionPayload, getTransactionDetailPayload } = require("../helpers/bodyHelper");
+const { readCartQuery } = require("../queries/Carts");
 
 const getAdminsQuerySanitizer = async (request, response, next) => {
 	const sanitizedQuery = {
@@ -122,16 +123,19 @@ const getCategorySanitizer = async (request, response, next) => {
 };
 
 const postTransactionBodySanitizer = async (request, response, next) => {
-	const payload = {
-		transaction: await getTransactionPayload(request.body, request.userData.id),
-		transaction_detail: await getTransactionDetailPayload(request.userData.id),
+	const user_id = await request.userData.id;
+	const Cart = await readCartQuery({ user_id });
+
+	const payload = await {
+		transaction: await getTransactionPayload(request.body, user_id, Cart),
+		transaction_detail: await getTransactionDetailPayload(Cart),
 		logistic: {
 			code: request.body.logistic.code,
 			service: request.body.logistic.service,
 			shipping_cost: request.body.logistic.cost,
 		},
 		voucher: { id: request.body.voucher.id },
-		user: { id: request.userData.id },
+		user: { id: user_id },
 	};
 
 	request.payload = payload;
