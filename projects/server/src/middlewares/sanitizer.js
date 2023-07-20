@@ -123,8 +123,8 @@ const getCategorySanitizer = async (request, response, next) => {
 
 const postTransactionBodySanitizer = async (request, response, next) => {
 	const payload = {
-		transaction: await getTransactionPayload(request.body, request.userData),
-		transaction_detail: await getTransactionDetailPayload(request.body),
+		transaction: await getTransactionPayload(request.body, request.userData.id),
+		transaction_detail: await getTransactionDetailPayload(request.userData.id),
 		logistic: {
 			code: request.body.logistic.code,
 			service: request.body.logistic.service,

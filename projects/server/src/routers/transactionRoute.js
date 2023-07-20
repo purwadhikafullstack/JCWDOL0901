@@ -16,7 +16,7 @@ router.get("/list", isUser, getUserTransactions);
 router.get("/:transaction_id", isUser, getUserTransaction);
 
 router.post("/proof", isUser, uploadProofFile, postTransactionProof);
-router.post("/create", isUser, postTransactionBodySanitizer, userHasVoucher, postTransaction);
+router.post("/create", isUser, userHasVoucher, postTransactionBodySanitizer, postTransaction);
 router.patch("/:transaction_id/cancel", isUser, cancelUserOrderByUser);
 router.patch("/:transaction_id/confirm", isUser, confirmUserOrderByUser);
 

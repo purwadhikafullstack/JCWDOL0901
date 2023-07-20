@@ -1,6 +1,8 @@
-const getTransactionPayload = async (body, userData) => {
+const { readCartQuery } = require("../queries/Carts");
+
+const getTransactionPayload = async (body, user_id) => {
 	return await {
-		user_id: userData.id,
+		user_id: user_id,
 		branch_id: body.branch.branch_id,
 		address: body.address.detail,
 		amount: body.summary.total,
@@ -9,8 +11,10 @@ const getTransactionPayload = async (body, userData) => {
 	};
 };
 
-const getTransactionDetailPayload = async (body) => {
-	const data = body.cart.map((item) => {
+const getTransactionDetailPayload = async (user_id) => {
+	const Cart = await readCartQuery({ user_id });
+
+	const data = await Cart.map((item) => {
 		return {
 			inventory_id: item.Inventory.id,
 			inventory_promotion_id: item.Inventory.promo?.id || null,
@@ -20,6 +24,7 @@ const getTransactionDetailPayload = async (body) => {
 			branch_discount: item.Inventory.promo?.value || 0,
 		};
 	});
+
 	return [...data];
 };
 
