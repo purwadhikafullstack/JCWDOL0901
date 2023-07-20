@@ -9,8 +9,8 @@ const initialState = {
 	cartUpdate: false,
 };
 
-const clearUser = (state, action) => {
-	return { ...initialState };
+const clearUserSession = (state, action) => {
+	return { ...initialState, location: { ...state.location }, branch: { ...state.branch } };
 };
 
 const setUserNearestBranch = (state, action) => {
@@ -49,7 +49,7 @@ export const user = createSlice({
 	name: "user",
 	initialState,
 	reducers: {
-		clearUser,
+		clearUserSession,
 		setUserNearestBranch,
 		setUserLocation,
 		switchBranch,

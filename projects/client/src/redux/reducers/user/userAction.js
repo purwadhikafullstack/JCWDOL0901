@@ -1,4 +1,4 @@
 import { user } from "./userReducer.js";
 
-export const { clearUser, setUserNearestBranch, setUserLocation, switchBranch, setUserLogin, setCartUpdate } =
+export const { clearUserSession, setUserNearestBranch, setUserLocation, switchBranch, setUserLogin, setCartUpdate } =
 	user.actions;
