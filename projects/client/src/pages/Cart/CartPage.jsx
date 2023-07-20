@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { getUserCart } from "../../components/Cart/handlers/CartHandler";
-import { useNavigate } from "react-router-dom";
+import { createSearchParams, useNavigate } from "react-router-dom";
 import QuantityUpdateButtonSet from "../../components/Cart/QuantityUpdateButtonSet";
 import CheckoutButton from "../../components/Cart/CheckoutButton";
 import BackButton from "../../components/BackButton";
@@ -8,6 +8,11 @@ import CartPriceDetail from "../../components/Cart/CartPriceDetail";
 import CartHeader from "../../components/Cart/CartHeader";
 import CartHeaderContent from "../../components/Cart/CartHeaderContent";
 import { toCurrency } from "../../helper/currency";
+import { useDispatch, useSelector } from "react-redux";
+import { setUserLogin } from "../../redux/reducers/user/userAction";
+import AddProductButton from "../../components/Cart/AddProductButton";
+import DesktopNavBar from "../../components/DesktopNavBar";
+import MobileNavBar from "../../components/MobileNavBar";
 
 const ItemPrice = ({ item, setIsUpdate, index }) => {
 	return (
@@ -46,12 +51,28 @@ const SubTotal = ({ subTotal }) => {
 	);
 };
 
+const EmptyCart = () => {
+	const user = useSelector((state) => state.user);
+	return (
+		<div className="mb-20">
+			<div>
+				<img
+					className="w-80 mt-10 mx-auto"
+					src="/assets/images/empty_cart_illustration.png"
+					alt="create product illustration"
+				/>
+			</div>
+			<div className="">Your cart is empty</div>
+		</div>
+	);
+};
+
 const CartPage = () => {
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
 	const [cart, setCart] = useState();
 	const [subTotal, setSubTotal] = useState();
 	const [isUpdate, setIsUpdate] = useState(true);
-	console.log(cart);
 
 	React.useEffect(() => {
 		getUserCart()
@@ -77,26 +98,43 @@ const CartPage = () => {
 				setIsUpdate(false);
 			})
 			.catch((error) => {
-				alert(error);
+				if (error?.response?.status === 403) {
+					dispatch(setUserLogin({ hasLogged: false, avatar: "", username: "" }));
+					navigate(`/login`, {
+						state: {
+							authGuard: true,
+						},
+					});
+				}
 			});
 	}, [isUpdate]);
 	return (
-		<div className="sm:p-10 bg-green-100 min-h-screen">
-			<div className="flex flex-col bg-white max-w-5xl min-h-[50vw] mx-auto rounded-xl shadow-lg">
-				<BackButton url="/" color="text-green-400" />
-				<CartHeader Content={CartHeaderContent} />
-				<div className="">
-					{cart && cart.map((item, index) => <ItemPrice item={item} key={index} setIsUpdate={setIsUpdate} />)}
-					{cart?.length === 0 ? <div className=" bg-green-100 py-20">Cart is empty</div> : null}
-					<div className="flex flex-col mb-10">
-						<SubTotal subTotal={subTotal} />
-					</div>
-				</div>
-				<div className="mt-auto mb-10">
-					<CheckoutButton cart={cart} />
+		<>
+			<div className="flex flex-col sm:bg-green-200 sm:pb-4 sm:px-2">
+				<div className="flex flex-col justify-between items-between z-10 mx-6">
+					<DesktopNavBar />
 				</div>
 			</div>
-		</div>
+			<div className="sm:p-10 bg-green-100 min-h-screen">
+				<div className="flex flex-col bg-white max-w-5xl min-h-[50vw] mx-auto rounded-xl shadow-lg">
+					<CartHeader Content={CartHeaderContent} />
+					<div className="">
+						{cart &&
+							cart.map((item, index) => <ItemPrice item={item} key={index} setIsUpdate={setIsUpdate} />)}
+						{cart?.length === 0 ? <EmptyCart /> : null}
+						{cart?.length === 0 ? null : (
+							<div className="flex flex-col mb-10">
+								<SubTotal subTotal={subTotal} />
+							</div>
+						)}
+					</div>
+					<div className="mt-auto mb-10">
+						{cart?.length === 0 ? <AddProductButton /> : <CheckoutButton cart={cart} />}
+					</div>
+				</div>
+			</div>
+			<MobileNavBar />
+		</>
 	);
 };
 
