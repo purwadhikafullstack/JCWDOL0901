@@ -1,12 +1,14 @@
 import React from "react";
 import { handleDecrement, handleIncrement } from "./handlers/CartHandler.js";
+import { useDispatch } from "react-redux";
 
 const Decrement = ({ inventory_id, amount, stock, setIsUpdate }) => {
+	const dispatch = useDispatch();
 	return (
 		<button
 			className="border border-green-300 px-2 rounded-lg h-fit disabled:border-gray-300 disabled:text-gray-300 disabled:opacity-50"
 			disabled={amount === 0}
-			onClick={() => handleDecrement(inventory_id, amount, stock, setIsUpdate)}
+			onClick={() => handleDecrement(inventory_id, amount, stock, setIsUpdate, dispatch)}
 		>
 			–
 		</button>
