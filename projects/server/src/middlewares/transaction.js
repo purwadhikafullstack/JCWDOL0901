@@ -14,4 +14,12 @@ const userHasVoucher = async (request, response, next) => {
 	}
 };
 
-module.exports = { userHasVoucher };
+const createTransactionRequestProtection = async (request, response, next) => {
+	if (!request.body?.logistic) {
+		return response.status(400).send("Bad Request!");
+	} else {
+		next();
+	}
+};
+
+module.exports = { userHasVoucher, createTransactionRequestProtection };
