@@ -21,10 +21,7 @@ const AddressDropDown = () => {
 				setAddress(result.data);
 			})
 			.catch((error) => {
-				if (error?.response?.status === 403) {
-					showAlertByError(error, dispatch);
-					dispatch(setUserLogin({ hasLogged: false, avatar: "", username: "" }));
-				}
+				showAlertByError(error, dispatch);
 			});
 	}, []);
 

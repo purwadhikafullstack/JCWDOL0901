@@ -10,14 +10,14 @@ const Illustration = () => {
 			<div className="mb-10 text-green-100 text-2xl sm:text-3xl font-medium text-left sm:text-center pr-4">
 				Create Product
 			</div>
-			<ProductIllustration className="w-[160px] sm:w-[350px] pb-12 mx-auto" />
+			<ProductIllustration className="w-[160px] sm:w-[350px] pb-12 mx-auto sm:mt-40" />
 		</div>
 	);
 };
 
 const CreateProduct = () => {
 	return (
-		<div className="bg-green-100 flex items-center justify-center h-auto">
+		<div className="bg-green-100 flex items-center justify-center h-auto sm:p-10">
 			<div className="flex flex-col sm:flex-row bg-white rounded-lg h-screen sm:h-auto justify-between">
 				<div className="sm:bg-green-500 z-10 rounded-t-lg sm:rounded-tr-none rounded-tr-lg sm:rounded-l-lg bg-green-500">
 					<BackButton url={-1} color="text-green-100" />

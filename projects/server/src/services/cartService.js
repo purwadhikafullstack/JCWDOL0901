@@ -66,7 +66,6 @@ module.exports = {
 
 				return await resolve({ status: 200, message: "cart deleted successfully" });
 			} catch (error) {
-				console.log(error);
 				return await reject(await startDeleteteHandler(error));
 			}
 		});
