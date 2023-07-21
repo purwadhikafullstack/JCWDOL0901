@@ -30,7 +30,6 @@ const DesktopNavBar = ({ setFilter }) => {
 			.catch((error) => setItemOnCart(0));
 		dispatch(setCartUpdate({ cartUpdate: false }));
 	}, [user.cartUpdate]);
-	console.log(user);
 
 	return (
 		<div className="hidden text-green-100 text-xl sm:flex sm:flex-row sm:justify-center sm:w-full sm:mt-2 items-center">
