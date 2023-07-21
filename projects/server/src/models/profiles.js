@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
 				type: DataTypes.DATEONLY,
 			},
 			avatar: {
-				defaultValue: "uploads/avatars/default.png",
+				defaultValue: "/uploads/avatars/default.png",
 				type: DataTypes.STRING,
 			},
 		},

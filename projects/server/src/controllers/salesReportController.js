@@ -5,8 +5,9 @@ const {
 } = require("../services/salesReportService");
 
 const getSalesReportByProduct = async (request, response) => {
+	const { start_after, end_before, page, item_per_page, sort, order } = request.query;
 	const branch_id = request.branchData.id;
-	await startFindSalesReportByProduct(branch_id)
+	await startFindSalesReportByProduct(branch_id, start_after, end_before, page, item_per_page, sort, order)
 		.then((result) => {
 			response.status(200).send(result);
 		})
@@ -15,9 +16,9 @@ const getSalesReportByProduct = async (request, response) => {
 		});
 };
 const getSalesReportByTransaction = async (request, response) => {
-	const { transaction_id } = request.params;
-	const { id } = request.userData;
-	await startFindSalesReportByTransaction(transaction_id, id)
+	const { start_after, end_before, page, item_per_page, sort, order } = request.query;
+	const branch_id = request.branchData.id;
+	await startFindSalesReportByTransaction(branch_id, start_after, end_before, page, item_per_page, sort, order)
 		.then((result) => {
 			response.status(200).send(result);
 		})
@@ -26,9 +27,9 @@ const getSalesReportByTransaction = async (request, response) => {
 		});
 };
 const getSalesReportByUser = async (request, response) => {
-	const { transaction_id } = request.branchData.id;
-	const { id } = request.userData;
-	await startFindSalesReportByUser(transaction_id, id)
+	const { start_after, end_before, page, item_per_page, sort, order } = request.query;
+	const branch_id = request.branchData.id;
+	await startFindSalesReportByUser(branch_id, start_after, end_before, page, item_per_page, sort, order)
 		.then((result) => {
 			response.status(200).send(result);
 		})

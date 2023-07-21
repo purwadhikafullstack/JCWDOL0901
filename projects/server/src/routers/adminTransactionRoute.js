@@ -16,7 +16,6 @@ const router = require("express").Router();
 router.get("/list", isAdmin, getBranchId, getAdminTransactionQuerySanitizer, getAdminTransactions);
 router.get("/dashboard-data", isAdmin, getBranchId, getAdminDashboardData);
 router.get("/all-time-data", isAdmin, getBranchId, getAdminAllTimeData);
-router.get("/all-time-data", isAdmin, getBranchId, getAdminAllTimeData);
 router.patch("/:transaction_id/send", isAdmin, getBranchId, sendUserOrder);
 router.patch("/:transaction_id/cancel", isAdmin, getBranchId, cancelUserOrder);
 router.patch("/:transaction_id/confirm-proof", isAdmin, getBranchId, confirmUserOrder);

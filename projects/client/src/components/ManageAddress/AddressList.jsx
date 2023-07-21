@@ -15,25 +15,27 @@ const AddressItem = ({ address }) => {
 				className="block hover:bg-gray-100 w-full"
 				onClick={() => navigate("/account/edit-address", { state: address })}
 			>
-				<div className="flex flex-row items-center px-4 py-4 sm:px-6">
+				<div className="flex flex-row items-center px-2 py-4 sm:px-6">
 					<div className="min-w-0 flex-1 flex items-center">
 						<div className="flex-shrink-0">
 							<LocationMarkerIcon className="text-gray-300 mx-3 flex-shrink-0 h-6 w-6" />
 						</div>
 						<div className="flex flex-col w-full pr-10">
-							<p className="mx-6 font-bold text-gray-500 truncate text-left">
+							<p className="mx-2 sm:mx-6 font-bold text-gray-500 truncate text-left">
 								{address.label}
 								{address.is_default ? (
 									<span className="font-medium text-red text-xs ml-2">*Default Address</span>
 								) : null}
 							</p>
-							<p className="mx-6 text-sm text-gray-500 truncate text-left mt-2">{address.detail}</p>
-							<p className="mx-6 text-sm text-gray-300 truncate text-left mt-2">
+							<p className="mx-2 sm:mx-6 text-sm text-gray-500 truncate text-left mt-2">
+								{address.detail}
+							</p>
+							<p className="mx-2 sm:mx-6 text-sm text-gray-300 truncate text-left mt-2">
 								{`${address.City.type} ${address.City.name}, Provinsi ${address.City.Province.name}`}
 							</p>
 						</div>
 					</div>
-					<PencilIcon className="h-5 w-5 text-gray-300" aria-hidden="true" />
+					<PencilIcon className="ml-4 mr-3 h-5 w-5 text-gray-300" aria-hidden="true" />
 				</div>
 			</button>
 		</li>
@@ -49,7 +51,7 @@ const getAddresses = (token) => {
 export default function AddressList() {
 	const [addresses, setAddresses] = useState([]);
 	const dispatch = useDispatch();
-	
+
 	useEffect(() => {
 		getAddresses(localStorage.getItem("token"))
 			.then((result) => {

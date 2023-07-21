@@ -10,7 +10,6 @@ const validateChangePasswordInput = (input) => {
 };
 
 const ChangePasswordErrorHandler = async (error) => {
-	console.log(error);
 	if (error?.code === "ERR_NETWORK") {
 		return "Server unreachable, try again later!";
 	} else if (error?.code === "CONFIRM_PASS_ERR") {
@@ -40,7 +39,6 @@ export const changePasswordButtonHandler = async (input, setError, navigate) => 
 			navigate(-1);
 		}, 2000);
 	} catch (error) {
-		console.log(error);
 		await setError(await ChangePasswordErrorHandler(error));
 	}
 };

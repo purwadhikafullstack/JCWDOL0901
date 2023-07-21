@@ -199,6 +199,18 @@ const getStockChangesQuerySanitizer = async (request, response, next) => {
 	next();
 };
 
+const getSalesReportQuerySanitizer = async (request, response, next) => {
+	const sanitizedQuery = {
+		filter: await getStockChangesQueryFilter(request.query),
+		order: await getStockChangesQueryOrder(request.query),
+		page: request.query.page,
+	};
+
+	request.query = sanitizedQuery;
+
+	next();
+};
+
 module.exports = {
 	getInventoriesQuerySanitizer,
 	getAdminsQuerySanitizer,
@@ -216,4 +228,5 @@ module.exports = {
 	getProductsRecommendationQuerySanitizer,
 	getAdminTransactionQuerySanitizer,
 	getStockChangesQuerySanitizer,
+	getSalesReportQuerySanitizer,
 };

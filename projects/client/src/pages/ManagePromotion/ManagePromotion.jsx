@@ -20,7 +20,7 @@ const ResponsiveLogo = () => {
 
 const ProductPromotion = () => {
 	return (
-		<div className="flex flex-col mx-auto pb-10 flex-1 min-w-[480px] overflow-hidden bg-white z-10 sm:w-full">
+		<div className="flex flex-col mx-auto pb-10 flex-1 overflow-hidden bg-white z-10 sm:w-full">
 			<SideBar>
 				<div className="flex flex-col bg-white min-h-screen">
 					<div className="flex flex-col z-10">

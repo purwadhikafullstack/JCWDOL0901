@@ -17,17 +17,17 @@ const Promo = ({ item, isBOGO }) => {
 		}
 	}
 
-	return <span className="text-sm text-xs mt-auto text-left text-[#f47229] ml-3">{text.current}</span>;
+	return <span className="text-xs sm:text-sm mt-auto text-left text-[#f47229] sm:ml-3">{text.current}</span>;
 };
 
 const PriceWithPromo = ({ item }) => {
 	const price = getDisplayPrice(item);
 
 	return (
-		<div className="flex flex-row">
+		<div className="flex flex-col sm:flex-row">
 			<span className="text-sm text-left">{toCurrency(price.final)}</span>
 			{!price.isBOGO && (
-				<span className="text-sm text-xs mt-auto text-left line-through text-gray-200 ml-3">
+				<span className="text-xs sm:text-sm mt-auto text-left line-through text-gray-200 sm:ml-3">
 					{toCurrency(price.original)}
 				</span>
 			)}

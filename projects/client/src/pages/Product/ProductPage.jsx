@@ -8,6 +8,7 @@ import { setUserLocation } from "../../redux/reducers/user/userAction";
 import { promptUserPermissionForLocation } from "../../utils/geolocation";
 import { getNearestBranch } from "../../components/BranchMenu/handlers/branchMenuHandler";
 import { setUserNearestBranch } from "../../redux/reducers/user/userAction";
+import MobileNavBar from "../../components/MobileNavBar";
 
 const LocationMessage = ({ user }) => {
 	return (
@@ -61,7 +62,7 @@ const ProductPage = () => {
 			<div className="flex flex-col sm:px-8 pb-6">
 				<CategoryCarousel setPage={setPage} />
 				<ProductCards page={page} setMaxPage={setMaxPage} itemPerPage={itemPerPage} sort={sort} order={order} />
-				<div className="flex justify-center">
+				<div className="flex justify-center mb-20 sm:mb-10">
 					{maxPage ? (
 						<Pagination page={page} setPage={setPage} maxPage={maxPage} />
 					) : (
@@ -71,6 +72,7 @@ const ProductPage = () => {
 					)}
 				</div>
 			</div>
+			<MobileNavBar />
 		</div>
 	);
 };
