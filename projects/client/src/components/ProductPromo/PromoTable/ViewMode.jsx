@@ -1,7 +1,6 @@
 import Value from "./Value";
 
 const ViewMode = ({ item, index, setEditMode }) => {
-	console.log(item);
 	const tdClassName = index % 2 ? "py-4 bg-green-100 text-xs text-center" : "py-4 bg-white text-xs text-center";
 	return (
 		<tbody key={index}>

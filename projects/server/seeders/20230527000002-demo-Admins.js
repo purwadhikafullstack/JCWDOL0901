@@ -13,7 +13,7 @@ module.exports = {
 				},
 				{
 					email: "groseriastore.jakpus@groseria.com",
-					password: "$2b$10$DvxSE3TWZrAcLQCQSzRCB.zuCHIADffVb4wgR.ZFCPuneCpuXw5Wa",
+					password: "$2b$10$O7V5WHx9FiVX.iQVZ9YS4.huCVG2pwwyvCwbD6DJpweeHViqk3zcW",
 					super: false,
 				},
 				{

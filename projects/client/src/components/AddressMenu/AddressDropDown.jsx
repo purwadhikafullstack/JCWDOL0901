@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { showAlertByError } from "../../helper/alert";
 
 const getDefaultAddress = (token) => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/address/default`, {
@@ -11,12 +13,14 @@ const getDefaultAddress = (token) => {
 const AddressDropDown = () => {
 	const [address, setAddress] = useState();
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
+
 	useEffect(() => {
 		getDefaultAddress(localStorage.getItem("token"))
 			.then((result) => {
 				setAddress(result.data);
 			})
-			.catch((error) => alert("Server Unavailable"));
+			.catch((error) => showAlertByError(error, dispatch));
 	}, []);
 
 	return (

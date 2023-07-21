@@ -1,6 +1,10 @@
 const { User_vouchers, Vouchers, Promotions } = require("../models/index.js");
 const { Op } = require("sequelize");
 
+const readUserVoucherQuery = async (user_id, voucher_id) => {
+	return await User_vouchers.findOne({ where: { [Op.and]: { user_id, voucher_id, isUsed: false } } });
+};
+
 const readUserVouchersQuery = async (user_id) => {
 	return await User_vouchers.findAll({
 		where: { [Op.and]: { user_id, isUsed: false } },
@@ -56,6 +60,7 @@ const updateUsedUserVouchersQuery = async (user, voucher, transaction) => {
 };
 
 module.exports = {
+	readUserVoucherQuery,
 	readUserVouchersQuery,
 	createUserVouchersAsReferralReward,
 	updateUsedUserVouchersQuery,
