@@ -21,10 +21,9 @@ export const getSalesReportByUser = (query = "") => {
 export const sortDefault = { id: "name", name: "Product Name" };
 export const orderDefault = { id: "1", name: "A to Z" };
 
-export const resetSetting = (setName, setFilterBy, setFilter, setSort, setOrder, setPage) => {
-	setName("");
-	setFilterBy("");
-	setFilter("");
+export const resetSetting = (setStartDate, setEndDate, setSort, setOrder, setPage) => {
+	setStartDate("");
+	setEndDate("");
 	setSort("");
 	setOrder("");
 	setPage(1);

@@ -32,7 +32,7 @@ const TransactionSalesReportSearchConfiguration = ({
 					order={order}
 					setOrder={setOrder}
 				/>
-				<Reset onClick={() => resetSetting(setSort, setOrder, setPage)} />
+				<Reset onClick={() => resetSetting(setStartDate, setEndDate, setSort, setOrder, setPage)} />
 			</div>
 		</>
 	);

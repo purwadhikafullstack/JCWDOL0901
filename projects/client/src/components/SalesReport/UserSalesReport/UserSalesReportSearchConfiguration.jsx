@@ -27,7 +27,7 @@ const UserSalesReportSearchConfiguration = ({
 			</div>
 			<div className="flex flex-row w-full justify-between mb-4 p-4 px-6 rounded-t-xl z-50 sm:mb-10">
 				<UserSalesReportSortConfiguration sort={sort} setSort={setSort} order={order} setOrder={setOrder} />
-				<Reset onClick={() => resetSetting(setSort, setOrder, setPage)} />
+				<Reset onClick={() => resetSetting(setStartDate, setEndDate, setSort, setOrder, setPage)} />
 			</div>
 		</>
 	);

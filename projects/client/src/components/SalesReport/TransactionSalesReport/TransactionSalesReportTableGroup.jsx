@@ -1,6 +1,5 @@
 import React from "react";
 
-import { orderDefault, sortDefault } from "../handlers/SalesReportHandler";
 import Pagination from "../../Pagination";
 import TransactionSalesReportTable from "./TransactionSalesReportTable";
 import TransactionSalesReportSearchConfiguration from "./TransactionSalesReportSearchConfiguration";
