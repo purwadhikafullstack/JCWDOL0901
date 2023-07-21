@@ -41,7 +41,20 @@ const SearchConfiguration = ({
 					setFilter={setFilter}
 				/>
 				<SortConfiguration sort={sort} setSort={setSort} order={order} setOrder={setOrder} />
-				<Reset onClick={() => resetSetting(setName, setFilterBy, setFilter, setSort, setOrder, setPage)} />
+				<Reset
+					onClick={() =>
+						resetSetting(
+							setName,
+							setFilterBy,
+							setFilter,
+							setSort,
+							setOrder,
+							setPage,
+							setStartDate,
+							setEndDate,
+						)
+					}
+				/>
 			</div>
 		</>
 	);

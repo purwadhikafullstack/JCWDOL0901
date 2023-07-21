@@ -18,6 +18,7 @@ const {
 } = require("../helpers/queryHelper");
 
 const { getTransactionPayload, getTransactionDetailPayload } = require("../helpers/bodyHelper");
+const { readCartQuery } = require("../queries/Carts");
 
 const getAdminsQuerySanitizer = async (request, response, next) => {
 	const sanitizedQuery = {
@@ -67,13 +68,17 @@ const getInventoriesQuerySanitizer = async (request, response, next) => {
 };
 
 const getProductsRecommendationQuerySanitizer = async (request, response, next) => {
-	const sanitizedQuery = {
-		filter: await getProductsRecommendationFilter(request.query),
-	};
+	if (request.query.branch_id === "null") {
+		return response.status(400).send("BRANCH ID IS NULL");
+	} else {
+		const sanitizedQuery = {
+			filter: await getProductsRecommendationFilter(request.query),
+		};
 
-	request.query = sanitizedQuery;
+		request.query = sanitizedQuery;
 
-	next();
+		next();
+	}
 };
 
 const getRelatedProductsQuerySanitizer = async (request, response, next) => {
@@ -118,16 +123,19 @@ const getCategorySanitizer = async (request, response, next) => {
 };
 
 const postTransactionBodySanitizer = async (request, response, next) => {
-	const payload = {
-		transaction: await getTransactionPayload(request.body, request.userData),
-		transaction_detail: await getTransactionDetailPayload(request.body),
+	const user_id = await request.userData.id;
+	const Cart = await readCartQuery({ user_id });
+
+	const payload = await {
+		transaction: await getTransactionPayload(request.body, user_id, Cart),
+		transaction_detail: await getTransactionDetailPayload(Cart),
 		logistic: {
 			code: request.body.logistic.code,
 			service: request.body.logistic.service,
 			shipping_cost: request.body.logistic.cost,
 		},
 		voucher: { id: request.body.voucher.id },
-		user: { id: request.userData.id },
+		user: { id: user_id },
 	};
 
 	request.payload = payload;

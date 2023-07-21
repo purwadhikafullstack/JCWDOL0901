@@ -17,11 +17,7 @@ const FormikError = ({ formik, inputKey }) => {
 const EditModeButton = ({ setEditMode, formik }) => {
 	return (
 		<td className="py-4 bg-white text-xs text-white text-center">
-			<button
-				className="bg-green-500 px-3 py-1.5 rounded"
-				type="button"
-				onClick={formik.handleSubmit}
-			>
+			<button className="bg-green-500 px-3 py-1.5 rounded" type="button" onClick={formik.handleSubmit}>
 				Save
 			</button>
 			<button className="bg-red px-3 py-1.5 rounded ml-2" onClick={() => setEditMode(-1)}>
@@ -74,7 +70,11 @@ const EditMode = ({ item, index, setEditMode }) => {
 		<tbody key={index}>
 			<tr>
 				<td className={tdClassName}>
-					<img src={item.Product.image} className="w-[80px] mx-auto" />
+					<img
+						src={process.env.REACT_APP_IMAGE_BASE_URL + item.Product.image}
+						className="w-[80px] mx-auto"
+						alt={item.Product.name}
+					/>
 				</td>
 				<td className={tdClassName}>{item.Product.name}</td>
 				<td className={tdClassName}>

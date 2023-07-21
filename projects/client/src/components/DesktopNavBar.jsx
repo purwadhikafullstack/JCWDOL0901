@@ -30,6 +30,7 @@ const DesktopNavBar = ({ setFilter }) => {
 			.catch((error) => setItemOnCart(0));
 		dispatch(setCartUpdate({ cartUpdate: false }));
 	}, [user.cartUpdate]);
+	console.log(user);
 
 	return (
 		<div className="hidden text-green-100 text-xl sm:flex sm:flex-row sm:justify-center sm:w-full sm:mt-2 items-center">
@@ -51,7 +52,7 @@ const DesktopNavBar = ({ setFilter }) => {
 					<div className="flex">
 						<img
 							className="h-8 w-8 rounded-full shrink-0 object-contain bg-green-100"
-							src={user.avatar}
+							src={process.env.REACT_APP_IMAGE_BASE_URL + user.avatar}
 							alt="avatar"
 						/>
 						<div className="pl-2 pr-10 text-base flex items-center capitalize">{user.username}</div>

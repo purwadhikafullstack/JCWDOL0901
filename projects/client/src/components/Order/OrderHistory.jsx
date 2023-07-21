@@ -1,9 +1,10 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { ChevronRightIcon } from "@heroicons/react/solid";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import React from "react";
 import { getUserTransactions } from "./handlers/orderHandler";
+import { setUserLogin } from "../../redux/reducers/user/userAction";
 const moment = require("moment");
 
 const orderStatusList = {
@@ -24,7 +25,10 @@ const OrderList = ({ item }) => {
 					<div className="min-w-0 flex-1 flex items-center">
 						<div className="flex-shrink-0">
 							<img
-								src={item?.Transaction_details[0]?.Inventory?.Product?.image}
+								src={
+									process.env.REACT_APP_IMAGE_BASE_URL +
+									item?.Transaction_details[0]?.Inventory?.Product?.image
+								}
 								alt={item?.Transaction_details[0]?.name}
 								className="h-10"
 							/>
@@ -32,10 +36,12 @@ const OrderList = ({ item }) => {
 						<div className="flex flex-col text-left text-xs gap-1">
 							<p className="mx-6 font-medium text-gray-400 truncate">
 								<span className="text-gray-200 mr-2">INV-{String(item.id).padStart(6, "0")}</span>
-								<span className="font-semibold"> {orderStatusList[item.status_id]}</span>
+								<div>
+									<span className="font-semibold"> {orderStatusList[item.status_id]}</span>
+								</div>
 							</p>
 							<p className="mx-6 font-medium text-gray-300 truncate">
-								<span>{moment(item.created_at).format("D MMM YY, HH:MM")}</span>
+								<span>{moment(item.updated_at).format("D MMM YY, HH:mm")}</span>
 								<span> • </span>
 								<span>{item.Transaction_details.length} produk</span>
 							</p>
@@ -51,6 +57,8 @@ const OrderList = ({ item }) => {
 export default function OrderHistory() {
 	const user = useSelector((state) => state.user);
 	const [data, setData] = React.useState([]);
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
 
 	React.useEffect(() => {
 		// const query = generateUrlQuery(name, startDate, endDate, filterBy, filter, sort, order, page);
@@ -59,13 +67,22 @@ export default function OrderHistory() {
 				setData(result?.data?.rows);
 				// setMaxPage(Math.ceil(result.data.count / 5));
 			})
-			.catch((error) => alert(error));
+			.catch((error) => {
+				if (error?.response?.status === 403) {
+					dispatch(setUserLogin({ hasLogged: false, avatar: "", username: "" }));
+					navigate(`/login`, {
+						state: {
+							authGuard: true,
+						},
+					});
+				}
+			});
 	}, []);
 
 	return (
 		<div className="mb-6 mx-4">
-			<div className="bg-white pt-6 pb-4 fixed sm:static w-full">
-				<h1 className="text-center font-bold ml-6 text-lg text-gray-400">Order History</h1>
+			<div className="bg-white pt-6 pb-4 fixed -top-1 sm:static w-full">
+				<h1 className="text-center font-bold sm:ml-6 text-lg text-gray-400">Order History</h1>
 			</div>
 			<div className="bg-white overflow-hidden mb-6 mt-20 sm:mt-4">
 				<ul className="flex flex-col gap-2 pb-16">

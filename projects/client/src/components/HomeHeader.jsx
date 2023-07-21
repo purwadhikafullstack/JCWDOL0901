@@ -16,7 +16,7 @@ const HomeHeader = ({ toggleBranchModal }) => {
 					<CompanyLogo color={false} className="z-10 w-[40px] my-auto mr-6 ml-2" clickable={false} />
 					<SearchBar />
 				</div>
-				<div className="flex flex-row justify-between items-center">
+				<div className="flex flex-row justify-between items-start">
 					<BranchMenu toggleBranchModal={toggleBranchModal} />
 					<AddressMenu />
 				</div>

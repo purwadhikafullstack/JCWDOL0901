@@ -1,12 +1,17 @@
 const { Users, Profiles, sequelize } = require("../models/index.js");
 const { Op } = require("sequelize");
 const { generateReferralCode } = require("../helpers/referralCodeHelper.js");
-const { generateJWToken } = require("../utils/jsonwebtoken.js");
+const { getHashPassword } = require("../utils/bcrypt.js");
 
 const createUserQuery = async (body, transaction) => {
 	const { email, username, phone, password, referrer } = body;
 
-	const newUserData = await Users.create({ email, username, phone, password, referrer }, { transaction });
+	const hashPassword = await getHashPassword(password);
+
+	const newUserData = await Users.create(
+		{ email, username, phone, password: hashPassword, referrer },
+		{ transaction },
+	);
 
 	const referral_code = await generateReferralCode(newUserData.username, newUserData.id);
 
@@ -14,7 +19,8 @@ const createUserQuery = async (body, transaction) => {
 };
 
 const updateUserQuery = async (data, query, transaction) => {
-	return await Users.update({ data }, { where: { ...query }, transaction });
+	await Users.update({ ...data }, { where: { ...query }, transaction });
+	return;
 };
 
 const userAuthenticationQuery = async (body, Name) => {

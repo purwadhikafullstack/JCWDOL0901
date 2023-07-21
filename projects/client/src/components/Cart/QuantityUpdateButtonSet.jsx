@@ -1,12 +1,14 @@
 import React from "react";
 import { handleDecrement, handleIncrement } from "./handlers/CartHandler.js";
+import { useDispatch } from "react-redux";
 
 const Decrement = ({ inventory_id, amount, stock, setIsUpdate }) => {
+	const dispatch = useDispatch();
 	return (
 		<button
 			className="border border-green-300 px-2 rounded-lg h-fit disabled:border-gray-300 disabled:text-gray-300 disabled:opacity-50"
 			disabled={amount === 0}
-			onClick={() => handleDecrement(inventory_id, amount, stock, setIsUpdate)}
+			onClick={() => handleDecrement(inventory_id, amount, stock, setIsUpdate, dispatch)}
 		>
 			–
 		</button>
@@ -27,13 +29,17 @@ const Increment = ({ inventory_id, amount, stock, setIsUpdate }) => {
 
 const QuantityUpdateButtonSet = ({ amount, inventory_id, stock, setIsUpdate }) => {
 	return (
-		<div className="flex flex-row w-fit items-center text-green-300 mr-auto my-2">
-			<Decrement inventory_id={inventory_id} amount={amount} stock={stock} setIsUpdate={setIsUpdate} />
-			<div className="flex justify-center items-center bg-green-50 px-2 py-2 rounded-xl mx-3 font-medium text-md box-border w-10 h-10 text-center">
-				<span className="h-fit">{amount}</span>
+		<div className="flex flex-col sm:items-center sm:flex-row w-fit items-start text-green-300 mr-auto my-2">
+			<div className="flex flex-row items-center">
+				<Decrement inventory_id={inventory_id} amount={amount} stock={stock} setIsUpdate={setIsUpdate} />
+				<div className="flex justify-center items-center bg-green-50 px-2 py-2 rounded-xl mx-3 font-medium text-sm sm:text-md box-border w-8 sm:w-10 h-8 sm:h-10 text-center">
+					<span className="h-fit">{amount}</span>
+				</div>
+				<Increment inventory_id={inventory_id} amount={amount} stock={stock} setIsUpdate={setIsUpdate} />
 			</div>
-			<Increment inventory_id={inventory_id} amount={amount} stock={stock} setIsUpdate={setIsUpdate} />
-			<span className="text-[#f47229] ml-4 font-semibold">{stock - amount} left</span>
+			<span className="text-[#f47229] sm:ml-4 font-semibold text-xs sm:text-base mt-2 sm:mt-0">
+				{stock - amount} left
+			</span>
 		</div>
 	);
 };

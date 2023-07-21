@@ -4,7 +4,7 @@ const express = require("express");
 const cors = require("cors");
 const { join } = require("path");
 
-const { midnightTask } = require("./scheduler/midnight.js");
+// const { midnightTask } = require("./scheduler/midnight.js");
 const {
 	authRoute,
 	addressRoute,
@@ -35,7 +35,7 @@ app.use(
 
 app.use(express.json());
 
-midnightTask.start();
+// midnightTask.start();
 
 //#region API ROUTES
 

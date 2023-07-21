@@ -6,6 +6,7 @@ const {
 	cancelUserOrder,
 	confirmUserOrder,
 	rejectUserOrder,
+	getTransactionDetail,
 } = require("../controllers/adminTransactionController");
 const { getAdminTransactionQuerySanitizer } = require("../middlewares/sanitizer.js");
 const { getBranchId, isAdmin } = require("../middlewares/authMiddleware");
@@ -19,5 +20,6 @@ router.patch("/:transaction_id/send", isAdmin, getBranchId, sendUserOrder);
 router.patch("/:transaction_id/cancel", isAdmin, getBranchId, cancelUserOrder);
 router.patch("/:transaction_id/confirm-proof", isAdmin, getBranchId, confirmUserOrder);
 router.patch("/:transaction_id/reject-proof", isAdmin, getBranchId, rejectUserOrder);
+router.get("/:transaction_id/detail", isAdmin, getBranchId, getTransactionDetail);
 
 module.exports = router;

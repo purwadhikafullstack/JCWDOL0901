@@ -63,6 +63,7 @@ const ProductFilterSort = ({
 					setFilter={setFilter}
 					filterBy={filterBy}
 					filter={filter}
+					setPage={setPage}
 				/>
 			</div>
 		</div>

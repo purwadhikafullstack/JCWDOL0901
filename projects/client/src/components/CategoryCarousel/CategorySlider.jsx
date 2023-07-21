@@ -7,7 +7,7 @@ const fetchCategories = async (setCategories) => {
 		.get(`${process.env.REACT_APP_API_BASE_URL}/category/list`)
 		.then((result) => {
 			setCategories([
-				{ id: "", name: "All Category", image: "/assets/categories/category_0.png" },
+				{ id: "", name: "All Category", image: "/uploads/categories/category_0.png" },
 				...result.data.rows,
 			]);
 		})

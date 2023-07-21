@@ -12,6 +12,9 @@ const {
 	deleteProductQuery,
 	readProductsOnlyQuery,
 } = require("../queries/Products");
+const { sequelize } = require("../models");
+const { readBranchQuery } = require("../queries/Branches");
+const { createInventoryQuery, deleteInventoryQuery } = require("../queries/Inventories");
 
 const generateRandomIndex = async (top, indexHit) => {
 	let randomIndex;
@@ -160,10 +163,17 @@ module.exports = {
 	},
 	startCreateProduct: async (body, file) => {
 		return new Promise(async (resolve, reject) => {
+			const transaction = await sequelize.transaction();
 			try {
-				const Product = await createProductQuery(body, file);
+				const Product = await createProductQuery(body, file, transaction);
+				const Branches = await readBranchQuery(null, transaction);
+				for (const branch of Branches) {
+					await createInventoryQuery(branch.id, Product.id, transaction);
+				}
+				await transaction.commit();
 				return resolve(Product);
 			} catch (error) {
+				await transaction.rollback();
 				return reject(await startCreateErrorHandler(error));
 			}
 		});
@@ -180,13 +190,17 @@ module.exports = {
 	},
 	startDeleteProduct: async (params) => {
 		return new Promise(async (resolve, reject) => {
+			const transaction = await sequelize.transaction();
 			try {
-				await deleteProductQuery(params);
+				await deleteInventoryQuery(params, transaction);
+				await deleteProductQuery(params, transaction);
+				await transaction.commit();
 				return resolve({
 					status: 200,
 					message: "Product deleted successfully",
 				});
 			} catch (error) {
+				await transaction.rollback();
 				return reject(await startDeleteteHandler(error));
 			}
 		});

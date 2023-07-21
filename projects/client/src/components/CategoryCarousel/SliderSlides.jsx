@@ -30,7 +30,7 @@ const MobileSlides = ({ categories, setPage }) => {
 							<button className={`rounded-2xl mt-1 ${isFocus ? "ring ring-green-200" : ""}`}>
 								<img
 									className="w-[75px] cursor-pointer rounded-2xl"
-									src={category.image}
+									src={process.env.REACT_APP_IMAGE_BASE_URL + category.image}
 									alt={category.name}
 									loading="lazy"
 									onClick={() => {
@@ -86,13 +86,15 @@ const DesktopSlides = ({ categories, setPage }) => {
 			{categories.map((category, index) => {
 				const params = { category_id: category.id, branch_id: user?.branch?.id };
 				const isFocus = category_id == category.id;
+
 				return (
 					<SplideSlide key={index}>
 						<div className="flex flex-col items-center mx-2 pb-2 sm:pb-3 sm:pt-8">
 							<button className={`rounded-2xl mt-1 ${isFocus ? "ring ring-green-200" : ""}`}>
 								<img
 									className="w-[100px] cursor-pointer rounded-2xl"
-									src={category.image}
+									src={process.env.REACT_APP_IMAGE_BASE_URL + category.image}
+									// src={category.image}
 									alt={category.name}
 									loading="lazy"
 									onClick={() => {

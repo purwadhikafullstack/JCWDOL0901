@@ -24,14 +24,14 @@ const validationSchema = Yup.object({
 		),
 });
 
-const onSubmitConfiguration = async (values) => {
-	await updateAvatarHandler(values);
+const onSubmitConfiguration = async (values, navigate, dispatch) => {
+	await updateAvatarHandler(values, navigate, dispatch);
 };
 
-export const formikUpdateAvatarConfiguration = () => {
+export const formikUpdateAvatarConfiguration = (navigate, dispatch) => {
 	return {
 		initialValues,
-		onSubmit: async (values) => onSubmitConfiguration(values),
+		onSubmit: async (values) => onSubmitConfiguration(values, navigate, dispatch),
 		validateOnChange,
 		validateOnBlur,
 		validationSchema,

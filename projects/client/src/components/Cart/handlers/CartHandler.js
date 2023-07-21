@@ -1,4 +1,6 @@
 import axios from "axios";
+import { toCurrency } from "../../../helper/currency";
+import { setCartUpdate } from "../../../redux/reducers/user/userAction";
 
 export const getProductDetail = (inventory_id) => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/product/${inventory_id}`);
@@ -28,7 +30,7 @@ const getPromo = (promoDetail) => {
 	let promo;
 
 	if (promoDetail?.Promotion?.id === 2) {
-		promo = { value: `Save Rp ${promoDetail?.value.toLocaleString("id")}`, type: promoDetail?.Promotion?.name };
+		promo = { value: `Save ${toCurrency(promoDetail?.value)}`, type: promoDetail?.Promotion?.name };
 	} else if (promoDetail?.Promotion?.id === 3) {
 		promo = { value: `${promoDetail?.value}% off`, type: promoDetail?.Promotion?.name };
 	} else if (promoDetail?.Promotion?.id === 4) {
@@ -66,7 +68,7 @@ export const handleIncrement = async (inventory_id, quantity, stock, setIsUpdate
 	}
 };
 
-export const handleDecrement = async (inventory_id, quantity, stock, setIsUpdate) => {
+export const handleDecrement = async (inventory_id, quantity, stock, setIsUpdate, dispatch) => {
 	try {
 		const token = localStorage.getItem("token");
 		const config = {
@@ -76,6 +78,7 @@ export const handleDecrement = async (inventory_id, quantity, stock, setIsUpdate
 		if (quantity === 1) {
 			await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/cart/delete/${inventory_id}`, config);
 			setIsUpdate(true);
+			dispatch(setCartUpdate({ cartUpdate: true }));
 		}
 		if (quantity > 1) {
 			await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/cart/update`, body, config);

@@ -13,14 +13,14 @@ const readCategoryQuery = async (filter, order, page, itemPerPage) => {
 };
 const createCategoryQuery = async (body, file) => {
 	const { name } = body;
-	const image = `/assets/categories/${file.filename}`;
+	const image = `/uploads/categories/${file.filename}`;
 	return await Categories.create({ name, image });
 };
 
 const updateCategoryQuery = async (body, file, params) => {
 	const id = params.categoryId;
 	const { name } = body;
-	const image = file ? `/assets/categories/${file.filename}` : undefined;
+	const image = file ? `/uploads/categories/${file.filename}` : undefined;
 	return await Categories.update({ name, image }, { where: { id } });
 };
 

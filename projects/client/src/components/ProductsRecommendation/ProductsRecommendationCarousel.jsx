@@ -17,13 +17,13 @@ const Slide = ({ products }) => {
 
 const ProductsRecommendationCarousel = () => {
 	const user = useSelector((state) => state.user);
-	const [products, setProducts] = React.useState([]);
+	const [products, setProducts] = React.useState(null);
 
 	React.useEffect(() => {
 		getProductsRecommendation(user.branch.id)
 			.then((result) => setProducts(result.data))
-			.catch((error) => setProducts([{ name: "Server Error!", image: "" }]));
-	}, [user, window.innerWidth]);
+			.catch((error) => setProducts(null));
+	}, [user]);
 	const itemPerPage = window.innerWidth > 1024 ? 5 : window.innerWidth > 768 ? 4 : window.innerWidth > 640 ? 3 : 2;
 	return (
 		products && (

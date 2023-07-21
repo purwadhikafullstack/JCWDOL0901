@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
 				type: DataTypes.DATEONLY,
 			},
 			avatar: {
-				defaultValue: "/avatar/default_avatar.jpg",
+				defaultValue: "/uploads/avatars/default.png",
 				type: DataTypes.STRING,
 			},
 		},
@@ -43,7 +43,7 @@ module.exports = (sequelize, DataTypes) => {
 			sequelize,
 			modelName: "Profiles",
 			timestamps: false,
-		}
+		},
 	);
 	return Profiles;
 };
