@@ -4,6 +4,8 @@ import VoucherOptions from "./VoucherOptions.jsx";
 import { removeVoucher } from "../../../redux/reducers/checkout/checkoutAction.js";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { clearUser } from "../../../redux/reducers/user/userAction.js";
+import { showAlertByError } from "../../../helper/alert.js";
 
 const Vouchers = () => {
 	const [vouchers, setVouchers] = React.useState([]);
@@ -20,9 +22,9 @@ const Vouchers = () => {
 						let filteredVouchers = filterVoucherByBranchAndCart(result.data, cart);
 						setVouchers(filteredVouchers);
 					})
-					.catch((error) => alert(error));
+					.catch((error) => showAlertByError(error, dispatch));
 			})
-			.catch((error) => alert(error));
+			.catch((error) => showAlertByError(error, dispatch));
 	}, []);
 
 	return (

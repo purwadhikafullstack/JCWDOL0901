@@ -1,8 +1,8 @@
 const { Op } = require("sequelize");
 const { Inventory_promotions, Inventories, Promotions, Products } = require("../models/index.js");
 
-const createInventoryPromotionQuery = async (data) => {
-	return await Inventory_promotions.create({ ...data });
+const createInventoryPromotionQuery = async (data, transaction) => {
+	return await Inventory_promotions.create({ ...data }, { transaction });
 };
 
 const readInventoryPromotionQuery = async (branch_id, name, filter, order, page) => {
@@ -38,9 +38,14 @@ const deleteInventoryPromotionQuery = async (id) => {
 	return await Inventory_promotions.destroy({ where: { id } });
 };
 
+const clearInventoryPromotionQuery = async (query, transaction) => {
+	return await Inventory_promotions.destroy({ where: { ...query } }, { transaction });
+};
+
 module.exports = {
 	createInventoryPromotionQuery,
 	readInventoryPromotionQuery,
 	updateInventoryPromotionQuery,
 	deleteInventoryPromotionQuery,
+	clearInventoryPromotionQuery,
 };

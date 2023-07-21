@@ -3,6 +3,9 @@ import { LocationMarkerIcon, PencilIcon } from "@heroicons/react/outline";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { clearUser } from "../../redux/reducers/user/userAction";
+import { useDispatch } from "react-redux";
+import { showAlertByError } from "../../helper/alert";
 
 const AddressItem = ({ address }) => {
 	const navigate = useNavigate();
@@ -47,12 +50,14 @@ const getAddresses = (token) => {
 
 export default function AddressList() {
 	const [addresses, setAddresses] = useState([]);
+	const dispatch = useDispatch();
+	
 	useEffect(() => {
 		getAddresses(localStorage.getItem("token"))
 			.then((result) => {
 				setAddresses(result.data);
 			})
-			.catch((error) => alert("Server Unavailable"));
+			.catch((error) => showAlertByError(error, dispatch));
 	}, []);
 
 	return (

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setUserLogin } from "../../redux/reducers/user/userAction";
+import { showAlertByError } from "../../helper/alert";
 
 const getDefaultAddress = (token) => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/address/default`, {
@@ -21,6 +22,7 @@ const AddressDropDown = () => {
 			})
 			.catch((error) => {
 				if (error?.response?.status === 403) {
+					showAlertByError(error, dispatch);
 					dispatch(setUserLogin({ hasLogged: false, avatar: "", username: "" }));
 				}
 			});
