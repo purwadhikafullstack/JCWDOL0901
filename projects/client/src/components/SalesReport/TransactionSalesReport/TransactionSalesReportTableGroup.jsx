@@ -19,7 +19,7 @@ const TransactionSalesReportTableGroup = () => {
 
 	return (
 		<div className="flex flex-col justify-start pt-0.5 mt-7 px-4 h-full">
-			<h1 className="text-2xl font-bold">Sales Report By Transaction</h1>
+			<h1 className="text-2xl font-bold mb-16">Sales Report By Transaction</h1>
 			<TransactionSalesReportSearchConfiguration
 				setPage={setPage}
 				sort={sort}
