@@ -32,7 +32,7 @@ const branchQueryHelper = (branch_id) =>
 		  }
 		: {};
 
-const readProductSalesReportQuery = async (branch_id, from, to, page, item_per_page) => {
+const readProductSalesReportQuery = async (branch_id, from, to, page, item_per_page, sort, order) => {
 	// const where = branch_id == 0 ? { status_id: 5 } : { status_id: 5, branch_id };
 	const result = await Transaction_details.findAndCountAll({
 		attributes: ["name", [sequelize.fn("SUM", sequelize.col("quantity")), "qty"]],
@@ -49,7 +49,7 @@ const readProductSalesReportQuery = async (branch_id, from, to, page, item_per_p
 			},
 		],
 		group: ["name"],
-		order: [[sequelize.literal("qty"), "DESC"]],
+		order: sort && order ? [[sequelize.literal(sort), order == 1 ? "ASC" : "DESC"]] : [],
 		offset: (page - 1) * Number(item_per_page),
 		limit: Number(item_per_page),
 	});
@@ -73,7 +73,7 @@ const readTransactionSalesReportQuery = async (branch_id, from, to, page, item_p
 	return result;
 };
 
-const readUserSalesReportQuery = async (branch_id, from, to, page, item_per_page) => {
+const readUserSalesReportQuery = async (branch_id, from, to, page, item_per_page, sort, order) => {
 	console.log("from userSalesReport: ", from);
 	console.log("to userSalesReport: ", to);
 	const result = await Transactions.findAndCountAll({
@@ -91,7 +91,7 @@ const readUserSalesReportQuery = async (branch_id, from, to, page, item_per_page
 			},
 		],
 		group: ["user_id"],
-		order: [[sequelize.literal("total_spending"), "DESC"]],
+		order: sort && order ? [[sequelize.literal(sort), order == 1 ? "ASC" : "DESC"]] : [],
 		offset: (page - 1) * Number(item_per_page),
 		limit: Number(item_per_page),
 	});

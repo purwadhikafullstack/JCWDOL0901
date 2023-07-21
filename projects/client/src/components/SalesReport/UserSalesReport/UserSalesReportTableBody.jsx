@@ -2,11 +2,11 @@ import React from "react";
 import { generateUrlQuery, getSalesReportByUser } from "../handlers/SalesReportHandler";
 import UserSalesReportBodyContent from "./UserSalesReportBodyContent";
 
-const UserSalesReportTableBody = ({ name, filterBy, filter, sort, order, page, setMaxPage, startDate, endDate, itemPerPage }) => {
+const UserSalesReportTableBody = ({ sort, order, page, setMaxPage, startDate, endDate, itemPerPage }) => {
 	const [datas, setDatas] = React.useState([]);
 	
 	React.useEffect(() => {
-		const query = generateUrlQuery(name, page, filterBy, filter, sort, order, startDate, endDate, itemPerPage);
+		const query = generateUrlQuery(page, sort, order, startDate, endDate, itemPerPage);
 		console.log("query in SalesTableReport: ", query);
 		getSalesReportByUser(query)
 			.then((result) => {
@@ -15,7 +15,7 @@ const UserSalesReportTableBody = ({ name, filterBy, filter, sort, order, page, s
 				setMaxPage(Math.ceil(result.data.count.length / itemPerPage));
 			})
 			.catch((error) => alert("Server Unavailable"));
-	}, [filter, order, page, startDate, endDate]);
+	}, [order, page, startDate, endDate]);
 
 	// const [datas, setDatas] = React.useState([]);
 	// React.useEffect(() => {

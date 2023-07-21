@@ -1,12 +1,12 @@
 import React from "react";
 import DropDown from "../../DropDown";
-import { getOrderOfTotalSpending, getSortTotalSpendingBy } from "../handlers/SalesReportHandler";
+import { getOrderOfQuantity, getSortQuantityBy } from "../handlers/SalesReportHandler";
 import DisabledDropDown from "../../DisabledDropDown";
 
 const Icon = () => {
 	return (
 		<div className="self-center mb-1">
-			<span class="material-symbols-rounded">filter_list</span>
+			<span class="material-symbols-rounded">sort</span>
 		</div>
 	);
 };
@@ -16,20 +16,20 @@ const Order = ({ sort, setSort, order, setOrder }) => {
 		setOrder("");
 	}, [sort?.id]);
 
-	if (sort?.id === "created_at") {
-		return <DropDown data={order} setter={setOrder} getter={getOrderOfTotalSpending} />;
+	if (sort?.id === "qty") {
+		return <DropDown data={order} setter={setOrder} getter={getOrderOfQuantity} />;
 	}
 
 	return <DisabledDropDown />;
 };
 
-const SortTotalSpendingConfiguration = ({ sort, setSort, order, setOrder }) => {
+const ProductSalesReportSortConfiguration = ({ sort, setSort, order, setOrder }) => {
 	return (
 		<div className="flex flex-col w-[25%]">
 			<Icon />
 			<div className="flex flex-col items w-full lg:flex-row lg:justify-around">
 				<div className="flex justify-center w-full lg:w-[45%]">
-					<DropDown data={sort} setter={setSort} getter={getSortTotalSpendingBy} />
+					<DropDown data={sort} setter={setSort} getter={getSortQuantityBy} />
 				</div>
 				<div className="flex mt-2 justify-center w-full lg:w-[45%] lg:mt-0">
 					<Order sort={sort} setSort={setSort} order={order} setOrder={setOrder} />
@@ -39,4 +39,4 @@ const SortTotalSpendingConfiguration = ({ sort, setSort, order, setOrder }) => {
 	);
 };
 
-export default SortTotalSpendingConfiguration;
+export default ProductSalesReportSortConfiguration;

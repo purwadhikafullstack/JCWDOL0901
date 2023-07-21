@@ -2,18 +2,7 @@ import React from "react";
 import { generateUrlQuery, getSalesReportByTransaction } from "../handlers/SalesReportHandler";
 import TransactionSalesReportBodyContent from "./TransactionSalesReportBodyContent";
 
-const TransactionSalesReportTableBody = ({
-	name,
-	filterBy,
-	filter,
-	sort,
-	order,
-	page,
-	setMaxPage,
-	startDate,
-	endDate,
-	itemPerPage,
-}) => {
+const TransactionSalesReportTableBody = ({ sort, order, page, setMaxPage, startDate, endDate, itemPerPage }) => {
 	const [datas, setDatas] = React.useState([]);
 	React.useEffect(() => {
 		const query = generateUrlQuery(page, sort, order, startDate, endDate, itemPerPage);
@@ -25,7 +14,7 @@ const TransactionSalesReportTableBody = ({
 				setMaxPage(Math.ceil(result.data.count / itemPerPage));
 			})
 			.catch((error) => alert("Server Unavailable"));
-	}, [filter, order, page, startDate, endDate]);
+	}, [order, page, startDate, endDate]);
 
 	// const [datas, setDatas] = React.useState([]);
 	// React.useEffect(() => {

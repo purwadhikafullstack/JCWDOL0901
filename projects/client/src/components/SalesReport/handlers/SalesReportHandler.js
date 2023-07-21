@@ -66,11 +66,21 @@ export const getOrderOfTotalSpending = () => {
 		});
 	});
 };
-
-export const getFilterBy = () => {
+export const getSortQuantityBy = () => {
 	return new Promise((resolve, reject) => {
 		resolve({
-			data: [{ id: "description", name: "Changes" }],
+			data: [{ id: "qty", name: "Quantity" }],
+		});
+	});
+};
+
+export const getOrderOfQuantity = () => {
+	return new Promise((resolve, reject) => {
+		resolve({
+			data: [
+				{ id: "0", name: "Highest" },
+				{ id: "1", name: "Lowest" },
+			],
 		});
 	});
 };
@@ -82,18 +92,6 @@ export const getSalesBy = () => {
 				{ id: "product", name: "Product" },
 				{ id: "transaction", name: "Transaction" },
 				{ id: "user", name: "User" },
-			],
-		});
-	});
-};
-
-export const getFilterOfDescription = () => {
-	return new Promise(async (resolve, reject) => {
-		resolve({
-			data: [
-				{ id: "all", name: "All" },
-				{ id: "sales", name: "Sales" },
-				{ id: "other", name: "Other" },
 			],
 		});
 	});

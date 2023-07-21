@@ -8,12 +8,12 @@ const {
 } = require("../queries/SalesReport.js");
 
 module.exports = {
-	startFindSalesReportByProduct: async (branch_id, from, to, page, item_per_page) => {
+	startFindSalesReportByProduct: async (branch_id, from, to, page, item_per_page, sort, order) => {
 		return new Promise(async (resolve, reject) => {
 			try {
 				from = from ? moment(from) : moment(0);
 				to = to ? moment(to).add(1, "d") : moment();
-				const ProductSalesReport = await readProductSalesReportQuery(branch_id, from, to, page, item_per_page);
+				const ProductSalesReport = await readProductSalesReportQuery(branch_id, from, to, page, item_per_page, sort, order);
 				return resolve(ProductSalesReport);
 			} catch (error) {
 				console.log("error msg:", error);
@@ -41,12 +41,12 @@ module.exports = {
 			}
 		});
 	},
-	startFindSalesReportByUser: async (branch_id, from, to, page, item_per_page) => {
+	startFindSalesReportByUser: async (branch_id, from, to, page, item_per_page, sort, order) => {
 		return new Promise(async (resolve, reject) => {
 			try {
 				from = from ? moment(from) : moment(0);
 				to = to ? moment(to).add(1, "d") : moment();
-				const UserSalesReport = await readUserSalesReportQuery(branch_id, from, to, page, item_per_page);
+				const UserSalesReport = await readUserSalesReportQuery(branch_id, from, to, page, item_per_page, sort, order);
 				return resolve(UserSalesReport);
 			} catch (error) {
 				console.log("error:", error);

@@ -2,13 +2,9 @@ import React from "react";
 import DateConfiguration from "../../ManageOrder/SearchConfiguration/DateConfiguration";
 import Reset from "../SearchConfiguration/Reset";
 import { resetSetting } from "../handlers/SalesReportHandler";
+import ProductSalesReportSortConfiguration from "./ProductSalesReportSortConfiguration";
 
 const ProductSalesReportSearchConfiguration = ({
-	setName,
-	filterBy,
-	setFilterBy,
-	filter,
-	setFilter,
 	sort,
 	setSort,
 	order,
@@ -30,15 +26,8 @@ const ProductSalesReportSearchConfiguration = ({
 				/>
 			</div>
 			<div className="flex flex-row w-full justify-between mb-4 p-4 px-6 rounded-t-xl z-50 sm:mb-10">
-				{/* <NameConfiguration setName={setName} />
-				<FilterConfiguration
-					filterBy={filterBy}
-					setFilterBy={setFilterBy}
-					filter={filter}
-					setFilter={setFilter}
-				/>
-				<SortConfiguration sort={sort} setSort={setSort} order={order} setOrder={setOrder} /> */}
-				<Reset onClick={() => resetSetting(setName, setFilterBy, setFilter, setSort, setOrder, setPage)} />
+				<ProductSalesReportSortConfiguration sort={sort} setSort={setSort} order={order} setOrder={setOrder} />
+				<Reset onClick={() => resetSetting(setSort, setOrder, setPage)} />
 			</div>
 		</>
 	);

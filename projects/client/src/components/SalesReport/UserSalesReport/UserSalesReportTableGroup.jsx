@@ -6,9 +6,6 @@ import UserSalesReportTable from "./UserSalesReportTable";
 import UserSalesReportSearchConfiguration from "./UserSalesReportSearchConfiguration";
 
 const UserSalesReportTableGroup = () => {
-	const [name, setName] = React.useState("");
-	const [filterBy, setFilterBy] = React.useState("");
-	const [filter, setFilter] = React.useState("");
 	const [sort, setSort] = React.useState("");
 	const [order, setOrder] = React.useState("");
 	const [page, setPage] = React.useState(1);
@@ -19,7 +16,7 @@ const UserSalesReportTableGroup = () => {
 	
 	React.useEffect(() => {
 		setPage(1);
-	}, [name, filter, order, startDate, endDate]);
+	}, [order, startDate, endDate, sort]);
 	console.log("page: ", page);
 	console.log("max page: ", maxPage);
 
@@ -28,11 +25,6 @@ const UserSalesReportTableGroup = () => {
 			<h1>User report</h1>
 			<UserSalesReportSearchConfiguration
 				setPage={setPage}
-				setName={setName}
-				filterBy={filterBy}
-				setFilterBy={setFilterBy}
-				filter={filter}
-				setFilter={setFilter}
 				sort={sort}
 				setSort={setSort}
 				order={order}
@@ -43,10 +35,7 @@ const UserSalesReportTableGroup = () => {
 				setEndDate={setEndDate}
 			/>
 			<UserSalesReportTable
-				name={name}
 				sort={sort}
-				filterBy={filterBy}
-				filter={filter}
 				order={order}
 				page={page}
 				setMaxPage={setMaxPage}
