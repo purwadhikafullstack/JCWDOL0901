@@ -21,7 +21,7 @@ const promotion_id = Yup.number().typeError("Must be a number").required(require
 const value = Yup.number()
 	.typeError("Must be a number")
 	.required(requiredMessage)
-	.test("Must be greater than or equal to 1", "Must be a positve number", input => {
+	.test("Must be greater than or equal to 1", "Must be a positive number", (input) => {
 		return input >= 1;
 	})
 	.test("Percentage", "Must be lesser than 101%", (input, formik) => {
@@ -66,14 +66,14 @@ const onSubmitConfiguration = async (values, setError, navigate) => {
 		confirmButtonColor: "#0EB177",
 		cancelButtonColor: "#d33",
 		confirmButtonText: "Confirm",
-	}).then(async result => {
+	}).then(async (result) => {
 		if (result.isConfirmed) {
 			await createInventoryPromotion(values)
-				.then(result => {
+				.then((result) => {
 					Swal.fire("Success!", "Promotion Created!", "success");
 					navigate(-1);
 				})
-				.catch(error => setError(error.message));
+				.catch((error) => setError(error.message));
 		}
 	});
 };
@@ -81,7 +81,7 @@ const onSubmitConfiguration = async (values, setError, navigate) => {
 export const formikConfiguration = (setError, navigate) => {
 	return {
 		initialValues,
-		onSubmit: async values => onSubmitConfiguration(values, setError, navigate),
+		onSubmit: async (values) => onSubmitConfiguration(values, setError, navigate),
 		validateOnChange,
 		validateOnBlur,
 		validationSchema,
