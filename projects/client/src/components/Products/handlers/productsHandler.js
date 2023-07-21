@@ -43,7 +43,7 @@ export const addProducts = async (inventory_id, quantity, dispatch, user) => {
 			console.log("tess");
 			Swal.fire({
 				title: "Are you sure you want to add this product?",
-				text: "This product comes from a different branch than the other products in the cart. If you continue, we will clear all of your items in the cart",
+				text: "This product comes from a different branch than the other products in the cart. If you continue, we will clear all of your previous items in the cart",
 				showCancelButton: true,
 				confirmButtonText: "Add product",
 				confirmButtonColor: "#53B97C",
