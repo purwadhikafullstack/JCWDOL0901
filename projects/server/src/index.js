@@ -60,7 +60,7 @@ app.use("/api/voucher", voucherRoute);
 app.use("/api/transaction", transactionRoute);
 app.use("/api/rajaongkir", rajaOngkirRoute);
 
-app.use("/uploads", express.static("uploads/"));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // ===========================
 
