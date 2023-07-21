@@ -1,7 +1,7 @@
 import * as Yup from "yup";
 import { patchInventoryPromotions } from "../handlers/productPromoHandler";
 
-const initialValues = item => {
+const initialValues = (item) => {
 	return {
 		id: item.id,
 		inventory_id: item.inventory_id,
@@ -19,7 +19,7 @@ const requiredMessage = "Field can't be empty";
 
 const value = Yup.number()
 	.typeError("Must be a number")
-	.test("Must be greater than or equal to 1", "Must be a positve number", input => {
+	.test("Must be greater than or equal to 1", "Must be a positive number", (input) => {
 		return input >= 1;
 	})
 	.test("Percentage", "Must be lesser than 101%", (input, formik) => {
@@ -57,14 +57,14 @@ const validationSchema = Yup.object({
 
 const onSubmitConfiguration = async (values, setError) => {
 	await patchInventoryPromotions(values)
-		.then(result => window.location.reload(false))
-		.catch(error => setError(error.message));
+		.then((result) => window.location.reload(false))
+		.catch((error) => setError(error.message));
 };
 
 export const formikEditModeConfiguration = (setError, item, setEditMode) => {
 	return {
 		initialValues: initialValues(item),
-		onSubmit: async values => onSubmitConfiguration(values, setError),
+		onSubmit: async (values) => onSubmitConfiguration(values, setError),
 		validateOnChange,
 		validateOnBlur,
 		validationSchema,

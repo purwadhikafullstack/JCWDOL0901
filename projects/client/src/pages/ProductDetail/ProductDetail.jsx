@@ -6,6 +6,9 @@ import ProductInfo from "../../components/ProductDetail/ProductInfo";
 import SimilarProduct from "../../components/SimilarProducts";
 import AddToCart from "../../components/ProductDetail/ProductInfo/AddToCart";
 import ProductImage from "../../components/ProductDetail/ProductImage";
+import { clearUser } from "../../redux/reducers/user/userAction";
+import { useDispatch } from "react-redux";
+import { showAlertByError } from "../../helper/alert";
 
 const ProductDetailLayout = ({ product, inventory_id }) => {
 	const [price, setPrice] = React.useState({ original: 0, final: 0, promo: false });
@@ -39,9 +42,10 @@ const ProductDetailLayout = ({ product, inventory_id }) => {
 };
 
 const ProductDetail = () => {
+	const [product, setProduct] = React.useState(undefined);
 	const { inventory_id } = useParams();
 	const navigate = useNavigate();
-	const [product, setProduct] = React.useState(undefined);
+	const dispatch = useDispatch();
 
 	React.useEffect(() => {
 		getProductDetail(inventory_id)
@@ -49,9 +53,7 @@ const ProductDetail = () => {
 				if (!result.data.id) navigate("/404");
 				setProduct(result.data);
 			})
-			.catch((error) => {
-				alert(error);
-			});
+			.catch((error) => showAlertByError(error, dispatch));
 	}, [inventory_id]);
 
 	return product && <ProductDetailLayout product={product} inventory_id={inventory_id} />;

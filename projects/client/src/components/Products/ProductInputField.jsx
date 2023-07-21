@@ -10,10 +10,14 @@ const ProductInputField = ({ formik, setFile }) => {
 			<InputGroup name="Product's Name" type="text" inputKey="name" formik={formik} />
 			<InputGroup name="Product's Price" type="number" inputKey="price" formik={formik} />
 			<InputGroup name="Product's Description" type="text" inputKey="description" formik={formik} />
-			<InputGroup name="Product's Weight (in gram)" type="number" inputKey="weight" formik={formik} />
-			<InputGroup name="Product's Unit" type="text" inputKey="unit" formik={formik} />
-			<SelectGroupCategory name="Product's Category" inputKey="category_id" formik={formik} />
-			<SelectGroupProductIsActive name="Product's Active Status" inputKey="active" formik={formik} />
+			<div className="flex flex-col sm:flex-row sm:gap-3 w-full">
+				<InputGroup name="Product's Weight (in gram)" type="number" inputKey="weight" formik={formik} />
+				<InputGroup name="Product's Unit" type="text" inputKey="unit" formik={formik} />
+			</div>
+			<div className="flex flex-col sm:flex-row sm:gap-3 w-full">
+				<SelectGroupCategory name="Product's Category" inputKey="category_id" formik={formik} />
+				<SelectGroupProductIsActive name="Product's Active Status" inputKey="active" formik={formik} />
+			</div>
 			<FileUploadInputGroup name="Upload Image" type="file" inputKey="image" formik={formik} setFile={setFile} />
 		</div>
 	);

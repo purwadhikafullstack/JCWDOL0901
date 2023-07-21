@@ -9,7 +9,7 @@ import Unit from "./ProductInfo/Unit";
 
 const ProductInfo = ({ product, price }) => {
 	return (
-		<div className="flex flex-col bg-white items-start py-6 px-8 mt-4 border-t-2 border-green-300 lg:mt-6 lg:max-w-[40%] lg:shrink-1 lg:border-0">
+		<div className="flex flex-col bg-white items-start py-6 px-8 mt-4 border-t-2 border-green-300/30 lg:mt-6 lg:max-w-[40%] lg:shrink-1 lg:border-0">
 			<Category product={product} price={price} />
 			<Name product={product} />
 			<Price price={price} />

@@ -14,7 +14,7 @@ const SearchConfiguration = ({ setName, filter, setFilter, sort, setSort, order,
 				<NameConfiguration setName={setName} />
 				<FilterConfiguration filter={filter} setFilter={setFilter} />
 				<SortConfiguration sort={sort} setSort={setSort} order={order} setOrder={setOrder} />
-				<Reset onClick={() => resetSetting(setFilter, setSort, setOrder, setPage)} />
+				<Reset onClick={() => resetSetting(setFilter, setSort, setOrder, setPage, setName)} />
 			</div>
 		</>
 	);

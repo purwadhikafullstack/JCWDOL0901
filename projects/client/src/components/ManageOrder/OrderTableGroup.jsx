@@ -19,7 +19,7 @@ const OrderTableGroup = () => {
 	}, [name, filter, order, startDate, endDate]);
 
 	return (
-		<div className="mt-3.5 pt-4 px-4">
+		<div className="mt-3.5 pt-4 px-0 lg:px-4">
 			<SearchConfiguration
 				startDate={startDate}
 				setStartDate={setStartDate}

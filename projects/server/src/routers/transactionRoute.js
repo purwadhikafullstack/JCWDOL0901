@@ -9,14 +9,21 @@ const {
 } = require("../controllers/transactionController.js");
 const { postTransactionBodySanitizer } = require("../middlewares/sanitizer");
 const { uploadProofFile } = require("../middlewares/multer");
-const { userHasVoucher } = require("../middlewares/transaction");
+const { userHasVoucher, createTransactionRequestProtection } = require("../middlewares/transaction");
 const router = require("express").Router();
 
 router.get("/list", isUser, getUserTransactions);
 router.get("/:transaction_id", isUser, getUserTransaction);
 
 router.post("/proof", isUser, uploadProofFile, postTransactionProof);
-router.post("/create", isUser, userHasVoucher, postTransactionBodySanitizer, postTransaction);
+router.post(
+	"/create",
+	isUser,
+	createTransactionRequestProtection,
+	userHasVoucher,
+	postTransactionBodySanitizer,
+	postTransaction,
+);
 router.patch("/:transaction_id/cancel", isUser, cancelUserOrderByUser);
 router.patch("/:transaction_id/confirm", isUser, confirmUserOrderByUser);
 
