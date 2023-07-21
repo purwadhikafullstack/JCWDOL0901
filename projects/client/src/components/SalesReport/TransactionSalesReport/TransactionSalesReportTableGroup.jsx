@@ -17,12 +17,10 @@ const TransactionSalesReportTableGroup = () => {
 	React.useEffect(() => {
 		setPage(1);
 	}, [order, startDate, endDate, sort]);
-	console.log("page: ", page);
-	console.log("max page: ", maxPage);
 
 	return (
 		<div className="flex flex-col justify-start pt-0.5 mt-7 px-4 h-full">
-			<h1>Transaction report</h1>
+			<h1 className="text-2xl font-bold">Sales Report By Transaction</h1>
 			<TransactionSalesReportSearchConfiguration
 				setPage={setPage}
 				sort={sort}

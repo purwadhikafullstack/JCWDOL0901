@@ -22,7 +22,6 @@ const Time = ({ item }) => {
 
 const ProductSalesViewMode = ({ item, index, page, itemPerPage }) => {
 	const tdClassName = index % 2 ? "py-4 bg-green-100 text-xs text-center" : "py-4 bg-white text-xs text-center";
-	console.log("qty tes: ", item);
 	return (
 		<tbody key={index}>
 			<tr>

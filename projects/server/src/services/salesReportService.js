@@ -1,5 +1,4 @@
 const { startFindErrorHandler } = require("../errors/serviceError.js");
-const { sequelize } = require("../models/index.js");
 const moment = require("moment");
 const {
 	readProductSalesReportQuery,
@@ -13,10 +12,17 @@ module.exports = {
 			try {
 				from = from ? moment(from) : moment(0);
 				to = to ? moment(to).add(1, "d") : moment();
-				const ProductSalesReport = await readProductSalesReportQuery(branch_id, from, to, page, item_per_page, sort, order);
+				const ProductSalesReport = await readProductSalesReportQuery(
+					branch_id,
+					from,
+					to,
+					page,
+					item_per_page,
+					sort,
+					order,
+				);
 				return resolve(ProductSalesReport);
 			} catch (error) {
-				console.log("error msg:", error);
 				return reject(await startFindErrorHandler(error));
 			}
 		});
@@ -46,10 +52,17 @@ module.exports = {
 			try {
 				from = from ? moment(from) : moment(0);
 				to = to ? moment(to).add(1, "d") : moment();
-				const UserSalesReport = await readUserSalesReportQuery(branch_id, from, to, page, item_per_page, sort, order);
+				const UserSalesReport = await readUserSalesReportQuery(
+					branch_id,
+					from,
+					to,
+					page,
+					item_per_page,
+					sort,
+					order,
+				);
 				return resolve(UserSalesReport);
 			} catch (error) {
-				console.log("error:", error);
 				return reject(await startFindErrorHandler(error));
 			}
 		});

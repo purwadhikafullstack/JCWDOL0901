@@ -74,8 +74,6 @@ const readTransactionSalesReportQuery = async (branch_id, from, to, page, item_p
 };
 
 const readUserSalesReportQuery = async (branch_id, from, to, page, item_per_page, sort, order) => {
-	console.log("from userSalesReport: ", from);
-	console.log("to userSalesReport: ", to);
 	const result = await Transactions.findAndCountAll({
 		attributes: ["user_id", [sequelize.fn("SUM", sequelize.col("amount")), "total_spending"]],
 		where: {

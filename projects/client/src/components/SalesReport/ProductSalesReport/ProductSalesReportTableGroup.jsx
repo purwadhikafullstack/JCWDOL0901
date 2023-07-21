@@ -20,7 +20,7 @@ const ProductSalesReportTableGroup = () => {
 
 	return (
 		<div className="flex flex-col justify-start pt-0.5 mt-7 px-4 h-full">
-			<h1>Product report</h1>
+			<h1 className="text-2xl font-bold">Sales Report By Product</h1>
 			<ProductSalesReportSearchConfiguration
 				setPage={setPage}
 				sort={sort}

@@ -39,7 +39,6 @@ export const changePasswordButtonHandler = async (input, setError, navigate) => 
 			navigate(-1);
 		}, 2000);
 	} catch (error) {
-		console.log(error);
 		await setError(await ChangePasswordErrorHandler(error));
 	}
 };

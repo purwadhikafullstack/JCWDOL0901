@@ -7,10 +7,8 @@ const UserSalesReportTableBody = ({ sort, order, page, setMaxPage, startDate, en
 	
 	React.useEffect(() => {
 		const query = generateUrlQuery(page, sort, order, startDate, endDate, itemPerPage);
-		console.log("query in SalesTableReport: ", query);
 		getSalesReportByUser(query)
 			.then((result) => {
-				console.log("result.data: ", result.data);
 				setDatas(result.data.rows);
 				setMaxPage(Math.ceil(result.data.count.length / itemPerPage));
 			})

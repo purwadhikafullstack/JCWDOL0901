@@ -15,8 +15,6 @@ const Order = ({ sort, setSort, order, setOrder }) => {
 	React.useEffect(() => {
 		setOrder("");
 	}, [sort?.id]);
-	console.log("log sort: ", sort);
-	console.log("log order: ", order);
 	if (sort?.id === "updated_at") {
 		return <DropDown data={order} setter={setOrder} getter={getOrderOfDate} />;
 	}
