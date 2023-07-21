@@ -10,7 +10,7 @@ const Illustration = () => {
 			<div className="mb-10 text-green-100 text-2xl sm:text-3xl font-medium text-left sm:text-center pr-4">
 				Update Profile
 			</div>
-			<ProfileIllustration className="w-[160px] sm:w-[350px] pb-12 mx-20" />
+			<ProfileIllustration className="w-[160px] sm:w-[350px] pb-12 pr-6 mx-20" />
 		</div>
 	);
 };

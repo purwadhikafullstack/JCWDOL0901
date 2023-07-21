@@ -15,7 +15,6 @@ function UpdateAvatarForm({ item }) {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 	const formik = useFormik(formikUpdateAvatarConfiguration(navigate, dispatch));
-	console.log(file);
 
 	useEffect(() => {
 		getAvatar()

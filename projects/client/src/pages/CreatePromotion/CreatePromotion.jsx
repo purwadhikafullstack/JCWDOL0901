@@ -12,9 +12,7 @@ const Illustration = () => {
 	return (
 		<>
 			<div className="block text-white flex flex-row justify-center items-center z-10 sm:hidden">
-				<div className="mt-28 mr-auto ml-6 text-3xl font-semibold mb-4 whitespace-nowrap">
-					Create Promo
-				</div>
+				<div className="mt-6 mr-auto ml-8 text-3xl font-semibold mb-4">Create Promo</div>
 				<Img className="max-w-[250px] ml-2" />
 			</div>
 			<div className="hidden h-full mx-12 shrink-0 sm:flex sm:flex-col sm:justify-center">
@@ -38,16 +36,16 @@ const ResponsiveLogo = () => {
 	);
 };
 const CreatePromotion = () => {
-    return (
-        <div className="flex flex-col mx-auto flex-1 min-w-[480px] overflow-hidden px-8 w-full bg-white sm:bg-gray-100 sm:flex-row sm:justify-center sm:py-20 sm:max-w-full min-h-screen sm:drop-shadow-2xl ">
-            <CircularBackgroundDecoration />
-            <div className="z-10 relative sm:flex sm:flex-col sm:bg-green-400 sm:h-inherit sm:rounded-xl sm:p-6">
-                <BackButton url={-1} color="text-green-100" />
-                <Illustration />
-            </div>
-            <CreateProductPromoForm />
-        </div>
-    );
+	return (
+		<div className="flex flex-col mx-auto flex-1 overflow-hidden px-8 w-full bg-white sm:bg-gray-100 sm:flex-row sm:justify-center sm:py-20 sm:max-w-full min-h-screen sm:drop-shadow-2xl ">
+			<CircularBackgroundDecoration />
+			<div className="z-10 relative sm:flex sm:flex-col sm:bg-green-400 sm:h-inherit sm:rounded-xl sm:p-6">
+				<BackButton url={-1} color="text-green-100" />
+				<Illustration />
+			</div>
+			<CreateProductPromoForm />
+		</div>
+	);
 };
 
 export default CreatePromotion;

@@ -24,7 +24,7 @@ module.exports = {
 				type: Sequelize.DATEONLY,
 			},
 			avatar: {
-				defaultValue: "uploads/avatars/default.png",
+				defaultValue: "/uploads/avatars/default.png",
 				type: Sequelize.STRING,
 			},
 		});

@@ -58,9 +58,10 @@ export const generateUrlQuery = (name, page, filter, sort, order) => {
 	return url;
 };
 
-export const resetSetting = (setFilter, setSort, setOrder, setPage) => {
+export const resetSetting = (setFilter, setSort, setOrder, setPage, setName) => {
 	setFilter("");
 	setSort("");
 	setOrder("");
 	setPage(1);
+	setName("");
 };

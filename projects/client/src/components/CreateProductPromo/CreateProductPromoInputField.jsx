@@ -6,7 +6,7 @@ import { getBranchInventories } from "./handlers/createProductPromoHandler";
 
 const CreateProductPromoInputField = ({ formik }) => {
 	return (
-		<div className="flex flex-col items-center min-w-full">
+		<div className="flex flex-col items-center max-w-[360px]">
 			<SelectGroup name="Inventory" getter={getBranchInventories} inputKey="inventory_id" formik={formik} />
 			<SelectGroup name="Promotion" getter={getPromotionsType} inputKey="promotion_id" formik={formik} />
 			<InputGroup name="Value" type="number" inputKey="value" formik={formik} />

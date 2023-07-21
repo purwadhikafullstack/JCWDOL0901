@@ -32,7 +32,7 @@ const CategoryTableGroup = () => {
 	const [input, setInput] = useState("");
 	const itemPerPage = window.innerWidth > 640 ? 6 : 6;
 	return (
-		<div className="max-w-3xl flex flex-col gap-4 py-4 px-10 w-full">
+		<div className="max-w-3xl flex flex-col gap-4 py-4 px-6 w-full">
 			<CategoryFilterSort
 				setFilter={setFilter}
 				order={order}

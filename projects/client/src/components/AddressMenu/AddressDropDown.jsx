@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { setUserLogin } from "../../redux/reducers/user/userAction";
 import { showAlertByError } from "../../helper/alert";
 
 const getDefaultAddress = (token) => {
@@ -14,13 +15,14 @@ const AddressDropDown = () => {
 	const [address, setAddress] = useState();
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
-
 	useEffect(() => {
 		getDefaultAddress(localStorage.getItem("token"))
 			.then((result) => {
 				setAddress(result.data);
 			})
-			.catch((error) => showAlertByError(error, dispatch));
+			.catch((error) => {
+				showAlertByError(error, dispatch);
+			});
 	}, []);
 
 	return (
