@@ -16,6 +16,7 @@ module.exports = {
 				const ProductSalesReport = await readProductSalesReportQuery(branch_id, from, to, page, item_per_page);
 				return resolve(ProductSalesReport);
 			} catch (error) {
+				console.log("error msg:", error);
 				return reject(await startFindErrorHandler(error));
 			}
 		});
@@ -25,10 +26,15 @@ module.exports = {
 			try {
 				from = from ? moment(from) : moment(0);
 				to = to ? moment(to).add(1, "d") : moment();
-				const TransactionSalesReport = await readTransactionSalesReportQuery(branch_id, from, to, page, item_per_page);
+				const TransactionSalesReport = await readTransactionSalesReportQuery(
+					branch_id,
+					from,
+					to,
+					page,
+					item_per_page,
+				);
 				return resolve(TransactionSalesReport);
 			} catch (error) {
-				console.log("error msg:", error);
 				return reject(await startFindErrorHandler(error));
 			}
 		});
@@ -41,7 +47,7 @@ module.exports = {
 				const UserSalesReport = await readUserSalesReportQuery(branch_id, from, to, page, item_per_page);
 				return resolve(UserSalesReport);
 			} catch (error) {
-				console.log("error:", error)
+				console.log("error:", error);
 				return reject(await startFindErrorHandler(error));
 			}
 		});

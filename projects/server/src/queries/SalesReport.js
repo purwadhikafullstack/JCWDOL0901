@@ -44,7 +44,6 @@ const readProductSalesReportQuery = async (branch_id, from, to, page, item_per_p
 					...dateQueryHelper(from, to),
 					...branchQueryHelper(branch_id),
 				},
-				include: [{ model: Products, where: { ...query.filter?.Products } }],
 				attributes: [],
 				required: true,
 			},

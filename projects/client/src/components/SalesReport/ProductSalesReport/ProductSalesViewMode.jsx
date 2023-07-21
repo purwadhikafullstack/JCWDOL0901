@@ -20,14 +20,12 @@ const Time = ({ item }) => {
 	);
 };
 
-const ProductSalesViewMode = ({ item, index,  page, itemPerPage }) => {
+const ProductSalesViewMode = ({ item, index, page, itemPerPage }) => {
 	const tdClassName = index % 2 ? "py-4 bg-green-100 text-xs text-center" : "py-4 bg-white text-xs text-center";
+	console.log("qty tes: ", item);
 	return (
 		<tbody key={index}>
 			<tr>
-				<td className={tdClassName}>
-					<img src={item.Inventory.Product.image} className="max-w-[80px] mx-auto" />
-				</td>
 				<td className={tdClassName}>{(page - 1) * itemPerPage + (index + 1)}</td>
 				<td className={tdClassName}>{item.name}</td>
 				<td className={tdClassName}>{item.qty}</td>

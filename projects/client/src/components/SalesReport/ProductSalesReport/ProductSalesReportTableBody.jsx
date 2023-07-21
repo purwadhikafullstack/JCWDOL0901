@@ -21,7 +21,7 @@ const ProductSalesReportTableBody = ({
 		getSalesReportByProduct(query)
 			.then((result) => {
 				setDatas(result.data.rows);
-				setMaxPage(Math.ceil(result.data.count / itemPerPage));
+				setMaxPage(Math.ceil(result.data.count.length / itemPerPage));
 			})
 			.catch((error) => alert("Server Unavailable"));
 	}, [filter, order, page, startDate, endDate]);
