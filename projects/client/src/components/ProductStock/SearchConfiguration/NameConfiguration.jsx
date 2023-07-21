@@ -23,7 +23,7 @@ const NameConfiguration = ({ setName }) => {
 					className="flex max-w-[20%] w-fit bg-green-300  rounded-lg p-1 px-2 cursor-pointer hidden lg:block"
 					onClick={() => setName(input)}
 				>
-					<span classNamr="material-symbols-rounded w-full overflow-hidden whitespace-nowrap">search</span>
+					<span className="material-symbols-rounded w-full overflow-hidden whitespace-nowrap">search</span>
 				</div>
 			</div>
 		</div>

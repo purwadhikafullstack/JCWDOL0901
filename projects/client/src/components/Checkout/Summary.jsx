@@ -15,7 +15,7 @@ const Logistic = ({ summary }) => {
 	return (
 		<div className="grid grid-cols-8 gap-2 font-normal my-1 text-left">
 			<span className="col-start-4 col-span-2">Logistic fee:</span>
-			<span className="col-start-7 col-span-2"> {toCurrency(summary?.logistic)}</span>
+			<span className="col-start-7 col-span-2"> {toCurrency(summary?.raw?.logistic)}</span>
 		</div>
 	);
 };
@@ -24,7 +24,10 @@ const Discount = ({ summary }) => {
 	return (
 		<div className="grid grid-cols-8 gap-2 font-normal whitespace-nowrap text-left">
 			<span className="col-start-4 col-span-2">Voucher Discount:</span>
-			<span className="col-start-7 col-span-2 text-red"> {toCurrency(summary?.discount)}</span>
+			<span className="col-start-7 col-span-2 text-red">
+				{" "}
+				{summary?.discount ? `- ${toCurrency(summary?.discount)}` : "-"}
+			</span>
 		</div>
 	);
 };

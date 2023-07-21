@@ -9,13 +9,15 @@ export const getBranchInventories = (query = "") => {
 export const sortDefault = { id: "name", name: "Product Name" };
 export const orderDefault = { id: "1", name: "A to Z" };
 
-export const resetSetting = (setName, setFilterBy, setFilter, setSort, setOrder, setPage) => {
+export const resetSetting = (setName, setFilterBy, setFilter, setSort, setOrder, setPage, setStartDate, setEndDate) => {
 	setName("");
 	setFilterBy("");
 	setFilter("");
 	setSort("");
 	setOrder("");
 	setPage(1);
+	setStartDate("");
+	setEndDate("");
 };
 
 export const getSortBy = () => {
@@ -63,7 +65,7 @@ export const generateUrlQuery = (name = "", page, filterBy, filter, sort, order,
 	url += `?page=${page}`;
 	url += `&name=${name}`;
 	url += startDate ? `&start_after=${startDate}` : "";
-	url += endDate ? `&end_before=${new Date(new Date(endDate).getTime() + 1000 * 60 * 60 * 24)}` : "";
+	url += endDate ? `&end_before=${endDate}` : "";
 	url += filter?.id ? `&${filterBy?.id}=${filter?.id}` : "";
 	url += sort?.id ? `&order=${sort?.id}` : "";
 	url += order?.id ? `&asc=${order?.id}` : "";

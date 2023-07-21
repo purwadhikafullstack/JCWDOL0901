@@ -66,7 +66,7 @@ const DropDownOptions = ({ setter, getter }) => {
 					leaveFrom="opacity-100"
 					leaveTo="opacity-0"
 				>
-					<Listbox.Options className="border absolute h-fit inset-0 max-h-44 min-w-full w-fit overflow-auto rounded-lg text-xs divide-y cursor-pointer">
+					<Listbox.Options className="border z-50 absolute h-fit inset-0 max-h-44 min-w-full w-fit overflow-auto rounded-lg text-xs divide-y cursor-pointer">
 						<DataLists lists={lists} setter={setter} />
 					</Listbox.Options>
 				</Transition>

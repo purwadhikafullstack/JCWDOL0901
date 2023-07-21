@@ -5,7 +5,10 @@ const {
 	readInventoryPromotionQuery,
 	updateInventoryPromotionQuery,
 	deleteInventoryPromotionQuery,
+	clearInventoryPromotionQuery,
 } = require("../queries/Inventory_promotions");
+
+const { sequelize } = require("../models");
 
 module.exports = {
 	startFindInventoryPromotion: async (branch_id, name, filter, order, page) => {
@@ -21,10 +24,15 @@ module.exports = {
 	},
 	startInventoryPromotionRegistration: async (data) => {
 		return new Promise(async (resolve, reject) => {
+			const transaction = await sequelize.transaction();
 			try {
-				await createInventoryPromotionQuery(data);
+				await clearInventoryPromotionQuery({ inventory_id: data.inventory_id }, transaction);
+				await createInventoryPromotionQuery(data, transaction);
+
+				await transaction.commit();
 				return resolve("Inventory Promotion Created!");
 			} catch (error) {
+				await transaction.rollback();
 				return reject(await startRegistrationErrorHandler(error));
 			}
 		});
