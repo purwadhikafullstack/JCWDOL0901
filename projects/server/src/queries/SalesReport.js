@@ -14,48 +14,84 @@ const {
 } = require("../models/index.js");
 
 const sequelize = require("sequelize");
+const { Op, literal, Transaction } = require("sequelize");
 
-const readProductSalesReportQuery = async (branch_id) => {
-	const where = branch_id == 0 ? { status_id: 5 } : { status_id: 5, branch_id };
+const dateQueryHelper = (from, to) => {
+	return {
+		updated_at: {
+			[Op.gte]: from,
+			[Op.lte]: to,
+		},
+	};
+};
 
-	const result = await Transaction_details.findAll({
+const branchQueryHelper = (branch_id) =>
+	branch_id
+		? {
+				branch_id,
+		  }
+		: {};
+
+const readProductSalesReportQuery = async (branch_id, from, to, page, item_per_page, sort, order) => {
+	// const where = branch_id == 0 ? { status_id: 5 } : { status_id: 5, branch_id };
+	const result = await Transaction_details.findAndCountAll({
 		attributes: ["name", [sequelize.fn("SUM", sequelize.col("quantity")), "qty"]],
 		include: [
 			{
 				model: Transactions,
+				where: {
+					status_id: 5,
+					...dateQueryHelper(from, to),
+					...branchQueryHelper(branch_id),
+				},
 				attributes: [],
-				where,
 				required: true,
 			},
 		],
 		group: ["name"],
-		order: [[sequelize.literal("qty"), "DESC"]],
+		order: sort && order ? [[sequelize.literal(sort), order == 1 ? "ASC" : "DESC"]] : [],
+		offset: (page - 1) * Number(item_per_page),
+		limit: Number(item_per_page),
 	});
 
 	return result;
 };
 
-const readTransactionSalesReportQuery = async () => {
-	const result = await Transactions.findAll({
+const readTransactionSalesReportQuery = async (branch_id, from, to, page, item_per_page, sort, order) => {
+	const result = await Transactions.findAndCountAll({
 		attributes: ["amount", "updated_at"],
-		where: { status_id: 5, branch_id: 1 },
+		where: {
+			status_id: 5,
+			...dateQueryHelper(from, to),
+			...branchQueryHelper(branch_id),
+		},
+		order: sort && order ? [[sequelize.literal(sort), order == 1 ? "ASC" : "DESC"]] : [],
+		offset: (page - 1) * Number(item_per_page),
+		limit: Number(item_per_page),
 	});
 
 	return result;
 };
 
-const readUserSalesReportQuery = async () => {
-	const result = await Transactions.findAll({
+const readUserSalesReportQuery = async (branch_id, from, to, page, item_per_page, sort, order) => {
+	const result = await Transactions.findAndCountAll({
 		attributes: ["user_id", [sequelize.fn("SUM", sequelize.col("amount")), "total_spending"]],
+		where: {
+			status_id: 5,
+			...dateQueryHelper(from, to),
+			...branchQueryHelper(branch_id),
+		},
 		include: [
 			{
 				model: Users,
-				where: { status_id: 5, branch_id: 1 },
+				attributes: ["username", "email"],
 				required: true,
 			},
 		],
 		group: ["user_id"],
-		order: [[sequelize.literal("total_spending"), "DESC"]],
+		order: sort && order ? [[sequelize.literal(sort), order == 1 ? "ASC" : "DESC"]] : [],
+		offset: (page - 1) * Number(item_per_page),
+		limit: Number(item_per_page),
 	});
 
 	return result;

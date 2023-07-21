@@ -1,5 +1,5 @@
 const { startFindErrorHandler } = require("../errors/serviceError.js");
-const { sequelize } = require("../models/index.js");
+const moment = require("moment");
 const {
 	readProductSalesReportQuery,
 	readTransactionSalesReportQuery,
@@ -7,31 +7,61 @@ const {
 } = require("../queries/SalesReport.js");
 
 module.exports = {
-	startFindSalesReportByProduct: async (branch_id) => {
+	startFindSalesReportByProduct: async (branch_id, from, to, page, item_per_page, sort, order) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const ProductSalesReport = await readProductSalesReportQuery(branch_id);
+				from = from ? moment(from) : moment(0);
+				to = to ? moment(to).add(1, "d") : moment();
+				const ProductSalesReport = await readProductSalesReportQuery(
+					branch_id,
+					from,
+					to,
+					page,
+					item_per_page,
+					sort,
+					order,
+				);
 				return resolve(ProductSalesReport);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
 			}
 		});
 	},
-	startFindSalesReportByTransaction: async (query, branch_id) => {
+	startFindSalesReportByTransaction: async (branch_id, from, to, page, item_per_page, sort, order) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const adminTransactionsData = await readTransactionSalesReportQuery(query, branch_id);
-				return resolve(adminTransactionsData);
+				from = from ? moment(from) : moment(0);
+				to = to ? moment(to).add(1, "d") : moment();
+				const TransactionSalesReport = await readTransactionSalesReportQuery(
+					branch_id,
+					from,
+					to,
+					page,
+					item_per_page,
+					sort,
+					order,
+				);
+				return resolve(TransactionSalesReport);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
 			}
 		});
 	},
-	startFindSalesReportByUser: async (query, branch_id) => {
+	startFindSalesReportByUser: async (branch_id, from, to, page, item_per_page, sort, order) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				const adminTransactionsData = await readUserSalesReportQuery(query, branch_id);
-				return resolve(adminTransactionsData);
+				from = from ? moment(from) : moment(0);
+				to = to ? moment(to).add(1, "d") : moment();
+				const UserSalesReport = await readUserSalesReportQuery(
+					branch_id,
+					from,
+					to,
+					page,
+					item_per_page,
+					sort,
+					order,
+				);
+				return resolve(UserSalesReport);
 			} catch (error) {
 				return reject(await startFindErrorHandler(error));
 			}
