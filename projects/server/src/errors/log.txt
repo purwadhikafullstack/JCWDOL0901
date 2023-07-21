@@ -1,0 +1,61 @@
+
+	===
+	Time: Fri Jul 21 2023 16:10:05 GMT+0700 (Western Indonesia Time)
+	Source: startUpdatePasswordErrorHandler
+	Error: "PASS_NOT_VERIFIED"
+	
+	===
+	Time: Fri Jul 21 2023 16:22:14 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"10-223","origin":"DB","instance":{"user_id":10,"inventory_id":223,"quantity":1},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '10-223' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[10,223,1]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '10-223' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[10,223,1]},"fields":{"PRIMARY":"10-223"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Fri Jul 21 2023 16:22:16 GMT+0700 (Western Indonesia Time)
+	Source: startCreateErrorHandler
+	Error: {"name":"SequelizeUniqueConstraintError","errors":[{"message":"PRIMARY must be unique","type":"unique violation","path":"PRIMARY","value":"10-220","origin":"DB","instance":{"user_id":10,"inventory_id":"220","quantity":3},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '10-220' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[10,"220",3]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry '10-220' for key 'carts.PRIMARY'","sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);","parameters":[10,"220",3]},"fields":{"PRIMARY":"10-220"},"sql":"INSERT INTO `Carts` (`user_id`,`inventory_id`,`quantity`) VALUES (?,?,?);"}
+	
+	===
+	Time: Fri Jul 21 2023 17:08:34 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: {}
+	
+	===
+	Time: Fri Jul 21 2023 17:13:24 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: {"name":"SequelizeDatabaseError","parent":{"code":"ER_TRUNCATED_WRONG_VALUE","errno":1292,"sqlState":"22007","sqlMessage":"Truncated incorrect DOUBLE value: '[object Object]'","sql":"DELETE FROM `Carts` WHERE `user_id` = 10 AND `inventory_id` = '[object Object]'"},"original":{"code":"ER_TRUNCATED_WRONG_VALUE","errno":1292,"sqlState":"22007","sqlMessage":"Truncated incorrect DOUBLE value: '[object Object]'","sql":"DELETE FROM `Carts` WHERE `user_id` = 10 AND `inventory_id` = '[object Object]'"},"sql":"DELETE FROM `Carts` WHERE `user_id` = 10 AND `inventory_id` = '[object Object]'","parameters":{}}
+	
+	===
+	Time: Fri Jul 21 2023 17:15:30 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: {}
+	
+	===
+	Time: Fri Jul 21 2023 17:15:31 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: {}
+	
+	===
+	Time: Fri Jul 21 2023 17:15:40 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: {}
+	
+	===
+	Time: Fri Jul 21 2023 17:15:56 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: {}
+	
+	===
+	Time: Fri Jul 21 2023 17:16:06 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: {}
+	
+	===
+	Time: Fri Jul 21 2023 17:16:39 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: {}
+	
+	===
+	Time: Fri Jul 21 2023 17:16:53 GMT+0700 (Western Indonesia Time)
+	Source: startDeleteteHandler
+	Error: {}
+	

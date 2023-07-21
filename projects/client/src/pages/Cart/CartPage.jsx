@@ -21,7 +21,7 @@ const ItemPrice = ({ item, setIsUpdate, index }) => {
 				<img
 					src={process.env.REACT_APP_IMAGE_BASE_URL + item.Inventory.Product.image}
 					alt={item.Inventory.Product.name}
-					className="border border-green-500 rounded p-2 object-contain"
+					className="border border-gray-200 rounded-lg p-2 object-contain"
 				/>
 			</div>
 			<div className="flex flex-col items-start justify-between pl-4 py-1 mr-auto w-full">
@@ -62,7 +62,7 @@ const EmptyCart = () => {
 					alt="create product illustration"
 				/>
 			</div>
-			<div className="">Your cart is empty</div>
+			<div className="text-gray-300">Your cart is empty, let's add some! :)</div>
 		</div>
 	);
 };
@@ -109,14 +109,14 @@ const CartPage = () => {
 			});
 	}, [isUpdate]);
 	return (
-		<>
+		<div className="min-h-screen bg-white sm:bg-green-100">
 			<div className="flex flex-col sm:bg-green-200 sm:pb-4 sm:px-2">
 				<div className="flex flex-col justify-between items-between z-10 mx-6">
 					<DesktopNavBar />
 				</div>
 			</div>
-			<div className="sm:p-10 bg-green-100 min-h-screen">
-				<div className="flex flex-col bg-white max-w-5xl min-h-[50vw] mx-auto rounded-xl shadow-lg">
+			<div className="sm:p-10">
+				<div className="flex flex-col bg-white max-w-5xl min-h-[50vw] mx-auto rounded-xl sm:shadow-lg">
 					<CartHeader Content={CartHeaderContent} />
 					<div className="">
 						{cart &&
@@ -128,13 +128,13 @@ const CartPage = () => {
 							</div>
 						)}
 					</div>
-					<div className="mt-auto mb-10">
+					<div className="mt-auto mb-20 sm:mb-10">
 						{cart?.length === 0 ? <AddProductButton /> : <CheckoutButton cart={cart} />}
 					</div>
 				</div>
 			</div>
 			<MobileNavBar />
-		</>
+		</div>
 	);
 };
 

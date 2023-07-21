@@ -35,7 +35,7 @@ const AddressItem = ({ address }) => {
 							</p>
 						</div>
 					</div>
-					<PencilIcon className="ml-4 h-5 w-5 text-gray-300" aria-hidden="true" />
+					<PencilIcon className="ml-4 mr-3 h-5 w-5 text-gray-300" aria-hidden="true" />
 				</div>
 			</button>
 		</li>
@@ -51,7 +51,7 @@ const getAddresses = (token) => {
 export default function AddressList() {
 	const [addresses, setAddresses] = useState([]);
 	const dispatch = useDispatch();
-	
+
 	useEffect(() => {
 		getAddresses(localStorage.getItem("token"))
 			.then((result) => {

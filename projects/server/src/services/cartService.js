@@ -4,7 +4,13 @@ const {
 	startUpdateErrorHandler,
 	startDeleteteHandler,
 } = require("../errors/serviceError");
-const { readCartQuery, addCartQuery, updateCartQuery, deleteCartItemQuery } = require("../queries/Carts.js");
+const {
+	readCartQuery,
+	addCartQuery,
+	updateCartQuery,
+	deleteCartItemQuery,
+	deleteCartsQueryOnOrder,
+} = require("../queries/Carts.js");
 
 module.exports = {
 	startFindCarts: async (userData) => {
@@ -45,11 +51,22 @@ module.exports = {
 	startDeleteCarts: async (userData, params) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				// const {inventory_id, quantity} = body;
 				const Carts = await deleteCartItemQuery(userData.id, params.inventory_id);
 
 				return await resolve({ status: 200, message: "item deleted successfully" });
 			} catch (error) {
+				return await reject(await startDeleteteHandler(error));
+			}
+		});
+	},
+	startClearCart: async (userData) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+				const Carts = await deleteCartsQueryOnOrder(userData);
+
+				return await resolve({ status: 200, message: "cart deleted successfully" });
+			} catch (error) {
+				console.log(error);
 				return await reject(await startDeleteteHandler(error));
 			}
 		});
