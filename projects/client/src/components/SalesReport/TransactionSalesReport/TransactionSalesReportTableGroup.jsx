@@ -6,9 +6,6 @@ import TransactionSalesReportTable from "./TransactionSalesReportTable";
 import TransactionSalesReportSearchConfiguration from "./TransactionSalesReportSearchConfiguration";
 
 const TransactionSalesReportTableGroup = () => {
-	const [name, setName] = React.useState("");
-	const [filterBy, setFilterBy] = React.useState("");
-	const [filter, setFilter] = React.useState("");
 	const [sort, setSort] = React.useState("");
 	const [order, setOrder] = React.useState("");
 	const [page, setPage] = React.useState(1);
@@ -17,10 +14,9 @@ const TransactionSalesReportTableGroup = () => {
 	const [endDate, setEndDate] = React.useState("");
 	const [itemPerPage, setItemPerPage] = React.useState(5);
 
-
 	React.useEffect(() => {
 		setPage(1);
-	}, [name, filter, order, startDate, endDate]);
+	}, [order, startDate, endDate, sort]);
 	console.log("page: ", page);
 	console.log("max page: ", maxPage);
 
@@ -29,11 +25,6 @@ const TransactionSalesReportTableGroup = () => {
 			<h1>Transaction report</h1>
 			<TransactionSalesReportSearchConfiguration
 				setPage={setPage}
-				setName={setName}
-				filterBy={filterBy}
-				setFilterBy={setFilterBy}
-				filter={filter}
-				setFilter={setFilter}
 				sort={sort}
 				setSort={setSort}
 				order={order}
@@ -44,10 +35,7 @@ const TransactionSalesReportTableGroup = () => {
 				setEndDate={setEndDate}
 			/>
 			<TransactionSalesReportTable
-				name={name}
 				sort={sort}
-				filterBy={filterBy}
-				filter={filter}
 				order={order}
 				page={page}
 				setMaxPage={setMaxPage}

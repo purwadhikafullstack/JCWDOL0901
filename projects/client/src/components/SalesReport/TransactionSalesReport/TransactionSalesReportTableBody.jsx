@@ -16,7 +16,7 @@ const TransactionSalesReportTableBody = ({
 }) => {
 	const [datas, setDatas] = React.useState([]);
 	React.useEffect(() => {
-		const query = generateUrlQuery(name, page, filterBy, filter, sort, order, startDate, endDate, itemPerPage);
+		const query = generateUrlQuery(page, sort, order, startDate, endDate, itemPerPage);
 		console.log("query in SalesTableReport: ", query);
 		getSalesReportByTransaction(query)
 			.then((result) => {

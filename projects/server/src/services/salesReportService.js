@@ -21,7 +21,7 @@ module.exports = {
 			}
 		});
 	},
-	startFindSalesReportByTransaction: async (branch_id, from, to, page, item_per_page) => {
+	startFindSalesReportByTransaction: async (branch_id, from, to, page, item_per_page, sort, order) => {
 		return new Promise(async (resolve, reject) => {
 			try {
 				from = from ? moment(from) : moment(0);
@@ -32,6 +32,8 @@ module.exports = {
 					to,
 					page,
 					item_per_page,
+					sort,
+					order,
 				);
 				return resolve(TransactionSalesReport);
 			} catch (error) {

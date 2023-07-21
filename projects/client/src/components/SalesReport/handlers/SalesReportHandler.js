@@ -33,7 +33,7 @@ export const resetSetting = (setName, setFilterBy, setFilter, setSort, setOrder,
 export const getSortBy = () => {
 	return new Promise((resolve, reject) => {
 		resolve({
-			data: [{ id: "created_at", name: "Date" }],
+			data: [{ id: "updated_at", name: "Date" }],
 		});
 	});
 };
@@ -51,7 +51,7 @@ export const getOrderOfDate = () => {
 export const getSortTotalSpendingBy = () => {
 	return new Promise((resolve, reject) => {
 		resolve({
-			data: [{ id: "created_at", name: "Total Spending" }],
+			data: [{ id: "total_spending", name: "Total Spending" }],
 		});
 	});
 };
@@ -99,18 +99,15 @@ export const getFilterOfDescription = () => {
 	});
 };
 
-export const generateUrlQuery = (name = "", page, filterBy, filter, sort, order, startDate, endDate, itemPerPage) => {
+export const generateUrlQuery = (page, sort, order, startDate, endDate, itemPerPage) => {
 	let url = "";
 
 	url += `?page=${page}`;
-	// url += `&name=${name}`;
 	url += startDate ? `&start_after=${startDate}` : "";
 	url += endDate ? `&end_before=${endDate}` : "";
 	url += itemPerPage ? `&item_per_page=${itemPerPage}` : "";
-	// url += filter?.id ? `&${filterBy?.id}=${filter?.id}` : "";
-	// url += sort?.id ? `&order=${sort?.id}` : "";
-	// url += order?.id ? `&asc=${order?.id}` : "";
-	// url += order?.id ? `&asc=${order?.id}` : "";
+	url += sort?.id ? `&sort=${sort?.id}` : "";
+	url += order?.id ? `&order=${order?.id}` : "";
 
 	return url;
 };

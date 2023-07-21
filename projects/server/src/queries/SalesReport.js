@@ -57,7 +57,7 @@ const readProductSalesReportQuery = async (branch_id, from, to, page, item_per_p
 	return result;
 };
 
-const readTransactionSalesReportQuery = async (branch_id, from, to, page, item_per_page) => {
+const readTransactionSalesReportQuery = async (branch_id, from, to, page, item_per_page, sort, order) => {
 	const result = await Transactions.findAndCountAll({
 		attributes: ["amount", "updated_at"],
 		where: {
@@ -65,7 +65,7 @@ const readTransactionSalesReportQuery = async (branch_id, from, to, page, item_p
 			...dateQueryHelper(from, to),
 			...branchQueryHelper(branch_id),
 		},
-		order: [[sequelize.literal("updated_at"), "DESC"]],
+		order: sort && order ? [[sequelize.literal(sort), order == 1 ? "ASC" : "DESC"]] : [],
 		offset: (page - 1) * Number(item_per_page),
 		limit: Number(item_per_page),
 	});
