@@ -49,13 +49,11 @@ const isUser = async (request, response, next) => {
 };
 
 const isVerifiedUser = async (request, response, next) => {
-	try {
-		const verified = request.userData.verified;
-		if (!verified) throw "User not verified!";
-		next();
-	} catch (error) {
-		response.status(403).send({ message: "USER_NOT_VERIFIED" });
-	}
+	const verified = await request.userData.verified;
+
+	if (!verified) return response.status(403).send("Please Verify Your Account First.");
+
+	next();
 };
 
 const getBranchId = async (request, response, next) => {
