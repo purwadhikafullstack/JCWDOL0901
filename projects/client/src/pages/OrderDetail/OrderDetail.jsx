@@ -44,7 +44,7 @@ const OrderStatus = ({ transaction }) => {
 				<p className="text-sm font-medium text-gray-900 my-4 text-left">
 					{orderStatusList[transaction.status_id]}
 					<span> • </span>
-					<span>{moment(transaction.updated_at).format("D MMM YY, HH:MM")}</span>
+					<span>{moment(transaction.updated_at).format("D MMM YY, HH:mm")}</span>
 				</p>
 
 				{transaction.status_id == 6 ? (

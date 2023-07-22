@@ -11,7 +11,7 @@ const Illustration = () => {
 			<div className="mb-10 text-green-100 text-2xl sm:text-3xl font-medium text-left sm:text-center pr-4">
 				Update Product
 			</div>
-			<CategoryIllustration className="w-[160px] sm:w-[350px] pb-12 mx-auto" />
+			<CategoryIllustration className="w-[160px] sm:w-[350px] pb-12 mx-auto sm:mt-40" />
 		</div>
 	);
 };

@@ -3,8 +3,6 @@ import SideBar from "../../components/SideBar/SideBar";
 import CircularBackgroundDecoration from "../../components/CircularBackgroundDecoration";
 import PageTitle from "../../components/PageTitle";
 import ProductSalesReportTableGroup from "../../components/SalesReport/ProductSalesReport/ProductSalesReportTableGroup";
-// import TransactionSalesReportTableGroup from "../../components/SalesReport/TransactionSalesReportTableGroup";
-// import UserSalesReportTableGroup from "../../components/SalesReport/UserSalesReportTableGroup";
 import DisplayByConfiguration from "../../components/SalesReport/SearchConfiguration/DisplayByConfiguration";
 import CompanyLogo from "../../components/CompanyLogo";
 import TransactionSalesReportTableGroup from "../../components/SalesReport/TransactionSalesReport/TransactionSalesReportTableGroup";
@@ -24,10 +22,10 @@ const ResponsiveLogo = () => {
 };
 
 const SalesReport = () => {
-	const [salesBy, setSalesBy] = useState({});
+	const [salesBy, setSalesBy] = useState({ id: "product", name: "Product" });
 
 	return (
-		<div className="flex flex-col mx-auto pb-10 flex-1 min-w-[480px] overflow-hidden bg-white z-10 sm:w-full">
+		<div className="flex flex-col mx-auto pb-10 flex-1 overflow-hidden bg-white z-10 sm:w-full">
 			<SideBar>
 				<div className="flex flex-col bg-white min-h-screen">
 					<div className="flex flex-col z-10">

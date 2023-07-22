@@ -1,26 +1,29 @@
-import React from 'react'
-import FormikError from '../InputGroup/FormikError';
+import React from "react";
+import FormikError from "../InputGroup/FormikError";
 
 const Options = () => {
-  const options = [
-    { id: "M", name: "Male" },
-    { id: "F", name: "Female" }
-  ];
+	const options = [
+		{ id: "M", name: "Male" },
+		{ id: "F", name: "Female" },
+	];
 
-  return (
-    options.map((option, index) => {
-      return (
-        <option value={option.id} key={index}>
-          {option.name}
-        </option>
-      );
-    })
-  );
+	return (
+		<>
+			<option value={""}>Select gender</option>
+			{options.map((option, index) => {
+				return (
+					<option value={option.id} key={index}>
+						{option.name}
+					</option>
+				);
+			})}
+		</>
+	);
 };
 
 function SelectBoxGender({ name, inputKey, formik }) {
-  return (
-    <div className="relative z-10">
+	return (
+		<div className="relative z-10">
 			<select
 				name={inputKey}
 				id={name}
@@ -33,7 +36,7 @@ function SelectBoxGender({ name, inputKey, formik }) {
 			</select>
 			<FormikError formik={formik} inputKey={inputKey} />
 		</div>
-  )
+	);
 }
 
-export default SelectBoxGender
+export default SelectBoxGender;

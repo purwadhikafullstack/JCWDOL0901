@@ -31,24 +31,56 @@ export const generateUrlQuery = (page, itemPerPage, branch_id, category_id, filt
 	return url;
 };
 
-export const addProducts = async (inventory_id, quantity, dispatch) => {
+export const addProducts = async (inventory_id, quantity, dispatch, user) => {
 	try {
 		const token = localStorage.getItem("token");
 		const config = {
 			headers: { Authorization: `Bearer ${token}` },
 		};
-		const body = { inventory_id, quantity };
-		await axios.post(`${process.env.REACT_APP_API_BASE_URL}/cart/add`, body, config);
-		dispatch(setCartUpdate({ cartUpdate: true }));
+		const cart = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/cart`, config);
 
-		Swal.fire({
-			icon: "success",
-			title: "New product has been added to cart",
-			showConfirmButton: false,
-			timer: 1000,
-		});
+		if (cart?.data.length && user?.branch?.id !== cart?.data[0]?.Inventory?.Branch?.id) {
+			Swal.fire({
+				title: "Are you sure you want to add this product?",
+				text: "This product comes from a different branch than the other products in the cart. If you continue, we will clear all of your previous items in the cart",
+				showCancelButton: true,
+				confirmButtonText: "Add product",
+				confirmButtonColor: "#53B97C",
+				cancelButtonText: "Cancel",
+				customClass: {
+					actions: "my-actions",
+					cancelButton: "order-1",
+					confirmButton: "order-2",
+				},
+			}).then(async (result) => {
+				if (result.isConfirmed) {
+					await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/cart/clear`, config);
+					const body = { inventory_id, quantity };
+					await axios.post(`${process.env.REACT_APP_API_BASE_URL}/cart/add`, body, config);
+					dispatch(setCartUpdate({ cartUpdate: true }));
+
+					Swal.fire({
+						icon: "success",
+						title: "New product has been added to cart",
+						showConfirmButton: false,
+						timer: 1000,
+					});
+				}
+			});
+			return;
+		} else {
+			const body = { inventory_id, quantity };
+			await axios.post(`${process.env.REACT_APP_API_BASE_URL}/cart/add`, body, config);
+			dispatch(setCartUpdate({ cartUpdate: true }));
+
+			Swal.fire({
+				icon: "success",
+				title: "New product has been added to cart",
+				showConfirmButton: false,
+				timer: 1000,
+			});
+		}
 	} catch (error) {
-		console.log("error ordctHandler: ", error);
 		Swal.fire({
 			icon: "error",
 			title: await productErrorHandler(error),

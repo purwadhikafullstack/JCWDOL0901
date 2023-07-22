@@ -20,7 +20,7 @@ const postTransaction = async (request, response) => {
 const postTransactionProof = async (request, response) => {
 	const { file } = request;
 	const { transaction_id } = request.body;
-	const path = file.destination + file.filename;
+	const path = "/uploads/payment_proofs/" + file.filename;
 
 	await startCreateProof(transaction_id, path)
 		.then((result) => {
@@ -84,5 +84,5 @@ module.exports = {
 	getUserTransaction,
 	getUserTransactions,
 	cancelUserOrderByUser,
-	confirmUserOrderByUser
+	confirmUserOrderByUser,
 };
