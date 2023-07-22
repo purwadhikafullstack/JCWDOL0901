@@ -49,6 +49,7 @@ const deleteCartItemQuery = async (user_id, inventory_id) => {
 const deleteCartsQueryOnOrder = async (user, transaction) => {
 	return await Carts.destroy({
 		where: { user_id: user.id },
+		transaction,
 	});
 };
 

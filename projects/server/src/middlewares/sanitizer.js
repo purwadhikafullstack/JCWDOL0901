@@ -134,7 +134,10 @@ const postTransactionBodySanitizer = async (request, response, next) => {
 			service: request.body.logistic.service,
 			shipping_cost: request.body.logistic.cost,
 		},
-		voucher: { id: request.body?.voucher?.id || null },
+		voucher: {
+			id: request.body?.voucher?.id || null,
+			user_voucher_id: request.body?.voucher?.user_voucher_id || null,
+		},
 		user: { id: user_id },
 	};
 

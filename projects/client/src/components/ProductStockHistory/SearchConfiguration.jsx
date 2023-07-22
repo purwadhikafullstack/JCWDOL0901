@@ -22,6 +22,8 @@ const SearchConfiguration = ({
 	endDate,
 	setEndDate,
 }) => {
+	const [input, setInput] = React.useState("");
+
 	return (
 		<>
 			<div className="flex flex-row w-full justify-between z-50">
@@ -33,7 +35,7 @@ const SearchConfiguration = ({
 				/>
 			</div>
 			<div className="flex flex-row w-full justify-between mb-4 p-4 px-6 rounded-t-xl z-50 sm:mb-10">
-				<NameConfiguration setName={setName} />
+				<NameConfiguration setName={setName} setInput={setInput} input={input} />
 				<FilterConfiguration
 					filterBy={filterBy}
 					setFilterBy={setFilterBy}
@@ -52,6 +54,7 @@ const SearchConfiguration = ({
 							setPage,
 							setStartDate,
 							setEndDate,
+							setInput,
 						)
 					}
 				/>

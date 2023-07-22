@@ -27,7 +27,6 @@ const Spending = ({ data }) => {
 const VoucherOptions = ({ vouchers, dispatch, globalState }) => {
 	const summary = useSelector((state) => state.checkout.summary);
 	return vouchers.map((data, index) => {
-		console.log(data);
 		const disabled = data?.Voucher?.min_spend > summary.total;
 
 		return (
@@ -49,7 +48,7 @@ const VoucherOptions = ({ vouchers, dispatch, globalState }) => {
 					name="select_voucher"
 					className="border border-green-400 checked:bg-green-400 disabled:opacity-20 disabled:bg-gray-200 "
 					disabled={disabled}
-					checked={globalState?.checkout?.voucher?.id === data.Voucher.id}
+					checked={globalState?.checkout?.voucher?.user_voucher_id === data.id}
 				/>
 			</div>
 		);

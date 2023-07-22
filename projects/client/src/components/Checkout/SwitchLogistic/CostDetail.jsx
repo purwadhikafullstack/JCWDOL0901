@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setLogistic } from "../../../redux/reducers/checkout/checkoutAction.js";
 import { toCurrency } from "../../../helper/currency.js";
 
-const CostDetail = ({ costs, courier }) => {
+const CostDetail = ({ costs, courier, code }) => {
 	const checkout = useSelector((state) => state.checkout);
 	const dispatch = useDispatch();
 
@@ -23,7 +23,11 @@ const CostDetail = ({ costs, courier }) => {
 						{toCurrency(logistic.cost[0].value)}
 					</span>
 				</div>
-				<input type="radio" name="select_logistic" checked={checkout.logistic.service === logistic.service} />
+				<input
+					type="radio"
+					name="select_logistic"
+					checked={checkout.logistic.service === logistic.service && checkout.logistic.code === code}
+				/>
 			</div>
 		);
 	});

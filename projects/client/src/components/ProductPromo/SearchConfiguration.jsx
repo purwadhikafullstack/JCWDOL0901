@@ -7,14 +7,16 @@ import { resetSetting } from "./handlers/productPromoHandler.js";
 import CreateButton from "./CreateButton";
 
 const SearchConfiguration = ({ setName, filter, setFilter, sort, setSort, order, setOrder, setPage }) => {
+	const [input, setInput] = React.useState("");
+
 	return (
 		<>
 			<CreateButton />
 			<div className="flex flex-row w-full justify-between mb-4 p-4 px-6 rounded-t-xl z-50 sm:mb-10">
-				<NameConfiguration setName={setName} />
+				<NameConfiguration setName={setName} setInput={setInput} input={input} />
 				<FilterConfiguration filter={filter} setFilter={setFilter} />
 				<SortConfiguration sort={sort} setSort={setSort} order={order} setOrder={setOrder} />
-				<Reset onClick={() => resetSetting(setFilter, setSort, setOrder, setPage, setName)} />
+				<Reset onClick={() => resetSetting(setFilter, setSort, setOrder, setPage, setName, setInput)} />
 			</div>
 		</>
 	);

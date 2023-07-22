@@ -4,7 +4,7 @@ const userHasVoucher = async (request, response, next) => {
 	if (!request.body?.voucher?.id) {
 		next();
 	} else {
-		const voucherValid = await readUserVoucherQuery(request.userData.id, request.body.voucher.id);
+		const voucherValid = await readUserVoucherQuery(request.userData.id, request.body.voucher.user_voucher_id);
 
 		if (voucherValid) {
 			next();

@@ -90,7 +90,7 @@ export const postTransaction = (data, dispatch, navigate) => {
 					successAlert(navigate, dispatch);
 				})
 				.catch((error) => {
-					Swal.fire(error.response.data);
+					Swal.fire({ title: "Error!", html: error.response.data, confirmButtonColor: "#0EB177" });
 				});
 		}
 	});
