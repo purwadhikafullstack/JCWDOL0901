@@ -22,7 +22,7 @@ const StockHistoryTableGroup = () => {
 	}, [name, filter, order, startDate, endDate]);
 
 	return (
-		<div className="flex flex-col justify-start pt-0.5 mt-7 px-4 h-full">
+		<div className="flex flex-col justify-start pt-0.5 mt-7 px-0 lg:px-4 h-full">
 			<SearchConfiguration
 				setPage={setPage}
 				setName={setName}

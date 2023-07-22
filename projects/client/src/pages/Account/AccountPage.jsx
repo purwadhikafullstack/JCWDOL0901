@@ -12,7 +12,7 @@ const AccountPage = () => {
 					<DesktopNavBar />
 				</div>
 			</div>
-			<div className="flex flex-col sm:px-8">
+			<div className="flex flex-col sm:px-8 mb-16">
 				<Profile />
 				<AccountMenu />
 			</div>

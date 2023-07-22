@@ -1,4 +1,10 @@
-const { startFindCarts, startAddCarts, startUpdateCarts, startDeleteCarts } = require("../services/cartService.js");
+const {
+	startFindCarts,
+	startAddCarts,
+	startUpdateCarts,
+	startDeleteCarts,
+	startClearCart,
+} = require("../services/cartService.js");
 
 const getUserCarts = async (request, response) => {
 	await startFindCarts(request.userData)
@@ -28,14 +34,25 @@ const updateUserCarts = async (request, response) => {
 			response.status(error.code).send(error.message);
 		});
 };
+
 const deleteUserCarts = async (request, response) => {
 	await startDeleteCarts(request.userData, request.params)
-	.then((result) => {
-		response.status(200).send(result);
-	})
-	.catch((error) => {
+		.then((result) => {
+			response.status(200).send(result);
+		})
+		.catch((error) => {
 			response.status(error.code).send(error.message);
 		});
 };
 
-module.exports = { getUserCarts, addUserCarts, updateUserCarts, deleteUserCarts };
+const clearCart = async (request, response) => {
+	await startClearCart(request.userData)
+		.then((result) => {
+			response.status(200).send(result);
+		})
+		.catch((error) => {
+			response.status(error.code).send(error.message);
+		});
+};
+
+module.exports = { getUserCarts, addUserCarts, updateUserCarts, deleteUserCarts, clearCart };

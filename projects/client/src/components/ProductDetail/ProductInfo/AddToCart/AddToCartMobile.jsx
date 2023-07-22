@@ -4,13 +4,12 @@ import AddToCart from "./AddToCart.jsx";
 
 const AddToCartMobile = ({ stock, amount, setAmount }) => {
 	return (
-		<div
-			tabIndex="-1"
-			className="fixed bottom-0 mx-auto z-50 w-[480px] rounded-3xl mb-2 inset-x-0 bg-white lg:hidden"
-		>
-			<div className="flex flex-row py-6 w-full border border-green-200 justify-around mt-auto rounded-3xl">
-				<MobileButtonSet stock={stock} amount={amount} setAmount={setAmount} />
-				<AddToCart amount={amount} />
+		<div tabIndex="-1" className="z-50 fixed bottom-0 w-full flex justify-center lg:hidden mb-6">
+			<div className="flex justify-center">
+				<div className="flex flex-row shadow-xl border border-gray-100 py-3 sm:py-6 w-full justify-around mt-auto rounded-3xl gap-4 px-4 sm:px-6 bg-white">
+					<MobileButtonSet stock={stock} amount={amount} setAmount={setAmount} />
+					<AddToCart amount={amount} />
+				</div>
 			</div>
 		</div>
 	);

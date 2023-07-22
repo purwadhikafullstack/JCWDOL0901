@@ -1,5 +1,6 @@
 import axios from "axios";
 import { toCurrency } from "../../../helper/currency";
+import { setCartUpdate } from "../../../redux/reducers/user/userAction";
 
 export const getProductDetail = (inventory_id) => {
 	return axios.get(`${process.env.REACT_APP_API_BASE_URL}/product/${inventory_id}`);
@@ -67,7 +68,7 @@ export const handleIncrement = async (inventory_id, quantity, stock, setIsUpdate
 	}
 };
 
-export const handleDecrement = async (inventory_id, quantity, stock, setIsUpdate) => {
+export const handleDecrement = async (inventory_id, quantity, stock, setIsUpdate, dispatch) => {
 	try {
 		const token = localStorage.getItem("token");
 		const config = {
@@ -77,6 +78,7 @@ export const handleDecrement = async (inventory_id, quantity, stock, setIsUpdate
 		if (quantity === 1) {
 			await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/cart/delete/${inventory_id}`, config);
 			setIsUpdate(true);
+			dispatch(setCartUpdate({ cartUpdate: true }));
 		}
 		if (quantity > 1) {
 			await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/cart/update`, body, config);

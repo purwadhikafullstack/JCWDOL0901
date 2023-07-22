@@ -17,7 +17,7 @@ const ProductCard = ({ product }) => {
 	}, [product]);
 
 	return (
-		<div key={product.id} className="flex flex-col border rounded-lg pb-4 shadow-xl min-h-[340px]">
+		<div key={product.id} className="flex flex-col border rounded-lg pb-4 shadow-xl min-h-[340px] h-full">
 			<button
 				key={product.id}
 				onClick={() => {
@@ -67,7 +67,7 @@ const ProductCard = ({ product }) => {
 			<button
 				className="self-end mt-auto px-2 py-2 text-base font-medium rounded-md group"
 				onClick={() => {
-					addProducts(product.Inventories[0].id, 1, dispatch);
+					addProducts(product.Inventories[0].id, 1, dispatch, user);
 				}}
 				disabled={!user?.hasLogged}
 			>

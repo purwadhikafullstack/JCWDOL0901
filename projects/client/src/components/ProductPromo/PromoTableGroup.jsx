@@ -16,7 +16,7 @@ const PromoTableGroup = () => {
 	}, [name, filter, order]);
 
 	return (
-		<div className="flex flex-col justify-start mt-11 px-4 h-full">
+		<div className="flex flex-col justify-start mt-11 px-0 lg:px-4 h-full">
 			<SearchConfiguration
 				setName={setName}
 				filter={filter}

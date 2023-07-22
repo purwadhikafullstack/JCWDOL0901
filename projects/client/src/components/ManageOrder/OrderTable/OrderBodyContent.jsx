@@ -47,11 +47,11 @@ const Amount = ({ item }) => {
 	return <div className="col-span-2 my-auto font-semibold">{toCurrency(item.amount)}</div>;
 };
 
-const Status = ({ item }) => {
+const Status = ({ item, superAdmin }) => {
 	const borderColor = getBorderColor(item.Status.id);
-
+	const statusSpan = superAdmin ? "col-span-3" : "col-span-2";
 	return (
-		<div className={"col-span-2 my-auto py-1 border-l-8 border-2 rounded " + borderColor}>
+		<div className={`${statusSpan} my-auto py-1 border-l-8 border-2 rounded ${borderColor}`}>
 			<span className="">{item.Status.name}</span>
 		</div>
 	);
@@ -162,7 +162,7 @@ const OrderBodyContent = ({ superAdmin, data, setIsUpdated }) => {
 					<CreatedAt item={item} />
 					<Proof item={item} />
 					<Amount item={item} />
-					<Status item={item} />
+					<Status item={item} superAdmin={superAdmin} />
 					<Voucher item={item} />
 					{!superAdmin && <Action item={item} setIsUpdated={setIsUpdated} />}
 				</div>

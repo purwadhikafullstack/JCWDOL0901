@@ -27,7 +27,9 @@ const Spending = ({ data }) => {
 const VoucherOptions = ({ vouchers, dispatch, globalState }) => {
 	const summary = useSelector((state) => state.checkout.summary);
 	return vouchers.map((data, index) => {
+		console.log(data);
 		const disabled = data?.Voucher?.min_spend > summary.total;
+
 		return (
 			<div
 				key={index}

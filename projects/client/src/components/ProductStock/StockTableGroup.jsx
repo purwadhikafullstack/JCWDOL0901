@@ -20,7 +20,7 @@ const StockTableGroup = () => {
 	}, [name, filter, order]);
 
 	return (
-		<div className="flex flex-col justify-start mt-24 px-4 h-full">
+		<div className="flex flex-col justify-start mt-24 px-0 lg:px-4 h-full">
 			<SearchConfiguration
 				setPage={setPage}
 				setName={setName}
