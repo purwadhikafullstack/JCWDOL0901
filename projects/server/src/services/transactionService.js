@@ -25,7 +25,7 @@ const userTransactionGeneration = async (payload, transaction) => {
 	await decrementInventoriesStockQuery(payload.transaction_detail, transaction);
 	await deleteCartsQueryOnOrder(payload.user, transaction);
 
-	if (payload.voucher.id) await updateUsedUserVouchersQuery(payload.user, payload.voucher, transaction);
+	if (payload.voucher.id) await updateUsedUserVouchersQuery(payload.voucher.user_voucher_id, transaction);
 };
 
 module.exports = {

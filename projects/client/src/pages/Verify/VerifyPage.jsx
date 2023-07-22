@@ -22,7 +22,7 @@ const VerificationMessage = ({ isValid }) => {
 				<span className="font-bold text-xl my-2">Failed!</span>
 			</span>
 			<AlertBox>
-				<p className="mx-8 font-medium">Invalid token or is expired!</p>
+				<p className="mx-8 font-medium">Invalid token!</p>
 			</AlertBox>
 		</>
 	);

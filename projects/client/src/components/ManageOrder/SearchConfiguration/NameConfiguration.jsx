@@ -1,14 +1,12 @@
 import React from "react";
 
-const NameConfiguration = ({ name, setName }) => {
-	const [input, setInput] = React.useState("");
-
+const NameConfiguration = ({ setName, setInput, input }) => {
 	return (
 		<div className="flex flex-col w-[25%]">
 			<div className="flex flex-col items-center justify-around w-full text-green-100 mt-auto lg:flex-row">
 				<div
 					className="flex w-fit text-black mb-1 rounded-lg p-1 px-2 cursor-pointer block lg:hidden"
-					onClick={(event) => setName(input)}
+					onClick={() => setName(input)}
 				>
 					<span className="material-symbols-rounded w-full overflow-hidden whitespace-nowrap">
 						keyboard_return
@@ -20,6 +18,7 @@ const NameConfiguration = ({ name, setName }) => {
 					placeholder="Order ID"
 					onKeyDown={(event) => (event.key === "Enter" ? setName(input) : null)}
 					onChange={(event) => setInput(event.target.value)}
+					value={input}
 				/>
 				<div
 					className="flex max-w-[20%] w-fit bg-green-300  rounded-lg p-1 px-2 cursor-pointer hidden lg:block"

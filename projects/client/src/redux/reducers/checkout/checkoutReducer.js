@@ -37,6 +37,7 @@ const initialState = {
 	},
 	voucher: {
 		id: null,
+		user_voucher_id: null,
 		name: "",
 		description: "",
 		value: null,
@@ -84,7 +85,19 @@ const applyVoucher = (state, action) => {
 
 	const summary = getSummaryAfterVoucher(state.summary, action.payload);
 
-	return { ...state, voucher: { id, name, value, max_discount, description, Promotion: { ...Promotion } }, summary };
+	return {
+		...state,
+		voucher: {
+			id,
+			user_voucher_id: action.payload?.id,
+			name,
+			value,
+			max_discount,
+			description,
+			Promotion: { ...Promotion },
+		},
+		summary,
+	};
 };
 
 const removeVoucher = (state, action) => {

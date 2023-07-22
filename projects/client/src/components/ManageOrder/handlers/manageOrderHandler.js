@@ -92,7 +92,16 @@ export const getBorderColor = (status) => {
 	return "border-red";
 };
 
-export const resetSetting = (setStartDate, setEndDate, setName, setFilterBy, setFilter, setSort, setOrder) => {
+export const resetSetting = (
+	setStartDate,
+	setEndDate,
+	setName,
+	setFilterBy,
+	setFilter,
+	setSort,
+	setOrder,
+	setInput,
+) => {
 	setStartDate("");
 	setEndDate("");
 	setName("");
@@ -100,13 +109,14 @@ export const resetSetting = (setStartDate, setEndDate, setName, setFilterBy, set
 	setFilter("");
 	setSort("");
 	setOrder("");
+	setInput("");
 };
 
 export const generateUrlQuery = (name, startDate, endDate, filterBy, filter, sort, order, page) => {
 	let url = "";
 
 	url += `?page=${page}`;
-	url += `&id=${name}`;
+	url += name ? `&id=${name}` : "";
 	url += startDate ? `&start_after=${startDate}` : "";
 	url += endDate ? `&end_before=${endDate}` : "";
 	url += filter ? `&${filterBy.id}=${filter.id}` : "";

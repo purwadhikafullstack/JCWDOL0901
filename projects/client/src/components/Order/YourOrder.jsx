@@ -39,7 +39,7 @@ const SubTotal = ({ subTotal }) => {
 const DeliveryCost = ({ deliveryCost }) => {
 	return (
 		<div className="flex flex-row pt-4 text-gray-200 text-sm">
-			<div className="text-left">Delivery Cost</div>
+			<div className="text-left">Logistic Fee</div>
 			<div className="px-4 text-right ml-auto text-black">{toCurrency(deliveryCost)}</div>
 		</div>
 	);
@@ -49,7 +49,7 @@ const VoucherDiscount = ({ voucher_discount }) => {
 	return (
 		<div className="flex flex-row py-4 text-gray-200 text-sm">
 			<div className="text-left">Voucher Discount</div>
-			<div className="px-4 text-right ml-auto text-red">{toCurrency(voucher_discount)}</div>
+			<div className="px-4 text-right ml-auto text-red">-{toCurrency(voucher_discount)}</div>
 		</div>
 	);
 };

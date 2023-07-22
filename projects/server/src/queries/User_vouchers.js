@@ -1,8 +1,8 @@
 const { User_vouchers, Vouchers, Promotions } = require("../models/index.js");
 const { Op } = require("sequelize");
 
-const readUserVoucherQuery = async (user_id, voucher_id) => {
-	return await User_vouchers.findOne({ where: { [Op.and]: { user_id, voucher_id, isUsed: false } } });
+const readUserVoucherQuery = async (user_id, id) => {
+	return await User_vouchers.findOne({ where: { [Op.and]: { user_id, id, isUsed: false } } });
 };
 
 const readUserVouchersQuery = async (user_id) => {
@@ -47,12 +47,12 @@ const createUserVouchersAsTransactionReward = async (user_id, transaction) => {
 	return await User_vouchers.create({ user_id, voucher_id: 7 }, { transaction });
 };
 
-const updateUsedUserVouchersQuery = async (user, voucher, transaction) => {
+const updateUsedUserVouchersQuery = async (id, transaction) => {
 	return await User_vouchers.update(
 		{ isUsed: true },
 		{
 			where: {
-				[Op.and]: [{ user_id: user.id }, { voucher_id: voucher.id }],
+				id,
 			},
 			transaction,
 		},
