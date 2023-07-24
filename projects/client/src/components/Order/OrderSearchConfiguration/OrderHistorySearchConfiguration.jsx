@@ -11,7 +11,7 @@ const OrderHistorySearchConfiguration = ({
 	endDate,
 	setEndDate,
 }) => {
-	return <div>OrderHistorySearchConfiguration</div>;
+	return <div>Start of OrderHistorySearchConfiguration</div>;
 };
 
 export default OrderHistorySearchConfiguration;
