@@ -1,4 +1,4 @@
-const { isUser } = require("../middlewares/authMiddleware");
+const { isUser, isVerifiedUser } = require("../middlewares/authMiddleware");
 const {
 	postTransaction,
 	postTransactionProof,
@@ -19,6 +19,7 @@ router.post("/proof", isUser, uploadProofFile, postTransactionProof);
 router.post(
 	"/create",
 	isUser,
+	isVerifiedUser,
 	createTransactionRequestProtection,
 	userHasVoucher,
 	postTransactionBodySanitizer,
