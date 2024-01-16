@@ -11,6 +11,10 @@ const HomePage = () => {
 	const [showModal, setShowModal] = React.useState(false);
 	const [page, setPage] = React.useState(1);
 	return (
+		<Helmet>
+       			<title>Homepage | TOTEN</title>
+        		<meta name="description" content={t("homepage.description")} />
+      		</Helmet>
 		<div className="max-w-[640px] min-h-screen mx-auto bg-white overflow-hidden flex flex-col overflow-y-hidden sm:max-w-full">
 			{showModal && <SelectBranchModal toggleBranchModal={setShowModal} />}
 			<HomeHeader toggleBranchModal={setShowModal} />
